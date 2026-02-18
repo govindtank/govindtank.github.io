@@ -8,29 +8,29 @@
 - name: Git
   weight: 5
 
-- name: Bash
-  weight: 3
-
-- name: Scrum
-  weight: 3
-
-- name: Travis CI
-  weight: 1
-
-- name: Jenkins
-  weight: 1
-
-- name: Chrome DevTools
-  weight: 2
-
-- name: npm
-  weight: 2
-
-- name: gulp
+- name: CI/CD (GitHub Actions)
   weight: 4
 
-- name: VS Code
+- name: Docker
   weight: 3
 
+- name: Gradle
+  weight: 5
+
+- name: Android Studio
+  weight: 5
+
 - name: Postman
+  weight: 4
+
+- name: Play Store Console
+  weight: 4
+
+- name: Cursor
+  weight: 5
+
+- name: Windsurf
+  weight: 5
+
+- name: Claude Code
   weight: 4

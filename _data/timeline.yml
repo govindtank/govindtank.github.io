@@ -5,57 +5,69 @@
 # > tags: List of tags you want to associate with the entry
 # > timeline-side: The side on which you want to display the entry: left or right
 
-# Example of a timeline entry
-# - title: airbnb
-#   title-url: https://example.com/
-#   date: Sep 2019 - Present
-#   subtitle: Fullstack Developer
-#   tags:
-#     - tag: React
-#     - tag: Javascript
-#     - tag: Ruby
-#     - tag: Rails
-#   timeline-side: right
-
-- title: airbnb
-  title-url: https://example.com/
-  date: Sep 2019 - Present
-  subtitle: Fullstack Developer
+# Work Experience
+- title: Rysun Labs Pvt. Ltd.
+  title-url: https://www.rysunlabs.com/
+  date: Nov 2025 -- Present
+  subtitle: Senior Software Developer L2
   tags:
-    - tag: React
-    - tag: Javascript
-    - tag: Ruby
-    - tag: Rails
+    - tag: Kotlin
+    - tag: Flutter
+    - tag: Node.js
+    - tag: TypeScript
+    - tag: AWS CloudFront
+    - tag: Android Auto
   timeline-side: right
 
-- title: Google
-  title-url: https://example.com/
-  date: Mar 2019 - Sep 2019
-  subtitle: Software Engineer as Intern
+- title: Rysun Labs Pvt. Ltd.
+  title-url: https://www.rysunlabs.com/
+  date: Apr 2022 -- Oct 2025
+  subtitle: Senior Software Developer / Project Owner
   tags:
     - tag: Flutter
-    - tag: Dart
-    - tag: Keycloak
+    - tag: Bloc
+    - tag: Clean Architecture
+    - tag: MQTT
+    - tag: IoT
   timeline-side: right
 
-- title: Super University
-  title-url: https://example.com/
-  date: 2017 - 2019
-  subtitle: M.Sc. Computer Science
+- title: Phycom Corporations
+  title-url: https://www.phycom.com/
+  date: Apr 2021 -- Mar 2022
+  subtitle: Software Engineer - Android
+  tags:
+    - tag: Kotlin
+    - tag: Java
+    - tag: Performance Optimization
+  timeline-side: right
+
+- title: Micro App Solutions
+  date: Aug 2017 -- Dec 2019
+  subtitle: Remote Android Developer
+  tags:
+    - tag: Geofencing
+    - tag: Overlay Windows
+    - tag: Battery Optimization
+  timeline-side: right
+
+- title: Stimulus Consultancy
+  date: Apr 2016 -- Aug 2017
+  subtitle: Android Developer
+  tags:
+    - tag: CI/CD
+    - tag: FinTech
+    - tag: GST
+  timeline-side: right
+
+# Education
+- title: AES College of Computer Science, Ahmedabad University
+  title-url: https://ahduni.edu.in/
+  date: 2013 -- 2015
+  subtitle: Master of Computer Applications (M.C.A.)
   timeline-side: left
 
-- title: Facebook
-  title-url: https://example.com/
-  date: Sep 2017 - Mar 2019
-  subtitle: Front-End Developer as Intern
-  tags:
-    - tag: React
-    - tag: Node
-    - tag: Javascript
-  timeline-side: right
-
-- title: Super University
-  title-url: https://example.com/
-  date: 2014 - 2017
-  subtitle: B.A. Computer Science
+- title: Navgujarat College of Computer Applications, Gujarat University
+  title-url: https://www.gujaratuniversity.ac.in/
+  date: 2010 -- 2013
+  subtitle: Bachelor of Computer Applications (B.C.A.)
   timeline-side: left

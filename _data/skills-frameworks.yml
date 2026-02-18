@@ -5,29 +5,44 @@
 # - name: Framework
 #   weight: 5
 
-- name: Angular
+- name: Android SDK
   weight: 5
 
-- name: AngularJS
-  weight: 3
-
-- name: React
-  weight: 4
-
-- name: Node
-  weight: 1
+- name: Jetpack Compose
+  weight: 5
 
 - name: Flutter
-  weight: 2
+  weight: 5
 
-- name: Express
+- name: Flutter Bloc
+  weight: 5
+
+- name: Provider
+  weight: 4
+
+- name: AutoRoute
+  weight: 4
+
+- name: Node.js
+  weight: 4
+
+- name: Express.js
+  weight: 4
+
+- name: Firebase
+  weight: 4
+
+- name: AWS CloudFront
   weight: 3
 
-- name: Django
-  weight: 1
+- name: RESTful APIs
+  weight: 5
 
-- name: Spring
-  weight: 2
+- name: GraphQL
+  weight: 3
 
-- name: Rails
+- name: Dagger Hilt
+  weight: 4
+
+- name: Koin
   weight: 4
