@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Govind Tank</title>
+    <meta name="description" content="Senior Mobile Application Developer (Kotlin | Flutter) - Personal portfolio website">
+    
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/vendors.min.css">
+</head>
+<body>
+    <div id="preloader">
+        <div class="load">
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+        </div>
+    </div>
+    
+    <!-- Landing Page -->
+    <div class="landing-page">
+        <div class="intro">
+            <h1>Govind Tank</h1>
+            <div id="typed-strings">
+                <p>Senior Mobile Application Developer</p>
+                <p>Kotlin | Flutter</p>
+                <p>Clean Architecture Expert</p>
+            </div>
+            <span id="typed"></span>
+        </div>
+        <div class="social">
+            <a href="mailto:govindtank600@gmail.com" title="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </a>
+            <a href="https://github.com/govindtank" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+            </a>
+            <a href="https://linkedin.com/in/govindtank" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+        </div>
+        <div class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </div>
+
+    <div class="layout">
+        <!-- About Me Section -->
+        <section class="card neumorphism-card-big" data-aos="fade-up">
+            <div class="title">
+                <h2>About Me</h2>
+            </div>
+            <div class="description">
+                <p>High-performance Senior Mobile Application Developer with 9+ years of experience architecting scalable Android (Kotlin/Java) and Cross-Platform (Flutter) solutions. Proven track record of delivering applications serving 100,000+ active users with 99.9% crash-free stability. Specialized in Clean Architecture, MVVM/Bloc patterns, and modern UI toolkits like Jetpack Compose.</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="card neumorphism-card-big" data-aos="fade-up">
+            <div class="title">
+                <h2>Technical Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-item">
+                        <span>Kotlin</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Dart</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Java</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script src="assets/js/vendors.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script>
+        // Hide preloader after page loads
+        window.addEventListener('load', function() {
+            document.getElementById('preloader').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
