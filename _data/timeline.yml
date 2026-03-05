@@ -22,7 +22,7 @@
 - title: Rysun Labs Pvt. Ltd.
   title-url: https://www.rysunlabs.com/
   date: Apr 2022 -- Oct 2025
-  subtitle: Senior Software Developer / Project Owner
+  subtitle: Senior Software Developer L1
   tags:
     - tag: Flutter
     - tag: Bloc
@@ -39,7 +39,7 @@
     - tag: Kotlin
     - tag: Java
     - tag: Performance Optimization
-  timeline-side: right
+  timeline-side: left
 
 - title: Micro App Solutions
   date: Aug 2017 -- Dec 2019
@@ -57,14 +57,14 @@
     - tag: CI/CD
     - tag: FinTech
     - tag: GST
-  timeline-side: right
+  timeline-side: left
 
 # Education
 - title: AES College of Computer Science, Ahmedabad University
   title-url: https://ahduni.edu.in/
   date: 2013 -- 2015
   subtitle: Master of Computer Applications (M.C.A.)
-  timeline-side: left
+  timeline-side: right
 
 - title: Navgujarat College of Computer Applications, Gujarat University
   title-url: https://www.gujaratuniversity.ac.in/
