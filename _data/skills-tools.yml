@@ -27,7 +27,7 @@
   weight: 4
 
 - name: Cursor
-  weight: 5
+  weight: 3
 
 - name: Windsurf
   weight: 5
