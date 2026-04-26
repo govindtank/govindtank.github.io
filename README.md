@@ -1,20 +1,60 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Govind Tank | Senior Lead Architect & Android Expert
 
-# Run and deploy your AI Studio app
+A high-performance, aesthetically technical portfolio designed for a Senior Lead Architect and Android Expert. Built with a "Security-First" and "Architectural Manifesto" aesthetic, this site showcases technical leadership, system architecture, and deep-dive technical logs.
 
-This contains everything you need to run your app locally.
+## 🚀 Key Features
 
-View your app in AI Studio: https://ai.studio/apps/9881be23-6b45-4977-9b8e-1f5b7be25a3f
+- **System Manifest (Hero Section)**: A biometric-themed introduction with interactive HUD nodes representing system sync and architectural readiness.
+- **Biometric Bio (About)**: A narrative-driven profile with scanline overlays, security clearance stamps, and restricted technical callouts.
+- **Interactive Tech Stack (Skills)**: Categorized skill grid focusing on Android Core, Architecture, DevOps, and Creative Tech.
+- **Enterprise Experience (Work)**: Detailed timeline of professional leadership and system-scale contributions.
+- **Project Archives**: Filterable gallery of high-impact technical projects.
+- **Architectural Logs (Blog)**: A technical feed for deep dives, migration strategies, and industry insights, featuring:
+  - **Read-Sequence Mode**: Immersive modal reading experience.
+  - **Terminal Breakouts**: Code snippets formatted as secure system logs.
+  - **Metadata tracking**: Identity integrity and log timestamps.
+- **Social Proof**: Integrated testimonials from enterprise-level collaborations.
 
-## Run Locally
+## 🛠 Tech Stack
 
-**Prerequisites:**  Node.js
+- **Framework**: React 18+ (Vite)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS (JIT)
+- **Animations**: Motion (Framer Motion)
+- **Icons**: Lucide React
+- **Deployment**: Configured for GitHub Pages
 
+## 🤖 Blog Automation Plan
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+This repository is designed to facilitate automated "Architectural Log" generation using LLMs and GitHub Actions.
+
+### Automation Workflow
+1. **Trigger**: Scheduled GitHub Action (CRON: `0 9 * * *`).
+2. **Generation**: A Node.js script (using OpenRouter or Gemini API) generates a technical blog post based on current industry trends.
+3. **Commit**: The script appends the new post to the `BLOG_POSTS` constant in `src/constants.ts`.
+4. **Deploy**: GitHub Pages automatically redeploys with the new content.
+5. **Syndication**: Optional integration with LinkedIn API to cross-post the update.
+
+*See `AUTOMATION_PLAN.md` for implementation details.*
+
+## 📦 Getting Started
+
+1. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+2. **Development**:
+   ```bash
+   npm run dev
+   ```
+3. **Build**:
+   ```bash
+   npm run build
+   ```
+4. **Deploy**:
+   ```bash
+   npm run deploy
+   ```
+
+## 📄 License
+Custom Portfolio Project for Govind Tank. All rights reserved.
