@@ -45,7 +45,7 @@ export default function About() {
                
                <div className="aspect-square glass-card border-white/10 bg-slate-900/50 flex items-center justify-center relative overflow-hidden rounded-[2.5rem] shadow-[0_0_50px_rgba(14,165,233,0.1)] group">
                   <img 
-                    src="/profile_two.png" 
+                    src="profile_two.png" 
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800';
                     }}

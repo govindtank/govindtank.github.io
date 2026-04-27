@@ -120,7 +120,7 @@ export default function Hero() {
                 className="relative h-full w-full rounded-3xl overflow-hidden glass-card border-white/10 group shadow-[0_0_50px_rgba(14,165,233,0.15)] transform-style-3d"
               >
                 <img 
-                  src="/profile_one.png" 
+                  src="profile_one.png" 
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800';
                   }}
