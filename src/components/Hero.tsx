@@ -122,7 +122,7 @@ export default function Hero() {
                 <img 
                   src="profile_one.png" 
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800';
+                    (e.target as HTMLImageElement).src = 'https://github.com/govindtank/Architect_Portfolio/blob/main/public/profile_two.png';
                   }}
                   alt="Govind Tank - Core Intelligence"
                   className="w-full h-full object-cover grayscale brightness-110 contrast-125 saturate-50 group-hover:grayscale-0 group-hover:brightness-100 group-hover:contrast-100 transition-all duration-1000 scale-105 group-hover:scale-100"
