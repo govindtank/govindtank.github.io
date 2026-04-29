@@ -9,6 +9,7 @@ We will use a **GitHub Action** to run a script every morning. This script will:
 2.  **Update Repository**: Inject the generated post into `src/constants.ts`.
 3.  **Cross-Post**: Use a LinkedIn API integration to share the post.
 4.  **Redeploy**: Commit the changes to trigger GitHub Pages.
+   
 
 ---
 
