@@ -4,6 +4,10 @@
   "totalCreated": 0,
   "lastTopic": null,
   "lastDate": null,
-  "todayCount": 0,
-  "blogs": {}
+  "todayCount": 1,
+  "blogs": {
+    "Mastering AI-Augmented Development: The Architect’s Guide to Efficiency and Code Quality": {
+      "status": "published"
+    }
+  }
 }

@@ -3,9 +3,41 @@ import { motion, AnimatePresence } from 'motion/react';
 import { BLOG_POSTS } from '../constants';
 import { Terminal, Calendar, ArrowRight, X, ChevronRight, Share2, BookOpen } from 'lucide-react';
 import { BlogPost } from '../types';
+import { Twitter, Facebook, Linkedin, Clipboard } from 'lucide-react';
 
 export default function Blog() {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+  const [shareShown, setShareShown] = useState(false); // Hide share bar after first use
+  
+  // Share functionality
+  const shareToPlatform = async (platform: string) => {
+    if (!selectedPost) return;
+    
+    const postUrl = window.location.origin + window.location.pathname + '#blog';
+    const shareTitle = encodeURIComponent(selectedPost.title);
+    const shareText = encodeURIComponent(`Read my latest technical insight: ${selectedPost.title}`);
+    
+    switch (platform) {
+      case 'twitter':
+        window.open(`https://twitter.com/intent/tweet?url=${postUrl}&text=${shareTitle} ${shareText}`, '_blank');
+        break;
+      case 'facebook':
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${postUrl}`, '_blank');
+        break;
+      case 'linkedin':
+        window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${postUrl}&title=${shareTitle}&summary=${shareText}`, '_blank');
+        break;
+      case 'copy':
+        try {
+          await navigator.clipboard.writeText(postUrl);
+          alert('Blog link copied to clipboard! 📋');
+          setShareShown(true); // Hide share bar after copy
+        } catch (err) {
+          console.error('Failed to copy:', err);
+        }
+        break;
+    }
+  };
 
   return (
     <section id="logs" className="py-32 relative overflow-hidden bg-slate-950">
@@ -158,20 +190,81 @@ export default function Blog() {
                 </div>
 
                 <div className="mt-16 pt-8 border-t border-white/5 flex justify-between items-center">
-                   <div className="flex items-center gap-2">
+                   <div className="flex items-center gap-3">
                       <img src="/profile_one.png" className="w-10 h-10 rounded-full object-cover grayscale brightness-110" alt="Govind" />
                       <div>
                         <p className="text-white text-xs font-bold leading-none m-0">Govind Tank</p>
                         <p className="text-slate-500 text-[10px] m-0">Senior Lead Architect</p>
                       </div>
                    </div>
-                   <button 
-                    onClick={() => setSelectedPost(null)}
-                    className="text-primary font-mono text-xs font-bold uppercase tracking-widest border border-primary/20 bg-primary/5 px-6 py-2 rounded-lg hover:bg-primary/20 transition-all"
-                   >
-                     Close Log
-                   </button>
+                   <div className="flex items-center gap-2">
+                      {/* Close Button */}
+                      <button 
+                        onClick={() => setSelectedPost(null)}
+                        className="text-primary font-mono text-xs font-bold uppercase tracking-widest border border-primary/20 bg-primary/5 px-4 py-2 rounded-lg hover:bg-primary/20 transition-all"
+                      >
+                        Close
+                      </button>
+                      
+                      {/* Social Share Menu */}
+                      <div className="relative group">
+                        <button className="p-2 hover:bg-white/10 rounded-full transition-colors text-slate-400 hover:text-white" title="Share this post">
+                          <Share2 className="w-5 h-5" />
+                        </button>
+                        {/* Share Dropdown */}
+                        <div className="absolute right-0 top-full mt-2 w-48 bg-slate-800 border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                          <div className="py-2">
+                            <button className="w-full text-left px-4 py-2 text-xs hover:bg-white/5 text-slate-300 flex items-center gap-2" 
+                              onClick={() => { shareToPlatform('twitter'); }}>
+                              <Twitter className="w-4 h-4" />
+                              <span>Share on Twitter</span>
+                            </button>
+                            <button className="w-full text-left px-4 py-2 text-xs hover:bg-white/5 text-slate-300 flex items-center gap-2" 
+                              onClick={() => { shareToPlatform('facebook'); }}>
+                              <Facebook className="w-4 h-4" />
+                              <span>Share on Facebook</span>
+                            </button>
+                            <button className="w-full text-left px-4 py-2 text-xs hover:bg-white/5 text-slate-300 flex items-center gap-2" 
+                              onClick={() => { shareToPlatform('linkedin'); }}>
+                              <Linkedin className="w-4 h-4" />
+                              <span>Share on LinkedIn</span>
+                            </button>
+                            <button className="w-full text-left px-4 py-2 text-xs hover:bg-white/5 text-slate-300 flex items-center gap-2" 
+                              onClick={() => { shareToPlatform('copy'); }}>
+                              <Clipboard className="w-4 h-4" />
+                              <span>Copy Link</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
                 </div>
+
+                {/* Share Helper - Visible on first use, hidden after */}
+                {!shareShown && (
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-slate-950/90 backdrop-blur border-t border-white/5">
+                    <p className="text-xs text-slate-400 mb-2 text-center">
+                      🔗 Share this technical log with your network - one click to post anywhere!
+                    </p>
+                    <div className="flex justify-center gap-3">
+                      <button onClick={() => { shareToPlatform('twitter'); }} className="p-2 rounded-full hover:bg-white/10 transition-all bg-sky-500/20 text-sky-400 border border-sky-500/30" title="Twitter">
+                        <Twitter className="w-5 h-5" />
+                      </button>
+                      <button onClick={() => { shareToPlatform('facebook'); }} className="p-2 rounded-full hover:bg-white/10 transition-all bg-blue-600/20 text-blue-400 border border-blue-600/30" title="Facebook">
+                        <Facebook className="w-5 h-5" />
+                      </button>
+                      <button onClick={() => { shareToPlatform('linkedin'); }} className="p-2 rounded-full hover:bg-white/10 transition-all bg-blue-700/20 text-blue-300 border border-blue-700/30" title="LinkedIn">
+                        <Linkedin className="w-5 h-5" />
+                      </button>
+                      <button onClick={() => { shareToPlatform('copy'); }} className="p-2 rounded-full hover:bg-white/10 transition-all bg-slate-700/30 text-slate-400 border border-slate-600/30" title="Copy Link">
+                        <Clipboard className="w-5 h-5" />
+                      </button>
+                    </div>
+                    {shareShown && (
+                      <p className="text-center text-xs text-slate-500 mt-2 animate-fade-out">✨ Share options activated - happy sharing!</p>
+                    )}
+                  </div>
+                )}
               </div>
             </motion.div>
           </motion.div>
