@@ -49,6 +49,34 @@ export default function BlogAndTestimonials() {
                 </motion.div>
               ))}
             </div>
+
+            {/* About Blogs - New Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mt-12 pt-8 border-t border-white/5"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-slate-400 text-sm font-bold uppercase tracking-widest mb-2">Full Technical Logs</h3>
+                  <p className="text-slate-500 text-xs font-light leading-relaxed max-w-xl">
+                    Explore complete architectural manifests with full implementation details, technical deep-dives, and production-grade strategies.
+                  </p>
+                </div>
+                <button
+                  onClick={() => {
+                    // Scroll to top of page to find the blog detail section (which appears after clicking any post or directly)
+                    document.getElementById('blog-detail')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="px-6 py-3 glass-card bg-primary/10 hover:bg-primary/20 transition-all border border-primary/20 group"
+                >
+                  <span className="text-primary font-mono text-xs font-bold uppercase tracking-widest group-hover:tracking-[0.25em] transition-all">
+                    About Blogs →
+                  </span>
+                </button>
+              </div>
+            </motion.div>
           </div>
 
           {/* Testimonials */}

@@ -1,6 +1,7 @@
 node_modules/
 build/
-dist/
+# Build artifacts - use GitHub Actions for deployment
+# dist/
 coverage/
 .DS_Store
 *.log

@@ -11,6 +11,7 @@ import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Portfolio from './components/Portfolio';
 import BlogAndTestimonials from './components/BlogAndTestimonials';
+import BlogDetail from './components/BlogDetail';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import InteractiveBackground from './components/InteractiveBackground';
@@ -47,7 +48,7 @@ export default function App() {
         <Portfolio />
         <BlogAndTestimonials />
         <Contact />
-      </main>
+        </main>
       <Footer />
     </div>
   );
