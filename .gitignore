@@ -6,3 +6,7 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Sensitive config files
+scripts/blog-automation/env.cjs
+scripts/blog-automation/*.cjs
