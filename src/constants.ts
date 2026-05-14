@@ -112,6 +112,13 @@ export const PROJECTS: Project[] = [
 },
 export const BLOG_POSTS: BlogPost[] = [
   {
+    title: "Mastering Flutter AI Integration: Building Smart Mobile Apps with Machine Learning in 2026",
+    excerpt: "Comprehensive guide to TensorFlow Lite, ONNX Runtime, and ML Kit integration in Flutter with performance optimization and production deployment strategies.",
+    date: "May 14, 2026",
+    tag: "AI",
+    slug: "flutter-ai-integration-machine-learning-2026"
+  },
+  {
     title: "The Rise of AI-Augmented Development",
     excerpt: "How tools like Cursor and Windsurf are fundamentally changing the workflow for senior developers.",
     date: "Mar 15, 2024",
