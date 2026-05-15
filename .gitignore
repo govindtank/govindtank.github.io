@@ -1,0 +1,13 @@
+node_modules/
+build/
+# Build artifacts - use GitHub Actions for deployment
+# dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Sensitive config files
+scripts/blog-automation/env.cjs
+scripts/blog-automation/*.cjs

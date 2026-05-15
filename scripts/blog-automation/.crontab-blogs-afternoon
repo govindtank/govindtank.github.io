@@ -1,0 +1,15 @@
+# Afternoon Blog Automation Run  
+# Runs at 2:00 PM daily (8 hours after morning run)
+# Generates new AI blog posts using Local Hermes
+
+@reboot
+SHELL=/bin/bash
+PATH=/usr/local/bin:/usr/bin:/bin
+GITHUB_TOKEN="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"
+
+cd /Users/govind/hermes_projects/govindtank.github.io && \
+  export GITHUB_TOKEN && \
+  python3 scripts/blog-automation/automation.py --run-id "daily-afternoon" && \
+  git add -A && \
+  git commit -m "feat: Afternoon blog automation $(date +'%Y-%m-%d %H:%M')" -m "🤖 Local Hermes qwen/qwen3.5-9b" -m "Triple daily schedule for optimal engagement" && \
+  git push origin main 2>&1 | tee -a /tmp/blog-cron-afternoon.log

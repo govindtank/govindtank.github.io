@@ -1,0 +1,1 @@
+Static assets directory. Place profile.png here.
