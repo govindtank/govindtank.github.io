@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Bot, MessageSquare, Terminal as TerminalIcon, Cpu, Smartphone } from 'lucide-react';
+import { Bot, MessageSquare, Terminal as TerminalIcon, Cpu, Smartphone, Code2, Sparkles, ChevronRight } from 'lucide-react';
 
 const MESSAGES = [
   "System Initializing... User: Govind Tank",
@@ -13,10 +13,18 @@ const MESSAGES = [
   "Need a consultant? Let's connect!"
 ];
 
+const QUICK_ACTIONS = [
+  { icon: <Code2 className="w-4 h-4" />, label: "Projects", target: "#projects" },
+  { icon: <MessageSquare className="w-4 h-4" />, label: "Contact", target: "#contact" },
+  { icon: <TerminalIcon className="w-4 h-4" />, label: "Logs", target: "#blog" },
+  { icon: <Sparkles className="w-4 h-4" />, label: "Skills", target: "#skills" },
+];
+
 export default function SystemMascot() {
   const [msgIndex, setMsgIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isThinking, setIsThinking] = useState(false);
+  const [showActions, setShowActions] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -41,10 +49,14 @@ export default function SystemMascot() {
     };
   }, []);
 
-  // Calculate rotation to "look" at mouse
   const rotation = {
     x: (mousePos.y - window.innerHeight / 2) / 50,
     y: (mousePos.x - window.innerWidth / 2) / 50,
+  };
+
+  const scrollToSection = (target: string) => {
+    document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' });
+    setShowActions(false);
   };
 
   return (
@@ -56,7 +68,35 @@ export default function SystemMascot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             className="flex flex-col items-end gap-3"
           >
-            {/* Bubble */}
+            <AnimatePresence>
+              {showActions && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                  className="mb-2 bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-2xl p-3 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]"
+                >
+                  <div className="flex items-center gap-2 mb-3 pb-2 border-b border-white/5">
+                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+                    <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">Quick Navigation</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    {QUICK_ACTIONS.map((action, i) => (
+                      <button
+                        key={i}
+                        onClick={() => scrollToSection(action.target)}
+                        className="flex items-center gap-2 px-3 py-2 bg-white/5 hover:bg-primary/10 border border-white/5 hover:border-primary/20 rounded-lg transition-all group"
+                      >
+                        <span className="text-slate-400 group-hover:text-primary transition-colors">{action.icon}</span>
+                        <span className="text-[11px] font-mono text-slate-300 group-hover:text-white">{action.label}</span>
+                        <ChevronRight className="w-3 h-3 text-slate-600 group-hover:text-primary ml-auto transition-colors" />
+                      </button>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
             <motion.div 
                animate={isThinking ? { scale: 0.95, opacity: 0.8 } : { scale: 1, opacity: 1 }}
                className="bg-slate-900/95 backdrop-blur-xl border border-primary/30 p-4 rounded-2xl rounded-br-none shadow-[0_10px_40px_-10px_rgba(14,165,233,0.3)] max-w-[240px] relative"
@@ -69,11 +109,9 @@ export default function SystemMascot() {
                 {MESSAGES[msgIndex]}
               </p>
               
-              {/* Message tail */}
               <div className="absolute bottom-0 right-0 translate-x-[90%] -translate-y-[20%] w-0 h-0 border-l-[10px] border-l-slate-900/95 border-b-[10px] border-b-transparent transform scale-x-[-1]" />
             </motion.div>
 
-            {/* Avatar - Floating Drone */}
             <motion.div 
               style={{
                 perspective: "1000px",
@@ -83,9 +121,9 @@ export default function SystemMascot() {
               whileHover={{ scale: 1.1 }}
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              onClick={() => setShowActions(!showActions)}
               className="w-20 h-20 relative flex items-center justify-center cursor-pointer group"
             >
-              {/* Halos */}
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl group-hover:bg-primary/40 transition-colors" />
               <motion.div 
                 animate={{ rotate: 360 }}
@@ -93,12 +131,10 @@ export default function SystemMascot() {
                 className="absolute inset-0 border border-primary/30 rounded-full border-dashed"
               />
 
-              {/* Drone Body */}
               <div className="w-16 h-16 bg-slate-950 rounded-2xl border-2 border-primary/50 shadow-[0_0_20px_rgba(14,165,233,0.3)] flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
                 <Bot className="text-primary w-10 h-10 drop-shadow-[0_0_8px_rgba(14,165,233,0.5)]" />
                 
-                {/* Scanning Laser Effect */}
                 <motion.div 
                   animate={{ top: ['-100%', '100%'] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
@@ -106,18 +142,17 @@ export default function SystemMascot() {
                 />
               </div>
               
-              {/* Status Light */}
               <div className="absolute top-1 right-1 w-2 h-2 bg-green-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
             </motion.div>
 
-            {/* Quick Actions */}
             <motion.div 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               className="flex gap-2"
             >
               <ControlButton icon={<Cpu className="w-3 h-3" />} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
-              <ControlButton icon={<MessageSquare className="w-3 h-3" />} onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} />
+              <ControlButton icon={<Smartphone className="w-3 h-3" />} onClick={() => scrollToSection('#experience')} />
+              <ControlButton icon={<MessageSquare className="w-3 h-3" />} onClick={() => setShowActions(!showActions)} />
             </motion.div>
           </motion.div>
         )}
@@ -138,4 +173,3 @@ function ControlButton({ icon, onClick }: { icon: React.ReactNode; onClick: () =
     </motion.button>
   );
 }
-

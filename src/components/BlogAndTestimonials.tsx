@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BLOG_POSTS, TESTIMONIALS } from '../constants';
-import { BookOpen, Quote, ChevronRight, MessageSquareQuote } from 'lucide-react';
+import { BookOpen, Quote, ChevronRight, MessageSquareQuote, ArrowDown } from 'lucide-react';
 import { BlogPost } from '../types';
 
 interface BlogAndTestimonialsProps {
@@ -12,10 +12,6 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
   const [showAll, setShowAll] = useState(false);
 
   const visiblePosts = showAll ? BLOG_POSTS : BLOG_POSTS.slice(0, 3);
-
-  const handlePostClick = (post: BlogPost) => {
-    onPostSelect(post);
-  };
 
   return (
     <section id="blog" className="py-24 bg-slate-900/30 relative">
@@ -40,7 +36,7 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  onClick={() => handlePostClick(post)}
+                  onClick={() => onPostSelect(post)}
                   className="group relative p-8 system-card hover:bg-slate-800/40 transition-all cursor-pointer overflow-hidden border border-white/5"
                 >
                   <div className="absolute right-0 top-0 h-full w-1 translate-x-1 group-hover:translate-x-0 bg-primary transition-transform" />
@@ -62,32 +58,37 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
             <AnimatePresence>
               {!showAll && BLOG_POSTS.length > 3 && (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  className="mt-12 pt-8 border-t border-white/5"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="mt-8"
                 >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="text-slate-400 text-sm font-bold uppercase tracking-widest mb-2">
-                        Showing {visiblePosts.length} of {BLOG_POSTS.length} Technical Logs
-                      </h3>
-                      <p className="text-slate-500 text-xs font-light leading-relaxed max-w-xl">
-                        Explore complete architectural manifests with full implementation details, technical deep-dives, and production-grade strategies.
-                      </p>
-                    </div>
-                    <button
-                      onClick={() => setShowAll(true)}
-                      className="px-6 py-3 glass-card bg-primary/10 hover:bg-primary/20 transition-all border border-primary/20 group"
-                    >
-                      <span className="text-primary font-mono text-xs font-bold uppercase tracking-widest group-hover:tracking-[0.25em] transition-all">
-                        See More Logs →
-                      </span>
-                    </button>
-                  </div>
+                  <button
+                    onClick={() => setShowAll(true)}
+                    className="w-full group relative flex items-center justify-center gap-3 py-4 px-6 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/30 rounded-xl transition-all overflow-hidden"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowDown className="w-4 h-4 text-primary group-hover:translate-y-1 transition-transform relative z-10" />
+                    <span className="text-xs font-mono text-slate-400 group-hover:text-primary uppercase tracking-widest relative z-10">
+                      Load {BLOG_POSTS.length - 3} More Technical Logs
+                    </span>
+                    <div className="absolute bottom-0 left-0 h-[2px] bg-primary w-0 group-hover:w-full transition-all duration-700" />
+                  </button>
                 </motion.div>
               )}
             </AnimatePresence>
+
+            {showAll && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="mt-8 text-center"
+              >
+                <p className="text-[10px] font-mono text-slate-600 uppercase tracking-widest">
+                  ✓ All {BLOG_POSTS.length} Technical Logs Loaded
+                </p>
+              </motion.div>
+            )}
           </div>
 
           <div>
@@ -128,4 +129,3 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
     </section>
   );
 }
-

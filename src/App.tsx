@@ -11,7 +11,7 @@ import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Portfolio from './components/Portfolio';
 import BlogAndTestimonials from './components/BlogAndTestimonials';
-import BlogDetail from './components/BlogDetail';
+import BlogDetailModal from './components/BlogDetailModal';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import InteractiveBackground from './components/InteractiveBackground';
@@ -39,16 +39,10 @@ export default function App() {
 
   const handlePostSelect = (post: BlogPost) => {
     setSelectedPost(post);
-    setTimeout(() => {
-      document.getElementById('blog-detail')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
   };
 
-  const handleBackFromDetail = () => {
+  const handleCloseModal = () => {
     setSelectedPost(null);
-    setTimeout(() => {
-      document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
   };
 
   return (
@@ -63,7 +57,7 @@ export default function App() {
         <Experience />
         <Portfolio />
         <BlogAndTestimonials onPostSelect={handlePostSelect} />
-        <BlogDetail selectedPost={selectedPost} onBack={handleBackFromDetail} />
+        <BlogDetailModal selectedPost={selectedPost} onClose={handleCloseModal} />
         <Contact />
         </main>
       <Footer />
