@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -12,16 +12,12 @@ import Experience from './components/Experience';
 import Portfolio from './components/Portfolio';
 import GitHubActivity from './components/GitHubActivity';
 import BlogAndTestimonials from './components/BlogAndTestimonials';
-import BlogDetailModal from './components/BlogDetailModal';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import InteractiveBackground from './components/InteractiveBackground';
 import SystemMascot from './components/SystemMascot';
-import { BlogPost } from './types';
 
 export default function App() {
-  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
-
   useEffect(() => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e: any) {
@@ -38,32 +34,5 @@ export default function App() {
     });
   }, []);
 
-  const handlePostSelect = (post: BlogPost) => {
-    setSelectedPost(post);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedPost(null);
-  };
-
   return (
-    <div className="min-h-screen relative">
-      <InteractiveBackground />
-      <SystemMascot />
-      <Navbar />
-      <main className="relative z-10">
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Portfolio />
-        <GitHubActivity />
-        <BlogAndTestimonials onPostSelect={handlePostSelect} />
-        <BlogDetailModal selectedPost={selectedPost} onClose={handleCloseModal} />
-        <Contact />
-        </main>
-      <Footer />
-    </div>
-  );
-}
-
+    <div className=\"min-h-screen relative\">\n      <InteractiveBackground />\n      <SystemMascot />\n      <Navbar />\n      <main className=\"relative z-10\">\n        <Hero />\n        <About />\n        <Skills />\n        <Experience />\n        <Portfolio />\n        <GitHubActivity />\n        <BlogAndTestimonials />\n        <Contact />\n      </main>\n      <Footer />\n    </div>\n  );\n}
