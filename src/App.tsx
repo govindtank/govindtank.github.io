@@ -4,7 +4,6 @@
  */
 
 import React, { useEffect } from 'react';
-import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -13,9 +12,6 @@ import Portfolio from './components/Portfolio';
 import GitHubActivity from './components/GitHubActivity';
 import BlogAndTestimonials from './components/BlogAndTestimonials';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
-import InteractiveBackground from './components/InteractiveBackground';
-import SystemMascot from './components/SystemMascot';
 
 export default function App() {
   useEffect(() => {
@@ -35,21 +31,15 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen relative">
-      <InteractiveBackground />
-      <SystemMascot />
-      <Navbar />
-      <main className="relative z-10">
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Portfolio />
-        <GitHubActivity />
-        <BlogAndTestimonials />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <Hero />
+      <About />
+      <Skills />
+      <Experience />
+      <Portfolio />
+      <GitHubActivity />
+      <BlogAndTestimonials />
+      <Contact />
+    </>
   );
 }

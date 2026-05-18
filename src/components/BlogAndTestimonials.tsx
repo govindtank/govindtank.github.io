@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
 import { BLOG_POSTS, TESTIMONIALS } from '../constants';
-import { BookOpen, Quote, ChevronRight, MessageSquareQuote, ArrowDown } from 'lucide-react';
+import { BookOpen, Quote, ChevronRight, MessageSquareQuote, ArrowRight } from 'lucide-react';
 
 export default function BlogAndTestimonials() {
   const navigate = useNavigate();
@@ -61,13 +61,13 @@ export default function BlogAndTestimonials() {
                   className="mt-8"
                 >
                   <button
-                    onClick={() => setShowAll(true)}
+                    onClick={() => navigate('/blogs')}
                     className="w-full group relative flex items-center justify-center gap-3 py-4 px-6 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/30 rounded-xl transition-all overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <ArrowDown className="w-4 h-4 text-primary group-hover:translate-y-1 transition-transform relative z-10" />
+                    <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform relative z-10" />
                     <span className="text-xs font-mono text-slate-400 group-hover:text-primary uppercase tracking-widest relative z-10">
-                      Load {BLOG_POSTS.length - 3} More Technical Logs
+                      Access Full Archives ({BLOG_POSTS.length} Logs)
                     </span>
                     <div className="absolute bottom-0 left-0 h-[2px] bg-primary w-0 group-hover:w-full transition-all duration-700" />
                   </button>
