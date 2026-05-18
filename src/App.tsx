@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -16,9 +16,11 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import InteractiveBackground from './components/InteractiveBackground';
 import SystemMascot from './components/SystemMascot';
+import { BlogPost } from './types';
 
 export default function App() {
-  // Smooth scroll behavior
+  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+
   useEffect(() => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e: any) {
@@ -35,6 +37,20 @@ export default function App() {
     });
   }, []);
 
+  const handlePostSelect = (post: BlogPost) => {
+    setSelectedPost(post);
+    setTimeout(() => {
+      document.getElementById('blog-detail')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
+  const handleBackFromDetail = () => {
+    setSelectedPost(null);
+    setTimeout(() => {
+      document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <div className="min-h-screen relative">
       <InteractiveBackground />
@@ -46,7 +62,8 @@ export default function App() {
         <Skills />
         <Experience />
         <Portfolio />
-        <BlogAndTestimonials />
+        <BlogAndTestimonials onPostSelect={handlePostSelect} />
+        <BlogDetail selectedPost={selectedPost} onBack={handleBackFromDetail} />
         <Contact />
         </main>
       <Footer />

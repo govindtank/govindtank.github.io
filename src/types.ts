@@ -25,6 +25,7 @@ export interface BlogPost {
   date: string;
   tag: string;
   slug: string;
+  content?: string;
 }
 
 export interface Testimonial {

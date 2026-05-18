@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c03f0a7e-6e5d-495a-9f74-434787bb7ccb" name="Changes" comment="deploy updation" />
+    <list default="true" id="c03f0a7e-6e5d-495a-9f74-434787bb7ccb" name="Changes" comment="deploy updation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/index-CGyvW_LD.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/index-ClTX22v_.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

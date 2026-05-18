@@ -1,17 +1,14 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { BLOG_POSTS } from '../constants';
-import { Terminal, Calendar, ArrowLeft, Share2, BookOpen, ChevronRight } from 'lucide-react';
+import { Terminal, Calendar, ArrowLeft, Share2, BookOpen } from 'lucide-react';
 import { BlogPost } from '../types';
 
-export default function BlogDetail() {
-  const [selectedPost, setSelectedPost] = React.useState<BlogPost | null>(null);
+interface BlogDetailProps {
+  selectedPost: BlogPost | null;
+  onBack: () => void;
+}
 
-  // Smooth scroll back to top on mount
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
+export default function BlogDetail({ selectedPost, onBack }: BlogDetailProps) {
   if (!selectedPost) {
     return (
       <section id="blog-detail" className="py-24 bg-slate-900/30 relative min-h-[80vh] flex items-center justify-center">
@@ -38,16 +35,128 @@ export default function BlogDetail() {
     );
   }
 
+  const renderContent = (content: string) => {
+    const lines = content.split('\n');
+    const elements: React.ReactNode[] = [];
+    let codeBlock: string[] = [];
+    let inCodeBlock = false;
+    let codeLanguage = '';
+
+    const flushCodeBlock = () => {
+      if (codeBlock.length > 0) {
+        elements.push(
+          <div key={`code-${elements.length}`} className="my-8 p-6 bg-slate-950 border border-white/5 rounded-xl font-mono text-sm overflow-x-auto">
+            {codeLanguage && (
+              <div className="text-xs text-slate-500 mb-3 uppercase tracking-wider">{codeLanguage}</div>
+            )}
+            <pre className="text-primary/90 whitespace-pre">{codeBlock.join('\n')}</pre>
+          </div>
+        );
+        codeBlock = [];
+        codeLanguage = '';
+      }
+    };
+
+    lines.forEach((line, index) => {
+      if (line.startsWith('```')) {
+        if (inCodeBlock) {
+          flushCodeBlock();
+          inCodeBlock = false;
+        } else {
+          inCodeBlock = true;
+          codeLanguage = line.slice(3).trim();
+        }
+        return;
+      }
+
+      if (inCodeBlock) {
+        codeBlock.push(line);
+        return;
+      }
+
+      if (line.startsWith('# ')) {
+        flushCodeBlock();
+        elements.push(
+          <h1 key={`h1-${index}`} className="text-3xl md:text-4xl font-bold text-white mt-12 mb-6">
+            {line.slice(2)}
+          </h1>
+        );
+      } else if (line.startsWith('## ')) {
+        flushCodeBlock();
+        elements.push(
+          <h2 key={`h2-${index}`} className="text-2xl md:text-3xl font-bold text-white mt-10 mb-5">
+            {line.slice(3)}
+          </h2>
+        );
+      } else if (line.startsWith('### ')) {
+        flushCodeBlock();
+        elements.push(
+          <h3 key={`h3-${index}`} className="text-xl md:text-2xl font-bold text-primary mt-8 mb-4">
+            {line.slice(4)}
+          </h3>
+        );
+      } else if (line.startsWith('- [ ]') || line.startsWith('- [x]') || line.startsWith('- ')) {
+        const text = line.replace(/^- \[[ x]\] /, '').replace(/^- /, '');
+        elements.push(
+          <li key={`li-${index}`} className="flex items-start gap-3 my-2 text-slate-300">
+            <span className="text-primary mt-1">▹</span>
+            <span>{text}</span>
+          </li>
+        );
+      } else if (line.startsWith('|')) {
+        const cells = line.split('|').filter(cell => cell.trim());
+        if (cells.every(cell => cell.trim().match(/^[-:]+$/))) {
+          return;
+        }
+        elements.push(
+          <div key={`table-${index}`} className="flex gap-4 my-1 text-sm">
+            {cells.map((cell, cellIndex) => (
+              <span key={cellIndex} className="flex-1 text-slate-300">
+                {cell.trim()}
+              </span>
+            ))}
+          </div>
+        );
+      } else if (line.trim() === '') {
+        flushCodeBlock();
+        elements.push(<div key={`br-${index}`} className="h-4" />);
+      } else {
+        flushCodeBlock();
+        const parts = line.split(/(`[^`]+`|\*\*[^*]+\*\*|\*[^*]+\*)/g);
+        elements.push(
+          <p key={`p-${index}`} className="my-3 text-slate-300 leading-relaxed">
+            {parts.map((part, partIndex) => {
+              if (part.startsWith('`') && part.endsWith('`')) {
+                return (
+                  <code key={partIndex} className="px-2 py-0.5 bg-slate-800 rounded text-primary text-sm">
+                    {part.slice(1, -1)}
+                  </code>
+                );
+              } else if (part.startsWith('**') && part.endsWith('**')) {
+                return <strong key={partIndex} className="text-white">{part.slice(2, -2)}</strong>;
+              } else if (part.startsWith('*') && part.endsWith('*')) {
+                return <em key={partIndex} className="text-slate-400">{part.slice(1, -1)}</em>;
+              }
+              return <span key={partIndex}>{part}</span>;
+            })}
+          </p>
+        );
+      }
+    });
+
+    flushCodeBlock();
+    return elements;
+  };
+
   return (
     <section id="blog-detail" className="py-16 bg-slate-900/30 relative min-h-screen">
-      {/* Back Navigation */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         className="fixed top-4 left-6 z-50"
       >
         <button
-          onClick={() => window.scrollTo({ top: document.getElementById('blog')?.offsetTop || 0, behavior: 'smooth' })}
+          onClick={onBack}
           className="glass-card p-4 rounded-xl border border-white/10 hover:border-primary/30 transition-all group"
         >
           <div className="flex items-center gap-2">
@@ -60,7 +169,6 @@ export default function BlogDetail() {
       </motion.div>
 
       <div className="max-w-5xl mx-auto px-6 pt-24 pb-16">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -89,13 +197,12 @@ export default function BlogDetail() {
               </div>
             </div>
 
-            {/* Social Share */}
             <div className="flex items-center gap-2">
               <button
                 onClick={async () => {
-                  const postUrl = window.location.origin + window.location.pathname;
+                  const postUrl = window.location.href;
                   await navigator.clipboard.writeText(postUrl);
-                  alert('Blog link copied to clipboard! 📋');
+                  alert('Blog link copied to clipboard!');
                 }}
                 className="p-3 glass-card rounded-lg hover:bg-primary/10 transition-all group"
                 title="Copy Link"
@@ -106,7 +213,6 @@ export default function BlogDetail() {
           </div>
         </motion.div>
 
-        {/* Content */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -114,94 +220,41 @@ export default function BlogDetail() {
           className="glass-card p-8 md:p-16 rounded-3xl border border-white/5 bg-slate-900/60"
         >
           <div className="prose prose-invert max-w-none">
-            {/* Reading Notice */}
             <div className="flex items-center gap-4 p-6 bg-primary/5 border-l-4 border-primary rounded-xl mb-12">
               <BookOpen className="w-6 h-6 text-primary flex-shrink-0" />
               <div>
                 <p className="text-primary font-mono text-sm italic m-0">
-                  Internal Manifest Loading... ✓
+                  Technical Log Access Granted ✓
                 </p>
                 <p className="text-slate-500 text-xs mt-1 font-light">
-                  Architecture log • Production Ready • 2026 Secure
+                  {selectedPost.tag} • {selectedPost.date} • Complete Manifest
                 </p>
               </div>
             </div>
 
-            {/* Main Excerpt - Full Content */}
-            <div className="space-y-8 text-slate-300 font-sans leading-relaxed text-lg">
-              <p className="first-letter:text-7xl first-letter:font-bold first-letter:text-primary first-letter:mr-6 first-letter:float-left">
-                {selectedPost.excerpt} As a Senior Architect, navigating the complexities of production-scale systems requires more than just language proficiency. 
-                It demands a deep understanding of infrastructure stability, state consistency, and the human workflow behind the code.
-
-                This technical session details specific implementation strategies that have been battle-tested in high-stakes environments where milliseconds matter and availability is non-negotiable.
-              </p>
-
-              {/* Core Methodologies */}
-              <div className="my-16 p-8 bg-slate-950/50 border border-white/5 rounded-2xl font-mono text-sm relative group overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="flex items-center justify-between mb-6 border-b border-white/5 pb-3">
-                  <span className="text-slate-500 font-bold uppercase tracking-wider text-xs">manifest_integrity.log</span>
-                  <Terminal className="w-4 h-4 text-primary" />
-                </div>
-                <code className="text-primary block whitespace-pre">
-                  {`# System Manifest: ${selectedPost.title}
-├─ [OK] Architecture Validation Complete
-├─ [OK] Performance Metrics Within Thresholds
-├─ [OK] Security Protocols Verified
-└─ [COMPLETE] Implementation Ready for Production`}
-                </code>
-              </div>
-
-              <h3 className="text-white text-2xl font-bold mt-16 mb-6 font-mono tracking-tighter uppercase italic">
-                <span className="text-primary mr-3">01.</span> Core Methodologies
-              </h3>
-              <p>
-                In this technical deep-dive, we explore the implementation of strict validation layers and how they prevent 
-                cascading failures in high-concurrency environments. By utilizing specific architectural patterns, we can 
-                isolate fault domains and ensure data integrity across distributed systems.
-              </p>
-
-              {/* Technical Principles */}
-              <h3 className="text-white text-2xl font-bold mt-16 mb-6 font-mono tracking-tighter uppercase italic">
-                <span className="text-accent mr-3">02.</span> Technical Pillars
-              </h3>
-              <ul className="space-y-4 p-0">
-                {[\n                  "Atomic design patterns in state management","Automated CI/CD pipelines with strictly enforced linting",\n                  "Memory profiling and aggressive leak detection","Security-first API communication protocols",\n                  "Zero-downtime deployment strategies","Real-time error aggregation and alerting"\n                ].map((item, i) => (\n                  <li key={i} className="flex items-start gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-all border border-white/5">
-                    <ChevronRight className="w-5 h-5 text-primary flex-shrink-0 mt-1" />\n                    <span>{item}</span>\n                  </li>\n                ))}\n              </ul>
-
-              {/* Scaling Strategies */}
-              <h3 className="text-white text-2xl font-bold mt-16 mb-6 font-mono tracking-tighter uppercase italic">
-                <span className="text-primary mr-3">03.</span> Strategic Scaling
-              </h3>
-              <p>
-                When scaling from thousands to hundreds of thousands of concurrent users, the focus shifts from 
-                feature completeness to infrastructure resilience. We concentrate on:
-              </p>
-
-              <div className="grid md:grid-cols-2 gap-4 mt-8">
-                {[\n                  "Zero-latency state distribution across edge nodes",\n                  "Differential data synchronization minimizing payload size",\n                  "Adaptive resource allocation per client-tier tiering",\n                  "Predictive scaling based on historical patterns"\n                ].map((item, index) => (\n                  <div key={index} className="flex gap-4 items-center p-5 rounded-xl bg-primary/5 border border-primary/10 hover:border-primary/30 transition-all">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary/50 flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                      {index + 1}\n                    </div>\n                    <span className="text-base font-semibold text-slate-200">{item}</span>\n                  </div>\n                ))}\n              </div>
-
-              {/* Key Takeaways */}
-              <div className="mt-16 p-8 bg-slate-950/50 border border-white/5 rounded-2xl font-mono text-sm">
-                <h4 className="text-primary font-bold uppercase tracking-wider mb-4">Key Technical Takeaways</h4>\n                <ul className="space-y-3">\n                  {[
-                    "Maintaining 99.9%+ availability requires proactive monitoring and automated recovery",\n                    "Code migration must preserve behavior while improving maintainability",\n                    "Performance optimization is an iterative process, not a one-time fix",\n                    "Security is built into the architecture, not bolted on afterward"\n                  ].map((takeaway, i) => (\n                    <li key={i} className="flex items-start gap-3">\n                      <span className="text-primary text-xl mt-1">✓</span>\n                      <span>{takeaway}</span>\n                    </li>\n                  ))}\n                </ul>\n              </div>
-
-              {/* Conclusion */}
-              <p className="mt-12 text-slate-400 italic border-l-4 border-primary/30 pl-6 py-4 bg-primary/5 rounded-r-xl">\n                In conclusion, maintaining a 99.9% crash-free rate or successfully migrating enterprise \n                Java codebases isn't just about the code—it's about the technical discipline, architectural \n                vision, and the team culture that supports sustainable engineering excellence.\n              </p>
+            <div className="text-lg">
+              {selectedPost.content ? renderContent(selectedPost.content) : (
+                <p className="text-slate-400 italic">
+                  Full content for this technical log is being compiled. Check back soon for the complete architectural manifest.
+                </p>
+              )}
             </div>
           </div>
 
-          {/* Footer */}
           <div className="mt-16 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="flex items-center gap-4">
               <img src="/profile_one.png" className="w-16 h-16 rounded-2xl object-cover border border-white/10 grayscale-[0.5] hover:grayscale-0 transition-all cursor-pointer" alt="Govind" />
-              <div>\n                <p className="text-white font-bold text-lg m-0 leading-tight">Govind Tank</p>\n                <p className="text-primary font-mono text-xs uppercase tracking-widest mt-1">Senior Lead Architect</p>\n              </div>\n            </div>
+              <div>
+                <p className="text-white font-bold text-lg m-0 leading-tight">Govind Tank</p>
+                <p className="text-primary font-mono text-xs uppercase tracking-widest mt-1">Senior Lead Architect</p>
+              </div>
+            </div>
             <button
-              onClick={() => setSelectedPost(null)}
+              onClick={onBack}
               className="px-8 py-4 bg-primary text-slate-950 font-sans font-black uppercase text-sm tracking-tighter hover:bg-white transition-all transform hover:-translate-y-1 active:translate-y-0 shadow-[0_0_20px_rgba(14,165,233,0.3)] hover:shadow-[0_0_30px_rgba(14,165,233,0.5)]"
-            >\n              Close Manifest\n            </button>
+            >
+              Close Manifest
+            </button>
           </div>
         </motion.div>
       </div>
