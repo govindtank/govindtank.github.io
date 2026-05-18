@@ -18,6 +18,7 @@ export default function Navbar() {
     { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
+    { name: 'GitHub', href: '#github' },
     { name: 'Logs', href: '#blog' },
     { name: 'Contact', href: '#contact' },
   ];

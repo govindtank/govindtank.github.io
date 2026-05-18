@@ -10,6 +10,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Portfolio from './components/Portfolio';
+import GitHubActivity from './components/GitHubActivity';
 import BlogAndTestimonials from './components/BlogAndTestimonials';
 import BlogDetailModal from './components/BlogDetailModal';
 import Contact from './components/Contact';
@@ -56,6 +57,7 @@ export default function App() {
         <Skills />
         <Experience />
         <Portfolio />
+        <GitHubActivity />
         <BlogAndTestimonials onPostSelect={handlePostSelect} />
         <BlogDetailModal selectedPost={selectedPost} onClose={handleCloseModal} />
         <Contact />
