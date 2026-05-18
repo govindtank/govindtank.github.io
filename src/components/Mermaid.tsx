@@ -21,10 +21,10 @@ export default function Mermaid({ chart }: { chart: string }) {
 
   useEffect(() => {
     if (ref.current) {
-      mermaid.contentLoaded();
-      // Sometimes mermaid needs a manual render for dynamic content
       mermaid.render('mermaid-diag-' + Math.random().toString(36).substr(2, 9), chart).then((res) => {
-        ref.current?.innerHTML = res.svg;
+        if (ref.current) {
+          ref.current.innerHTML = res.svg;
+        }
       });
     }
   }, [chart]);

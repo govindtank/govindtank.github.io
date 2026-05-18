@@ -35,4 +35,21 @@ export default function App() {
   }, []);
 
   return (
-    <div className=\"min-h-screen relative\">\n      <InteractiveBackground />\n      <SystemMascot />\n      <Navbar />\n      <main className=\"relative z-10\">\n        <Hero />\n        <About />\n        <Skills />\n        <Experience />\n        <Portfolio />\n        <GitHubActivity />\n        <BlogAndTestimonials />\n        <Contact />\n      </main>\n      <Footer />\n    </div>\n  );\n}
+    <div className="min-h-screen relative">
+      <InteractiveBackground />
+      <SystemMascot />
+      <Navbar />
+      <main className="relative z-10">
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Portfolio />
+        <GitHubActivity />
+        <BlogAndTestimonials />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  );
+}
