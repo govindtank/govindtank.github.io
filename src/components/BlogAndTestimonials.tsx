@@ -131,7 +131,7 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                     <span className="text-[10px] font-mono text-slate-600 uppercase tracking-widest">{post.date}</span>
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-primary transition-all tracking-tight leading-tight">{post.title}</h3>
-                  <p className="text-slate-400 text-base mb-6 font-light">{post.excerpt}</p>
+                  <p className="text-slate-400 text-base mb-6 font-light line-clamp-4">{post.excerpt}</p>
                   <div className="flex items-center gap-2 text-[10px] font-mono text-slate-500 group-hover:text-white uppercase tracking-[0.2em] transition-all">
                     Initialize_Read_Sequence <ChevronRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                   </div>

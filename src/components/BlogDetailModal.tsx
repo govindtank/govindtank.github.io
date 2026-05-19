@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Share2, Calendar, Tag, Clock, BookOpen, Terminal, Twitter, Facebook, Linkedin, Loader } from 'lucide-react';
+import { X, Calendar, Tag, Clock, BookOpen, Terminal, Twitter, Facebook, Linkedin, Loader, Link, Check } from 'lucide-react';
 import { BlogPost } from '../types';
 
 interface BlogDetailModalProps {
@@ -242,6 +242,30 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
     }
   };
 
+  function CopyLinkButton() {
+    const [copied, setCopied] = useState(false);
+
+    const handleCopy = async () => {
+      try {
+        await navigator.clipboard.writeText(postUrl);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    };
+
+    return (
+      <button
+        onClick={handleCopy}
+        className="p-2 hover:bg-white/5 rounded-lg transition-colors text-slate-400 hover:text-primary"
+        title={copied ? 'Copied!' : 'Copy Link'}
+      >
+        {copied ? <Check className="w-4 h-4" /> : <Link className="w-4 h-4" />}
+      </button>
+    );
+  }
+
   return (
     <AnimatePresence>
       {selectedPost && (
@@ -296,49 +320,29 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
                   <p className="text-white text-sm font-semibold">Govind Tank</p>
                   <p className="text-slate-500 text-xs">Senior Lead Architect</p>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1.5">
                   <button
-                    onClick={async () => {
-                      await navigator.clipboard.writeText(window.location.href);
-                    }}
-                    className="p-2 hover:bg-white/5 rounded-lg transition-colors text-slate-400 hover:text-primary"
-                    title="Copy Link"
+                    onClick={() => shareToPlatform('twitter')}
+                    className="p-2 hover:bg-white/5 rounded-lg transition-colors text-slate-400 hover:text-[#1DA1F2]"
+                    title="Share on Twitter"
                   >
-                    <Share2 className="w-4 h-4" />
+                    <Twitter className="w-4 h-4" />
                   </button>
-                  <div className="relative group">
-                    <button 
-                      className="p-2 hover:bg-white/5 rounded-full transition-colors text-slate-400 hover:text-white"
-                      title="Share"
-                    >
-                      <Share2 className="w-4 h-4 text-slate-400" />
-                    </button>
-                    <div className="absolute right-0 mt-2 w-48 bg-slate-800 border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-                      <div className="py-2">
-                        <button 
-                          className="w-full text-left px-4 py-2 text-xs hover:bg-white/5 text-slate-300 flex items-center gap-2" 
-                          onClick={() => shareToPlatform('twitter')}
-                        >
-                          <Twitter className="w-4 h-4" />
-                          <span>Twitter</span>
-                        </button>
-                        <button 
-                          className="w-full text-left px-4 py-2 text-xs hover:bg-white/5 text-slate-300 flex items-center gap-2" 
-                          onClick={() => shareToPlatform('facebook')}
-                        >
-                          <Facebook className="w-4 h-4" />
-                          <span>Facebook</span>
-                        </button>
-                        <button 
-                          className="w-full text-left px-4 py-2 text-xs hover:bg-white/5 text-slate-300 flex items-center gap-2" 
-                          onClick={() => shareToPlatform('linkedin')}
-                        >
-                          <Linkedin className="w-4 h-4" />
-                          <span>LinkedIn</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                  <button
+                    onClick={() => shareToPlatform('facebook')}
+                    className="p-2 hover:bg-white/5 rounded-lg transition-colors text-slate-400 hover:text-[#1877F2]"
+                    title="Share on Facebook"
+                  >
+                    <Facebook className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={() => shareToPlatform('linkedin')}
+                    className="p-2 hover:bg-white/5 rounded-lg transition-colors text-slate-400 hover:text-[#0A66C2]"
+                    title="Share on LinkedIn"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                  </button>
+                  <CopyLinkButton />
                 </div>
               </div>
 
