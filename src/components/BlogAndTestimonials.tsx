@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BLOG_POSTS, TESTIMONIALS } from '../constants';
-import { BookOpen, Quote, ChevronRight, MessageSquareQuote, ArrowDown } from 'lucide-react';
+import { BookOpen, Quote, ChevronRight, MessageSquareQuote, ArrowDown, Search, Filter, X } from 'lucide-react';
 import { BlogPost } from '../types';
 
 interface BlogAndTestimonialsProps {
@@ -10,8 +10,27 @@ interface BlogAndTestimonialsProps {
 
 export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonialsProps) {
   const [showAll, setShowAll] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [showFilters, setShowFilters] = useState(false);
 
-  const visiblePosts = showAll ? BLOG_POSTS : BLOG_POSTS.slice(0, 3);
+  // Filter posts based on search and tag
+  const filteredPosts = useMemo(() => {
+    return BLOG_POSTS.filter(post => {
+      const matchesSearch = searchTerm.trim() === '' || 
+        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.tag.toLowerCase().includes(searchTerm.toLowerCase());
+      
+      const matchesTag = selectedTag === null || post.tag === selectedTag;
+      
+      return matchesSearch && matchesTag;
+    });
+  }, [searchTerm, selectedTag]);
+
+  const visiblePosts = showAll ? filteredPosts : filteredPosts.slice(0, 3);
+
+  const tags = [...new Set(BLOG_POSTS.map(post => post.tag))];
 
   return (
     <section id="blog" className="py-24 bg-slate-900/30 relative">
@@ -28,6 +47,67 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
               </div>
             </div>
             
+            {/* Search and Filter Controls */}
+            <div className="flex items-center gap-4 mb-6">
+              <div className="relative w-full max-w-xs">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500" />
+                <input
+                  type="text"
+                  placeholder="Search blogs..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="pl-10 pr-4 py-2 bg-slate-950/50 border border-white/10 rounded-lg text-slate-300 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary/20"
+                />
+              </div>
+              
+              <div className="relative">
+                <button
+                  onClick={() => setShowFilters(!showFilters)}
+                  className="p-2 hover:bg-white/5 rounded-full transition-colors text-slate-400 hover:text-white"
+                >
+                  <Filter className="w-4 h-4" />
+                </button>
+                {showFilters && (
+                  <div className="absolute left-0 mt-4 w-48 bg-slate-950 border border-white/5 rounded-lg p-4 z-20">
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="w-2 h-2 bg-primary rounded-full" />
+                      <span className="text-[10px] font-mono text-primary uppercase tracking-widest">Filter by Tag</span>
+                    </div>
+                    <div className="space-y-2">
+                      {tags.map(tag => (
+                        <label key={tag} className="flex items-start gap-3 cursor-pointer select-none p-2 rounded hover:bg-white/5 transition-colors">
+                          <input
+                            type="radio"
+                            value={tag}
+                            checked={selectedTag === tag}
+                            onChange={(e) => {
+                              setSelectedTag(e.target.value as string);
+                              setShowFilters(false);
+                            }}
+                            className="h-3 w-3 text-primary"
+                          />
+                          <span className="text-[10px] font-mono text-slate-300">{tag}</span>
+                        </label>
+                      ))}
+                      <label key="all" className="flex items-start gap-3 cursor-pointer select-none p-2 rounded hover:bg-white/5 transition-colors">
+                        <input
+                          type="radio"
+                          value=""
+                          checked={selectedTag === null}
+                          onChange={(e) => {
+                            setSelectedTag(null);
+                            setShowFilters(false);
+                          }}
+                          className="h-3 w-3 text-primary"
+                        />
+                        <span className="text-[10px] font-mono text-slate-300">All Tags</span>
+                      </label>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
             <div className="space-y-4">
               {visiblePosts.map((post, i) => (
                 <motion.div
@@ -56,7 +136,7 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
             </div>
 
             <AnimatePresence>
-              {!showAll && BLOG_POSTS.length > 3 && (
+              {!showAll && filteredPosts.length > 3 && (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -70,7 +150,9 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                     <ArrowDown className="w-4 h-4 text-primary group-hover:translate-y-1 transition-transform relative z-10" />
                     <span className="text-xs font-mono text-slate-400 group-hover:text-primary uppercase tracking-widest relative z-10">
-                      Load {BLOG_POSTS.length - 3} More Technical Logs
+                      {showAll ? 
+                        `Showing ${visiblePosts.length} of ${filteredPosts.length} Filtered Logs` : 
+                        `Load ${Math.min(3, filteredPosts.length)} More Technical Logs`}
                     </span>
                     <div className="absolute bottom-0 left-0 h-[2px] bg-primary w-0 group-hover:w-full transition-all duration-700" />
                   </button>
@@ -85,8 +167,25 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                 className="mt-8 text-center"
               >
                 <p className="text-[10px] font-mono text-slate-600 uppercase tracking-widest">
-                  ✓ All {BLOG_POSTS.length} Technical Logs Loaded
+                  ✓ Showing all {filteredPosts.length} Filtered Technical Logs
                 </p>
+                {searchTerm || selectedTag && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="mt-2"
+                  >
+                    <button
+                      onClick={() => {
+                        setSearchTerm('');
+                        setSelectedTag(null);
+                      }}
+                      className="px-4 py-2 bg-primary/10 hover:bg-primary/20 border border-primary/10 rounded-md transition-all text-xs font-mono text-primary"
+                    >
+                      Clear Filters
+                    </button>
+                  </motion.div>
+                )}
               </motion.div>
             )}
           </div>

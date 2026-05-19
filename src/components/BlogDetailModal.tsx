@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Share2, Calendar, Tag, Clock, BookOpen, Terminal } from 'lucide-react';
+import { X, Share2, Calendar, Tag, Clock, BookOpen, Terminal, Twitter, Facebook, Linkedin } from 'lucide-react';
 import { BlogPost } from '../types';
 
 interface BlogDetailModalProps {
@@ -190,6 +190,33 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
   };
 
   const readingTime = Math.ceil((selectedPost.content?.split(' ').length || 200) / 200);
+  const postUrl = window.location.href;
+
+  const shareToPlatform = async (platform: string) => {
+    const shareTitle = encodeURIComponent(selectedPost.title);
+    const shareText = encodeURIComponent(`Check out this technical blog: ${selectedPost.title}`);
+    
+    switch (platform) {
+      case 'twitter':
+        window.open(`https://twitter.com/intent/tweet?url=${postUrl}&text=${shareText}`, '_blank');
+        break;
+      case 'facebook':
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${postUrl}`, '_blank');
+        break;
+      case 'linkedin':
+        window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${postUrl}&title=${shareTitle}&summary=${shareText}`, '_blank');
+        break;
+      case 'copy':
+        try {
+          await navigator.clipboard.writeText(postUrl);
+          alert('Blog link copied to clipboard! 📋');
+        } catch (err) {
+          console.error('Failed to copy:', err);
+          alert('Failed to copy link');
+        }
+        break;
+    }
+  };
 
   return (
     <AnimatePresence>
@@ -224,12 +251,14 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
                   <span className="text-[10px] font-mono uppercase tracking-wider">{readingTime} min read</span>
                 </div>
               </div>
-              <button 
-                onClick={onClose}
-                className="p-2 hover:bg-white/5 rounded-full transition-colors text-slate-400 hover:text-white"
-              >
-                <X className="w-5 h-5" />
-              </button>
+              <div className="flex items-center gap-2">
+                <button 
+                  onClick={onClose}
+                  className="p-2 hover:bg-white/5 rounded-full transition-colors text-slate-400 hover:text-white"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
             </div>
 
             <div className="px-6 md:px-12 py-8 md:py-12">
@@ -243,15 +272,50 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
                   <p className="text-white text-sm font-semibold">Govind Tank</p>
                   <p className="text-slate-500 text-xs">Senior Lead Architect</p>
                 </div>
-                <button
-                  onClick={async () => {
-                    await navigator.clipboard.writeText(window.location.href);
-                  }}
-                  className="ml-auto p-2 hover:bg-white/5 rounded-lg transition-colors text-slate-400 hover:text-primary"
-                  title="Copy Link"
-                >
-                  <Share2 className="w-4 h-4" />
-                </button>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={async () => {
+                      await navigator.clipboard.writeText(window.location.href);
+                    }}
+                    className="p-2 hover:bg-white/5 rounded-lg transition-colors text-slate-400 hover:text-primary"
+                    title="Copy Link"
+                  >
+                    <Share2 className="w-4 h-4" />
+                  </button>
+                  <div className="relative group">
+                    <button 
+                      className="p-2 hover:bg-white/5 rounded-full transition-colors text-slate-400 hover:text-white"
+                      title="Share"
+                    >
+                      <Share2 className="w-4 h-4 text-slate-400" />
+                    </button>
+                    <div className="absolute right-0 mt-2 w-48 bg-slate-800 border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                      <div className="py-2">
+                        <button 
+                          className="w-full text-left px-4 py-2 text-xs hover:bg-white/5 text-slate-300 flex items-center gap-2" 
+                          onClick={() => shareToPlatform('twitter')}
+                        >
+                          <Twitter className="w-4 h-4" />
+                          <span>Twitter</span>
+                        </button>
+                        <button 
+                          className="w-full text-left px-4 py-2 text-xs hover:bg-white/5 text-slate-300 flex items-center gap-2" 
+                          onClick={() => shareToPlatform('facebook')}
+                        >
+                          <Facebook className="w-4 h-4" />
+                          <span>Facebook</span>
+                        </button>
+                        <button 
+                          className="w-full text-left px-4 py-2 text-xs hover:bg-white/5 text-slate-300 flex items-center gap-2" 
+                          onClick={() => shareToPlatform('linkedin')}
+                        >
+                          <Linkedin className="w-4 h-4" />
+                          <span>LinkedIn</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="mb-8 p-4 bg-primary/5 border-l-2 border-primary rounded-r-lg">

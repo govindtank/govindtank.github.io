@@ -5,53 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c03f0a7e-6e5d-495a-9f74-434787bb7ccb" name="Changes" comment="fix">
-      <change beforePath="$PROJECT_DIR$/dist/assets/arc-CoBvM5Me.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/architectureDiagram-3BPJPVTR-mqzLDmCO.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/blockDiagram-GPEHLZMM-CD9qvgvs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/c4Diagram-AAUBKEIU-BIUxDgxM.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/channel-BpvgJ-Nv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/chunk-2J33WTMH-B5gIZ34T.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/chunk-4BX2VUAB-BXP4aT5N.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/chunk-55IACEB6-B8_JiBHX.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/chunk-727SXJPM-B5Ohx-48.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/chunk-AQP2D5EJ-CB5gx3nX.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/chunk-FMBD7UC4-D4BLtk0j.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/chunk-ND2GUHAM-DQn7VMHT.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/chunk-QZHKN3VN-CajxVXvr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/classDiagram-4FO5ZUOK-Dfl_Go5k.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/classDiagram-v2-Q7XG4LA2-Dfl_Go5k.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/cose-bilkent-S5V4N54A-KauYKLNq.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/dagre-BM42HDAG-Dp7VEhoI.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/diagram-2AECGRRQ-BRt5CeUY.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/diagram-5GNKFQAL-DinINP1X.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/diagram-KO2AKTUF-DmGax7om.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/diagram-LMA3HP47-rjluPzy-.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/diagram-OG6HWLK6-CT0sleTO.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/erDiagram-TEJ5UH35-DkuK718q.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/flowDiagram-I6XJVG4X-C8p7-WUP.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/ganttDiagram-6RSMTGT7-BEZyWnNS.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/gitGraphDiagram-PVQCEYII-RHbsrJeN.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/index-BIyYHGl9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/index-BPLp3x-y.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/infoDiagram-5YYISTIA-DH71g8-F.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/ishikawaDiagram-YF4QCWOH-CWkCEs__.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/journeyDiagram-JHISSGLW-DZ-JZDQ2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/kanban-definition-UN3LZRKU-iwM3uxcT.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/linear-DUD8rdPF.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/mindmap-definition-RKZ34NQL-CuGjwq5K.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/pieDiagram-4H26LBE5-DbSb5g5y.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/quadrantDiagram-W4KKPZXB-C5YtZakB.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/requirementDiagram-4Y6WPE33-NHBIvD7i.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/sankeyDiagram-5OEKKPKP-BJ_n-O9Y.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/sequenceDiagram-3UESZ5HK-B91miYcB.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/stateDiagram-AJRCARHV-25UIK31k.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/stateDiagram-v2-BHNVJYJU-DxskBEk3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/timeline-definition-PNZ67QCA-DTE_MAPS.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/vennDiagram-CIIHVFJN-BaQFAD1S.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/wardley-L42UT6IY-CsAf9Gyu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/wardleyDiagram-YWT4CUSO-BQNjpy3V.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/xychartDiagram-2RQKCTM6-D2KgDAvr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
