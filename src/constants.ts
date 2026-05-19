@@ -44,6 +44,16 @@ export const EXPERIENCES: Experience[] = [
       "Developed 'Fastrrr-Floating Apps' and 'Water Reminder' with complex overlay window permissions.",
       "Built 'OfferzZone', a hyper-local marketplace utilizing Geofencing APIs for precise location-based notifications."
     ]
+  },
+  {
+    company: "Stimulus Consultancy",
+    role: "Android Developer",
+    period: "Apr 2016 – Aug 2017",
+    location: "Ahmedabad, India",
+    achievements: [
+      "Established CI/CD pipelines and repo structure for early-stage startup applications.",
+      "Implemented accurate GST tax logic for a financial application."
+    ]
   }
 ];
 

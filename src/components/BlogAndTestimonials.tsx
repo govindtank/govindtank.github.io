@@ -1,36 +1,47 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BLOG_POSTS, TESTIMONIALS } from '../constants';
-import { BookOpen, Quote, ChevronRight, MessageSquareQuote, ArrowDown, Search, Filter, X } from 'lucide-react';
+import { BookOpen, Quote, ChevronRight, MessageSquareQuote, ArrowDown, Search, Filter } from 'lucide-react';
 import { BlogPost } from '../types';
 
 interface BlogAndTestimonialsProps {
   onPostSelect: (post: BlogPost) => void;
 }
 
+const ITEMS_PER_PAGE = 6;
+
 export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonialsProps) {
-  const [showAll, setShowAll] = useState(false);
+  const [page, setPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [showFilters, setShowFilters] = useState(false);
 
-  // Filter posts based on search and tag
   const filteredPosts = useMemo(() => {
     return BLOG_POSTS.filter(post => {
       const matchesSearch = searchTerm.trim() === '' || 
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.tag.toLowerCase().includes(searchTerm.toLowerCase());
-      
       const matchesTag = selectedTag === null || post.tag === selectedTag;
-      
       return matchesSearch && matchesTag;
     });
   }, [searchTerm, selectedTag]);
 
-  const visiblePosts = showAll ? filteredPosts : filteredPosts.slice(0, 3);
-
+  const totalPages = Math.ceil(filteredPosts.length / ITEMS_PER_PAGE);
+  const visiblePosts = filteredPosts.slice(0, page * ITEMS_PER_PAGE);
+  const hasMore = visiblePosts.length < filteredPosts.length;
   const tags = [...new Set(BLOG_POSTS.map(post => post.tag))];
+
+  const loadMore = () => {
+    const nextPage = Math.min(page + 1, totalPages);
+    setPage(nextPage);
+  };
+
+  const clearFilters = () => {
+    setSearchTerm('');
+    setSelectedTag(null);
+    setPage(1);
+  };
 
   return (
     <section id="blog" className="py-24 bg-slate-900/30 relative">
@@ -47,7 +58,6 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
               </div>
             </div>
             
-            {/* Search and Filter Controls */}
             <div className="flex items-center gap-4 mb-6">
               <div className="relative w-full max-w-xs">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500" />
@@ -55,56 +65,50 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                   type="text"
                   placeholder="Search blogs..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10 pr-4 py-2 bg-slate-950/50 border border-white/10 rounded-lg text-slate-300 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary/20"
+                  onChange={(e) => { setSearchTerm(e.target.value); setPage(1); }}
+                  className="w-full pl-10 pr-4 py-2 bg-slate-950/50 border border-white/10 rounded-lg text-slate-300 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm"
                 />
               </div>
               
               <div className="relative">
                 <button
                   onClick={() => setShowFilters(!showFilters)}
-                  className="p-2 hover:bg-white/5 rounded-full transition-colors text-slate-400 hover:text-white"
+                  className={`p-2 rounded-full transition-colors ${selectedTag ? 'text-primary bg-primary/10' : 'text-slate-400 hover:text-white hover:bg-white/5'}`}
                 >
                   <Filter className="w-4 h-4" />
                 </button>
-                {showFilters && (
-                  <div className="absolute left-0 mt-4 w-48 bg-slate-950 border border-white/5 rounded-lg p-4 z-20">
-                    <div className="flex items-center gap-2 mb-3">
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                      <span className="text-[10px] font-mono text-primary uppercase tracking-widest">Filter by Tag</span>
-                    </div>
-                    <div className="space-y-2">
-                      {tags.map(tag => (
-                        <label key={tag} className="flex items-start gap-3 cursor-pointer select-none p-2 rounded hover:bg-white/5 transition-colors">
-                          <input
-                            type="radio"
-                            value={tag}
-                            checked={selectedTag === tag}
-                            onChange={(e) => {
-                              setSelectedTag(e.target.value as string);
-                              setShowFilters(false);
-                            }}
-                            className="h-3 w-3 text-primary"
-                          />
-                          <span className="text-[10px] font-mono text-slate-300">{tag}</span>
-                        </label>
-                      ))}
-                      <label key="all" className="flex items-start gap-3 cursor-pointer select-none p-2 rounded hover:bg-white/5 transition-colors">
-                        <input
-                          type="radio"
-                          value=""
-                          checked={selectedTag === null}
-                          onChange={(e) => {
-                            setSelectedTag(null);
-                            setShowFilters(false);
-                          }}
-                          className="h-3 w-3 text-primary"
-                        />
-                        <span className="text-[10px] font-mono text-slate-300">All Tags</span>
-                      </label>
-                    </div>
-                  </div>
-                )}
+                <AnimatePresence>
+                  {showFilters && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="absolute left-0 mt-4 w-48 bg-slate-950 border border-white/5 rounded-xl p-4 z-20 shadow-xl"
+                    >
+                      <div className="flex items-center gap-2 mb-3">
+                        <div className="w-2 h-2 bg-primary rounded-full" />
+                        <span className="text-[10px] font-mono text-primary uppercase tracking-widest">Filter by Tag</span>
+                      </div>
+                      <div className="space-y-1">
+                        <button
+                          onClick={() => { setSelectedTag(null); setShowFilters(false); setPage(1); }}
+                          className={`w-full text-left px-3 py-2 rounded-lg text-xs font-mono transition-colors ${selectedTag === null ? 'bg-primary/10 text-primary' : 'text-slate-400 hover:bg-white/5'}`}
+                        >
+                          All Tags
+                        </button>
+                        {tags.map(tag => (
+                          <button
+                            key={tag}
+                            onClick={() => { setSelectedTag(tag); setShowFilters(false); setPage(1); }}
+                            className={`w-full text-left px-3 py-2 rounded-lg text-xs font-mono transition-colors ${selectedTag === tag ? 'bg-primary/10 text-primary' : 'text-slate-400 hover:bg-white/5'}`}
+                          >
+                            {tag}
+                          </button>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </div>
 
@@ -135,51 +139,45 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
               ))}
             </div>
 
-            <AnimatePresence>
-              {!showAll && filteredPosts.length > 3 && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="mt-8"
+            {hasMore && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="mt-8"
+              >
+                <button
+                  onClick={loadMore}
+                  className="w-full group relative flex items-center justify-center gap-3 py-4 px-6 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/30 rounded-xl transition-all overflow-hidden"
                 >
-                  <button
-                    onClick={() => setShowAll(true)}
-                    className="w-full group relative flex items-center justify-center gap-3 py-4 px-6 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/30 rounded-xl transition-all overflow-hidden"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <ArrowDown className="w-4 h-4 text-primary group-hover:translate-y-1 transition-transform relative z-10" />
-                    <span className="text-xs font-mono text-slate-400 group-hover:text-primary uppercase tracking-widest relative z-10">
-                      {showAll ? 
-                        `Showing ${visiblePosts.length} of ${filteredPosts.length} Filtered Logs` : 
-                        `Load ${Math.min(3, filteredPosts.length)} More Technical Logs`}
-                    </span>
-                    <div className="absolute bottom-0 left-0 h-[2px] bg-primary w-0 group-hover:w-full transition-all duration-700" />
-                  </button>
-                </motion.div>
-              )}
-            </AnimatePresence>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <ArrowDown className="w-4 h-4 text-primary group-hover:translate-y-1 transition-transform relative z-10" />
+                  <span className="text-xs font-mono text-slate-400 group-hover:text-primary uppercase tracking-widest relative z-10">
+                    Load {Math.min(ITEMS_PER_PAGE, filteredPosts.length - visiblePosts.length)} More 
+                    {searchTerm || selectedTag ? ' Filtered ' : ' '}
+                    Logs ({visiblePosts.length}/{filteredPosts.length})
+                  </span>
+                  <div className="absolute bottom-0 left-0 h-[2px] bg-primary w-0 group-hover:w-full transition-all duration-700" />
+                </button>
+              </motion.div>
+            )}
 
-            {showAll && (
+            {!hasMore && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="mt-8 text-center"
               >
                 <p className="text-[10px] font-mono text-slate-600 uppercase tracking-widest">
-                  ✓ Showing all {filteredPosts.length} Filtered Technical Logs
+                  ✓ Showing all {filteredPosts.length} Technical Logs
                 </p>
-                {searchTerm || selectedTag && (
+                {(searchTerm || selectedTag) && (
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     className="mt-2"
                   >
                     <button
-                      onClick={() => {
-                        setSearchTerm('');
-                        setSelectedTag(null);
-                      }}
+                      onClick={clearFilters}
                       className="px-4 py-2 bg-primary/10 hover:bg-primary/20 border border-primary/10 rounded-md transition-all text-xs font-mono text-primary"
                     >
                       Clear Filters

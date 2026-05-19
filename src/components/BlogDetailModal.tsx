@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Share2, Calendar, Tag, Clock, BookOpen, Terminal, Twitter, Facebook, Linkedin } from 'lucide-react';
+import { X, Share2, Calendar, Tag, Clock, BookOpen, Terminal, Twitter, Facebook, Linkedin, Loader } from 'lucide-react';
 import { BlogPost } from '../types';
 
 interface BlogDetailModalProps {
@@ -9,7 +9,31 @@ interface BlogDetailModalProps {
 }
 
 export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailModalProps) {
-  React.useEffect(() => {
+  const [fullContent, setFullContent] = useState<string | null>(null);
+  const [loadingContent, setLoadingContent] = useState(false);
+
+  useEffect(() => {
+    if (!selectedPost) return;
+    
+    if (selectedPost.content) {
+      setFullContent(selectedPost.content);
+      return;
+    }
+
+    setLoadingContent(true);
+    fetch(`/data/blogs/content/${selectedPost.slug}.json`)
+      .then(res => res.json())
+      .then(data => {
+        setFullContent(data.content);
+        setLoadingContent(false);
+      })
+      .catch(() => {
+        setFullContent(null);
+        setLoadingContent(false);
+      });
+  }, [selectedPost]);
+
+  useEffect(() => {
     if (selectedPost) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -20,7 +44,7 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
     };
   }, [selectedPost]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
@@ -189,7 +213,7 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
     return elements;
   };
 
-  const readingTime = Math.ceil((selectedPost.content?.split(' ').length || 200) / 200);
+  const readingTime = Math.ceil(((fullContent || selectedPost.content || '').split(' ').length || 200) / 200);
   const postUrl = window.location.href;
 
   const shareToPlatform = async (platform: string) => {
@@ -323,7 +347,12 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
               </div>
 
               <div className="text-base">
-                {selectedPost.content ? renderContent(selectedPost.content) : (
+                {loadingContent ? (
+                  <div className="text-center py-16">
+                    <Loader className="w-8 h-8 text-primary animate-spin mx-auto mb-4" />
+                    <p className="text-slate-400">Loading technical manifest...</p>
+                  </div>
+                ) : fullContent ? renderContent(fullContent) : (
                   <div className="text-center py-16">
                     <BookOpen className="w-12 h-12 text-slate-600 mx-auto mb-4" />
                     <p className="text-slate-400 italic">
