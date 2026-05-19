@@ -3,7 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -11,9 +12,17 @@ import Experience from './components/Experience';
 import Portfolio from './components/Portfolio';
 import GitHubActivity from './components/GitHubActivity';
 import BlogAndTestimonials from './components/BlogAndTestimonials';
+import BlogDetailModal from './components/BlogDetailModal';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
+import InteractiveBackground from './components/InteractiveBackground';
+import SystemMascot from './components/SystemMascot';
+import { BlogPost } from './types';
 
 export default function App() {
+  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
   useEffect(() => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e: any) {
@@ -30,16 +39,37 @@ export default function App() {
     });
   }, []);
 
+  const handlePostSelect = (post: BlogPost) => {
+    setScrollPosition(window.scrollY);
+    setSelectedPost(post);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const handleCloseModal = () => {
+    setSelectedPost(null);
+    document.body.style.overflow = 'unset';
+    setTimeout(() => {
+      window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
-    <>
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Portfolio />
-      <GitHubActivity />
-      <BlogAndTestimonials />
-      <Contact />
-    </>
+    <div className="min-h-screen relative">
+      <InteractiveBackground />
+      <SystemMascot />
+      <Navbar />
+      <main className="relative z-10">
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Portfolio />
+        <GitHubActivity />
+        <BlogAndTestimonials onPostSelect={handlePostSelect} />
+        <Contact />
+      </main>
+      <Footer />
+      <BlogDetailModal selectedPost={selectedPost} onClose={handleCloseModal} />
+    </div>
   );
 }

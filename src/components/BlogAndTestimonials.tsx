@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useNavigate } from 'react-router-dom';
 import { BLOG_POSTS, TESTIMONIALS } from '../constants';
-import { BookOpen, Quote, ChevronRight, MessageSquareQuote, ArrowRight } from 'lucide-react';
+import { BookOpen, Quote, ChevronRight, MessageSquareQuote, ArrowDown } from 'lucide-react';
+import { BlogPost } from '../types';
 
-export default function BlogAndTestimonials() {
-  const navigate = useNavigate();
+interface BlogAndTestimonialsProps {
+  onPostSelect: (post: BlogPost) => void;
+}
+
+export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonialsProps) {
   const [showAll, setShowAll] = useState(false);
-  
+
   const visiblePosts = showAll ? BLOG_POSTS : BLOG_POSTS.slice(0, 3);
-  
+
   return (
     <section id="blog" className="py-24 bg-slate-900/30 relative">
       <div className="max-w-7xl mx-auto px-6">
@@ -33,7 +36,7 @@ export default function BlogAndTestimonials() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  onClick={() => navigate(`/blog/${post.slug}`)}
+                  onClick={() => onPostSelect(post)}
                   className="group relative p-8 system-card hover:bg-slate-800/40 transition-all cursor-pointer overflow-hidden border border-white/5"
                 >
                   <div className="absolute right-0 top-0 h-full w-1 translate-x-1 group-hover:translate-x-0 bg-primary transition-transform" />
@@ -61,13 +64,13 @@ export default function BlogAndTestimonials() {
                   className="mt-8"
                 >
                   <button
-                    onClick={() => navigate('/blogs')}
+                    onClick={() => setShowAll(true)}
                     className="w-full group relative flex items-center justify-center gap-3 py-4 px-6 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/30 rounded-xl transition-all overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform relative z-10" />
+                    <ArrowDown className="w-4 h-4 text-primary group-hover:translate-y-1 transition-transform relative z-10" />
                     <span className="text-xs font-mono text-slate-400 group-hover:text-primary uppercase tracking-widest relative z-10">
-                      Access Full Archives ({BLOG_POSTS.length} Logs)
+                      Load {BLOG_POSTS.length - 3} More Technical Logs
                     </span>
                     <div className="absolute bottom-0 left-0 h-[2px] bg-primary w-0 group-hover:w-full transition-all duration-700" />
                   </button>
