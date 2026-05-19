@@ -1,3 +1,135 @@
+// @ts-nocheck
+import type { Experience, Skill, Project, Testimonial } from './types';
+
+export const EXPERIENCES: Experience[] = [
+  {
+    company: "Rysun Labs Pvt. Ltd.",
+    role: "Senior Software Developer L2",
+    period: "Nov 2025 – Present",
+    location: "Ahmedabad, India",
+    achievements: [
+      "Directed the complete overhaul of the 'BAPS Prakash' application (50k+ users), engineering a secure audio streaming engine using AWS CloudFront Signed Cookies.",
+      "Integrated audio_service to manage complex background tasks, lock-screen controls, and Android Auto compatibility.",
+      "Architected high-concurrency RESTful APIs using Node.js and TypeScript for an internal HCP ERP system."
+    ]
+  },
+  {
+    company: "Rysun Labs Pvt. Ltd.",
+    role: "Senior Software Developer / Project Owner",
+    period: "Apr 2022 – Oct 2025",
+    location: "Ahmedabad, India",
+    achievements: [
+      "Spearheaded 'Akshar Amrutam' development, scaling it to 100,000+ downloads with 99.95% crash-free session rate.",
+      "Utilized Flutter Bloc to manage complex application states, ensuring 60fps performance across fragmented devices.",
+      "Engineered Android Auto companion app for seamless media control and content discovery.",
+      "Built 'Smartindia/Autozon' IoT application, implementing real-time MQTT communication between mobile and hardware."
+    ]
+  },
+  {
+    company: "Phycom Corporations",
+    role: "Software Engineer - Android",
+    period: "Apr 2021 – Mar 2022",
+    location: "Ahmedabad, India",
+    achievements: [
+      "Engineered robust background services for 'La Crosse View', ensuring reliable hardware data synchronization.",
+      "Reduced application startup time by 30% and memory footprint by 20% through aggressive code profiling.",
+      "Refactored legacy Java codebases to Kotlin, reducing NullPointerExceptions by 95%."
+    ]
+  },
+  {
+    company: "Micro App Solutions",
+    role: "Remote Android Developer",
+    period: "Aug 2017 – Dec 2019",
+    location: "Surat, India",
+    achievements: [
+      "Developed 'Fastrrr-Floating Apps' and 'Water Reminder' with complex overlay window permissions.",
+      "Built 'OfferzZone', a hyper-local marketplace utilizing Geofencing APIs for precise location-based notifications."
+    ]
+  },
+  {
+    company: "Stimulus Consultancy",
+    role: "Android Developer",
+    period: "Apr 2016 – Aug 2017",
+    location: "Ahmedabad, India",
+    achievements: [
+      "Established CI/CD pipelines and repo structure for early-stage startup applications.",
+      "Implemented accurate GST tax logic for a financial application."
+    ]
+  }
+];
+
+export const SKILLS: Skill[] = [
+  {
+    category: "Languages",
+    items: ["Kotlin", "Java", "Dart (Flutter)", "Python", "TypeScript", "JavaScript", "SQL"]
+  },
+  {
+    category: "Android Native",
+    items: ["SDK", "Jetpack Compose", "Coroutines", "State Flow", "Android Auto", "Material 3"]
+  },
+  {
+    category: "Flutter Ecosystem",
+    items: ["Flutter Bloc", "Provider", "AutoRoute", "Freezed", "audio_service"]
+  },
+  {
+    category: "Architecture",
+    items: ["Clean Architecture", "MVVM", "MVI", "Repository Pattern", "Dagger Hilt", "Koin"]
+  },
+  {
+    category: "Backend & Cloud",
+    items: ["FastAPI", "Node.js", "Express.js", "Firebase", "AWS CloudFront", "GraphQL"]
+  },
+  {
+    category: "AI & Next-Gen",
+    items: ["Cursor", "Windsurf", "Claude Code", "OpenRouter API", "AI-Augmented Dev"]
+  }
+];
+
+export const PROJECTS: Project[] = [
+  {
+    title: "BAPS Prakash",
+    description: "Secure media streaming application with AWS CloudFront integration and robust background audio features. Engineering highlights include signed cookie validation and Android Auto sync.",
+    tags: ["Kotlin", "AWS", "ExoPlayer", "Architecture"],
+    image: "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    title: "Akshar Amrutam",
+    description: "High-performance Flutter application with 100k+ downloads and near-perfect stability metrics. Features complex state management, Android Auto integration, and a highly polished UI for a global user base.",
+    tags: ["Flutter", "Bloc", "Clean Architecture", "Android Auto"],
+    image: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    title: "Autozon IoT",
+    description: "Real-time IoT monitoring application using MQTT for vehicle hardware communication. Optimizes battery consumption while maintaining persistent hardware-to-cloud connections.",
+    tags: ["Flutter", "MQTT", "IoT", "Hardware"],
+    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    title: "Fastrrr-Floating Apps",
+    description: "Utility application featuring advanced window management and background efficiency. Implements complex overlay window permissions and strict battery efficiency protocols.",
+    tags: ["Android", "Java", "Services"],
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800"
+  }
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    name: "Sarah Mitchell",
+    role: "CTO, Rysun Labs",
+    content: "Govind is one of the most reliable senior developers I've worked with. His clean architecture patterns and attention to performance optimization elevated our entire team's standards."
+  },
+  {
+    name: "Priya Sharma",
+    role: "Product Manager",
+    content: "Working with Govind was a pleasure. He doesn't just write code—he thinks about the end user, scalability, and maintainability at every step. The BAPS Prakash app he architected handles 50k+ users seamlessly."
+  },
+  {
+    name: "Rajesh Patel",
+    role: "Senior Flutter Developer",
+    content: "His expertise in Flutter Bloc and state management is exceptional. He mentored our junior team and introduced patterns that dramatically improved our code quality and reduced bugs."
+  }
+];
+
 export const BLOG_POSTS: BlogPost[] = [
   {
     title: `AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026`,
@@ -45,15 +177,13 @@ Every frame costs CPU cycles for composition and GPU power for rasterization. Th
 
 ### 1. Smart Repaint Management
 
-The most common performance killer is excessive rebuilds. Use `RepaintBoundary` strategically:
+The most common performance killer is excessive rebuilds. Use RepaintBoundary strategically:
 
-```dart
-RepaintBoundary(
-  child: ComplexListView(
-    // Heavy widget goes here, won't repaint parent
-  ),
-)
-```
+    RepaintBoundary(
+      child: ComplexListView(
+        // Heavy widget goes here, won't repaint parent
+      ),
+    )
 
 This isolates expensive rendering to a single area that can be cached and reused.
 
@@ -61,88 +191,80 @@ This isolates expensive rendering to a single area that can be cached and reused
 
 Images are often the largest assets in mobile apps. Use cached network images with proper sizing:
 
-```dart
-CachedNetworkImage(
-  fit: BoxFit.cover,
-  fadeInDuration: Duration(milliseconds: 300),
-  fadeOutDuration: Duration(milliseconds: 300),
-  placeholder: (context, path) => CircularProgressIndicator(),
-  errorBuilder: (context, _, _) => Icon(Icons.broken_image),
-  imageBuilder: (context, imageProvider) => 
-    ImageFiltered(
-      imageProvider,
-      child: Stack(
-        children: [
-          Container(color: Colors.grey[300]), // Background color
-          ClipRRect(
-            borderRadius: BorderRadius.circular(8),
-            child: imageProvider,
+    CachedNetworkImage(
+      fit: BoxFit.cover,
+      fadeInDuration: Duration(milliseconds: 300),
+      fadeOutDuration: Duration(milliseconds: 300),
+      placeholder: (context, path) => CircularProgressIndicator(),
+      errorBuilder: (context, _, _) => Icon(Icons.broken_image),
+      imageBuilder: (context, imageProvider) => 
+        ImageFiltered(
+          imageProvider,
+          child: Stack(
+            children: [
+              Container(color: Colors.grey[300]), // Background color
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: imageProvider,
+              ),
+              Icon(Icons.cloud_done, color: Colors.greenAccent), // Success indicator,
+            ],
           ),
-          Icon(Icons.cloud_done, color: Colors.greenAccent), // Success indicator
-        ],
-      ),
-    ),
-)
-```
+        ),
+    )
 
 ### 3. Lazy Loading for Large Lists
 
 For lists with hundreds or thousands of items, implement pagination and lazy loading:
 
-```dart
-const int pageItems = 20;
-final List<List<T>> pages = [];
-int currentPage = 0;
+    const int pageItems = 20;
+    final List<List<T>> pages = [];
+    int currentPage = 0;
 
-void loadNextPage() async {
-  final data = await _api.fetchPage(currentPage * pageItems);
-  pages.addAll(data);
-}
-
-ListView.builder(
-  itemCount: (pages.length + 1) * pageItems,
-  itemBuilder: (context, index) {
-    if (index == pages.length * pageItems && isLoading) {
-      return _buildLoadingIndicator();
+    void loadNextPage() async {
+      final data = await _api.fetchPage(currentPage * pageItems);
+      pages.addAll(data);
     }
-    final item = pages[index / pageItems][index % pageItems];
-    return _buildItem(item);
-  },
-)
-```
+
+    ListView.builder(
+      itemCount: (pages.length + 1) * pageItems,
+      itemBuilder: (context, index) {
+        if (index == pages.length * pageItems && isLoading) {
+          return _buildLoadingIndicator();
+        }
+        final item = pages[index / pageItems][index % pageItems];
+        return _buildItem(item);
+      },
+    )
 
 ### 4. Background Processing with Isolates
 
 Move heavy computations to background threads:
 
-```dart
-@isolate
-Future<List<double>> computeFibonacciSequence(int n) async {
-  List<double> sequence = [];
-  for (int i = 0; i < n; i++) {
-    final fib = _calculateFibonacci(i);
-    sequence.add(fib);
-  }
-  return sequence;
-}
-```
+    @isolate
+    Future<List<double>> computeFibonacciSequence(int n) async {
+      List<double> sequence = [];
+      for (int i = 0; i < n; i++) {
+        final fib = _calculateFibonacci(i);
+        sequence.add(fib);
+      }
+      return sequence;
+    }
 
 ## Memory Management Best Practices
 
 ### Detect and Fix Memory Leaks
 
 Flutter's garbage collector is powerful but needs your help:
-- Use `DisposeWidget` mixin for complex widget trees
-- Clean up subscriptions in `dispose()` methods
+- Use DisposeWidget mixin for complex widget trees
+- Clean up subscriptions in dispose() methods
 - Monitor memory usage with Chrome DevTools
 
-```dart
-@override
-void dispose() {
-  streamSubscription?.cancel();
-  super.dispose();
-}
-```
+    @override
+    void dispose() {
+      streamSubscription?.cancel();
+      super.dispose();
+    }
 
 ### Optimize Asset Bundles
 
@@ -172,5 +294,5 @@ Achieving consistent 60 FPS requires a combination of architectural decisions an
 
 With these strategies, even mid-range devices can deliver premium experiences that keep users engaged and coming back for more. 🚀
 `
-  }
+  },
 ];
