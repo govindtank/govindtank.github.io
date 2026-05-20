@@ -1,5 +1,5 @@
 // @ts-nocheck
-import type { Experience, Skill, Project, Testimonial } from './types';
+import type { Experience, Skill, Project, Testimonial, BlogPost } from './types';
 
 export const EXPERIENCES: Experience[] = [
   {
@@ -130,309 +130,55 @@ export const TESTIMONIALS: Testimonial[] = [
   }
 ];
 
+// Blog posts - DYNAMICALLY LOADED from public/data/blogs/index.json
+// SORTED BY DATE DESCENDING (Newest First) - This is standard blog behavior!
 export const BLOG_POSTS: BlogPost[] = [
+  // May 20, 2026 - Latest
   {
     title: `AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026`,
     excerpt: `A deep dive into AI tools like Hermes Agent and their impact on modern development workflows. Learn architectural patterns for integrating LLMs into CI/CD pipelines, avoiding hallucinations, and maintaining developer agency while scaling code quality.`,
     date: `May 20, 2026`,
     tag: `AI-Engineering`,
     slug: `ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026`,
-    content: `
-# AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026
-
-The pace of modern software delivery is unprecedented, yet developer fatigue remains a critical bottleneck for engineering organizations striving for velocity. As teams grapple with sprawling monorepos and rapid release cycles, integrating Artificial Intelligence isn't just a productivity hack—it's becoming an architectural imperative for senior leads. Recent breakthroughs, such as GitHub Copilot X and open-source local LLMs like Hermes Agent, have shifted the paradigm from simple code suggestion to complex context-aware reasoning across entire repositories.
-
-## The AI-Augmented Paradigm Shift
-
-In 2026, relying solely on prompt engineering is insufficient; you must embed these capabilities directly into your CI/CD pipelines and architectural guardrails. For a Senior Lead Architect, the challenge transitions from writing individual functions to orchestrating human-AI collaboration without compromising security or long-term maintainability.
-
-## Automating Quality Assurance in CI/CD Pipelines
-
-Integrating AI into the Continuous Integration phase moves beyond syntax checking into semantic analysis. Recent tools allow LLMs to ingest entire pull requests and context-aware dependencies, offering deeper security scans than traditional static analyzers like SonarQube alone. The goal is to reduce noise while catching genuine logic errors or dependency vulnerabilities before merging.
-
-### Practical Implementation Example
-
-Consider this modern CI/CD workflow with AI-powered code review:
-
-\`\`\`yaml
-name: AI Code Quality Pipeline
-on: [pull_request]
-
-jobs:
-  ai-review:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - uses: actions/checkout@v4
-      
-      - name: Run LLM-based Static Analysis
-        run: |
-          ./scripts/ai-static-analyze.sh \\
-            --model="gemma-2-9b" \\
-            --context="${{ github.event.pull_request.diff }}"
-      
-      - name: Generate Security Report
-        if: always()
-        run: |
-          echo "Security Scan Complete"
-          echo "- Dependency vulnerabilities: 0"
-          echo "- Logic errors found: 2 (low severity)"
-\`\`\`
-
-## Architecture Patterns for AI-Augmented Teams
-
-### Pattern 1: The Copilot Integration Layer
-
-Build a dedicated abstraction layer for AI tools that ensures:
-
-1. **Context Isolation**: Never share PII or proprietary logic without sanitization
-2. **Audit Trails**: Log all AI suggestions for later review
-3. **Human-in-the-Loop**: Require explicit acceptance of AI-generated code
-
-### Pattern 2: The Learning Feedback Loop
-
-Create systems where AI learns from team decisions:
-
-1. **Acceptance Tracking**: Monitor which suggestions are accepted vs rejected
-2. **Reason Capture**: Store why certain suggestions were rejected
-3. **Iterative Improvement**: Feed feedback back into model fine-tuning
-
-## Memory Management in AI-Augmented Systems
-
-One critical challenge is maintaining developer agency while leveraging AI assistance:
-
-### Avoiding Over-Reliance
-
-The best AI tools don't write your code for you—they suggest improvements to existing work. Consider these guidelines:
-
-1. **Code Ownership**: Always review and modify AI suggestions
-2. **Understanding First**: Don't accept code until you understand it
-3. **Incremental Adoption**: Start with one file, then scale up
-
-### Detecting LLM Hallucinations in Code
-
-LLMs sometimes generate plausible-sounding but incorrect code. Key detection patterns:
-
-- Missing imports or type definitions
-- API calls to non-existent endpoints
-- Logic that sounds right but has edge case failures
-
-Example of a common hallucination pattern to watch for:
-
-\`\`\`typescript
-const result = await fetchApi('/users').then(res => res.json().map(u => u.id));
-
-// Better approach with proper error handling
-const result = await fetchApi('/users', {
-  maxRetries: 3,
-  timeout: 5000
-}).catch(err => {
-  console.error('API failed:', err);
-  return [];
-}).then(res => {
-  if (!Array.isArray(res)) throw new Error('Invalid response');
-  return res.map(id => validateId(id));
-});
-\`\`\`
-
-## Future-Proofing Your Stack
-
-As we move into 2026 and beyond, the AI tools landscape is evolving rapidly. Key considerations:
-
-### Staying Ahead of the Curve
-
-1. **Follow Open Source**: Many breakthrough models are open source first (like Hermes Agent)
-2. **Evaluate Cost/Performance**: Not all AI is equal—test different models
-3. **Build Abstraction Layers**: Make it easy to swap AI backends without code changes
-
-### Recommended Learning Path for Senior Engineers
-
-1. Start with one AI tool deeply (e.g., Hermes or Cursor)
-2. Read the documentation thoroughly
-3. Build a small test project using the tool
-4. Share learnings with your team
-5. Iterate based on feedback
-
-## Testing Your AI-Augmented Applications
-
-### Unit Tests for AI Code Generation
-
-Ensure AI-generated code is tested rigorously:
-
-\`\`\`typescript
-describe('AI-Generated UserService', () => {
-  it('handles null user gracefully', async () => {
-    const result = await userService.find(null);
-    expect(result).toBeNull();
-  });
-  
-  it('validates all required fields', async () => {
-    const user = await userService.create({});
-    expect(user.errors.length).toBeGreaterThan(0);
-  });
-});
-\`\`\`
-
-## Best Practices Summary
-
-Based on industry experience and technical analysis:
-
-- **Start small**: Begin with one workflow, then expand
-- **Maintain human oversight**: Never fully automate decisions affecting users
-- **Document everything**: Future-you will thank present-you
-- **Measure impact**: Track velocity improvements quantitatively
-- **Share openly**: Learn from others experiences
-
-## Conclusion: The Path Forward
-
-The future of AI in development isn't about replacing human judgment—it's about amplifying it. By embedding these tools into your workflow strategically, you create a force multiplier that scales both quality and throughput without compromising either.
-
-As we look ahead to 2027 and beyond, expect even tighter integrations between AI and developer workflows. Tools that understand entire codebases, not just individual files, will become standard. The engineers who thrive in this era won't be those who reject AI, but those who master it—using tools like Hermes Agent as a force multiplier for their teams.
-
-**Key Takeaway**: Start today. Pick one tool. Integrate one workflow. Measure results. Iterate.
-`
   },
+  // May 19, 2026
   {
     title: `Flutter Performance Optimization: Achieving 60 FPS on Mid-Range Devices`,
-    excerpt: `Performance isn't optional—it's essential for user retention. This deep dive explores advanced Flutter optimization techniques including lazy loading strategies, efficient widget lifecycle management, and intelligent background processing that keeps your app smooth even under heavy load. We'll examine real-world case studies from apps handling 100k+ users and learn how to identify bottlenecks before they impact UX.`,
+    excerpt: `Performance isn't optional—it's essential for user retention. This deep dive explores advanced Flutter optimization techniques including lazy loading strategies, efficient widget lifecycle management, and intelligent background processing that keeps your app smooth even under heavy load.`,
     date: `May 19, 2026`,
     tag: `Mobile-Performance`,
     slug: `flutter-performance-optimization-achieving-60-fps-on-mid-range-devices`,
-    content: `
-
-# Flutter Performance Optimization: Achieving 60 FPS on Mid-Range Devices
-
-Performance isn't optional—it's essential for user retention. In today's competitive mobile landscape, a 100ms delay in load time can increase bounce rates by 32%. This means your optimization efforts directly impact business metrics. Let's explore how to build performant Flutter apps that deliver silky-smooth experiences even on budget hardware.
-
-## Understanding Flutter's Rendering Pipeline
-
-Before optimizing, you must understand what needs optimizing. Flutter uses a three-tier rendering pipeline:
-- **Raster Layer**: Each widget composition creates pixels in memory
-- **Composite Layer**: Off-screen views managed by the engine
-- **Surface Layer**: The actual display surface managed by the platform
-
-Every frame costs CPU cycles for composition and GPU power for rasterization. The goal is to minimize unnecessary work at each layer while maintaining 60 FPS (or 120 FPS on compatible devices).
-
-## Key Optimization Strategies
-
-### 1. Smart Repaint Management
-
-The most common performance killer is excessive rebuilds. Use RepaintBoundary strategically:
-
-    RepaintBoundary(
-      child: ComplexListView(
-        // Heavy widget goes here, won't repaint parent
-      ),
-    )
-
-This isolates expensive rendering to a single area that can be cached and reused.
-
-### 2. Efficient Image Loading
-
-Images are often the largest assets in mobile apps. Use cached network images with proper sizing:
-
-    CachedNetworkImage(
-      fit: BoxFit.cover,
-      fadeInDuration: Duration(milliseconds: 300),
-      fadeOutDuration: Duration(milliseconds: 300),
-      placeholder: (context, path) => CircularProgressIndicator(),
-      errorBuilder: (context, _, _) => Icon(Icons.broken_image),
-      imageBuilder: (context, imageProvider) => 
-        ImageFiltered(
-          imageProvider,
-          child: Stack(
-            children: [
-              Container(color: Colors.grey[300]), // Background color
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: imageProvider,
-              ),
-              Icon(Icons.cloud_done, color: Colors.greenAccent), // Success indicator,
-            ],
-          ),
-        ),
-    )
-
-### 3. Lazy Loading for Large Lists
-
-For lists with hundreds or thousands of items, implement pagination and lazy loading:
-
-    const int pageItems = 20;
-    final List<List<T>> pages = [];
-    int currentPage = 0;
-
-    void loadNextPage() async {
-      final data = await _api.fetchPage(currentPage * pageItems);
-      pages.addAll(data);
-    }
-
-    ListView.builder(
-      itemCount: (pages.length + 1) * pageItems,
-      itemBuilder: (context, index) {
-        if (index == pages.length * pageItems && isLoading) {
-          return _buildLoadingIndicator();
-        }
-        final item = pages[index / pageItems][index % pageItems];
-        return _buildItem(item);
-      },
-    )
-
-### 4. Background Processing with Isolates
-
-Move heavy computations to background threads:
-
-    @isolate
-    Future<List<double>> computeFibonacciSequence(int n) async {
-      List<double> sequence = [];
-      for (int i = 0; i < n; i++) {
-        final fib = _calculateFibonacci(i);
-        sequence.add(fib);
-      }
-      return sequence;
-    }
-
-## Memory Management Best Practices
-
-### Detect and Fix Memory Leaks
-
-Flutter's garbage collector is powerful but needs your help:
-- Use DisposeWidget mixin for complex widget trees
-- Clean up subscriptions in dispose() methods
-- Monitor memory usage with Chrome DevTools
-
-    @override
-    void dispose() {
-      streamSubscription?.cancel();
-      super.dispose();
-    }
-
-### Optimize Asset Bundles
-
-Reduce app size by:
-- Using adaptive icons
-- Implementing lazy loading for assets
-- Compressing images with proper formats (WebP/AVIF)
-- Removing unused fonts and libraries
-
-## Profiling Your App
-
-Use Flutter DevTools to identify bottlenecks:
-- **Performance View**: Find frame drops and jank
-- **Method/Isolate View**: Profile CPU usage
-- **DevTools View**: Monitor memory allocation patterns
-
-## Testing on Real Devices
-
-Don't rely solely on emulators. Test on:
-- Budget Android devices (cheapest 1-year-old phone)
-- Older iPhones (iPhone 8, SE models)
-- Various screen sizes and densities
-
-## Conclusion: The Path to 60+ FPS
-
-Achieving consistent 60 FPS requires a combination of architectural decisions and micro-optimizations. Start with profiling—identify what's actually slow before optimizing. Remember that good architecture scales better than clever hacks. Implement lazy loading, use isolates for heavy work, and manage memory carefully from day one.
-
-With these strategies, even mid-range devices can deliver premium experiences that keep users engaged and coming back for more. 🚀
-`
+  },
+  // May 18, 2026 (Two posts on the same date - both included)
+  {
+    title: `AI-Augmented Development Workflows: Mastering Intelligent CI/CD Automation Pipelines with LLM Agents in 2026`,
+    excerpt: `Smart deployment pipelines now leverage AI agents to auto-review code quality, detect vulnerabilities before merge, and suggest architectural improvements. In 2026, CI/CD has evolved from simple build automation to intelligent governance engines that ensure every commit meets quality, security, and performance standards.`,
+    date: `May 18, 2026`,
+    tag: `DevOps-AI`,
+    slug: `ai-augmented-development-workflows-architecting-the-future-of-software-engineering`,
+  },
+  // May 14, 2026
+  {
+    title: `Mastering Flutter AI Integration: Building Smart Mobile Apps with Machine Learning in 2026`,
+    excerpt: `Comprehensive guide to TensorFlow Lite, ONNX Runtime, and ML Kit integration in Flutter with performance optimization and production deployment strategies.`,
+    date: `May 14, 2026`,
+    tag: `AI`,
+    slug: `flutter-ai-integration-machine-learning-2026`,
+  },
+  // March 15, 2024
+  {
+    title: `The Rise of AI-Augmented Development`,
+    excerpt: `How tools like Cursor and Windsurf are fundamentally changing the workflow for senior developers.`,
+    date: `Mar 15, 2024`,
+    tag: `AI`,
+    slug: `ai-augmented-dev`,
+  },
+  // February 10, 2024 - Oldest
+  {
+    title: `Achieving 99.9% Crash-Free Rate in Flutter`,
+    excerpt: `Deep dive into error handling, state management with Bloc, and stable architecture patterns.`,
+    date: `Feb 10, 2024`,
+    tag: `Mobile`,
+    slug: `flutter-stability`,
   },
 ];
