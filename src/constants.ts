@@ -356,10 +356,10 @@ Scaling a Flutter app to millions of users reveals edge cases that no local test
 Avoid 'state leakage' by using a strict event-driven architecture. Bloc ensures that state transitions are predictable and testable.
 
 #### 2. Global Error Boundary
-Never let an error bubble up to the root. Implement a custom `ErrorWidget.builder` to provide a graceful fallback UI and report the crash to Sentry/Firebase.
+Never let an error bubble up to the root. Implement a custom \`ErrorWidget.builder\` to provide a graceful fallback UI and report the crash to Sentry/Firebase.
 
 #### 3. Defensive Programming
-Assume every API call will fail and every null value will appear. Use `Option` types or strict null safety to handle the 'unhappy path'.
+Assume every API call will fail and every null value will appear. Use \`Option\` types or strict null safety to handle the 'unhappy path'.
 
 \`\`\`dart
 // Example: Defensive API handling
@@ -376,7 +376,7 @@ try {
 
 ### Testing for Stability
 
-- **Integration Tests**: Use `integration_test` to simulate real-user flows.
+- **Integration Tests**: Use \`integration_test\` to simulate real-user flows.
 - **Golden Tests**: Ensure UI consistency across different screen sizes and OS versions.
 - **Monkey Testing**: Use automated tools to send random inputs to the app to find hidden crashes.
 
