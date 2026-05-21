@@ -141,6 +141,14 @@ export const BLOG_POSTS: BlogPost[] = [
     tag: `AI-Agents`,
     slug: `ai-agents-autonomous-workflows-complex-tasks-2026`,
   },
+  // May 21, 2026 - Clean Architecture
+  {
+    title: `Clean Architecture & Design Patterns in Modern AI Systems: Building Maintainable ML Pipelines`,
+    excerpt: `Learn how to apply Robert C. Martin's clean architecture principles to AI/ML systems with dependency injection, layer separation, and testable business logic independent of infrastructure.`,
+    date: `May 21, 2026`,
+    tag: `Clean-Architecture`,
+    slug: `clean-architecture-design-patterns-modern-ai-systems-building-maintainable-ml-pipelines`,
+  },
   // May 20, 2026
   {
     title: `AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026`,
