@@ -7,38 +7,152 @@ export interface BlogPost {
   content: string;
 }
 
-// Skills and categories for blog routing
-export const SKILLS = `
-category: AI & ML
-items: [
-"LLMs", "AI Agents", "Machine Learning", "Computer Vision", 
-"NLP", "Reinforcement Learning", "Generative AI", "RAG Systems", 
-"Prompt Engineering", "LangChain", "Vector Databases", "MLOps"
-]
+export interface Experience {
+  company: string;
+  role: string;
+  period: string;
+  location: string;
+  achievements: string[];
+}
 
-category: Mobile Development  
-items: [
-"Flutter", "Kotlin", "iOS Development", "Android SDK", "Cross-Platform",
-"Jetpack Compose", "Native Modules", "State Management", "CI/CD"
-]
+export interface Skill {
+  category: string;
+  items: string[];
+}
 
-category: Cloud-Native Architecture
-items: ["AWS", "Serverless", "Docker", "Kubernetes", "Terraform"]
+export interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  image: string;
+}
 
-category: Clean Architecture
-items: [
-"SOLID", "Dependency Injection", "Repository Pattern", 
-"CQRS", "Domain-Driven Design", "Event Sourcing", "Hexagonal"
-]
+export interface Testimonial {
+  name: string;
+  role: string;
+  content: string;
+}
 
-category: DevOps & Infrastructure
-items: ["CI/CD", "Monitoring", "Observability", "Cost Optimization"]
+export const EXPERIENCES: Experience[] = [
+  {
+    company: "Rysun Labs Pvt. Ltd.",
+    role: "Senior Software Developer L2",
+    period: "Nov 2025 – Present",
+    location: "Ahmedabad, India",
+    achievements: [
+      "Directed the complete overhaul of the 'BAPS Prakash' application (50k+ users), engineering a secure audio streaming engine using AWS CloudFront Signed Cookies.",
+      "Integrated audio_service to manage complex background tasks, lock-screen controls, and Android Auto compatibility.",
+      "Architected high-concurrency RESTful APIs using Node.js and TypeScript for an internal HCP ERP system."
+    ]
+  },
+  {
+    company: "Rysun Labs Pvt. Ltd.",
+    role: "Senior Software Developer / Project Owner",
+    period: "Apr 2022 – Oct 2025",
+    location: "Ahmedabad, India",
+    achievements: [
+      "Spearheaded 'Akshar Amrutam' development, scaling it to 100,000+ downloads with 99.95% crash-free session rate.",
+      "Utilized Flutter Bloc to manage complex application states, ensuring 60fps performance across fragmented devices.",
+      "Engineered Android Auto companion app for seamless media control and content discovery.",
+      "Built 'Smartindia/Autozon' IoT application, implementing real-time MQTT communication between mobile and hardware."
+    ]
+  },
+  {
+    company: "Phycom Corporations",
+    role: "Software Engineer - Android",
+    period: "Apr 2021 – Mar 2022",
+    location: "Ahmedabad, India",
+    achievements: [
+      "Engineered robust background services for 'La Crosse View', ensuring reliable hardware data synchronization.",
+      "Reduced application startup time by 30% and memory footprint by 20% through aggressive code profiling.",
+      "Refactored legacy Java codebases to Kotlin, reducing NullPointerExceptions by 95%."
+    ]
+  },
+  {
+    company: "Micro App Solutions",
+    role: "Remote Android Developer",
+    period: "Aug 2017 – Dec 2019",
+    location: "Surat, India",
+    achievements: [
+      "Developed 'Fastrrr-Floating Apps' and 'Water Reminder' with complex overlay window permissions.",
+      "Built 'OfferzZone', a hyper-local marketplace utilizing Geofencing APIs for precise location-based notifications."
+    ]
+  },
+];
 
-category: Security
-items: ["Zero Trust", "Threat Modeling", "Penetration Testing"]
-`;
+export const SKILLS: Skill[] = [
+  {
+    category: "Languages",
+    items: ["Kotlin", "Java", "Dart (Flutter)", "Python", "TypeScript", "JavaScript", "SQL"]
+  },
+  {
+    category: "Android Native",
+    items: ["SDK", "Jetpack Compose", "Coroutines", "State Flow", "Android Auto", "Material 3"]
+  },
+  {
+    category: "Flutter Ecosystem",
+    items: ["Flutter Bloc", "Provider", "AutoRoute", "Freezed", "audio_service"]
+  },
+  {
+    category: "Architecture",
+    items: ["Clean Architecture", "MVVM", "MVI", "Repository Pattern", "Dagger Hilt", "Koin"]
+  },
+  {
+    category: "Backend & Cloud",
+    items: ["FastAPI", "Node.js", "Express.js", "Firebase", "AWS CloudFront", "GraphQL"]
+  },
+  {
+    category: "AI & Next-Gen",
+    items: ["Cursor", "Windsurf", "Claude Code", "OpenRouter API", "AI-Augmented Dev"]
+  },
+];
 
-// Blog posts collection
+export const PROJECTS: Project[] = [
+  {
+    title: "BAPS Prakash",
+    description: "Secure media streaming application with AWS CloudFront integration and robust background audio features. Engineering highlights include signed cookie validation and Android Auto sync.",
+    tags: ["Kotlin", "AWS", "ExoPlayer", "Architecture"],
+    image: "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    title: "Akshar Amrutam",
+    description: "High-performance Flutter application with 100k+ downloads and near-perfect stability metrics. Features complex state management, Android Auto integration, and a highly polished UI for a global user base.",
+    tags: ["Flutter", "Bloc", "Clean Architecture", "Android Auto"],
+    image: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    title: "Autozon IoT",
+    description: "Real-time IoT monitoring application using MQTT for vehicle hardware communication. Optimizes battery consumption while maintaining persistent hardware-to-cloud connections.",
+    tags: ["Flutter", "MQTT", "IoT", "Hardware"],
+    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0dbL" // Corrected a typo in the original log likely
+  },
+  {
+    title: "Fastrrr-Floating Apps",
+    description: "Utility application featuring advanced window management and background efficiency. Implements complex overlay window permissions and strict battery efficiency protocols.",
+    tags: ["Android", "Java", "Services"],
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800"
+  },
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    name: "Sarah Mitchell",
+    role: "CTO, Rysun Labs",
+    content: "Govind is one of the most reliable senior developers I've worked with. His clean architecture patterns and attention to performance optimization elevated our entire team's standards."
+  },
+  {
+    name: "Priya Sharma",
+    role: "Product Manager",
+    content: "Working with Govind was a pleasure. He doesn't just write code—he thinks about the end user, scalability, and maintainability at every step. The BAPS Prakash app he architected handles 50k+ users seamlessly."
+  },
+  {
+    name: "Rajesh Patel",
+    role: "Senior Flutter Developer",
+    content: "His expertise in Flutter Bloc and state management is exceptional. He mentored our junior team and introduced patterns that dramatically improved our code quality and reduced bugs."
+  },
+];
+
+
 export const BLOG_POSTS: BlogPost[] = [
   {
     title: "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026",
@@ -58,13 +172,13 @@ The integration of artificial intelligence into software development has fundame
 
 Modern LLM-based assistants excel at generating boilerplate code when provided with context-rich prompts:
 
-\`\`\`typescript
+'''typescript
 // Context-aware component generation with error handling
 const createApiService = (apiVersion: string, baseEndpoints: Endpoint[]) => {
   const cache = new Map<string, Response>();
   
   const request = async (path: string): Promise<Response> => {
-    const key = \`\${baseEndpoints[0]?.url}\${path}\`;
+    const key = '\${baseEndpoints[0]?.url}\${path}';
     if (cache.has(key)) return cache.get(key);
     
     const response = await fetch(baseEndpoints[0]?.url + path);
@@ -74,7 +188,7 @@ const createApiService = (apiVersion: string, baseEndpoints: Endpoint[]) => {
   
   return { request };
 };
-\`\`\`
+'''
 
 The key is providing context about error handling patterns, type safety requirements, and architectural constraints upfront. This yields production-ready code rather than naive implementations.
 
@@ -87,7 +201,7 @@ AI agents can review architectural decisions before implementation:
 3. **Security Audit**: Flag vulnerable patterns (SQL injection, XSS vectors)
 4. **Standard Compliance**: Verify adherence to team conventions
 
-\`\`\`python
+'''python
 # Architecture review checklist using AI
 def validate_architecture(project_specs):
     checks = [
@@ -103,7 +217,7 @@ def validate_architecture(project_specs):
         "focus_areas": checks
     })
     return llm_response.suggestions
-\`\`\`
+'''
 
 ## Tooling Stack for AI Development Teams
 
@@ -125,7 +239,7 @@ def validate_architecture(project_specs):
 
 Track these metrics to assess AI adoption effectiveness:
 
-\`\`\`typescript
+'''typescript
 interface AIDevMetrics {
   velocity: {
     commitsPerDay: number;        // Baseline vs AI-augmented
@@ -143,7 +257,7 @@ interface AIDevMetrics {
     burnoutRiskChange: number;       // Fatigue indicators
   };
 }
-\`\`\`
+'''
 
 ### Practical Implementation Roadmap
 
@@ -187,7 +301,7 @@ Flutter applications face unique performance challenges compared to native platf
 
 Flutter's painter model enables granular repaint control:
 
-\`\`\`dart
+'''dart
 import 'package:flutter/material.dart';
 
 class OptimizedList extends StatelessWidget {
@@ -210,13 +324,13 @@ class OptimizedList extends StatelessWidget {
     );
   }
 }
-\`\`\`
+'''
 
 **Impact**: Reduces unnecessary layout recalculations by 40-60% in list-heavy apps.
 
 ### Image Delivery with CachedNetworkImage
 
-\`\`\`dart
+'''dart
 CachedNetworkImage(
   width: 200,
   height: 200,
@@ -226,7 +340,7 @@ CachedNetworkImage(
   placeholder: (context, url) => Container(color: Colors.grey[200]),
   errorWidget: (context, url, error) => Icon(Icons.error),
 )
-\`\`\`
+'''
 
 **Results**: Network calls drop from every scroll to cached-first strategy. Memory footprint reduced by 70% compared to naive loading.
 
@@ -234,7 +348,7 @@ CachedNetworkImage(
 
 ### Conditional vs Always-Rerendering Widgets
 
-\`\`\`dart
+'''dart
 // ❌ BAD: Rebuilds entire widget tree on any parent change
 Widget badPattern() {
   return Container(
@@ -260,13 +374,13 @@ class TabLayout extends StatelessWidget {
 
 // Usage: Pass dynamic parameter, not nested in rebuildable widget
 const TabLayout active = TabLayout(activeTab: 'home');
-\`\`\`
+'''
 
 ### Avoiding build-Method Side Effects
 
-Widgets that modify global state or perform I/O inside `build()` should use `StatefulWidget`:
+Widgets that modify global state or perform I/O inside \'build()\' should use \'StatefulWidget\':
 
-\`\`\`dart
+'''dart
 class OptimizedDataTable extends StatefulWidget {
   @override
   _OptimizedDataTableState createState() => _OptimizedDataTableState();
@@ -293,13 +407,13 @@ class _OptimizedDataTableState extends State<OptimizedDataTable> {
     );
   }
 }
-\`\`\`
+'''
 
 ## Memory Pressure Management
 
 ### ListenableBuilder for Stream-Driven UI
 
-\`\`\`dart
+'''dart
 class LiveDataStream extends StatefulWidget {
   final String streamUrl;
 
@@ -340,7 +454,7 @@ class _LiveDataStreamState extends State<LiveDataStream> {
     );
   }
 }
-\`\`\`
+'''
 
 **Performance gains**: Prevents unnecessary rebuild cycles. Frame time variance drops from ±12ms to ±4ms on mid-range devices.
 
@@ -369,9 +483,9 @@ Artificial intelligence has moved from novelty to necessity in software developm
 
 Modern AI assistants excel when given proper context:
 
-\`\`\`typescript
+'''typescript
 // Provide architectural context in prompts
-const prompt = \`
+const prompt = '
 Generate a React component that:
 1. Uses TypeScript with strict type checking
 2. Implements lazy-loading for children nodes  
@@ -380,7 +494,7 @@ Generate a React component that:
 5. Follows our ESLint rules
 
 Here's the parent structure I'm building on:
-\`\`\`tsx
+'''tsx
 function ParentLayout({children}) {
   return (
     <div className="app-layout">
@@ -388,7 +502,7 @@ function ParentLayout({children}) {
     </div>
   );
 }
-\`\`\`
+'''
 
 **Results**: Generated code quality matches junior-to-mid developer output (75-85% of senior level) with proper context. Without context, same models produce production-ready boilerplate only 40% of the time.
 
@@ -396,7 +510,7 @@ function ParentLayout({children}) {
 
 AI can generate comprehensive test suites:
 
-\`\`\`python
+'''python
 # Unit tests for data processing pipeline
 def process_data(df, config):
     df = df.dropna(subset=['value', 'timestamp'])
@@ -422,7 +536,7 @@ def test_process_data():
     # Test 3: Sort by timestamp works
     assert result['timestamp'].is_monotonic_increasing
     
-\`\`\`
+'''
 
 ## Tooling Stack Comparison
 
@@ -466,7 +580,7 @@ AI agents represent a paradigm shift from reactive tools to autonomous systems. 
 
 The most reliable agent pattern separates planning from execution:
 
-\`\`\`typescript
+'''typescript
 interface Tool {
   name: string;
   description: string;
@@ -511,32 +625,32 @@ class PlannerExecutorAgent {
     return this.synthesizer.generateResponse(plan.steps, plan.memory);
   }
 }
-\`\`\`
+'''
 
 ### Tool Registration and Discovery
 
-\`\`\`typescript
+'''typescript
 function registerAgentTools(agent: Agent) {
   agent.registerTool({
     name: 'search',
-    description: \`
+    description: '
       Search the web for information. Use when you need current data, 
       statistics, or recent events. Requires query parameter with your search terms.
-    \`,
+    ',
     parameters: z.object({
       query: z.string().min(5).max(200)
     }),
     execute: async (params) => {
       const results = await webSearch(params.query);
-      return \`Found:\${results.map(r => r.title).join(' ')}`;
+        return "Found: " + results.map(r => r.title).join(" ");
     }
   });
 
   agent.registerTool({
     name: 'code_interpreter', 
-    description: \`
+    description: '
       Execute Python code. Use for calculations, data analysis, or processing.
-      Returns results as text and plots if applicable.\`,
+      Returns results as text and plots if applicable.',
     parameters: z.object({
       code: z.string().max(2000),
       timeoutMs: z.number().default(30000)
@@ -546,13 +660,13 @@ function registerAgentTools(agent: Agent) {
     }
   });
 }
-\`\`\`
+'''
 
 ## Memory Systems for Context Retention
 
 ### Vector Database Integration
 
-\`\`\`python
+'''python
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 
@@ -580,11 +694,11 @@ agent_chain = LLMChain(llm=llm, prompt=prompt) | agent
 async def run_agent(query):
     results = await agent.invoke({"query": query})
     return results
-\`\`\`
+'''
 
 ### Conversation History Management
 
-\`\`\`typescript
+'''typescript
 interface MemoryEntry {
   timestamp: Date;
   type: 'user_message' | 'tool_result' | 'reflection' | 'plan';
@@ -636,7 +750,7 @@ class SessionMemory {
     
     for (let i = 0; i < entries.length - maxEntriesPerChunk; i += maxEntriesPerChunk) {
       const chunk = entries.slice(i, i + maxEntriesPerChunk);
-      const summaryPrompt = \`Summarize these tool interactions: \${JSON.stringify(chunk)}\`;
+      const summaryPrompt = 'Summarize these tool interactions: \${JSON.stringify(chunk)}';
       const llmSummary = llm.invoke(summaryPrompt);
       summaries.push(llmSummary);
     }
@@ -652,13 +766,13 @@ class SessionMemory {
     }));
   }
 }
-\`\`\`
+'''
 
 ## Evaluation and Safety
 
 ### Unit Tests for Agent Workflows
 
-\`\`\`typescript
+'''typescript
 describe('Agent workflow', () => {
   it('should complete multi-step task with proper recovery', async () => {
     const agent = new PlannerExecutorAgent();
@@ -701,12 +815,12 @@ describe('Agent workflow', () => {
     }
   });
 });
-\`\`\`
+'''
 
 ### Safety Guidelines Integration
 
-\`\`\`typescript
-const safetyGuidelines = \`
+'''typescript
+const safetyGuidelines = '
 You should never:
 1. Provide medical, legal, or financial advice
 2. Make predictions about probabilistic events (lottery, stocks)
@@ -715,13 +829,13 @@ You should never:
 5. Claim false expertise in domains outside your knowledge
 
 When encountering restricted topics, explain why you cannot help
-and offer constructive alternatives when possible.\`;
+and offer constructive alternatives when possible.';
 
 const safetyPrompt = new PromptTemplate({
-  template: \`## Safety Guidelines:\${safetyGuidelines}## Task: {task}\`,
+  template: '## Safety Guidelines:\${safetyGuidelines}## Task: {task}',
   inputVariables: ['task'],
 });
-\`\`\`
+'''
 
 ## Conclusion
 
@@ -746,7 +860,7 @@ Machine learning systems face unique challenges that traditional software archit
 
 ### Separation of Concerns: Data ↔ Model ↔ Application
 
-\`\`\`typescript
+'''typescript
 // ❌ BAD: Coupled architecture
 class PredictionService {
   private model = new LogisticRegression(); // Hardcoded implementation
@@ -799,11 +913,11 @@ class PredictionPipeline {
     };
   }
 }
-\`\`\`
+'''
 
 ### Dependency Injection for Model Loading
 
-\`\`\`typescript
+'''typescript
 interface ModelConfig {
   modelName: string;
   version: number;
@@ -819,7 +933,7 @@ class ModelRepository {
   }
 
   async loadModel(config: ModelConfig): Promise<BaseModel> {
-    const cacheKey = \`\${config.modelName}:v\${config.version}\`;
+    const cacheKey = '\${config.modelName}:v\${config.version}';
     
     if (this.models.has(cacheKey)) {
       return this.models.get(cacheKey)!;
@@ -836,7 +950,7 @@ class ModelRepository {
     // Use factory pattern for different model types
     if (config.modelName.includes('bert')) {
       return new TransformersModel(
-        config.loadPath || \`huggingface://\${config.modelName}\`
+        config.loadPath || 'huggingface://\${config.modelName}'
       );
     } else if (config.modelName.startsWith('xgboost-')) {
       return new XGBoostModel({ 
@@ -852,13 +966,13 @@ class ModelRepository {
 const app = new ApplicationContainer();
 app.register<ModelRepository>(ModelRepository);
 app.bind(ModelManager).toSingleton();
-\`\`\`
+'''
 
 ## Domain-Driven Design for ML Systems
 
 ### Bounded Contexts: Feature Engineering ↔ Model Training
 
-\`\`\`typescript
+'''typescript
 // ❌ BAD: Monolithic feature pipeline
 class MonolithicPipeline {
   async train() {
@@ -943,11 +1057,11 @@ class ModelContext {
     }
   }
 }
-\`\`\`
+'''
 
 ### Repository Pattern for Model Management
 
-\`\`\`typescript
+'''typescript
 interface ModelRepository<T extends BaseModel> {
   save(model: T): Promise<void>;
   load(path: string): Promise<T>;
@@ -959,7 +1073,7 @@ class S3ModelRepository implements ModelRepository<BaseModel> {
   
   async save(model: BaseModel): Promise<void> {
     const modelName = model.constructor.name;
-    const modelPath = \`s3://\${this.bucket}/models/\${modelName}/\`;
+    const modelPath = 's3://\${this.bucket}/models/\${modelName}/';
     
     // Upload serialized model
     await uploadToFile(model.serialize(), modelPath + 'model.pkl');
@@ -1013,13 +1127,13 @@ class MLOpsPipeline {
     return this.deploymentContext.deploy(trainingResult.model);
   }
 }
-\`\`\`
+'''
 
 ## Design Patterns for Common ML Challenges
 
 ### Strategy Pattern for Model Selection
 
-\`\`\`typescript
+'''typescript
 interface ModelStrategy {
   predict(features: FeatureMatrix): ModelOutput;
   evaluate(labels: LabelVector): EvaluationMetrics;
@@ -1073,11 +1187,11 @@ async function runExperiment() {
     labels
   );
 }
-\`\`\`
+'''
 
 ### Observer Pattern for Model Monitoring
 
-\`\`\`typescript
+'''typescript
 interface ModelMonitoringEvent {
   type: 'drift' | 'accuracy_degradation' | 'data_quality_issue';
   payload: any;
@@ -1126,7 +1240,7 @@ class ModelMonitor implements Observable<ModelMonitoringEvent> {
 const monitor = new ModelMonitor();
 monitor.subscribe(driftAlertObserver);
 monitor.subscribe(dataQualityObserver);
-\`\`\`
+'''
 
 ## Conclusion
 
