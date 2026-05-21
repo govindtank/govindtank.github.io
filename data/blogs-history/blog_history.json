@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 5,
-  "lastTopic": "Clean Architecture & Design Patterns in Modern AI Systems",
+  "totalCreated": 6,
+  "lastTopic": "AI Model Optimization: Quantization, Distillation, and Efficient Training for Edge Devices",
   "todayCount": 1,
-  "lastGenerated": "2026-05-21T21:45:20Z",
+  "lastGenerated": "2026-05-21T22:15:30Z",
   "blogs": {
     "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026": {
       "title": "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026",
@@ -43,6 +43,14 @@
       "date": "May 21, 2026",
       "tag": "Clean-Architecture",
       "wordCount": 850,
+      "status": "published"
+    },
+    "AI Model Optimization: Quantization, Distillation, and Efficient Training for Edge Devices": {
+      "title": "AI Model Optimization: Quantization, Distillation, and Efficient Training for Edge Devices",
+      "slug": "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices",
+      "date": "May 21, 2026",
+      "tag": "AI-Optimization",
+      "wordCount": 785,
       "status": "published"
     }
   }
