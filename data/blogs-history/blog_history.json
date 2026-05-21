@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 3,
-  "lastTopic": "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026",
+  "totalCreated": 4,
+  "lastTopic": "AI Agents: Building Autonomous Workflows for Complex Tasks",
   "todayCount": 1,
-  "lastGenerated": "2026-05-20T10:00:00Z",
+  "lastGenerated": "2026-05-21T10:00:00Z",
   "blogs": {
     "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026": {
       "title": "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026",
@@ -28,6 +28,14 @@
       "tag": "AI",
       "wordCount": 800,
       "status": "published"
+    },
+    "AI Agents: Building Autonomous Workflows for Complex Tasks": {
+      "title": "AI Agents: Building Autonomous Workflows for Complex Tasks",
+      "slug": "ai-agents-autonomous-workflows-complex-tasks-2026",
+      "date": "May 21, 2026",
+      "tag": "AI-Agents",
+      "wordCount": 850,
+      "status": "pending"
     }
   }
 }

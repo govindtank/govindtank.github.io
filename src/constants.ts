@@ -133,7 +133,15 @@ export const TESTIMONIALS: Testimonial[] = [
 // Blog posts - DYNAMICALLY LOADED from public/data/blogs/index.json
 // SORTED BY DATE DESCENDING (Newest First) - This is standard blog behavior!
 export const BLOG_POSTS: BlogPost[] = [
-  // May 20, 2026 - Latest
+  // May 21, 2026 - Latest
+  {
+    title: `AI Agents: Building Autonomous Workflows for Complex Tasks`,
+    excerpt: `Explore how multi-agent systems are revolutionizing software development and automation. From Hermes Agent's isolated execution contexts to production-grade error handling with automatic fallbacks.`,
+    date: `May 21, 2026`,
+    tag: `AI-Agents`,
+    slug: `ai-agents-autonomous-workflows-complex-tasks-2026`,
+  },
+  // May 20, 2026
   {
     title: `AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026`,
     excerpt: `A deep dive into AI tools like Hermes Agent and their impact on modern development workflows. Learn architectural patterns for integrating LLMs into CI/CD pipelines, avoiding hallucinations, and maintaining developer agency while scaling code quality.`,
