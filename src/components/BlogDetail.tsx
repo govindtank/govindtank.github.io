@@ -36,7 +36,9 @@ export default function BlogDetail({ selectedPost, onBack }: BlogDetailProps) {
   }
 
   const renderContent = (content: string) => {
-    const lines = content.split('\n');
+    // Remove duplicate title heading (page already renders the title)
+    const cleaned = content.replace(/^\s*# .+/m, '').replace(/^\s*\n\s*/, '');
+    const lines = cleaned.split('\n');
     const elements: React.ReactNode[] = [];
     let codeBlock: string[] = [];
     let inCodeBlock = false;

@@ -3,14 +3,14 @@ import { useParams, useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { BLOG_POSTS } from '../constants';
-import { 
-  ArrowLeft, 
-  Calendar, 
-  BookOpen, 
-  Share2, 
-  Twitter, 
-  Facebook, 
-  Linkedin, 
+import {
+  ArrowLeft,
+  Calendar,
+  BookOpen,
+  Share2,
+  Twitter,
+  Facebook,
+  Linkedin,
   Clipboard,
   Check,
   Terminal
@@ -63,8 +63,15 @@ export default function BlogDetail() {
     }
   };
 
+  // Remove duplicate title heading from content (the page already renders the title)
+  const cleanContent = (content: string) => {
+    if (!content) return '';
+    return content.replace(/^\s*# .+/m, '').replace(/^\s*\n\s*/, '');
+  };
+
   const renderContent = (content: string) => {
-    const parts = content.split(/```mermaid([\s\S]*?)```/g);
+    const cleaned = cleanContent(content);
+    const parts = cleaned.split(/```mermaid([\s\S]*?)```/g);
     return parts.map((part, index) => {
       if (index % 2 === 1) {
         return <Mermaid key={index} chart={part.trim()} />;
