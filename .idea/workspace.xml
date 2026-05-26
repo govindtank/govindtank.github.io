@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c03f0a7e-6e5d-495a-9f74-434787bb7ccb" name="Changes" comment="fix">
-      <change beforePath="$PROJECT_DIR$/dist/assets/index-Chqff160.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/index-vmlv6kLx.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BlogDetailModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlogDetailModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/BlogDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BlogDetail.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="c03f0a7e-6e5d-495a-9f74-434787bb7ccb" name="Changes" comment="fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

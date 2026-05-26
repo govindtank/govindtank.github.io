@@ -1,45 +1,9 @@
-[
-    {
-        "title": "Android 16: What Senior Developers Need to Know About the Latest APIs",
-        "excerpt": "An overview of significant features introduced in Android 16, focusing on new security, UI components, and performance monitoring tools.",
-        "date": "2026-05-26",
-        "tag": "Android",
-        "slug": "android-16-what-senior-developers-need-to-know-about-the-latest-apis"
-    },
-
-  {
-    "title": "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026",
-    "excerpt": "The pace of modern software delivery is unprecedented, yet developer fatigue remains a critical bottleneck for engineering organizations striving for velocity. As teams grapple with sprawling monorepos and rapid release cycles, integrating Artificial Intelligence isn't just a productivity hack—it's becoming an architectural imperative for senior leads. Recent breakthroughs, such as GitHub Copilot X and open-source local LLMs, have shifted the paradigm from simple code suggestion to complex context-aware reasoning across entire repositories. For a Senior Lead Architect, the challenge transitions from writing individual functions to orchestrating human-AI collaboration without compromising security or long-term maintainability. In 2026, relying solely on prompt engineering is insufficient; you must embed these capabilities directly into your CI/CD pipelines and architectural guardrails. This post explores how to leverage AI-Augmented Development Workflows to enhance velocity while preserving technical integrity across cloud-native environments and mobile platforms like Flutter. We will examine practical integration strategies that transform raw intelligence into production-grade software, ensuring that your engineering team evolves alongside the tools they use to build scalable systems.",
-    "date": "May 18, 2026",
-    "tag": "AI-Engineering",
-    "slug": "ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026"
-  },
-  {
-    "title": "AI-Augmented Development Workflows: Mastering Intelligent CI/CD Automation Pipelines with LLM Agents in 2026",
-    "excerpt": "Smart deployment pipelines now leverage AI agents to auto-review code quality, detect vulnerabilities before merge, and suggest architectural improvements. In 2026, CI/CD has evolved from simple build automation to intelligent governance engines that ensure every commit meets quality, security, and performance standards. This post explores how LLM-powered review agents transform deployment pipelines into proactive guardians of code health.",
-    "date": "May 18, 2026",
-    "tag": "DevOps-AI",
-    "slug": "ai-augmented-development-workflows-architecting-the-future-of-software-engineering"
-  },
-  {
-    "title": "Mastering Flutter AI Integration: Building Smart Mobile Apps with Machine Learning in 2026",
-    "excerpt": "Comprehensive guide to TensorFlow Lite, ONNX Runtime, and ML Kit integration in Flutter with performance optimization and production deployment strategies.",
-    "date": "May 14, 2026",
-    "tag": "AI",
-    "slug": "flutter-ai-integration-machine-learning-2026"
-  },
-  {
-    "title": "The Rise of AI-Augmented Development",
-    "excerpt": "How tools like Cursor and Windsurf are fundamentally changing the workflow for senior developers.",
-    "date": "Mar 15, 2024",
-    "tag": "AI",
-    "slug": "ai-augmented-dev"
-  },
-  {
-    "title": "Achieving 99.9% Crash-Free Rate in Flutter",
-    "excerpt": "Deep dive into error handling, state management with Bloc, and stable architecture patterns.",
-    "date": "Feb 10, 2024",
-    "tag": "Mobile",
-    "slug": "flutter-stability"
-  }
+[{
+  "title": "Building Resumable File Uploads in Flutter with Isolates",
+  "excerpt": "Enhance user experience with robust file uploads in Flutter using isolates for better performance and resilience.",
+  "date": "2026-05-26",
+  "tag": "Mobile",
+  "slug": "building-resumable-file-uploads-in-flutter-with-isolates"
+},
+... // existing entries follows
 ]
