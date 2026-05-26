@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 6,
-  "lastTopic": "AI Model Optimization: Quantization, Distillation, and Efficient Training for Edge Devices",
-  "todayCount": 1,
-  "lastGenerated": "2026-05-21T22:15:30Z",
+  "totalCreated": 7,
+  "lastTopic": "Android 16: What Senior Developers Need to Know About the Latest APIs",
+  "todayCount": 2,
+  "lastGenerated": "2026-05-26T10:00:00Z",
   "blogs": {
     "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026": {
       "title": "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026",
@@ -51,6 +51,14 @@
       "date": "May 21, 2026",
       "tag": "AI-Optimization",
       "wordCount": 785,
+      "status": "published"
+    },
+    "Android 16: What Senior Developers Need to Know About the Latest APIs": {
+      "title": "Android 16: What Senior Developers Need to Know About the Latest APIs",
+      "slug": "android-16-what-senior-developers-need-to-know-about-the-latest-apis",
+      "date": "May 26, 2026",
+      "tag": "Android",
+      "wordCount": 850,
       "status": "published"
     }
   }
