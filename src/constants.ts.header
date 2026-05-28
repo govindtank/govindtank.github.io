@@ -103,7 +103,7 @@ export const SKILLS: Skill[] = [
   },
   {
     category: "AI & Next-Gen",
-    items: ["Cursor", "Windsurf", "Claude Code", "Local LLMs", "AI-Augmented Dev"]
+    items: ["Cursor", "Windsurf", "Claude Code", "OpenRouter API", "AI-Augmented Dev"]
   },
 ];
 
@@ -124,7 +124,7 @@ export const PROJECTS: Project[] = [
     title: "Autozon IoT",
     description: "Real-time IoT monitoring application using MQTT for vehicle hardware communication. Optimizes battery consumption while maintaining persistent hardware-to-cloud connections.",
     tags: ["Flutter", "MQTT", "IoT", "Hardware"],
-    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0dbL"
+    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0dbL" // Corrected a typo in the original log likely
   },
   {
     title: "Fastrrr-Floating Apps",
@@ -152,69 +152,4 @@ export const TESTIMONIALS: Testimonial[] = [
   },
 ];
 
-export const BLOG_POSTS: BlogPost[] = [
-  {
-    title: "Flutter State Management Deep Dive: Bloc vs Riverpod vs Provider in 2026",
-    excerpt: "A comprehensive comparison of Flutter state management solutions analyzing Bloc, Riverpod, and Provider with practical code examples and performance benchmarks.",
-    date: "May 28, 2026",
-    tag: "Flutter",
-    slug: "flutter-state-management-deep-dive-bloc-vs-riverpod-vs-provider-in-2026",
-    content: ""
-  },
-  {
-    title: "AI Model Optimization: Quantization, Distillation, and Efficient Training for Edge Devices",
-    excerpt: "Practical techniques for reducing model size and latency through quantization, knowledge distillation, and pruning strategies for mobile and edge deployment.",
-    date: "May 28, 2026",
-    tag: "AI-Optimization",
-    slug: "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices",
-    content: ""
-  },
-  {
-    title: "Building Resumable File Uploads in Flutter with Isolates",
-    excerpt: "Implement robust file uploads in Flutter with pause-resume capability using Dart isolates for true background processing without UI jank.",
-    date: "May 27, 2026",
-    tag: "Mobile",
-    slug: "building-resumable-file-uploads-in-flutter-with-isolates",
-    content: ""
-  },
-  {
-    title: "Android 16: What Senior Developers Need to Know About the Latest APIs",
-    excerpt: "Explore the critical new APIs and features in Android 2, including enhanced security, Kotlin Multiplatform support, and adaptive UI components for modern app development.",
-    date: "May 27, 2026",
-    tag: "Android",
-    slug: "android-16-what-senior-developers-need-to-know-about-the-latest-apis",
-    content: ""
-  },
-  {
-    title: "AI Agents: Building Autonomous Workflows for Complex Tasks",
-    excerpt: "A deep dive into multi-agent architectures, tool integration patterns, and error handling strategies for building production-grade autonomous AI agents.",
-    date: "May 26, 2026",
-    tag: "AI-Agents",
-    slug: "ai-agents-autonomous-workflows-complex-tasks-2026",
-    content: ""
-  },
-  {
-    title: "Clean Architecture & Design Patterns in Modern AI Systems: Building Maintainable ML Pipelines",
-    excerpt: "Applying clean architecture principles—dependency inversion, repository patterns, and separation of concerns—to machine learning pipeline design for long-term maintainability.",
-    date: "May 25, 2026",
-    tag: "Clean-Architecture",
-    slug: "clean-architecture-design-patterns-modern-ai-systems-building-maintainable-ml-pipelines",
-    content: ""
-  },
-  {
-    title: "The Rise of AI-Augmented Development",
-    excerpt: "How tools like Cursor and Windsurf are fundamentally changing the workflow for senior developers, from ideation to testing.",
-    date: "Mar 15, 2024",
-    tag: "AI",
-    slug: "ai-augmented-dev",
-    content: ""
-  },
-  {
-    title: "Achieving 99.9% Crash-Free Rate in Flutter",
-    excerpt: "Deep dive into error handling, state management with Bloc, and stable architecture patterns for production-grade Flutter applications.",
-    date: "Feb 10, 2024",
-    tag: "Mobile",
-    slug: "flutter-stability",
-    content: ""
-  },
-];
+

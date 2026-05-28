@@ -154,14 +154,6 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title: "Flutter State Management Deep Dive: Bloc vs Riverpod vs Provider in 2026",
-    excerpt: "A comprehensive comparison of Flutter state management solutions analyzing Bloc, Riverpod, and Provider with practical code examples and performance benchmarks.",
-    date: "May 28, 2026",
-    tag: "Flutter",
-    slug: "flutter-state-management-deep-dive-bloc-vs-riverpod-vs-provider-in-2026",
-    content: ""
-  },
-  {
     title: "AI Model Optimization: Quantization, Distillation, and Efficient Training for Edge Devices",
     excerpt: "Practical techniques for reducing model size and latency through quantization, knowledge distillation, and pruning strategies for mobile and edge deployment.",
     date: "May 28, 2026",
@@ -170,16 +162,24 @@ export const BLOG_POSTS: BlogPost[] = [
     content: ""
   },
   {
+    title: "Flutter State Management Deep Dive: Bloc vs Riverpod vs Provider in 2026",
+    excerpt: "A comprehensive comparison of Flutter state management solutions analyzing Bloc, Riverpod, and Provider with practical code examples and performance benchmarks.",
+    date: "May 28, 2026",
+    tag: "Flutter",
+    slug: "flutter-state-management-deep-dive-bloc-vs-riverpod-vs-provider-in-2026",
+    content: ""
+  },
+  {
     title: "Building Resumable File Uploads in Flutter with Isolates",
     excerpt: "Implement robust file uploads in Flutter with pause-resume capability using Dart isolates for true background processing without UI jank.",
-    date: "May 27, 2026",
+    date: "May 28, 2026",
     tag: "Mobile",
     slug: "building-resumable-file-uploads-in-flutter-with-isolates",
     content: ""
   },
   {
     title: "Android 16: What Senior Developers Need to Know About the Latest APIs",
-    excerpt: "Explore the critical new APIs and features in Android 2, including enhanced security, Kotlin Multiplatform support, and adaptive UI components for modern app development.",
+    excerpt: "Explore the critical new APIs and features in Android 16, including enhanced security, Kotlin Multiplatform support, and adaptive UI components for modern app development.",
     date: "May 27, 2026",
     tag: "Android",
     slug: "android-16-what-senior-developers-need-to-know-about-the-latest-apis",
