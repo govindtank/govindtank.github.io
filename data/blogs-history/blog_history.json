@@ -1,43 +1,43 @@
 {
   "version": "2.1",
   "totalCreated": 8,
-  "lastTopic": "Building Resumable File Uploads in Flutter with Isolates",
-  "todayCount": 3,
-  "lastGenerated": "2026-05-26T12:00:00Z",
+  "lastTopic": "AI Model Optimization: Quantization, Distillation, and Efficient Training for Edge Devices",
+  "todayCount": 0,
+  "lastGenerated": "2026-05-28T20:12:07Z",
   "blogs": {
-    "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026": {
-      "title": "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026",
-      "slug": "ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026",
-      "date": "May 20, 2026",
-      "tag": "AI-Engineering",
-      "wordCount": 863,
+    "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices": {
+      "title": "AI Model Optimization: Quantization, Distillation, and Efficient Training for Edge Devices",
+      "slug": "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices",
+      "date": "May 28, 2026",
+      "tag": "AI-Optimization",
+      "wordCount": 853,
       "status": "published"
     },
-    "Flutter Performance Optimization: Achieving 60 FPS on Mid-Range Devices": {
-      "title": "Flutter Performance Optimization: Achieving 60 FPS on Mid-Range Devices",
-      "slug": "flutter-performance-optimization-achieving-60-fps-on-mid-range-devices",
-      "date": "May 19, 2026",
-      "tag": "Mobile-Performance",
-      "wordCount": 750,
+    "android-16-what-senior-developers-need-to-know-about-the-latest-apis": {
+      "title": "Android 16: What Senior Developers Need to Know About the Latest APIs",
+      "slug": "android-16-what-senior-developers-need-to-know-about-the-latest-apis",
+      "date": "May 27, 2026",
+      "tag": "Android",
+      "wordCount": 850,
       "status": "published"
     },
-    "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2024": {
-      "title": "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2024",
-      "slug": "ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2024",
-      "date": "Mar 15, 2026",
-      "tag": "AI",
-      "wordCount": 800,
-      "status": "published"
-    },
-    "AI Agents: Building Autonomous Workflows for Complex Tasks": {
+    "ai-agents-autonomous-workflows-complex-tasks-2026": {
       "title": "AI Agents: Building Autonomous Workflows for Complex Tasks",
       "slug": "ai-agents-autonomous-workflows-complex-tasks-2026",
-      "date": "May 21, 2026",
+      "date": "May 26, 2026",
       "tag": "AI-Agents",
       "wordCount": 850,
       "status": "published"
     },
-    "Clean Architecture & Design Patterns in Modern AI Systems: Building Maintainable ML Pipelines": {
+    "ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026": {
+      "title": "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026",
+      "slug": "ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026",
+      "date": "May 21, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 863,
+      "status": "published"
+    },
+    "clean-architecture-design-patterns-modern-ai-systems-building-maintainable-ml-pipelines": {
       "title": "Clean Architecture & Design Patterns in Modern AI Systems: Building Maintainable ML Pipelines",
       "slug": "clean-architecture-design-patterns-modern-ai-systems-building-maintainable-ml-pipelines",
       "date": "May 21, 2026",
@@ -45,21 +45,39 @@
       "wordCount": 850,
       "status": "published"
     },
-    "AI Model Optimization: Quantization, Distillation, and Efficient Training for Edge Devices": {
+    "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices-alt": {
       "title": "AI Model Optimization: Quantization, Distillation, and Efficient Training for Edge Devices",
-      "slug": "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices",
+      "slug": "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices-alt",
       "date": "May 21, 2026",
       "tag": "AI-Optimization",
       "wordCount": 785,
       "status": "published"
     },
-    "Android 16: What Senior Developers Need to Know About the Latest APIs": {
-      "title": "Android 16: What Senior Developers Need to Know About the Latest APIs",
-      "slug": "android-16-what-senior-developers-need-to-know-about-the-latest-apis",
-      "date": "May 26, 2026",
-      "tag": "Android",
-      "wordCount": 850,
+    "flutter-performance-optimization-achieving-60-fps-on-mid-range-devices": {
+      "title": "Flutter Performance Optimization: Achieving 60 FPS on Mid-Range Devices",
+      "slug": "flutter-performance-optimization-achieving-60-fps-on-mid-range-devices",
+      "date": "May 19, 2026",
+      "tag": "Mobile-Performance",
+      "wordCount": 750,
+      "status": "published"
+    },
+    "flutter-ai-integration-machine-learning-2026": {
+      "title": "Mastering Flutter AI Integration: Building Smart Mobile Apps with Machine Learning in 2026",
+      "slug": "flutter-ai-integration-machine-learning-2026",
+      "date": "May 14, 2026",
+      "tag": "AI",
+      "wordCount": 800,
       "status": "published"
     }
+  },
+  "images": {
+    "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
+    "android-16-what-senior-developers-need-to-know-about-the-latest-apis": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
+    "ai-agents-autonomous-workflows-complex-tasks-2026": "https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&q=80&w=1200",
+    "ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&q=80&w=1200",
+    "clean-architecture-design-patterns-modern-ai-systems-building-maintainable-ml-pipelines": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
+    "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices-alt": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
+    "flutter-performance-optimization-achieving-60-fps-on-mid-range-devices": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
+    "flutter-ai-integration-machine-learning-2026": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200"
   }
 }
