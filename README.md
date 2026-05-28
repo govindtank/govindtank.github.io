@@ -20,7 +20,7 @@ A high-performance, aesthetically technical portfolio designed for a Senior Lead
 - **Framework**: React 18+ (Vite)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS (JIT)
-- **Animations**: Motion (Framer Motion)
+ **Animations**: Motion (Framer Motion)
 - **Icons**: Lucide React
 - **Deployment**: Configured for GitHub Pages
 

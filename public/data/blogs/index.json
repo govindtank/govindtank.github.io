@@ -1,9 +1,15 @@
 [{
+  "title": "Flutter State Management Deep Dive: Bloc vs Riverpod vs Provider in 2026",
+  "excerpt": "A comprehensive look at state management solutions for Flutter, focusing on [ADDRESS], and Provider with practical examples and insights.",
+  "date": "2026-05-26",
+  "tag": "Flutter",
+  "slug": "flutter-state-management-deep-dive-bloc-vs-riverpod-vs-provider-in-2026"
+},
+  {
   "title": "Building Resumable File Uploads in Flutter with Isolates",
   "excerpt": "Enhance user experience with robust file uploads in Flutter using isolates for better performance and resilience.",
   "date": "2026-05-26",
   "tag": "Mobile",
   "slug": "building-resumable-file-uploads-in-flutter-with-isolates"
-},
-... // existing entries follows
+  }
 ]
