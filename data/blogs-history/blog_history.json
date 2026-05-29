@@ -1,10 +1,18 @@
 {
   "version": "2.1",
-  "totalCreated": 8,
-  "lastTopic": "AI Model Optimization: Quantization, Distillation, and Efficient Training for Edge Devices",
-  "todayCount": 0,
-  "lastGenerated": "2026-05-28T20:12:07Z",
+  "totalCreated": 9,
+  "lastTopic": "AI-Powered Code Review: Automating Quality Gates with LLM Agents",
+  "todayCount": 1,
+  "lastGenerated": "2026-05-29T21:20:00Z",
   "blogs": {
+    "ai-powered-code-review-automating-quality-gates-with-llm-agents": {
+      "title": "AI-Powered Code Review: Automating Quality Gates with LLM Agents",
+      "slug": "ai-powered-code-review-automating-quality-gates-with-llm-agents",
+      "date": "May 29, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 1200,
+      "status": "published"
+    },
     "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices": {
       "title": "AI Model Optimization: Quantization, Distillation, and Efficient Training for Edge Devices",
       "slug": "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices",
@@ -71,6 +79,7 @@
     }
   },
   "images": {
+    "ai-powered-code-review-automating-quality-gates-with-llm-agents": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&q=80&w=1200",
     "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
     "android-16-what-senior-developers-need-to-know-about-the-latest-apis": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
     "ai-agents-autonomous-workflows-complex-tasks-2026": "https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&q=80&w=1200",
