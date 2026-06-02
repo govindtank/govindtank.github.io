@@ -1,20 +1,6 @@
 [
   {
     "title": "The Evolution of Kotlin Multiplatform in 2026",
-    "excerpt": "Kotlin Multiplatform has matured from a research project to production-ready technology with robust platform interop",
-    "date": "2026-05-29",
-    "tag": "",
-    "slug": ""
-  },
-  {
-    "title": "AI-Powered Code Review: Automating Quality Gates with LLM Agents",
-    "excerpt": "Combine LLM agents with deterministic static analysis to automate code review pipelines",
-    "date": "2026-05-29",
-    "tag": "",
-    "slug": ""
-  },
-  {
-    "title": "The Evolution of Kotlin Multiplatform in 2026",
     "excerpt": "Kotlin Multiplatform has matured from a research project to production-ready technology with robust platform interop, 60-70% code reuse ratios, and enterprise-scale deployments. What senior developers need to know about building modern cross-platform applications today.",
     "date": "2026-05-29",
     "tag": "Kotlin-Multiplatform",
