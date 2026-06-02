@@ -1,0 +1,72 @@
+name: Blog Automation
+
+on:
+  schedule:
+    # Run at 8:30 AM and 6:30 PM UTC daily
+    - cron: '30 8 * * *'  # Morning (9:00 AM IST)
+    - cron: '30 18 * * *' # Evening (1:00 AM next day IST)
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: 'Run ID for this automation session'
+        required: false
+        default: 'manual'
+
+jobs:
+  blog-automation:
+    runs-on: macos-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install requests aiohttp
+      
+      - name: Run blog automation
+        env:
+          HERMES_LOCAL_URL: http://localhost:1234
+          MODEL: qwen/qwen3.5-9b
+        run: |
+          echo "=== Running Blog Automation ==="
+          # Note: This runs locally on the GitHub runner if Hermes is deployed there
+          # For now, this simulates the automation check
+      
+      - name: Check for new blog content
+        run: |
+          if [ -f scripts/blog-automation/blog-output.json ]; then
+            echo "✅ Blog generated successfully"
+            cat scripts/blog-automation/blog-output.json | python -m json.tool
+          else
+            echo "ℹ️  No new blog generated or automation needs Hermes runner"
+          fi
+      
+      - name: Commit and push if changes exist
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Check if there are new blog posts to commit
+          NEW_BLOGS=$(find . -name "blog-output.json" -newer .git/HEAD 2>/dev/null | wc -l)
+          
+          if [ "$NEW_BLOGS" -gt 0 ]; then
+            echo "📝 Found $NEW_BLOGS new blog(s), committing..."
+            git add -A
+            git commit -m "feat: Blog automation $(date +'%Y-%m-%d %H:%M')" \
+              -m "🤖 Automated blog generation"
+            git push origin main
+          else
+            echo "✅ No new content to push"
+          fi
+      
+      - name: Log automation completion
+        run: |
+          echo "=== Blog Automation Complete ===" | tee -a /tmp/github-actions-blog-$(date +'%Y-%m-%d').log
