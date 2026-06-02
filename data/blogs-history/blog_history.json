@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 9,
-  "lastTopic": "The Evolution of Kotlin Multiplatform in 2026",
-  "todayCount": 1,
-  "lastGenerated": "2026-05-29T21:25:00Z",
+  "totalCreated": 10,
+  "lastTopic": "Building Scalable Microservices with FastAPI and Event-Driven Architecture",
+  "todayCount": 2,
+  "lastGenerated": "2026-06-02T14:29:09Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -84,6 +84,14 @@
       "tag": "AI",
       "wordCount": 800,
       "status": "published"
+    },
+    "building-scalable-microservices-with-fastapi-and-event-driven-architecture": {
+      "title": "Building Scalable Microservices with FastAPI and Event-Driven Architecture",
+      "slug": "building-scalable-microservices-with-fastapi-and-event-driven-architecture",
+      "date": "June 02, 2026",
+      "tag": "Backend-Architecture",
+      "wordCount": 1097,
+      "status": "published"
     }
   },
   "images": {
@@ -96,6 +104,7 @@
     "clean-architecture-design-patterns-modern-ai-systems-building-maintainable-ml-pipelines": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
     "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices-alt": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
     "flutter-performance-optimization-achieving-60-fps-on-mid-range-devices": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
-    "flutter-ai-integration-machine-learning-2026": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200"
+    "flutter-ai-integration-machine-learning-2026": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200",
+    "building-scalable-microservices-with-fastapi-and-event-driven-architecture": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200"
   }
 }
