@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 10,
-  "lastTopic": "Building Scalable Microservices with FastAPI and Event-Driven Architecture",
-  "todayCount": 2,
-  "lastGenerated": "2026-06-02T14:29:09Z",
+  "totalCreated": 11,
+  "lastTopic": "Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems",
+  "todayCount": 3,
+  "lastGenerated": "2026-06-03T02:36:29Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -92,6 +92,14 @@
       "tag": "Backend-Architecture",
       "wordCount": 1097,
       "status": "published"
+    },
+    "zero-trust-architecture-implementing-security-in-distributed-cloud-systems": {
+      "title": "Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems",
+      "slug": "zero-trust-architecture-implementing-security-in-distributed-cloud-systems",
+      "date": "June 03, 2026",
+      "tag": "Security",
+      "wordCount": 760,
+      "status": "published"
     }
   },
   "images": {
@@ -105,6 +113,7 @@
     "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices-alt": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
     "flutter-performance-optimization-achieving-60-fps-on-mid-range-devices": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
     "flutter-ai-integration-machine-learning-2026": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200",
-    "building-scalable-microservices-with-fastapi-and-event-driven-architecture": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200"
+    "building-scalable-microservices-with-fastapi-and-event-driven-architecture": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
+    "zero-trust-architecture-implementing-security-in-distributed-cloud-systems": "https://images.unsplash.com/photo-1555949963-ff9fe2c54ed7?auto=format&fit=crop&q=80&w=1200"
   }
 }
