@@ -5,8 +5,10 @@ date: "May 27, 2026"
 excerpt: >
   Implement robust file uploads in Flutter with pause-resume capability using Dart isolates for true background processing without UI jank.
 coverImage: ""
-category: ""
-readTime: 5
+category: "Mobile"
+readTime: 3
+tags:
+  - "Mobile"
 ---
 
 # Building Resumable File Uploads in Flutter with Isolates

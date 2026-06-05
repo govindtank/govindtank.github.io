@@ -5,8 +5,10 @@ date: "May 25, 2026"
 excerpt: >
   Applying clean architecture principles—dependency inversion, repository patterns, and separation of concerns—to machine learning pipeline design for long-term maintainability.
 coverImage: ""
-category: ""
-readTime: 5
+category: "Clean-Architecture"
+readTime: 3
+tags:
+  - "Clean-Architecture"
 ---
 
 

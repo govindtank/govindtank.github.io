@@ -5,8 +5,10 @@ date: "June 01, 2026"
 excerpt: >
   Integrate AI and machine learning capabilities into Flutter applications with on-device inference, model management, and cloud-based ML services for smart mobile experiences.
 coverImage: ""
-category: ""
-readTime: 5
+category: "Flutter"
+readTime: 3
+tags:
+  - "Flutter"
 ---
 
 

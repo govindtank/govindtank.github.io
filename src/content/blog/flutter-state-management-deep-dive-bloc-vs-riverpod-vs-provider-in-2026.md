@@ -5,8 +5,10 @@ date: "May 28, 2026"
 excerpt: >
   A comprehensive comparison of Flutter state management solutions analyzing Bloc, Riverpod, and Provider with practical code examples and performance benchmarks.
 coverImage: ""
-category: ""
-readTime: 5
+category: "Flutter"
+readTime: 3
+tags:
+  - "Flutter"
 ---
 
 # Flutter State Management Deep Dive: Bloc vs Riverpod vs Provider in 2026

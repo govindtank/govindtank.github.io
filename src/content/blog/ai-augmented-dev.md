@@ -5,8 +5,10 @@ date: "Mar 15, 2024"
 excerpt: >
   How tools like Cursor and Windsurf are fundamentally changing the workflow for senior developers, from ideation to testing.
 coverImage: ""
-category: ""
-readTime: 5
+category: "AI"
+readTime: 3
+tags:
+  - "AI"
 ---
 
 

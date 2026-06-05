@@ -5,8 +5,10 @@ date: "June 02, 2026"
 excerpt: >
   Architect AI-augmented development workflows with multi-agent systems, automated code generation, and intelligent testing pipelines for modern software engineering teams.
 coverImage: ""
-category: ""
-readTime: 5
+category: "AI"
+readTime: 4
+tags:
+  - "AI"
 ---
 
 

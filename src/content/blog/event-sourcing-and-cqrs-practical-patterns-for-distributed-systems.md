@@ -5,8 +5,10 @@ date: "June 05, 2026"
 excerpt: >
   In the evolving landscape of distributed system architecture in 2026, the traditional monolithic data model is increasingly viewed as a scalability bottleneck. As microservices proliferate and CAP ...
 coverImage: ""
-category: ""
-readTime: 5
+category: "Architecture"
+readTime: 4
+tags:
+  - "Architecture"
 ---
 
 

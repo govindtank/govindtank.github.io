@@ -5,8 +5,10 @@ date: "May 30, 2026"
 excerpt: >
   Optimize Flutter application performance for mid-range devices with widget tree optimization, image caching, and rendering pipeline improvements for smooth 60 FPS experiences.
 coverImage: ""
-category: ""
-readTime: 5
+category: "Flutter"
+readTime: 3
+tags:
+  - "Flutter"
 ---
 
 

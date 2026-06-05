@@ -5,8 +5,10 @@ date: "May 29, 2026"
 excerpt: >
   Combine LLM agents with deterministic static analysis to automate code review pipelines, reduce review cycle time by 62%...
 coverImage: ""
-category: ""
+category: "AI-Engineering"
 readTime: 5
+tags:
+  - "AI-Engineering"
 ---
 
 # AI-Powered Code Review: Automating Quality Gates with LLM Agents

@@ -5,8 +5,10 @@ date: "May 28, 2026"
 excerpt: >
   Practical techniques for reducing model size and latency through quantization, knowledge distillation, and pruning strategies for mobile and edge deployment.
 coverImage: ""
-category: ""
-readTime: 5
+category: "AI-Optimization"
+readTime: 3
+tags:
+  - "AI-Optimization"
 ---
 
 

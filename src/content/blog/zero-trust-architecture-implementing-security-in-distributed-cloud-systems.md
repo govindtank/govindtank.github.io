@@ -5,8 +5,10 @@ date: "June 03, 2026"
 excerpt: >
   The perimeter-based security model that defined the industry for decades is functionally obsolete in 2026...
 coverImage: ""
-category: ""
-readTime: 5
+category: "Security"
+readTime: 3
+tags:
+  - "Security"
 ---
 
 # Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems

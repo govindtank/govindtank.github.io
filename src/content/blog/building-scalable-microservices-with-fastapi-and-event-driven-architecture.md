@@ -5,8 +5,10 @@ date: "June 02, 2026"
 excerpt: >
   In the rapidly evolving backend landscape of 2026, the traditional synchronous request-response model is increasingly viewed as a bottleneck...
 coverImage: ""
-category: ""
+category: "Backend-Architecture"
 readTime: 5
+tags:
+  - "Backend-Architecture"
 ---
 
 # Building Scalable Microservices with FastAPI and Event-Driven Architecture

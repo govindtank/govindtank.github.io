@@ -111,6 +111,25 @@ export default function BlogDetail() {
         <ReactMarkdown 
           key={index} 
           remarkPlugins={[remarkGfm]}
+          components={{
+            table: ({node, ...props}) => (
+              <div className="overflow-x-auto my-8 rounded-xl border border-white/10 shadow-lg">
+                <table className="w-full border-collapse text-sm" {...props} />
+              </div>
+            ),
+            thead: ({node, ...props}) => (
+              <thead className="bg-primary/10 border-b border-primary/20" {...props} />
+            ),
+            th: ({node, ...props}) => (
+              <th className="px-4 py-3 text-left text-xs font-bold text-primary uppercase tracking-wider border-r border-white/5 last:border-r-0" {...props} />
+            ),
+            tr: ({node, ...props}) => (
+              <tr className="border-b border-white/5 last:border-b-0 even:bg-white/[0.02] hover:bg-white/[0.04] transition-colors" {...props} />
+            ),
+            td: ({node, ...props}) => (
+              <td className="px-4 py-3 text-slate-300 border-r border-white/5 last:border-r-0" {...props} />
+            ),
+          }}
           className="prose prose-invert max-w-none"
         >
           {part}

@@ -5,8 +5,10 @@ date: "Feb 10, 2024"
 excerpt: >
   Deep dive into error handling, state management with Bloc, and stable architecture patterns for production-grade Flutter applications.
 coverImage: ""
-category: ""
-readTime: 5
+category: "Mobile"
+readTime: 3
+tags:
+  - "Mobile"
 ---
 
 
