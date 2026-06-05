@@ -7,7 +7,6 @@ import {
   ArrowLeft,
   Calendar,
   BookOpen,
-  Share2,
   Twitter,
   Facebook,
   Linkedin,
@@ -17,6 +16,10 @@ import {
   Loader
 } from 'lucide-react';
 import Mermaid from '../components/Mermaid';
+
+// Lazy-loaded content modules — each blog post content is code-split
+// into its own JS chunk and loaded on demand for zero initial fetch cost
+const contentModules = import.meta.glob<{ content: string }>('../data/blogs/content/*.json');
 
 export default function BlogDetail() {
   const { slug } = useParams();
@@ -30,23 +33,22 @@ export default function BlogDetail() {
   useEffect(() => {
     if (!post) return;
 
-    if (post.content) {
-      setFullContent(post.content);
-      return;
-    }
-
     setLoadingContent(true);
-    fetch(`/data/blogs/content/${post.slug}.json`)
-      .then(res => res.json())
-      .then(data => {
-        setFullContent(data.content || '');
-        setLoadingContent(false);
-      })
-      .catch(() => {
-        // Fallback: try to extract title from the markdown if fetch fails
-        setFullContent('');
-        setLoadingContent(false);
-      });
+    const loader = contentModules[`../data/blogs/content/${post.slug}.json`];
+    if (loader) {
+      loader()
+        .then((mod) => {
+          setFullContent(mod.content || '');
+          setLoadingContent(false);
+        })
+        .catch(() => {
+          setFullContent('');
+          setLoadingContent(false);
+        });
+    } else {
+      setFullContent('');
+      setLoadingContent(false);
+    }
   }, [post]);
 
   if (!post) {
@@ -114,86 +116,105 @@ export default function BlogDetail() {
     });
   };
 
+  // JSON-LD structured data for SEO
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: {
+      '@type': 'Person',
+      name: 'Govind Tank'
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-300 py-16 px-6 transition-colors duration-500">
-      <div className="max-w-4xl mx-auto">
-        <div className="mb-12">
-          <button 
-            onClick={() => navigate('/blog')}
-            className="flex items-center gap-2 text-slate-500 hover:text-primary transition-colors group mb-8 font-mono text-xs uppercase tracking-widest"
-          >
-            <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" /> root/archives/logs
-          </button>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="min-h-screen bg-slate-950 text-slate-300 py-16 px-6 transition-colors duration-500">
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-12">
+            <button 
+              onClick={() => navigate('/blog')}
+              className="flex items-center gap-2 text-slate-500 hover:text-primary transition-colors group mb-8 font-mono text-xs uppercase tracking-widest"
+            >
+              <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" /> root/archives/logs
+            </button>
 
-          <div className="glass-card bg-slate-900/80 border-white/10 rounded-t-2xl p-6 border-b-0">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center gap-4">
-                <span className="text-xs font-mono text-primary bg-primary/10 px-3 py-1 rounded-full uppercase tracking-tighter">
-                  {post.tag}
-                </span>
-                <span className="text-xs font-mono text-slate-500 flex items-center gap-1">
-                  <Calendar className="w-3 h-3" /> {post.date}
-                </span>
+            <div className="glass-card bg-slate-900/80 border-white/10 rounded-t-2xl p-6 border-b-0">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-4">
+                  <span className="text-xs font-mono text-primary bg-primary/10 px-3 py-1 rounded-full uppercase tracking-tighter">
+                    {post.tag}
+                  </span>
+                  <span className="text-xs font-mono text-slate-500 flex items-center gap-1">
+                    <Calendar className="w-3 h-3" /> {post.date}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <button onClick={() => shareToPlatform('twitter')} className="p-2 hover:bg-white/5 rounded-lg text-slate-400 hover:text-sky-400 transition-all" title="Twitter">
+                    <Twitter className="w-4 h-4" />
+                  </button>
+                  <button onClick={() => shareToPlatform('linkedin')} className="p-2 hover:bg-white/5 rounded-lg text-slate-400 hover:text-blue-600 transition-all" title="LinkedIn">
+                    <Linkedin className="w-4 h-4" />
+                  </button>
+                  <button onClick={() => shareToPlatform('facebook')} className="p-2 hover:bg-white/5 rounded-lg text-slate-400 hover:text-blue-400 transition-all" title="Facebook">
+                    <Facebook className="w-4 h-4" />
+                  </button>
+                  <button 
+                    onClick={() => shareToPlatform('copy')} 
+                    className={`p-2 rounded-lg transition-all flex items-center gap-2 ${copied ? 'bg-green-500/20 text-green-400' : 'hover:bg-white/5 text-slate-400 hover:text-white'}`} 
+                    title="Copy Link"
+                  >
+                    {copied ? <Check className="w-4 h-4" /> : <Clipboard className="w-4 h-4" />}
+                  </button>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <button onClick={() => shareToPlatform('twitter')} className="p-2 hover:bg-white/5 rounded-lg text-slate-400 hover:text-sky-400 transition-all" title="Twitter">
-                  <Twitter className="w-4 h-4" />
-                </button>
-                <button onClick={() => shareToPlatform('linkedin')} className="p-2 hover:bg-white/5 rounded-lg text-slate-400 hover:text-blue-600 transition-all" title="LinkedIn">
-                  <Linkedin className="w-4 h-4" />
-                </button>
-                <button onClick={() => shareToPlatform('facebook')} className="p-2 hover:bg-white/5 rounded-lg text-slate-400 hover:text-blue-400 transition-all" title="Facebook">
-                  <Facebook className="w-4 h-4" />
-                </button>
-                <button 
-                  onClick={() => shareToPlatform('copy')} 
-                  className={`p-2 rounded-lg transition-all flex items-center gap-2 ${copied ? 'bg-green-500/20 text-green-400' : 'hover:bg-white/5 text-slate-400 hover:text-white'}`} 
-                  title="Copy Link"
-                >
-                  {copied ? <Check className="w-4 h-4" /> : <Clipboard className="w-4 h-4" />}
-                </button>
-              </div>
+              <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+                {post.title}
+              </h1>
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
-              {post.title}
-            </h1>
-          </div>
-          
-          <div className="glass-card bg-slate-900/40 border-white/10 rounded-b-2xl p-8 md:p-12 shadow-2xl">
-            <div className="flex items-center gap-3 p-4 bg-primary/5 border border-primary/10 rounded-xl mb-12">
-              <BookOpen className="w-5 h-5 text-primary" />
-              <p className="text-primary font-mono text-xs italic m-0">
-                Reading internal architectural manifest... Access granted.
-              </p>
-            </div>
-
-            {loadingContent ? (
-              <div className="flex items-center justify-center py-20">
-                <Loader className="w-8 h-8 text-primary animate-spin" />
+            
+            <div className="glass-card bg-slate-900/40 border-white/10 rounded-b-2xl p-8 md:p-12 shadow-2xl">
+              <div className="flex items-center gap-3 p-4 bg-primary/5 border border-primary/10 rounded-xl mb-12">
+                <BookOpen className="w-5 h-5 text-primary" />
+                <p className="text-primary font-mono text-xs italic m-0">
+                  Reading internal architectural manifest... Access granted.
+                </p>
               </div>
-            ) : (
-              <div className="blog-content prose prose-invert max-w-none font-sans text-lg leading-relaxed">
-                {renderContent(fullContent || '')}
-              </div>
-            )}
 
-            <div className="mt-20 pt-8 border-t border-white/5 flex items-center justify-between">
-               <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xs border border-primary/30">
-                    GT
-                  </div>
-                  <div>
-                    <p className="text-white text-sm font-bold leading-none">Govind Tank</p>
-                    <p className="text-slate-500 text-xs">Senior Lead Architect</p>
-                  </div>
-               </div>
-               <div className="text-slate-600 font-mono text-[10px] uppercase tracking-widest">
-                 End of Log // {post.date}
-               </div>
+              {loadingContent ? (
+                <div className="flex items-center justify-center py-20">
+                  <Loader className="w-8 h-8 text-primary animate-spin" />
+                </div>
+              ) : (
+                <div className="blog-content prose prose-invert max-w-none font-sans text-lg leading-relaxed">
+                  {renderContent(fullContent || '')}
+                </div>
+              )}
+
+              <div className="mt-20 pt-8 border-t border-white/5 flex items-center justify-between">
+                 <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xs border border-primary/30">
+                      GT
+                    </div>
+                    <div>
+                      <p className="text-white text-sm font-bold leading-none">Govind Tank</p>
+                      <p className="text-slate-500 text-xs">Senior Lead Architect</p>
+                    </div>
+                 </div>
+                 <div className="text-slate-600 font-mono text-[10px] uppercase tracking-widest">
+                   End of Log // {post.date}
+                 </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

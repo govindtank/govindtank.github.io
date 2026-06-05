@@ -20,8 +20,8 @@ from datetime import datetime, timezone
 PROJECT_ROOT = "/Users/govind/hermes_projects/govindtank.github.io"
 HISTORY_FILE = f"{PROJECT_ROOT}/data/blogs-history/blog_history.json"
 CONSTANTS_FILE = f"{PROJECT_ROOT}/src/constants.ts"
-CONTENT_DIR = f"{PROJECT_ROOT}/public/data/blogs/content"
-INDEX_FILE = f"{PROJECT_ROOT}/public/data/blogs/index.json"
+CONTENT_DIR = f"{PROJECT_ROOT}/src/data/blogs/content"
+INDEX_FILE = f"{PROJECT_ROOT}/src/data/blogs/index.json"
 LLM_URL = "http://localhost:1234/v1/chat/completions"
 LLM_MODEL = "qwen/qwen3.5-9b"
 GIT_USER_NAME = "Govind Tank"
@@ -538,7 +538,7 @@ def commit_and_push(title, slug):
                        cwd=PROJECT_ROOT, check=True, capture_output=True)
 
         # Add changed files
-        subprocess.run(["git", "add", CONSTANTS_FILE, HISTORY_FILE, INDEX_FILE, f"{CONTENT_DIR}/{slug}.json"],
+        subprocess.run(["git", "add", INDEX_FILE, f"{CONTENT_DIR}/{slug}.json", f"{PROJECT_ROOT}/data/blogs-history/blog_history.json"],
                        cwd=PROJECT_ROOT, check=True, capture_output=True)
 
         # Commit
@@ -622,12 +622,6 @@ def main():
     if len(excerpt) > 200:
         excerpt = excerpt[:197] + "..."
 
-    # Update constants.ts
-    log("Updating constants.ts...")
-    if not update_constants(title, excerpt, date, tag, slug):
-        log("Failed to update constants.ts")
-        return
-
     # Write content JSON file
     log("Writing blog content to JSON...")
     if not write_content_json(slug, content):
@@ -643,7 +637,7 @@ def main():
     # Verify build
     if not verify_build():
         log("Build failed, rolling back...")
-        subprocess.run(["git", "checkout", "--", CONSTANTS_FILE, INDEX_FILE],
+        subprocess.run(["git", "checkout", "--", INDEX_FILE],
                        cwd=PROJECT_ROOT)
         return
 

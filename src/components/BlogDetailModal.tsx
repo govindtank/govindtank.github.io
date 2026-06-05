@@ -13,29 +13,32 @@ interface BlogDetailModalProps {
   onClose: () => void;
 }
 
+// Lazy-loaded content modules — code-split per blog post
+const contentModules = import.meta.glob<{ content: string }>('../data/blogs/content/*.json');
+
 export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailModalProps) {
   const [fullContent, setFullContent] = useState<string | null>(null);
   const [loadingContent, setLoadingContent] = useState(false);
 
   useEffect(() => {
     if (!selectedPost) return;
-    
-    if (selectedPost.content) {
-      setFullContent(selectedPost.content);
-      return;
-    }
-
+    setFullContent(null);
     setLoadingContent(true);
-    fetch(`/data/blogs/content/${selectedPost.slug}.json`)
-      .then(res => res.json())
-      .then(data => {
-        setFullContent(data.content);
-        setLoadingContent(false);
-      })
-      .catch(() => {
-        setFullContent(null);
-        setLoadingContent(false);
-      });
+    const loader = contentModules[`../data/blogs/content/${selectedPost.slug}.json`];
+    if (loader) {
+      loader()
+        .then((mod) => {
+          setFullContent(mod.content || null);
+          setLoadingContent(false);
+        })
+        .catch(() => {
+          setFullContent(null);
+          setLoadingContent(false);
+        });
+    } else {
+      setFullContent(null);
+      setLoadingContent(false);
+    }
   }, [selectedPost]);
 
   useEffect(() => {
