@@ -606,11 +606,11 @@ def main():
         log("Failed to write content Markdown")
         return
 
-    # Update index.json
-    log("Updating blog index...")
+    # Update index.json (v3: no-op — metadata from .md frontmatter)
+    log("Updating blog index (v3: .md frontmatter is single source of truth)...")
     if not update_index_json(title, excerpt, date, tag, slug):
-        log("Failed to update index.json")
-        return
+        log("Failed to update index.json (non-critical, continuing)")
+        pass
 
     # Verify build
     if not verify_build():
