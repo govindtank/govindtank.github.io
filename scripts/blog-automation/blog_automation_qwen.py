@@ -5,9 +5,10 @@ Qwen-Powered Blog Automation v3.0
 Uses local qwen/qwen3.5-9b LLM to generate technical blog posts with:
 - Public image URLs (Unsplash)
 - Tables, mermaid diagrams, code blocks
-- Proper TypeScript escaping
-- Auto-updates constants.ts + blog history
-- Git commit and push via SSH
+ - Proper TypeScript escaping
+ - Auto-updates blog history
+ - Git commit and push via SSH
+ - Pure Markdown source — metadata and content in .md frontmatter
 
 Author: Govind Tank
 License: MIT
@@ -20,7 +21,7 @@ from datetime import datetime, timezone
 PROJECT_ROOT = "/Users/govind/hermes_projects/govindtank.github.io"
 HISTORY_FILE = f"{PROJECT_ROOT}/data/blogs-history/blog_history.json"
 CONTENT_DIR = f"{PROJECT_ROOT}/src/content/blog"
-INDEX_FILE = f"{PROJECT_ROOT}/src/data/blogs/index.json"
+# INDEX_FILE = f"{PROJECT_ROOT}/src/data/blogs/index.json"  # REMOVED v3 — .md frontmatter is now the single source of truth
 LLM_URL = "http://localhost:1234/v1/chat/completions"
 LLM_MODEL = "qwen/qwen3.5-9b"
 GIT_USER_NAME = "Govind Tank"
@@ -159,23 +160,7 @@ tags:
     return True
 
 def update_index_json(title, excerpt, date, tag, slug):
-    """Add or update entry in public/data/blogs/index.json"""
-    # Read existing index
-    index = []
-    if os.path.exists(INDEX_FILE):
-        with open(INDEX_FILE) as f:
-            index = json.load(f)
-    
-    # Check if slug already exists
-    existing = [e for e in index if e["slug"] == slug]
-    if existing:
-        existing[0].update({"title": title, "excerpt": excerpt, "date": date, "tag": tag})
-    else:
-        index.insert(0, {"title": title, "excerpt": excerpt, "date": date, "tag": tag, "slug": slug})
-    
-    with open(INDEX_FILE, 'w') as f:
-        json.dump(index, f, indent=2)
-    log("Updated blog index.json")
+    """DEPRECATED v3 — No longer needed. Metadata is derived from .md frontmatter at build time."""
     return True
 
 def select_topic(history):
@@ -490,35 +475,7 @@ def format_date():
 
 
 def update_constants(title, excerpt, date, tag, slug):
-    """Update BLOG_POSTS array in constants.ts with new entry at top"""
-    with open(CONSTANTS_FILE, 'r') as f:
-        text = f.read()
-
-    escaped_excerpt = escape_for_excerpt(excerpt)
-    escaped_title = escape_for_excerpt(title)
-
-    new_entry = f"""  {{
-    title: `{escaped_title}`,
-    excerpt: `{escaped_excerpt}`,
-    date: `{date}`,
-    tag: `{tag}`,
-    slug: `{slug}`,
-    content: ``
-  }},"""
-    # Insert after "export const BLOG_POSTS: BlogPost[] = ["
-    marker = "export const BLOG_POSTS: BlogPost[] = ["
-    pos = text.find(marker)
-    if pos == -1:
-        log("ERROR: BLOG_POSTS marker not found in constants.ts")
-        return False
-
-    insert_pos = pos + len(marker)
-    text = text[:insert_pos] + "\n" + new_entry + "\n" + text[insert_pos:]
-
-    with open(CONSTANTS_FILE, 'w') as f:
-        f.write(text)
-
-    log("Updated constants.ts with new blog entry (content stored in JSON)")
+    """DEPRECATED v3 — No longer needed. constants.ts derives metadata from .md files at build time."""
     return True
 
 
@@ -559,7 +516,7 @@ def commit_and_push(title, slug):
                        cwd=PROJECT_ROOT, check=True, capture_output=True)
 
         # Add changed files
-        subprocess.run(["git", "add", INDEX_FILE, f"{CONTENT_DIR}/{slug}.md", f"{PROJECT_ROOT}/data/blogs-history/blog_history.json"],
+        subprocess.run(["git", "add", f"{CONTENT_DIR}/{slug}.md", f"{PROJECT_ROOT}/data/blogs-history/blog_history.json"],
                        cwd=PROJECT_ROOT, check=True, capture_output=True)
 
         # Commit
@@ -658,7 +615,7 @@ def main():
     # Verify build
     if not verify_build():
         log("Build failed, rolling back...")
-        subprocess.run(["git", "checkout", "--", INDEX_FILE],
+        subprocess.run(["git", "checkout", "--", f"{CONTENT_DIR}/{slug}.md"],
                        cwd=PROJECT_ROOT)
         return
 

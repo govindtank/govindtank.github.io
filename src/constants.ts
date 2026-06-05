@@ -1,11 +1,31 @@
-export interface BlogPost {
-  title: string;
-  excerpt: string;
-  date: string;
-  tag: string;
-  slug: string;
-  content: string;
-}
+import type { BlogPost } from './types';
+import matter from 'gray-matter';
+
+// Eagerly load all markdown files at build time — extracts only YAML frontmatter
+// for the blog listing. Content is NOT loaded here (lazy-loaded in detail components).
+// This eliminates the need for a separate index.json metadata file — the .md file
+// is the single source of truth for both metadata AND content.
+const rawEagerModules = import.meta.glob('./content/blog/*.md', {
+  eager: true,
+  query: '?raw',
+  import: 'default',
+}) as Record<string, string>;
+
+export const BLOG_POSTS: BlogPost[] = Object.entries(rawEagerModules)
+  .map(([path, raw]) => {
+    const { data } = matter(raw as string);
+    const slug = path.replace('./content/blog/', '').replace('.md', '');
+    return {
+      slug,
+      title: data.title || '',
+      date: data.date || '',
+      excerpt: data.excerpt || '',
+      tag: Array.isArray(data.tags) && data.tags.length > 0 ? data.tags[0] : (data.tag || data.category || ''),
+      content: '', // NOT loaded here — lazy-loaded by BlogDetail/BlogDetailModal
+      coverImage: data.coverImage || '',
+    };
+  })
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export interface Experience {
   company: string;
@@ -151,7 +171,3 @@ export const TESTIMONIALS: Testimonial[] = [
     content: "His expertise in Flutter Bloc and state management is exceptional. He mentored our junior team and introduced patterns that dramatically improved our code quality and reduced bugs."
   },
 ];
-
-import blogIndex from './data/blogs/index.json';
-
-export const BLOG_POSTS: BlogPost[] = blogIndex as BlogPost[];

@@ -1,5 +1,12 @@
 [
   {
+    "title": "WebAssembly in 2026: From Browser to Edge Computing and Beyond",
+    "excerpt": "The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. WebAssembly in 2026 represents one of the most impactful shifts in how modern dist...",
+    "date": "June 05, 2026",
+    "tag": "WebAssembly",
+    "slug": "webassembly-in-2026-from-browser-to-edge-computing-and-beyond"
+  },
+  {
     "title": "PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing",
     "excerpt": "In the evolving landscape of enterprise data architecture, the dichotomy between transactional processing (OLTP) and analytical processing (OLAP) has historically dictated database strategy. By 202...",
     "date": "June 05, 2026",

@@ -26,6 +26,7 @@ export interface BlogPost {
   tag: string;
   slug: string;
   content?: string;
+  coverImage?: string;
 }
 
 export interface Testimonial {
