@@ -5,8 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c03f0a7e-6e5d-495a-9f74-434787bb7ccb" name="Changes" comment="rebuild with all blog posts and fresh assets">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/arc-BL8vYRJG.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/architectureDiagram-3BPJPVTR-C4xfqN3r.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/blockDiagram-GPEHLZMM-Bn8NRTiJ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/c4Diagram-AAUBKEIU-DPWIJVa8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/channel-CnJJ1B_9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/chunk-2J33WTMH-DUUkOXXq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/chunk-4BX2VUAB-B2ReW0ff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/chunk-55IACEB6-BxSalOBy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/chunk-727SXJPM-C1YPHc6f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/chunk-AQP2D5EJ-CuzBl00b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/chunk-FMBD7UC4-BANKKbn2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/chunk-ND2GUHAM-Bp6SPOq8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/chunk-QZHKN3VN-BFypa5hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/classDiagram-4FO5ZUOK-DPDNz3Ve.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/classDiagram-v2-Q7XG4LA2-DPDNz3Ve.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/cose-bilkent-S5V4N54A-BgODUxif.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/dagre-BM42HDAG-QWoNykn0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/diagram-2AECGRRQ-DI4hVlhe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/diagram-5GNKFQAL-DBljW7m2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/diagram-KO2AKTUF-BMY4pUF-.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/diagram-LMA3HP47-Cg9EY4X2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/diagram-OG6HWLK6-CFJqT_Uy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/erDiagram-TEJ5UH35-BddICmDM.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/flowDiagram-I6XJVG4X-OE5pL3In.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/ganttDiagram-6RSMTGT7-D4HbuWjQ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/gitGraphDiagram-PVQCEYII-5xmMvqjp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/index-x-xE82pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/infoDiagram-5YYISTIA-Bn373js5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/ishikawaDiagram-YF4QCWOH-DioT-1dY.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/journeyDiagram-JHISSGLW-BfAtcuI9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/kanban-definition-UN3LZRKU-D-sdAoJh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/linear-Ct5mgFLt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/mindmap-definition-RKZ34NQL-O6UaRe_k.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/pieDiagram-4H26LBE5-DpqhF-Jy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/quadrantDiagram-W4KKPZXB-cF2gp-eL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/requirementDiagram-4Y6WPE33-C5sUNZLB.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/sankeyDiagram-5OEKKPKP-Bw4w_f2k.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/sequenceDiagram-3UESZ5HK-Dp6StodK.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/stateDiagram-AJRCARHV-kdEbBew3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/stateDiagram-v2-BHNVJYJU-YTDkn86Z.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/timeline-definition-PNZ67QCA-Ccml-0tF.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/vennDiagram-CIIHVFJN-BBaZed60.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/wardley-L42UT6IY-WZo0JQaJ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/wardleyDiagram-YWT4CUSO-DbPCXNkz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/xychartDiagram-2RQKCTM6-CpSrzQii.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

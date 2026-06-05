@@ -1,8 +1,9 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BLOG_POSTS, TESTIMONIALS } from '../constants';
-import { BookOpen, Quote, ChevronRight, MessageSquareQuote, ArrowDown, Search, Filter } from 'lucide-react';
+import { BookOpen, Quote, ChevronRight, MessageSquareQuote, ArrowDown, Search, Filter, ExternalLink } from 'lucide-react';
 import { BlogPost } from '../types';
+import { useNavigate } from 'react-router-dom';
 
 interface BlogAndTestimonialsProps {
   onPostSelect: (post: BlogPost) => void;
@@ -11,6 +12,7 @@ interface BlogAndTestimonialsProps {
 const ITEMS_PER_PAGE = 6;
 
 export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonialsProps) {
+  const navigate = useNavigate();
   const [page, setPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
@@ -52,18 +54,24 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
               <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
                 <BookOpen className="text-primary w-6 h-6" />
               </div>
-              <div>
+              <div className="flex-1">
                 <h2 className="text-4xl font-bold italic-serif tracking-tighter uppercase font-black">Architectural <span className="text-primary">Logs</span></h2>
                 <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mt-1">Status: Monitoring_Industry_Trends</p>
               </div>
+              <button
+                onClick={() => navigate('/blog')}
+                className="hidden md:flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-primary/20 border border-white/10 hover:border-primary/30 rounded-xl transition-all text-xs font-mono text-slate-400 hover:text-primary uppercase tracking-widest"
+              >
+                View All <ExternalLink className="w-3 h-3" />
+              </button>
             </div>
             
             <div className="flex items-center gap-4 mb-6">
-              <div className="relative w-full max-w-xs">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500" />
+              <div className="relative w-full max-w-xs group">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500 group-focus-within:text-primary transition-colors" />
                 <input
                   type="text"
-                  placeholder="Search blogs..."
+                  placeholder="Search logs..."
                   value={searchTerm}
                   onChange={(e) => { setSearchTerm(e.target.value); setPage(1); }}
                   className="w-full pl-10 pr-4 py-2 bg-slate-950/50 border border-white/10 rounded-lg text-slate-300 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm"
@@ -184,6 +192,18 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                     </button>
                   </motion.div>
                 )}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="mt-4"
+                >
+                  <button
+                    onClick={() => navigate('/blog')}
+                    className="px-6 py-3 bg-white/5 hover:bg-primary/20 border border-white/10 hover:border-primary/30 rounded-xl transition-all text-xs font-mono text-slate-400 hover:text-primary uppercase tracking-widest flex items-center gap-2 mx-auto"
+                  >
+                    View All Logs <ExternalLink className="w-3 h-3" />
+                  </button>
+                </motion.div>
               </motion.div>
             )}
           </div>

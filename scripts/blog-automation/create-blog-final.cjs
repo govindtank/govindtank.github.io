@@ -24,7 +24,7 @@ const FALLBACK_MODELS = ['google/gemma-2-9b', 'mistralai/mixtral-8x7b-instruct-v
 // Environment defaults
 const telegramEnabled = !!process.env.TELEGRAM_BOT_TOKEN;
 const githubToken = process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.length > 10 ? process.env.GITHUB_TOKEN : undefined;
-const maxBlogCountPerDay = parseInt(process.env.MAX_BLOG_COUNT) || 12;
+const maxBlogCountPerDay = parseInt(process.env.MAX_BLOG_COUNT) || 999;  // No limit — generate continuously
 const minWordCount = parseInt(process.env.CONTENT_MIN_LENGTH) || 500;
 const gitUser = process.env.GIT_USER_NAME || 'Govind Tank';
 const gitEmail = process.env.GIT_USER_EMAIL || 'govindtank600@gmail.com';

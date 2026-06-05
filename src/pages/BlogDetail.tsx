@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -13,7 +13,8 @@ import {
   Linkedin,
   Clipboard,
   Check,
-  Terminal
+  Terminal,
+  Loader
 } from 'lucide-react';
 import Mermaid from '../components/Mermaid';
 
@@ -21,7 +22,32 @@ export default function BlogDetail() {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
+  const [fullContent, setFullContent] = useState<string | null>(null);
+  const [loadingContent, setLoadingContent] = useState(false);
+
   const post = BLOG_POSTS.find((p) => p.slug === slug);
+
+  useEffect(() => {
+    if (!post) return;
+
+    if (post.content) {
+      setFullContent(post.content);
+      return;
+    }
+
+    setLoadingContent(true);
+    fetch(`/data/blogs/content/${post.slug}.json`)
+      .then(res => res.json())
+      .then(data => {
+        setFullContent(data.content || '');
+        setLoadingContent(false);
+      })
+      .catch(() => {
+        // Fallback: try to extract title from the markdown if fetch fails
+        setFullContent('');
+        setLoadingContent(false);
+      });
+  }, [post]);
 
   if (!post) {
     return (
@@ -93,7 +119,7 @@ export default function BlogDetail() {
       <div className="max-w-4xl mx-auto">
         <div className="mb-12">
           <button 
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/blog')}
             className="flex items-center gap-2 text-slate-500 hover:text-primary transition-colors group mb-8 font-mono text-xs uppercase tracking-widest"
           >
             <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" /> root/archives/logs
@@ -141,9 +167,15 @@ export default function BlogDetail() {
               </p>
             </div>
 
-            <div className="blog-content prose prose-invert max-w-none font-sans text-lg leading-relaxed">
-              {renderContent(post.content || '')}
-            </div>
+            {loadingContent ? (
+              <div className="flex items-center justify-center py-20">
+                <Loader className="w-8 h-8 text-primary animate-spin" />
+              </div>
+            ) : (
+              <div className="blog-content prose prose-invert max-w-none font-sans text-lg leading-relaxed">
+                {renderContent(fullContent || '')}
+              </div>
+            )}
 
             <div className="mt-20 pt-8 border-t border-white/5 flex items-center justify-between">
                <div className="flex items-center gap-3">
