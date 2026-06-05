@@ -1,5 +1,12 @@
 [
   {
+    "title": "AI-Augmented Development Workflows",
+    "excerpt": "Leverage AI-powered development workflows with autonomous agents, intelligent code analysis, and automated optimization strategies to boost productivity.",
+    "date": "June 05, 2026",
+    "tag": "AI-Engineering",
+    "slug": "ai-augmented-dev"
+  },
+  {
     "title": "Event Sourcing and CQRS: Practical Patterns for Distributed Systems",
     "excerpt": "In the evolving landscape of distributed system architecture in 2026, the traditional monolithic data model is increasingly viewed as a scalability bottleneck. As microservices proliferate and CAP ...",
     "date": "June 05, 2026",
@@ -99,7 +106,7 @@
   },
   {
     "title": "Clean Architecture & Design Patterns in Modern AI Systems: Building Maintainable ML Pipelines",
-    "excerpt": "Applying clean architecture principles\u2014dependency inversion, repository patterns, and separation of concerns\u2014to machine learning pipeline design for long-term maintainability.",
+    "excerpt": "Applying clean architecture principles—dependency inversion, repository patterns, and separation of concerns—to machine learning pipeline design for long-term maintainability.",
     "date": "May 25, 2026",
     "tag": "Clean-Architecture",
     "slug": "clean-architecture-design-patterns-modern-ai-systems-building-maintainable-ml-pipelines"
