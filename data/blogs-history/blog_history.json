@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 11,
-  "lastTopic": "Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems",
-  "todayCount": 3,
-  "lastGenerated": "2026-06-03T02:36:29Z",
+  "totalCreated": 12,
+  "lastTopic": "Event Sourcing and CQRS: Practical Patterns for Distributed Systems",
+  "todayCount": 4,
+  "lastGenerated": "2026-06-05T07:31:57Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -100,6 +100,14 @@
       "tag": "Security",
       "wordCount": 760,
       "status": "published"
+    },
+    "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems": {
+      "title": "Event Sourcing and CQRS: Practical Patterns for Distributed Systems",
+      "slug": "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems",
+      "date": "June 05, 2026",
+      "tag": "Architecture",
+      "wordCount": 811,
+      "status": "published"
     }
   },
   "images": {
@@ -114,6 +122,7 @@
     "flutter-performance-optimization-achieving-60-fps-on-mid-range-devices": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
     "flutter-ai-integration-machine-learning-2026": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200",
     "building-scalable-microservices-with-fastapi-and-event-driven-architecture": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
-    "zero-trust-architecture-implementing-security-in-distributed-cloud-systems": "https://images.unsplash.com/photo-1555949963-ff9fe2c54ed7?auto=format&fit=crop&q=80&w=1200"
+    "zero-trust-architecture-implementing-security-in-distributed-cloud-systems": "https://images.unsplash.com/photo-1555949963-ff9fe2c54ed7?auto=format&fit=crop&q=80&w=1200",
+    "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200"
   }
 }

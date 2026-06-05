@@ -154,6 +154,15 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    title: `Event Sourcing and CQRS: Practical Patterns for Distributed Systems`,
+    excerpt: `In the evolving landscape of distributed system architecture in 2026, the traditional monolithic data model is increasingly viewed as a scalability bottleneck. As microservices proliferate and CAP ...`,
+    date: `June 05, 2026`,
+    tag: `Architecture`,
+    slug: `event-sourcing-and-cqrs-practical-patterns-for-distributed-systems`,
+    content: ``
+  },
+
+  {
     title: `AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026`,
     excerpt: `Scale code quality and developer velocity with AI-augmented development workflows using LLM agents, automated testing, and intelligent code review in production environments.`,
     date: `June 03, 2026`,
