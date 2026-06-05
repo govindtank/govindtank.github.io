@@ -1,5 +1,5 @@
 import type { BlogPost } from './types';
-import matter from 'gray-matter';
+import parseFrontmatter from './lib/parseFrontmatter';
 
 // Eagerly load all markdown files at build time — extracts only YAML frontmatter
 // for the blog listing. Content is NOT loaded here (lazy-loaded in detail components).
@@ -13,16 +13,16 @@ const rawEagerModules = import.meta.glob('./content/blog/*.md', {
 
 export const BLOG_POSTS: BlogPost[] = Object.entries(rawEagerModules)
   .map(([path, raw]) => {
-    const { data } = matter(raw as string);
+    const { data } = parseFrontmatter(raw as string);
     const slug = path.replace('./content/blog/', '').replace('.md', '');
     return {
       slug,
-      title: data.title || '',
-      date: data.date || '',
-      excerpt: data.excerpt || '',
-      tag: Array.isArray(data.tags) && data.tags.length > 0 ? data.tags[0] : (data.tag || data.category || ''),
+      title: (data.title as string) || '',
+      date: (data.date as string) || '',
+      excerpt: (data.excerpt as string) || '',
+      tag: Array.isArray(data.tags) && (data.tags as string[]).length > 0 ? (data.tags as string[])[0] : ((data.tag as string) || (data.category as string) || ''),
       content: '', // NOT loaded here — lazy-loaded by BlogDetail/BlogDetailModal
-      coverImage: data.coverImage || '',
+      coverImage: (data.coverImage as string) || '',
     };
   })
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

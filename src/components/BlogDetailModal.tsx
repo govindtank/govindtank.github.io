@@ -5,9 +5,9 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import matter from 'gray-matter';
 import { BlogPost } from '../types';
 import Mermaid from '../components/Mermaid';
+import stripFrontmatter from '../lib/stripFrontmatter';
 
 interface BlogDetailModalProps {
   selectedPost: BlogPost | null;
@@ -29,7 +29,7 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
     if (loader) {
       loader()
         .then((raw: string) => {
-          const parsed = matter(raw);
+          const parsed = stripFrontmatter(raw);
           setFullContent(parsed.content || null);
           setLoadingContent(false);
         })

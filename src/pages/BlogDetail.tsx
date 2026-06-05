@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import matter from 'gray-matter';
 import { BLOG_POSTS } from '../constants';
 import {
   ArrowLeft,
@@ -17,6 +16,7 @@ import {
   Loader
 } from 'lucide-react';
 import Mermaid from '../components/Mermaid';
+import stripFrontmatter from '../lib/stripFrontmatter';
 
 // Lazy-loaded markdown modules — each blog post content is code-split
 // into its own JS chunk and loaded on demand for zero initial fetch cost
@@ -40,7 +40,7 @@ export default function BlogDetail() {
       loader()
         .then((raw: string) => {
           // Parse YAML frontmatter + markdown body
-          const parsed = matter(raw);
+          const parsed = stripFrontmatter(raw);
           setFullContent(parsed.content || '');
           setLoadingContent(false);
         })
