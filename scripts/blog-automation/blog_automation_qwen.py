@@ -20,6 +20,8 @@ from datetime import datetime, timezone
 PROJECT_ROOT = "/Users/govind/hermes_projects/govindtank.github.io"
 HISTORY_FILE = f"{PROJECT_ROOT}/data/blogs-history/blog_history.json"
 CONSTANTS_FILE = f"{PROJECT_ROOT}/src/constants.ts"
+CONTENT_DIR = f"{PROJECT_ROOT}/public/data/blogs/content"
+INDEX_FILE = f"{PROJECT_ROOT}/public/data/blogs/index.json"
 LLM_URL = "http://localhost:1234/v1/chat/completions"
 LLM_MODEL = "qwen/qwen3.5-9b"
 GIT_USER_NAME = "Govind Tank"
@@ -125,6 +127,35 @@ def slugify(title):
     s = re.sub(r'[^a-z0-9-]', '', s)
     s = re.sub(r'-+', '-', s)
     return s.strip('-')
+
+def write_content_json(slug, content):
+    """Write blog content to JSON file in public/data/blogs/content/"""
+    filepath = f"{CONTENT_DIR}/{slug}.json"
+    os.makedirs(CONTENT_DIR, exist_ok=True)
+    with open(filepath, 'w') as f:
+        json.dump({"content": content}, f, indent=2)
+    log(f"Content written to {filepath}")
+    return True
+
+def update_index_json(title, excerpt, date, tag, slug):
+    """Add or update entry in public/data/blogs/index.json"""
+    # Read existing index
+    index = []
+    if os.path.exists(INDEX_FILE):
+        with open(INDEX_FILE) as f:
+            index = json.load(f)
+    
+    # Check if slug already exists
+    existing = [e for e in index if e["slug"] == slug]
+    if existing:
+        existing[0].update({"title": title, "excerpt": excerpt, "date": date, "tag": tag})
+    else:
+        index.insert(0, {"title": title, "excerpt": excerpt, "date": date, "tag": tag, "slug": slug})
+    
+    with open(INDEX_FILE, 'w') as f:
+        json.dump(index, f, indent=2)
+    log("Updated blog index.json")
+    return True
 
 def select_topic(history):
     existing = set(history.get('blogs', {}).keys())
@@ -437,12 +468,11 @@ def format_date():
     return now.strftime("%B %d, %Y")
 
 
-def update_constants(title, excerpt, date, tag, slug, content):
+def update_constants(title, excerpt, date, tag, slug):
     """Update BLOG_POSTS array in constants.ts with new entry at top"""
     with open(CONSTANTS_FILE, 'r') as f:
         text = f.read()
 
-    escaped_content = escape_for_ts(content)
     escaped_excerpt = escape_for_excerpt(excerpt)
     escaped_title = escape_for_excerpt(title)
 
@@ -452,9 +482,8 @@ def update_constants(title, excerpt, date, tag, slug, content):
     date: `{date}`,
     tag: `{tag}`,
     slug: `{slug}`,
-    content: `{escaped_content}`
+    content: ``
   }},"""
-
     # Insert after "export const BLOG_POSTS: BlogPost[] = ["
     marker = "export const BLOG_POSTS: BlogPost[] = ["
     pos = text.find(marker)
@@ -468,7 +497,7 @@ def update_constants(title, excerpt, date, tag, slug, content):
     with open(CONSTANTS_FILE, 'w') as f:
         f.write(text)
 
-    log("Updated constants.ts with new blog entry")
+    log("Updated constants.ts with new blog entry (content stored in JSON)")
     return True
 
 
@@ -509,7 +538,7 @@ def commit_and_push(title, slug):
                        cwd=PROJECT_ROOT, check=True, capture_output=True)
 
         # Add changed files
-        subprocess.run(["git", "add", CONSTANTS_FILE, HISTORY_FILE],
+        subprocess.run(["git", "add", CONSTANTS_FILE, HISTORY_FILE, INDEX_FILE, f"{CONTENT_DIR}/{slug}.json"],
                        cwd=PROJECT_ROOT, check=True, capture_output=True)
 
         # Commit
@@ -595,14 +624,26 @@ def main():
 
     # Update constants.ts
     log("Updating constants.ts...")
-    if not update_constants(title, excerpt, date, tag, slug, content):
+    if not update_constants(title, excerpt, date, tag, slug):
         log("Failed to update constants.ts")
+        return
+
+    # Write content JSON file
+    log("Writing blog content to JSON...")
+    if not write_content_json(slug, content):
+        log("Failed to write content JSON")
+        return
+
+    # Update index.json
+    log("Updating blog index...")
+    if not update_index_json(title, excerpt, date, tag, slug):
+        log("Failed to update index.json")
         return
 
     # Verify build
     if not verify_build():
         log("Build failed, rolling back...")
-        subprocess.run(["git", "checkout", "--", CONSTANTS_FILE],
+        subprocess.run(["git", "checkout", "--", CONSTANTS_FILE, INDEX_FILE],
                        cwd=PROJECT_ROOT)
         return
 

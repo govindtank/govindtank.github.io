@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { BLOG_POSTS } from '../constants';
 import { Search, Calendar, ArrowRight, Filter, Terminal } from 'lucide-react';
 import { motion } from 'motion/react';
+import { BlogPost } from '../types';
 
 export default function BlogList() {
   const navigate = useNavigate();
@@ -17,6 +18,11 @@ export default function BlogList() {
                             post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesTag = selectedTag === 'All' || post.tag === selectedTag;
       return matchesSearch && matchesTag;
+    }).sort((a, b) => {
+      // Sort by date descending (same format: "June 03, 2026" or "Mar 15, 2024")
+      const dateA = new Date(a.date).getTime();
+      const dateB = new Date(b.date).getTime();
+      return dateB - dateA;
     });
   }, [searchQuery, selectedTag]);
 

@@ -26,6 +26,10 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
         post.tag.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesTag = selectedTag === null || post.tag === selectedTag;
       return matchesSearch && matchesTag;
+    }).sort((a, b) => {
+      const dateA = new Date(a.date).getTime();
+      const dateB = new Date(b.date).getTime();
+      return dateB - dateA;
     });
   }, [searchTerm, selectedTag]);
 
