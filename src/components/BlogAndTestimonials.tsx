@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BLOG_POSTS, TESTIMONIALS } from '../constants';
-import { BookOpen, Quote, ChevronRight, MessageSquareQuote, ArrowDown, Search, Filter, ExternalLink } from 'lucide-react';
+import { BookOpen, Quote, ChevronRight, MessageSquareQuote, Search, Filter, ExternalLink } from 'lucide-react';
 import { BlogPost } from '../types';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,11 +9,10 @@ interface BlogAndTestimonialsProps {
   onPostSelect: (post: BlogPost) => void;
 }
 
-const ITEMS_PER_PAGE = 6;
+const MAX_HOME_BLOGS = 3;
 
 export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonialsProps) {
   const navigate = useNavigate();
-  const [page, setPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [showFilters, setShowFilters] = useState(false);
@@ -30,23 +29,14 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
       const dateA = new Date(a.date).getTime();
       const dateB = new Date(b.date).getTime();
       return dateB - dateA;
-    });
+    }).slice(0, MAX_HOME_BLOGS);
   }, [searchTerm, selectedTag]);
 
-  const totalPages = Math.ceil(filteredPosts.length / ITEMS_PER_PAGE);
-  const visiblePosts = filteredPosts.slice(0, page * ITEMS_PER_PAGE);
-  const hasMore = visiblePosts.length < filteredPosts.length;
   const tags = [...new Set(BLOG_POSTS.map(post => post.tag))];
-
-  const loadMore = () => {
-    const nextPage = Math.min(page + 1, totalPages);
-    setPage(nextPage);
-  };
 
   const clearFilters = () => {
     setSearchTerm('');
     setSelectedTag(null);
-    setPage(1);
   };
 
   return (
@@ -62,12 +52,6 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                 <h2 className="text-4xl font-bold italic-serif tracking-tighter uppercase font-black">Architectural <span className="text-primary">Logs</span></h2>
                 <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mt-1">Status: Monitoring_Industry_Trends</p>
               </div>
-              <button
-                onClick={() => navigate('/blog')}
-                className="hidden md:flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-primary/20 border border-white/10 hover:border-primary/30 rounded-xl transition-all text-xs font-mono text-slate-400 hover:text-primary uppercase tracking-widest"
-              >
-                View All <ExternalLink className="w-3 h-3" />
-              </button>
             </div>
             
             <div className="flex items-center gap-4 mb-6">
@@ -77,7 +61,7 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                   type="text"
                   placeholder="Search logs..."
                   value={searchTerm}
-                  onChange={(e) => { setSearchTerm(e.target.value); setPage(1); }}
+                  onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 bg-slate-950/50 border border-white/10 rounded-lg text-slate-300 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm"
                 />
               </div>
@@ -103,7 +87,7 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                       </div>
                       <div className="space-y-1">
                         <button
-                          onClick={() => { setSelectedTag(null); setShowFilters(false); setPage(1); }}
+                          onClick={() => { setSelectedTag(null); setShowFilters(false); }}
                           className={`w-full text-left px-3 py-2 rounded-lg text-xs font-mono transition-colors ${selectedTag === null ? 'bg-primary/10 text-primary' : 'text-slate-400 hover:bg-white/5'}`}
                         >
                           All Tags
@@ -111,7 +95,7 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                         {tags.map(tag => (
                           <button
                             key={tag}
-                            onClick={() => { setSelectedTag(tag); setShowFilters(false); setPage(1); }}
+                            onClick={() => { setSelectedTag(tag); setShowFilters(false); }}
                             className={`w-full text-left px-3 py-2 rounded-lg text-xs font-mono transition-colors ${selectedTag === tag ? 'bg-primary/10 text-primary' : 'text-slate-400 hover:bg-white/5'}`}
                           >
                             {tag}
@@ -125,7 +109,7 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
             </div>
 
             <div className="space-y-4">
-              {visiblePosts.map((post, i) => (
+              {filteredPosts.map((post, i) => (
                 <motion.div
                   key={post.slug}
                   initial={{ opacity: 0, x: -20 }}
@@ -151,65 +135,24 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
               ))}
             </div>
 
-            {hasMore && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="mt-8"
+            {/* Show More — navigate to full blog listing */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="mt-8"
+            >
+              <button
+                onClick={() => navigate('/blog')}
+                className="w-full group relative flex items-center justify-center gap-3 py-4 px-6 bg-white/5 hover:bg-primary/20 border border-white/10 hover:border-primary/30 rounded-xl transition-all overflow-hidden"
               >
-                <button
-                  onClick={loadMore}
-                  className="w-full group relative flex items-center justify-center gap-3 py-4 px-6 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/30 rounded-xl transition-all overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <ArrowDown className="w-4 h-4 text-primary group-hover:translate-y-1 transition-transform relative z-10" />
-                  <span className="text-xs font-mono text-slate-400 group-hover:text-primary uppercase tracking-widest relative z-10">
-                    Load {Math.min(ITEMS_PER_PAGE, filteredPosts.length - visiblePosts.length)} More 
-                    {searchTerm || selectedTag ? ' Filtered ' : ' '}
-                    Logs ({visiblePosts.length}/{filteredPosts.length})
-                  </span>
-                  <div className="absolute bottom-0 left-0 h-[2px] bg-primary w-0 group-hover:w-full transition-all duration-700" />
-                </button>
-              </motion.div>
-            )}
-
-            {!hasMore && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="mt-8 text-center"
-              >
-                <p className="text-[10px] font-mono text-slate-600 uppercase tracking-widest">
-                  ✓ Showing all {filteredPosts.length} Technical Logs
-                </p>
-                {(searchTerm || selectedTag) && (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="mt-2"
-                  >
-                    <button
-                      onClick={clearFilters}
-                      className="px-4 py-2 bg-primary/10 hover:bg-primary/20 border border-primary/10 rounded-md transition-all text-xs font-mono text-primary"
-                    >
-                      Clear Filters
-                    </button>
-                  </motion.div>
-                )}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="mt-4"
-                >
-                  <button
-                    onClick={() => navigate('/blog')}
-                    className="px-6 py-3 bg-white/5 hover:bg-primary/20 border border-white/10 hover:border-primary/30 rounded-xl transition-all text-xs font-mono text-slate-400 hover:text-primary uppercase tracking-widest flex items-center gap-2 mx-auto"
-                  >
-                    View All Logs <ExternalLink className="w-3 h-3" />
-                  </button>
-                </motion.div>
-              </motion.div>
-            )}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <ExternalLink className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform relative z-10" />
+                <span className="text-xs font-mono text-slate-400 group-hover:text-primary uppercase tracking-widest relative z-10">
+                  Show All Logs ({BLOG_POSTS.length} Total Entries) →
+                </span>
+                <div className="absolute bottom-0 left-0 h-[2px] bg-primary w-0 group-hover:w-full transition-all duration-700" />
+              </button>
+            </motion.div>
           </div>
 
           <div>

@@ -4,7 +4,7 @@ slug: "flutter-ai-integration-machine-learning-2026"
 date: "June 01, 2026"
 excerpt: >
   Integrate AI and machine learning capabilities into Flutter applications with on-device inference, model management, and cloud-based ML services for smart mobile experiences.
-coverImage: ""
+coverImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200"
 category: "Flutter"
 readTime: 3
 tags:

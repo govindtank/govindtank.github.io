@@ -4,7 +4,7 @@ slug: "ai-powered-code-review-automating-quality-gates-with-llm-agents"
 date: "May 29, 2026"
 excerpt: >
   Combine LLM agents with deterministic static analysis to automate code review pipelines, reduce review cycle time by 62%...
-coverImage: ""
+coverImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Engineering"
 readTime: 5
 tags:
@@ -36,6 +36,8 @@ The core insight is that effective code review requires multiple perspectives. A
 │              → Style Check → Summary → Report   │
 └────────────────────────────────────────────────┘
 ```
+
+![](https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=1200)
 
 Each agent receives the diff context plus project-specific rules and produces structured output. The summary agent combines them into a single review with severity levels, code references, and suggested fixes.
 

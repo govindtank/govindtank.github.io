@@ -4,7 +4,7 @@ slug: "zero-trust-architecture-implementing-security-in-distributed-cloud-system
 date: "June 03, 2026"
 excerpt: >
   The perimeter-based security model that defined the industry for decades is functionally obsolete in 2026...
-coverImage: ""
+coverImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200"
 category: "Security"
 readTime: 3
 tags:

@@ -4,7 +4,7 @@ slug: "building-scalable-microservices-with-fastapi-and-event-driven-architectur
 date: "June 02, 2026"
 excerpt: >
   In the rapidly evolving backend landscape of 2026, the traditional synchronous request-response model is increasingly viewed as a bottleneck...
-coverImage: ""
+coverImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200"
 category: "Backend-Architecture"
 readTime: 5
 tags:

@@ -4,7 +4,7 @@ slug: "kotlin-multiplatform-evolution-in-2026"
 date: "May 29, 2026"
 excerpt: >
   Kotlin Multiplatform has matured from a research project to production-ready technology with robust platform interop, 60-70% code reuse ratios...
-coverImage: ""
+coverImage: "https://images.unsplash.com/photo-1515879218367-8466d9109c0d?auto=format&fit=crop&q=80&w=1200"
 category: "Kotlin-Multiplatform"
 readTime: 4
 tags:

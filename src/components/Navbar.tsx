@@ -19,13 +19,18 @@ export default function Navbar() {
 
   const handleNavClick = (href: string) => {
     setIsMobileMenuOpen(false);
-    if (href.startsWith('#') && isHomePage) {
-      // Homepage anchor link — scroll to section
-      const target = document.querySelector(href);
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    if (href.startsWith('#')) {
+      if (isHomePage) {
+        // Homepage anchor link — scroll to section
+        const target = document.querySelector(href);
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // On blog page — navigate home first, then scroll to section
+        navigate('/' + href);
+      }
     } else if (href === '/blog') {
       navigate('/blog');
-    } else if (!href.startsWith('#') || !isHomePage) {
+    } else {
       navigate(href || '/');
     }
   };

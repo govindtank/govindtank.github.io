@@ -4,7 +4,7 @@ slug: "ai-augmented-dev"
 date: "Mar 15, 2024"
 excerpt: >
   How tools like Cursor and Windsurf are fundamentally changing the workflow for senior developers, from ideation to testing.
-coverImage: ""
+coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"
 category: "AI"
 readTime: 3
 tags:

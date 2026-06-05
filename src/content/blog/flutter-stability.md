@@ -4,7 +4,7 @@ slug: "flutter-stability"
 date: "Feb 10, 2024"
 excerpt: >
   Deep dive into error handling, state management with Bloc, and stable architecture patterns for production-grade Flutter applications.
-coverImage: ""
+coverImage: "https://images.unsplash.com/photo-1615986201152-7686a4867f30?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile"
 readTime: 3
 tags:

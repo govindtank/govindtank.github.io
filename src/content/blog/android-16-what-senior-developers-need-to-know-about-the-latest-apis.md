@@ -4,7 +4,7 @@ slug: "android-16-what-senior-developers-need-to-know-about-the-latest-apis"
 date: "May 27, 2026"
 excerpt: >
   Explore the critical new APIs and features in Android 2, including enhanced security, Kotlin Multiplatform support, and adaptive UI components for modern app development.
-coverImage: ""
+coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200"
 category: "Android"
 readTime: 3
 tags:

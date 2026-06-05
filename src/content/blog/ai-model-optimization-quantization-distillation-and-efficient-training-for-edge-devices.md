@@ -4,7 +4,7 @@ slug: "ai-model-optimization-quantization-distillation-and-efficient-training-fo
 date: "May 28, 2026"
 excerpt: >
   Practical techniques for reducing model size and latency through quantization, knowledge distillation, and pruning strategies for mobile and edge deployment.
-coverImage: ""
+coverImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Optimization"
 readTime: 3
 tags:

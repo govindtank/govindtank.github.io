@@ -4,7 +4,7 @@ slug: "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems"
 date: "June 05, 2026"
 excerpt: >
   In the evolving landscape of distributed system architecture in 2026, the traditional monolithic data model is increasingly viewed as a scalability bottleneck. As microservices proliferate and CAP ...
-coverImage: ""
+coverImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200"
 category: "Architecture"
 readTime: 4
 tags:

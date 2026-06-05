@@ -4,7 +4,7 @@ slug: "clean-architecture-design-patterns-modern-ai-systems-building-maintainabl
 date: "May 25, 2026"
 excerpt: >
   Applying clean architecture principles—dependency inversion, repository patterns, and separation of concerns—to machine learning pipeline design for long-term maintainability.
-coverImage: ""
+coverImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200"
 category: "Clean-Architecture"
 readTime: 3
 tags:

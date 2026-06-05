@@ -4,7 +4,7 @@ slug: "flutter-performance-optimization-achieving-60-fps-on-mid-range-devices"
 date: "May 30, 2026"
 excerpt: >
   Optimize Flutter application performance for mid-range devices with widget tree optimization, image caching, and rendering pipeline improvements for smooth 60 FPS experiences.
-coverImage: ""
+coverImage: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200"
 category: "Flutter"
 readTime: 3
 tags:

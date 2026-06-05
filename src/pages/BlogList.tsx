@@ -1,7 +1,7 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BLOG_POSTS } from '../constants';
-import { Search, Calendar, ArrowRight, Filter, Terminal } from 'lucide-react';
+import { Search, Calendar, ArrowRight, Filter, Terminal, ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { BlogPost } from '../types';
 
@@ -9,6 +9,9 @@ export default function BlogList() {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTag, setSelectedTag] = useState('All');
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
   const tags = ['All', ...new Set(BLOG_POSTS.map(post => post.tag))];
 
@@ -19,23 +22,60 @@ export default function BlogList() {
       const matchesTag = selectedTag === 'All' || post.tag === selectedTag;
       return matchesSearch && matchesTag;
     }).sort((a, b) => {
-      // Sort by date descending (same format: "June 03, 2026" or "Mar 15, 2024")
       const dateA = new Date(a.date).getTime();
       const dateB = new Date(b.date).getTime();
       return dateB - dateA;
     });
   }, [searchQuery, selectedTag]);
 
+  const checkScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 10);
+    }
+  };
+
+  useEffect(() => {
+    checkScroll();
+    const el = scrollRef.current;
+    if (el) {
+      el.addEventListener('scroll', checkScroll);
+      return () => el.removeEventListener('scroll', checkScroll);
+    }
+  }, [tags]);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: direction === 'left' ? -200 : 200, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen py-32 px-6 relative">
       <div className="max-w-7xl mx-auto">
+        {/* Back to Home */}
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="mb-8"
+        >
+          <button
+            onClick={() => navigate('/')}
+            className="flex items-center gap-2 text-slate-400 hover:text-primary transition-all group font-mono text-xs uppercase tracking-widest"
+          >
+            <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" />
+            <span>Return to System Root</span>
+          </button>
+        </motion.div>
+
         {/* Header Section */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-16 text-center"
+          className="mb-12"
         >
-          <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-[1px] bg-primary" />
             <span className="text-primary font-mono text-sm tracking-widest uppercase">System Archives</span>
             <div className="w-10 h-[1px] bg-primary" />
@@ -43,13 +83,16 @@ export default function BlogList() {
           <h1 className="text-5xl md:text-7xl font-sans font-bold text-white mb-6">
             Technical <span className="text-primary italic">Logs</span>
           </h1>
-          <p className="text-slate-400 max-w-2xl mx-auto font-sans leading-relaxed">
+          <p className="text-slate-400 max-w-2xl font-sans leading-relaxed">
             Full repository of architectural manifests, deep dives, and engineering logs.
+            <span className="block mt-1 text-xs font-mono text-slate-600">
+              {BLOG_POSTS.length} entries indexed · Last updated: {BLOG_POSTS[0]?.date || 'N/A'}
+            </span>
           </p>
         </motion.div>
 
         {/* Filter & Search Bar */}
-        <div className="flex flex-col md:flex-row gap-6 mb-12 items-center justify-between">
+        <div className="flex flex-col md:flex-row gap-6 mb-8 items-start md:items-center justify-between">
           <div className="relative w-full md:w-96 group">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 group-focus-within:text-primary transition-colors" />
             <input 
@@ -61,25 +104,76 @@ export default function BlogList() {
             />
           </div>
 
-          <div className="flex items-center gap-3 overflow-x-auto pb-2 w-full md:w-auto">
-            <div className="flex items-center gap-2 mr-4 text-slate-500 font-mono text-xs uppercase tracking-widest">
-              <Filter className="w-3 h-3" /> Filter:
+          <div className="w-full md:w-auto">
+            <div className="flex items-center gap-2 mb-3 md:hidden">
+              <Filter className="w-3 h-3 text-primary" />
+              <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">Filter by Category</span>
             </div>
-            {tags.map(tag => (
-              <button
-                key={tag}
-                onClick={() => setSelectedTag(tag)}
-                className={`px-4 py-1.5 rounded-full text-xs font-mono transition-all border ${
-                  selectedTag === tag 
-                    ? 'bg-primary text-white border-primary' 
-                    : 'bg-slate-900/50 text-slate-400 border-white/10 hover:border-primary/30'
-                }`}
+            <div className="relative flex items-center">
+              {/* Left scroll arrow */}
+              {canScrollLeft && (
+                <button
+                  onClick={() => scroll('left')}
+                  className="absolute left-0 z-10 h-full flex items-center bg-gradient-to-r from-slate-950 to-transparent pl-1 pr-4 hidden md:flex"
+                >
+                  <ChevronLeft className="w-4 h-4 text-slate-400 hover:text-white transition-colors" />
+                </button>
+              )}
+              
+              {/* Tag slider */}
+              <div
+                ref={scrollRef}
+                className="flex items-center gap-2 overflow-x-auto scrollbar-hide pb-1 pt-1 px-6 md:px-8 scroll-smooth"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
-                {tag}
-              </button>
-            ))}
+                <div className="flex items-center gap-1.5 mr-3 text-slate-500 font-mono text-[10px] uppercase tracking-widest shrink-0">
+                  <Filter className="w-3 h-3" />
+                  <span className="hidden md:inline">Filter:</span>
+                </div>
+                {tags.map(tag => (
+                  <button
+                    key={tag}
+                    onClick={() => setSelectedTag(tag)}
+                    className={`shrink-0 px-4 py-1.5 rounded-full text-xs font-mono transition-all border ${
+                      selectedTag === tag 
+                        ? 'bg-primary text-white border-primary shadow-[0_0_12px_rgba(14,165,233,0.3)]' 
+                        : 'bg-slate-900/50 text-slate-400 border-white/10 hover:border-primary/30 hover:text-white'
+                    }`}
+                  >
+                    {tag}
+                  </button>
+                ))}
+              </div>
+
+              {/* Right scroll arrow */}
+              {canScrollRight && (
+                <button
+                  onClick={() => scroll('right')}
+                  className="absolute right-0 z-10 h-full flex items-center bg-gradient-to-l from-slate-950 to-transparent pr-1 pl-4 hidden md:flex"
+                >
+                  <ChevronRight className="w-4 h-4 text-slate-400 hover:text-white transition-colors" />
+                </button>
+              )}
+            </div>
           </div>
         </div>
+
+        {/* Results count */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="mb-8 text-[10px] font-mono text-slate-600 uppercase tracking-widest"
+        >
+          Showing {filteredPosts.length} of {BLOG_POSTS.length} logs
+          {(searchQuery || selectedTag !== 'All') && (
+            <button
+              onClick={() => { setSearchQuery(''); setSelectedTag('All'); }}
+              className="ml-4 text-primary hover:text-primary/80 transition-colors"
+            >
+              Clear Filters
+            </button>
+          )}
+        </motion.div>
 
         {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
