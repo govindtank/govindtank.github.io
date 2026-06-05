@@ -1,25 +1,31 @@
 #!/usr/bin/env node
 
-// Generate sitemap.xml from blog metadata — runs as postbuild step
-// Reads src/data/blogs/index.json, writes dist/sitemap.xml
+// Generate sitemap.xml from .md blog frontmatter — runs as postbuild step
+// Reads src/content/blog/*.md directly (no index.json dependency)
 
-import { readFileSync, writeFileSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import matter from 'gray-matter';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
 
 const SITE_URL = 'https://govindtank.github.io';
 
-// Read blog index
-const indexPath = resolve(root, 'src/data/blogs/index.json');
-if (!existsSync(indexPath)) {
-  console.error('❌ Blog index not found at', indexPath);
-  process.exit(1);
-}
+// Read all .md files and extract frontmatter
+const contentDir = resolve(root, 'src/content/blog');
+const files = readdirSync(contentDir).filter(f => f.endsWith('.md')).sort();
 
-const posts = JSON.parse(readFileSync(indexPath, 'utf-8'));
+const posts = files.map((fname) => {
+  const raw = readFileSync(resolve(contentDir, fname), 'utf-8');
+  const { data } = matter(raw);
+  const slug = fname.replace('.md', '');
+  return {
+    slug,
+    date: data.date || '',
+  };
+}).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 const urls = [
   `  <url>\n    <loc>${SITE_URL}/</loc>\n    <priority>1.0</priority>\n  </url>`,

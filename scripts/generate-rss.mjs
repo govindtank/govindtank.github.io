@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
-// Generate RSS 2.0 feed from blog metadata — runs as postbuild step
-// Reads src/data/blogs/index.json, writes dist/rss.xml
+// Generate RSS 2.0 feed from .md blog frontmatter — runs as postbuild step
+// Reads src/content/blog/*.md directly (no index.json dependency)
 
-import { readFileSync, writeFileSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import matter from 'gray-matter';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
@@ -14,17 +15,22 @@ const SITE_URL = 'https://govindtank.github.io';
 const SITE_TITLE = "Govind Tank's Tech Log";
 const SITE_DESC = 'Architecture, mobile engineering, AI systems, and technical deep dives.';
 
-// Read blog index
-const indexPath = resolve(root, 'src/data/blogs/index.json');
-if (!existsSync(indexPath)) {
-  console.error('❌ Blog index not found at', indexPath);
-  process.exit(1);
-}
+// Read all .md files and extract frontmatter
+const contentDir = resolve(root, 'src/content/blog');
+const files = readdirSync(contentDir).filter(f => f.endsWith('.md')).sort();
 
-const posts = JSON.parse(readFileSync(indexPath, 'utf-8'));
-
-// Read content for full-content RSS (optional — just include excerpts for feed size sanity)
-// We only use excerpts in the RSS description
+const posts = files.map((fname) => {
+  const raw = readFileSync(resolve(contentDir, fname), 'utf-8');
+  const { data } = matter(raw);
+  const slug = fname.replace('.md', '');
+  return {
+    title: data.title || '',
+    excerpt: data.excerpt || '',
+    date: data.date || '',
+    tag: Array.isArray(data.tags) && data.tags.length > 0 ? data.tags[0] : (data.tag || ''),
+    slug,
+  };
+}).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 const items = posts
   .map((post) => {

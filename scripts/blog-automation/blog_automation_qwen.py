@@ -459,15 +459,6 @@ def escape_for_ts(content):
     return content
 
 
-def escape_for_excerpt(text):
-    """Escape a plain text excerpt for TS string"""
-    text = text.replace("\\", "\\\\")
-    text = text.replace("`", "\\`")
-    text = text.replace("${", "\\${")
-    text = text.replace('"', '\\"')
-    return text
-
-
 def format_date():
     """Return formatted date like 'June 2, 2026'"""
     now = datetime.now()
