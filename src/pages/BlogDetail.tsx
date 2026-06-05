@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import matter from 'gray-matter';
 import { BLOG_POSTS } from '../constants';
 import {
   ArrowLeft,
@@ -17,9 +18,9 @@ import {
 } from 'lucide-react';
 import Mermaid from '../components/Mermaid';
 
-// Lazy-loaded content modules — each blog post content is code-split
+// Lazy-loaded markdown modules — each blog post content is code-split
 // into its own JS chunk and loaded on demand for zero initial fetch cost
-const contentModules = import.meta.glob<{ content: string }>('../data/blogs/content/*.json');
+const contentModules = import.meta.glob<string>('../content/blog/*.md', { query: '?raw', import: 'default' });
 
 export default function BlogDetail() {
   const { slug } = useParams();
@@ -34,11 +35,13 @@ export default function BlogDetail() {
     if (!post) return;
 
     setLoadingContent(true);
-    const loader = contentModules[`../data/blogs/content/${post.slug}.json`];
+    const loader = contentModules[`../content/blog/${post.slug}.md`];
     if (loader) {
       loader()
-        .then((mod) => {
-          setFullContent(mod.content || '');
+        .then((raw: string) => {
+          // Parse YAML frontmatter + markdown body
+          const parsed = matter(raw);
+          setFullContent(parsed.content || '');
           setLoadingContent(false);
         })
         .catch(() => {

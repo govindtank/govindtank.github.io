@@ -29,7 +29,7 @@ const posts = JSON.parse(readFileSync(indexPath, 'utf-8'));
 const items = posts
   .map((post) => {
     const pubDate = new Date(post.date).toUTCString();
-    const postUrl = `${SITE_URL}/#/blog/${encodeURIComponent(post.slug)}`;
+    const postUrl = `${SITE_URL}/blog/${encodeURIComponent(post.slug)}`;
 
     return `    <item>
       <title><![CDATA[${post.title}]]></title>

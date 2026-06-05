@@ -19,8 +19,7 @@ from datetime import datetime, timezone
 # ======= CONFIGURATION =======
 PROJECT_ROOT = "/Users/govind/hermes_projects/govindtank.github.io"
 HISTORY_FILE = f"{PROJECT_ROOT}/data/blogs-history/blog_history.json"
-CONSTANTS_FILE = f"{PROJECT_ROOT}/src/constants.ts"
-CONTENT_DIR = f"{PROJECT_ROOT}/src/data/blogs/content"
+CONTENT_DIR = f"{PROJECT_ROOT}/src/content/blog"
 INDEX_FILE = f"{PROJECT_ROOT}/src/data/blogs/index.json"
 LLM_URL = "http://localhost:1234/v1/chat/completions"
 LLM_MODEL = "qwen/qwen3.5-9b"
@@ -128,12 +127,34 @@ def slugify(title):
     s = re.sub(r'-+', '-', s)
     return s.strip('-')
 
-def write_content_json(slug, content):
-    """Write blog content to JSON file in public/data/blogs/content/"""
-    filepath = f"{CONTENT_DIR}/{slug}.json"
+def write_content_md(slug, content, title, tags, date, excerpt, cover_image=""):
+    """Write blog content as Markdown with YAML frontmatter"""
+    filepath = f"{CONTENT_DIR}/{slug}.md"
     os.makedirs(CONTENT_DIR, exist_ok=True)
+    
+    # Build YAML frontmatter
+    tag_entry = "uncategorized"
+    if isinstance(tags, list) and tags:
+        tag_entry = tags[0]
+    elif isinstance(tags, str):
+        tag_entry = tags
+    
+    frontmatter = f"""---
+title: "{title}"
+slug: "{slug}"
+date: "{date}"
+excerpt: >
+  {excerpt[:197] + "..." if len(excerpt) > 200 else excerpt}
+coverImage: "{cover_image}"
+category: "{tag_entry}"
+readTime: {max(3, len(content.split()) // 200)}
+tags:
+  - "{tag_entry}"
+---
+
+"""
     with open(filepath, 'w') as f:
-        json.dump({"content": content}, f, indent=2)
+        f.write(frontmatter + content)
     log(f"Content written to {filepath}")
     return True
 
@@ -538,7 +559,7 @@ def commit_and_push(title, slug):
                        cwd=PROJECT_ROOT, check=True, capture_output=True)
 
         # Add changed files
-        subprocess.run(["git", "add", INDEX_FILE, f"{CONTENT_DIR}/{slug}.json", f"{PROJECT_ROOT}/data/blogs-history/blog_history.json"],
+        subprocess.run(["git", "add", INDEX_FILE, f"{CONTENT_DIR}/{slug}.md", f"{PROJECT_ROOT}/data/blogs-history/blog_history.json"],
                        cwd=PROJECT_ROOT, check=True, capture_output=True)
 
         # Commit
@@ -622,10 +643,10 @@ def main():
     if len(excerpt) > 200:
         excerpt = excerpt[:197] + "..."
 
-    # Write content JSON file
-    log("Writing blog content to JSON...")
-    if not write_content_json(slug, content):
-        log("Failed to write content JSON")
+    # Write content Markdown file
+    log("Writing blog content to Markdown with frontmatter...")
+    if not write_content_md(slug, content, title, tag, date, excerpt, image_url):
+        log("Failed to write content Markdown")
         return
 
     # Update index.json

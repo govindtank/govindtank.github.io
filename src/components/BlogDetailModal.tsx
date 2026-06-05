@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import matter from 'gray-matter';
 import { BlogPost } from '../types';
 import Mermaid from '../components/Mermaid';
 
@@ -13,8 +14,8 @@ interface BlogDetailModalProps {
   onClose: () => void;
 }
 
-// Lazy-loaded content modules — code-split per blog post
-const contentModules = import.meta.glob<{ content: string }>('../data/blogs/content/*.json');
+// Lazy-loaded markdown modules — code-split per blog post
+const contentModules = import.meta.glob<string>('../content/blog/*.md', { query: '?raw', import: 'default' });
 
 export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailModalProps) {
   const [fullContent, setFullContent] = useState<string | null>(null);
@@ -24,11 +25,12 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
     if (!selectedPost) return;
     setFullContent(null);
     setLoadingContent(true);
-    const loader = contentModules[`../data/blogs/content/${selectedPost.slug}.json`];
+    const loader = contentModules[`../content/blog/${selectedPost.slug}.md`];
     if (loader) {
       loader()
-        .then((mod) => {
-          setFullContent(mod.content || null);
+        .then((raw: string) => {
+          const parsed = matter(raw);
+          setFullContent(parsed.content || null);
           setLoadingContent(false);
         })
         .catch(() => {
