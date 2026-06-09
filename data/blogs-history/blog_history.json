@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 13,
-  "lastTopic": "PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing",
-  "todayCount": 5,
-  "lastGenerated": "2026-06-05T08:48:34Z",
+  "totalCreated": 14,
+  "lastTopic": "React Server Components: Production Patterns for High-Performance Web Apps",
+  "todayCount": 6,
+  "lastGenerated": "2026-06-09T07:47:01Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -116,6 +116,14 @@
       "tag": "Databases",
       "wordCount": 946,
       "status": "published"
+    },
+    "react-server-components-production-patterns-for-high-performance-web-apps": {
+      "title": "React Server Components: Production Patterns for High-Performance Web Apps",
+      "slug": "react-server-components-production-patterns-for-high-performance-web-apps",
+      "date": "June 09, 2026",
+      "tag": "Web-Dev",
+      "wordCount": 783,
+      "status": "published"
     }
   },
   "images": {
@@ -132,6 +140,7 @@
     "building-scalable-microservices-with-fastapi-and-event-driven-architecture": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
     "zero-trust-architecture-implementing-security-in-distributed-cloud-systems": "https://images.unsplash.com/photo-1555949963-ff9fe2c54ed7?auto=format&fit=crop&q=80&w=1200",
     "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
-    "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
+    "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+    "react-server-components-production-patterns-for-high-performance-web-apps": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
   }
 }
