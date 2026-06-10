@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 15,
-  "lastTopic": "Building Developer Tools in 2026: From CLI Design to AI-Assisted Extensions",
-  "todayCount": 7,
-  "lastGenerated": "2026-06-09T08:00:13Z",
+  "totalCreated": 16,
+  "lastTopic": "Edge AI: Running Large Language Models on Consumer Devices in 2026",
+  "todayCount": 8,
+  "lastGenerated": "2026-06-10T02:34:15Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -132,6 +132,14 @@
       "tag": "DevTools",
       "wordCount": 878,
       "status": "published"
+    },
+    "edge-ai-running-large-language-models-on-consumer-devices-in-2026": {
+      "title": "Edge AI: Running Large Language Models on Consumer Devices in 2026",
+      "slug": "edge-ai-running-large-language-models-on-consumer-devices-in-2026",
+      "date": "June 10, 2026",
+      "tag": "Edge-AI",
+      "wordCount": 533,
+      "status": "published"
     }
   },
   "images": {
@@ -150,6 +158,7 @@
     "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
     "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     "react-server-components-production-patterns-for-high-performance-web-apps": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
+    "building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+    "edge-ai-running-large-language-models-on-consumer-devices-in-2026": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200"
   }
 }
