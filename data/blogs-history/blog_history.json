@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 18,
-  "lastTopic": "Platform Engineering: Building Internal Developer Portals That Teams Love",
-  "todayCount": 10,
-  "lastGenerated": "2026-06-12T07:00:53Z",
+  "totalCreated": 19,
+  "lastTopic": "WebAssembly in 2026: From Browser to Edge Computing and Beyond",
+  "todayCount": 11,
+  "lastGenerated": "2026-06-12T07:11:45Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -156,6 +156,14 @@
       "tag": "DevEx",
       "wordCount": 776,
       "status": "published"
+    },
+    "webassembly-in-2026-from-browser-to-edge-computing-and-beyond": {
+      "title": "WebAssembly in 2026: From Browser to Edge Computing and Beyond",
+      "slug": "webassembly-in-2026-from-browser-to-edge-computing-and-beyond",
+      "date": "June 12, 2026",
+      "tag": "WebAssembly",
+      "wordCount": 1046,
+      "status": "published"
     }
   },
   "images": {
@@ -177,6 +185,7 @@
     "building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
     "edge-ai-running-large-language-models-on-consumer-devices-in-2026": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
     "data-engineering-at-scale-building-real-time-streaming-pipelines": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    "platform-engineering-building-internal-developer-portals-that-teams-love": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
+    "platform-engineering-building-internal-developer-portals-that-teams-love": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+    "webassembly-in-2026-from-browser-to-edge-computing-and-beyond": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
   }
 }
