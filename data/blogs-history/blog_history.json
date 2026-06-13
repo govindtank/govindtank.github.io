@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 19,
-  "lastTopic": "WebAssembly in 2026: From Browser to Edge Computing and Beyond",
-  "todayCount": 11,
-  "lastGenerated": "2026-06-12T07:11:45Z",
+  "totalCreated": 20,
+  "lastTopic": "React Server Components: Production Patterns for High-Performance Web Apps",
+  "todayCount": 12,
+  "lastGenerated": "2026-06-13T02:34:07Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -120,9 +120,9 @@
     "react-server-components-production-patterns-for-high-performance-web-apps": {
       "title": "React Server Components: Production Patterns for High-Performance Web Apps",
       "slug": "react-server-components-production-patterns-for-high-performance-web-apps",
-      "date": "June 09, 2026",
+      "date": "June 13, 2026",
       "tag": "Web-Dev",
-      "wordCount": 783,
+      "wordCount": 982,
       "status": "published"
     },
     "building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions": {
