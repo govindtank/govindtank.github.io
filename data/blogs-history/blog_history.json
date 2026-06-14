@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 20,
-  "lastTopic": "React Server Components: Production Patterns for High-Performance Web Apps",
-  "todayCount": 12,
-  "lastGenerated": "2026-06-13T02:34:07Z",
+  "totalCreated": 21,
+  "lastTopic": "Building Developer Tools in 2026: From CLI Design to AI-Assisted Extensions",
+  "todayCount": 13,
+  "lastGenerated": "2026-06-14T02:39:54Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -128,9 +128,9 @@
     "building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions": {
       "title": "Building Developer Tools in 2026: From CLI Design to AI-Assisted Extensions",
       "slug": "building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions",
-      "date": "June 09, 2026",
+      "date": "June 14, 2026",
       "tag": "DevTools",
-      "wordCount": 878,
+      "wordCount": 1049,
       "status": "published"
     },
     "edge-ai-running-large-language-models-on-consumer-devices-in-2026": {
