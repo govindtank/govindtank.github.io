@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 21,
-  "lastTopic": "Building Developer Tools in 2026: From CLI Design to AI-Assisted Extensions",
-  "todayCount": 13,
-  "lastGenerated": "2026-06-14T02:39:54Z",
+  "totalCreated": 22,
+  "lastTopic": "Building Scalable Microservices with FastAPI and Event-Driven Architecture",
+  "todayCount": 14,
+  "lastGenerated": "2026-06-15T02:34:40Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -88,9 +88,9 @@
     "building-scalable-microservices-with-fastapi-and-event-driven-architecture": {
       "title": "Building Scalable Microservices with FastAPI and Event-Driven Architecture",
       "slug": "building-scalable-microservices-with-fastapi-and-event-driven-architecture",
-      "date": "June 02, 2026",
+      "date": "June 15, 2026",
       "tag": "Backend-Architecture",
-      "wordCount": 1097,
+      "wordCount": 701,
       "status": "published"
     },
     "zero-trust-architecture-implementing-security-in-distributed-cloud-systems": {
