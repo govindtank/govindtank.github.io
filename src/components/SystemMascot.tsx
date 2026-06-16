@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Bot, MessageSquare, Terminal as TerminalIcon, Cpu, Smartphone, Code2, Sparkles, ChevronRight } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
+import { Bot, MessageSquare, Terminal as TerminalIcon, Cpu, Smartphone, Code2, Sparkles, ChevronRight, BookOpen, ArrowUp, List, Search } from 'lucide-react';
 
-const MESSAGES = [
+const HOME_MESSAGES = [
   "System Initializing... User: Govind Tank",
   "Architecting Scalable Solutions. v9.0.4",
   "Analyzing Project: Akshar Amrutam...",
@@ -10,29 +11,45 @@ const MESSAGES = [
   "Clean Architecture Mode: Active",
   "I specialize in Kotlin & Flutter!",
   "Check out 'The Vault' below.",
-  "Need a consultant? Let's connect!"
+  "Need a consultant? Let's connect!",
 ];
 
-const QUICK_ACTIONS = [
+const BLOG_MESSAGES = [
+  "Browsing the technical archive...",
+  "Deep dives into architecture & AI.",
+  "Reading mode: engaged.",
+  "Check out the latest articles!",
+  "Knowledge base at your fingertips.",
+];
+
+const QUICK_ACTIONS_HOME = [
   { icon: <Code2 className="w-4 h-4" />, label: "Projects", target: "#projects" },
   { icon: <MessageSquare className="w-4 h-4" />, label: "Contact", target: "#contact" },
   { icon: <TerminalIcon className="w-4 h-4" />, label: "Logs", target: "#blog" },
   { icon: <Sparkles className="w-4 h-4" />, label: "Skills", target: "#skills" },
 ];
 
+const QUICK_ACTIONS_BLOG = [
+  { icon: <Search className="w-4 h-4" />, label: "Search", action: "search" },
+  { icon: <List className="w-4 h-4" />, label: "All Tags", action: "tags" },
+  { icon: <ArrowUp className="w-4 h-4" />, label: "Top", action: "top" },
+  { icon: <BookOpen className="w-4 h-4" />, label: "Archive", action: "archive" },
+];
+
 export default function SystemMascot() {
+  const location = useLocation();
   const [msgIndex, setMsgIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isThinking, setIsThinking] = useState(false);
   const [showActions, setShowActions] = useState(false);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const isBlogPage = location.pathname.startsWith('/blog');
+
+  // Pick message pool based on current page
+  const MESSAGES = isBlogPage ? BLOG_MESSAGES : HOME_MESSAGES;
+  const QUICK_ACTIONS = isBlogPage ? QUICK_ACTIONS_BLOG : QUICK_ACTIONS_HOME;
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePos({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-
     const timer = setTimeout(() => setIsVisible(true), 3000);
     const interval = setInterval(() => {
       setIsThinking(true);
@@ -43,51 +60,80 @@ export default function SystemMascot() {
     }, 8000);
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
       clearTimeout(timer);
       clearInterval(interval);
     };
-  }, []);
-
-  const rotation = {
-    x: (mousePos.y - window.innerHeight / 2) / 50,
-    y: (mousePos.x - window.innerWidth / 2) / 50,
-  };
+  }, [isBlogPage]);
 
   const scrollToSection = (target: string) => {
     document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' });
     setShowActions(false);
   };
 
+  const handleBlogAction = (action: string) => {
+    switch (action) {
+      case 'search':
+        // Focus the search input on blog listing page
+        const input = document.querySelector('input[type="text"]') as HTMLInputElement;
+        if (input) { input.focus(); input.scrollIntoView({ behavior: 'smooth' }); }
+        break;
+      case 'tags':
+        // Scroll to tag filter area
+        const tagArea = document.querySelector('[class*="overflow-x-auto"]');
+        if (tagArea) tagArea.scrollIntoView({ behavior: 'smooth' });
+        break;
+      case 'top':
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        break;
+      case 'archive':
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        break;
+    }
+    setShowActions(false);
+  };
+
+  const handleAction = isBlogPage
+    ? (action: string) => handleBlogAction(action)
+    : (target: string) => scrollToSection(target);
+
+  // Don't show on blog detail pages — it would interfere with reading
+  if (isBlogPage && location.pathname !== '/blog') {
+    return null;
+  }
+
   return (
-    <div className="fixed bottom-8 right-8 z-[100] pointer-events-none md:pointer-events-auto">
+    <div className="fixed bottom-6 right-6 z-[100] pointer-events-none md:pointer-events-auto">
       <AnimatePresence>
         {isVisible && (
           <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.5 }}
+            initial={{ opacity: 0, y: 30, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            className="flex flex-col items-end gap-3"
+            exit={{ opacity: 0, y: 30, scale: 0.8 }}
+            className="flex flex-col items-end gap-2"
           >
+            {/* Quick actions panel */}
             <AnimatePresence>
               {showActions && (
                 <motion.div
                   initial={{ opacity: 0, y: 10, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                  className="mb-2 bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-2xl p-3 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]"
+                  className="mb-1 bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-xl p-2.5 shadow-xl min-w-[180px]"
                 >
-                  <div className="flex items-center gap-2 mb-3 pb-2 border-b border-white/5">
+                  <div className="flex items-center gap-2 mb-2 pb-2 border-b border-white/5">
                     <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                    <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">Quick Navigation</span>
+                    <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">
+                      {isBlogPage ? 'Blog Actions' : 'Quick Navigation'}
+                    </span>
                   </div>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-2 gap-1.5">
                     {QUICK_ACTIONS.map((action, i) => (
                       <button
                         key={i}
-                        onClick={() => scrollToSection(action.target)}
-                        className="flex items-center gap-2 px-3 py-2 bg-white/5 hover:bg-primary/10 border border-white/5 hover:border-primary/20 rounded-lg transition-all group"
+                        onClick={() => handleAction((action as any).target || (action as any).action)}
+                        className="flex items-center gap-2 px-2.5 py-2 bg-white/5 hover:bg-primary/10 border border-white/5 hover:border-primary/20 rounded-lg transition-all group text-left"
                       >
-                        <span className="text-slate-400 group-hover:text-primary transition-colors">{action.icon}</span>
+                        <span className="text-slate-400 group-hover:text-primary transition-colors shrink-0">{action.icon}</span>
                         <span className="text-[11px] font-mono text-slate-300 group-hover:text-white">{action.label}</span>
                         <ChevronRight className="w-3 h-3 text-slate-600 group-hover:text-primary ml-auto transition-colors" />
                       </button>
@@ -97,79 +143,45 @@ export default function SystemMascot() {
               )}
             </AnimatePresence>
 
-            <motion.div 
-               animate={isThinking ? { scale: 0.95, opacity: 0.8 } : { scale: 1, opacity: 1 }}
-               className="bg-slate-900/95 backdrop-blur-xl border border-primary/30 p-4 rounded-2xl rounded-br-none shadow-[0_10px_40px_-10px_rgba(14,165,233,0.3)] max-w-[240px] relative"
+            {/* Message bubble */}
+            <motion.div
+              animate={isThinking ? { scale: 0.95, opacity: 0.8 } : { scale: 1, opacity: 1 }}
+              className="bg-slate-900/95 backdrop-blur-xl border border-primary/20 p-3 rounded-xl rounded-br-none shadow-lg max-w-[200px] relative"
             >
-              <div className="flex gap-2 mb-2 items-center border-b border-white/5 pb-2">
-                 <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                 <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">DRONE_GT_0X1</span>
+              <div className="flex gap-2 mb-1.5 items-center border-b border-white/5 pb-1.5">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
+                <span className="text-[9px] font-mono text-slate-500 uppercase tracking-widest">
+                  {isBlogPage ? 'BROWSER_GT' : 'DRONE_GT_0X1'}
+                </span>
               </div>
-              <p className="text-[13px] text-white font-mono leading-relaxed">
+              <p className="text-[12px] text-white font-mono leading-relaxed">
                 {MESSAGES[msgIndex]}
               </p>
-              
-              <div className="absolute bottom-0 right-0 translate-x-[90%] -translate-y-[20%] w-0 h-0 border-l-[10px] border-l-slate-900/95 border-b-[10px] border-b-transparent transform scale-x-[-1]" />
             </motion.div>
 
-            <motion.div 
-              style={{
-                perspective: "1000px",
-                rotateX: rotation.x,
-                rotateY: rotation.y,
-              }}
+            {/* Bot icon */}
+            <motion.div
               whileHover={{ scale: 1.1 }}
-              animate={{ y: [0, -15, 0] }}
+              animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               onClick={() => setShowActions(!showActions)}
-              className="w-20 h-20 relative flex items-center justify-center cursor-pointer group"
+              className="w-14 h-14 relative flex items-center justify-center cursor-pointer group"
             >
-              <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl group-hover:bg-primary/40 transition-colors" />
-              <motion.div 
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl group-hover:bg-primary/30 transition-colors" />
+              <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 border border-primary/30 rounded-full border-dashed"
+                className="absolute inset-0 border border-primary/20 rounded-full border-dashed"
               />
-
-              <div className="w-16 h-16 bg-slate-950 rounded-2xl border-2 border-primary/50 shadow-[0_0_20px_rgba(14,165,233,0.3)] flex items-center justify-center relative overflow-hidden">
+              <div className="w-11 h-11 bg-slate-950 rounded-xl border border-primary/40 shadow-lg shadow-primary/20 flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
-                <Bot className="text-primary w-10 h-10 drop-shadow-[0_0_8px_rgba(14,165,233,0.5)]" />
-                
-                <motion.div 
-                  animate={{ top: ['-100%', '100%'] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                  className="absolute left-0 right-0 h-[2px] bg-sky-400/30 blur-[1px]"
-                />
+                <Bot className="text-primary w-6 h-6" />
               </div>
-              
-              <div className="absolute top-1 right-1 w-2 h-2 bg-green-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              className="flex gap-2"
-            >
-              <ControlButton icon={<Cpu className="w-3 h-3" />} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
-              <ControlButton icon={<Smartphone className="w-3 h-3" />} onClick={() => scrollToSection('#experience')} />
-              <ControlButton icon={<MessageSquare className="w-3 h-3" />} onClick={() => setShowActions(!showActions)} />
+              <div className="absolute top-0 right-0 w-2 h-2 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
     </div>
-  );
-}
-
-function ControlButton({ icon, onClick }: { icon: React.ReactNode; onClick: () => void }) {
-  return (
-    <motion.button 
-      whileHover={{ y: -2, scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-      onClick={onClick}
-      className="p-2.5 glass-card bg-slate-900/80 border-white/10 hover:border-primary/50 text-slate-400 hover:text-white transition-all shadow-xl"
-    >
-      {icon}
-    </motion.button>
   );
 }

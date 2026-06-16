@@ -23,10 +23,47 @@
   body {
     @apply bg-slate-950 text-slate-200 antialiased selection:bg-sky-500/30;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-sans font-bold tracking-tight text-white;
   }
+}
+
+/* Blog content typography */
+.blog-content h2 {
+  scroll-margin-top: 6rem;
+}
+
+.blog-content h3 {
+  scroll-margin-top: 6rem;
+}
+
+.blog-content p {
+  @apply text-slate-300 leading-relaxed;
+}
+
+.blog-content a {
+  @apply text-primary no-underline hover:underline underline-offset-2 decoration-primary/30;
+}
+
+.blog-content code {
+  @apply font-mono text-sm;
+}
+
+.blog-content pre {
+  @apply overflow-x-auto;
+}
+
+.blog-content img {
+  @apply max-w-full h-auto;
+}
+
+.blog-content table {
+  @apply w-full text-sm;
+}
+
+.blog-content blockquote {
+  @apply border-l-2 border-primary/30 pl-5 italic text-slate-400;
 }
 
 .glass-card {

@@ -27,6 +27,8 @@ export interface BlogPost {
   slug: string;
   content?: string;
   coverImage?: string;
+  readTime?: number;
+  tags?: string[];
 }
 
 export interface Testimonial {

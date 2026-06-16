@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BLOG_POSTS, TESTIMONIALS } from '../constants';
-import { BookOpen, Quote, ChevronRight, MessageSquareQuote, Search, Filter, ExternalLink } from 'lucide-react';
+import { BookOpen, Quote, ChevronRight, MessageSquareQuote, Search, Filter, ExternalLink, Calendar, Clock, ArrowRight, Sparkles } from 'lucide-react';
 import { BlogPost } from '../types';
 import { useNavigate } from 'react-router-dom';
 
@@ -10,6 +10,29 @@ interface BlogAndTestimonialsProps {
 }
 
 const MAX_HOME_BLOGS = 3;
+
+const TAG_COLORS: Record<string, string> = {
+  'Web-Dev': 'from-blue-500/20 to-blue-600/10 text-blue-400 border-blue-500/30',
+  'AI-Engineering': 'from-purple-500/20 to-purple-600/10 text-purple-400 border-purple-500/30',
+  'AI-Agents': 'from-violet-500/20 to-violet-600/10 text-violet-400 border-violet-500/30',
+  'AI-Optimization': 'from-indigo-500/20 to-indigo-600/10 text-indigo-400 border-indigo-500/30',
+  'Android': 'from-emerald-500/20 to-emerald-600/10 text-emerald-400 border-emerald-500/30',
+  'Kotlin-Multiplatform': 'from-orange-500/20 to-orange-600/10 text-orange-400 border-orange-500/30',
+  'Flutter': 'from-cyan-500/20 to-cyan-600/10 text-cyan-400 border-cyan-500/30',
+  'Data-Engineering': 'from-rose-500/20 to-rose-600/10 text-rose-400 border-rose-500/30',
+  'Security': 'from-red-500/20 to-red-600/10 text-red-400 border-red-500/30',
+  'Platform-Engineering': 'from-amber-500/20 to-amber-600/10 text-amber-400 border-amber-500/30',
+};
+
+function getTagColor(tag: string): string {
+  return TAG_COLORS[tag] || 'from-slate-500/20 to-slate-600/10 text-slate-400 border-slate-500/30';
+}
+
+const GRADIENTS = [
+  'from-sky-900/40 via-slate-900 to-slate-900',
+  'from-purple-900/40 via-slate-900 to-slate-900',
+  'from-emerald-900/40 via-slate-900 to-slate-900',
+];
 
 export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonialsProps) {
   const navigate = useNavigate();
@@ -22,8 +45,8 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
       const matchesSearch = searchTerm.trim() === '' || 
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.tag.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesTag = selectedTag === null || post.tag === selectedTag;
+        post.tags?.some(t => t.toLowerCase().includes(searchTerm.toLowerCase()));
+      const matchesTag = selectedTag === null || post.tags?.includes(selectedTag);
       return matchesSearch && matchesTag;
     }).sort((a, b) => {
       const dateA = new Date(a.date).getTime();
@@ -32,7 +55,7 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
     }).slice(0, MAX_HOME_BLOGS);
   }, [searchTerm, selectedTag]);
 
-  const tags = [...new Set(BLOG_POSTS.map(post => post.tag))];
+  const tags = [...new Set(BLOG_POSTS.flatMap(post => post.tags || [post.tag]))];
 
   const clearFilters = () => {
     setSearchTerm('');
@@ -108,28 +131,65 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
               </div>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-5">
               {filteredPosts.map((post, i) => (
                 <motion.div
                   key={post.slug}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                   onClick={() => onPostSelect(post)}
-                  className="group relative p-8 system-card hover:bg-slate-800/40 transition-all cursor-pointer overflow-hidden border border-white/5"
+                  className="group cursor-pointer overflow-hidden rounded-xl border border-white/[0.06] bg-slate-900/40 hover:bg-slate-900/60 hover:border-white/10 transition-all duration-300"
                 >
-                  <div className="absolute right-0 top-0 h-full w-1 translate-x-1 group-hover:translate-x-0 bg-primary transition-transform" />
-                  <div className="flex justify-between items-start mb-6">
-                    <span className="text-[10px] font-mono uppercase tracking-widest px-3 py-1 bg-slate-950 text-slate-400 border border-white/5 rounded">
-                      {post.tag}
-                    </span>
-                    <span className="text-[10px] font-mono text-slate-600 uppercase tracking-widest">{post.date}</span>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-primary transition-all tracking-tight leading-tight">{post.title}</h3>
-                  <p className="text-slate-400 text-base mb-6 font-light line-clamp-4">{post.excerpt}</p>
-                  <div className="flex items-center gap-2 text-[10px] font-mono text-slate-500 group-hover:text-white uppercase tracking-[0.2em] transition-all">
-                    Initialize_Read_Sequence <ChevronRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                  <div className="flex flex-col sm:flex-row">
+                    {/* Cover image */}
+                    <div className="sm:w-48 sm:min-w-[12rem] h-40 sm:h-auto overflow-hidden">
+                      {post.coverImage ? (
+                        <img
+                          src={post.coverImage}
+                          alt={post.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className={`w-full h-full bg-gradient-to-br ${GRADIENTS[i]} flex items-center justify-center`}>
+                          <BookOpen className="w-8 h-8 text-white/10" />
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-5 flex-1 flex flex-col min-w-0">
+                      <div className="flex items-center gap-2 mb-3 flex-wrap">
+                        <span className={`text-[10px] font-mono font-medium px-2 py-0.5 rounded-full border bg-slate-950/60 ${getTagColor(post.tag)}`}>
+                          {post.tag}
+                        </span>
+                        {post.readTime && (
+                          <span className="text-[10px] text-slate-600 font-mono flex items-center gap-1">
+                            <Clock className="w-3 h-3" />
+                            {post.readTime} min
+                          </span>
+                        )}
+                      </div>
+
+                      <h3 className="text-lg font-bold text-white group-hover:text-primary transition-colors leading-snug mb-2">
+                        {post.title}
+                      </h3>
+                      <p className="text-sm text-slate-400 leading-relaxed line-clamp-2 mb-3 flex-1">
+                        {post.excerpt}
+                      </p>
+
+                      <div className="flex items-center justify-between pt-3 border-t border-white/[0.04]">
+                        <span className="text-[10px] text-slate-600 font-mono flex items-center gap-1.5">
+                          <Calendar className="w-3 h-3" />
+                          {post.date}
+                        </span>
+                        <span className="text-[10px] text-primary font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-all group-hover:gap-1.5">
+                          Read <ArrowRight className="w-3 h-3" />
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -139,7 +199,7 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="mt-8"
+              className="mt-6"
             >
               <button
                 onClick={() => navigate('/blog')}

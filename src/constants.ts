@@ -15,14 +15,19 @@ export const BLOG_POSTS: BlogPost[] = Object.entries(rawEagerModules)
   .map(([path, raw]) => {
     const { data } = parseFrontmatter(raw as string);
     const slug = path.replace('./content/blog/', '').replace('.md', '');
+    const tags = Array.isArray(data.tags) && (data.tags as string[]).length > 0
+      ? (data.tags as string[])
+      : [(data.tag as string) || (data.category as string) || ''].filter(Boolean);
     return {
       slug,
       title: (data.title as string) || '',
       date: (data.date as string) || '',
       excerpt: (data.excerpt as string) || '',
-      tag: Array.isArray(data.tags) && (data.tags as string[]).length > 0 ? (data.tags as string[])[0] : ((data.tag as string) || (data.category as string) || ''),
+      tag: tags[0] || '',
+      tags,
       content: '', // NOT loaded here — lazy-loaded by BlogDetail/BlogDetailModal
       coverImage: (data.coverImage as string) || '',
+      readTime: (data.readTime as number) || Math.ceil(((data.excerpt as string) || '').split(' ').length / 200) || 4,
     };
   })
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
