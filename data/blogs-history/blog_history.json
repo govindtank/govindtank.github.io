@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 23,
-  "lastTopic": "React Server Components: Production Patterns for High-Performance Web Apps",
-  "todayCount": 15,
-  "lastGenerated": "2026-06-16T02:40:02Z",
+  "totalCreated": 24,
+  "lastTopic": "Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems",
+  "todayCount": 16,
+  "lastGenerated": "2026-06-16T14:10:22Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -96,9 +96,9 @@
     "zero-trust-architecture-implementing-security-in-distributed-cloud-systems": {
       "title": "Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems",
       "slug": "zero-trust-architecture-implementing-security-in-distributed-cloud-systems",
-      "date": "June 03, 2026",
+      "date": "June 16, 2026",
       "tag": "Security",
-      "wordCount": 760,
+      "wordCount": 684,
       "status": "published"
     },
     "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems": {
