@@ -18,7 +18,7 @@ import json, os, sys, re, time, subprocess, random, urllib.request, urllib.error
 from datetime import datetime, timezone
 
 # ======= CONFIGURATION =======
-PROJECT_ROOT = "/Users/govind/hermes_projects/govindtank.github.io"
+PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../.."))
 HISTORY_FILE = f"{PROJECT_ROOT}/data/blogs-history/blog_history.json"
 CONTENT_DIR = f"{PROJECT_ROOT}/src/content/blog"
 # INDEX_FILE = f"{PROJECT_ROOT}/src/data/blogs/index.json"  # REMOVED v3 — .md frontmatter is now the single source of truth

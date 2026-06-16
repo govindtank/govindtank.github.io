@@ -8,7 +8,7 @@ import os
 import sys
 
 # Configuration
-PROJECT_ROOT = "/Users/govind/hermes_projects/govindtank.github.io"
+PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 HISTORY_DIR = f"{PROJECT_ROOT}/data/blogs-history"
 OUTPUT_FILE = f"{PROJECT_ROOT}/scripts/blog-automation/blog-output.json"
 
@@ -64,8 +64,8 @@ def call_llama_local(model_name, prompt):
     
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer local-hermes",
-        "User-Agent": "hermes-blog-gen"
+        "Authorization": "Bearer blog-automation",
+        "User-Agent": "blog-automation-gen"
     }
     
     try:

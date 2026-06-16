@@ -3,10 +3,10 @@
 Blog Automation System - Enhanced Version (v2.0) 
 Generates detailed, professional blog posts with proper views.
 """
-import sys, json, time, random
+import sys, json, time, random, os
 from datetime import datetime
 
-PROJECT_ROOT = "/Users/govind/hermes_projects/govindtank.github.io"
+PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../.."))
 HISTORY_DIR = f"{PROJECT_ROOT}/data/blogs-history"
 OUTPUT_FILE = f"{PROJECT_ROOT}/scripts/blog-automation/blog-output.json"
 
@@ -63,7 +63,7 @@ def call_llm_api(model_name, url, topic, prompt, timeout=300):
     try:
         req = urllib.request.Request(url, data=payload.encode(), headers={
             "Content-Type": "application/json", 
-            "Authorization": "Bearer hermes-blog"
+            "Authorization": "Bearer blog-automation"
         }, method="POST")
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             content_str = resp.read().decode("utf-8")

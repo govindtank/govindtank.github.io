@@ -115,8 +115,8 @@ generateLog();
 2.  **GitHub Secrets**:
     - Go to your Repo > Settings > Secrets and variables > Actions.
     - Add `OPENROUTER_API_KEY` and `LINKEDIN_ACCESS_TOKEN`.
-3.  **Local hermes/openclaw**:
-    - If you want to use your Local Mac agent, you can mount this project to your local machine and set up a `cron` job on your macOS to run the build/push sequence using your local environment variables.
+3.  **Local Development**:
+    - For local testing, you can run the generation script directly from your machine and commit changes manually.
 
 ---
 

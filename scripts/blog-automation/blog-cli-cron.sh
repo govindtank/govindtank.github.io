@@ -1,14 +1,14 @@
 #!/bin/bash
-# HERMES Blog Automation CLI
+# Blog Automation CLI
 # Enhanced version v2.0 with proper views, architecture diagrams, and data tables
 
 set -e
 
 PROJECT_ROOT="$1"
-[ -z "$PROJECT_ROOT" ] && PROJECT_ROOT="/Users/govind/hermes_projects/govindtank.github.io"
+[ -z "$PROJECT_ROOT" ] && PROJECT_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 
 SCRIPT_PATH="$PROJECT_ROOT/scripts/blog-automation/automation_enhanced_v2.py"
-LOG_FILE="/tmp/hermes-blog-automation.log"
+LOG_FILE="/tmp/blog-automation.log"
 
 log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOG_FILE"
@@ -17,7 +17,7 @@ log() {
 run_generation() {
     log "Starting blog generation..."
     cd "$PROJECT_ROOT"
-    python3 "$SCRIPT_PATH" --run-id "hermes-enhanced-$(date +'%Y%m%d')" 2>&1 | tee -a "$LOG_FILE"
+    python3 "$SCRIPT_PATH" --run-id "enhanced-$(date +'%Y%m%d')" 2>&1 | tee -a "$LOG_FILE"
     
     if [ ${PIPESTATUS[0]} -eq 0 ]; then
         log "Generation successful!"
@@ -32,7 +32,7 @@ deploy() {
     log "Committing and pushing changes..."
     cd "$PROJECT_ROOT"
     git add -A
-    git commit -m "feat: Enhanced blog automation $(date '+%Y-%m-%d %H:%M')" -m "🤖 Local Hermes v2.0" 2>&1 | tee -a "$LOG_FILE"
+    git commit -m "feat: Enhanced blog automation $(date '+%Y-%m-%d %H:%M')" -m "🤖 Automated generation v2.0" 2>&1 | tee -a "$LOG_FILE"
     git push origin main 2>&1 | tee -a "$LOG_FILE"
     
     if [ ${PIPESTATUS[1]} -eq 0 ]; then
@@ -57,18 +57,17 @@ notify() {
             log "Preview: $PREVIEW"
             log "URL: $URL$new-blog"
             
-            # Send Telegram notification (configure as needed)
+            # Send notification (optional)
             # curl -X POST "https://api.telegram.org/bot<TOKEN>/sendMessage" \
-            #   --data chat_id=-1001659327027 \
-            #   --data "text=🎉 New blog deployed: $TITLE\n$URL$new-blog"
+            #   --data "text=🎉 New blog deployed: $TITLE\\n$URL$new-blog"
         fi
     fi
 }
 
 main() {
     log "=========================================="
-    log "HERMES Blog Automation - Enhanced v2.0"
-    log "=========================================="
+    log "Blog Automation - Enhanced v2.0"
+    log "=================================="
     
     run_generation
     
@@ -76,7 +75,7 @@ main() {
         deploy
         
         if [ $? -eq 0 ]; then
-            notify "new-blog-slug" "$(tail -1 /tmp/hermes-blog-automation.log | head -c 200)" "/$new-blog-slug"
+            notify "new-blog-slug" "$(tail -1 /tmp/blog-automation.log | head -c 200)" "/$new-blog-slug"
         fi
     fi
 }

@@ -1,9 +1,9 @@
 #!/bin/bash
 # Blog Automation Cron Script
-# Runs automatically at 8:30 AM and 6:30 PM daily
-# Generates new blog posts using local Hermes LLM
+# Runs automatically at scheduled times
+# Generates new blog posts using automated content generation
 
-PROJECT_DIR="$HOME/hermes_projects/govindtank.github.io"
+PROJECT_DIR="$(cd "$(dirname "$0")/../.." && pwd)"
 LOG_FILE="/tmp/blog-cron-$(date +'%Y-%m-%d').log"
 MAX_BLOGS=12
 
@@ -25,7 +25,7 @@ if [ $? -eq 0 ]; then
     echo "Committing changes..." | tee -a $LOG_FILE
     
     git add -A && \
-    git commit -m "feat: Blog automation $(date +'%Y-%m-%d %H:%M')" -m "🤖 Local Hermes qwen/qwen3.5-9b" \
+    git commit -m "feat: Blog automation $(date +'%Y-%m-%d %H:%M')" -m "🤖 Automated generation" \
         2>&1 | tee -a $LOG_FILE || {
             echo "⚠️ Git commit failed, skipping push" | tee -a $LOG_FILE
             exit 1

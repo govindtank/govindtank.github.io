@@ -24,18 +24,9 @@ A high-performance, aesthetically technical portfolio designed for a Senior Lead
 - **Icons**: Lucide React
 - **Deployment**: Configured for GitHub Pages
 
-## 🤖 Blog Automation Plan
+## 📝 Blog Content
 
-This repository is designed to facilitate automated "Architectural Log" generation using LLMs and GitHub Actions.
-
-### Automation Workflow
-1. **Trigger**: Scheduled GitHub Action (CRON: `0 9 * * *`).
-2. **Generation**: A Node.js script (using OpenRouter or Gemini API) generates a technical blog post based on current industry trends.
-3. **Commit**: The script appends the new post to the `BLOG_POSTS` constant in `src/constants.ts`.
-4. **Deploy**: GitHub Pages automatically redeploys with the new content.
-5. **Syndication**: Optional integration with LinkedIn API to cross-post the update.
-
-*See `AUTOMATION_PLAN.md` for implementation details.*
+Blog posts are defined in `src/constants.ts` as structured entries with title, excerpt, date, tag, and slug. Content is served as part of the static site through GitHub Pages.
 
 ## 📦 Getting Started
 

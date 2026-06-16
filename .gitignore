@@ -7,7 +7,22 @@ coverage/
 *.log
 .env*
 !.env.example
+!/.git
 
 # Sensitive config files
 scripts/blog-automation/env.cjs
 scripts/blog-automation/*.cjs
+
+# Internal automation plans (remove sensitive info before publishing)
+scripts/blog-automation/.crontab-*
+scripts/blog-automation/error-log.txt
+scripts/blog-automation/test.env
+
+# Block .hermes agent artifacts
+.hermes/
+
+# Block editor artifacts
+.idea/
+*.swp
+*.swo
+*~

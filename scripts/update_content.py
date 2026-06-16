@@ -4,7 +4,7 @@ import json
 import os
 import re
 
-CONTENT_DIR = "/Users/govind/hermes_projects/govindtank.github.io/public/data/blogs/content"
+CONTENT_DIR = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../public/data/blogs/content"))
 
 # Working Unsplash image URLs mapped to blog slugs
 IMAGES = {
@@ -98,7 +98,7 @@ for slug in existing_slugs:
 
 # ==== STEP 2: Create new content files ====
 print("\n=== Creating new content files from markdown ===")
-MDS_DIR = "/Users/govind/hermes_projects/govindtank.github.io/public/blog"
+MDS_DIR = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../public/blog"))
 
 md_files = [
     "android-16-what-senior-developers-need-to-know-about-the-latest-apis",

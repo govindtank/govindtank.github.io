@@ -6,8 +6,8 @@ import json
 import os
 import re
 
-OUTPUT_FILE = "/Users/govind/hermes_projects/govindtank.github.io/scripts/blog-automation/blog-output.json"
-EXTRACT_DIR = "/Users/govind/hermes_projects/govindtank.github.io/scripts/blog-extracted"
+OUTPUT_FILE = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "blog-automation/blog-output.json"))
+EXTRACT_DIR = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "blog-extracted"))
 
 # Create extraction directory if not exists
 os.makedirs(EXTRACT_DIR, exist_ok=True)
