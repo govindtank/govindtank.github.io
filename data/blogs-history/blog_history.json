@@ -188,4 +188,30 @@
     "platform-engineering-building-internal-developer-portals-that-teams-love": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     "webassembly-in-2026-from-browser-to-edge-computing-and-beyond": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
   }
+"migration_notes": {
+    "low_quality_removed_2026-06-18": [
+      "Removed 10 blogs under 600 words (< 600 word minimum)",
+      "Enforced 2000+ character minimum for all new blogs",
+      "Target: 700-950 words per blog"
+    ],
+    "enhanced_generation_2026-06-18": {
+      "script": "scripts/blog-automation/automation_enhanced_v2.py",
+      "features": [
+        "9-section comprehensive structure",
+        "Unique images per topic (5 per category)",
+        "3+ code examples with comments",
+        "Mermaid diagrams included",
+        "Minimum 2000 characters enforced"
+      ],
+      "image_pool": {
+        "ai": 5,
+        "flutter": 5, 
+        "android": 5,
+        "architecture": 5,
+        "cloud": 5
+      },
+      "model": "qwen/qwen3.5-9b (local only, no API rate limits)",
+      "avg_duration_seconds": 196
+    }
+  },
 }

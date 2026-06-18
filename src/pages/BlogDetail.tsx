@@ -425,7 +425,7 @@ export default function BlogDetailPage() {
             <div className="relative">
               {/* Desktop TOC sidebar */}
               {tocItems.length > 0 && (
-                <aside className="hidden lg:block absolute left-[-280px] top-0 w-[240px]">
+                <aside className="hidden lg:block absolute left-[-280px] top-0 w-[240px] pl-3">
                   <div className="sticky top-24">
                     <div className="flex items-center gap-2 mb-4">
                       <div className="w-1 h-4 bg-primary/50 rounded-full" />
@@ -438,7 +438,7 @@ export default function BlogDetailPage() {
                           href={`#${item.id}`}
                           onClick={(e) => { e.preventDefault(); document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' }); }}
                           className={`block text-sm py-1.5 border-l-2 transition-all ${
-                            item.level === 3 ? 'ml-4' : ''
+                            item.level === 3 ? 'ml-4 pl-3' : ''
                           } ${
                             activeHeading === item.id
                               ? 'text-primary border-primary font-medium'

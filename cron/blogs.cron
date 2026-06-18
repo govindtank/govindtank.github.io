@@ -1,0 +1,57 @@
+# =============================================================================
+# Enhanced Blog Automation Crontab Configuration
+# 
+# Location: /Users/govind/hermes_projects/govindtank.github.io/cron/blogs.cron
+# Purpose: Auto-generate high-quality comprehensive blog posts
+#
+# Installation:
+#   crontab -u govindtank << EOF
+#   $(cat /Users/govind/hermes_projects/govindtank.github.io/cron/blogs.cron)
+#   EOF
+#
+# Or add this line to your system crontab (/Library/LaunchAgents or ~/.crontab):
+# =============================================================================
+
+# Enhanced Blog Automation - Generates comprehensive 2000+ char blogs
+# Schedule: Daily at 9:30 AM IST (during working hours, before peak traffic)
+# Quality-focused: max 3 blogs per run to ensure depth over quantity
+
+# Format: minute hour day month weekday command
+# Timezone: Ensure server is in Asia/Kolkata or use absolute times
+
+# Run enhanced blog generation daily at 9:30 AM IST
+30 7 * * * /bin/bash /Users/govind/hermes_projects/govindtank.github.io/scripts/blog-automation/enhanced-blog-cron.sh >> /Users/govind/hermes_projects/govindtank.github.io/cron/blogs-output.log 2>&1
+
+# Alternative schedules (uncomment as needed):
+# 
+# # Run twice daily (morning and afternoon)
+# 30 7 * * * /bin/bash /Users/govind/hermes_projects/govindtank.github.io/scripts/blog-automation/enhanced-blog-cron.sh >> /Users/govind/hermes_projects/govindtank.github.io/cron/blogs-output.log 2>&1
+# 30 15 * * * /bin/bash /Users/govind/hermes_projects/govindtank.github.io/scripts/blog-automation/enhanced-blog-cron.sh >> /Users/govind/hermes_projects/govindtank.github.io/cron/blogs-afternoon.log 2>&1
+#
+# # Run every weekday at 9:00 AM IST only
+# 0 7 * * 1-5 /bin/bash /Users/govind/hermes_projects/govindtank.github.io/scripts/blog-automation/enhanced-blog-cron.sh >> /Users/govind/hermes_projects/govindtank.github.io/cron/blogs-weekday.log 2>&1
+#
+# # Run once weekly on Sunday at 8:30 AM for batch generation
+# 30 7 * * 0 /bin/bash /Users/govind/hermes_projects/govindtank.github.io/scripts/blog-automation/enhanced-blog-cron.sh >> /Users/govind/hermes_projects/govindtank.github.io/cron/blogs-weekly.log 2>&1
+
+# =============================================================================
+# Quick Command-Line Usage (Manual Trigger)
+# =============================================================================
+# 
+# Single blog generation:
+# cd /Users/govind/hermes_projects/govindtank.github.io
+# python3 scripts/blog-automation/automation_enhanced_v2.py --run-id "manual-run"
+#
+# Quick cron trigger (run now):
+# /bin/bash /Users/govind/hermes_projects/govindtank.github.io/scripts/blog-automation/enhanced-blog-cron.sh
+#
+# View latest generation:
+# tail -100 /Users/govind/hermes_projects/govindtank.github.io/scripts/logs/blog-automation.log
+#
+# =============================================================================
+# Notes:
+# - Enhanced blogs require ~3-5 minutes per post
+# - Max 3 blogs per run ensures quality (not rushed)
+# - Uses local Qwen model only (no API rate limits)
+# - Content includes 2000+ characters minimum with proper structure
+# =============================================================================
