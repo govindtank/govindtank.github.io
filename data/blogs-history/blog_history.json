@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 25,
-  "lastTopic": "Building Scalable Microservices with FastAPI and Event-Driven Architecture",
-  "todayCount": 17,
-  "lastGenerated": "2026-06-17T02:34:14Z",
+  "totalCreated": 26,
+  "lastTopic": "Building Developer Tools in 2026: From CLI Design to AI-Assisted Extensions",
+  "todayCount": 18,
+  "lastGenerated": "2026-06-18T02:34:59Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -128,9 +128,9 @@
     "building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions": {
       "title": "Building Developer Tools in 2026: From CLI Design to AI-Assisted Extensions",
       "slug": "building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions",
-      "date": "June 14, 2026",
+      "date": "June 18, 2026",
       "tag": "DevTools",
-      "wordCount": 1049,
+      "wordCount": 496,
       "status": "published"
     },
     "edge-ai-running-large-language-models-on-consumer-devices-in-2026": {
