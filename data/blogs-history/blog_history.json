@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 26,
-  "lastTopic": "Building Developer Tools in 2026: From CLI Design to AI-Assisted Extensions",
-  "todayCount": 18,
-  "lastGenerated": "2026-06-18T02:34:59Z",
+  "totalCreated": 27,
+  "lastTopic": "Data Engineering at Scale: Building Real-Time Streaming Pipelines",
+  "todayCount": 19,
+  "lastGenerated": "2026-06-19T02:35:39Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -144,9 +144,9 @@
     "data-engineering-at-scale-building-real-time-streaming-pipelines": {
       "title": "Data Engineering at Scale: Building Real-Time Streaming Pipelines",
       "slug": "data-engineering-at-scale-building-real-time-streaming-pipelines",
-      "date": "June 11, 2026",
+      "date": "June 19, 2026",
       "tag": "Data-Engineering",
-      "wordCount": 704,
+      "wordCount": 847,
       "status": "published"
     },
     "platform-engineering-building-internal-developer-portals-that-teams-love": {
@@ -187,8 +187,8 @@
     "data-engineering-at-scale-building-real-time-streaming-pipelines": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     "platform-engineering-building-internal-developer-portals-that-teams-love": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     "webassembly-in-2026-from-browser-to-edge-computing-and-beyond": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
-  }
-"migration_notes": {
+  },
+  "migration_notes": {
     "low_quality_removed_2026-06-18": [
       "Removed 10 blogs under 600 words (< 600 word minimum)",
       "Enforced 2000+ character minimum for all new blogs",
@@ -205,7 +205,7 @@
       ],
       "image_pool": {
         "ai": 5,
-        "flutter": 5, 
+        "flutter": 5,
         "android": 5,
         "architecture": 5,
         "cloud": 5
@@ -213,5 +213,5 @@
       "model": "qwen/qwen3.5-9b (local only, no API rate limits)",
       "avg_duration_seconds": 196
     }
-  },
+  }
 }
