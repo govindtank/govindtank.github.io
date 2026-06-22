@@ -12,7 +12,7 @@
 # Or add this line to your system crontab (/Library/LaunchAgents or ~/.crontab):
 # =============================================================================
 
-# Enhanced Blog Automation - Generates comprehensive 2000+ char blogs
+# Enhanced Blog Automation - Generates comprehensive 4000+ char blogs (target 5000-8000 chars)
 # Schedule: Daily at 9:30 AM IST (during working hours, before peak traffic)
 # Quality-focused: max 3 blogs per run to ensure depth over quantity
 
@@ -53,5 +53,5 @@
 # - Enhanced blogs require ~3-5 minutes per post
 # - Max 3 blogs per run ensures quality (not rushed)
 # - Uses local Qwen model only (no API rate limits)
-# - Content includes 2000+ characters minimum with proper structure
+# - Content includes 4000+ characters minimum with proper structure
 # =============================================================================

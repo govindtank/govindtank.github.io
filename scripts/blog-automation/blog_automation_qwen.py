@@ -180,7 +180,7 @@ def call_llm(prompt, system_prompt, timeout=180):
             {"role": "user", "content": prompt}
         ],
         "temperature": 0.6,
-        "max_tokens": 3000,
+        \"max_tokens\": 4096,
         "top_p": 0.9
     }
     try:
@@ -250,7 +250,7 @@ Cover:
     content = call_llm(user_prompt, system_prompt, timeout=300)
 
     # Check if content is valid
-    if content and len(content) >= 800 and content.strip().startswith('#'):
+    if content and len(content) >= 1500 and content.strip().startswith('#'):
         log(f"LLM generated {len(content)} chars")
         return content
 

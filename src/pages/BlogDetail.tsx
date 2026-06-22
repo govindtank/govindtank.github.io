@@ -191,7 +191,7 @@ export default function BlogDetailPage() {
             li: ({ children, ...props }) => (
               <li className="flex items-start gap-2.5 leading-relaxed" {...props}>
                 <span className="w-1.5 h-1.5 rounded-full bg-primary/40 mt-2.5 shrink-0" />
-                <span>{children}</span>
+                <div className="min-w-0 flex-1 [&>*:first-child]:mt-0 [&>*:last-child]:mb-0">{children}</div>
               </li>
             ),
             blockquote: ({ children, ...props }) => (
@@ -421,12 +421,12 @@ export default function BlogDetailPage() {
               </div>
             )}
 
-            {/* Content */}
-            <div className="relative">
-              {/* Desktop TOC sidebar */}
+            {/* Content - flex layout with sidebar on desktop */}
+            <div className="lg:flex lg:gap-10 lg:items-start">
+              {/* Desktop TOC sidebar — now in normal document flow */}
               {tocItems.length > 0 && (
-                <aside className="hidden lg:block absolute left-[-280px] top-0 w-[240px] pl-3">
-                  <div className="sticky top-24">
+                <aside className="hidden lg:block lg:w-64 lg:shrink-0 lg:order-first">
+                  <div className="lg:sticky lg:top-24">
                     <div className="flex items-center gap-2 mb-4">
                       <div className="w-1 h-4 bg-primary/50 rounded-full" />
                       <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">On this page</span>
@@ -453,7 +453,7 @@ export default function BlogDetailPage() {
                 </aside>
               )}
 
-              <div className="min-h-[50vh]">
+              <div className="min-h-[50vh] flex-1 min-w-0">
                 {loadingContent ? (
                   <div className="flex flex-col items-center justify-center py-32">
                     <Loader className="w-8 h-8 text-primary animate-spin mb-4" />

@@ -2,10 +2,10 @@
 # =============================================================================
 # Enhanced Blog Automation Cron Job
 # 
-# Purpose: Generate comprehensive high-quality blog posts (2000+ characters)
+# Purpose: Generate comprehensive high-quality blog posts (4000+ characters)
 # Features:
 #   - 9-section structure (Introduction, Core Concept, Implementation, etc.)
-#   - Minimum 2000 characters per blog (700-950 words target)
+#   - Minimum 4000 characters per blog (target 5000-8000 chars for comprehensive depth)
 #   - Unique images from topic-specific pools (5 per category, no repetition)
 #   - 3+ code examples with comments per blog
 #   - Mermaid diagrams and comparison tables included
@@ -69,12 +69,12 @@ else
     LATEST_TITLE=$(python3 -c "import json; print(json.load(open('$OUTPUT_FILE'))['title'])" 2>/dev/null || echo "Unknown")
     log "[2/3] Latest blog: $LATEST_TITLE"
     
-    # Verify quality threshold (minimum 2000 chars)
+    # Verify quality threshold (minimum 4000 chars)
     CHAR_COUNT=$(python3 -c "import json; print(len(json.load(open('$OUTPUT_FILE'))['content']))" 2>/dev/null || echo "0")
     log "[3/3] Content length: $CHAR_COUNT characters"
     
-    if [ "$CHAR_COUNT" -lt 2000 ]; then
-        log "⚠️  Content below 2000 character minimum ($CHAR_COUNT). Skipping deploy."
+    if [ "$CHAR_COUNT" -lt 4000 ]; then
+        log "⚠️  Content below 4000 character minimum ($CHAR_COUNT). Skipping deploy."
     else
         log "✅ Quality threshold met. Proceeding with deploy..."
         

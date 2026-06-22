@@ -38,6 +38,12 @@
   scroll-margin-top: 6rem;
 }
 
+.blog-content {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+
 .blog-content p {
   @apply text-slate-300 leading-relaxed;
 }

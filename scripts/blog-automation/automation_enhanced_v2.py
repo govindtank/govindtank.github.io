@@ -47,8 +47,9 @@ IMAGES_BY_TOPIC = {
     "cloud": [
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
         "https://images.unsplash.com/photo-1558494949-efc524e74a46?auto=format&fit=crop&q=80&w=1200",
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200"
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1558655106-d2d983ff61f7?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1504227701822-3dd23c3ef6b9?auto=format&fit=crop&q=80&w=1200"
     ],
     "web": [
         "https://images.unsplash.com/photo-1507238691740-187a6b1d2f0?auto=format&fit=crop&q=80&w=1200",
@@ -106,7 +107,7 @@ def call_llm_api(model_name, url, topic, prompt, timeout=300):
             {"role": "user", "content": prompt}
         ],
         "temperature": 0.5, 
-        "max_tokens": 2500,
+        \"max_tokens\": 4096,
         "top_p": 1.0
     })
     

@@ -157,7 +157,7 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
             li: ({ children, ...props }) => (
               <li className="flex items-start gap-2.5 leading-relaxed" {...props}>
                 <span className="w-1.5 h-1.5 rounded-full bg-primary/40 mt-2.5 shrink-0" />
-                <span>{children}</span>
+                <div className="min-w-0 flex-1 [&>*:first-child]:mt-0 [&>*:last-child]:mb-0">{children}</div>
               </li>
             ),
             blockquote: ({ children, ...props }) => (
