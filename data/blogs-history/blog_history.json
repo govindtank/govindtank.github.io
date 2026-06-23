@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 30,
-  "lastTopic": "Event Sourcing and CQRS: Practical Patterns for Distributed Systems",
-  "todayCount": 22,
-  "lastGenerated": "2026-06-22T02:34:57Z",
+  "totalCreated": 31,
+  "lastTopic": "Building Scalable Microservices with FastAPI and Event-Driven Architecture",
+  "todayCount": 23,
+  "lastGenerated": "2026-06-23T02:45:00Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -88,9 +88,9 @@
     "building-scalable-microservices-with-fastapi-and-event-driven-architecture": {
       "title": "Building Scalable Microservices with FastAPI and Event-Driven Architecture",
       "slug": "building-scalable-microservices-with-fastapi-and-event-driven-architecture",
-      "date": "June 21, 2026",
+      "date": "June 23, 2026",
       "tag": "Backend-Architecture",
-      "wordCount": 208,
+      "wordCount": 1089,
       "status": "published"
     },
     "zero-trust-architecture-implementing-security-in-distributed-cloud-systems": {
