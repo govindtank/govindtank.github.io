@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 31,
-  "lastTopic": "Building Scalable Microservices with FastAPI and Event-Driven Architecture",
-  "todayCount": 23,
-  "lastGenerated": "2026-06-23T02:45:00Z",
+  "totalCreated": 32,
+  "lastTopic": "WebAssembly in 2026: From Browser to Edge Computing and Beyond",
+  "todayCount": 24,
+  "lastGenerated": "2026-06-24T02:35:48Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -160,9 +160,9 @@
     "webassembly-in-2026-from-browser-to-edge-computing-and-beyond": {
       "title": "WebAssembly in 2026: From Browser to Edge Computing and Beyond",
       "slug": "webassembly-in-2026-from-browser-to-edge-computing-and-beyond",
-      "date": "June 12, 2026",
+      "date": "June 24, 2026",
       "tag": "WebAssembly",
-      "wordCount": 1046,
+      "wordCount": 1088,
       "status": "published"
     }
   },
