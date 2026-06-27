@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 33,
-  "lastTopic": "The Rise of AI Coding Assistants: Evaluating Code Quality and Productivity Impact",
-  "todayCount": 25,
-  "lastGenerated": "2026-06-25T02:41:44Z",
+  "totalCreated": 34,
+  "lastTopic": "Rust for Systems Programming in 2026: Memory Safety, Concurrency, and Ecosystem Growth",
+  "todayCount": 26,
+  "lastGenerated": "2026-06-27T02:42:57Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -172,6 +172,14 @@
       "tag": "AI-Engineering",
       "wordCount": 1214,
       "status": "published"
+    },
+    "rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth": {
+      "title": "Rust for Systems Programming in 2026: Memory Safety, Concurrency, and Ecosystem Growth",
+      "slug": "rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth",
+      "date": "June 27, 2026",
+      "tag": "Systems",
+      "wordCount": 1052,
+      "status": "published"
     }
   },
   "images": {
@@ -195,7 +203,8 @@
     "data-engineering-at-scale-building-real-time-streaming-pipelines": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     "platform-engineering-building-internal-developer-portals-that-teams-love": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     "webassembly-in-2026-from-browser-to-edge-computing-and-beyond": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"
+    "the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200",
+    "rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
   },
   "migration_notes": {
     "low_quality_removed_2026-06-18": [
