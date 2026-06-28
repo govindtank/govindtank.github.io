@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 34,
-  "lastTopic": "Rust for Systems Programming in 2026: Memory Safety, Concurrency, and Ecosystem Growth",
-  "todayCount": 26,
-  "lastGenerated": "2026-06-27T02:42:57Z",
+  "totalCreated": 35,
+  "lastTopic": "Kubernetes Sidecar Patterns for Service Mesh Observability in 2026",
+  "todayCount": 27,
+  "lastGenerated": "2026-06-28T02:35:52Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -180,6 +180,14 @@
       "tag": "Systems",
       "wordCount": 1052,
       "status": "published"
+    },
+    "kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026": {
+      "title": "Kubernetes Sidecar Patterns for Service Mesh Observability in 2026",
+      "slug": "kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026",
+      "date": "June 28, 2026",
+      "tag": "Cloud-Native",
+      "wordCount": 1118,
+      "status": "published"
     }
   },
   "images": {
@@ -204,7 +212,8 @@
     "platform-engineering-building-internal-developer-portals-that-teams-love": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     "webassembly-in-2026-from-browser-to-edge-computing-and-beyond": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
     "the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200",
-    "rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
+    "rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+    "kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200"
   },
   "migration_notes": {
     "low_quality_removed_2026-06-18": [
