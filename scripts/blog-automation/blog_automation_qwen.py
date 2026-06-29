@@ -104,6 +104,54 @@ TOPICS = [
         "image_key": "data",
         "desc": "Backstage-like platforms, golden paths, developer scorecards, and API catalogs"
     },
+    {
+        "title": "Kubernetes Sidecar Patterns for Service Mesh Observability in 2026",
+        "tag": "Cloud-Native",
+        "image_key": "network",
+        "desc": "Sidecar proxies, eBPF-based observability, OpenTelemetry deep integration, and traffic management"
+    },
+    {
+        "title": "Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines",
+        "tag": "AI-ML",
+        "image_key": "ai-ml",
+        "desc": "Testing strategies for LLM outputs, evaluation benchmarks, adversarial testing, and CI/CD for ML"
+    },
+    {
+        "title": "CSS Container Queries and Style Queries: Responsive Design Beyond Media Queries",
+        "tag": "Web-Dev",
+        "image_key": "code",
+        "desc": "Container queries, style queries, component-driven responsive design, and browser support in 2026"
+    },
+    {
+        "title": "Distributed Tracing with OpenTelemetry: From Instrumentation to Production Debugging",
+        "tag": "Observability",
+        "image_key": "data",
+        "desc": "OpenTelemetry signals, sampling strategies, trace context propagation, and backend analysis"
+    },
+    {
+        "title": "Rust for Systems Programming in 2026: Memory Safety, Concurrency, and Ecosystem Growth",
+        "tag": "Systems",
+        "image_key": "code",
+        "desc": "Rust ownership model, async runtimes, FFI patterns, embedded systems, and production readiness"
+    },
+    {
+        "title": "Building Real-Time Collaborative Apps with CRDTs and Operational Transformation",
+        "tag": "Architecture",
+        "image_key": "architecture",
+        "desc": "CRDT data types, OT algorithms, conflict resolution, and live collaboration infrastructure"
+    },
+    {
+        "title": "FinOps for Kubernetes: Optimizing Cloud Costs in Containerized Environments",
+        "tag": "DevOps",
+        "image_key": "cloud",
+        "desc": "Kubernetes cost allocation, right-sizing, spot instances, and FinOps tooling in 2026"
+    },
+    {
+        "title": "The Rise of AI Coding Assistants: Evaluating Code Quality and Productivity Impact",
+        "tag": "AI-Engineering",
+        "image_key": "ai-ml",
+        "desc": "AI code generation benchmarks, productivity measurement, code review with AI, and best practices"
+    },
 ]
 
 
@@ -506,8 +554,11 @@ def commit_and_push(title, slug):
         subprocess.run(["git", "config", "user.email", GIT_USER_EMAIL],
                        cwd=PROJECT_ROOT, check=True, capture_output=True)
 
-        # Add changed files
-        subprocess.run(["git", "add", f"{CONTENT_DIR}/{slug}.md", f"{PROJECT_ROOT}/data/blogs-history/blog_history.json"],
+        # Add changed files (markdown source, history, and build artifacts)
+        subprocess.run(["git", "add", "--force", "--", f"{CONTENT_DIR}/{slug}.md", f"{PROJECT_ROOT}/data/blogs-history/blog_history.json"],
+                       cwd=PROJECT_ROOT, check=True, capture_output=True)
+        # Also stage any updated dist/ files (they're gitignored but tracked)
+        subprocess.run(["git", "add", "--force", "dist/"],
                        cwd=PROJECT_ROOT, check=True, capture_output=True)
 
         # Commit
