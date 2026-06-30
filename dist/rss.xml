@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Jun 2026 03:12:37 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 02:35:12 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines]]></title>
+      <link>https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</guid>
+      <pubDate>Mon, 29 Jun 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The landscape of software development in 2026 has fundamentally shifted from writing code manually to orchestrating and validating AI-generated logic. While Large Language Models (LLMs) have accele...
+]]></description>
+      <category>AI-ML</category>
+    </item>
     <item>
       <title><![CDATA[Distributed Tracing with OpenTelemetry: From Instrumentation to Production Debugging]]></title>
       <link>https://govindtank.github.io/blog/distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging</link>
