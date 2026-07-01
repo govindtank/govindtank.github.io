@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jun 2026 02:35:12 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 02:36:02 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[FinOps for Kubernetes: Optimizing Cloud Costs in Containerized Environments]]></title>
+      <link>https://govindtank.github.io/blog/finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments</guid>
+      <pubDate>Tue, 30 Jun 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. FinOps for Kubernetes: Optimizing Cloud Costs in Containerized Environments rep...
+]]></description>
+      <category>DevOps</category>
+    </item>
     <item>
       <title><![CDATA[Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines]]></title>
       <link>https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</link>
