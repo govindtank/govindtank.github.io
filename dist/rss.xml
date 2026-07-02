@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jul 2026 02:36:02 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 02:36:40 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[CSS Container Queries and Style Queries: Responsive Design Beyond Media Queries]]></title>
+      <link>https://govindtank.github.io/blog/css-container-queries-and-style-queries-responsive-design-beyond-media-queries</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/css-container-queries-and-style-queries-responsive-design-beyond-media-queries</guid>
+      <pubDate>Wed, 01 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[In the rapidly evolving landscape of web development in 2026, responsive design has transcended its early days of simple viewport breakpoints. The industry standard is shifting from device-centric ...
+]]></description>
+      <category>Web-Dev</category>
+    </item>
     <item>
       <title><![CDATA[FinOps for Kubernetes: Optimizing Cloud Costs in Containerized Environments]]></title>
       <link>https://govindtank.github.io/blog/finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments</link>

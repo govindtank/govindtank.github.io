@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 38,
-  "lastTopic": "FinOps for Kubernetes: Optimizing Cloud Costs in Containerized Environments",
-  "todayCount": 30,
-  "lastGenerated": "2026-07-01T02:36:02Z",
+  "totalCreated": 39,
+  "lastTopic": "CSS Container Queries and Style Queries: Responsive Design Beyond Media Queries",
+  "todayCount": 31,
+  "lastGenerated": "2026-07-02T02:36:40Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -212,6 +212,14 @@
       "tag": "DevOps",
       "wordCount": 1043,
       "status": "published"
+    },
+    "css-container-queries-and-style-queries-responsive-design-beyond-media-queries": {
+      "title": "CSS Container Queries and Style Queries: Responsive Design Beyond Media Queries",
+      "slug": "css-container-queries-and-style-queries-responsive-design-beyond-media-queries",
+      "date": "July 02, 2026",
+      "tag": "Web-Dev",
+      "wordCount": 1223,
+      "status": "published"
     }
   },
   "images": {
@@ -240,7 +248,8 @@
     "kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200",
     "distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     "testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200",
-    "finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200"
+    "finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+    "css-container-queries-and-style-queries-responsive-design-beyond-media-queries": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
   },
   "migration_notes": {
     "low_quality_removed_2026-06-18": [
