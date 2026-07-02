@@ -107,7 +107,7 @@ def call_llm_api(model_name, url, topic, prompt, timeout=300):
             {"role": "user", "content": prompt}
         ],
         "temperature": 0.5, 
-        \"max_tokens\": 4096,
+        "max_tokens": 4096,
         "top_p": 1.0
     })
     
