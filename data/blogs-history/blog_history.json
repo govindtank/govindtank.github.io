@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 40,
-  "lastTopic": "Building Real-Time Collaborative Apps with CRDTs and Operational Transformation",
-  "todayCount": 32,
-  "lastGenerated": "2026-07-03T02:39:00Z",
+  "totalCreated": 41,
+  "lastTopic": "Platform Engineering: Building Internal Developer Portals That Teams Love",
+  "todayCount": 33,
+  "lastGenerated": "2026-07-15T02:37:30Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -152,9 +152,9 @@
     "platform-engineering-building-internal-developer-portals-that-teams-love": {
       "title": "Platform Engineering: Building Internal Developer Portals That Teams Love",
       "slug": "platform-engineering-building-internal-developer-portals-that-teams-love",
-      "date": "June 12, 2026",
+      "date": "July 15, 2026",
       "tag": "DevEx",
-      "wordCount": 776,
+      "wordCount": 1428,
       "status": "published"
     },
     "webassembly-in-2026-from-browser-to-edge-computing-and-beyond": {

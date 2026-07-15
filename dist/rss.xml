@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jul 2026 02:39:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 02:37:29 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Platform Engineering: Building Internal Developer Portals That Teams Love]]></title>
+      <link>https://govindtank.github.io/blog/platform-engineering-building-internal-developer-portals-that-teams-love</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/platform-engineering-building-internal-developer-portals-that-teams-love</guid>
+      <pubDate>Tue, 14 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The landscape of software delivery has shifted dramatically between 2024 and 2026. The era of purely reactive DevOps is giving way to proactive Platform Engineering. In the current environment, dev...
+]]></description>
+      <category>DevEx</category>
+    </item>
     <item>
       <title><![CDATA[Building Real-Time Collaborative Apps with CRDTs and Operational Transformation]]></title>
       <link>https://govindtank.github.io/blog/building-real-time-collaborative-apps-with-crdts-and-operational-transformation</link>
@@ -135,15 +144,6 @@
       <description><![CDATA[The perimeter-based security model is obsolete. In the 2026 landscape, organizations operate across hybrid environments where workloads span public clouds, private data centers, and edge nodes. This deep guide covers Zero Trust core principles, cloud-native implementation patterns, micro-segmentation, workload identity for Kubernetes, service mesh security (Istio, Linkerd, Consul Connect), policy engines (OPA/Cedar), continuous verification, API security, data plane design, compliance mapping, and real-world case studies with code examples and architecture diagrams.
 ]]></description>
       <category>Zero Trust</category>
-    </item>
-    <item>
-      <title><![CDATA[Platform Engineering: Building Internal Developer Portals That Teams Love]]></title>
-      <link>https://govindtank.github.io/blog/platform-engineering-building-internal-developer-portals-that-teams-love</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/platform-engineering-building-internal-developer-portals-that-teams-love</guid>
-      <pubDate>Thu, 11 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[Platform engineering is the discipline of building shared, self-service platforms that reduce cognitive load and accelerate developer velocity. This comprehensive guide covers IDP architecture, Backstage deep-dive, platform comparisons, developer experience metrics, case studies from Spotify, Adobe, and Uber, and a battle-tested implementation roadmap for CIOs and platform teams.
-]]></description>
-      <category>Platform Engineering</category>
     </item>
     <item>
       <title><![CDATA[Edge AI: Running Large Language Models on Consumer Devices in 2026]]></title>
