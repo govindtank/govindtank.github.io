@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useMemo, useRef, useEffect, useLayoutEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BLOG_POSTS } from '../constants';
 import { Search, Calendar, ArrowRight, BookOpen, Clock, ChevronLeft, ChevronRight, Sparkles, TrendingUp, Eye, ExternalLink, X } from 'lucide-react';
@@ -41,9 +41,9 @@ export default function BlogList() {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  // Scroll to top on navigation to this page
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+  // Scroll to top on navigation to this page — useLayoutEffect runs before browser paint
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   const allTags = useMemo(() => {

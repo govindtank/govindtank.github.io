@@ -48,17 +48,20 @@ export default function BlogDetailPage() {
 
   useEffect(() => {
     if (!post) return;
+    let cancelled = false;
     setLoadingContent(true);
     setContentError(null);
     const loader = contentModules[`../content/blog/${post.slug}.md`];
     if (loader) {
       loader()
         .then((raw: string) => {
+          if (cancelled) return;
           const parsed = stripFrontmatter(raw);
           setFullContent(parsed.content || '');
           setLoadingContent(false);
         })
         .catch((err: unknown) => {
+          if (cancelled) return;
           console.error('[BlogDetail] Failed to load content:', err);
           setContentError(err instanceof Error ? err.message : 'Failed to load content');
           setFullContent('');
@@ -70,7 +73,8 @@ export default function BlogDetailPage() {
       setFullContent('');
       setLoadingContent(false);
     }
-    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+    window.scrollTo(0, 0);
+    return () => { cancelled = true; };
   }, [post]);
 
   // Track active heading for TOC

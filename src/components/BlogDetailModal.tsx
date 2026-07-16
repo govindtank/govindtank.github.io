@@ -24,6 +24,7 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
 
   useEffect(() => {
     if (!selectedPost) return;
+    let cancelled = false;
     setFullContent(null);
     setLoadingContent(true);
     setContentError(null);
@@ -31,11 +32,13 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
     if (loader) {
       loader()
         .then((raw: string) => {
+          if (cancelled) return;
           const parsed = stripFrontmatter(raw);
           setFullContent(parsed.content || null);
           setLoadingContent(false);
         })
         .catch((err: unknown) => {
+          if (cancelled) return;
           console.error('[BlogModal] Failed to load content:', err, 'slug:', selectedPost.slug);
           setContentError(err instanceof Error ? err.message : 'Failed to load content');
           setFullContent(null);
@@ -47,6 +50,7 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
       setFullContent(null);
       setLoadingContent(false);
     }
+    return () => { cancelled = true; };
   }, [selectedPost]);
 
   useEffect(() => {
