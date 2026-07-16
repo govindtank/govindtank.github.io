@@ -8,6 +8,7 @@ import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { BlogPost } from '../types';
 import Mermaid from '../components/Mermaid';
 import stripFrontmatter from '../lib/stripFrontmatter';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 interface BlogDetailModalProps {
   selectedPost: BlogPost | null;
@@ -370,10 +371,14 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
                     <p className="text-slate-500 italic mb-1">Could not load article content.</p>
                     <p className="text-[10px] text-slate-600 font-mono">Error: {contentError}</p>
                   </div>
-                ) : fullContent ? (() => {
-                  try { return renderContent(fullContent); }
-                  catch (e) { console.error('[BlogModal] renderContent error:', e); return <div className="text-center py-20"><p className="text-slate-500 italic">Error rendering content.</p></div>; }
-                })() : (
+                ) : fullContent ? (
+                  <ErrorBoundary>
+                    {(() => {
+                      try { return renderContent(fullContent); }
+                      catch (e) { console.error('[BlogModal] renderContent error:', e); return null; }
+                    })()}
+                  </ErrorBoundary>
+                ) : (
                   <div className="text-center py-24">
                     <BookOpen className="w-12 h-12 text-slate-700 mx-auto mb-4" />
                     <p className="text-slate-500 italic">Full content being compiled.</p>

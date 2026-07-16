@@ -7,6 +7,11 @@ import BlogList from './pages/BlogList.tsx';
 import BlogDetail from './pages/BlogDetail.tsx';
 import './index.css';
 
+// Disable browser scroll restoration — React Router manages scroll positions
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>

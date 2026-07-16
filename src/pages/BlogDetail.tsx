@@ -28,6 +28,7 @@ import {
 import Mermaid from '../components/Mermaid';
 import stripFrontmatter from '../lib/stripFrontmatter';
 import type { BlogPost } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 const contentModules = import.meta.glob<string>('../content/blog/*.md', { query: '?raw', import: 'default' });
 
@@ -487,10 +488,12 @@ export default function BlogDetailPage() {
                 ) : (
                   <div className="blog-content prose prose-invert max-w-none">
                     {fullContent ? (
-                      (() => {
-                        try { return renderContent(fullContent); }
-                        catch (e) { console.error('[BlogDetail] renderContent error:', e); return <div className="text-center py-20"><p className="text-slate-500 italic">Error rendering content.</p></div>; }
-                      })()
+                      <ErrorBoundary>
+                        {(() => {
+                          try { return renderContent(fullContent); }
+                          catch (e) { console.error('[BlogDetail] renderContent error:', e); return null; }
+                        })()}
+                      </ErrorBoundary>
                     ) : (
                       <div className="text-center py-20">
                         <BookOpen className="w-12 h-12 text-slate-700 mx-auto mb-4" />
