@@ -20,11 +20,13 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
   const [fullContent, setFullContent] = useState<string | null>(null);
   const [loadingContent, setLoadingContent] = useState(false);
   const [showToc, setShowToc] = useState(false);
+  const [contentError, setContentError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!selectedPost) return;
     setFullContent(null);
     setLoadingContent(true);
+    setContentError(null);
     const loader = contentModules[`../content/blog/${selectedPost.slug}.md`];
     if (loader) {
       loader()
@@ -33,11 +35,15 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
           setFullContent(parsed.content || null);
           setLoadingContent(false);
         })
-        .catch(() => {
+        .catch((err: unknown) => {
+          console.error('[BlogModal] Failed to load content:', err, 'slug:', selectedPost.slug);
+          setContentError(err instanceof Error ? err.message : 'Failed to load content');
           setFullContent(null);
           setLoadingContent(false);
         });
     } else {
+      console.warn('[BlogModal] No loader found for:', `../content/blog/${selectedPost.slug}.md`);
+      setContentError(`Content not found`);
       setFullContent(null);
       setLoadingContent(false);
     }
@@ -354,7 +360,16 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
                     <Loader className="w-10 h-10 text-primary animate-spin mx-auto mb-4" />
                     <p className="text-slate-400 font-mono text-sm animate-pulse">Loading content...</p>
                   </div>
-                ) : fullContent ? renderContent(fullContent) : (
+                ) : contentError ? (
+                  <div className="text-center py-24">
+                    <BookOpen className="w-12 h-12 text-slate-700 mx-auto mb-4" />
+                    <p className="text-slate-500 italic mb-1">Could not load article content.</p>
+                    <p className="text-[10px] text-slate-600 font-mono">Error: {contentError}</p>
+                  </div>
+                ) : fullContent ? (() => {
+                  try { return renderContent(fullContent); }
+                  catch (e) { console.error('[BlogModal] renderContent error:', e); return <div className="text-center py-20"><p className="text-slate-500 italic">Error rendering content.</p></div>; }
+                })() : (
                   <div className="text-center py-24">
                     <BookOpen className="w-12 h-12 text-slate-700 mx-auto mb-4" />
                     <p className="text-slate-500 italic">Full content being compiled.</p>

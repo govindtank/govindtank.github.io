@@ -41,6 +41,11 @@ export default function BlogList() {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
+  // Scroll to top on navigation to this page
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+  }, []);
+
   const allTags = useMemo(() => {
     const tagSet = new Set<string>();
     BLOG_POSTS.forEach(p => p.tags?.forEach(t => tagSet.add(t)));

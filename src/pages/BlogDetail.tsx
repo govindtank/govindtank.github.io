@@ -39,6 +39,7 @@ export default function BlogDetailPage() {
   const [loadingContent, setLoadingContent] = useState(false);
   const [showToc, setShowToc] = useState(false);
   const [activeHeading, setActiveHeading] = useState('');
+  const [contentError, setContentError] = useState<string | null>(null);
 
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   const currentIndex = post ? BLOG_POSTS.indexOf(post) : -1;
@@ -48,6 +49,7 @@ export default function BlogDetailPage() {
   useEffect(() => {
     if (!post) return;
     setLoadingContent(true);
+    setContentError(null);
     const loader = contentModules[`../content/blog/${post.slug}.md`];
     if (loader) {
       loader()
@@ -56,12 +58,19 @@ export default function BlogDetailPage() {
           setFullContent(parsed.content || '');
           setLoadingContent(false);
         })
-        .catch(() => { setFullContent(''); setLoadingContent(false); });
+        .catch((err: unknown) => {
+          console.error('[BlogDetail] Failed to load content:', err);
+          setContentError(err instanceof Error ? err.message : 'Failed to load content');
+          setFullContent('');
+          setLoadingContent(false);
+        });
     } else {
+      console.warn('[BlogDetail] No loader found for:', `../content/blog/${post.slug}.md`);
+      setContentError('Content loader not found');
       setFullContent('');
       setLoadingContent(false);
     }
-    window.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
   }, [post]);
 
   // Track active heading for TOC
@@ -459,9 +468,26 @@ export default function BlogDetailPage() {
                     <Loader className="w-8 h-8 text-primary animate-spin mb-4" />
                     <p className="text-slate-500 text-sm font-mono">Loading content...</p>
                   </div>
+                ) : contentError ? (
+                  <div className="text-center py-20">
+                    <BookOpen className="w-12 h-12 text-slate-700 mx-auto mb-4" />
+                    <p className="text-slate-500 italic mb-2">Could not load article content.</p>
+                    <p className="text-xs text-slate-600 font-mono">Error: {contentError}</p>
+                    <button
+                      onClick={() => navigate('/blog')}
+                      className="mt-6 px-5 py-2.5 bg-primary/10 hover:bg-primary/20 text-primary text-sm font-medium rounded-xl border border-primary/20 transition-all"
+                    >
+                      Back to archive
+                    </button>
+                  </div>
                 ) : (
                   <div className="blog-content prose prose-invert max-w-none">
-                    {fullContent ? renderContent(fullContent) : (
+                    {fullContent ? (
+                      (() => {
+                        try { return renderContent(fullContent); }
+                        catch (e) { console.error('[BlogDetail] renderContent error:', e); return <div className="text-center py-20"><p className="text-slate-500 italic">Error rendering content.</p></div>; }
+                      })()
+                    ) : (
                       <div className="text-center py-20">
                         <BookOpen className="w-12 h-12 text-slate-700 mx-auto mb-4" />
                         <p className="text-slate-500 italic">Full content being compiled.</p>
