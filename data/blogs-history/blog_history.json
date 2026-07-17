@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 41,
-  "lastTopic": "Platform Engineering: Building Internal Developer Portals That Teams Love",
-  "todayCount": 33,
-  "lastGenerated": "2026-07-15T02:37:30Z",
+  "totalCreated": 42,
+  "lastTopic": "Top Free Developer Tools and AI Resources Transforming Engineering Workflows in 2026",
+  "todayCount": 34,
+  "lastGenerated": "2026-07-17T02:39:59Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -228,6 +228,14 @@
       "tag": "Architecture",
       "wordCount": 829,
       "status": "published"
+    },
+    "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026": {
+      "title": "Top Free Developer Tools and AI Resources Transforming Engineering Workflows in 2026",
+      "slug": "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026",
+      "date": "July 17, 2026",
+      "tag": "DevTools",
+      "wordCount": 1288,
+      "status": "published"
     }
   },
   "images": {
@@ -258,7 +266,8 @@
     "testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200",
     "finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
     "css-container-queries-and-style-queries-responsive-design-beyond-media-queries": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "building-real-time-collaborative-apps-with-crdts-and-operational-transformation": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200"
+    "building-real-time-collaborative-apps-with-crdts-and-operational-transformation": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
+    "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
   },
   "migration_notes": {
     "low_quality_removed_2026-06-18": [

@@ -8,8 +8,26 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2026 02:37:29 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 02:39:59 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Top Free Developer Tools and AI Resources Transforming Engineering Workflows in 2026]]></title>
+      <link>https://govindtank.github.io/blog/top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026</guid>
+      <pubDate>Thu, 16 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The engineering landscape of 2026 has shifted dramatically from simple code completion to autonomous agentic workflows. As proprietary APIs become increasingly expensive and latency-sensitive, the ...
+]]></description>
+      <category>DevTools</category>
+    </item>
+    <item>
+      <title><![CDATA[Kotlin Multiplatform at Scale: Production Architecture Patterns for Shared Business Logic]]></title>
+      <link>https://govindtank.github.io/blog/kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared-business-logic</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared-business-logic</guid>
+      <pubDate>Wed, 15 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[KMP has matured beyond experimental — here's how to architect a production-grade KMP module hierarchy with dependency injection, multiplatform networking, and Compose Multiplatform UI sharing. Learn from real-world patterns that reduce boilerplate without sacrificing platform-native experience.
+]]></description>
+      <category>Kotlin-Multiplatform</category>
+    </item>
     <item>
       <title><![CDATA[Platform Engineering: Building Internal Developer Portals That Teams Love]]></title>
       <link>https://govindtank.github.io/blog/platform-engineering-building-internal-developer-portals-that-teams-love</link>
