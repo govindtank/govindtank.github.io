@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 42,
-  "lastTopic": "Top Free Developer Tools and AI Resources Transforming Engineering Workflows in 2026",
-  "todayCount": 34,
-  "lastGenerated": "2026-07-17T02:39:59Z",
+  "totalCreated": 43,
+  "lastTopic": "Flutter Impeller Rendering Engine: GPU Acceleration Strategies for Production Apps in 2026",
+  "todayCount": 35,
+  "lastGenerated": "2026-07-18T08:00:00Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -236,6 +236,14 @@
       "tag": "DevTools",
       "wordCount": 1288,
       "status": "published"
+    },
+    "flutter-impeller-rendering-engine-gpu-acceleration-2026": {
+      "title": "Flutter Impeller Rendering Engine: GPU Acceleration Strategies for Production Apps in 2026",
+      "slug": "flutter-impeller-rendering-engine-gpu-acceleration-2026",
+      "date": "July 18, 2026",
+      "tag": "Flutter",
+      "wordCount": 1670,
+      "status": "published"
     }
   },
   "images": {
@@ -267,7 +275,8 @@
     "finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
     "css-container-queries-and-style-queries-responsive-design-beyond-media-queries": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
     "building-real-time-collaborative-apps-with-crdts-and-operational-transformation": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
-    "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
+    "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+    "flutter-impeller-rendering-engine-gpu-acceleration-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
   },
   "migration_notes": {
     "low_quality_removed_2026-06-18": [
