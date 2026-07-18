@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Jul 2026 02:39:59 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 02:39:29 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Flutter Impeller Rendering Engine: GPU Acceleration Strategies for Production Apps in 2026]]></title>
+      <link>https://govindtank.github.io/blog/flutter-impeller-rendering-engine-gpu-acceleration-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-impeller-rendering-engine-gpu-acceleration-2026</guid>
+      <pubDate>Fri, 17 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Flutter's Impeller rendering engine has reached production maturity in 2026, eliminating jank and enabling 120fps on modern devices. This deep-dive covers Impeller architecture, repaint boundary optimization, shader precompilation, and GPU acceleration patterns for shipping pixel-perfect Flutter apps.
+]]></description>
+      <category>Flutter</category>
+    </item>
     <item>
       <title><![CDATA[Top Free Developer Tools and AI Resources Transforming Engineering Workflows in 2026]]></title>
       <link>https://govindtank.github.io/blog/top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026</link>
