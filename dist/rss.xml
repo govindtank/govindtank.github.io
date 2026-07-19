@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Jul 2026 02:39:29 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 02:35:43 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems]]></title>
+      <link>https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</guid>
+      <pubDate>Sat, 18 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The traditional perimeter-based security model has effectively collapsed under the weight of distributed cloud infrastructure, serverless computing, and mobile-first workforces. By 2026, the indust...
+]]></description>
+      <category>Security</category>
+    </item>
     <item>
       <title><![CDATA[Flutter Impeller Rendering Engine: GPU Acceleration Strategies for Production Apps in 2026]]></title>
       <link>https://govindtank.github.io/blog/flutter-impeller-rendering-engine-gpu-acceleration-2026</link>
@@ -162,15 +171,6 @@
       <description><![CDATA[The landscape of web development in 2026 has shifted decisively toward server-centric rendering paradigms. While traditional Client-Side Rendering (CSR) dominated the early React ecosystem, the performance bottlenecks of large JavaScript bundles have forced a re-evaluation of architecture. React Server Components (RSC) offer a paradigm shift that moves logic and data fetching directly to the server, significantly reducing client-side payload size. For senior engineers architecting high-traffic applications, understanding RSC is no longer optional; it is a critical component of modern performance engineering. This post explores production-grade patterns, architectural boundaries, and implementation strategies necessary to leverage RSC effectively in 2026.
 ]]></description>
       <category>Web-Dev</category>
-    </item>
-    <item>
-      <title><![CDATA[Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems]]></title>
-      <link>https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</guid>
-      <pubDate>Mon, 15 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The perimeter-based security model is obsolete. In the 2026 landscape, organizations operate across hybrid environments where workloads span public clouds, private data centers, and edge nodes. This deep guide covers Zero Trust core principles, cloud-native implementation patterns, micro-segmentation, workload identity for Kubernetes, service mesh security (Istio, Linkerd, Consul Connect), policy engines (OPA/Cedar), continuous verification, API security, data plane design, compliance mapping, and real-world case studies with code examples and architecture diagrams.
-]]></description>
-      <category>Zero Trust</category>
     </item>
     <item>
       <title><![CDATA[Edge AI: Running Large Language Models on Consumer Devices in 2026]]></title>
