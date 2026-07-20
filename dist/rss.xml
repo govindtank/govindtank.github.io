@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jul 2026 02:35:43 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 03:01:45 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Kotlin Multiplatform in Production: Sharing Business Logic Across Android, iOS, and Web in 2026]]></title>
+      <link>https://govindtank.github.io/blog/kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026</guid>
+      <pubDate>Sun, 19 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[In the landscape of software development as it stands in 2026, Kotlin Multiplatform (KMP) has transitioned from a promising prototype to an industrial standard for enterprise-grade applications. Th...
+]]></description>
+      <category>Kotlin-Multiplatform</category>
+    </item>
     <item>
       <title><![CDATA[Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems]]></title>
       <link>https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</link>

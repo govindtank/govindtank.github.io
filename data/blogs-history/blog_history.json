@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 44,
-  "lastTopic": "Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems",
-  "todayCount": 36,
-  "lastGenerated": "2026-07-19T02:35:43Z",
+  "totalCreated": 45,
+  "lastTopic": "Kotlin Multiplatform in Production: Sharing Business Logic Across Android, iOS, and Web in 2026",
+  "todayCount": 37,
+  "lastGenerated": "2026-07-20T03:01:45Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -244,6 +244,14 @@
       "tag": "Flutter",
       "wordCount": 1670,
       "status": "published"
+    },
+    "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026": {
+      "title": "Kotlin Multiplatform in Production: Sharing Business Logic Across Android, iOS, and Web in 2026",
+      "slug": "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026",
+      "date": "July 20, 2026",
+      "tag": "Kotlin-Multiplatform",
+      "wordCount": 1215,
+      "status": "published"
     }
   },
   "images": {
@@ -276,7 +284,8 @@
     "css-container-queries-and-style-queries-responsive-design-beyond-media-queries": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
     "building-real-time-collaborative-apps-with-crdts-and-operational-transformation": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
     "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "flutter-impeller-rendering-engine-gpu-acceleration-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
+    "flutter-impeller-rendering-engine-gpu-acceleration-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+    "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200"
   },
   "migration_notes": {
     "low_quality_removed_2026-06-18": [

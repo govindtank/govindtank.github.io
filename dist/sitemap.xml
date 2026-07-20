@@ -9,6 +9,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.github.io/blog/kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026</loc>
+    <lastmod>2026-07-19T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</loc>
     <lastmod>2026-07-18T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
