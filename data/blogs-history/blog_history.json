@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 45,
-  "lastTopic": "Kotlin Multiplatform in Production: Sharing Business Logic Across Android, iOS, and Web in 2026",
-  "todayCount": 37,
-  "lastGenerated": "2026-07-20T03:01:45Z",
+  "totalCreated": 46,
+  "lastTopic": "Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines",
+  "todayCount": 38,
+  "lastGenerated": "2026-07-21T13:33:15Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -200,9 +200,9 @@
     "testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines": {
       "title": "Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines",
       "slug": "testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines",
-      "date": "June 30, 2026",
+      "date": "July 21, 2026",
       "tag": "AI-ML",
-      "wordCount": 1291,
+      "wordCount": 1278,
       "status": "published"
     },
     "finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments": {

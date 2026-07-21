@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2026 03:01:45 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 13:33:15 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines]]></title>
+      <link>https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</guid>
+      <pubDate>Mon, 20 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The integration of Large Language Models (LLMs) into software development workflows has fundamentally altered the engineering landscape by 2026. While AI assistants accelerate feature delivery, the...
+]]></description>
+      <category>AI-ML</category>
+    </item>
     <item>
       <title><![CDATA[Kotlin Multiplatform in Production: Sharing Business Logic Across Android, iOS, and Web in 2026]]></title>
       <link>https://govindtank.github.io/blog/kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026</link>
@@ -90,15 +99,6 @@
       <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. FinOps for Kubernetes: Optimizing Cloud Costs in Containerized Environments rep...
 ]]></description>
       <category>DevOps</category>
-    </item>
-    <item>
-      <title><![CDATA[Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines]]></title>
-      <link>https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</guid>
-      <pubDate>Mon, 29 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The landscape of software development in 2026 has fundamentally shifted from writing code manually to orchestrating and validating AI-generated logic. While Large Language Models (LLMs) have accele...
-]]></description>
-      <category>AI-ML</category>
     </item>
     <item>
       <title><![CDATA[Distributed Tracing with OpenTelemetry: From Instrumentation to Production Debugging]]></title>
