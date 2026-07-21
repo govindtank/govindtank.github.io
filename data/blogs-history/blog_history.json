@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 46,
-  "lastTopic": "Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines",
-  "todayCount": 38,
-  "lastGenerated": "2026-07-21T13:33:15Z",
+  "totalCreated": 47,
+  "lastTopic": "Flutter Widget Testing Mastery: From Unit Tests to Integration Goldens",
+  "todayCount": 39,
+  "lastGenerated": "2026-07-21T13:35:37Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -252,6 +252,14 @@
       "tag": "Kotlin-Multiplatform",
       "wordCount": 1215,
       "status": "published"
+    },
+    "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens": {
+      "title": "Flutter Widget Testing Mastery: From Unit Tests to Integration Goldens",
+      "slug": "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens",
+      "date": "July 21, 2026",
+      "tag": "Flutter",
+      "wordCount": 1046,
+      "status": "published"
     }
   },
   "images": {
@@ -285,7 +293,8 @@
     "building-real-time-collaborative-apps-with-crdts-and-operational-transformation": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
     "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
     "flutter-impeller-rendering-engine-gpu-acceleration-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200"
+    "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
+    "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
   },
   "migration_notes": {
     "low_quality_removed_2026-06-18": [

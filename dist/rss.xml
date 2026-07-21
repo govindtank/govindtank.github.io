@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jul 2026 13:33:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 13:35:37 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Flutter Widget Testing Mastery: From Unit Tests to Integration Goldens]]></title>
+      <link>https://govindtank.github.io/blog/flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens</guid>
+      <pubDate>Mon, 20 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Flutter Widget Testing Mastery: From Unit Tests to Integration Goldens represen...
+]]></description>
+      <category>Flutter</category>
+    </item>
     <item>
       <title><![CDATA[Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines]]></title>
       <link>https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</link>
