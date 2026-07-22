@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 47,
-  "lastTopic": "Flutter Widget Testing Mastery: From Unit Tests to Integration Goldens",
-  "todayCount": 39,
-  "lastGenerated": "2026-07-21T13:35:37Z",
+  "totalCreated": 48,
+  "lastTopic": "iOS 20 and Swift 8: What Mobile Developers Need to Know",
+  "todayCount": 40,
+  "lastGenerated": "2026-07-22T02:31:15Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -260,6 +260,14 @@
       "tag": "Flutter",
       "wordCount": 1046,
       "status": "published"
+    },
+    "ios-20-and-swift-8-what-mobile-developers-need-to-know": {
+      "title": "iOS 20 and Swift 8: What Mobile Developers Need to Know",
+      "slug": "ios-20-and-swift-8-what-mobile-developers-need-to-know",
+      "date": "July 22, 2026",
+      "tag": "Mobile",
+      "wordCount": 1049,
+      "status": "published"
     }
   },
   "images": {
@@ -294,7 +302,8 @@
     "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
     "flutter-impeller-rendering-engine-gpu-acceleration-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
     "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
-    "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
+    "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+    "ios-20-and-swift-8-what-mobile-developers-need-to-know": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200"
   },
   "migration_notes": {
     "low_quality_removed_2026-06-18": [

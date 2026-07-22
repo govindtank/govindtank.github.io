@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jul 2026 13:35:37 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 02:31:15 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[iOS 20 and Swift 8: What Mobile Developers Need to Know]]></title>
+      <link>https://govindtank.github.io/blog/ios-20-and-swift-8-what-mobile-developers-need-to-know</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/ios-20-and-swift-8-what-mobile-developers-need-to-know</guid>
+      <pubDate>Tue, 21 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. iOS 20 and Swift 8: What Mobile Developers Need to Know represents one of the m...
+]]></description>
+      <category>Mobile</category>
+    </item>
     <item>
       <title><![CDATA[Flutter Widget Testing Mastery: From Unit Tests to Integration Goldens]]></title>
       <link>https://govindtank.github.io/blog/flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens</link>
