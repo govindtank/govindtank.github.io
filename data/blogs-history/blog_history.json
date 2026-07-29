@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 49,
-  "lastTopic": "TypeScript 5.x Advanced Patterns: Conditional Types, Template Literals, and Mapped Types in Production",
-  "todayCount": 41,
-  "lastGenerated": "2026-07-29T05:28:16Z",
+  "totalCreated": 50,
+  "lastTopic": "WebGPU: Next-Generation Graphics and Compute for the Browser",
+  "todayCount": 42,
+  "lastGenerated": "2026-07-29T05:49:37Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -276,6 +276,14 @@
       "tag": "Web-Dev",
       "wordCount": 1055,
       "status": "published"
+    },
+    "webgpu-next-generation-graphics-and-compute-for-the-browser": {
+      "title": "WebGPU: Next-Generation Graphics and Compute for the Browser",
+      "slug": "webgpu-next-generation-graphics-and-compute-for-the-browser",
+      "date": "July 29, 2026",
+      "tag": "Web-Dev",
+      "wordCount": 1040,
+      "status": "published"
     }
   },
   "images": {
@@ -312,7 +320,8 @@
     "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
     "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
     "ios-20-and-swift-8-what-mobile-developers-need-to-know": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
-    "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
+    "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+    "webgpu-next-generation-graphics-and-compute-for-the-browser": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
   },
   "migration_notes": {
     "low_quality_removed_2026-06-18": [

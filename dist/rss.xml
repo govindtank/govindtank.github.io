@@ -8,7 +8,7 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jul 2026 05:28:16 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 05:49:37 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[TypeScript 5.x Advanced Patterns: Conditional Types, Template Literals, and Mapped Types in Production]]></title>
@@ -16,6 +16,15 @@
       <guid isPermaLink="true">https://govindtank.github.io/blog/typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production</guid>
       <pubDate>Tue, 28 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. TypeScript 5.x Advanced Patterns: Conditional Types, Template Literals, and Map...
+]]></description>
+      <category>Web-Dev</category>
+    </item>
+    <item>
+      <title><![CDATA[WebGPU: Next-Generation Graphics and Compute for the Browser]]></title>
+      <link>https://govindtank.github.io/blog/webgpu-next-generation-graphics-and-compute-for-the-browser</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/webgpu-next-generation-graphics-and-compute-for-the-browser</guid>
+      <pubDate>Tue, 28 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. WebGPU: Next-Generation Graphics and Compute for the Browser represents one of ...
 ]]></description>
       <category>Web-Dev</category>
     </item>
