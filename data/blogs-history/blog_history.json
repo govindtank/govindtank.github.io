@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 48,
-  "lastTopic": "iOS 20 and Swift 8: What Mobile Developers Need to Know",
-  "todayCount": 40,
-  "lastGenerated": "2026-07-22T02:31:15Z",
+  "totalCreated": 49,
+  "lastTopic": "TypeScript 5.x Advanced Patterns: Conditional Types, Template Literals, and Mapped Types in Production",
+  "todayCount": 41,
+  "lastGenerated": "2026-07-29T05:28:16Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -268,6 +268,14 @@
       "tag": "Mobile",
       "wordCount": 1049,
       "status": "published"
+    },
+    "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production": {
+      "title": "TypeScript 5.x Advanced Patterns: Conditional Types, Template Literals, and Mapped Types in Production",
+      "slug": "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production",
+      "date": "July 29, 2026",
+      "tag": "Web-Dev",
+      "wordCount": 1055,
+      "status": "published"
     }
   },
   "images": {
@@ -303,7 +311,8 @@
     "flutter-impeller-rendering-engine-gpu-acceleration-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
     "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
     "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "ios-20-and-swift-8-what-mobile-developers-need-to-know": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200"
+    "ios-20-and-swift-8-what-mobile-developers-need-to-know": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
+    "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
   },
   "migration_notes": {
     "low_quality_removed_2026-06-18": [
