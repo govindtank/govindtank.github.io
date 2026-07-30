@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jul 2026 05:49:37 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 02:41:48 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing]]></title>
+      <link>https://govindtank.github.io/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</guid>
+      <pubDate>Wed, 29 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing repres...
+]]></description>
+      <category>Databases</category>
+    </item>
     <item>
       <title><![CDATA[TypeScript 5.x Advanced Patterns: Conditional Types, Template Literals, and Mapped Types in Production]]></title>
       <link>https://govindtank.github.io/blog/typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production</link>
@@ -225,15 +234,6 @@
       <description><![CDATA[The trajectory of artificial intelligence has shifted dramatically over the last three years. By 2026, the paradigm of "cloud-only" inference is rapidly becoming obsolete for sensitive or latency-critical applications. This deep-dive explores the full ecosystem — from quantization techniques and on-device inference engines to hardware benchmarks and hybrid architectures — that makes running LLMs on consumer devices not just possible but preferable.
 ]]></description>
       <category>Edge-AI</category>
-    </item>
-    <item>
-      <title><![CDATA[PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing]]></title>
-      <link>https://govindtank.github.io/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</guid>
-      <pubDate>Thu, 04 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[PostgreSQL 18 redefines enterprise data architecture by delivering native Hybrid Transactional-Analytical Processing (HTAP) capabilities that challenge dedicated OLAP systems like ClickHouse, DuckDB, and Snowflake. This deep dive covers new parallel query improvements, columnar storage extensions, incremental materialized views, JIT compilation enhancements, pg_analytics and pg_duckdb extensions, S3/object store integration, practical HTAP patterns, benchmarking data, and real-world case studies demonstrating how a single PostgreSQL instance can replace polyglot persistence for mixed workloads.
-]]></description>
-      <category>Databases</category>
     </item>
     <item>
       <title><![CDATA[AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026]]></title>

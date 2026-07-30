@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 50,
-  "lastTopic": "WebGPU: Next-Generation Graphics and Compute for the Browser",
-  "todayCount": 42,
-  "lastGenerated": "2026-07-29T05:49:37Z",
+  "totalCreated": 51,
+  "lastTopic": "PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing",
+  "todayCount": 43,
+  "lastGenerated": "2026-07-30T02:41:49Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -112,9 +112,9 @@
     "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing": {
       "title": "PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing",
       "slug": "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing",
-      "date": "June 05, 2026",
+      "date": "July 30, 2026",
       "tag": "Databases",
-      "wordCount": 946,
+      "wordCount": 1043,
       "status": "published"
     },
     "react-server-components-production-patterns-for-high-performance-web-apps": {
