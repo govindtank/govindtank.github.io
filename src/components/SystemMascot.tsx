@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLocation } from 'react-router-dom';
-import { Bot, MessageSquare, Terminal as TerminalIcon, Cpu, Smartphone, Code2, Sparkles, ChevronRight, BookOpen, ArrowUp, List, Search } from 'lucide-react';
+import { Bot, MessageSquare, Terminal as TerminalIcon, Code2, Sparkles, ChevronRight, BookOpen, ArrowUp, List, Search } from 'lucide-react';
 
 const HOME_MESSAGES = [
   "System Initializing... User: Govind Tank",
@@ -45,7 +45,6 @@ export default function SystemMascot() {
 
   const isBlogPage = location.pathname.startsWith('/blog');
 
-  // Pick message pool based on current page
   const MESSAGES = isBlogPage ? BLOG_MESSAGES : HOME_MESSAGES;
   const QUICK_ACTIONS = isBlogPage ? QUICK_ACTIONS_BLOG : QUICK_ACTIONS_HOME;
 
@@ -73,18 +72,14 @@ export default function SystemMascot() {
   const handleBlogAction = (action: string) => {
     switch (action) {
       case 'search':
-        // Focus the search input on blog listing page
         const input = document.querySelector('input[type="text"]') as HTMLInputElement;
         if (input) { input.focus(); input.scrollIntoView({ behavior: 'smooth' }); }
         break;
       case 'tags':
-        // Scroll to tag filter area
         const tagArea = document.querySelector('[class*="overflow-x-auto"]');
         if (tagArea) tagArea.scrollIntoView({ behavior: 'smooth' });
         break;
       case 'top':
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        break;
       case 'archive':
         window.scrollTo({ top: 0, behavior: 'smooth' });
         break;
@@ -96,7 +91,6 @@ export default function SystemMascot() {
     ? (action: string) => handleBlogAction(action)
     : (target: string) => scrollToSection(target);
 
-  // Don't show on blog detail pages — it would interfere with reading
   if (isBlogPage && location.pathname !== '/blog') {
     return null;
   }
@@ -111,7 +105,6 @@ export default function SystemMascot() {
             exit={{ opacity: 0, y: 30, scale: 0.8 }}
             className="flex flex-col items-end gap-2"
           >
-            {/* Quick actions panel */}
             <AnimatePresence>
               {showActions && (
                 <motion.div
@@ -120,9 +113,9 @@ export default function SystemMascot() {
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
                   className="mb-1 bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-xl p-2.5 shadow-xl min-w-[180px]"
                 >
-                  <div className="flex items-center gap-2 mb-2 pb-2 border-b border-white/5">
-                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                    <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">
+                  <div className="flex items-center gap-2 mb-2 pb-2 border-b border-white/10">
+                    <div className="w-2 h-2 bg-sky-400 rounded-full animate-pulse" />
+                    <span className="text-[10px] font-mono text-sky-400 uppercase tracking-widest font-bold">
                       {isBlogPage ? 'Blog Actions' : 'Quick Navigation'}
                     </span>
                   </div>
@@ -131,11 +124,12 @@ export default function SystemMascot() {
                       <button
                         key={i}
                         onClick={() => handleAction((action as any).target || (action as any).action)}
-                        className="flex items-center gap-2 px-2.5 py-2 bg-white/5 hover:bg-primary/10 border border-white/5 hover:border-primary/20 rounded-lg transition-all group text-left"
+                        aria-label={`Action: ${action.label}`}
+                        className="flex items-center gap-2 px-2.5 py-2 bg-white/5 hover:bg-sky-500/10 border border-white/5 hover:border-sky-500/20 rounded-lg transition-all group text-left"
                       >
-                        <span className="text-slate-400 group-hover:text-primary transition-colors shrink-0">{action.icon}</span>
-                        <span className="text-[11px] font-mono text-slate-300 group-hover:text-white">{action.label}</span>
-                        <ChevronRight className="w-3 h-3 text-slate-600 group-hover:text-primary ml-auto transition-colors" />
+                        <span className="text-slate-400 group-hover:text-sky-400 transition-colors shrink-0">{action.icon}</span>
+                        <span className="text-[11px] font-mono text-slate-200 group-hover:text-white font-semibold">{action.label}</span>
+                        <ChevronRight className="w-3 h-3 text-slate-500 group-hover:text-sky-400 ml-auto transition-colors" />
                       </button>
                     ))}
                   </div>
@@ -143,14 +137,13 @@ export default function SystemMascot() {
               )}
             </AnimatePresence>
 
-            {/* Message bubble */}
             <motion.div
               animate={isThinking ? { scale: 0.95, opacity: 0.8 } : { scale: 1, opacity: 1 }}
-              className="bg-slate-900/95 backdrop-blur-xl border border-primary/20 p-3 rounded-xl rounded-br-none shadow-lg max-w-[200px] relative"
+              className="bg-slate-900/95 backdrop-blur-xl border border-sky-500/20 p-3 rounded-xl rounded-br-none shadow-lg max-w-[200px] relative"
             >
-              <div className="flex gap-2 mb-1.5 items-center border-b border-white/5 pb-1.5">
-                <div className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
-                <span className="text-[9px] font-mono text-slate-500 uppercase tracking-widest">
+              <div className="flex gap-2 mb-1.5 items-center border-b border-white/10 pb-1.5">
+                <div className="w-1.5 h-1.5 bg-sky-400 rounded-full animate-pulse" />
+                <span className="text-[9px] font-mono text-slate-400 uppercase tracking-widest font-bold">
                   {isBlogPage ? 'BROWSER_GT' : 'DRONE_GT_0X1'}
                 </span>
               </div>
@@ -159,26 +152,26 @@ export default function SystemMascot() {
               </p>
             </motion.div>
 
-            {/* Bot icon */}
-            <motion.div
+            <motion.button
               whileHover={{ scale: 1.1 }}
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               onClick={() => setShowActions(!showActions)}
-              className="w-14 h-14 relative flex items-center justify-center cursor-pointer group"
+              aria-label="Toggle system mascot menu"
+              className="w-14 h-14 relative flex items-center justify-center cursor-pointer group rounded-full"
             >
-              <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl group-hover:bg-primary/30 transition-colors" />
+              <div className="absolute inset-0 bg-sky-500/20 rounded-full blur-xl group-hover:bg-sky-500/30 transition-colors" />
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 border border-primary/20 rounded-full border-dashed"
+                className="absolute inset-0 border border-sky-500/20 rounded-full border-dashed"
               />
-              <div className="w-11 h-11 bg-slate-950 rounded-xl border border-primary/40 shadow-lg shadow-primary/20 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
-                <Bot className="text-primary w-6 h-6" />
+              <div className="w-11 h-11 bg-slate-950 rounded-xl border border-sky-500/40 shadow-lg shadow-sky-500/20 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-sky-500/10 to-transparent" />
+                <Bot className="text-sky-400 w-6 h-6" />
               </div>
-              <div className="absolute top-0 right-0 w-2 h-2 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
-            </motion.div>
+              <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-emerald-400 rounded-full shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
+            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>

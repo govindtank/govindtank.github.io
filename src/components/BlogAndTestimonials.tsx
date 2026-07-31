@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BLOG_POSTS, TESTIMONIALS } from '../constants';
-import { BookOpen, Quote, ChevronRight, MessageSquareQuote, Search, Filter, ExternalLink, Calendar, Clock, ArrowRight, Sparkles } from 'lucide-react';
+import { BookOpen, Quote, MessageSquareQuote, Search, Filter, ExternalLink, Calendar, Clock, ArrowRight } from 'lucide-react';
 import { BlogPost } from '../types';
 import { useNavigate } from 'react-router-dom';
 
@@ -57,9 +57,9 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
 
   const tags = [...new Set(BLOG_POSTS.flatMap(post => post.tags || [post.tag]))];
 
-  const clearFilters = () => {
-    setSearchTerm('');
-    setSelectedTag(null);
+  const handleCardClick = (post: BlogPost) => {
+    // Navigate cleanly to the post page for browser back/forward history support
+    navigate(`/blog/${post.slug}`);
   };
 
   return (
@@ -68,31 +68,32 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
         <div className="grid lg:grid-cols-3 gap-16">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4 mb-12">
-              <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
-                <BookOpen className="text-primary w-6 h-6" />
+              <div className="w-10 h-10 rounded-lg bg-sky-500/20 flex items-center justify-center">
+                <BookOpen className="text-sky-400 w-6 h-6" />
               </div>
               <div className="flex-1">
-                <h2 className="text-4xl font-bold italic-serif tracking-tighter uppercase font-black">Architectural <span className="text-primary">Logs</span></h2>
-                <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mt-1">Status: Monitoring_Industry_Trends</p>
+                <h2 className="text-4xl font-bold tracking-tighter uppercase font-black text-white">Architectural <span className="text-sky-400">Logs</span></h2>
+                <p className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mt-1">Status: Monitoring_Industry_Trends</p>
               </div>
             </div>
             
             <div className="flex items-center gap-4 mb-6">
               <div className="relative w-full max-w-xs group">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500 group-focus-within:text-primary transition-colors" />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400 group-focus-within:text-sky-400 transition-colors" />
                 <input
                   type="text"
                   placeholder="Search logs..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 bg-slate-950/50 border border-white/10 rounded-lg text-slate-300 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm"
+                  className="w-full pl-10 pr-4 py-2 bg-slate-950/50 border border-white/10 rounded-lg text-slate-300 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20 text-sm"
                 />
               </div>
               
               <div className="relative">
                 <button
                   onClick={() => setShowFilters(!showFilters)}
-                  className={`p-2 rounded-full transition-colors ${selectedTag ? 'text-primary bg-primary/10' : 'text-slate-400 hover:text-white hover:bg-white/5'}`}
+                  aria-label="Filter logs by tag"
+                  className={`p-2 rounded-full transition-colors ${selectedTag ? 'text-sky-400 bg-sky-500/10' : 'text-slate-400 hover:text-white hover:bg-white/5'}`}
                 >
                   <Filter className="w-4 h-4" />
                 </button>
@@ -102,16 +103,16 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="absolute left-0 mt-4 w-48 bg-slate-950 border border-white/5 rounded-xl p-4 z-20 shadow-xl"
+                      className="absolute left-0 mt-4 w-48 bg-slate-950 border border-white/10 rounded-xl p-4 z-20 shadow-xl"
                     >
                       <div className="flex items-center gap-2 mb-3">
-                        <div className="w-2 h-2 bg-primary rounded-full" />
-                        <span className="text-[10px] font-mono text-primary uppercase tracking-widest">Filter by Tag</span>
+                        <div className="w-2 h-2 bg-sky-400 rounded-full" />
+                        <span className="text-[10px] font-mono text-sky-400 uppercase tracking-widest font-bold">Filter by Tag</span>
                       </div>
                       <div className="space-y-1">
                         <button
                           onClick={() => { setSelectedTag(null); setShowFilters(false); }}
-                          className={`w-full text-left px-3 py-2 rounded-lg text-xs font-mono transition-colors ${selectedTag === null ? 'bg-primary/10 text-primary' : 'text-slate-400 hover:bg-white/5'}`}
+                          className={`w-full text-left px-3 py-2 rounded-lg text-xs font-mono transition-colors ${selectedTag === null ? 'bg-sky-500/10 text-sky-400 font-bold' : 'text-slate-400 hover:bg-white/5'}`}
                         >
                           All Tags
                         </button>
@@ -119,7 +120,7 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                           <button
                             key={tag}
                             onClick={() => { setSelectedTag(tag); setShowFilters(false); }}
-                            className={`w-full text-left px-3 py-2 rounded-lg text-xs font-mono transition-colors ${selectedTag === tag ? 'bg-primary/10 text-primary' : 'text-slate-400 hover:bg-white/5'}`}
+                            className={`w-full text-left px-3 py-2 rounded-lg text-xs font-mono transition-colors ${selectedTag === tag ? 'bg-sky-500/10 text-sky-400 font-bold' : 'text-slate-400 hover:bg-white/5'}`}
                           >
                             {tag}
                           </button>
@@ -139,11 +140,10 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  onClick={() => onPostSelect(post)}
-                  className="group cursor-pointer overflow-hidden rounded-xl border border-white/[0.06] bg-slate-900/40 hover:bg-slate-900/60 hover:border-white/10 transition-all duration-300"
+                  onClick={() => handleCardClick(post)}
+                  className="group cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-slate-900/40 hover:bg-slate-900/80 hover:border-sky-500/30 transition-all duration-300 shadow-md"
                 >
                   <div className="flex flex-col sm:flex-row">
-                    {/* Cover image */}
                     <div className="sm:w-48 sm:min-w-[12rem] h-40 sm:h-auto overflow-hidden">
                       {post.coverImage ? (
                         <img
@@ -159,34 +159,33 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                       )}
                     </div>
 
-                    {/* Content */}
                     <div className="p-5 flex-1 flex flex-col min-w-0">
                       <div className="flex items-center gap-2 mb-3 flex-wrap">
-                        <span className={`text-[10px] font-mono font-medium px-2 py-0.5 rounded-full border bg-slate-950/60 ${getTagColor(post.tag)}`}>
+                        <span className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border bg-slate-950/80 uppercase ${getTagColor(post.tag)}`}>
                           {post.tag}
                         </span>
                         {post.readTime && (
-                          <span className="text-[10px] text-slate-600 font-mono flex items-center gap-1">
+                          <span className="text-[10px] text-slate-400 font-mono flex items-center gap-1">
                             <Clock className="w-3 h-3" />
                             {post.readTime} min
                           </span>
                         )}
                       </div>
 
-                      <h3 className="text-lg font-bold text-white group-hover:text-primary transition-colors leading-snug mb-2">
+                      <h3 className="text-lg font-bold text-white group-hover:text-sky-300 transition-colors leading-snug mb-2">
                         {post.title}
                       </h3>
                       <p className="text-sm text-slate-400 leading-relaxed line-clamp-2 mb-3 flex-1">
                         {post.excerpt}
                       </p>
 
-                      <div className="flex items-center justify-between pt-3 border-t border-white/[0.04]">
-                        <span className="text-[10px] text-slate-600 font-mono flex items-center gap-1.5">
+                      <div className="flex items-center justify-between pt-3 border-t border-white/10">
+                        <span className="text-[10px] text-slate-400 font-mono flex items-center gap-1.5">
                           <Calendar className="w-3 h-3" />
                           {post.date}
                         </span>
-                        <span className="text-[10px] text-primary font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-all group-hover:gap-1.5">
-                          Read <ArrowRight className="w-3 h-3" />
+                        <span className="text-[10px] text-sky-400 font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-all group-hover:gap-1.5">
+                          Read Deep Dive <ArrowRight className="w-3 h-3" />
                         </span>
                       </div>
                     </div>
@@ -195,7 +194,7 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
               ))}
             </div>
 
-            {/* Show More — navigate to full blog listing */}
+            {/* View All Articles button */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -203,22 +202,21 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
             >
               <button
                 onClick={() => navigate('/blog')}
-                className="w-full group relative flex items-center justify-center gap-3 py-4 px-6 bg-white/5 hover:bg-primary/20 border border-white/10 hover:border-primary/30 rounded-xl transition-all overflow-hidden"
+                className="w-full group relative flex items-center justify-center gap-3 py-4 px-6 bg-slate-900 hover:bg-slate-800 border border-white/10 hover:border-sky-500/30 rounded-xl transition-all shadow-md overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                <ExternalLink className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform relative z-10" />
-                <span className="text-xs font-mono text-slate-400 group-hover:text-primary uppercase tracking-widest relative z-10">
-                  Show All Logs ({BLOG_POSTS.length} Total Entries) →
+                <ExternalLink className="w-4 h-4 text-sky-400 group-hover:translate-x-1 transition-transform relative z-10" />
+                <span className="text-xs font-mono font-bold text-slate-300 group-hover:text-white uppercase tracking-widest relative z-10">
+                  Explore Full Archive ({BLOG_POSTS.length} Technical Deep Dives) →
                 </span>
-                <div className="absolute bottom-0 left-0 h-[2px] bg-primary w-0 group-hover:w-full transition-all duration-700" />
+                <div className="absolute bottom-0 left-0 h-[2px] bg-sky-400 w-0 group-hover:w-full transition-all duration-500" />
               </button>
             </motion.div>
           </div>
 
           <div>
             <div className="flex items-center gap-4 mb-12">
-              <MessageSquareQuote className="text-accent w-8 h-8" />
-              <h2 className="text-4xl font-bold italic tracking-tighter">Social <span className="text-accent underline decoration-accent/30 underline-offset-8">Proof</span></h2>
+              <MessageSquareQuote className="text-amber-400 w-8 h-8" />
+              <h2 className="text-4xl font-bold tracking-tighter text-white">Social <span className="text-amber-400 underline decoration-amber-400/30 underline-offset-8">Proof</span></h2>
             </div>
 
             <div className="space-y-8">
@@ -229,19 +227,19 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.2 }}
-                  className="relative p-8 glass-card border border-white/5 bg-slate-800/40 rounded-2xl"
+                  className="relative p-8 glass-card border border-white/10 bg-slate-900/40 rounded-2xl shadow-lg"
                 >
-                  <Quote className="absolute top-4 right-4 w-12 h-12 text-white/5" />
-                  <p className="relative z-10 text-slate-300 italic mb-8 leading-relaxed font-sans">
+                  <Quote className="absolute top-4 right-4 w-10 h-10 text-white/5" />
+                  <p className="relative z-10 text-slate-300 italic mb-8 leading-relaxed font-sans text-sm sm:text-base">
                     "{t.content}"
                   </p>
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center font-bold text-white text-xs border border-white/10">
-                       {t.name.split(' ').map(n => n[0]).join('')}
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-sky-400 to-indigo-500 flex items-center justify-center font-bold text-slate-950 text-xs border border-white/10 shadow-md">
+                      {t.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <div>
                       <h4 className="text-white font-bold text-sm leading-none">{t.name}</h4>
-                      <p className="text-xs text-slate-500 mt-1">{t.role}</p>
+                      <p className="text-xs text-slate-400 font-mono mt-1">{t.role}</p>
                     </div>
                   </div>
                 </motion.div>

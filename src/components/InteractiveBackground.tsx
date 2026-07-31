@@ -12,7 +12,8 @@ export default function InteractiveBackground() {
 
     let animationFrameId: number;
     let particles: Particle[] = [];
-    let mouse = { x: 0, y: 0 };
+    let mouse = { x: -1000, y: -1000 };
+    let isTabVisible = true;
 
     const resize = () => {
       canvas.width = window.innerWidth;
@@ -66,13 +67,15 @@ export default function InteractiveBackground() {
 
     const init = () => {
       particles = [];
-      const count = Math.floor((canvas.width * canvas.height) / 15000);
+      const count = Math.min(60, Math.floor((canvas.width * canvas.height) / 18000));
       for (let i = 0; i < count; i++) {
         particles.push(new Particle());
       }
     };
 
     const animate = () => {
+      if (!isTabVisible) return;
+
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       particles.forEach((p) => {
         p.update();
@@ -104,8 +107,19 @@ export default function InteractiveBackground() {
       mouse.y = e.clientY;
     };
 
+    const handleVisibilityChange = () => {
+      isTabVisible = !document.hidden;
+      if (isTabVisible) {
+        animate();
+      } else {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
+
     window.addEventListener('resize', resize);
     window.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
     resize();
     init();
     animate();
@@ -113,6 +127,7 @@ export default function InteractiveBackground() {
     return () => {
       window.removeEventListener('resize', resize);
       window.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
@@ -120,6 +135,7 @@ export default function InteractiveBackground() {
   return (
     <canvas 
       ref={canvasRef} 
+      aria-hidden="true"
       className="fixed inset-0 pointer-events-none z-0 opacity-40"
       style={{ mixBlendMode: 'screen' }}
     />
