@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2026 02:41:48 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 05:44:44 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Kubernetes Sidecar Patterns for Service Mesh Observability in 2026]]></title>
+      <link>https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</guid>
+      <pubDate>Thu, 30 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Kubernetes Sidecar Patterns for Service Mesh Observability in 2026 represents o...
+]]></description>
+      <category>Cloud-Native</category>
+    </item>
     <item>
       <title><![CDATA[PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing]]></title>
       <link>https://govindtank.github.io/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</link>
@@ -153,15 +162,6 @@
       <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Distributed Tracing with OpenTelemetry: From Instrumentation to Production Debu...
 ]]></description>
       <category>Observability</category>
-    </item>
-    <item>
-      <title><![CDATA[Kubernetes Sidecar Patterns for Service Mesh Observability in 2026]]></title>
-      <link>https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</guid>
-      <pubDate>Sat, 27 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The service mesh ecosystem has undergone a significant paradigm shift over the last two years, moving from heavy-weight sidecar proxies to lightweight kernel-level instrumentation. In 2026, the con...
-]]></description>
-      <category>Cloud-Native</category>
     </item>
     <item>
       <title><![CDATA[Rust for Systems Programming in 2026: Memory Safety, Concurrency, and Ecosystem Growth]]></title>

@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 51,
-  "lastTopic": "PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing",
-  "todayCount": 43,
-  "lastGenerated": "2026-07-30T02:41:49Z",
+  "totalCreated": 52,
+  "lastTopic": "Kubernetes Sidecar Patterns for Service Mesh Observability in 2026",
+  "todayCount": 44,
+  "lastGenerated": "2026-07-31T05:44:44Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -184,9 +184,9 @@
     "kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026": {
       "title": "Kubernetes Sidecar Patterns for Service Mesh Observability in 2026",
       "slug": "kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026",
-      "date": "June 28, 2026",
+      "date": "July 31, 2026",
       "tag": "Cloud-Native",
-      "wordCount": 1118,
+      "wordCount": 1043,
       "status": "published"
     },
     "distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging": {
