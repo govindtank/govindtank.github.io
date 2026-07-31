@@ -2,11 +2,7 @@
  * Lightweight YAML frontmatter parser for use in the browser.
  * Replaces gray-matter which requires Node.js Buffer (not available in browser).
  *
- * Handles the subset of YAML used in this project's blog markdown files:
- * - Simple key: "value" (quoted or unquoted)
- * - Multi-line folded values (key: >\n  text)
- * - Arrays (tags:\n  - "value")
- * - Number values
+ * Handles YAML frontmatter with CRLF (\r\n) or LF (\n) line endings safely.
  */
 
 interface FrontmatterData {
@@ -28,16 +24,20 @@ interface FrontmatterResult {
 
 export default function parseFrontmatter(raw: string): FrontmatterResult {
   const data: FrontmatterData = {};
-  let content = raw;
+  if (!raw) return { data, content: '' };
+
+  // Normalize Windows CRLF line endings to LF
+  const normalizedRaw = raw.replace(/\r\n/g, '\n');
+  let content = normalizedRaw;
 
   // Match content between --- delimiters at the start of the file
-  const match = raw.match(/^---\s*\n([\s\S]*?)\n---\n?/);
+  const match = normalizedRaw.match(/^---\s*\n([\s\S]*?)\n---\n?/);
   if (!match) {
     return { data, content };
   }
 
   const yamlBlock = match[1];
-  content = raw.slice(match[0].length);
+  content = normalizedRaw.slice(match[0].length);
 
   // Parse YAML lines
   const lines = yamlBlock.split('\n');
@@ -84,7 +84,6 @@ export default function parseFrontmatter(raw: string): FrontmatterResult {
     if (arrayKeyMatch) {
       currentKey = arrayKeyMatch[1];
       currentArrayKey = currentKey;
-      // Check next line to confirm it's an array
       if (i + 1 < lines.length && lines[i + 1].trim().startsWith('-')) {
         continue;
       }

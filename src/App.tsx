@@ -41,19 +41,24 @@ export default function App() {
     });
   }, []);
 
-  // Handle hash navigation from external routes (e.g., /#experience from blog)
+  // Handle hash navigation & scroll restoration
   useEffect(() => {
+    const savedPos = sessionStorage.getItem('home_scroll_pos');
     if (location.hash) {
       const id = location.hash.replace('#', '');
-      // Wait for DOM to render, then scroll
       setTimeout(() => {
         const target = document.getElementById(id);
         if (target) {
           target.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 300);
+      }, 200);
+    } else if (savedPos) {
+      setTimeout(() => {
+        window.scrollTo({ top: Number(savedPos), behavior: 'smooth' });
+        sessionStorage.removeItem('home_scroll_pos');
+      }, 150);
     }
-  }, [location.hash]);
+  }, [location.hash, location.pathname]);
 
   const handlePostSelect = (post: BlogPost) => {
     setScrollPosition(window.scrollY);
@@ -70,7 +75,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative bg-slate-950 text-slate-100">
       <InteractiveBackground />
       <SystemMascot />
       <Navbar />
