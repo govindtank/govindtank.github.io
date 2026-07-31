@@ -4,7 +4,7 @@ slug: "ai-augmented-development-workflows-architecting-the-future-of-software-en
 date: "2026-06-02"
 excerpt: >
   Architect AI-augmented development workflows with multi-agent systems, automated code generation, and intelligent testing pipelines for modern software engineering teams. A comprehensive guide to integrating AI coding assistants, CI/CD automation, and organizational adoption strategies.
-coverImage: /blogs/ai-workflows-cover.avif
+coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"
 category: "AI"
 readTime: 18
 tags:

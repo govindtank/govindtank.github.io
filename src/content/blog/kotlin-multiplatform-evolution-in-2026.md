@@ -4,7 +4,7 @@ slug: "kotlin-multiplatform-evolution-in-2026"
 date: "May 29, 2026"
 excerpt: >
   Kotlin Multiplatform has matured into a production-ready cross-platform ecosystem that delivers 60-80% code reuse across Android, iOS, desktop, and web while maintaining native performance. Explore KMP architecture, Compose Multiplatform deep-dive, tooling in 2026, iOS interop, CI/CD strategies, production case studies from Netflix and Cash App, and a comprehensive comparison with Flutter and React Native.
-coverImage: "https://images.unsplash.com/photo-1515879218367-8466d9109c0d?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
 category: "Kotlin-Multiplatform"
 readTime: 18
 tags:

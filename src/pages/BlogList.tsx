@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useMemo, useRef, useEffect, useLayoutEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BLOG_POSTS } from '../constants';
 import { Search, Calendar, ArrowRight, BookOpen, Clock, ChevronLeft, ChevronRight, Sparkles, X, RefreshCw } from 'lucide-react';

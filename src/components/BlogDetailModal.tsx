@@ -20,24 +20,33 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
 
   useEffect(() => {
     if (!selectedPost) return;
+    let cancelled = false;
     setFullContent(null);
     setLoadingContent(true);
+    setContentError(null);
     const loader = contentModules[`../content/blog/${selectedPost.slug}.md`];
     if (loader) {
       loader()
         .then((raw: string) => {
+          if (cancelled) return;
           const parsed = stripFrontmatter(raw);
           setFullContent(parsed.content || null);
           setLoadingContent(false);
         })
-        .catch(() => {
+        .catch((err: unknown) => {
+          if (cancelled) return;
+          console.error('[BlogModal] Failed to load content:', err, 'slug:', selectedPost.slug);
+          setContentError(err instanceof Error ? err.message : 'Failed to load content');
           setFullContent(null);
           setLoadingContent(false);
         });
     } else {
+      console.warn('[BlogModal] No loader found for:', `../content/blog/${selectedPost.slug}.md`);
+      setContentError(`Content not found`);
       setFullContent(null);
       setLoadingContent(false);
     }
+    return () => { cancelled = true; };
   }, [selectedPost]);
 
   useEffect(() => {

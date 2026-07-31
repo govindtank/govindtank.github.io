@@ -4,7 +4,7 @@ slug: "ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2
 date: "2026-06-03"
 excerpt: >
   Scale code quality and developer velocity with AI-augmented development workflows using LLM agents, automated testing, and intelligent code review in production environments. Explore enterprise adoption patterns, governance frameworks, and real-world benchmarks for AI-assisted CI/CD pipelines.
-coverImage: "/blogs/ai-quality-cover.avif"
+coverImage: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200"
 category: "AI"
 readTime: 18
 tags:

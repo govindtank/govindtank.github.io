@@ -9,6 +9,66 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</loc>
+    <lastmod>2026-07-30T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://govindtank.github.io/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</loc>
+    <lastmod>2026-07-29T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://govindtank.github.io/blog/typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production</loc>
+    <lastmod>2026-07-28T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://govindtank.github.io/blog/webgpu-next-generation-graphics-and-compute-for-the-browser</loc>
+    <lastmod>2026-07-28T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://govindtank.github.io/blog/ios-20-and-swift-8-what-mobile-developers-need-to-know</loc>
+    <lastmod>2026-07-21T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://govindtank.github.io/blog/flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens</loc>
+    <lastmod>2026-07-20T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</loc>
+    <lastmod>2026-07-20T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://govindtank.github.io/blog/kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026</loc>
+    <lastmod>2026-07-19T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</loc>
+    <lastmod>2026-07-18T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://govindtank.github.io/blog/flutter-impeller-rendering-engine-gpu-acceleration-2026</loc>
+    <lastmod>2026-07-17T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://govindtank.github.io/blog/top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026</loc>
+    <lastmod>2026-07-16T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://govindtank.github.io/blog/kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared-business-logic</loc>
+    <lastmod>2026-07-15T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.github.io/blog/platform-engineering-building-internal-developer-portals-that-teams-love</loc>
     <lastmod>2026-07-14T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
@@ -29,18 +89,8 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</loc>
-    <lastmod>2026-06-29T18:30:00.000Z</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://govindtank.github.io/blog/distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging</loc>
     <lastmod>2026-06-28T18:30:00.000Z</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</loc>
-    <lastmod>2026-06-27T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -79,18 +129,8 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</loc>
-    <lastmod>2026-06-15T18:30:00.000Z</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://govindtank.github.io/blog/edge-ai-running-large-language-models-on-consumer-devices-in-2026</loc>
     <lastmod>2026-06-09T18:30:00.000Z</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://govindtank.github.io/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</loc>
-    <lastmod>2026-06-04T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>

@@ -65,21 +65,33 @@ export default function BlogDetailPage() {
   // Load content
   useEffect(() => {
     if (!post) return;
+    let cancelled = false;
     setLoadingContent(true);
+    setContentError(null);
     const loader = contentModules[`../content/blog/${post.slug}.md`];
     if (loader) {
       loader()
         .then((raw: string) => {
+          if (cancelled) return;
           const parsed = stripFrontmatter(raw);
           setFullContent(parsed.content || '');
           setLoadingContent(false);
         })
-        .catch(() => { setFullContent(''); setLoadingContent(false); });
+        .catch((err: unknown) => {
+          if (cancelled) return;
+          console.error('[BlogDetail] Failed to load content:', err);
+          setContentError(err instanceof Error ? err.message : 'Failed to load content');
+          setFullContent('');
+          setLoadingContent(false);
+        });
     } else {
+      console.warn('[BlogDetail] No loader found for:', `../content/blog/${post.slug}.md`);
+      setContentError('Content loader not found');
       setFullContent('');
       setLoadingContent(false);
     }
-    window.scrollTo({ top: 0 });
+    window.scrollTo(0, 0);
+    return () => { cancelled = true; };
   }, [post]);
 
   // Track active heading for TOC

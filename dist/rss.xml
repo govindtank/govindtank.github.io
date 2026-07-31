@@ -8,8 +8,116 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jul 2026 11:12:37 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 11:15:15 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Kubernetes Sidecar Patterns for Service Mesh Observability in 2026]]></title>
+      <link>https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</guid>
+      <pubDate>Thu, 30 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Kubernetes Sidecar Patterns for Service Mesh Observability in 2026 represents o...
+]]></description>
+      <category>Cloud-Native</category>
+    </item>
+    <item>
+      <title><![CDATA[PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing]]></title>
+      <link>https://govindtank.github.io/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</guid>
+      <pubDate>Wed, 29 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing repres...
+]]></description>
+      <category>Databases</category>
+    </item>
+    <item>
+      <title><![CDATA[TypeScript 5.x Advanced Patterns: Conditional Types, Template Literals, and Mapped Types in Production]]></title>
+      <link>https://govindtank.github.io/blog/typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production</guid>
+      <pubDate>Tue, 28 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. TypeScript 5.x Advanced Patterns: Conditional Types, Template Literals, and Map...
+]]></description>
+      <category>Web-Dev</category>
+    </item>
+    <item>
+      <title><![CDATA[WebGPU: Next-Generation Graphics and Compute for the Browser]]></title>
+      <link>https://govindtank.github.io/blog/webgpu-next-generation-graphics-and-compute-for-the-browser</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/webgpu-next-generation-graphics-and-compute-for-the-browser</guid>
+      <pubDate>Tue, 28 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. WebGPU: Next-Generation Graphics and Compute for the Browser represents one of ...
+]]></description>
+      <category>Web-Dev</category>
+    </item>
+    <item>
+      <title><![CDATA[iOS 20 and Swift 8: What Mobile Developers Need to Know]]></title>
+      <link>https://govindtank.github.io/blog/ios-20-and-swift-8-what-mobile-developers-need-to-know</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/ios-20-and-swift-8-what-mobile-developers-need-to-know</guid>
+      <pubDate>Tue, 21 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. iOS 20 and Swift 8: What Mobile Developers Need to Know represents one of the m...
+]]></description>
+      <category>Mobile</category>
+    </item>
+    <item>
+      <title><![CDATA[Flutter Widget Testing Mastery: From Unit Tests to Integration Goldens]]></title>
+      <link>https://govindtank.github.io/blog/flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens</guid>
+      <pubDate>Mon, 20 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Flutter Widget Testing Mastery: From Unit Tests to Integration Goldens represen...
+]]></description>
+      <category>Flutter</category>
+    </item>
+    <item>
+      <title><![CDATA[Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines]]></title>
+      <link>https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</guid>
+      <pubDate>Mon, 20 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The integration of Large Language Models (LLMs) into software development workflows has fundamentally altered the engineering landscape by 2026. While AI assistants accelerate feature delivery, the...
+]]></description>
+      <category>AI-ML</category>
+    </item>
+    <item>
+      <title><![CDATA[Kotlin Multiplatform in Production: Sharing Business Logic Across Android, iOS, and Web in 2026]]></title>
+      <link>https://govindtank.github.io/blog/kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026</guid>
+      <pubDate>Sun, 19 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[In the landscape of software development as it stands in 2026, Kotlin Multiplatform (KMP) has transitioned from a promising prototype to an industrial standard for enterprise-grade applications. Th...
+]]></description>
+      <category>Kotlin-Multiplatform</category>
+    </item>
+    <item>
+      <title><![CDATA[Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems]]></title>
+      <link>https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</guid>
+      <pubDate>Sat, 18 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The traditional perimeter-based security model has effectively collapsed under the weight of distributed cloud infrastructure, serverless computing, and mobile-first workforces. By 2026, the indust...
+]]></description>
+      <category>Security</category>
+    </item>
+    <item>
+      <title><![CDATA[Flutter Impeller Rendering Engine: GPU Acceleration Strategies for Production Apps in 2026]]></title>
+      <link>https://govindtank.github.io/blog/flutter-impeller-rendering-engine-gpu-acceleration-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-impeller-rendering-engine-gpu-acceleration-2026</guid>
+      <pubDate>Fri, 17 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Flutter's Impeller rendering engine has reached production maturity in 2026, eliminating jank and enabling 120fps on modern devices. This deep-dive covers Impeller architecture, repaint boundary optimization, shader precompilation, and GPU acceleration patterns for shipping pixel-perfect Flutter apps.
+]]></description>
+      <category>Flutter</category>
+    </item>
+    <item>
+      <title><![CDATA[Top Free Developer Tools and AI Resources Transforming Engineering Workflows in 2026]]></title>
+      <link>https://govindtank.github.io/blog/top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026</guid>
+      <pubDate>Thu, 16 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The engineering landscape of 2026 has shifted dramatically from simple code completion to autonomous agentic workflows. As proprietary APIs become increasingly expensive and latency-sensitive, the ...
+]]></description>
+      <category>DevTools</category>
+    </item>
+    <item>
+      <title><![CDATA[Kotlin Multiplatform at Scale: Production Architecture Patterns for Shared Business Logic]]></title>
+      <link>https://govindtank.github.io/blog/kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared-business-logic</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared-business-logic</guid>
+      <pubDate>Wed, 15 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[KMP has matured beyond experimental — here's how to architect a production-grade KMP module hierarchy with dependency injection, multiplatform networking, and Compose Multiplatform UI sharing. Learn from real-world patterns that reduce boilerplate without sacrificing platform-native experience.
+]]></description>
+      <category>Kotlin-Multiplatform</category>
+    </item>
     <item>
       <title><![CDATA[Platform Engineering: Building Internal Developer Portals That Teams Love]]></title>
       <link>https://govindtank.github.io/blog/platform-engineering-building-internal-developer-portals-that-teams-love</link>
@@ -47,15 +155,6 @@
       <category>DevOps</category>
     </item>
     <item>
-      <title><![CDATA[Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines]]></title>
-      <link>https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</guid>
-      <pubDate>Mon, 29 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The landscape of software development in 2026 has fundamentally shifted from writing code manually to orchestrating and validating AI-generated logic. While Large Language Models (LLMs) have accele...
-]]></description>
-      <category>AI-ML</category>
-    </item>
-    <item>
       <title><![CDATA[Distributed Tracing with OpenTelemetry: From Instrumentation to Production Debugging]]></title>
       <link>https://govindtank.github.io/blog/distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging</guid>
@@ -63,15 +162,6 @@
       <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Distributed Tracing with OpenTelemetry: From Instrumentation to Production Debu...
 ]]></description>
       <category>Observability</category>
-    </item>
-    <item>
-      <title><![CDATA[Kubernetes Sidecar Patterns for Service Mesh Observability in 2026]]></title>
-      <link>https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</guid>
-      <pubDate>Sat, 27 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The service mesh ecosystem has undergone a significant paradigm shift over the last two years, moving from heavy-weight sidecar proxies to lightweight kernel-level instrumentation. In 2026, the con...
-]]></description>
-      <category>Cloud-Native</category>
     </item>
     <item>
       <title><![CDATA[Rust for Systems Programming in 2026: Memory Safety, Concurrency, and Ecosystem Growth]]></title>
@@ -137,15 +227,6 @@
       <category>Web-Dev</category>
     </item>
     <item>
-      <title><![CDATA[Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems]]></title>
-      <link>https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</guid>
-      <pubDate>Mon, 15 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The perimeter-based security model is obsolete. In the 2026 landscape, organizations operate across hybrid environments where workloads span public clouds, private data centers, and edge nodes. This deep guide covers Zero Trust core principles, cloud-native implementation patterns, micro-segmentation, workload identity for Kubernetes, service mesh security (Istio, Linkerd, Consul Connect), policy engines (OPA/Cedar), continuous verification, API security, data plane design, compliance mapping, and real-world case studies with code examples and architecture diagrams.
-]]></description>
-      <category>Zero Trust</category>
-    </item>
-    <item>
       <title><![CDATA[Edge AI: Running Large Language Models on Consumer Devices in 2026]]></title>
       <link>https://govindtank.github.io/blog/edge-ai-running-large-language-models-on-consumer-devices-in-2026</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/edge-ai-running-large-language-models-on-consumer-devices-in-2026</guid>
@@ -153,15 +234,6 @@
       <description><![CDATA[The trajectory of artificial intelligence has shifted dramatically over the last three years. By 2026, the paradigm of "cloud-only" inference is rapidly becoming obsolete for sensitive or latency-critical applications. This deep-dive explores the full ecosystem — from quantization techniques and on-device inference engines to hardware benchmarks and hybrid architectures — that makes running LLMs on consumer devices not just possible but preferable.
 ]]></description>
       <category>Edge-AI</category>
-    </item>
-    <item>
-      <title><![CDATA[PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing]]></title>
-      <link>https://govindtank.github.io/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</guid>
-      <pubDate>Thu, 04 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[PostgreSQL 18 redefines enterprise data architecture by delivering native Hybrid Transactional-Analytical Processing (HTAP) capabilities that challenge dedicated OLAP systems like ClickHouse, DuckDB, and Snowflake. This deep dive covers new parallel query improvements, columnar storage extensions, incremental materialized views, JIT compilation enhancements, pg_analytics and pg_duckdb extensions, S3/object store integration, practical HTAP patterns, benchmarking data, and real-world case studies demonstrating how a single PostgreSQL instance can replace polyglot persistence for mixed workloads.
-]]></description>
-      <category>Databases</category>
     </item>
     <item>
       <title><![CDATA[AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026]]></title>

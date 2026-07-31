@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 41,
-  "lastTopic": "Platform Engineering: Building Internal Developer Portals That Teams Love",
-  "todayCount": 33,
-  "lastGenerated": "2026-07-15T02:37:30Z",
+  "totalCreated": 52,
+  "lastTopic": "Kubernetes Sidecar Patterns for Service Mesh Observability in 2026",
+  "todayCount": 44,
+  "lastGenerated": "2026-07-31T05:44:44Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -96,9 +96,9 @@
     "zero-trust-architecture-implementing-security-in-distributed-cloud-systems": {
       "title": "Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems",
       "slug": "zero-trust-architecture-implementing-security-in-distributed-cloud-systems",
-      "date": "June 16, 2026",
+      "date": "July 19, 2026",
       "tag": "Security",
-      "wordCount": 684,
+      "wordCount": 1197,
       "status": "published"
     },
     "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems": {
@@ -112,9 +112,9 @@
     "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing": {
       "title": "PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing",
       "slug": "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing",
-      "date": "June 05, 2026",
+      "date": "July 30, 2026",
       "tag": "Databases",
-      "wordCount": 946,
+      "wordCount": 1043,
       "status": "published"
     },
     "react-server-components-production-patterns-for-high-performance-web-apps": {
@@ -184,9 +184,9 @@
     "kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026": {
       "title": "Kubernetes Sidecar Patterns for Service Mesh Observability in 2026",
       "slug": "kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026",
-      "date": "June 28, 2026",
+      "date": "July 31, 2026",
       "tag": "Cloud-Native",
-      "wordCount": 1118,
+      "wordCount": 1043,
       "status": "published"
     },
     "distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging": {
@@ -200,9 +200,9 @@
     "testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines": {
       "title": "Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines",
       "slug": "testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines",
-      "date": "June 30, 2026",
+      "date": "July 21, 2026",
       "tag": "AI-ML",
-      "wordCount": 1291,
+      "wordCount": 1278,
       "status": "published"
     },
     "finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments": {
@@ -228,6 +228,62 @@
       "tag": "Architecture",
       "wordCount": 829,
       "status": "published"
+    },
+    "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026": {
+      "title": "Top Free Developer Tools and AI Resources Transforming Engineering Workflows in 2026",
+      "slug": "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026",
+      "date": "July 17, 2026",
+      "tag": "DevTools",
+      "wordCount": 1288,
+      "status": "published"
+    },
+    "flutter-impeller-rendering-engine-gpu-acceleration-2026": {
+      "title": "Flutter Impeller Rendering Engine: GPU Acceleration Strategies for Production Apps in 2026",
+      "slug": "flutter-impeller-rendering-engine-gpu-acceleration-2026",
+      "date": "July 18, 2026",
+      "tag": "Flutter",
+      "wordCount": 1670,
+      "status": "published"
+    },
+    "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026": {
+      "title": "Kotlin Multiplatform in Production: Sharing Business Logic Across Android, iOS, and Web in 2026",
+      "slug": "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026",
+      "date": "July 20, 2026",
+      "tag": "Kotlin-Multiplatform",
+      "wordCount": 1215,
+      "status": "published"
+    },
+    "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens": {
+      "title": "Flutter Widget Testing Mastery: From Unit Tests to Integration Goldens",
+      "slug": "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens",
+      "date": "July 21, 2026",
+      "tag": "Flutter",
+      "wordCount": 1046,
+      "status": "published"
+    },
+    "ios-20-and-swift-8-what-mobile-developers-need-to-know": {
+      "title": "iOS 20 and Swift 8: What Mobile Developers Need to Know",
+      "slug": "ios-20-and-swift-8-what-mobile-developers-need-to-know",
+      "date": "July 22, 2026",
+      "tag": "Mobile",
+      "wordCount": 1049,
+      "status": "published"
+    },
+    "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production": {
+      "title": "TypeScript 5.x Advanced Patterns: Conditional Types, Template Literals, and Mapped Types in Production",
+      "slug": "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production",
+      "date": "July 29, 2026",
+      "tag": "Web-Dev",
+      "wordCount": 1055,
+      "status": "published"
+    },
+    "webgpu-next-generation-graphics-and-compute-for-the-browser": {
+      "title": "WebGPU: Next-Generation Graphics and Compute for the Browser",
+      "slug": "webgpu-next-generation-graphics-and-compute-for-the-browser",
+      "date": "July 29, 2026",
+      "tag": "Web-Dev",
+      "wordCount": 1040,
+      "status": "published"
     }
   },
   "images": {
@@ -242,7 +298,7 @@
     "flutter-performance-optimization-achieving-60-fps-on-mid-range-devices": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
     "flutter-ai-integration-machine-learning-2026": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200",
     "building-scalable-microservices-with-fastapi-and-event-driven-architecture": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
-    "zero-trust-architecture-implementing-security-in-distributed-cloud-systems": "https://images.unsplash.com/photo-1555949963-ff9fe2c54ed7?auto=format&fit=crop&q=80&w=1200",
+    "zero-trust-architecture-implementing-security-in-distributed-cloud-systems": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
     "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
     "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     "react-server-components-production-patterns-for-high-performance-web-apps": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
@@ -258,7 +314,14 @@
     "testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200",
     "finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
     "css-container-queries-and-style-queries-responsive-design-beyond-media-queries": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "building-real-time-collaborative-apps-with-crdts-and-operational-transformation": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200"
+    "building-real-time-collaborative-apps-with-crdts-and-operational-transformation": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
+    "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+    "flutter-impeller-rendering-engine-gpu-acceleration-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+    "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
+    "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+    "ios-20-and-swift-8-what-mobile-developers-need-to-know": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
+    "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+    "webgpu-next-generation-graphics-and-compute-for-the-browser": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
   },
   "migration_notes": {
     "low_quality_removed_2026-06-18": [
