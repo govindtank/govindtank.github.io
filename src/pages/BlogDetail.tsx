@@ -31,6 +31,7 @@ export default function BlogDetailPage() {
   const [copied, setCopied] = useState(false);
   const [fullContent, setFullContent] = useState<string | null>(null);
   const [loadingContent, setLoadingContent] = useState(false);
+  const [contentError, setContentError] = useState<string | null>(null);
   const [showToc, setShowToc] = useState(false);
   const [activeHeading, setActiveHeading] = useState('');
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -393,6 +394,12 @@ export default function BlogDetailPage() {
                 <div className="flex flex-col items-center justify-center py-32">
                   <Loader className="w-8 h-8 text-sky-400 animate-spin mb-4" />
                   <p className="text-slate-400 text-sm font-mono">Loading deep dive markdown...</p>
+                </div>
+              ) : contentError ? (
+                <div className="text-center py-24 bg-slate-900/50 rounded-2xl border border-white/10">
+                  <Terminal className="w-12 h-12 text-amber-500 mx-auto mb-4" />
+                  <p className="text-amber-400 font-bold mb-2">Content failed to load</p>
+                  <p className="text-slate-400 text-sm">{contentError}</p>
                 </div>
               ) : (
                 <div className="blog-content">

@@ -50,6 +50,7 @@ export interface Project {
   description: string;
   tags: string[];
   image: string;
+  link?: string;
 }
 
 export interface Testimonial {
