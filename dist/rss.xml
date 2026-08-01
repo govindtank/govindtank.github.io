@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jul 2026 11:32:57 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 02:36:21 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Free Developer Tools That Supercharge Your 2026 Workflow]]></title>
+      <link>https://govindtank.github.io/blog/free-developer-tools-that-supercharge-your-2026-workflow</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/free-developer-tools-that-supercharge-your-2026-workflow</guid>
+      <pubDate>Fri, 31 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The software development landscape of 2026 has fundamentally shifted away from proprietary, cloud-bound ecosystems toward local-first architectures. As enterprise licensing costs rise and data sove...
+]]></description>
+      <category>DevTools</category>
+    </item>
     <item>
       <title><![CDATA[Kubernetes Sidecar Patterns for Service Mesh Observability in 2026]]></title>
       <link>https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</link>
