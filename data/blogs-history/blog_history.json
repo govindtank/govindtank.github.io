@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 53,
-  "lastTopic": "Free Developer Tools That Supercharge Your 2026 Workflow",
-  "todayCount": 45,
-  "lastGenerated": "2026-08-01T02:36:21Z",
+  "totalCreated": 54,
+  "lastTopic": "Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026",
+  "todayCount": 46,
+  "lastGenerated": "2026-08-02T02:37:49Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -292,6 +292,14 @@
       "tag": "DevTools",
       "wordCount": 1126,
       "status": "published"
+    },
+    "dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026": {
+      "title": "Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026",
+      "slug": "dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026",
+      "date": "August 02, 2026",
+      "tag": "Flutter",
+      "wordCount": 1055,
+      "status": "published"
     }
   },
   "images": {
@@ -330,7 +338,8 @@
     "ios-20-and-swift-8-what-mobile-developers-need-to-know": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
     "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
     "webgpu-next-generation-graphics-and-compute-for-the-browser": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "free-developer-tools-that-supercharge-your-2026-workflow": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
+    "free-developer-tools-that-supercharge-your-2026-workflow": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+    "dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
   },
   "migration_notes": {
     "low_quality_removed_2026-06-18": [
