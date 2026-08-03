@@ -20,7 +20,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import stripFrontmatter from '../lib/stripFrontmatter';
-import MarkdownRenderer from '../components/MarkdownRenderer';
+import MarkdownRenderer, { slugifyHeading } from '../components/MarkdownRenderer';
 import { useSEO } from '../hooks/useSEO';
 
 const contentModules = import.meta.glob<string>('../content/blog/*.md', { query: '?raw', import: 'default' });
@@ -31,6 +31,7 @@ export default function BlogDetailPage() {
   const [copied, setCopied] = useState(false);
   const [fullContent, setFullContent] = useState<string | null>(null);
   const [loadingContent, setLoadingContent] = useState(false);
+  const [contentError, setContentError] = useState<string | null>(null);
   const [showToc, setShowToc] = useState(false);
   const [activeHeading, setActiveHeading] = useState('');
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -105,9 +106,9 @@ export default function BlogDetailPage() {
           }
         });
       },
-      { rootMargin: '-80px 0px -80% 0px' }
+      { rootMargin: '-100px 0px -70% 0px' }
     );
-    const headings = document.querySelectorAll('h2, h3');
+    const headings = document.querySelectorAll('h2[id], h3[id]');
     headings.forEach((h) => observer.observe(h));
     return () => observer.disconnect();
   }, [fullContent, loadingContent]);
@@ -185,11 +186,23 @@ export default function BlogDetailPage() {
     while ((match = headingRegex.exec(cleaned)) !== null) {
       const level = match[1].length;
       const text = match[2].trim();
-      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-      items.push({ level, text, id });
+      const id = slugifyHeading(text);
+      if (id) {
+        items.push({ level, text, id });
+      }
     }
     return items;
   }, [fullContent]);
+
+  const handleTocClick = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+      setActiveHeading(id);
+      window.history.replaceState(null, '', `#${id}`);
+    }
+  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -213,7 +226,7 @@ export default function BlogDetailPage() {
         <div className="mb-8 flex items-center justify-between">
           <button
             onClick={() => navigate('/blog')}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900/80 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white transition-all text-xs font-mono uppercase tracking-wider"
+            className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-white/10 text-slate-300 hover:text-white transition-all text-xs font-mono uppercase tracking-wider font-semibold"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back to Archive</span>
@@ -321,7 +334,7 @@ export default function BlogDetailPage() {
                 aria-label="Toggle Table of Contents"
                 className="w-full flex items-center justify-between gap-2 px-4 py-3 bg-slate-900/90 border border-white/10 rounded-xl text-sm text-slate-300 hover:text-white transition-colors"
               >
-                <span className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-sky-400">
+                <span className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-sky-400 font-bold">
                   <List className="w-4 h-4" />
                   Table of Contents
                 </span>
@@ -334,14 +347,13 @@ export default function BlogDetailPage() {
                       key={item.id}
                       href={`#${item.id}`}
                       onClick={(e) => {
-                        e.preventDefault();
-                        document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
+                        handleTocClick(e, item.id);
                         setShowToc(false);
                       }}
-                      className={`block px-3 py-1.5 text-xs rounded-lg transition-colors ${
+                      className={`block px-3 py-2 text-xs rounded-lg transition-all ${
                         item.level === 3 ? 'ml-4 text-slate-400' : 'text-slate-200 font-semibold'
                       } ${
-                        activeHeading === item.id ? 'text-sky-400 bg-sky-500/10' : 'hover:bg-white/5'
+                        activeHeading === item.id ? 'text-sky-400 bg-sky-500/10 font-bold' : 'hover:bg-white/5'
                       }`}
                     >
                       {item.text}
@@ -368,11 +380,8 @@ export default function BlogDetailPage() {
                     <a
                       key={item.id}
                       href={`#${item.id}`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
-                      }}
-                      className={`block text-xs py-1.5 pl-3 border-l-2 transition-all rounded-r-md ${
+                      onClick={(e) => handleTocClick(e, item.id)}
+                      className={`block text-xs py-2 pl-3 border-l-2 transition-all rounded-r-md cursor-pointer ${
                         item.level === 3 ? 'ml-3 pl-3 text-slate-400' : 'font-medium'
                       } ${
                         activeHeading === item.id
@@ -393,6 +402,11 @@ export default function BlogDetailPage() {
                 <div className="flex flex-col items-center justify-center py-32">
                   <Loader className="w-8 h-8 text-sky-400 animate-spin mb-4" />
                   <p className="text-slate-400 text-sm font-mono">Loading deep dive markdown...</p>
+                </div>
+              ) : contentError ? (
+                <div className="p-8 bg-slate-900/80 rounded-2xl border border-red-500/30 text-center">
+                  <p className="text-red-400 font-bold mb-2 font-mono">Error loading article content</p>
+                  <p className="text-xs text-slate-400">{contentError}</p>
                 </div>
               ) : (
                 <div className="blog-content">

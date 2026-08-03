@@ -42,6 +42,23 @@ interface MarkdownRendererProps {
   content: string;
 }
 
+export function extractText(node: any): string {
+  if (typeof node === 'string') return node;
+  if (typeof node === 'number') return String(node);
+  if (Array.isArray(node)) return node.map(extractText).join('');
+  if (node && typeof node === 'object' && node.props && node.props.children) {
+    return extractText(node.props.children);
+  }
+  return '';
+}
+
+export function slugifyHeading(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
 export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
   const [copiedIndex, setCopiedIndex] = useState<string | null>(null);
   const [activeImage, setActiveImage] = useState<{ src: string; alt: string } | null>(null);
@@ -107,6 +124,31 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
               key={`md-${blockIdx}`}
               remarkPlugins={[remarkGfm]}
               components={{
+                h2({ children }: any) {
+                  const text = extractText(children);
+                  const id = slugifyHeading(text);
+                  return (
+                    <h2 id={id} className="scroll-mt-24 text-xl sm:text-2xl font-bold text-slate-100 mt-10 mb-4 tracking-tight border-b border-white/5 pb-2">
+                      {children}
+                    </h2>
+                  );
+                },
+                h3({ children }: any) {
+                  const text = extractText(children);
+                  const id = slugifyHeading(text);
+                  return (
+                    <h3 id={id} className="scroll-mt-24 text-lg font-semibold text-slate-200 mt-8 mb-3">
+                      {children}
+                    </h3>
+                  );
+                },
+                h1({ children }: any) {
+                  return (
+                    <h1 className="text-2xl sm:text-3xl font-extrabold text-white mt-10 mb-4 tracking-tight border-b border-white/10 pb-3">
+                      {children}
+                    </h1>
+                  );
+                },
                 code({ node, inline, className, children, ...props }: any) {
                   const match = /language-(\w+)/.exec(className || '');
                   const language = match ? match[1].toLowerCase() : '';
@@ -232,28 +274,6 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
                     <blockquote className="my-6 border-l-4 border-amber-500/80 bg-amber-500/5 pl-4 pr-3 py-3 rounded-r-lg text-slate-300 italic font-sans">
                       {children}
                     </blockquote>
-                  );
-                },
-
-                h1({ children }: any) {
-                  return (
-                    <h1 className="text-2xl sm:text-3xl font-extrabold text-white mt-10 mb-4 tracking-tight border-b border-white/10 pb-3">
-                      {children}
-                    </h1>
-                  );
-                },
-                h2({ children }: any) {
-                  return (
-                    <h2 className="text-xl sm:text-2xl font-bold text-slate-100 mt-8 mb-4 tracking-tight">
-                      {children}
-                    </h2>
-                  );
-                },
-                h3({ children }: any) {
-                  return (
-                    <h3 className="text-lg font-semibold text-slate-200 mt-6 mb-3">
-                      {children}
-                    </h3>
                   );
                 },
                 p({ children }: any) {
