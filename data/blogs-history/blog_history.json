@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 52,
-  "lastTopic": "Kubernetes Sidecar Patterns for Service Mesh Observability in 2026",
-  "todayCount": 44,
-  "lastGenerated": "2026-07-31T05:44:44Z",
+  "totalCreated": 55,
+  "lastTopic": "Flutter 4 and Impeller: The Next Generation of Cross-Platform UI Performance",
+  "todayCount": 47,
+  "lastGenerated": "2026-08-03T02:39:52Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -284,6 +284,30 @@
       "tag": "Web-Dev",
       "wordCount": 1040,
       "status": "published"
+    },
+    "free-developer-tools-that-supercharge-your-2026-workflow": {
+      "title": "Free Developer Tools That Supercharge Your 2026 Workflow",
+      "slug": "free-developer-tools-that-supercharge-your-2026-workflow",
+      "date": "August 01, 2026",
+      "tag": "DevTools",
+      "wordCount": 1126,
+      "status": "published"
+    },
+    "dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026": {
+      "title": "Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026",
+      "slug": "dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026",
+      "date": "August 02, 2026",
+      "tag": "Flutter",
+      "wordCount": 1055,
+      "status": "published"
+    },
+    "flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance": {
+      "title": "Flutter 4 and Impeller: The Next Generation of Cross-Platform UI Performance",
+      "slug": "flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance",
+      "date": "August 03, 2026",
+      "tag": "Flutter",
+      "wordCount": 1259,
+      "status": "published"
     }
   },
   "images": {
@@ -321,7 +345,10 @@
     "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
     "ios-20-and-swift-8-what-mobile-developers-need-to-know": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
     "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "webgpu-next-generation-graphics-and-compute-for-the-browser": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
+    "webgpu-next-generation-graphics-and-compute-for-the-browser": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+    "free-developer-tools-that-supercharge-your-2026-workflow": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+    "dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+    "flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
   },
   "migration_notes": {
     "low_quality_removed_2026-06-18": [

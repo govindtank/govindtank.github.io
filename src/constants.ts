@@ -50,6 +50,7 @@ export interface Project {
   description: string;
   tags: string[];
   image: string;
+  link?: string;
 }
 
 export interface Testimonial {
@@ -149,7 +150,7 @@ export const PROJECTS: Project[] = [
     title: "Autozon IoT",
     description: "Real-time IoT monitoring application using MQTT for vehicle hardware communication. Optimizes battery consumption while maintaining persistent hardware-to-cloud connections.",
     tags: ["Flutter", "MQTT", "IoT", "Hardware"],
-    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0dbL"
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
   },
   {
     title: "Fastrrr-Floating Apps",

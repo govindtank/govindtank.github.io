@@ -152,6 +152,66 @@ TOPICS = [
         "image_key": "ai-ml",
         "desc": "AI code generation benchmarks, productivity measurement, code review with AI, and best practices"
     },
+    {
+        "title": "Flutter 4 and Impeller: The Next Generation of Cross-Platform UI Performance",
+        "tag": "Flutter",
+        "image_key": "flutter",
+        "desc": "Impeller rendering engine, Flutter 4 features, shader compilation elimination, and platform performance gains"
+    },
+    {
+        "title": "Kotlin Multiplatform: Sharing Business Logic Across Android, iOS, and Desktop",
+        "tag": "Kotlin",
+        "image_key": "mobile",
+        "desc": "KMP architecture, expect/actual patterns, shared ViewModels, and CI strategies for multiplatform apps"
+    },
+    {
+        "title": "Compose Multiplatform in Production: UI Sharing Beyond Android",
+        "tag": "Android",
+        "image_key": "mobile",
+        "desc": "Jetpack Compose for desktop, iOS, and web; state hoisting, theming, and platform-specific integration"
+    },
+    {
+        "title": "Agentic AI Systems: Designing Reliable Multi-Agent Workflows in 2026",
+        "tag": "Agentic-AI",
+        "image_key": "robot",
+        "desc": "Multi-agent orchestration, tool-use patterns, memory architectures, and guardrails for autonomous agents"
+    },
+    {
+        "title": "Local-First Mobile Apps: Offline Sync Architectures with CRDTs and SQLite",
+        "tag": "Mobile",
+        "image_key": "mobile",
+        "desc": "Local-first design, offline-first sync, conflict-free data structures, and background sync for mobile"
+    },
+    {
+        "title": "MCP and the Rise of Model Context Protocol: Standardizing AI Tool Integration",
+        "tag": "AI-Engineering",
+        "image_key": "network",
+        "desc": "MCP servers, client architecture, tool discovery, and building AI assistants with standardized context"
+    },
+    {
+        "title": "Building Efficient Android Apps with Baseline Profiles and Macrobenchmark",
+        "tag": "Android",
+        "image_key": "code",
+        "desc": "Baseline profiles, startup optimization, Macrobenchmark testing, and frame timing analysis in Android"
+    },
+    {
+        "title": "Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026",
+        "tag": "Flutter",
+        "image_key": "code",
+        "desc": "Dart language features, records and patterns, native interop, and ecosystem tooling improvements"
+    },
+    {
+        "title": "Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones",
+        "tag": "Edge-AI",
+        "image_key": "ai-ml",
+        "desc": "SLM quantization, on-device inference engines, model distillation, and mobile NPU acceleration"
+    },
+    {
+        "title": "Free Developer Tools That Supercharge Your 2026 Workflow",
+        "tag": "DevTools",
+        "image_key": "data",
+        "desc": "Open-source CLI tools, local AI coding assistants, terminal multiplexers, and productivity utilities"
+    },
 ]
 
 

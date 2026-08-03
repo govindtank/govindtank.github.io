@@ -11,6 +11,33 @@
     <lastBuildDate>Mon, 03 Aug 2026 08:39:11 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title><![CDATA[Flutter 4 and Impeller: The Next Generation of Cross-Platform UI Performance]]></title>
+      <link>https://govindtank.github.io/blog/flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance</guid>
+      <pubDate>Sun, 02 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The mobile application landscape in 2026 has shifted dramatically regarding rendering fidelity and performance consistency. For senior engineers and architects, the transition from Skia to Impeller...
+]]></description>
+      <category>Flutter</category>
+    </item>
+    <item>
+      <title><![CDATA[Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026]]></title>
+      <link>https://govindtank.github.io/blog/dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026</guid>
+      <pubDate>Sat, 01 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026 represent...
+]]></description>
+      <category>Flutter</category>
+    </item>
+    <item>
+      <title><![CDATA[Free Developer Tools That Supercharge Your 2026 Workflow]]></title>
+      <link>https://govindtank.github.io/blog/free-developer-tools-that-supercharge-your-2026-workflow</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/free-developer-tools-that-supercharge-your-2026-workflow</guid>
+      <pubDate>Fri, 31 Jul 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The software development landscape of 2026 has fundamentally shifted away from proprietary, cloud-bound ecosystems toward local-first architectures. As enterprise licensing costs rise and data sove...
+]]></description>
+      <category>DevTools</category>
+    </item>
+    <item>
       <title><![CDATA[Kubernetes Sidecar Patterns for Service Mesh Observability in 2026]]></title>
       <link>https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</guid>

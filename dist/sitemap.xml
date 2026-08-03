@@ -9,6 +9,21 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.github.io/blog/flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance</loc>
+    <lastmod>2026-08-02T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://govindtank.github.io/blog/dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026</loc>
+    <lastmod>2026-08-01T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://govindtank.github.io/blog/free-developer-tools-that-supercharge-your-2026-workflow</loc>
+    <lastmod>2026-07-31T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</loc>
     <lastmod>2026-07-30T18:30:00.000Z</lastmod>
     <priority>0.7</priority>

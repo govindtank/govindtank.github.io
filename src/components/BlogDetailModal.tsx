@@ -15,6 +15,7 @@ const contentModules = import.meta.glob<string>('../content/blog/*.md', { query:
 export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailModalProps) {
   const [fullContent, setFullContent] = useState<string | null>(null);
   const [loadingContent, setLoadingContent] = useState(false);
+  const [contentError, setContentError] = useState<string | null>(null);
   const [showToc, setShowToc] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -249,6 +250,12 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
                   <div className="text-center py-24">
                     <Loader className="w-10 h-10 text-sky-400 animate-spin mx-auto mb-4" />
                     <p className="text-slate-400 font-mono text-sm animate-pulse">Loading content...</p>
+                  </div>
+                ) : contentError ? (
+                  <div className="text-center py-24">
+                    <Terminal className="w-12 h-12 text-amber-500 mx-auto mb-4" />
+                    <p className="text-amber-400 font-bold mb-2">Content failed to load</p>
+                    <p className="text-slate-400 text-sm">{contentError}</p>
                   </div>
                 ) : fullContent ? (
                   <MarkdownRenderer content={cleanContent(fullContent)} />
