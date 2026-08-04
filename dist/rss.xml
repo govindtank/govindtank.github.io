@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Aug 2026 08:46:22 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 06:22:26 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Agentic AI Systems: Designing Reliable Multi-Agent Workflows in 2026]]></title>
+      <link>https://govindtank.github.io/blog/agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026</guid>
+      <pubDate>Mon, 03 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Agentic AI Systems: Designing Reliable Multi-Agent Workflows in 2026 represents...
+]]></description>
+      <category>Agentic-AI</category>
+    </item>
     <item>
       <title><![CDATA[Flutter 4 and Impeller: The Next Generation of Cross-Platform UI Performance]]></title>
       <link>https://govindtank.github.io/blog/flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance</link>

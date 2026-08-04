@@ -1,9 +1,9 @@
 {
   "version": "2.1",
-  "totalCreated": 55,
-  "lastTopic": "Flutter 4 and Impeller: The Next Generation of Cross-Platform UI Performance",
-  "todayCount": 47,
-  "lastGenerated": "2026-08-03T02:39:52Z",
+  "totalCreated": 56,
+  "lastTopic": "Agentic AI Systems: Designing Reliable Multi-Agent Workflows in 2026",
+  "todayCount": 48,
+  "lastGenerated": "2026-08-04T06:22:26Z",
   "blogs": {
     "kotlin-multiplatform-evolution-in-2026": {
       "title": "The Evolution of Kotlin Multiplatform in 2026",
@@ -308,6 +308,14 @@
       "tag": "Flutter",
       "wordCount": 1259,
       "status": "published"
+    },
+    "agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026": {
+      "title": "Agentic AI Systems: Designing Reliable Multi-Agent Workflows in 2026",
+      "slug": "agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026",
+      "date": "August 04, 2026",
+      "tag": "Agentic-AI",
+      "wordCount": 1043,
+      "status": "published"
     }
   },
   "images": {
@@ -348,7 +356,8 @@
     "webgpu-next-generation-graphics-and-compute-for-the-browser": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
     "free-developer-tools-that-supercharge-your-2026-workflow": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
     "dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
+    "flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+    "agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200"
   },
   "migration_notes": {
     "low_quality_removed_2026-06-18": [
