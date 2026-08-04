@@ -1,6 +1,6 @@
-import { StrictMode } from 'react';
+import { StrictMode, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import App from './App.tsx';
 import Layout from './components/Layout.tsx';
 import BlogList from './pages/BlogList.tsx';
@@ -12,9 +12,19 @@ if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
 
+// Track SPA route changes in GoatCounter
+function TrackPageViews() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    (window as any).goatcounter?.count?.();
+  }, [pathname]);
+  return null;
+}
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
+      <TrackPageViews />
       <Routes>
         <Route path="/" element={<App />} />
         <Route element={<Layout />}>

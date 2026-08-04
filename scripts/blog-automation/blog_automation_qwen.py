@@ -14,7 +14,7 @@ Author: Govind Tank
 License: MIT
 """
 
-import json, os, sys, re, time, subprocess, random, urllib.request, urllib.error
+import json, os, sys, re, time, subprocess, random, urllib.request, urllib.error, urllib.parse
 from datetime import datetime, timezone
 
 # ======= CONFIGURATION =======
@@ -660,6 +660,21 @@ def count_words(text):
     return len(text.split())
 
 
+def open_linkedin_share(slug):
+    """Semi-auto LinkedIn share: build prefilled composer link, open in browser.
+
+    Official LinkedIn API can't post to personal profiles (deprecated 2023);
+    Company Pages need a LinkedIn app + OAuth. This opens the share composer
+    with the post URL prefilled — one click to Post.
+    """
+    post_url = f"https://govindtank.github.io/blog/{slug}"
+    share_url = "https://www.linkedin.com/sharing/share-offsite/?url=" + urllib.parse.quote(post_url, safe="")
+    log(f"LinkedIn share link: {share_url}")
+    if sys.platform == "darwin":
+        subprocess.Popen(["open", share_url])
+    return share_url
+
+
 def main():
     print("=" * 70)
     print("  Qwen Blog Automation v3.0")
@@ -728,6 +743,9 @@ def main():
     # Git commit and push
     log("Committing and pushing to GitHub...")
     push_ok = commit_and_push(title, slug)
+    share_url = ""
+    if push_ok:
+        share_url = open_linkedin_share(slug)
 
     print()
     print("=" * 70)
@@ -737,6 +755,8 @@ def main():
     print(f"  Total: {current_count + 1}/{MAX_BLOG_COUNT}")
     print(f"  Push:  {'✅ Success' if push_ok else '⚠️  Failed (commit exists locally)'}")
     print(f"  URL:   https://govindtank.github.io/blog/{slug}")
+    if share_url:
+        print(f"  LinkedIn: {share_url}")
     print("=" * 70)
 
 
