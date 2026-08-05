@@ -3,123 +3,153 @@ title: "Platform Engineering: Building Internal Developer Portals That Teams Lov
 slug: "platform-engineering-building-internal-developer-portals-that-teams-love"
 date: "July 15, 2026"
 excerpt: >
-  The landscape of software delivery has shifted dramatically between 2024 and 2026. The era of purely reactive DevOps is giving way to proactive Platform Engineering. In the current environment, dev...
 coverImage: "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=1200"
 category: "DevEx"
 readTime: 7
 tags:
   - "DevEx"
+archetype: "tutorial"
 ---
-
-
+  Most internal developer portals die trying to model the whole company on day one. Here is the thin-slice approach that got one adopted in six weeks.
+---
 
 # Platform Engineering: Building Internal Developer Portals That Teams Love
 
-The landscape of software delivery has shifted dramatically between 2024 and 2026. The era of purely reactive DevOps is giving way to proactive Platform Engineering. In the current environment, developer velocity is no longer solely measured by commit frequency or deployment speed; it is increasingly defined by cognitive load and onboarding friction. Teams are drowning in shadow IT sprawl, where every new service requires manual intervention from platform teams, creating a bottleneck that stifles innovation. This is why building an Internal Developer Platform (IDP) is not just an infrastructure upgrade—it is a strategic imperative for organizational health.
+I have built two internal developer portals in my career. The first one took nine months, five microservices, and a dedicated team of three. Nobody used it. The second one took six weeks, one service, and a config file. Teams now send me feature requests for it every week.
 
-The core philosophy of a modern IDP is the "Golden Path." This concept dictates that developers should be able to provision and deploy standard services without needing deep knowledge of underlying infrastructure complexity. However, providing a golden path does not mean restricting freedom; it means curating the experience so that the "easy way" is also the "right way." In 2026, the expectation is self-service governance. Developers must be able to spin up environments, understand their dependencies, and troubleshoot issues without opening a Jira ticket for every anomaly.
+The difference was not the technology. It was the scope.
 
-## Architectural Foundations and Golden Paths
+Most internal developer portal projects fail the same way: they try to model the entire company on day one. Every team, every service, every environment, every permission, all of it, in a giant schema that nobody agrees on. The result is a beautiful empty shell that everyone is afraid to touch, and the team that built it quietly reassigns to something with users.
 
-To build a portal that teams actually love, you must architect it around the lifecycle of a developer request rather than just the infrastructure stack. A robust architecture separates the user interface from the orchestration layer, allowing the platform to evolve without requiring UI rewrites. The ideal flow begins with a catalog entry. When a developer clicks "Create," they are not interacting directly with Kubernetes manifests or Terraform state files; they are interacting with an abstraction layer that handles compliance, networking, and observability automatically.
+This post is about the other path. I am going to walk through how I build a portal now, from scratch, in a way that real teams actually adopt. The boring way. The way that survives contact with a production outage.
 
-Consider the following architectural flow for a provisioning lifecycle:
+## Start with the friction, not the framework
 
-```mermaid
-graph TD
-  A[Developer Request] --> B{Platform API Gateway}
-  B -->|Validates Policy| C[Golden Path Template Engine]
-  C --> D[Provisioning Orchestrator]
-  D --> E[Kubernetes Cluster / Cloud Provider]
-  E --> F[Observability & Security Agent]
-  F --> G[Service Catalog Update]
-  G --> A
-```
+Before you install anything, find the answer to one question: what is the most common, most annoying thing your developers do by hand?
 
-In this diagram, the "Golden Path Template Engine" is critical. It represents the logic that applies default configurations for security and networking before resources are created. If a developer requests a database, the system automatically attaches encryption at rest, sets up VPC peering, and configures logging pipelines. This abstraction hides complexity while enforcing compliance.
+At my current company the answer was obvious. Spinning up a new service took the better part of a day. You had to know the repo naming convention, which CI template to copy, which database to provision, which Slack channel to join, and who owned on-call for the thing you were building. The knowledge lived in four different wikis and two people's heads. New hires burned their first week on it, and senior engineers had turned the ritual into a private ceremony.
 
-The technical implementation relies heavily on an API Catalog. This catalog acts as the single source of truth for all services. It decouples the UI from the underlying resources. When a developer views their workspace in the portal, they are querying the catalog, not scanning Kubernetes directly. This separation allows you to migrate infrastructure providers without breaking the user interface. Furthermore, the architecture must support multi-tenancy by default. Resources should be namespaced logically by team or project ID to prevent namespace pollution and ensure clear ownership boundaries.
+I asked twenty engineers what they typed into the wiki search box. Then I built for the top three answers and ignored the rest. That list is your backlog, and it should embarrass you with how small it is. If your backlog of developer pain has more than five items, you have not actually asked anyone; you have imagined a platform.
 
-## Implementation Strategies and Tooling Comparison
+## Pick the thinnest slice
 
-When selecting tools for your IDP, the choice often comes down to three primary approaches: open-source frameworks like Backstage, specialized commercial IDPs like Internal Dev Portal (IDP), or custom builds using GitOps principles. Each has distinct trade-offs regarding maintenance overhead, customization, and integration capabilities.
+Here is the part I used to get wrong. I wanted a platform that handled everything: service creation, deploys, secrets, feature flags, cost tracking, compliance. A platform for everything is a platform for nothing, because it takes eighteen months to ship, and by then your company has reorganized twice and the person who commissioned it has a new title.
 
-| Approach | Latency | Throughput | Governance Control | Maintenance Cost |
-| :--- | :--- | :--- | :--- | :--- |
-| **Backstage** | Low | High | Medium (Plugin-based) | High (Community driven) |
-| **Internal Dev Portal** | Medium | High | High (Native) | Low (Managed Service) |
-| **Custom GitOps** | Variable | Scalable | Full Control | Very High |
+The thinnest slice is one golden path, end to end, done properly. For us it was: a developer asks for a service and gets a repo with CI, a health endpoint, a database, and an owner recorded. Everything else comes later.
 
-For teams prioritizing speed to market and low maintenance, the managed service approach often wins. However, for organizations with strict security compliance requirements or a need for deep customization of the developer workflow, a custom GitOps build on top of Kubernetes is preferable. A custom implementation allows you to write code that directly interacts with your specific CI/CD pipelines without being constrained by plugin ecosystems.
+That slice took six weeks. It had one UI screen, one API, and one database table. On a roadmap it looked almost insultingly small. It worked, and the teams noticed. Small and working beats grand and stalled, every time.
 
-Here is an example of how a Golden Path template might be defined in a Kubernetes manifest for a standard microservice deployment:
+## Scaffold the portal config
+
+I am not going to tell you to build a portal engine from scratch. I did that once, and I am still paying for it in maintenance. Use something with a catalog, a scaffolder, and an auth story already solved — Backstage and its relatives fit this description. The configuration is where you make it yours.
+
+Everything about our portal lives in one versioned repo, reviewed like production code. The entire platform config is a file like this:
 
 ```yaml
-apiVersion: apps/v1
-kind: Deployment
+# portal.yaml — the whole platform config, versioned and reviewed
+catalog:
+  providers:
+    githubOrg:
+      org: acme
+      schedule: "0 * * * *"
+scaffolder:
+  templates:
+    - ./templates/service
+techdocs:
+  builder: local
+  publish:
+    type: local
+auth:
+  providers:
+    oidc:
+      issuer: https://login.acme.dev
+```
+
+Notice what is not in there: no custom plugins, no bespoke backends, no special integrations. The config is boring on purpose. Boring config is config you can upgrade when the upstream project ships a new version, and it is config a new engineer can read in five minutes. Both of those are features.
+
+## Define one golden path template
+
+The template is the heart of the whole thing. It is a recipe, not a philosophy. Ours produces a repo with a health endpoint, a test suite, a CI workflow, a README that states the owner, and a license. It is deliberately opinionated and deliberately small.
+
+```yaml
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
 metadata:
-  name: golden-path-service
-  annotations:
-    platform.io/owner: team-alpha
-    platform.io/environment: production
+  name: acme-python-service
+  title: Python HTTP service (the boring one)
 spec:
-  replicas: 2
-  template:
-    spec:
-      containers:
-        - name: app
-          image: registry.internal/team-alpha/app:v1.0.0
-          resources:
-            requests:
-              memory: "512Mi"
-              cpu: "250m"
-            limits:
-              memory: "1Gi"
-              cpu: "500m"
+  parameters:
+    - title: Service name
+      required: true
+      properties:
+        serviceName:
+          type: string
+  steps:
+    - id: fetch
+      action: fetch:template
+      input:
+        url: ./skeleton
+        values:
+          name: ${{ parameters.serviceName }}
+    - id: publish
+      action: publish:github
+      input:
+        repoUrl: github.com?owner=acme&repo=${{ parameters.serviceName }}
+    - id: register
+      action: catalog:register
+      input:
+        repoContentsPath: catalog-info.yaml
 ```
 
-This snippet demonstrates the abstraction layer. Notice the annotations `platform.io/owner` and `platform.io/environment`. These are not standard Kubernetes fields but custom labels that your platform's reconciliation loop reads to apply policies. The CI/CD pipeline, upon receiving this manifest, automatically injects the necessary sidecars for logging and tracing without the developer needing to configure them manually. This pattern ensures consistency across hundreds of services while reducing the cognitive burden on the engineering team.
+The template matters more than the portal. If the template is good, teams stop copy-pasting from each other's repositories, and the drift in your codebase starts to shrink. If the template is bad, no amount of portal chrome will save you. Spend the extra day on the skeleton — the health check, the test setup, the CI file — because that day pays for itself in the first month. This is where I put my effort now, and it is the advice I give every team that asks me where to start.
 
-## Operationalizing DevEx with Scorecards and Metrics
+## Publish the API catalog
 
-Building the portal is only half the battle; measuring its success requires a shift in how you track Developer Experience (DevEx). Traditional metrics like "Deployment Frequency" are insufficient for an IDP. You need to measure friction points, time-to-provision, and adoption rates of the golden path versus shadow IT workarounds. To truly love your platform, you must implement a Developer Scorecard system that provides feedback loops to the development teams.
+Once services exist, you need to know they exist. The catalog is a set of YAML files living next to each service's code, so ownership travels with the code and never goes stale the way a wiki does.
 
-This scorecard should be accessible directly within the portal dashboard. It helps developers understand their own efficiency and compliance posture. For instance, if a team consistently creates resources outside the golden path, the scorecard should highlight this trend gently, offering educational resources rather than punitive warnings. This transparency fosters a culture of ownership.
-
-To automate these insights, you can build lightweight analytics scripts that aggregate data from your CI/CD logs and infrastructure events. Here is a Python snippet demonstrating how to calculate a "Developer Health Score" based on provisioning latency and error rates:
-
-```python
-def calculate_developer_health_score(team_data):
-    total_provision_time = sum(data['provision_time'] for data in team_data)
-    successful_provisions = len([d for d in team_data if d['status'] == 'success'])
-    errors = len([d for d in team_data if d['status'] == 'error'])
-    
-    # Weighted score calculation
-    latency_score = max(0, 1 - (total_provision_time / 3600)) # Normalized by 1 hour
-    reliability_score = successful_provisions / (successful_provisions + errors)
-    
-    final_score = (latency_score * 0.4) + (reliability_score * 0.6)
-    return round(final_score, 2)
-
-# Example usage
-team_metrics = [
-    {'provision_time': 120, 'status': 'success'},
-    {'provision_time': 150, 'status': 'success'},
-    {'provision_time': 90, 'status': 'error'}
-]
-print(f"Team Health Score: {calculate_developer_health_score(team_metrics)}")
+```yaml
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: billing-api
+  annotations:
+    github.com/project-slug: acme/billing-api
+spec:
+  type: service
+  owner: group:payments
+  lifecycle: production
+  providesApis:
+    - billing-api-v1
 ```
 
-This logic feeds into the dashboard, giving developers a clear number to optimize against. If the score drops, it signals that either their pipelines are inefficient or they are frequently violating platform policies. Over time, this data informs the platform team where to invest in automation, such as fixing flaky tests or optimizing resource requests to reduce spin-up times.
+Two rules keep this file honest. First, the owner is a group, never a person. People leave; groups persist. Second, the file lives in the service repository and CI fails if the annotations drift from reality. A catalog entry that lies is worse than no entry, because it sends a developer to the wrong owner during an incident.
 
-## Future Outlook and Strategic Considerations
+## The boring parts that decide everything
 
-As we look toward 2027 and beyond, the Internal Developer Portal will evolve from a catalog of resources to an intelligent workspace. The integration of AI agents into these portals is inevitable. Imagine a future where a developer asks, "I need a PostgreSQL database with high availability in the EU region," and the portal agent not only spins it up but also explains the cost implications and security configurations automatically. This requires your current architecture to be API-first and event-driven so that external AI models can query your internal state securely.
+The parts nobody demos in the sales pitch are the parts that make or break a portal.
 
-However, pitfalls exist. A common mistake is over-engineering the UI. Teams often spend months customizing the frontend while ignoring the underlying data model. Remember, a beautiful portal with broken provisioning logic will fail quickly. Another pitfall is neglecting the "dark mode" of operations: incident management. The portal must include clear links to runbooks and support channels, ensuring that when things break, developers are guided toward resolution rather than left in the dark.
+Authentication and authorization come first, before any feature. If a portal is not integrated with your SSO and your permission model, it becomes a second shadow system that nobody trusts. Our rule is simple: if it is not in the identity provider, it does not exist.
 
-Finally, governance must be baked into the codebase, not enforced by manual review boards. The golden path is only effective if it is the default. By shifting from "request-based" provisioning to "catalog-driven" automation, you reduce the burden on platform engineers and allow development teams to focus on business logic.
+Ownership is the second. Every catalog entry has an owner group, and the portal surfaces it everywhere — who do I talk to about this service, who gets paged when it breaks. This one decision killed more portal adoption than any technical bug I have debugged.
 
-## Conclusion
+Documentation is the third, and I do not mean a documentation portal. I mean the README the template generates, the runbook link on every service page, the answer to "how do I deploy" being one click away. The portal's job is to shorten the distance between a question and an answer.
 
-Building an Internal Developer Portal that teams love requires a fundamental shift in mindset. It moves the organization from a support model to a product model, where the platform team acts as the Product Owner for developer experience. By implementing golden paths, leveraging API catalogs, and measuring success through actionable scorecards, you create an ecosystem where efficiency and governance coexist. The architecture must be robust enough to handle scale but flexible enough to adapt to new technologies like AI agents. Ultimately, the goal is not just to manage infrastructure, but to empower developers to build software faster with less friction.
+## What not to build
+
+I want to be explicit about the things I refuse to build, because I have built all of them and regretted each one.
+
+Do not build your own portal engine. The catalog, the scaffolder, the auth wiring — these are solved problems with maintained projects behind them. Your company does not have a unique problem in this space. It has the same problem as everyone else, which means it should use the same solution.
+
+Do not model the whole organization on day one. Start with services and owners. Teams, systems, resources, and the fancy entity types can wait until someone actually asks for them, which they will, roughly never.
+
+Do not build a metrics dashboard nobody asked for. "The portal should show DORA metrics" is how portal projects die: three months wiring up data your developers never look at, while the golden path rots. If teams are not asking for it, it is not the next slice.
+
+Do not automate what is already working. If your deploys are fine, leave them alone. The portal should absorb the friction people actually feel, not the friction you imagine they feel after reading a blog post.
+
+## How I know it is working
+
+Six weeks after the thin slice shipped, I checked three numbers. Time from "I need a new service" to a deployed health endpoint: a day down to under an hour. New-service questions in the developer Slack channel: from daily to near zero. Pull requests using the template's structure instead of hand-copied old repositories: the majority.
+
+The real signal was quieter. Engineers started editing the template themselves and opening pull requests against it. That is the moment a portal stops being my project and becomes the team's infrastructure. When the people using the golden path maintain the golden path, you have won.
+
+The first portal I built had a custom plugin architecture and a database schema diagram I was proud of. The second one has a config file, one template, and a catalog. I know which one I would rebuild. Start smaller than feels right. Ship the thinnest slice. Let the teams tell you what comes next.

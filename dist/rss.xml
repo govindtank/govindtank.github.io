@@ -8,7 +8,7 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2026 06:58:33 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 07:15:15 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones]]></title>
@@ -118,8 +118,7 @@
       <link>https://govindtank.github.io/blog/kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026</guid>
       <pubDate>Sun, 19 Jul 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[In the landscape of software development as it stands in 2026, Kotlin Multiplatform (KMP) has transitioned from a promising prototype to an industrial standard for enterprise-grade applications. Th...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Kotlin-Multiplatform</category>
     </item>
     <item>
@@ -127,8 +126,7 @@
       <link>https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</guid>
       <pubDate>Sat, 18 Jul 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The traditional perimeter-based security model has effectively collapsed under the weight of distributed cloud infrastructure, serverless computing, and mobile-first workforces. By 2026, the indust...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Security</category>
     </item>
     <item>
@@ -136,8 +134,7 @@
       <link>https://govindtank.github.io/blog/flutter-impeller-rendering-engine-gpu-acceleration-2026</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-impeller-rendering-engine-gpu-acceleration-2026</guid>
       <pubDate>Fri, 17 Jul 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[Flutter's Impeller rendering engine has reached production maturity in 2026, eliminating jank and enabling 120fps on modern devices. This deep-dive covers Impeller architecture, repaint boundary optimization, shader precompilation, and GPU acceleration patterns for shipping pixel-perfect Flutter apps.
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Flutter</category>
     </item>
     <item>
@@ -145,8 +142,7 @@
       <link>https://govindtank.github.io/blog/top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026</guid>
       <pubDate>Thu, 16 Jul 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The engineering landscape of 2026 has shifted dramatically from simple code completion to autonomous agentic workflows. As proprietary APIs become increasingly expensive and latency-sensitive, the ...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>DevTools</category>
     </item>
     <item>
@@ -154,8 +150,7 @@
       <link>https://govindtank.github.io/blog/kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared-business-logic</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared-business-logic</guid>
       <pubDate>Wed, 15 Jul 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[KMP has matured beyond experimental — here's how to architect a production-grade KMP module hierarchy with dependency injection, multiplatform networking, and Compose Multiplatform UI sharing. Learn from real-world patterns that reduce boilerplate without sacrificing platform-native experience.
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Kotlin-Multiplatform</category>
     </item>
     <item>
@@ -163,8 +158,7 @@
       <link>https://govindtank.github.io/blog/platform-engineering-building-internal-developer-portals-that-teams-love</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/platform-engineering-building-internal-developer-portals-that-teams-love</guid>
       <pubDate>Tue, 14 Jul 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The landscape of software delivery has shifted dramatically between 2024 and 2026. The era of purely reactive DevOps is giving way to proactive Platform Engineering. In the current environment, dev...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>DevEx</category>
     </item>
     <item>
@@ -172,8 +166,7 @@
       <link>https://govindtank.github.io/blog/building-real-time-collaborative-apps-with-crdts-and-operational-transformation</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/building-real-time-collaborative-apps-with-crdts-and-operational-transformation</guid>
       <pubDate>Thu, 02 Jul 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The era of simple WebSockets and optimistic locking is ending. As we move deeper into 2026, the demand for robust, offline-first collaborative applications has shifted from a luxury feature to a fu...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Architecture</category>
     </item>
     <item>
@@ -181,8 +174,7 @@
       <link>https://govindtank.github.io/blog/css-container-queries-and-style-queries-responsive-design-beyond-media-queries</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/css-container-queries-and-style-queries-responsive-design-beyond-media-queries</guid>
       <pubDate>Wed, 01 Jul 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[In the rapidly evolving landscape of web development in 2026, responsive design has transcended its early days of simple viewport breakpoints. The industry standard is shifting from device-centric ...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Web-Dev</category>
     </item>
     <item>
@@ -190,8 +182,7 @@
       <link>https://govindtank.github.io/blog/finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments</guid>
       <pubDate>Tue, 30 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. FinOps for Kubernetes: Optimizing Cloud Costs in Containerized Environments rep...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>DevOps</category>
     </item>
     <item>
