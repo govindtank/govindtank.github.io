@@ -39,14 +39,27 @@ def log(msg):
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
 
 # ======= TOPIC POOL (new-post path) =======
+# NOTE: the daily cron prompt first researches CURRENT trends (web) and prefers a
+# trending topic not yet covered; this list is the fallback pool. Keep it fresh.
 TOPICS = [
+    {"title": "Agentic AI Development: From Chat Assistants to Autonomous Coding Agents", "tag": "AI-Engineering", "desc": "Agentic workflows, MCP protocol, tool-use loops, multi-agent orchestration, and agent evaluation in production"},
+    {"title": "MCP in Practice: Model Context Protocol for Real-World Developer Tools", "tag": "AI-Engineering", "desc": "MCP servers, tool definitions, transport options, and integrating MCP into IDEs and CI pipelines"},
+    {"title": "On-Device AI with NPUs: Running Models on Phone Silicon in 2026", "tag": "Mobile-AI", "desc": "NPU architecture, TFLite/MLX/CoreML execution, quantized models, and battery-aware inference on Android and iOS"},
+    {"title": "Compose Multiplatform for iOS: Is Shared UI Production-Ready in 2026", "tag": "Kotlin", "desc": "Compose Multiplatform iOS stability, performance gaps, design-system sharing, and when shared UI makes sense"},
+    {"title": "Kotlin 2.x and the K2 Compiler: What It Unlocked for Android Developers", "tag": "Kotlin", "desc": "K2 compiler features, performance gains, multiplatform improvements, and migration notes"},
+    {"title": "Flutter Beyond Mobile: Desktop, Web, and Embedded Targets in 2026", "tag": "Flutter", "desc": "Flutter desktop/web maturity, embedded Linux, game engine integrations, and multi-target release strategies"},
+    {"title": "AI-Native App Architecture: Designing Applications Around LLM Calls", "tag": "AI-Engineering", "desc": "LLM API layers, streaming UI patterns, prompt caching, fallback strategies, and cost-aware design"},
+    {"title": "Local-First Applications: Sync Engines, CRDTs, and Offline-First UX", "tag": "Architecture", "desc": "Local-first architecture, sync protocols, CRDT libraries, and offline-first mobile UX patterns"},
+    {"title": "RAG in Production: Practical Retrieval Patterns Beyond the Demo", "tag": "AI-ML", "desc": "Chunking, embeddings, hybrid search, re-ranking, evaluation, and RAG observability"},
+    {"title": "Android 17 and the Modern Android Stack: What Changed in 2026", "tag": "Android", "desc": "Android 17 APIs, edge-to-edge enforcement, Kotlin-first tooling, and the modern Android architecture"},
+    {"title": "Building Developer Tools in 2026: From CLI Design to AI-Assisted Extensions", "tag": "DevTools", "desc": "CLI design patterns, LSP protocol, VS Code extensions, and AI-powered code assistance"},
+    {"title": "Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026", "tag": "Flutter", "desc": "Dart 4 language features, Flutter tooling improvements, and ecosystem changes"},
     {"title": "Building Scalable Microservices with FastAPI and Event-Driven Architecture", "tag": "Backend-Architecture", "desc": "FastAPI microservices with event-driven patterns, message queues, and async processing"},
     {"title": "WebAssembly in 2026: From Browser to Edge Computing and Beyond", "tag": "WebAssembly", "desc": "Wasm runtime evolution, use cases in edge computing, plugin systems, and container alternatives"},
     {"title": "Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems", "tag": "Security", "desc": "Zero-trust principles, identity-aware proxies, mTLS, and continuous verification"},
     {"title": "Edge AI: Running Large Language Models on Consumer Devices in 2026", "tag": "Edge-AI", "desc": "On-device ML inference, quantization techniques, NPU acceleration, and privacy-preserving AI"},
     {"title": "React Server Components: Production Patterns for High-Performance Web Apps", "tag": "Web-Dev", "desc": "RSC architecture, streaming SSR, server/client boundaries, and data fetching patterns"},
     {"title": "Data Engineering at Scale: Building Real-Time Streaming Pipelines", "tag": "Data-Engineering", "desc": "Kafka, Flink, streaming SQL, exactly-once semantics, and schema evolution"},
-    {"title": "Building Developer Tools in 2026: From CLI Design to AI-Assisted Extensions", "tag": "DevTools", "desc": "CLI design patterns, LSP protocol, VS Code extensions, and AI-powered code assistance"},
     {"title": "PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing", "tag": "Databases", "desc": "HTAP databases, columnar storage, parallel query execution, and real-time analytics"},
     {"title": "Event Sourcing and CQRS: Practical Patterns for Distributed Systems", "tag": "Architecture", "desc": "Event sourcing fundamentals, CQRS separation, projection rebuilds, and idempotency"},
     {"title": "Platform Engineering: Building Internal Developer Portals That Teams Love", "tag": "DevEx", "desc": "Backstage-like platforms, golden paths, developer scorecards, and API catalogs"},
@@ -59,7 +72,6 @@ TOPICS = [
     {"title": "FinOps for Kubernetes: Optimizing Cloud Costs in Containerized Environments", "tag": "DevOps", "desc": "Kubernetes cost allocation, right-sizing, spot instances, and FinOps tooling in 2026"},
     {"title": "The Rise of AI Coding Assistants: Evaluating Code Quality and Productivity Impact", "tag": "AI-Engineering", "desc": "Evaluating LLM code assistants on real tasks, acceptance vs correctness, and team workflows"},
     {"title": "Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones", "tag": "Edge-AI", "desc": "On-device SLM inference, quantization, model distillation, and mobile NPU hardware"},
-    {"title": "Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026", "tag": "Flutter", "desc": "Dart 4 language features, Flutter tooling improvements, and ecosystem changes"},
 ]
 
 # ======= IMAGE POOL (unique, verified public URLs) =======
