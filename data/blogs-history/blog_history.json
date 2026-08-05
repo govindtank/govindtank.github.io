@@ -1,6 +1,6 @@
 {
   "version": "2.1",
-  "totalCreated": 57,
+  "totalCreated": 58,
   "lastTopic": "Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones",
   "todayCount": 49,
   "lastGenerated": "2026-08-05T02:40:35Z",
@@ -323,6 +323,14 @@
       "date": "August 05, 2026",
       "tag": "Edge-AI",
       "wordCount": 1052,
+      "status": "published"
+    },
+    "ai-observability-monitoring-tracing-and-debugging-llm-applications-in-production": {
+      "title": "AI Observability: Monitoring, Tracing, and Debugging LLM Applications in Production",
+      "slug": "ai-observability-monitoring-tracing-and-debugging-llm-applications-in-production",
+      "date": "August 05, 2026",
+      "tag": "AI-Observability",
+      "wordCount": 1847,
       "status": "published"
     }
   },
