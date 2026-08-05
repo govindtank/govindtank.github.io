@@ -8,15 +8,14 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2026 05:27:46 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 06:58:33 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones]]></title>
       <link>https://govindtank.github.io/blog/small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones</guid>
       <pubDate>Tue, 04 Aug 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones r...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Edge-AI</category>
     </item>
     <item>
@@ -24,8 +23,7 @@
       <link>https://govindtank.github.io/blog/agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026</guid>
       <pubDate>Mon, 03 Aug 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Agentic AI Systems: Designing Reliable Multi-Agent Workflows in 2026 represents...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Agentic-AI</category>
     </item>
     <item>
@@ -33,8 +31,7 @@
       <link>https://govindtank.github.io/blog/flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance</guid>
       <pubDate>Sun, 02 Aug 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The mobile application landscape in 2026 has shifted dramatically regarding rendering fidelity and performance consistency. For senior engineers and architects, the transition from Skia to Impeller...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Flutter</category>
     </item>
     <item>
@@ -42,17 +39,15 @@
       <link>https://govindtank.github.io/blog/dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026</guid>
       <pubDate>Sat, 01 Aug 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026 represent...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Flutter</category>
     </item>
     <item>
-      <title><![CDATA[Free Developer Tools That Supercharge Your 2026 Workflow]]></title>
+      <title><![CDATA[Free Developer Tools That Upgrade Your 2026 Workflow]]></title>
       <link>https://govindtank.github.io/blog/free-developer-tools-that-supercharge-your-2026-workflow</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/free-developer-tools-that-supercharge-your-2026-workflow</guid>
       <pubDate>Fri, 31 Jul 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The software development landscape of 2026 has fundamentally shifted away from proprietary, cloud-bound ecosystems toward local-first architectures. As enterprise licensing costs rise and data sove...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>DevTools</category>
     </item>
     <item>
@@ -285,8 +280,7 @@
       <link>https://govindtank.github.io/blog/ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026</guid>
       <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Scale code quality and developer velocity with AI-augmented development workflows using LLM agents, automated testing, and intelligent code review in production environments. Explore enterprise adoption patterns, governance frameworks, and real-world benchmarks for AI-assisted CI/CD pipelines.
-]]></description>
+      <description><![CDATA[]]></description>
       <category>AI</category>
     </item>
     <item>
@@ -294,8 +288,7 @@
       <link>https://govindtank.github.io/blog/ai-augmented-development-workflows-architecting-the-future-of-software-engineering</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/ai-augmented-development-workflows-architecting-the-future-of-software-engineering</guid>
       <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Architect AI-augmented development workflows with multi-agent systems, automated code generation, and intelligent testing pipelines for modern software engineering teams. A comprehensive guide to integrating AI coding assistants, CI/CD automation, and organizational adoption strategies.
-]]></description>
+      <description><![CDATA[]]></description>
       <category>AI</category>
     </item>
     <item>
@@ -303,8 +296,7 @@
       <link>https://govindtank.github.io/blog/ai-powered-code-review-automating-quality-gates-with-llm-agents</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/ai-powered-code-review-automating-quality-gates-with-llm-agents</guid>
       <pubDate>Fri, 29 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Combine LLM agents with deterministic static analysis to automate code review pipelines, reduce review cycle time by 62%, and catch defects humans miss. A deep dive into multi-agent architectures, LLM comparison, quality gates, CI/CD integration, cost optimization, and real-world adoption strategies.
-]]></description>
+      <description><![CDATA[]]></description>
       <category>AI</category>
     </item>
     <item>
@@ -330,8 +322,7 @@
       <link>https://govindtank.github.io/blog/ai-agents-autonomous-workflows-complex-tasks-2026</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/ai-agents-autonomous-workflows-complex-tasks-2026</guid>
       <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[A comprehensive guide to building production-grade autonomous AI agents in 2026. Covers ReAct, Plan-and-Execute, and Function-Calling architectures, multi-agent orchestration, framework comparisons (LangGraph, CrewAI, AutoGen, OpenAI Assistants API), memory systems, observability, cost management, security, and real-world case studies with data.
-]]></description>
+      <description><![CDATA[]]></description>
       <category>AI Agents</category>
     </item>
   </channel>
