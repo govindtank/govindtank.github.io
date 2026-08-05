@@ -4,7 +4,7 @@ slug: "flutter-impeller-rendering-engine-gpu-acceleration-2026"
 date: "July 18, 2026"
 excerpt: >
   Flutter's Impeller rendering engine has reached production maturity in 2026, eliminating jank and enabling 120fps on modern devices. This deep-dive covers Impeller architecture, repaint boundary optimization, shader precompilation, and GPU acceleration patterns for shipping pixel-perfect Flutter apps.
-coverImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&q=80&w=1200"
 category: "Flutter"
 readTime: 10
 tags:

@@ -4,7 +4,7 @@ slug: "distributed-tracing-with-opentelemetry-from-instrumentation-to-production
 date: "June 29, 2026"
 excerpt: >
   The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Distributed Tracing with OpenTelemetry: From Instrumentation to Production Debu...
-coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1550439062-609e1531270e?auto=format&fit=crop&q=80&w=1200"
 category: "Observability"
 readTime: 5
 tags:

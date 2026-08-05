@@ -4,7 +4,7 @@ slug: "webgpu-next-generation-graphics-and-compute-for-the-browser"
 date: "July 29, 2026"
 excerpt: >
   The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. WebGPU: Next-Generation Graphics and Compute for the Browser represents one of ...
-coverImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?auto=format&fit=crop&q=80&w=1200"
 category: "Web-Dev"
 readTime: 5
 tags:

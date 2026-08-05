@@ -4,7 +4,7 @@ slug: "typescript-5x-advanced-patterns-conditional-types-template-literals-and-m
 date: "July 29, 2026"
 excerpt: >
   The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. TypeScript 5.x Advanced Patterns: Conditional Types, Template Literals, and Map...
-coverImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200"
 category: "Web-Dev"
 readTime: 5
 tags:

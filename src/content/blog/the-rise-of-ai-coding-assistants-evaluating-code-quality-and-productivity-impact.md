@@ -4,7 +4,7 @@ slug: "the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity
 date: "June 25, 2026"
 excerpt: >
   The software development landscape has fundamentally shifted in 2026. We have moved beyond the era of simple autocomplete suggestions to a paradigm where Large Language Models (LLMs) function as au...
-coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Engineering"
 readTime: 6
 tags:

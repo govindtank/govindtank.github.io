@@ -4,7 +4,7 @@ slug: "kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared
 date: "July 16, 2026"
 excerpt: >
   KMP has matured beyond experimental — here's how to architect a production-grade KMP module hierarchy with dependency injection, multiplatform networking, and Compose Multiplatform UI sharing. Learn from real-world patterns that reduce boilerplate without sacrificing platform-native experience.
-coverImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&q=80&w=1200"
 category: "Kotlin-Multiplatform"
 readTime: 12
 tags:

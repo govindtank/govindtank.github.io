@@ -4,7 +4,7 @@ slug: "building-scalable-microservices-with-fastapi-and-event-driven-architectur
 date: "June 23, 2026"
 excerpt: >
   The backend engineering landscape of 2026 demands a fundamental shift in how we handle concurrency, state management, and inter-service communication. While synchronous REST APIs remain relevant fo...
-coverImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1200"
 category: "Backend-Architecture"
 readTime: 5
 tags:

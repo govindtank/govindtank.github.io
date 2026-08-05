@@ -4,7 +4,7 @@ slug: "edge-ai-running-large-language-models-on-consumer-devices-in-2026"
 date: "June 10, 2026"
 excerpt: >
   The trajectory of artificial intelligence has shifted dramatically over the last three years. By 2026, the paradigm of "cloud-only" inference is rapidly becoming obsolete for sensitive or latency-critical applications. This deep-dive explores the full ecosystem — from quantization techniques and on-device inference engines to hardware benchmarks and hybrid architectures — that makes running LLMs on consumer devices not just possible but preferable.
-coverImage: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1200"
 category: "Edge-AI"
 readTime: 18
 tags:

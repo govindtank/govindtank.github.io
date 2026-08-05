@@ -4,7 +4,7 @@ slug: "building-real-time-collaborative-apps-with-crdts-and-operational-transfor
 date: "July 03, 2026"
 excerpt: >
   The era of simple WebSockets and optimistic locking is ending. As we move deeper into 2026, the demand for robust, offline-first collaborative applications has shifted from a luxury feature to a fu...
-coverImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200"
 category: "Architecture"
 readTime: 4
 tags:

@@ -4,7 +4,7 @@ slug: "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens"
 date: "July 21, 2026"
 excerpt: >
   The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Flutter Widget Testing Mastery: From Unit Tests to Integration Goldens represen...
-coverImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200"
 category: "Flutter"
 readTime: 5
 tags:

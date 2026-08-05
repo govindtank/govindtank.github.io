@@ -4,7 +4,7 @@ slug: "ai-powered-code-review-automating-quality-gates-with-llm-agents"
 date: "2026-05-29"
 excerpt: >
   Combine LLM agents with deterministic static analysis to automate code review pipelines, reduce review cycle time by 62%, and catch defects humans miss. A deep dive into multi-agent architectures, LLM comparison, quality gates, CI/CD integration, cost optimization, and real-world adoption strategies.
-coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Engineering"
 readTime: 12
 tags:

@@ -4,7 +4,7 @@ slug: "css-container-queries-and-style-queries-responsive-design-beyond-media-qu
 date: "July 02, 2026"
 excerpt: >
   In the rapidly evolving landscape of web development in 2026, responsive design has transcended its early days of simple viewport breakpoints. The industry standard is shifting from device-centric ...
-coverImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200"
 category: "Web-Dev"
 readTime: 6
 tags:

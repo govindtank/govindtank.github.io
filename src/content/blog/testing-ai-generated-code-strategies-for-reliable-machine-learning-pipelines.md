@@ -4,7 +4,7 @@ slug: "testing-ai-generated-code-strategies-for-reliable-machine-learning-pipeli
 date: "July 21, 2026"
 excerpt: >
   The integration of Large Language Models (LLMs) into software development workflows has fundamentally altered the engineering landscape by 2026. While AI assistants accelerate feature delivery, the...
-coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=1200"
 category: "AI-ML"
 readTime: 6
 tags:

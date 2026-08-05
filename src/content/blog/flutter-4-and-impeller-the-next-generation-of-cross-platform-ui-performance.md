@@ -4,7 +4,7 @@ slug: "flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performan
 date: "August 03, 2026"
 excerpt: >
   The mobile application landscape in 2026 has shifted dramatically regarding rendering fidelity and performance consistency. For senior engineers and architects, the transition from Skia to Impeller...
-coverImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1522252234503-e356532cafd5?auto=format&fit=crop&q=80&w=1200"
 category: "Flutter"
 readTime: 6
 tags:

@@ -4,7 +4,7 @@ slug: "platform-engineering-building-internal-developer-portals-that-teams-love"
 date: "July 15, 2026"
 excerpt: >
   The landscape of software delivery has shifted dramatically between 2024 and 2026. The era of purely reactive DevOps is giving way to proactive Platform Engineering. In the current environment, dev...
-coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=1200"
 category: "DevEx"
 readTime: 7
 tags:

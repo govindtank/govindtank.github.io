@@ -4,7 +4,7 @@ slug: "kotlin-multiplatform-in-production-sharing-business-logic-across-android-
 date: "July 20, 2026"
 excerpt: >
   In the landscape of software development as it stands in 2026, Kotlin Multiplatform (KMP) has transitioned from a promising prototype to an industrial standard for enterprise-grade applications. Th...
-coverImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&q=80&w=1200"
 category: "Kotlin-Multiplatform"
 readTime: 6
 tags:

@@ -9,7 +9,7 @@ excerpt: >
   sagas and process managers, event store implementations (EventStoreDB, PostgreSQL,
   Kafka), testing strategies, and real-world case studies — with code examples in
   Python and TypeScript, mermaid diagrams, and comparison tables.
-coverImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&q=80&w=1200"
 category: "Architecture"
 readTime: 18
 tags:

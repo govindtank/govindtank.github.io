@@ -4,7 +4,7 @@ slug: "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing"
 date: "July 30, 2026"
 excerpt: >
   The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing repres...
-coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&q=80&w=1200"
 category: "Databases"
 readTime: 5
 tags:

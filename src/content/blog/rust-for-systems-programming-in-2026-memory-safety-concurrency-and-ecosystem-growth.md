@@ -4,7 +4,7 @@ slug: "rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosys
 date: "June 27, 2026"
 excerpt: >
   The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Rust for Systems Programming in 2026: Memory Safety, Concurrency, and Ecosystem...
-coverImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=1200"
 category: "Systems"
 readTime: 5
 tags:
