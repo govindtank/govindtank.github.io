@@ -8,7 +8,7 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2026 07:22:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 07:24:12 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones]]></title>
@@ -183,8 +183,7 @@
       <link>https://govindtank.github.io/blog/distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging</guid>
       <pubDate>Sun, 28 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Distributed Tracing with OpenTelemetry: From Instrumentation to Production Debu...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Observability</category>
     </item>
     <item>
@@ -192,8 +191,7 @@
       <link>https://govindtank.github.io/blog/rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth</guid>
       <pubDate>Fri, 26 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Rust for Systems Programming in 2026: Memory Safety, Concurrency, and Ecosystem...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Systems</category>
     </item>
     <item>
@@ -201,8 +199,7 @@
       <link>https://govindtank.github.io/blog/the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact</guid>
       <pubDate>Wed, 24 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The software development landscape has fundamentally shifted in 2026. We have moved beyond the era of simple autocomplete suggestions to a paradigm where Large Language Models (LLMs) function as au...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>AI-Engineering</category>
     </item>
     <item>
@@ -210,8 +207,7 @@
       <link>https://govindtank.github.io/blog/webassembly-in-2026-from-browser-to-edge-computing-and-beyond</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/webassembly-in-2026-from-browser-to-edge-computing-and-beyond</guid>
       <pubDate>Tue, 23 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[By 2026, WebAssembly (Wasm) has transcended its origins as a browser sandbox escape hatch to become a foundational substrate for universal compute. The narrative has shifted from "what can Wasm do"...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>WebAssembly</category>
     </item>
     <item>
@@ -219,8 +215,7 @@
       <link>https://govindtank.github.io/blog/building-scalable-microservices-with-fastapi-and-event-driven-architecture</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/building-scalable-microservices-with-fastapi-and-event-driven-architecture</guid>
       <pubDate>Mon, 22 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The backend engineering landscape of 2026 demands a fundamental shift in how we handle concurrency, state management, and inter-service communication. While synchronous REST APIs remain relevant fo...
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Backend-Architecture</category>
     </item>
     <item>
@@ -228,8 +223,7 @@
       <link>https://govindtank.github.io/blog/event-sourcing-and-cqrs-practical-patterns-for-distributed-systems</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/event-sourcing-and-cqrs-practical-patterns-for-distributed-systems</guid>
       <pubDate>Sun, 21 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[Event Sourcing and CQRS have become foundational patterns for building scalable, auditable distributed systems. This guide covers event store design, aggregate modeling in DDD, CQRS read/write separation, snapshot strategies, schema evolution, sagas and process managers, event store implementations (EventStoreDB, PostgreSQL, Kafka), testing strategies, and real-world case studies — with code examples in Python and TypeScript, mermaid diagrams, and comparison tables.
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Event Sourcing</category>
     </item>
     <item>
@@ -237,8 +231,7 @@
       <link>https://govindtank.github.io/blog/data-engineering-at-scale-building-real-time-streaming-pipelines</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/data-engineering-at-scale-building-real-time-streaming-pipelines</guid>
       <pubDate>Thu, 18 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The data engineering landscape in 2026 has shifted decisively from batch-centric Lambda architectures toward unified Kappa-style streaming pipelines. In high-frequency trading, fraud detection, and personalized recommendation engines, the distinction between "real-time" and "near real-time" is no longer academic; it is a business-critical metric. As data volumes explode with IoT sensors and digital transaction logs, traditional ETL processes cannot keep pace with latency requirements. This comprehensive guide explores streaming architecture patterns, Kafka internals, Apache Flink state management, CDC patterns with Debezium, schema evolution strategies, production deployment patterns on Kubernetes, cost optimization techniques, and real-world case studies with measurable metrics — everything you need to build robust, exactly-once streaming pipelines at scale.
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Data-Engineering</category>
     </item>
     <item>
@@ -286,8 +279,7 @@
       <link>https://govindtank.github.io/blog/kotlin-multiplatform-evolution-in-2026</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/kotlin-multiplatform-evolution-in-2026</guid>
       <pubDate>Thu, 28 May 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[Kotlin Multiplatform has matured into a production-ready cross-platform ecosystem that delivers 60-80% code reuse across Android, iOS, desktop, and web while maintaining native performance. Explore KMP architecture, Compose Multiplatform deep-dive, tooling in 2026, iOS interop, CI/CD strategies, production case studies from Netflix and Cash App, and a comprehensive comparison with Flutter and React Native.
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Kotlin-Multiplatform</category>
     </item>
     <item>
@@ -295,8 +287,7 @@
       <link>https://govindtank.github.io/blog/flutter-state-management-deep-dive-bloc-vs-riverpod-vs-provider-in-2026</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-state-management-deep-dive-bloc-vs-riverpod-vs-provider-in-2026</guid>
       <pubDate>Wed, 27 May 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[A comprehensive comparison of Flutter state management solutions analyzing Bloc, Riverpod, and Provider with practical code examples, performance benchmarks, and architectural deep-dives for modern Flutter development in 2026.
-]]></description>
+      <description><![CDATA[]]></description>
       <category>Flutter</category>
     </item>
     <item>
