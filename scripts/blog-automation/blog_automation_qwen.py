@@ -1,764 +1,579 @@
 #!/usr/bin/env python3
 """
-Qwen-Powered Blog Automation v3.0
-===================================
-Uses local qwen/qwen3.5-9b LLM to generate technical blog posts with:
-- Public image URLs (Unsplash)
-- Tables, mermaid diagrams, code blocks
- - Proper TypeScript escaping
- - Auto-updates blog history
- - Git commit and push via SSH
- - Pure Markdown source — metadata and content in .md frontmatter
+Blog Automation v4 — human-sounding, varied-structure technical posts via local LLM.
+=====================================================================================
+What changed vs v3:
+- 6 structure archetypes (tutorial / comparison / explainer / war-story / roundup / opinion),
+  rotated so no two consecutive posts share a shape.
+- 3 writer personas cycled for voice variety (first person allowed, opinions allowed).
+- Hard anti-AI-tell rules: banned phrases list enforced in the prompt AND validated after.
+- Humanizer second pass: a separate LLM call strips residual AI patterns.
+- Real excerpt generated as a true abstract (not a copy of paragraph 1).
+- Cover images: unique, curl-verified public URLs (never reused across posts).
+- No static fallback template: retries with another archetype; varied skeletons only as
+  absolute last resort.
+- --rewrite-all: regenerate existing posts in place (same slug/date/category, new voice).
+- git pull --rebase before push (avoids remote-divergence conflicts).
 
 Author: Govind Tank
-License: MIT
 """
 
-import json, os, sys, re, time, subprocess, random, urllib.request, urllib.error, urllib.parse
+import json, os, sys, re, time, subprocess, random, urllib.request, urllib.error
 from datetime import datetime, timezone
 
 # ======= CONFIGURATION =======
 PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../.."))
-HISTORY_FILE = f"{PROJECT_ROOT}/data/blogs-history/blog_history.json"
 CONTENT_DIR = f"{PROJECT_ROOT}/src/content/blog"
-# INDEX_FILE = f"{PROJECT_ROOT}/src/data/blogs/index.json"  # REMOVED v3 — .md frontmatter is now the single source of truth
+HISTORY_FILE = f"{PROJECT_ROOT}/data/blogs-history/blog_history.json"
+POOL_FILE = f"{PROJECT_ROOT}/scripts/blog-automation/verified_images.json"
+STATE_FILE = f"{PROJECT_ROOT}/scripts/blog-automation/.rewrite_state.json"
 LLM_URL = "http://localhost:1234/v1/chat/completions"
-LLM_MODEL = "qwen/qwen3.5-9b"
+MODELS = ["qwen/qwen3.5-9b"]  # only model that loads on this machine (gemma-4-12b needs 26GB)
 GIT_USER_NAME = "Govind Tank"
 GIT_USER_EMAIL = "govindtank600@gmail.com"
-MAX_BLOG_COUNT = 999  # No limit — scan and update all blogs
-
-# Public Unsplash images for blog header images
-IMAGES = {
-    "ai-ml": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200",
-    "mobile": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
-    "code": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "architecture": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
-    "data": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    "cloud": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
-    "security": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
-    "flutter": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "network": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200",
-    "robot": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
-}
-
-# Topic pool - diverse trending tech topics NOT already covered
-TOPICS = [
-    {
-        "title": "Building Scalable Microservices with FastAPI and Event-Driven Architecture",
-        "tag": "Backend-Architecture",
-        "image_key": "architecture",
-        "desc": "FastAPI microservices with event-driven patterns, message queues, and async processing"
-    },
-    {
-        "title": "WebAssembly in 2026: From Browser to Edge Computing and Beyond",
-        "tag": "WebAssembly",
-        "image_key": "code",
-        "desc": "Wasm runtime evolution, use cases in edge computing, plugin systems, and container alternatives"
-    },
-    {
-        "title": "Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems",
-        "tag": "Security",
-        "image_key": "security",
-        "desc": "Zero-trust principles, identity-aware proxies, mTLS, and continuous verification"
-    },
-    {
-        "title": "Edge AI: Running Large Language Models on Consumer Devices in 2026",
-        "tag": "Edge-AI",
-        "image_key": "robot",
-        "desc": "On-device ML inference, quantization techniques, NPU acceleration, and privacy-preserving AI"
-    },
-    {
-        "title": "React Server Components: Production Patterns for High-Performance Web Apps",
-        "tag": "Web-Dev",
-        "image_key": "code",
-        "desc": "RSC architecture, streaming SSR, server/client boundaries, and data fetching patterns"
-    },
-    {
-        "title": "Data Engineering at Scale: Building Real-Time Streaming Pipelines",
-        "tag": "Data-Engineering",
-        "image_key": "data",
-        "desc": "Kafka, Flink, streaming SQL, exactly-once semantics, and schema evolution"
-    },
-    {
-        "title": "Building Developer Tools in 2026: From CLI Design to AI-Assisted Extensions",
-        "tag": "DevTools",
-        "image_key": "code",
-        "desc": "CLI design patterns, LSP protocol, VS Code extensions, and AI-powered code assistance"
-    },
-    {
-        "title": "PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing",
-        "tag": "Databases",
-        "image_key": "data",
-        "desc": "HTAP databases, columnar storage, parallel query execution, and real-time analytics"
-    },
-    {
-        "title": "Event Sourcing and CQRS: Practical Patterns for Distributed Systems",
-        "tag": "Architecture",
-        "image_key": "architecture",
-        "desc": "Event sourcing fundamentals, CQRS separation, projection rebuilds, and idempotency"
-    },
-    {
-        "title": "Platform Engineering: Building Internal Developer Portals That Teams Love",
-        "tag": "DevEx",
-        "image_key": "data",
-        "desc": "Backstage-like platforms, golden paths, developer scorecards, and API catalogs"
-    },
-    {
-        "title": "Kubernetes Sidecar Patterns for Service Mesh Observability in 2026",
-        "tag": "Cloud-Native",
-        "image_key": "network",
-        "desc": "Sidecar proxies, eBPF-based observability, OpenTelemetry deep integration, and traffic management"
-    },
-    {
-        "title": "Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines",
-        "tag": "AI-ML",
-        "image_key": "ai-ml",
-        "desc": "Testing strategies for LLM outputs, evaluation benchmarks, adversarial testing, and CI/CD for ML"
-    },
-    {
-        "title": "CSS Container Queries and Style Queries: Responsive Design Beyond Media Queries",
-        "tag": "Web-Dev",
-        "image_key": "code",
-        "desc": "Container queries, style queries, component-driven responsive design, and browser support in 2026"
-    },
-    {
-        "title": "Distributed Tracing with OpenTelemetry: From Instrumentation to Production Debugging",
-        "tag": "Observability",
-        "image_key": "data",
-        "desc": "OpenTelemetry signals, sampling strategies, trace context propagation, and backend analysis"
-    },
-    {
-        "title": "Rust for Systems Programming in 2026: Memory Safety, Concurrency, and Ecosystem Growth",
-        "tag": "Systems",
-        "image_key": "code",
-        "desc": "Rust ownership model, async runtimes, FFI patterns, embedded systems, and production readiness"
-    },
-    {
-        "title": "Building Real-Time Collaborative Apps with CRDTs and Operational Transformation",
-        "tag": "Architecture",
-        "image_key": "architecture",
-        "desc": "CRDT data types, OT algorithms, conflict resolution, and live collaboration infrastructure"
-    },
-    {
-        "title": "FinOps for Kubernetes: Optimizing Cloud Costs in Containerized Environments",
-        "tag": "DevOps",
-        "image_key": "cloud",
-        "desc": "Kubernetes cost allocation, right-sizing, spot instances, and FinOps tooling in 2026"
-    },
-    {
-        "title": "The Rise of AI Coding Assistants: Evaluating Code Quality and Productivity Impact",
-        "tag": "AI-Engineering",
-        "image_key": "ai-ml",
-        "desc": "AI code generation benchmarks, productivity measurement, code review with AI, and best practices"
-    },
-    {
-        "title": "Flutter 4 and Impeller: The Next Generation of Cross-Platform UI Performance",
-        "tag": "Flutter",
-        "image_key": "flutter",
-        "desc": "Impeller rendering engine, Flutter 4 features, shader compilation elimination, and platform performance gains"
-    },
-    {
-        "title": "Kotlin Multiplatform: Sharing Business Logic Across Android, iOS, and Desktop",
-        "tag": "Kotlin",
-        "image_key": "mobile",
-        "desc": "KMP architecture, expect/actual patterns, shared ViewModels, and CI strategies for multiplatform apps"
-    },
-    {
-        "title": "Compose Multiplatform in Production: UI Sharing Beyond Android",
-        "tag": "Android",
-        "image_key": "mobile",
-        "desc": "Jetpack Compose for desktop, iOS, and web; state hoisting, theming, and platform-specific integration"
-    },
-    {
-        "title": "Agentic AI Systems: Designing Reliable Multi-Agent Workflows in 2026",
-        "tag": "Agentic-AI",
-        "image_key": "robot",
-        "desc": "Multi-agent orchestration, tool-use patterns, memory architectures, and guardrails for autonomous agents"
-    },
-    {
-        "title": "Local-First Mobile Apps: Offline Sync Architectures with CRDTs and SQLite",
-        "tag": "Mobile",
-        "image_key": "mobile",
-        "desc": "Local-first design, offline-first sync, conflict-free data structures, and background sync for mobile"
-    },
-    {
-        "title": "MCP and the Rise of Model Context Protocol: Standardizing AI Tool Integration",
-        "tag": "AI-Engineering",
-        "image_key": "network",
-        "desc": "MCP servers, client architecture, tool discovery, and building AI assistants with standardized context"
-    },
-    {
-        "title": "Building Efficient Android Apps with Baseline Profiles and Macrobenchmark",
-        "tag": "Android",
-        "image_key": "code",
-        "desc": "Baseline profiles, startup optimization, Macrobenchmark testing, and frame timing analysis in Android"
-    },
-    {
-        "title": "Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026",
-        "tag": "Flutter",
-        "image_key": "code",
-        "desc": "Dart language features, records and patterns, native interop, and ecosystem tooling improvements"
-    },
-    {
-        "title": "Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones",
-        "tag": "Edge-AI",
-        "image_key": "ai-ml",
-        "desc": "SLM quantization, on-device inference engines, model distillation, and mobile NPU acceleration"
-    },
-    {
-        "title": "Free Developer Tools That Supercharge Your 2026 Workflow",
-        "tag": "DevTools",
-        "image_key": "data",
-        "desc": "Open-source CLI tools, local AI coding assistants, terminal multiplexers, and productivity utilities"
-    },
-]
-
+MIN_WORDS, TARGET_MIN, TARGET_MAX, MAX_WORDS = 1200, 1500, 2200, 3000
+ARCHETYPE_HISTORY = 3          # never repeat an archetype used in the last N posts
+MAX_LLM_ATTEMPTS = 3
 
 def log(msg):
-    print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}")
+    print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
 
-def load_history():
-    if os.path.exists(HISTORY_FILE):
-        with open(HISTORY_FILE) as f:
-            return json.load(f)
-    return {"version": "2.1", "totalCreated": 0, "lastTopic": "",
-            "todayCount": 0, "lastGenerated": "", "blogs": {}, "images": {}}
+# ======= TOPIC POOL (new-post path) =======
+TOPICS = [
+    {"title": "Building Scalable Microservices with FastAPI and Event-Driven Architecture", "tag": "Backend-Architecture", "desc": "FastAPI microservices with event-driven patterns, message queues, and async processing"},
+    {"title": "WebAssembly in 2026: From Browser to Edge Computing and Beyond", "tag": "WebAssembly", "desc": "Wasm runtime evolution, use cases in edge computing, plugin systems, and container alternatives"},
+    {"title": "Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems", "tag": "Security", "desc": "Zero-trust principles, identity-aware proxies, mTLS, and continuous verification"},
+    {"title": "Edge AI: Running Large Language Models on Consumer Devices in 2026", "tag": "Edge-AI", "desc": "On-device ML inference, quantization techniques, NPU acceleration, and privacy-preserving AI"},
+    {"title": "React Server Components: Production Patterns for High-Performance Web Apps", "tag": "Web-Dev", "desc": "RSC architecture, streaming SSR, server/client boundaries, and data fetching patterns"},
+    {"title": "Data Engineering at Scale: Building Real-Time Streaming Pipelines", "tag": "Data-Engineering", "desc": "Kafka, Flink, streaming SQL, exactly-once semantics, and schema evolution"},
+    {"title": "Building Developer Tools in 2026: From CLI Design to AI-Assisted Extensions", "tag": "DevTools", "desc": "CLI design patterns, LSP protocol, VS Code extensions, and AI-powered code assistance"},
+    {"title": "PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing", "tag": "Databases", "desc": "HTAP databases, columnar storage, parallel query execution, and real-time analytics"},
+    {"title": "Event Sourcing and CQRS: Practical Patterns for Distributed Systems", "tag": "Architecture", "desc": "Event sourcing fundamentals, CQRS separation, projection rebuilds, and idempotency"},
+    {"title": "Platform Engineering: Building Internal Developer Portals That Teams Love", "tag": "DevEx", "desc": "Backstage-like platforms, golden paths, developer scorecards, and API catalogs"},
+    {"title": "Kubernetes Sidecar Patterns for Service Mesh Observability in 2026", "tag": "Cloud-Native", "desc": "Sidecar proxies, eBPF-based observability, OpenTelemetry deep integration, and traffic management"},
+    {"title": "Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines", "tag": "AI-ML", "desc": "Testing strategies for LLM outputs, evaluation benchmarks, adversarial testing, and CI/CD for ML"},
+    {"title": "CSS Container Queries and Style Queries: Responsive Design Beyond Media Queries", "tag": "Web-Dev", "desc": "Container queries, style queries, component-driven responsive design, and browser support in 2026"},
+    {"title": "Distributed Tracing with OpenTelemetry: From Instrumentation to Production Debugging", "tag": "Observability", "desc": "OpenTelemetry signals, sampling strategies, trace context propagation, and backend analysis"},
+    {"title": "Rust for Systems Programming in 2026: Memory Safety, Concurrency, and Ecosystem Growth", "tag": "Systems", "desc": "Rust ownership model, async runtimes, FFI patterns, embedded systems, and production readiness"},
+    {"title": "Building Real-Time Collaborative Apps with CRDTs and Operational Transformation", "tag": "Architecture", "desc": "CRDT data types, OT algorithms, conflict resolution, and live collaboration infrastructure"},
+    {"title": "FinOps for Kubernetes: Optimizing Cloud Costs in Containerized Environments", "tag": "DevOps", "desc": "Kubernetes cost allocation, right-sizing, spot instances, and FinOps tooling in 2026"},
+    {"title": "The Rise of AI Coding Assistants: Evaluating Code Quality and Productivity Impact", "tag": "AI-Engineering", "desc": "Evaluating LLM code assistants on real tasks, acceptance vs correctness, and team workflows"},
+    {"title": "Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones", "tag": "Edge-AI", "desc": "On-device SLM inference, quantization, model distillation, and mobile NPU hardware"},
+    {"title": "Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026", "tag": "Flutter", "desc": "Dart 4 language features, Flutter tooling improvements, and ecosystem changes"},
+]
 
-def save_history(h):
-    os.makedirs(os.path.dirname(HISTORY_FILE), exist_ok=True)
-    with open(HISTORY_FILE, 'w') as f:
-        json.dump(h, f, indent=2)
+# ======= IMAGE POOL (unique, verified public URLs) =======
+def load_pool():
+    with open(POOL_FILE) as f:
+        return json.load(f)
+
+def used_images():
+    used = set()
+    for fn in os.listdir(CONTENT_DIR):
+        if not fn.endswith(".md"):
+            continue
+        m = re.search(r'^coverImage:\s*"([^"]+)"', open(os.path.join(CONTENT_DIR, fn)).read(), re.M)
+        if m:
+            used.add(m.group(1))
+    return used
+
+def pick_image(category=""):
+    """Deterministic-ish unique image from the verified pool, never reused."""
+    pool = [u for u in load_pool() if u not in used_images()]
+    if not pool:
+        raise RuntimeError("Image pool exhausted — run verify_images.py to expand")
+    h = int(hashlib_md5(category + datetime.now().strftime("%Y%m%d")).hexdigest(), 16)
+    return pool[h % len(pool)]
+
+def hashlib_md5(s):
+    import hashlib
+    return hashlib.md5(s.encode())
+
+# ======= ARCHETYPES =======
+ARCHETYPES = {
+    "tutorial": {
+        "label": "hands-on tutorial",
+        "structure": [
+            "Opening hook: a concrete problem the reader is stuck on, or 'here's what we'll build and why it matters'. No generic preamble.",
+            "Brief context: what you need before starting (versions, tools). 1-2 short paragraphs.",
+            "Step-by-step walkthrough: numbered steps, each with purpose. 2-4 code blocks, each with a one-line 'what this does'.",
+            "A short recap: what we just built and how the pieces fit.",
+            "Pitfalls you hit while doing this yourself (specific errors, weird behavior).",
+            "Closing: where to go next (docs, related tools), 1-2 sentences.",
+        ],
+        "notes": "Write like you're walking a colleague through it at a whiteboard. No 'comprehensive' claims.",
+    },
+    "comparison": {
+        "label": "head-to-head comparison",
+        "structure": [
+            "Opening hook: the decision the reader is stuck on (which tool/library/pattern to pick).",
+            "Brief context: why multiple options exist and what changed recently.",
+            "Each option gets a fair section: strengths, weaknesses, when it fits. Own the trade-offs.",
+            "One comparison table with honest trade-offs. NO fake benchmark numbers.",
+            "Decision framework: bulleted 'choose X when...' / 'choose Y when...'.",
+            "Closing: your recommendation and why, 2-3 sentences.",
+        ],
+        "notes": "Treat every option fairly even if you have a favorite. Specific versions and real ergonomic differences beat vague adjectives.",
+    },
+    "explainer": {
+        "label": "how it works under the hood",
+        "structure": [
+            "Opening hook: a surprising behavior, a common misconception, or a question most devs get wrong.",
+            "The mental model first: an analogy or simple framing before any code.",
+            "Core mechanics: step-by-step, ONE mermaid diagram, 1-2 small code snippets.",
+            "What happens at runtime: walk through a concrete scenario end to end.",
+            "Edge cases and gotchas (what breaks, and why).",
+            "Closing: why this mental model matters for day-to-day work, 1-2 sentences.",
+        ],
+        "notes": "Clarity over completeness. If a detail doesn't help the mental model, cut it.",
+    },
+    "war-story": {
+        "label": "field story / postmortem",
+        "structure": [
+            "Opening hook: the incident or pain point, told from your perspective. First person ('I').",
+            "The setup: what the system was, what we assumed.",
+            "The failure moment: the symptom, the panic, the wrong guesses first.",
+            "The actual fix: the debugging path, tools used, the aha moment.",
+            "The fix in code: 1-2 code blocks.",
+            "Lessons: what I'd do differently, bulleted.",
+            "Closing: practical takeaway for the reader, 1-2 sentences.",
+        ],
+        "notes": "Specific beats dramatic. Real error messages, real timestamps, real stack traces read human. Don't invent heroic endings.",
+    },
+    "roundup": {
+        "label": "roundup with verdicts",
+        "structure": [
+            "Opening hook: what the reader is trying to choose between.",
+            "Selection criteria: brief and honest about what made the list.",
+            "Each item its own short section: what it is, who it's for, verdict (worth it / skip / depends).",
+            "One quick-reference table.",
+            "Closing: how to evaluate options yourself rather than trusting the list, 2-3 sentences.",
+        ],
+        "notes": "Verdicts must be opinionated. 'Depends' needs a concrete condition.",
+    },
+    "opinion": {
+        "label": "opinion / thesis piece",
+        "structure": [
+            "Opening hook: the claim, stated plainly and early. Take a side.",
+            "Why most people think otherwise: steelman the mainstream view first.",
+            "Your argument: evidence, experience, reasoning. Max 1 code/diagram element.",
+            "Counterarguments: where you might be wrong, addressed honestly.",
+            "Closing: what this means for the reader's decisions, 2-3 sentences.",
+        ],
+        "notes": "No hedge soup. If you're unsure about a claim, say so in one clause and move on.",
+    },
+}
+
+PERSONAS = [
+    "A senior engineer with 12+ years of experience who has been burned by over-engineered solutions. Writes plainly, uses first person, calls out trade-offs instead of hiding them.",
+    "A curious tinkerer who prototypes everything. Enthusiastic but precise; shares small experiments and what surprised them. First person welcome.",
+    "A pragmatic staff engineer who has reviewed a lot of bad production code. Slightly skeptical tone; values simple, boring solutions that work. First person welcome.",
+]
+
+BANNED_PHRASES = [
+    "technology landscape in 2026", "landscape in 2026", "represents one of the most impactful",
+    "comprehensive technical deep-dive", "comprehensive deep dive", "in today's fast-paced",
+    "evolving landscape", "delve into", "seamless", "game-changer", "revolutionize", "revolutionizing",
+    "unlock the", "harness the power", "it is important to note", "it's worth noting", "it's important to note",
+    "In conclusion", "Furthermore", "Moreover", "Additionally,", "🚀", "💡", "✅", "🔥",
+    "3-5x", "5x improvement", "cutting-edge", "state-of-the-art", "seamless integration",
+    "production-grade", "best-in-class", "At its core", "at its core", "serves as", "stands as",
+    "testament", "industry reports", "experts say", "some argue", "let's dive in", "let's explore",
+    "in this article", "this article will", "this article provides", "deep dive into", "deep-dive",
+    "unleash", "supercharge", "elevate your", "in the realm of", "when it comes to", "in a world where",
+    "moving forward", "let me be clear", "the bottom line is", "take a step back",
+]
+
+# ======= LLM =======
+def call_llm(messages, temperature=0.8, timeout=300):
+    """Call qwen (only model that fits this machine). Returns text or None."""
+    payload = {"model": MODELS[0], "messages": messages, "temperature": temperature,
+               "max_tokens": 4096, "top_p": 0.9}
+    try:
+        req = urllib.request.Request(LLM_URL, data=json.dumps(payload).encode(),
+                                     headers={"Content-Type": "application/json"}, method="POST")
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            data = json.loads(resp.read().decode())
+            if "choices" in data and data["choices"]:
+                msg = data["choices"][0]["message"]
+                content = msg.get("content", "") or msg.get("reasoning_content", "")
+                if content and len(content) > 300:
+                    return content
+    except Exception as e:
+        log(f"  LLM call failed: {str(e)[:90]}")
+    return None
+
+def build_prompts(topic, archetype, persona, excerpt_only=False):
+    arch = ARCHETYPES[archetype]
+    if excerpt_only:
+        system = "You write concise, honest blog post abstracts. No fluff, no marketing language, no 'In this article'."
+        user = (f"Write a 1-2 sentence excerpt (max 200 chars) for a blog post titled '{topic['title']}' "
+                f"about {topic.get('desc', '')}. Plain, specific, no AI clichés.")
+        return system, user
+
+    banned = "; ".join(BANNED_PHRASES[:24])
+    system = f"""You are writing a technical blog post. {persona}
+
+Post type: {arch['label']}.
+
+Structure to follow (in this order, adapt headings naturally — do NOT use these exact labels):
+{chr(10).join('- ' + s for s in arch['structure'])}
+
+Style notes:
+{arch['notes']}
+- Write 1500-2200 words. No padding, no filler sections.
+- Headings in sentence case (e.g. '## Why this keeps happening', not '## Why This Keeps Happening').
+- Vary sentence length. Short sentences land harder. Long ones can take their time.
+- First person is fine and welcome. Opinions are welcome. 'I' is not a dirty word.
+- Use 1-3 real, verifiable references: real project names, real versions, real docs URLs,
+  real RFCs, real error messages, real GitHub issues. If you cannot recall a specific fact
+  confidently, stay generic about numbers rather than inventing precise fake statistics.
+- Include a markdown table where the structure calls for it; include a mermaid diagram ONLY
+  where the structure calls for it (not every post needs one).
+- Code blocks must be realistic and runnable-looking, with a language tag.
+- Start directly with the H1: # {topic['title']}
+- End with a short closing section, NOT labeled 'Conclusion' and NOT labeled 'Future Outlook'.
+- The H1 is the only # heading. Everything else is ## or ###.
+
+HARD BANS — never use these words/phrases, even once:
+{banned}
+
+Never write:
+- 'In today's fast-paced world of technology'
+- 'The technology landscape in 2026 demands'
+- 'represents one of the most impactful shifts'
+- Any sentence that tells the reader how important the topic is instead of showing it.
+- Fake benchmark numbers (x ms vs y ms invented precisely), fake team anecdotes, fake quotes.
+- Emojis anywhere.
+"""
+
+    user = f"""Write the blog post now.
+
+Title: {topic['title']}
+Tag/category: {topic.get('tag', '')}
+Topic context: {topic.get('desc', '')}
+
+Remember: {arch['label']}, 1500-2200 words, no banned phrases, human voice, start with the H1."""
+    return system, user
+
+def humanize_pass(content, title):
+    """Second LLM pass: strip residual AI patterns, tighten prose."""
+    system = """You are a sharp copy editor. Rewrite this blog post to sound like it was written by an experienced engineer, not an LLM.
+
+Rules:
+1. Cut ALL of these if present: 'delve', 'seamless', 'leverage', 'robust', 'cutting-edge', 'game-changer',
+   'it's worth noting', 'Furthermore', 'Moreover', 'In conclusion', 'at its core', 'serves as', 'stands as',
+   'testament', 'in today's fast-paced', 'landscape', 'deep dive', 'unlock', 'elevate', 'in the realm of',
+   'when it comes to', 'in a world where', 'moving forward', emojis, '🚀💡✅'.
+2. Cut redundant intro sentences that just restate the heading (pattern: heading followed by a filler line).
+3. Remove negative parallelism ('it's not just X, it's Y'), forced rule-of-three lists, and
+   'from X to Y' false ranges.
+4. Replace passive voice with active where the actor matters.
+5. Vary sentence length. Break any run of three same-length sentences.
+6. Keep ALL code blocks, tables, mermaid diagrams, headings, and markdown structure intact.
+7. Keep the H1 exactly: # {title}
+8. Do not change technical facts. Do not add content. Output the full markdown document only.
+"""
+    user = "Here is the draft:\n\n" + content
+    out = call_llm([{"role": "system", "content": system}, {"role": "user", "content": user}],
+                   temperature=0.5, timeout=300)
+    return out if out and len(out) > 500 else None
+
+# ======= VALIDATION =======
+def validate(content, archetype):
+    issues = []
+    body = re.sub(r'^---.*?---\n', '', content, flags=re.S)
+    wc = len(body.split())
+    if wc < MIN_WORDS:
+        issues.append(f"too short: {wc} words (< {MIN_WORDS})")
+    elif wc > MAX_WORDS:
+        issues.append(f"too long: {wc} words (> {MAX_WORDS})")
+    if not TARGET_MIN <= wc <= TARGET_MAX:
+        issues.append(f"off target range {TARGET_MIN}-{TARGET_MAX} (got {wc})")
+
+    low = body.lower()
+    for p in BANNED_PHRASES:
+        if p in low:
+            issues.append(f"banned phrase: '{p}'")
+
+    if "## conclusion" in low:
+        issues.append("banned heading '## Conclusion'")
+    if "## future outlook" in low:
+        issues.append("banned heading '## Future Outlook'")
+    if "```mermaid" not in body and archetype in ("explainer",):
+        issues.append("explainer archetype missing mermaid diagram")
+    if "|" not in body and archetype in ("comparison", "roundup"):
+        issues.append(f"{archetype} archetype missing a table")
+    if re.search(r'^(#|\n\n)#{2,3} ', body) is None and len(re.findall(r'^#{2,3} ', body, re.M)) < 3:
+        issues.append("fewer than 3 ## headings")
+    return issues
+
+# ======= FRONTMATTER / FILES =======
+def format_date():
+    return datetime.now().strftime("%B %d, %Y")
 
 def slugify(title):
-    s = title.lower().replace(' ', '-')
-    s = re.sub(r'[^a-z0-9-]', '', s)
-    s = re.sub(r'-+', '-', s)
-    return s.strip('-')
+    slug = title.lower().strip()
+    slug = re.sub(r'[^a-z0-9\s-]', '', slug)
+    slug = re.sub(r'[\s_]+', '-', slug)
+    slug = re.sub(r'-+', '-', slug)
+    return slug.strip('-')
 
-def write_content_md(slug, content, title, tags, date, excerpt, cover_image=""):
-    """Write blog content as Markdown with YAML frontmatter"""
-    filepath = f"{CONTENT_DIR}/{slug}.md"
-    os.makedirs(CONTENT_DIR, exist_ok=True)
-    
-    # Build YAML frontmatter
-    tag_entry = "uncategorized"
-    if isinstance(tags, list) and tags:
-        tag_entry = tags[0]
-    elif isinstance(tags, str):
-        tag_entry = tags
-    
-    frontmatter = f"""---
+def write_content_md(slug, content, title, tag, date, excerpt, image_url, tags=None, read_time=None):
+    if read_time is None:
+        read_time = max(3, round(len(content.split()) / 200))
+    tags_list = tags or [tag]
+    tags_yaml = "\n".join(f'  - "{t}"' for t in tags_list)
+    fm = f"""---
 title: "{title}"
 slug: "{slug}"
 date: "{date}"
 excerpt: >
-  {excerpt[:197] + "..." if len(excerpt) > 200 else excerpt}
-coverImage: "{cover_image}"
-category: "{tag_entry}"
-readTime: {max(3, len(content.split()) // 200)}
+  {excerpt}
+coverImage: "{image_url}"
+category: "{tag}"
+readTime: {read_time}
 tags:
-  - "{tag_entry}"
+{tags_yaml}
 ---
 
 """
-    with open(filepath, 'w') as f:
-        f.write(frontmatter + content)
-    log(f"Content written to {filepath}")
-    return True
+    path = os.path.join(CONTENT_DIR, f"{slug}.md")
+    with open(path, "w") as f:
+        f.write(fm + content.lstrip())
+    return path
 
-def update_index_json(title, excerpt, date, tag, slug):
-    """DEPRECATED v3 — No longer needed. Metadata is derived from .md frontmatter at build time."""
-    return True
-
-def select_topic(history):
-    existing = set(history.get('blogs', {}).keys())
-    random.shuffle(TOPICS)
-    for t in TOPICS:
-        slug = slugify(t["title"])
-        if slug not in existing:
-            return t
-    return TOPICS[0]
-
-def call_llm(prompt, system_prompt, timeout=180):
-    payload = {
-        "model": LLM_MODEL,
-        "messages": [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": prompt}
-        ],
-        "temperature": 0.6,
-        "max_tokens": 4096,
-        "top_p": 0.9
+def parse_existing(path):
+    text = open(path).read()
+    def g(key):
+        m = re.search(rf'^{key}:\s*"?([^"\n]+)"?', text, re.M)
+        return m.group(1).strip() if m else ""
+    tags = re.findall(r'^\s+- "([^"]+)"', text, re.M)
+    return {
+        "title": g("title"), "slug": g("slug") or os.path.basename(path)[:-3],
+        "date": g("date"), "category": g("category"), "coverImage": g("coverImage"),
+        "tags": tags or [g("category")] or ["Tech"],
     }
+
+def load_history():
     try:
-        req = urllib.request.Request(
-            LLM_URL,
-            data=json.dumps(payload).encode(),
-            headers={"Content-Type": "application/json"},
-            method="POST"
-        )
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            data = json.loads(resp.read().decode())
-            if "choices" in data and len(data["choices"]) > 0:
-                msg = data["choices"][0]["message"]
-                content = msg.get("content", "") or msg.get("reasoning_content", "")
-                return content
-    except Exception as e:
-        log(f"LLM call failed: {str(e)[:80]}")
+        return json.load(open(HISTORY_FILE))
+    except Exception:
+        return {}
+
+def save_history(h):
+    os.makedirs(os.path.dirname(HISTORY_FILE), exist_ok=True)
+    json.dump(h, open(HISTORY_FILE, "w"), indent=2)
+
+def recent_archetypes():
+    """Archetypes used by the last N posts (by file mtime)."""
+    files = sorted((os.path.join(CONTENT_DIR, f) for f in os.listdir(CONTENT_DIR) if f.endswith(".md")),
+                   key=os.path.getmtime)
+    archs = []
+    for f in files[-ARCHETYPE_HISTORY:]:
+        m = re.search(r'^archetype:\s*"?([a-z-]+)"?', open(f).read(), re.M)
+        if m:
+            archs.append(m.group(1))
+    return archs
+
+def choose_archetype():
+    recent = recent_archetypes()
+    available = [a for a in ARCHETYPES if a not in recent]
+    return random.choice(available or list(ARCHETYPES))
+
+def choose_persona():
+    return random.choice(PERSONAS)
+
+def generate_blog_content(topic, archetype=None, persona=None, existing_meta=None):
+    """Returns (content, archetype, persona, excerpt, image_url)."""
+    archetype = archetype or choose_archetype()
+    persona = persona or choose_persona()
+    log(f"  archetype={archetype} persona_idx={PERSONAS.index(persona)}")
+
+    content = None
+    for attempt in range(MAX_LLM_ATTEMPTS):
+        system, user = build_prompts(topic, archetype, persona)
+        tmp = call_llm([{"role": "system", "content": system}, {"role": "user", "content": user}],
+                       temperature=0.75 + attempt * 0.1)
+        if tmp and tmp.strip().startswith("#"):
+            content = tmp
+            break
+        log(f"  attempt {attempt + 1} failed/invalid, retrying (temp up)")
+    if not content:
+        log("  LLM failed for this archetype, switching archetype and retrying once")
+        archetype = random.choice([a for a in ARCHETYPES if a != archetype])
+        system, user = build_prompts(topic, archetype, persona)
+        content = call_llm([{"role": "system", "content": system}, {"role": "user", "content": user}],
+                           temperature=0.9)
+    if not content:
         return None
 
-def generate_blog_content(topic):
-    title = topic["title"]
-    tag = topic["tag"]
+    # humanizer pass (non-fatal if it fails)
+    hz = humanize_pass(content, topic["title"])
+    if hz:
+        content = hz
 
-    system_prompt = f"""You are a Senior Software Architect writing a technical blog post.
+    # excerpt: separate abstract
+    excerpt = None
+    s2, u2 = build_prompts(topic, archetype, persona, excerpt_only=True)
+    e = call_llm([{"role": "system", "content": s2}, {"role": "user", "content": u2}], temperature=0.6, timeout=120)
+    if e:
+        excerpt = re.sub(r'\s+', ' ', e).strip()
+        if len(excerpt) > 220:
+            excerpt = excerpt[:217] + "..."
+    if not excerpt:
+        first = next((l.strip() for l in content.split("\n") if l.strip() and not l.startswith("#")), "")
+        excerpt = (first[:217] + "...") if len(first) > 220 else first
 
-RULES:
-1. Start directly with H1: # {title}
-2. Minimum 4 sections with ## headings
-3. Include EXACTLY:
-   - 1 markdown table (| Feature | Value | ...|)
-   - 1 mermaid code block (```mermaid ... ```) for architecture diagram
-   - 2 code blocks with language hints
-   - Bullet-point lists
-4. End with ## Conclusion
-5. Total: 1200-1800 words
-6. NO preamble text before the H1
-7. Professional tone for senior developers
+    return content, archetype, persona, excerpt
 
-Mermaid example:
-```mermaid
-graph TD
-  A[Component] --> B{{Decision}}
-  B -->|Yes| C[Action]
-```
-
-Table example:
-| Approach | Latency | Throughput |
-|----------|---------|------------|
-| Method A | 2ms | 5000 req/s |
-"""
-
-    user_prompt = f"""Write a detailed technical blog post about: {title}
-Tag: {tag}
-
-Topic context: {topic.get('desc', '')}
-
-Cover:
-- Current 2026 landscape and why it matters
-- Technical deep-dive with implementation guidance
-- Comparison table of approaches/tools
-- Architecture diagram in mermaid format  
-- Code examples (real patterns)
-- Best practices and pitfalls
-- Future outlook"""
-
-    log(f"Generating content via local LLM ({LLM_MODEL})...")
-    content = call_llm(user_prompt, system_prompt, timeout=300)
-
-    # Check if content is valid
-    if content and len(content) >= 1500 and content.strip().startswith('#'):
-        log(f"LLM generated {len(content)} chars")
-        return content
-
-    log("LLM response too short or invalid, using fallback generator")
-    return generate_fallback_content(title, tag)
-
-
-FALLBACK_TEMPLATE = '''# {{TITLE}}
-
-## Introduction
-
-The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. {{TITLE}} represents one of the most impactful shifts in how modern distributed systems are architected and deployed. This article provides a comprehensive technical deep-dive, covering production-ready implementation strategies, architectural trade-offs, and forward-looking insights that every senior developer should understand.
-
-## Current Landscape and Why It Matters
-
-Enterprise adoption of these patterns has accelerated dramatically through 2026. Organizations that have successfully implemented them report measurable improvements across key metrics: deployment frequency increases by 3-5x, mean time to recovery (MTTR) drops by 60%, and team through-put improves by an average of 40%. The maturity of the ecosystem—matured tooling, comprehensive documentation, and a growing body of production case studies—has removed many of the early adoption barriers.
-
-## Architectural Foundation
-
-The core architecture follows a layered design that enforces separation of concerns while maintaining high cohesion. Each component has a clearly defined responsibility, communicating through well-typed interfaces that enable independent evolution of subsystems.
-
-```mermaid
-graph TD
-  C[Client] --> G[Gateway Layer]
-  G --> S[Service Layer]
-  S --> D[Domain Logic]
-  D --> A[(Data Store)]
-  S --> Q[Message Queue]
-  Q --> W[Worker Pool]
-  W --> E[External APIs]
-  D --> R[Cache Layer]
-  R --> A
-  style C fill:#1e3a5f,color:#fff
-  style G fill:#2d5a87,color:#fff
-  style S fill:#3a7bd5,color:#fff
-  style D fill:#4a90d9,color:#fff
-  style A fill:#6b5b95,color:#fff
-  style Q fill:#c0392b,color:#fff
-  style W fill:#e67e22,color:#fff
-```
-
-This architecture provides clear benefits for production systems: each layer can be tested independently, scaling decisions can be made per-component, and technology choices at one layer don't cascade to others.
-
-## Implementation Strategies
-
-### Core Infrastructure Setup
-
-The foundation of any production-grade implementation starts with proper service scaffolding, configuration management, and observability instrumentation. Here is a practical example of setting up the core infrastructure:
-
-```python
-import asyncio
-from typing import Optional
-from dataclasses import dataclass, field
-import structlog
-
-logger = structlog.get_logger()
-
-@dataclass
-class ServiceConfig:
-    """Central configuration for a service instance"""
-    name: str
-    version: str = "1.0.0"
-    max_retries: int = 3
-    circuit_breaker_threshold: int = 5
-    recovery_timeout_s: int = 60
-
-class ServiceOrchestrator:
-    """Manages service lifecycle, health checks, and dependency wiring"""
-
-    def __init__(self, config: ServiceConfig):
-        self.config = config
-        self._registry: dict[str, object] = {}
-        self._health_status: dict[str, bool] = {}
-
-    async def register(self, name: str, service, depends_on: list[str] = None):
-        """Register a service with optional dependency declaration"""
-        self._registry[name] = service
-        logger.info("service.registered", name=name)
-        if depends_on:
-            for dep in depends_on:
-                if dep not in self._registry:
-                    raise RuntimeError(f"Dependency {dep} not registered")
-        await service.initialize()
-        self._health_status[name] = True
-```
-
-### Advanced Production Patterns
-
-With the foundation in place, implement robust error handling and resilience patterns:
-
-```typescript
-interface ResiliencePolicy {
-  retry: {
-    maxAttempts: number;
-    backoffMs: number;
-    jitter: boolean;
-  };
-  circuitBreaker: {
-    threshold: number;
-    halfOpenAfterMs: number;
-  };
-  timeout: {
-    requestMs: number;
-    connectionMs: number;
-  };
-}
-
-class AdaptiveResilienceManager {
-  private failureCounts: Map<string, number> = new Map();
-  private circuitState: Map<string, "CLOSED" | "OPEN" | "HALF_OPEN"> = new Map();
-  private lastFailureTime: Map<string, number> = new Map();
-
-  async callWithResilience<T>(
-    serviceId: string,
-    fn: () => Promise<T>,
-    policy: ResiliencePolicy
-  ): Promise<T> {
-    if (this.isCircuitOpen(serviceId, policy)) {
-      throw new CircuitBreakerOpenError(serviceId);
-    }
-
-    for (let attempt = 1; attempt <= policy.retry.maxAttempts; attempt++) {
-      try {
-        const result = await Promise.race([
-          fn(),
-          new Promise((_, reject) =>
-            setTimeout(() => reject(new TimeoutError()), policy.timeout.requestMs)
-          ),
-        ]);
-        this.recordSuccess(serviceId);
-        return result;
-      } catch (error) {
-        if (attempt < policy.retry.maxAttempts) {
-          const delay = policy.retry.backoffMs * Math.pow(2, attempt - 1);
-          const jitteredDelay = policy.retry.jitter
-            ? delay * (0.5 + Math.random() * 0.5)
-            : delay;
-          await this.sleep(jitteredDelay);
-          this.recordFailure(serviceId);
-        } else {
-          throw error;
-        }
-      }
-    }
-    throw new Error("Unreachable");
-  }
-}
-```
-
-## Production-Grade Comparison
-
-Choosing the right approach depends on your specific requirements. The following comparison table highlights key trade-offs:
-
-| Dimension | Synchronous | Event-Driven | Hybrid |
-|-----------|------------|-------------|--------|
-| Latency P99 | 50-100ms | 200-500ms | 100-200ms |
-| Throughput | 10k req/s | 100k+ req/s | 50k req/s |
-| Consistency | Strong | Eventual | Configurable |
-| Complexity | Low | High | Medium |
-| Debugging | Easy | Hard | Moderate |
-| Team Expertise | Junior-suitable | Senior-required | Mixed team |
-| Operational Cost | $ | $$ | $$ |
-| Failure Isolation | Poor | Excellent | Good |
-
-## Best Practices and Common Pitfalls
-
-Based on extensive production experience, here are the critical patterns to follow and mistakes to avoid:
-
-### Do This:
-- **Start with observability**: Instrument everything from day one—metrics, structured logging, and distributed tracing are not optional
-- **Design for failure**: Assume every dependency will fail and design accordingly with circuit breakers, bulkheads, and graceful degradation
-- **Use idempotency keys**: Every mutation endpoint should support idempotency to safely handle retries
-- **Document architecture decisions**: Maintain Architecture Decision Records (ADRs) for every significant design choice
-
-### Avoid This:
-- **Premature optimization**: Don't optimize for scale you don't yet need—focus on clean abstractions first
-- **Over-engineering**: Start with the simplest solution that works, then evolve based on actual bottlenecks
-- **Ignoring data consistency**: Eventual consistency requires careful thought about read paths and user expectations
-- **Skipping load testing**: Always validate your architecture under realistic traffic patterns before production
-
-## Future Outlook
-
-Looking ahead to the remainder of 2026 and 2027, several trends will shape the evolution of these patterns:
-
-- **AI-Augmented Operations**: Machine learning models will optimize resource allocation, predict failures, and automate incident response with increasing accuracy
-- **Green Computing**: Energy-aware scheduling and carbon-aware deployment decisions are becoming first-class architectural concerns
-- **Platform Engineering Maturity**: Internal developer platforms will abstract away infrastructure complexity through golden paths and self-service capabilities
-- **Security Convergence**: Zero-trust principles will be embedded at the architecture level, not bolted on at the perimeter
-
-## Conclusion
-
-{{TITLE}} represents a fundamental shift in how we build production systems in 2026. By understanding the architectural patterns, implementing proven resilience strategies, and avoiding common pitfalls, senior developers can lead their teams to deliver systems that are not just functional, but truly robust, scalable, and maintainable. The investment in mastering these patterns pays compounding returns as systems grow in complexity and criticality. Start with clean foundations, iterate based on real production data, and keep the developer experience front and center in every design decision.
-'''
-
-def generate_fallback_content(title, tag):
-    """High-quality fallback content if LLM fails"""
-    return FALLBACK_TEMPLATE.replace("{{TITLE}}", title)
-
-
-def escape_for_ts(content):
-    """Escape content for TypeScript template literal (backtick string)"""
-    # Order matters: escape backslash first, then backticks, then ${}
-    content = content.replace("\\", "\\\\")
-    content = content.replace("`", "\\`")
-    content = content.replace("${", "\\${")
-    return content
-
-
-def format_date():
-    """Return formatted date like 'June 2, 2026'"""
-    now = datetime.now()
-    return now.strftime("%B %d, %Y")
-
-
-def update_constants(title, excerpt, date, tag, slug):
-    """DEPRECATED v3 — No longer needed. constants.ts derives metadata from .md files at build time."""
-    return True
-
-
-def update_history(history, title, slug, date, tag, word_count, image_url):
-    """Update blog history JSON"""
-    # Calculate word count from title
-    history["totalCreated"] = history.get("totalCreated", 0) + 1
-    history["lastTopic"] = title
-    history["todayCount"] = history.get("todayCount", 0) + 1
-    history["lastGenerated"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-
-    if "blogs" not in history:
-        history["blogs"] = {}
-    history["blogs"][slug] = {
-        "title": title,
-        "slug": slug,
-        "date": date,
-        "tag": tag,
-        "wordCount": word_count,
-        "status": "published"
-    }
-    if "images" not in history:
-        history["images"] = {}
-    history["images"][slug] = image_url
-
-    save_history(history)
-    log("Updated blog history")
-    return True
-
-
-def commit_and_push(title, slug):
-    """Git commit and push changes"""
-    log("Running git operations...")
+# ======= GIT =======
+def commit_and_push(commit_msg, paths=None):
+    log("Git operations...")
     try:
-        subprocess.run(["git", "config", "user.name", GIT_USER_NAME],
+        subprocess.run(["git", "config", "user.name", GIT_USER_NAME], cwd=PROJECT_ROOT, check=True, capture_output=True)
+        subprocess.run(["git", "config", "user.email", GIT_USER_EMAIL], cwd=PROJECT_ROOT, check=True, capture_output=True)
+        # pull --rebase to integrate remote changes first
+        pr = subprocess.run(["git", "pull", "--rebase", "origin", "main"], cwd=PROJECT_ROOT, capture_output=True, timeout=120)
+        if pr.returncode != 0:
+            log(f"  pull --rebase issue: {pr.stderr.decode()[:200]}")
+        if paths:
+            subprocess.run(["git", "add", "--force", "--"] + paths, cwd=PROJECT_ROOT, check=True, capture_output=True)
+        subprocess.run(["git", "add", "--force", "dist/"], cwd=PROJECT_ROOT, check=True, capture_output=True)
+        subprocess.run(["git", "commit", "-m", commit_msg, "-m", "Generated via Hermes blog pipeline v4"],
                        cwd=PROJECT_ROOT, check=True, capture_output=True)
-        subprocess.run(["git", "config", "user.email", GIT_USER_EMAIL],
-                       cwd=PROJECT_ROOT, check=True, capture_output=True)
-
-        # Add changed files (markdown source, history, and build artifacts)
-        subprocess.run(["git", "add", "--force", "--", f"{CONTENT_DIR}/{slug}.md", f"{PROJECT_ROOT}/data/blogs-history/blog_history.json"],
-                       cwd=PROJECT_ROOT, check=True, capture_output=True)
-        # Also stage any updated dist/ files (they're gitignored but tracked)
-        subprocess.run(["git", "add", "--force", "dist/"],
-                       cwd=PROJECT_ROOT, check=True, capture_output=True)
-
-        # Commit
-        commit_msg = f"blog: Add {title} - {datetime.now().strftime('%Y-%m-%d')}"
-        subprocess.run(["git", "commit", "-m", commit_msg, "-m", "Automated via Qwen 3.5 9B local LLM"],
-                       cwd=PROJECT_ROOT, check=True, capture_output=True)
-        log("Git commit successful")
-
-        # Push via SSH
-        result = subprocess.run(["git", "push", "origin", "main"],
-                                cwd=PROJECT_ROOT, capture_output=True, timeout=60)
-        if result.returncode == 0:
-            log(f"Git push successful")
+        log("  commit ok")
+        r = subprocess.run(["git", "push", "origin", "main"], cwd=PROJECT_ROOT, capture_output=True, timeout=120)
+        if r.returncode == 0:
+            log("  push ok")
             return True
-        else:
-            log(f"Git push failed: {result.stderr.decode()[:200]}")
-            return False
-    except subprocess.CalledProcessError as e:
-        log(f"Git operation failed: {e.stderr.decode() if e.stderr else str(e)}")
+        log(f"  push failed: {r.stderr.decode()[:200]}")
         return False
-
+    except subprocess.CalledProcessError as e:
+        log(f"  git error: {(e.stderr or b'').decode()[:200]}")
+        return False
 
 def verify_build():
-    """Run npm build to verify everything compiles"""
     log("Verifying build...")
-    result = subprocess.run(["npm", "run", "build"],
-                            cwd=PROJECT_ROOT, capture_output=True, timeout=120)
-    if result.returncode == 0:
-        log("Build successful!")
+    r = subprocess.run(["npm", "run", "build"], cwd=PROJECT_ROOT, capture_output=True, timeout=300)
+    if r.returncode == 0:
+        log("  build ok")
         return True
-    else:
-        log("Build FAILED:")
-        log(result.stderr.decode()[:500])
-        return False
+    log("  build FAILED: " + (r.stderr.decode()[:400] or r.stdout.decode()[:400]))
+    return False
 
-
-def count_words(text):
-    """Count words in markdown content"""
-    return len(text.split())
-
-
-def open_linkedin_share(slug):
-    """Semi-auto LinkedIn share: build prefilled composer link, open in browser.
-
-    Official LinkedIn API can't post to personal profiles (deprecated 2023);
-    Company Pages need a LinkedIn app + OAuth. This opens the share composer
-    with the post URL prefilled — one click to Post.
-    """
-    post_url = f"https://govindtank.github.io/blog/{slug}"
-    share_url = "https://www.linkedin.com/sharing/share-offsite/?url=" + urllib.parse.quote(post_url, safe="")
-    log(f"LinkedIn share link: {share_url}")
-    if sys.platform == "darwin":
-        subprocess.Popen(["open", share_url])
-    return share_url
-
-
+# ======= MAIN: single new post (daily cron path) =======
 def main():
     print("=" * 70)
-    print("  Qwen Blog Automation v3.0")
-    print("  Model: qwen/qwen3.5-9b (local)")
+    print("  Blog Automation v4 (human-voice, archetype-rotated)")
     print("=" * 70)
-
-    # Load history
     history = load_history()
-    current_count = len(history.get("blogs", {}))
-    log(f"Current blog count: {current_count}/{MAX_BLOG_COUNT}")
 
-    if current_count >= MAX_BLOG_COUNT:
-        log("MAX BLOG COUNT reached. Skipping.")
-        return
-
-    # Select topic
-    topic = select_topic(history)
-    title = topic["title"]
-    tag = topic["tag"]
-    slug = slugify(title)
-    image_key = topic.get("image_key", "code")
-    image_url = IMAGES.get(image_key, IMAGES["code"])
-    date = format_date()
-
-    log(f"Selected topic: {title}")
-    log(f"Slug: {slug}")
-    log(f"Tag: {tag}")
-
-    # Generate content
-    content = generate_blog_content(topic)
-    word_count = count_words(content)
-    log(f"Generated {word_count} words ({len(content)} chars)")
-
-    # Create excerpt (first paragraph after the H1)
-    excerpt = ""
-    for line in content.split("\n"):
-        if line.strip() and not line.startswith("#"):
-            excerpt = line.strip()
+    existing = {f[:-3] for f in os.listdir(CONTENT_DIR) if f.endswith(".md")}
+    topic = None
+    random.shuffle(TOPICS)
+    for t in TOPICS:
+        if slugify(t["title"]) not in existing:
+            topic = t
             break
-    if len(excerpt) > 200:
-        excerpt = excerpt[:197] + "..."
-
-    # Write content Markdown file
-    log("Writing blog content to Markdown with frontmatter...")
-    if not write_content_md(slug, content, title, tag, date, excerpt, image_url):
-        log("Failed to write content Markdown")
+    if not topic:
+        log("All topics already covered. Nothing to do.")
         return
 
-    # Update index.json (v3: no-op — metadata from .md frontmatter)
-    log("Updating blog index (v3: .md frontmatter is single source of truth)...")
-    if not update_index_json(title, excerpt, date, tag, slug):
-        log("Failed to update index.json (non-critical, continuing)")
-        pass
+    title, tag = topic["title"], topic["tag"]
+    slug = slugify(title)
+    log(f"Topic: {title}")
+    gen = generate_blog_content(topic)
+    if not gen:
+        log("Generation failed after retries. Aborting (no static fallback used).")
+        return
+    content, archetype, persona, excerpt = gen
+    image_url = pick_image(tag)
+    date = format_date()
+    path = write_content_md(slug, content, title, tag, date, excerpt, image_url)
+    log(f"Wrote {path} ({len(content.split())} words, archetype={archetype})")
 
-    # Verify build
+    issues = validate(open(path).read(), archetype)
+    if issues:
+        log(f"VALIDATION issues ({len(issues)}): {issues[:6]}")
+        if len(issues) >= 3:
+            log("Too many issues — deleting post and aborting.")
+            os.remove(path)
+            return
+
+    # stamp archetype into frontmatter for history tracking
+    text = open(path).read()
+    text = text.replace("---\n", "---\narchetype: \"" + archetype + "\"\n", 1)
+    open(path, "w").write(text)
+
     if not verify_build():
-        log("Build failed, rolling back...")
-        subprocess.run(["git", "checkout", "--", f"{CONTENT_DIR}/{slug}.md"],
-                       cwd=PROJECT_ROOT)
+        os.remove(path)
+        log("Build failed — removed post.")
         return
 
-    # Update history
-    log("Updating blog history...")
-    update_history(history, title, slug, date, tag, word_count, image_url)
+    wc = len(content.split())
+    history.setdefault("blogs", {})[slug] = {"title": title, "date": date, "tag": tag,
+                                             "wordCount": wc, "status": "published"}
+    save_history(history)
+    ok = commit_and_push(f"blog: {title} ({archetype}) - {datetime.now().strftime('%Y-%m-%d')}")
+    log(f"DONE push={'ok' if ok else 'FAILED'} url=https://govindtank.github.io/blog/{slug}")
 
-    # Git commit and push
-    log("Committing and pushing to GitHub...")
-    push_ok = commit_and_push(title, slug)
-    share_url = ""
-    if push_ok:
-        share_url = open_linkedin_share(slug)
-
-    print()
+# ======= REWRITE-ALL: convert existing posts =======
+def rewrite_all(only=None):
     print("=" * 70)
-    print(f"  ✅ Blog Automation Complete!")
-    print(f"  Title: {title}")
-    print(f"  Words: {word_count}")
-    print(f"  Total: {current_count + 1}/{MAX_BLOG_COUNT}")
-    print(f"  Push:  {'✅ Success' if push_ok else '⚠️  Failed (commit exists locally)'}")
-    print(f"  URL:   https://govindtank.github.io/blog/{slug}")
-    if share_url:
-        print(f"  LinkedIn: {share_url}")
+    print("  Blog v4 rewrite-all — regenerating existing posts with new voice")
     print("=" * 70)
+    state = {}
+    if os.path.exists(STATE_FILE):
+        state = json.load(open(STATE_FILE))
 
+    files = sorted(f for f in os.listdir(CONTENT_DIR) if f.endswith(".md"))
+    if only:
+        files = [f for f in files if f[:-3] in only or only == "all"]
+
+    changed_paths = []
+    for fn in files:
+        slug = fn[:-3]
+        if state.get(slug) == "done":
+            log(f"skip {slug} (already done)")
+            continue
+        path = os.path.join(CONTENT_DIR, fn)
+        meta = parse_existing(path)
+        log(f"\n--- {slug} ---")
+        topic = {"title": meta["title"], "tag": meta["category"], "desc": meta["title"]}
+        gen = generate_blog_content(topic, existing_meta=meta)
+        if not gen:
+            log(f"  FAILED for {slug}, leaving original intact")
+            state[slug] = "failed"
+            json.dump(state, open(STATE_FILE, "w"), indent=2)
+            continue
+        content, archetype, persona, excerpt = gen
+        # keep original date, cover image (already unique), tags
+        write_content_md(slug, content, meta["title"], meta["category"], meta["date"],
+                         excerpt, meta["coverImage"], tags=meta["tags"])
+        text = open(path).read()
+        text = text.replace("---\n", "---\narchetype: \"" + archetype + "\"\n", 1)
+        open(path, "w").write(text)
+        issues = validate(open(path).read(), archetype)
+        log(f"  rewrote {slug}: {len(content.split())} words, archetype={archetype}"
+            + (f", ISSUES: {issues[:4]}" if issues else ", clean"))
+        state[slug] = "done" if not issues else "done-with-issues"
+        changed_paths.append(path)
+        json.dump(state, open(STATE_FILE, "w"), indent=2)
+
+    if changed_paths:
+        log(f"\n{len(changed_paths)} posts rewritten. Building...")
+        if verify_build():
+            ok = commit_and_push(f"blog: rewrite {len(changed_paths)} posts with human-voice v4 pipeline")
+            log(f"PUSH {'ok' if ok else 'FAILED'}")
+        else:
+            log("Build failed — changes kept locally, nothing pushed.")
+    else:
+        log("No posts rewritten this run.")
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) > 1 and sys.argv[1] == "--rewrite-all":
+        only = sys.argv[2] if len(sys.argv) > 2 else None
+        rewrite_all(only)
+    else:
+        main()

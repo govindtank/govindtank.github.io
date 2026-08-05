@@ -1,0 +1,362 @@
+[
+ {
+  "slug": "ai-agents-autonomous-workflows-complex-tasks-2026",
+  "title": "AI Agents in 2026: Building Autonomous Workflows for Complex Tasks",
+  "category": "AI-Agents",
+  "date": "2026-05-26",
+  "coverImage": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "tutorial",
+  "persona": "senior engineer, 12+ years, burned by over-engineering, plain-spoken, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "ai-powered-code-review-automating-quality-gates-with-llm-agents",
+  "title": "AI-Powered Code Review: Automating Quality Gates with LLM Agents",
+  "category": "AI-Engineering",
+  "date": "2026-05-29",
+  "coverImage": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "comparison",
+  "persona": "curious tinkerer, prototypes everything, enthusiastic but precise, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "ai-augmented-development-workflows-architecting-the-future-of-software-engineering",
+  "title": "AI-Augmented Development Workflows: Architecting the Future of Software Engineering",
+  "category": "AI",
+  "date": "2026-06-02",
+  "coverImage": "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "explainer",
+  "persona": "pragmatic staff engineer, skeptical, values simple boring solutions, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026",
+  "title": "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026",
+  "category": "AI",
+  "date": "2026-06-03",
+  "coverImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "war-story",
+  "persona": "senior engineer, 12+ years, burned by over-engineering, plain-spoken, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "free-developer-tools-that-supercharge-your-2026-workflow",
+  "title": "Free Developer Tools That Supercharge Your 2026 Workflow",
+  "category": "DevTools",
+  "date": "August 01, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "roundup",
+  "persona": "curious tinkerer, prototypes everything, enthusiastic but precise, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026",
+  "title": "Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026",
+  "category": "Flutter",
+  "date": "August 02, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "opinion",
+  "persona": "pragmatic staff engineer, skeptical, values simple boring solutions, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance",
+  "title": "Flutter 4 and Impeller: The Next Generation of Cross-Platform UI Performance",
+  "category": "Flutter",
+  "date": "August 03, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1522252234503-e356532cafd5?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "tutorial",
+  "persona": "senior engineer, 12+ years, burned by over-engineering, plain-spoken, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026",
+  "title": "Agentic AI Systems: Designing Reliable Multi-Agent Workflows in 2026",
+  "category": "Agentic-AI",
+  "date": "August 04, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "comparison",
+  "persona": "curious tinkerer, prototypes everything, enthusiastic but precise, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones",
+  "title": "Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones",
+  "category": "Edge-AI",
+  "date": "August 05, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "explainer",
+  "persona": "pragmatic staff engineer, skeptical, values simple boring solutions, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments",
+  "title": "FinOps for Kubernetes: Optimizing Cloud Costs in Containerized Environments",
+  "category": "DevOps",
+  "date": "July 01, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1564865878688-9a244444042a?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "war-story",
+  "persona": "senior engineer, 12+ years, burned by over-engineering, plain-spoken, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "css-container-queries-and-style-queries-responsive-design-beyond-media-queries",
+  "title": "CSS Container Queries and Style Queries: Responsive Design Beyond Media Queries",
+  "category": "Web-Dev",
+  "date": "July 02, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "roundup",
+  "persona": "curious tinkerer, prototypes everything, enthusiastic but precise, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "building-real-time-collaborative-apps-with-crdts-and-operational-transformation",
+  "title": "Building Real-Time Collaborative Apps with CRDTs and Operational Transformation",
+  "category": "Architecture",
+  "date": "July 03, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "opinion",
+  "persona": "pragmatic staff engineer, skeptical, values simple boring solutions, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "platform-engineering-building-internal-developer-portals-that-teams-love",
+  "title": "Platform Engineering: Building Internal Developer Portals That Teams Love",
+  "category": "DevEx",
+  "date": "July 15, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "tutorial",
+  "persona": "senior engineer, 12+ years, burned by over-engineering, plain-spoken, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared-business-logic",
+  "title": "Kotlin Multiplatform at Scale: Production Architecture Patterns for Shared Business Logic",
+  "category": "Kotlin-Multiplatform",
+  "date": "July 16, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "comparison",
+  "persona": "curious tinkerer, prototypes everything, enthusiastic but precise, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026",
+  "title": "Top Free Developer Tools and AI Resources Transforming Engineering Workflows in 2026",
+  "category": "DevTools",
+  "date": "July 17, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "explainer",
+  "persona": "pragmatic staff engineer, skeptical, values simple boring solutions, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "flutter-impeller-rendering-engine-gpu-acceleration-2026",
+  "title": "Flutter Impeller Rendering Engine: GPU Acceleration Strategies for Production Apps in 2026",
+  "category": "Flutter",
+  "date": "July 18, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "war-story",
+  "persona": "senior engineer, 12+ years, burned by over-engineering, plain-spoken, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "zero-trust-architecture-implementing-security-in-distributed-cloud-systems",
+  "title": "Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems",
+  "category": "Security",
+  "date": "July 19, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "roundup",
+  "persona": "curious tinkerer, prototypes everything, enthusiastic but precise, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026",
+  "title": "Kotlin Multiplatform in Production: Sharing Business Logic Across Android, iOS, and Web in 2026",
+  "category": "Kotlin-Multiplatform",
+  "date": "July 20, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "opinion",
+  "persona": "pragmatic staff engineer, skeptical, values simple boring solutions, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens",
+  "title": "Flutter Widget Testing Mastery: From Unit Tests to Integration Goldens",
+  "category": "Flutter",
+  "date": "July 21, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "tutorial",
+  "persona": "senior engineer, 12+ years, burned by over-engineering, plain-spoken, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines",
+  "title": "Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines",
+  "category": "AI-ML",
+  "date": "July 21, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "comparison",
+  "persona": "curious tinkerer, prototypes everything, enthusiastic but precise, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "ios-20-and-swift-8-what-mobile-developers-need-to-know",
+  "title": "iOS 20 and Swift 8: What Mobile Developers Need to Know",
+  "category": "Mobile",
+  "date": "July 22, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "explainer",
+  "persona": "pragmatic staff engineer, skeptical, values simple boring solutions, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "webgpu-next-generation-graphics-and-compute-for-the-browser",
+  "title": "WebGPU: Next-Generation Graphics and Compute for the Browser",
+  "category": "Web-Dev",
+  "date": "July 29, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "war-story",
+  "persona": "senior engineer, 12+ years, burned by over-engineering, plain-spoken, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production",
+  "title": "TypeScript 5.x Advanced Patterns: Conditional Types, Template Literals, and Mapped Types in Production",
+  "category": "Web-Dev",
+  "date": "July 29, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "roundup",
+  "persona": "curious tinkerer, prototypes everything, enthusiastic but precise, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing",
+  "title": "PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing",
+  "category": "Databases",
+  "date": "July 30, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "opinion",
+  "persona": "pragmatic staff engineer, skeptical, values simple boring solutions, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026",
+  "title": "Kubernetes Sidecar Patterns for Service Mesh Observability in 2026",
+  "category": "Cloud-Native",
+  "date": "July 31, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "tutorial",
+  "persona": "senior engineer, 12+ years, burned by over-engineering, plain-spoken, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "edge-ai-running-large-language-models-on-consumer-devices-in-2026",
+  "title": "Edge AI: Running Large Language Models on Consumer Devices in 2026",
+  "category": "Edge-AI",
+  "date": "June 10, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "comparison",
+  "persona": "curious tinkerer, prototypes everything, enthusiastic but precise, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "react-server-components-production-patterns-for-high-performance-web-apps",
+  "title": "React Server Components: Production Patterns for High-Performance Web Apps",
+  "category": "Web-Dev",
+  "date": "June 16, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "explainer",
+  "persona": "pragmatic staff engineer, skeptical, values simple boring solutions, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "data-engineering-at-scale-building-real-time-streaming-pipelines",
+  "title": "Data Engineering at Scale: Building Real-Time Streaming Pipelines",
+  "category": "Data-Engineering",
+  "date": "June 19, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "war-story",
+  "persona": "senior engineer, 12+ years, burned by over-engineering, plain-spoken, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems",
+  "title": "Event Sourcing and CQRS: Practical Patterns for Distributed Systems",
+  "category": "Architecture",
+  "date": "June 22, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "roundup",
+  "persona": "curious tinkerer, prototypes everything, enthusiastic but precise, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "building-scalable-microservices-with-fastapi-and-event-driven-architecture",
+  "title": "Building Scalable Microservices with FastAPI and Event-Driven Architecture",
+  "category": "Backend-Architecture",
+  "date": "June 23, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "opinion",
+  "persona": "pragmatic staff engineer, skeptical, values simple boring solutions, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "webassembly-in-2026-from-browser-to-edge-computing-and-beyond",
+  "title": "WebAssembly in 2026: From Browser to Edge Computing and Beyond",
+  "category": "WebAssembly",
+  "date": "June 24, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "tutorial",
+  "persona": "senior engineer, 12+ years, burned by over-engineering, plain-spoken, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact",
+  "title": "The Rise of AI Coding Assistants: Evaluating Code Quality and Productivity Impact",
+  "category": "AI-Engineering",
+  "date": "June 25, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "comparison",
+  "persona": "curious tinkerer, prototypes everything, enthusiastic but precise, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth",
+  "title": "Rust for Systems Programming in 2026: Memory Safety, Concurrency, and Ecosystem Growth",
+  "category": "Systems",
+  "date": "June 27, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "explainer",
+  "persona": "pragmatic staff engineer, skeptical, values simple boring solutions, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging",
+  "title": "Distributed Tracing with OpenTelemetry: From Instrumentation to Production Debugging",
+  "category": "Observability",
+  "date": "June 29, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1550439062-609e1531270e?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "war-story",
+  "persona": "senior engineer, 12+ years, burned by over-engineering, plain-spoken, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "flutter-state-management-deep-dive-bloc-vs-riverpod-vs-provider-in-2026",
+  "title": "Flutter State Management Deep Dive: Bloc vs Riverpod vs Provider in 2026",
+  "category": "Flutter",
+  "date": "May 28, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "roundup",
+  "persona": "curious tinkerer, prototypes everything, enthusiastic but precise, first person",
+  "word_target": "1400-1800"
+ },
+ {
+  "slug": "kotlin-multiplatform-evolution-in-2026",
+  "title": "The Evolution of Kotlin Multiplatform in 2026",
+  "category": "Kotlin-Multiplatform",
+  "date": "May 29, 2026",
+  "coverImage": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200",
+  "archetype": "opinion",
+  "persona": "pragmatic staff engineer, skeptical, values simple boring solutions, first person",
+  "word_target": "1400-1800"
+ }
+]
