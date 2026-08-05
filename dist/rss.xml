@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Aug 2026 09:40:13 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 02:40:34 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones]]></title>
+      <link>https://govindtank.github.io/blog/small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones</guid>
+      <pubDate>Tue, 04 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The technology landscape in 2026 demands that senior engineers stay ahead of rapidly evolving patterns and paradigms. Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones r...
+]]></description>
+      <category>Edge-AI</category>
+    </item>
     <item>
       <title><![CDATA[Agentic AI Systems: Designing Reliable Multi-Agent Workflows in 2026]]></title>
       <link>https://govindtank.github.io/blog/agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026</link>
