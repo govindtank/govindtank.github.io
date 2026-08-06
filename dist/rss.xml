@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Aug 2026 07:02:05 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 07:10:21 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Antigravity vs Claude Code vs Codex: Choosing an AI Coding Agent in 2026]]></title>
+      <link>https://govindtank.github.io/blog/antigravity-vs-claude-code-vs-codex-choosing-an-ai-coding-agent-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/antigravity-vs-claude-code-vs-codex-choosing-an-ai-coding-agent-in-2026</guid>
+      <pubDate>Wed, 05 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Three coding agents, three weeks of real work, one honest comparison. I ran Google Antigravity, Claude Code, and Codex on the same tasks to see which one you should actually pay for.
+]]></description>
+      <category>AI-Coding-Agents</category>
+    </item>
     <item>
       <title><![CDATA[AI Observability: Monitoring, Tracing, and Debugging LLM Applications in Production]]></title>
       <link>https://govindtank.github.io/blog/ai-observability-monitoring-tracing-and-debugging-llm-applications-in-production</link>
