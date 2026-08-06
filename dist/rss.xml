@@ -8,7 +8,7 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2026 11:12:05 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 07:02:05 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[AI Observability: Monitoring, Tracing, and Debugging LLM Applications in Production]]></title>
@@ -17,6 +17,15 @@
       <pubDate>Tue, 04 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>LLM-Observability</category>
+    </item>
+    <item>
+      <title><![CDATA[Firebase Generative AI SDK for Mobile: Multimodal Model Serving on Android and iOS]]></title>
+      <link>https://govindtank.github.io/blog/firebase-generative-ai-sdk-mobile-multimodal-model-serving-android-ios</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/firebase-generative-ai-sdk-mobile-multimodal-model-serving-android-ios</guid>
+      <pubDate>Tue, 04 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Firebase's new Generative AI SDK brings multimodal model serving directly to mobile apps. Here's what it means for Flutter and native Android/iOS developers in 2026.
+]]></description>
+      <category>AI-Engineering</category>
     </item>
     <item>
       <title><![CDATA[Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones]]></title>
