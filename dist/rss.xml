@@ -8,7 +8,7 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Aug 2026 07:10:21 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 18:01:02 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[Antigravity vs Claude Code vs Codex: Choosing an AI Coding Agent in 2026]]></title>
@@ -18,6 +18,15 @@
       <description><![CDATA[Three coding agents, three weeks of real work, one honest comparison. I ran Google Antigravity, Claude Code, and Codex on the same tasks to see which one you should actually pay for.
 ]]></description>
       <category>AI-Coding-Agents</category>
+    </item>
+    <item>
+      <title><![CDATA[Validating Mobile Numbers the Right Way: Introducing country_mobile_validator]]></title>
+      <link>https://govindtank.github.io/blog/validating-mobile-numbers-right-way-country-mobile-validator</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/validating-mobile-numbers-right-way-country-mobile-validator</guid>
+      <pubDate>Wed, 05 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Stop guessing phone number lengths. Stop sending OTPs to toll-free numbers. country_mobile_validator gives you real per-country mobile length ranges, OTP-safe verdicts, and country_code_picker integration — in one line of code.
+]]></description>
+      <category>Flutter</category>
     </item>
     <item>
       <title><![CDATA[AI Observability: Monitoring, Tracing, and Debugging LLM Applications in Production]]></title>
