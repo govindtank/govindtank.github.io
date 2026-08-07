@@ -9,6 +9,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.github.io/blog/mcp-stateless-mode-building-ai-agent-servers-without-session-state</loc>
+    <lastmod>2026-08-06T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.github.io/blog/antigravity-vs-claude-code-vs-codex-choosing-an-ai-coding-agent-in-2026</loc>
     <lastmod>2026-08-05T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
