@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Aug 2026 18:01:02 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 02:41:57 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[MCP Stateless Mode: Building AI Agent Servers Without Session State]]></title>
+      <link>https://govindtank.github.io/blog/mcp-stateless-mode-building-ai-agent-servers-without-session-state</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/mcp-stateless-mode-building-ai-agent-servers-without-session-state</guid>
+      <pubDate>Thu, 06 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The MCP spec's stateless mode drops the initialization handshake so agent tool servers run behind plain load balancers. Here's how to build one with the Python SDK.
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
     <item>
       <title><![CDATA[Antigravity vs Claude Code vs Codex: Choosing an AI Coding Agent in 2026]]></title>
       <link>https://govindtank.github.io/blog/antigravity-vs-claude-code-vs-codex-choosing-an-ai-coding-agent-in-2026</link>

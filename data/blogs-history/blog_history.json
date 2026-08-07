@@ -348,6 +348,22 @@
       "tag": "AI-Coding-Agents",
       "wordCount": 1594,
       "status": "published"
+    },
+    "firebase-generative-ai-sdk-mobile-multimodal-model-serving-android-ios": {
+      "title": "Firebase Generative AI SDK for Mobile: Multimodal Model Serving on Android and iOS",
+      "slug": "firebase-generative-ai-sdk-mobile-multimodal-model-serving-android-ios",
+      "date": "August 05, 2026",
+      "tag": "Mobile-AI",
+      "wordCount": 1721,
+      "status": "published"
+    },
+    "mcp-stateless-mode-building-ai-agent-servers-without-session-state": {
+      "title": "MCP Stateless Mode: Building AI Agent Servers Without Session State",
+      "slug": "mcp-stateless-mode-building-ai-agent-servers-without-session-state",
+      "date": "August 07, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 1421,
+      "status": "published"
     }
   },
   "images": {
