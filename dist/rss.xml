@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Aug 2026 02:36:40 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 02:36:28 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Claude Code Auto Mode Is Now the Default: Should You Trust It?]]></title>
+      <link>https://govindtank.github.io/blog/claude-code-auto-mode-is-now-the-default-should-you-trust-it</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/claude-code-auto-mode-is-now-the-default-should-you-trust-it</guid>
+      <pubDate>Sat, 08 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Starting August 14, auto mode becomes the default permission mode in Claude Code. The eval numbers are impressive, but they don't answer the question that matters: should your agent run without asking?
+]]></description>
+      <category>AI-Coding-Agents</category>
+    </item>
     <item>
       <title><![CDATA[DeepSeek V4 Flash: What the New Open Model Means for Developers]]></title>
       <link>https://govindtank.github.io/blog/deepseek-v4-flash-what-the-new-open-model-means-for-developers</link>
