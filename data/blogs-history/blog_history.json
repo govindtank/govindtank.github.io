@@ -1,453 +1,461 @@
 {
-  "version": "2.1",
-  "totalCreated": 59,
-  "lastTopic": "Validating Mobile Numbers the Right Way: Introducing country_mobile_validator",
-  "todayCount": 49,
-  "lastGenerated": "2026-08-06T00:00:00Z",
-  "blogs": {
-    "validating-mobile-numbers-right-way-country-mobile-validator": {
-      "title": "Validating Mobile Numbers the Right Way: Introducing country_mobile_validator",
-      "slug": "validating-mobile-numbers-right-way-country-mobile-validator",
-      "date": "August 6, 2026",
-      "tag": "Flutter",
-      "wordCount": 1200,
-      "status": "published"
-    },
-    "kotlin-multiplatform-evolution-in-2026": {
-      "title": "The Evolution of Kotlin Multiplatform in 2026",
-      "slug": "kotlin-multiplatform-evolution-in-2026",
-      "date": "May 29, 2026",
-      "tag": "Kotlin-Multiplatform",
-      "wordCount": 850,
-      "status": "published"
-    },
-    "ai-powered-code-review-automating-quality-gates-with-llm-agents": {
-      "title": "AI-Powered Code Review: Automating Quality Gates with LLM Agents",
-      "slug": "ai-powered-code-review-automating-quality-gates-with-llm-agents",
-      "date": "May 29, 2026",
-      "tag": "AI-Engineering",
-      "wordCount": 1200,
-      "status": "published"
-    },
-    "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices": {
-      "title": "AI Model Optimization: Quantization, Distillation, and Efficient Training for Edge Devices",
-      "slug": "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices",
-      "date": "May 28, 2026",
-      "tag": "AI-Optimization",
-      "wordCount": 853,
-      "status": "published"
-    },
-    "android-16-what-senior-developers-need-to-know-about-the-latest-apis": {
-      "title": "Android 16: What Senior Developers Need to Know About the Latest APIs",
-      "slug": "android-16-what-senior-developers-need-to-know-about-the-latest-apis",
-      "date": "May 27, 2026",
-      "tag": "Android",
-      "wordCount": 850,
-      "status": "published"
-    },
-    "ai-agents-autonomous-workflows-complex-tasks-2026": {
-      "title": "AI Agents: Building Autonomous Workflows for Complex Tasks",
-      "slug": "ai-agents-autonomous-workflows-complex-tasks-2026",
-      "date": "May 26, 2026",
-      "tag": "AI-Agents",
-      "wordCount": 850,
-      "status": "published"
-    },
-    "ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026": {
-      "title": "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026",
-      "slug": "ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026",
-      "date": "May 21, 2026",
-      "tag": "AI-Engineering",
-      "wordCount": 863,
-      "status": "published"
-    },
-    "clean-architecture-design-patterns-modern-ai-systems-building-maintainable-ml-pipelines": {
-      "title": "Clean Architecture & Design Patterns in Modern AI Systems: Building Maintainable ML Pipelines",
-      "slug": "clean-architecture-design-patterns-modern-ai-systems-building-maintainable-ml-pipelines",
-      "date": "May 21, 2026",
-      "tag": "Clean-Architecture",
-      "wordCount": 850,
-      "status": "published"
-    },
-    "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices-alt": {
-      "title": "AI Model Optimization: Quantization, Distillation, and Efficient Training for Edge Devices",
-      "slug": "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices-alt",
-      "date": "May 21, 2026",
-      "tag": "AI-Optimization",
-      "wordCount": 785,
-      "status": "published"
-    },
-    "flutter-performance-optimization-achieving-60-fps-on-mid-range-devices": {
-      "title": "Flutter Performance Optimization: Achieving 60 FPS on Mid-Range Devices",
-      "slug": "flutter-performance-optimization-achieving-60-fps-on-mid-range-devices",
-      "date": "May 19, 2026",
-      "tag": "Mobile-Performance",
-      "wordCount": 750,
-      "status": "published"
-    },
-    "flutter-ai-integration-machine-learning-2026": {
-      "title": "Mastering Flutter AI Integration: Building Smart Mobile Apps with Machine Learning in 2026",
-      "slug": "flutter-ai-integration-machine-learning-2026",
-      "date": "May 14, 2026",
-      "tag": "AI",
-      "wordCount": 800,
-      "status": "published"
-    },
-    "building-scalable-microservices-with-fastapi-and-event-driven-architecture": {
-      "title": "Building Scalable Microservices with FastAPI and Event-Driven Architecture",
-      "slug": "building-scalable-microservices-with-fastapi-and-event-driven-architecture",
-      "date": "June 23, 2026",
-      "tag": "Backend-Architecture",
-      "wordCount": 1089,
-      "status": "published"
-    },
-    "zero-trust-architecture-implementing-security-in-distributed-cloud-systems": {
-      "title": "Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems",
-      "slug": "zero-trust-architecture-implementing-security-in-distributed-cloud-systems",
-      "date": "July 19, 2026",
-      "tag": "Security",
-      "wordCount": 1197,
-      "status": "published"
-    },
-    "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems": {
-      "title": "Event Sourcing and CQRS: Practical Patterns for Distributed Systems",
-      "slug": "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems",
-      "date": "June 22, 2026",
-      "tag": "Architecture",
-      "wordCount": 205,
-      "status": "published"
-    },
-    "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing": {
-      "title": "PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing",
-      "slug": "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing",
-      "date": "July 30, 2026",
-      "tag": "Databases",
-      "wordCount": 1043,
-      "status": "published"
-    },
-    "react-server-components-production-patterns-for-high-performance-web-apps": {
-      "title": "React Server Components: Production Patterns for High-Performance Web Apps",
-      "slug": "react-server-components-production-patterns-for-high-performance-web-apps",
-      "date": "June 16, 2026",
-      "tag": "Web-Dev",
-      "wordCount": 953,
-      "status": "published"
-    },
-    "building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions": {
-      "title": "Building Developer Tools in 2026: From CLI Design to AI-Assisted Extensions",
-      "slug": "building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions",
-      "date": "June 18, 2026",
-      "tag": "DevTools",
-      "wordCount": 496,
-      "status": "published"
-    },
-    "edge-ai-running-large-language-models-on-consumer-devices-in-2026": {
-      "title": "Edge AI: Running Large Language Models on Consumer Devices in 2026",
-      "slug": "edge-ai-running-large-language-models-on-consumer-devices-in-2026",
-      "date": "June 10, 2026",
-      "tag": "Edge-AI",
-      "wordCount": 533,
-      "status": "published"
-    },
-    "data-engineering-at-scale-building-real-time-streaming-pipelines": {
-      "title": "Data Engineering at Scale: Building Real-Time Streaming Pipelines",
-      "slug": "data-engineering-at-scale-building-real-time-streaming-pipelines",
-      "date": "June 19, 2026",
-      "tag": "Data-Engineering",
-      "wordCount": 847,
-      "status": "published"
-    },
-    "platform-engineering-building-internal-developer-portals-that-teams-love": {
-      "title": "Platform Engineering: Building Internal Developer Portals That Teams Love",
-      "slug": "platform-engineering-building-internal-developer-portals-that-teams-love",
-      "date": "July 15, 2026",
-      "tag": "DevEx",
-      "wordCount": 1428,
-      "status": "published"
-    },
-    "webassembly-in-2026-from-browser-to-edge-computing-and-beyond": {
-      "title": "WebAssembly in 2026: From Browser to Edge Computing and Beyond",
-      "slug": "webassembly-in-2026-from-browser-to-edge-computing-and-beyond",
-      "date": "June 24, 2026",
-      "tag": "WebAssembly",
-      "wordCount": 1088,
-      "status": "published"
-    },
-    "the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact": {
-      "title": "The Rise of AI Coding Assistants: Evaluating Code Quality and Productivity Impact",
-      "slug": "the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact",
-      "date": "June 25, 2026",
-      "tag": "AI-Engineering",
-      "wordCount": 1214,
-      "status": "published"
-    },
-    "rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth": {
-      "title": "Rust for Systems Programming in 2026: Memory Safety, Concurrency, and Ecosystem Growth",
-      "slug": "rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth",
-      "date": "June 27, 2026",
-      "tag": "Systems",
-      "wordCount": 1052,
-      "status": "published"
-    },
-    "kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026": {
-      "title": "Kubernetes Sidecar Patterns for Service Mesh Observability in 2026",
-      "slug": "kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026",
-      "date": "July 31, 2026",
-      "tag": "Cloud-Native",
-      "wordCount": 1043,
-      "status": "published"
-    },
-    "distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging": {
-      "title": "Distributed Tracing with OpenTelemetry: From Instrumentation to Production Debugging",
-      "slug": "distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging",
-      "date": "June 29, 2026",
-      "tag": "Observability",
-      "wordCount": 1043,
-      "status": "published"
-    },
-    "testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines": {
-      "title": "Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines",
-      "slug": "testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines",
-      "date": "July 21, 2026",
-      "tag": "AI-ML",
-      "wordCount": 1278,
-      "status": "published"
-    },
-    "finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments": {
-      "title": "FinOps for Kubernetes: Optimizing Cloud Costs in Containerized Environments",
-      "slug": "finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments",
-      "date": "July 01, 2026",
-      "tag": "DevOps",
-      "wordCount": 1043,
-      "status": "published"
-    },
-    "css-container-queries-and-style-queries-responsive-design-beyond-media-queries": {
-      "title": "CSS Container Queries and Style Queries: Responsive Design Beyond Media Queries",
-      "slug": "css-container-queries-and-style-queries-responsive-design-beyond-media-queries",
-      "date": "July 02, 2026",
-      "tag": "Web-Dev",
-      "wordCount": 1223,
-      "status": "published"
-    },
-    "building-real-time-collaborative-apps-with-crdts-and-operational-transformation": {
-      "title": "Building Real-Time Collaborative Apps with CRDTs and Operational Transformation",
-      "slug": "building-real-time-collaborative-apps-with-crdts-and-operational-transformation",
-      "date": "July 03, 2026",
-      "tag": "Architecture",
-      "wordCount": 829,
-      "status": "published"
-    },
-    "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026": {
-      "title": "Top Free Developer Tools and AI Resources Transforming Engineering Workflows in 2026",
-      "slug": "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026",
-      "date": "July 17, 2026",
-      "tag": "DevTools",
-      "wordCount": 1288,
-      "status": "published"
-    },
-    "flutter-impeller-rendering-engine-gpu-acceleration-2026": {
-      "title": "Flutter Impeller Rendering Engine: GPU Acceleration Strategies for Production Apps in 2026",
-      "slug": "flutter-impeller-rendering-engine-gpu-acceleration-2026",
-      "date": "July 18, 2026",
-      "tag": "Flutter",
-      "wordCount": 1670,
-      "status": "published"
-    },
-    "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026": {
-      "title": "Kotlin Multiplatform in Production: Sharing Business Logic Across Android, iOS, and Web in 2026",
-      "slug": "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026",
-      "date": "July 20, 2026",
-      "tag": "Kotlin-Multiplatform",
-      "wordCount": 1215,
-      "status": "published"
-    },
-    "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens": {
-      "title": "Flutter Widget Testing Mastery: From Unit Tests to Integration Goldens",
-      "slug": "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens",
-      "date": "July 21, 2026",
-      "tag": "Flutter",
-      "wordCount": 1046,
-      "status": "published"
-    },
-    "ios-20-and-swift-8-what-mobile-developers-need-to-know": {
-      "title": "iOS 20 and Swift 8: What Mobile Developers Need to Know",
-      "slug": "ios-20-and-swift-8-what-mobile-developers-need-to-know",
-      "date": "July 22, 2026",
-      "tag": "Mobile",
-      "wordCount": 1049,
-      "status": "published"
-    },
-    "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production": {
-      "title": "TypeScript 5.x Advanced Patterns: Conditional Types, Template Literals, and Mapped Types in Production",
-      "slug": "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production",
-      "date": "July 29, 2026",
-      "tag": "Web-Dev",
-      "wordCount": 1055,
-      "status": "published"
-    },
-    "webgpu-next-generation-graphics-and-compute-for-the-browser": {
-      "title": "WebGPU: Next-Generation Graphics and Compute for the Browser",
-      "slug": "webgpu-next-generation-graphics-and-compute-for-the-browser",
-      "date": "July 29, 2026",
-      "tag": "Web-Dev",
-      "wordCount": 1040,
-      "status": "published"
-    },
-    "free-developer-tools-that-supercharge-your-2026-workflow": {
-      "title": "Free Developer Tools That Supercharge Your 2026 Workflow",
-      "slug": "free-developer-tools-that-supercharge-your-2026-workflow",
-      "date": "August 01, 2026",
-      "tag": "DevTools",
-      "wordCount": 1126,
-      "status": "published"
-    },
-    "dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026": {
-      "title": "Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026",
-      "slug": "dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026",
-      "date": "August 02, 2026",
-      "tag": "Flutter",
-      "wordCount": 1055,
-      "status": "published"
-    },
-    "flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance": {
-      "title": "Flutter 4 and Impeller: The Next Generation of Cross-Platform UI Performance",
-      "slug": "flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance",
-      "date": "August 03, 2026",
-      "tag": "Flutter",
-      "wordCount": 1259,
-      "status": "published"
-    },
-    "agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026": {
-      "title": "Agentic AI Systems: Designing Reliable Multi-Agent Workflows in 2026",
-      "slug": "agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026",
-      "date": "August 04, 2026",
-      "tag": "Agentic-AI",
-      "wordCount": 1043,
-      "status": "published"
-    },
-    "small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones": {
-      "title": "Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones",
-      "slug": "small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones",
-      "date": "August 05, 2026",
-      "tag": "Edge-AI",
-      "wordCount": 1052,
-      "status": "published"
-    },
-    "ai-observability-monitoring-tracing-and-debugging-llm-applications-in-production": {
-      "title": "AI Observability: Monitoring, Tracing, and Debugging LLM Applications in Production",
-      "slug": "ai-observability-monitoring-tracing-and-debugging-llm-applications-in-production",
-      "date": "August 05, 2026",
-      "tag": "AI-Observability",
-      "wordCount": 1847,
-      "status": "published"
-    },
-    "antigravity-vs-claude-code-vs-codex-choosing-an-ai-coding-agent-in-2026": {
-      "title": "Antigravity vs Claude Code vs Codex: Choosing an AI Coding Agent in 2026",
-      "slug": "antigravity-vs-claude-code-vs-codex-choosing-an-ai-coding-agent-in-2026",
-      "date": "August 06, 2026",
-      "tag": "AI-Coding-Agents",
-      "wordCount": 1594,
-      "status": "published"
-    },
-    "firebase-generative-ai-sdk-mobile-multimodal-model-serving-android-ios": {
-      "title": "Firebase Generative AI SDK for Mobile: Multimodal Model Serving on Android and iOS",
-      "slug": "firebase-generative-ai-sdk-mobile-multimodal-model-serving-android-ios",
-      "date": "August 05, 2026",
-      "tag": "Mobile-AI",
-      "wordCount": 1721,
-      "status": "published"
-    },
-    "mcp-stateless-mode-building-ai-agent-servers-without-session-state": {
-      "title": "MCP Stateless Mode: Building AI Agent Servers Without Session State",
-      "slug": "mcp-stateless-mode-building-ai-agent-servers-without-session-state",
-      "date": "August 07, 2026",
-      "tag": "AI-Engineering",
-      "wordCount": 1421,
-      "status": "published"
-    },
-    "deepseek-v4-flash-what-the-new-open-model-means-for-developers": {
-      "title": "DeepSeek V4 Flash: What the New Open Model Means for Developers",
-      "slug": "deepseek-v4-flash-what-the-new-open-model-means-for-developers",
-      "date": "August 08, 2026",
-      "tag": "AI-Engineering",
-      "wordCount": 1768,
-      "status": "published"
-    },
-    "claude-code-auto-mode-is-now-the-default-should-you-trust-it": {
-      "title": "Claude Code Auto Mode Is Now the Default: Should You Trust It?",
-      "slug": "claude-code-auto-mode-is-now-the-default-should-you-trust-it",
-      "date": "August 09, 2026",
-      "tag": "AI-Coding-Agents",
-      "wordCount": 1496,
-      "status": "published"
-    }
+ "version": "2.1",
+ "totalCreated": 60,
+ "lastTopic": "IntelliJ IDEA Goes LSP: Kotlin and Java Intelligence in VS Code",
+ "todayCount": 50,
+ "lastGenerated": "2026-08-10T00:00:00Z",
+ "blogs": {
+  "validating-mobile-numbers-right-way-country-mobile-validator": {
+   "title": "Validating Mobile Numbers the Right Way: Introducing country_mobile_validator",
+   "slug": "validating-mobile-numbers-right-way-country-mobile-validator",
+   "date": "August 6, 2026",
+   "tag": "Flutter",
+   "wordCount": 1200,
+   "status": "published"
   },
-  "images": {
-    "kotlin-multiplatform-evolution-in-2026": "https://images.unsplash.com/photo-1555949963-ff9fe2c54ed7?auto=format&fit=crop&q=80&w=1200",
-    "ai-powered-code-review-automating-quality-gates-with-llm-agents": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&q=80&w=1200",
-    "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
-    "android-16-what-senior-developers-need-to-know-about-the-latest-apis": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
-    "ai-agents-autonomous-workflows-complex-tasks-2026": "https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&q=80&w=1200",
-    "ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&q=80&w=1200",
-    "clean-architecture-design-patterns-modern-ai-systems-building-maintainable-ml-pipelines": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
-    "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices-alt": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
-    "flutter-performance-optimization-achieving-60-fps-on-mid-range-devices": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
-    "flutter-ai-integration-machine-learning-2026": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200",
-    "building-scalable-microservices-with-fastapi-and-event-driven-architecture": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
-    "zero-trust-architecture-implementing-security-in-distributed-cloud-systems": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
-    "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
-    "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    "react-server-components-production-patterns-for-high-performance-web-apps": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "edge-ai-running-large-language-models-on-consumer-devices-in-2026": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
-    "data-engineering-at-scale-building-real-time-streaming-pipelines": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    "platform-engineering-building-internal-developer-portals-that-teams-love": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    "webassembly-in-2026-from-browser-to-edge-computing-and-beyond": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200",
-    "rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200",
-    "distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    "testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200",
-    "finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
-    "css-container-queries-and-style-queries-responsive-design-beyond-media-queries": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "building-real-time-collaborative-apps-with-crdts-and-operational-transformation": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
-    "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "flutter-impeller-rendering-engine-gpu-acceleration-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
-    "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "ios-20-and-swift-8-what-mobile-developers-need-to-know": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
-    "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "webgpu-next-generation-graphics-and-compute-for-the-browser": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "free-developer-tools-that-supercharge-your-2026-workflow": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    "dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-    "agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
-    "small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"
+  "kotlin-multiplatform-evolution-in-2026": {
+   "title": "The Evolution of Kotlin Multiplatform in 2026",
+   "slug": "kotlin-multiplatform-evolution-in-2026",
+   "date": "May 29, 2026",
+   "tag": "Kotlin-Multiplatform",
+   "wordCount": 850,
+   "status": "published"
   },
-  "migration_notes": {
-    "low_quality_removed_2026-06-18": [
-      "Removed 10 blogs under 600 words (< 600 word minimum)",
-      "Enforced 2000+ character minimum for all new blogs",
-      "Target: 700-950 words per blog"
-    ],
-    "enhanced_generation_2026-06-18": {
-      "script": "scripts/blog-automation/automation_enhanced_v2.py",
-      "features": [
-        "9-section comprehensive structure",
-        "Unique images per topic (5 per category)",
-        "3+ code examples with comments",
-        "Mermaid diagrams included",
-        "Minimum 2000 characters enforced"
-      ],
-      "image_pool": {
-        "ai": 5,
-        "flutter": 5,
-        "android": 5,
-        "architecture": 5,
-        "cloud": 5
-      },
-      "model": "qwen/qwen3.5-9b (local only, no API rate limits)",
-      "avg_duration_seconds": 196
-    }
+  "ai-powered-code-review-automating-quality-gates-with-llm-agents": {
+   "title": "AI-Powered Code Review: Automating Quality Gates with LLM Agents",
+   "slug": "ai-powered-code-review-automating-quality-gates-with-llm-agents",
+   "date": "May 29, 2026",
+   "tag": "AI-Engineering",
+   "wordCount": 1200,
+   "status": "published"
+  },
+  "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices": {
+   "title": "AI Model Optimization: Quantization, Distillation, and Efficient Training for Edge Devices",
+   "slug": "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices",
+   "date": "May 28, 2026",
+   "tag": "AI-Optimization",
+   "wordCount": 853,
+   "status": "published"
+  },
+  "android-16-what-senior-developers-need-to-know-about-the-latest-apis": {
+   "title": "Android 16: What Senior Developers Need to Know About the Latest APIs",
+   "slug": "android-16-what-senior-developers-need-to-know-about-the-latest-apis",
+   "date": "May 27, 2026",
+   "tag": "Android",
+   "wordCount": 850,
+   "status": "published"
+  },
+  "ai-agents-autonomous-workflows-complex-tasks-2026": {
+   "title": "AI Agents: Building Autonomous Workflows for Complex Tasks",
+   "slug": "ai-agents-autonomous-workflows-complex-tasks-2026",
+   "date": "May 26, 2026",
+   "tag": "AI-Agents",
+   "wordCount": 850,
+   "status": "published"
+  },
+  "ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026": {
+   "title": "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026",
+   "slug": "ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026",
+   "date": "May 21, 2026",
+   "tag": "AI-Engineering",
+   "wordCount": 863,
+   "status": "published"
+  },
+  "clean-architecture-design-patterns-modern-ai-systems-building-maintainable-ml-pipelines": {
+   "title": "Clean Architecture & Design Patterns in Modern AI Systems: Building Maintainable ML Pipelines",
+   "slug": "clean-architecture-design-patterns-modern-ai-systems-building-maintainable-ml-pipelines",
+   "date": "May 21, 2026",
+   "tag": "Clean-Architecture",
+   "wordCount": 850,
+   "status": "published"
+  },
+  "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices-alt": {
+   "title": "AI Model Optimization: Quantization, Distillation, and Efficient Training for Edge Devices",
+   "slug": "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices-alt",
+   "date": "May 21, 2026",
+   "tag": "AI-Optimization",
+   "wordCount": 785,
+   "status": "published"
+  },
+  "flutter-performance-optimization-achieving-60-fps-on-mid-range-devices": {
+   "title": "Flutter Performance Optimization: Achieving 60 FPS on Mid-Range Devices",
+   "slug": "flutter-performance-optimization-achieving-60-fps-on-mid-range-devices",
+   "date": "May 19, 2026",
+   "tag": "Mobile-Performance",
+   "wordCount": 750,
+   "status": "published"
+  },
+  "flutter-ai-integration-machine-learning-2026": {
+   "title": "Mastering Flutter AI Integration: Building Smart Mobile Apps with Machine Learning in 2026",
+   "slug": "flutter-ai-integration-machine-learning-2026",
+   "date": "May 14, 2026",
+   "tag": "AI",
+   "wordCount": 800,
+   "status": "published"
+  },
+  "building-scalable-microservices-with-fastapi-and-event-driven-architecture": {
+   "title": "Building Scalable Microservices with FastAPI and Event-Driven Architecture",
+   "slug": "building-scalable-microservices-with-fastapi-and-event-driven-architecture",
+   "date": "June 23, 2026",
+   "tag": "Backend-Architecture",
+   "wordCount": 1089,
+   "status": "published"
+  },
+  "zero-trust-architecture-implementing-security-in-distributed-cloud-systems": {
+   "title": "Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems",
+   "slug": "zero-trust-architecture-implementing-security-in-distributed-cloud-systems",
+   "date": "July 19, 2026",
+   "tag": "Security",
+   "wordCount": 1197,
+   "status": "published"
+  },
+  "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems": {
+   "title": "Event Sourcing and CQRS: Practical Patterns for Distributed Systems",
+   "slug": "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems",
+   "date": "June 22, 2026",
+   "tag": "Architecture",
+   "wordCount": 205,
+   "status": "published"
+  },
+  "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing": {
+   "title": "PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing",
+   "slug": "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing",
+   "date": "July 30, 2026",
+   "tag": "Databases",
+   "wordCount": 1043,
+   "status": "published"
+  },
+  "react-server-components-production-patterns-for-high-performance-web-apps": {
+   "title": "React Server Components: Production Patterns for High-Performance Web Apps",
+   "slug": "react-server-components-production-patterns-for-high-performance-web-apps",
+   "date": "June 16, 2026",
+   "tag": "Web-Dev",
+   "wordCount": 953,
+   "status": "published"
+  },
+  "building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions": {
+   "title": "Building Developer Tools in 2026: From CLI Design to AI-Assisted Extensions",
+   "slug": "building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions",
+   "date": "June 18, 2026",
+   "tag": "DevTools",
+   "wordCount": 496,
+   "status": "published"
+  },
+  "edge-ai-running-large-language-models-on-consumer-devices-in-2026": {
+   "title": "Edge AI: Running Large Language Models on Consumer Devices in 2026",
+   "slug": "edge-ai-running-large-language-models-on-consumer-devices-in-2026",
+   "date": "June 10, 2026",
+   "tag": "Edge-AI",
+   "wordCount": 533,
+   "status": "published"
+  },
+  "data-engineering-at-scale-building-real-time-streaming-pipelines": {
+   "title": "Data Engineering at Scale: Building Real-Time Streaming Pipelines",
+   "slug": "data-engineering-at-scale-building-real-time-streaming-pipelines",
+   "date": "June 19, 2026",
+   "tag": "Data-Engineering",
+   "wordCount": 847,
+   "status": "published"
+  },
+  "platform-engineering-building-internal-developer-portals-that-teams-love": {
+   "title": "Platform Engineering: Building Internal Developer Portals That Teams Love",
+   "slug": "platform-engineering-building-internal-developer-portals-that-teams-love",
+   "date": "July 15, 2026",
+   "tag": "DevEx",
+   "wordCount": 1428,
+   "status": "published"
+  },
+  "webassembly-in-2026-from-browser-to-edge-computing-and-beyond": {
+   "title": "WebAssembly in 2026: From Browser to Edge Computing and Beyond",
+   "slug": "webassembly-in-2026-from-browser-to-edge-computing-and-beyond",
+   "date": "June 24, 2026",
+   "tag": "WebAssembly",
+   "wordCount": 1088,
+   "status": "published"
+  },
+  "the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact": {
+   "title": "The Rise of AI Coding Assistants: Evaluating Code Quality and Productivity Impact",
+   "slug": "the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact",
+   "date": "June 25, 2026",
+   "tag": "AI-Engineering",
+   "wordCount": 1214,
+   "status": "published"
+  },
+  "rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth": {
+   "title": "Rust for Systems Programming in 2026: Memory Safety, Concurrency, and Ecosystem Growth",
+   "slug": "rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth",
+   "date": "June 27, 2026",
+   "tag": "Systems",
+   "wordCount": 1052,
+   "status": "published"
+  },
+  "kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026": {
+   "title": "Kubernetes Sidecar Patterns for Service Mesh Observability in 2026",
+   "slug": "kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026",
+   "date": "July 31, 2026",
+   "tag": "Cloud-Native",
+   "wordCount": 1043,
+   "status": "published"
+  },
+  "distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging": {
+   "title": "Distributed Tracing with OpenTelemetry: From Instrumentation to Production Debugging",
+   "slug": "distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging",
+   "date": "June 29, 2026",
+   "tag": "Observability",
+   "wordCount": 1043,
+   "status": "published"
+  },
+  "testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines": {
+   "title": "Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines",
+   "slug": "testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines",
+   "date": "July 21, 2026",
+   "tag": "AI-ML",
+   "wordCount": 1278,
+   "status": "published"
+  },
+  "finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments": {
+   "title": "FinOps for Kubernetes: Optimizing Cloud Costs in Containerized Environments",
+   "slug": "finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments",
+   "date": "July 01, 2026",
+   "tag": "DevOps",
+   "wordCount": 1043,
+   "status": "published"
+  },
+  "css-container-queries-and-style-queries-responsive-design-beyond-media-queries": {
+   "title": "CSS Container Queries and Style Queries: Responsive Design Beyond Media Queries",
+   "slug": "css-container-queries-and-style-queries-responsive-design-beyond-media-queries",
+   "date": "July 02, 2026",
+   "tag": "Web-Dev",
+   "wordCount": 1223,
+   "status": "published"
+  },
+  "building-real-time-collaborative-apps-with-crdts-and-operational-transformation": {
+   "title": "Building Real-Time Collaborative Apps with CRDTs and Operational Transformation",
+   "slug": "building-real-time-collaborative-apps-with-crdts-and-operational-transformation",
+   "date": "July 03, 2026",
+   "tag": "Architecture",
+   "wordCount": 829,
+   "status": "published"
+  },
+  "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026": {
+   "title": "Top Free Developer Tools and AI Resources Transforming Engineering Workflows in 2026",
+   "slug": "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026",
+   "date": "July 17, 2026",
+   "tag": "DevTools",
+   "wordCount": 1288,
+   "status": "published"
+  },
+  "flutter-impeller-rendering-engine-gpu-acceleration-2026": {
+   "title": "Flutter Impeller Rendering Engine: GPU Acceleration Strategies for Production Apps in 2026",
+   "slug": "flutter-impeller-rendering-engine-gpu-acceleration-2026",
+   "date": "July 18, 2026",
+   "tag": "Flutter",
+   "wordCount": 1670,
+   "status": "published"
+  },
+  "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026": {
+   "title": "Kotlin Multiplatform in Production: Sharing Business Logic Across Android, iOS, and Web in 2026",
+   "slug": "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026",
+   "date": "July 20, 2026",
+   "tag": "Kotlin-Multiplatform",
+   "wordCount": 1215,
+   "status": "published"
+  },
+  "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens": {
+   "title": "Flutter Widget Testing Mastery: From Unit Tests to Integration Goldens",
+   "slug": "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens",
+   "date": "July 21, 2026",
+   "tag": "Flutter",
+   "wordCount": 1046,
+   "status": "published"
+  },
+  "ios-20-and-swift-8-what-mobile-developers-need-to-know": {
+   "title": "iOS 20 and Swift 8: What Mobile Developers Need to Know",
+   "slug": "ios-20-and-swift-8-what-mobile-developers-need-to-know",
+   "date": "July 22, 2026",
+   "tag": "Mobile",
+   "wordCount": 1049,
+   "status": "published"
+  },
+  "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production": {
+   "title": "TypeScript 5.x Advanced Patterns: Conditional Types, Template Literals, and Mapped Types in Production",
+   "slug": "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production",
+   "date": "July 29, 2026",
+   "tag": "Web-Dev",
+   "wordCount": 1055,
+   "status": "published"
+  },
+  "webgpu-next-generation-graphics-and-compute-for-the-browser": {
+   "title": "WebGPU: Next-Generation Graphics and Compute for the Browser",
+   "slug": "webgpu-next-generation-graphics-and-compute-for-the-browser",
+   "date": "July 29, 2026",
+   "tag": "Web-Dev",
+   "wordCount": 1040,
+   "status": "published"
+  },
+  "free-developer-tools-that-supercharge-your-2026-workflow": {
+   "title": "Free Developer Tools That Supercharge Your 2026 Workflow",
+   "slug": "free-developer-tools-that-supercharge-your-2026-workflow",
+   "date": "August 01, 2026",
+   "tag": "DevTools",
+   "wordCount": 1126,
+   "status": "published"
+  },
+  "dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026": {
+   "title": "Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026",
+   "slug": "dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026",
+   "date": "August 02, 2026",
+   "tag": "Flutter",
+   "wordCount": 1055,
+   "status": "published"
+  },
+  "flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance": {
+   "title": "Flutter 4 and Impeller: The Next Generation of Cross-Platform UI Performance",
+   "slug": "flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance",
+   "date": "August 03, 2026",
+   "tag": "Flutter",
+   "wordCount": 1259,
+   "status": "published"
+  },
+  "agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026": {
+   "title": "Agentic AI Systems: Designing Reliable Multi-Agent Workflows in 2026",
+   "slug": "agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026",
+   "date": "August 04, 2026",
+   "tag": "Agentic-AI",
+   "wordCount": 1043,
+   "status": "published"
+  },
+  "small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones": {
+   "title": "Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones",
+   "slug": "small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones",
+   "date": "August 05, 2026",
+   "tag": "Edge-AI",
+   "wordCount": 1052,
+   "status": "published"
+  },
+  "ai-observability-monitoring-tracing-and-debugging-llm-applications-in-production": {
+   "title": "AI Observability: Monitoring, Tracing, and Debugging LLM Applications in Production",
+   "slug": "ai-observability-monitoring-tracing-and-debugging-llm-applications-in-production",
+   "date": "August 05, 2026",
+   "tag": "AI-Observability",
+   "wordCount": 1847,
+   "status": "published"
+  },
+  "antigravity-vs-claude-code-vs-codex-choosing-an-ai-coding-agent-in-2026": {
+   "title": "Antigravity vs Claude Code vs Codex: Choosing an AI Coding Agent in 2026",
+   "slug": "antigravity-vs-claude-code-vs-codex-choosing-an-ai-coding-agent-in-2026",
+   "date": "August 06, 2026",
+   "tag": "AI-Coding-Agents",
+   "wordCount": 1594,
+   "status": "published"
+  },
+  "firebase-generative-ai-sdk-mobile-multimodal-model-serving-android-ios": {
+   "title": "Firebase Generative AI SDK for Mobile: Multimodal Model Serving on Android and iOS",
+   "slug": "firebase-generative-ai-sdk-mobile-multimodal-model-serving-android-ios",
+   "date": "August 05, 2026",
+   "tag": "Mobile-AI",
+   "wordCount": 1721,
+   "status": "published"
+  },
+  "mcp-stateless-mode-building-ai-agent-servers-without-session-state": {
+   "title": "MCP Stateless Mode: Building AI Agent Servers Without Session State",
+   "slug": "mcp-stateless-mode-building-ai-agent-servers-without-session-state",
+   "date": "August 07, 2026",
+   "tag": "AI-Engineering",
+   "wordCount": 1421,
+   "status": "published"
+  },
+  "deepseek-v4-flash-what-the-new-open-model-means-for-developers": {
+   "title": "DeepSeek V4 Flash: What the New Open Model Means for Developers",
+   "slug": "deepseek-v4-flash-what-the-new-open-model-means-for-developers",
+   "date": "August 08, 2026",
+   "tag": "AI-Engineering",
+   "wordCount": 1768,
+   "status": "published"
+  },
+  "claude-code-auto-mode-is-now-the-default-should-you-trust-it": {
+   "title": "Claude Code Auto Mode Is Now the Default: Should You Trust It?",
+   "slug": "claude-code-auto-mode-is-now-the-default-should-you-trust-it",
+   "date": "August 09, 2026",
+   "tag": "AI-Coding-Agents",
+   "wordCount": 1496,
+   "status": "published"
+  },
+  "intellij-idea-goes-lsp-kotlin-and-java-intelligence-in-vs-code": {
+   "title": "IntelliJ IDEA Goes LSP: Kotlin and Java Intelligence in VS Code",
+   "slug": "intellij-idea-goes-lsp-kotlin-and-java-intelligence-in-vs-code",
+   "date": "August 10, 2026",
+   "tag": "DevTools",
+   "wordCount": 1421,
+   "status": "published"
   }
+ },
+ "images": {
+  "kotlin-multiplatform-evolution-in-2026": "https://images.unsplash.com/photo-1555949963-ff9fe2c54ed7?auto=format&fit=crop&q=80&w=1200",
+  "ai-powered-code-review-automating-quality-gates-with-llm-agents": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&q=80&w=1200",
+  "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
+  "android-16-what-senior-developers-need-to-know-about-the-latest-apis": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
+  "ai-agents-autonomous-workflows-complex-tasks-2026": "https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&q=80&w=1200",
+  "ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&q=80&w=1200",
+  "clean-architecture-design-patterns-modern-ai-systems-building-maintainable-ml-pipelines": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
+  "ai-model-optimization-quantization-distillation-and-efficient-training-for-edge-devices-alt": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
+  "flutter-performance-optimization-achieving-60-fps-on-mid-range-devices": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
+  "flutter-ai-integration-machine-learning-2026": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200",
+  "building-scalable-microservices-with-fastapi-and-event-driven-architecture": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
+  "zero-trust-architecture-implementing-security-in-distributed-cloud-systems": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+  "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
+  "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+  "react-server-components-production-patterns-for-high-performance-web-apps": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+  "building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+  "edge-ai-running-large-language-models-on-consumer-devices-in-2026": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
+  "data-engineering-at-scale-building-real-time-streaming-pipelines": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+  "platform-engineering-building-internal-developer-portals-that-teams-love": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+  "webassembly-in-2026-from-browser-to-edge-computing-and-beyond": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+  "the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200",
+  "rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+  "kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200",
+  "distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+  "testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200",
+  "finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+  "css-container-queries-and-style-queries-responsive-design-beyond-media-queries": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+  "building-real-time-collaborative-apps-with-crdts-and-operational-transformation": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
+  "top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+  "flutter-impeller-rendering-engine-gpu-acceleration-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+  "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
+  "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+  "ios-20-and-swift-8-what-mobile-developers-need-to-know": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
+  "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+  "webgpu-next-generation-graphics-and-compute-for-the-browser": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+  "free-developer-tools-that-supercharge-your-2026-workflow": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+  "dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+  "flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
+  "agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
+  "small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"
+ },
+ "migration_notes": {
+  "low_quality_removed_2026-06-18": [
+   "Removed 10 blogs under 600 words (< 600 word minimum)",
+   "Enforced 2000+ character minimum for all new blogs",
+   "Target: 700-950 words per blog"
+  ],
+  "enhanced_generation_2026-06-18": {
+   "script": "scripts/blog-automation/automation_enhanced_v2.py",
+   "features": [
+    "9-section comprehensive structure",
+    "Unique images per topic (5 per category)",
+    "3+ code examples with comments",
+    "Mermaid diagrams included",
+    "Minimum 2000 characters enforced"
+   ],
+   "image_pool": {
+    "ai": 5,
+    "flutter": 5,
+    "android": 5,
+    "architecture": 5,
+    "cloud": 5
+   },
+   "model": "qwen/qwen3.5-9b (local only, no API rate limits)",
+   "avg_duration_seconds": 196
+  }
+ }
 }

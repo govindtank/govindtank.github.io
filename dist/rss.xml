@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Aug 2026 02:36:28 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 02:52:10 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[IntelliJ IDEA Goes LSP: Kotlin and Java Intelligence in VS Code]]></title>
+      <link>https://govindtank.github.io/blog/intellij-idea-goes-lsp-kotlin-and-java-intelligence-in-vs-code</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/intellij-idea-goes-lsp-kotlin-and-java-intelligence-in-vs-code</guid>
+      <pubDate>Sun, 09 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[JetBrains shipped its Java and Kotlin intelligence as an LSP extension for VS Code. Here's how the preview compares to IntelliJ IDEA, what the license really means, and when the switch makes sense.
+]]></description>
+      <category>Kotlin</category>
+    </item>
     <item>
       <title><![CDATA[Claude Code Auto Mode Is Now the Default: Should You Trust It?]]></title>
       <link>https://govindtank.github.io/blog/claude-code-auto-mode-is-now-the-default-should-you-trust-it</link>
