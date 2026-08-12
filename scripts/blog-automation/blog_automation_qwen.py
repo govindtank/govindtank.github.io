@@ -200,7 +200,7 @@ BANNED_PHRASES = [
 def call_llm(messages, temperature=0.8, timeout=300):
     """Call qwen (only model that fits this machine). Returns text or None."""
     payload = {"model": MODELS[0], "messages": messages, "temperature": temperature,
-               "max_tokens": 4096, "top_p": 0.9}
+               "max_tokens": 4096, "top_p": 0.9, "reasoning_effort": "none"}
     try:
         req = urllib.request.Request(LLM_URL, data=json.dumps(payload).encode(),
                                      headers={"Content-Type": "application/json"}, method="POST")
@@ -209,8 +209,10 @@ def call_llm(messages, temperature=0.8, timeout=300):
             if "choices" in data and data["choices"]:
                 msg = data["choices"][0]["message"]
                 content = msg.get("content", "") or msg.get("reasoning_content", "")
-                if content and len(content) > 300:
+                if content and len(content.strip()) > 0:
                     return content
+                if msg.get("reasoning_content"):
+                    return msg["reasoning_content"]
     except Exception as e:
         log(f"  LLM call failed: {str(e)[:90]}")
     return None
@@ -224,39 +226,25 @@ def build_prompts(topic, archetype, persona, excerpt_only=False):
         return system, user
 
     banned = "; ".join(BANNED_PHRASES[:24])
-    system = f"""You are writing a technical blog post. {persona}
+    system = f"""You are writing a concise technical blog post. {persona}
 
 Post type: {arch['label']}.
 
-Structure to follow (in this order, adapt headings naturally — do NOT use these exact labels):
+Structure:
 {chr(10).join('- ' + s for s in arch['structure'])}
 
-Style notes:
-{arch['notes']}
-- Write 1500-2200 words. No padding, no filler sections.
-- Headings in sentence case (e.g. '## Why this keeps happening', not '## Why This Keeps Happening').
-- Vary sentence length. Short sentences land harder. Long ones can take their time.
-- First person is fine and welcome. Opinions are welcome. 'I' is not a dirty word.
-- Use 1-3 real, verifiable references: real project names, real versions, real docs URLs,
-  real RFCs, real error messages, real GitHub issues. If you cannot recall a specific fact
-  confidently, stay generic about numbers rather than inventing precise fake statistics.
-- Include a markdown table where the structure calls for it; include a mermaid diagram ONLY
-  where the structure calls for it (not every post needs one).
-- Code blocks must be realistic and runnable-looking, with a language tag.
-- Start directly with the H1: # {topic['title']}
-- End with a short closing section, NOT labeled 'Conclusion' and NOT labeled 'Future Outlook'.
-- The H1 is the only # heading. Everything else is ## or ###.
+Rules:
+- 1000-1600 words. No padding.
+- Sentence-case headings. Short first. Long when it helps.
+- First person welcome. Opinions welcome.
+- 1-2 real references only. If unsure, stay generic.
+- 1 table if structure calls for it. 1 mermaid only if structure calls for it.
+- Start with H1: # {topic['title']}
+- End with short closing, NOT 'Conclusion' or 'Future Outlook'.
+- Only H1 is #. Rest are ##/###.
 
-HARD BANS — never use these words/phrases, even once:
-{banned}
-
-Never write:
-- 'In today's fast-paced world of technology'
-- 'The technology landscape in 2026 demands'
-- 'represents one of the most impactful shifts'
-- Any sentence that tells the reader how important the topic is instead of showing it.
-- Fake benchmark numbers (x ms vs y ms invented precisely), fake team anecdotes, fake quotes.
-- Emojis anywhere.
+Banned: {banned}
+No emojis. No fake benchmarks. No invented stats.
 """
 
     user = f"""Write the blog post now.
