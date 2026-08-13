@@ -8,8 +8,35 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Aug 2026 02:52:10 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 06:51:47 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Agentic AI Development: From Chat Assistants to Autonomous Coding Agents]]></title>
+      <link>https://govindtank.github.io/blog/agentic-ai-development-from-chat-assistants-to-autonomous-coding-agents</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/agentic-ai-development-from-chat-assistants-to-autonomous-coding-agents</guid>
+      <pubDate>Wed, 12 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[We move beyond chat interfaces to build autonomous coding agents using the Model Context Protocol for secure tool invocation. This guide covers designing multi-agent orchestration loops, implementing rigorous evaluati...
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
+    <item>
+      <title><![CDATA[Kotlin 2.x and the K2 Compiler: What It Unlocked for Android Developers]]></title>
+      <link>https://govindtank.github.io/blog/kotlin-2x-and-the-k2-compiler-what-it-unlocked-for-android-developers</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/kotlin-2x-and-the-k2-compiler-what-it-unlocked-for-android-developers</guid>
+      <pubDate>Tue, 11 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[The K2 compiler in Kotlin 2.x delivers measurable performance boosts and fixes critical type inference issues, while its new API surface enables smoother multiplatform projects. This post outlines essential migration ...
+]]></description>
+      <category>Kotlin</category>
+    </item>
+    <item>
+      <title><![CDATA[MCP in Practice: Model Context Protocol for Real-World Developer Tools]]></title>
+      <link>https://govindtank.github.io/blog/mcp-in-practice-model-context-protocol-for-real-world-developer-tools</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/mcp-in-practice-model-context-protocol-for-real-world-developer-tools</guid>
+      <pubDate>Tue, 11 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[This post details how to build MCP servers with custom tools and choose between SSE and stdio transports. We cover integrating the protocol directly into IDEs and automating workflows within CI/CD pipelines.
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
     <item>
       <title><![CDATA[IntelliJ IDEA Goes LSP: Kotlin and Java Intelligence in VS Code]]></title>
       <link>https://govindtank.github.io/blog/intellij-idea-goes-lsp-kotlin-and-java-intelligence-in-vs-code</link>
