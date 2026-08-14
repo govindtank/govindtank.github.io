@@ -12,18 +12,6 @@ tags:
   - "AI-Engineering"
 ---
 
-archetype: "war-story"
-title: "Agentic AI Development: From Chat Assistants to Autonomous Coding Agents"
-slug: "agentic-ai-development-from-chat-assistants-to-autonomous-coding-agents"
-date: "August 13, 2026"
-excerpt: >
-  We move beyond chat interfaces to build autonomous coding agents using the Model Context Protocol for secure tool invocation. This guide covers designing multi-agent orchestration loops, implementing rigorous evaluation metrics, and enforcing policy boundaries at the transport layer.
-coverImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200"
-category: "AI-Engineering"
-readTime: 8
-tags:
-  - "AI-Engineering"
-
 # Agentic AI Development: From Chat Assistants to Autonomous Coding Agents
 
 I spent three weeks staring at a dashboard designed by someone who believed "more data" solved every problem. We built an internal tooling assistant using the standard chat interface pattern. It answered documentation questions, searched our repo, and generated code snippets on request. It felt smart until it wasn't.
