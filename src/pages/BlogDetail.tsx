@@ -95,22 +95,26 @@ export default function BlogDetailPage() {
     return () => { cancelled = true; };
   }, [post]);
 
-  // Track active heading for TOC
+  // Track active heading for TOC based on scroll position
   useEffect(() => {
     if (!fullContent) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveHeading(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: '-100px 0px -70% 0px' }
-    );
-    const headings = document.querySelectorAll('h2[id], h3[id]');
-    headings.forEach((h) => observer.observe(h));
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      const headings = Array.from(document.querySelectorAll('h2[id], h3[id]')) as HTMLElement[];
+      if (!headings.length) return;
+      const scrollY = window.scrollY + 120;
+      let current = headings[0].id;
+      for (const h of headings) {
+        if (h.offsetTop <= scrollY) {
+          current = h.id;
+        } else {
+          break;
+        }
+      }
+      setActiveHeading(current);
+    };
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [fullContent, loadingContent]);
 
   // Related Articles
