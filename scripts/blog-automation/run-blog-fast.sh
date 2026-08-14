@@ -23,10 +23,31 @@ git merge --ff-only origin/main || {
   git rebase origin/main || true
 }
 
-# 2) Try local LLM path with bounded timeout via Python subprocess
-echo "[$(date '+%F %T')] starting blog_automation_qwen.py" >> "$LOG"
-LLM_STATUS="ok"
+# 2) Quick LLM health check
+echo "[$(date '+%F %T')] checking LLM health" >> "$LOG"
+LLM_HEALTHY=0
 python3 - <<'PY' >> "$LOG" 2>&1
+import urllib.request, json, sys
+try:
+    req = urllib.request.Request(
+        "http://127.0.0.1:1234/v1/chat/completions",
+        data=json.dumps({"model":"qwen/qwen3.5-9b","messages":[{"role":"user","content":"ping"}],"max_tokens":5}).encode(),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    with urllib.request.urlopen(req, timeout=8) as resp:
+        data = json.loads(resp.read().decode())
+        if "choices" in data and data["choices"]:
+            print("LLM_HEALTHY=1")
+        else:
+            print("LLM_HEALTHY=0")
+except Exception as e:
+    print(f"LLM_HEALTHY=0")
+PY
+
+if grep -q "LLM_HEALTHY=1" "$LOG"; then
+  echo "[$(date '+%F %T')] LLM healthy, attempting generation" >> "$LOG"
+  python3 - <<'PY' >> "$LOG" 2>&1
 import subprocess, sys, datetime
 
 log_path = "/tmp/blog-fast-cron.log"
@@ -38,19 +59,23 @@ try:
         cwd="/Users/govind/hermes_projects/govindtank.github.io",
         capture_output=True,
         text=True,
-        timeout=180,
+        timeout=90,
     )
     print(result.stdout)
     if result.stderr:
         print(result.stderr, file=sys.stderr)
     print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] qwen run completed with code {result.returncode}")
 except subprocess.TimeoutExpired:
-    print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] qwen run timed out after 180s")
+    print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] qwen run timed out after 90s")
 except Exception as e:
     print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] qwen run error: {e}")
 PY
+else
+  echo "[$(date '+%F %T')] LLM not healthy, skipping qwen path" >> "$LOG"
+fi
 
-if grep -q "qwen run timed out after 180s\|qwen run error:" "$LOG"; then
+# 3) If LLM path did not produce a new blog, use fast manual fallback
+if ! grep -q "WROTE /Users/govind/hermes_projects/govindtank.github.io/src/content/blog/" "$LOG"; then
   echo "[$(date '+%F %T')] falling back to manual post generation" >> "$LOG"
   python3 - <<'PY' >> "$LOG" 2>&1
 import json, os, re, datetime, random
@@ -178,5 +203,5 @@ PY
   git push origin main || true
 fi
 
-# 3) Final status line for cron logs
+# 4) Final status line for cron logs
 echo "[$(date '+%F %T')] blog cron completed" >> "$LOG"
