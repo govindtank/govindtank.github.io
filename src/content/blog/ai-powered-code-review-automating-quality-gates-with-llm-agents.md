@@ -1,7 +1,7 @@
 ---
 title: "AI-Powered Code Review: Automating Quality Gates with LLM Agents"
 slug: "ai-powered-code-review-automating-quality-gates-with-llm-agents"
-date: "2026-05-29"
+date: "May 29, 2026"
 excerpt: >
 coverImage: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Engineering"
@@ -13,8 +13,7 @@ tags:
   - "Quality Gates"
 archetype: "comparison"
 ---
-  One-shot prompts on a diff are cheap and shallow. Tool-using agents go deep but cost real money. Here's how to pick the quality gate that fits your team.
----
+
 
 # AI-Powered Code Review: Automating Quality Gates with LLM Agents
 

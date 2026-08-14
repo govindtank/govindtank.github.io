@@ -13,8 +13,7 @@ tags:
   - "DDD"
 archetype: "roundup"
 ---
-  Event sourcing and CQRS are five practical patterns, not one religion. I built each of them, compared the results, and here is where each one earns its keep.
----
+
 
 # Event Sourcing and CQRS: Practical Patterns for Distributed Systems
 

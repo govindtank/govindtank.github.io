@@ -10,8 +10,7 @@ tags:
   - "Web-Dev"
 archetype: "roundup"
 ---
-  Conditional types, template literal types, and mapped types look clever until they cost you an afternoon. Here's when each one earns its keep — and when to stop.
----
+
 
 # TypeScript 5.x Advanced Patterns: Conditional Types, Template Literals, and Mapped Types in Production
 

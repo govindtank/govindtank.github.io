@@ -10,8 +10,7 @@ tags:
   - "Kotlin-Multiplatform"
 archetype: "opinion"
 ---
-  Kotlin Multiplatform is production-ready for shared business logic — I just don't think the UI belongs in it. Here's my honest take after shipping both.
----
+
 
 # Kotlin Multiplatform in Production: Sharing Business Logic Across Android, iOS, and Web in 2026
 

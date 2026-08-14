@@ -10,8 +10,7 @@ tags:
   - "Observability"
 archetype: "war-story"
 ---
-  A checkout that took eight seconds once in a while took two weeks to find. One trace found it in twenty minutes — after I stopped trusting the dashboards.
----
+
 
 # Distributed Tracing with OpenTelemetry: From Instrumentation to Production Debugging
 

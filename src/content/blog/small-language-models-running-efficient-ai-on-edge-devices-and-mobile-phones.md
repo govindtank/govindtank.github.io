@@ -10,8 +10,7 @@ tags:
   - "Edge-AI"
 archetype: "explainer"
 ---
-  Small models aren't small brains — they're specialists that fit in your pocket. Here's the mental model that makes on-device AI decisions obvious.
----
+
 
 # Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones
 

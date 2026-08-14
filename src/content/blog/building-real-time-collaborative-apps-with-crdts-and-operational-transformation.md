@@ -10,8 +10,7 @@ tags:
   - "Architecture"
 archetype: "opinion"
 ---
-  I've built collaborative editing twice: once with OT, once with CRDTs. If I started a third project today, I'd reach for CRDTs first and make you argue me out of it.
----
+
 
 # Building Real-Time Collaborative Apps with CRDTs and Operational Transformation
 

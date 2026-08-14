@@ -10,8 +10,7 @@ tags:
   - "Systems"
 archetype: "explainer"
 ---
-  Rust's memory safety promises are real, and so is the learning curve. I cover ownership, concurrency, and error handling, plus where the language still costs you.
----
+
 
 # Rust for Systems Programming in 2026: Memory Safety, Concurrency, and Ecosystem Growth
 

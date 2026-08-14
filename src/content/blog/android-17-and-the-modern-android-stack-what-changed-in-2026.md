@@ -15,6 +15,7 @@ tags:
   - "Privacy"
 ---
 
+
 # Android 17 and the Modern Android Stack: What Changed in 2026
 
 I updated two production apps to target Android 17 this quarter. One was a media streaming app with foreground services and audio focus; the other was a fintech app with strict privacy requirements. Both required real code changes, not just manifest bumps. This post covers the changes that actually mattered.

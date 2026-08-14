@@ -10,8 +10,7 @@ tags:
   - "DevOps"
 archetype: "war-story"
 ---
-  Our Kubernetes bill tripled in six months and nobody noticed until finance did. This is how I found the waste, what we cut, and the rules I'd start with next time.
----
+
 
 # FinOps for Kubernetes: Optimizing Cloud Costs in Containerized Environments
 

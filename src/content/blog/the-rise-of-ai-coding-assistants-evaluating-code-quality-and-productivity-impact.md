@@ -10,8 +10,7 @@ tags:
   - "AI-Engineering"
 archetype: "comparison"
 ---
-  I tested Copilot, Cursor, Claude Code, and Gemini on the same small projects and kept notes. Here is what the evidence says about speed, review burden, security, and cost.
----
+
 
 # The Rise of AI Coding Assistants: Evaluating Code Quality and Productivity Impact
 

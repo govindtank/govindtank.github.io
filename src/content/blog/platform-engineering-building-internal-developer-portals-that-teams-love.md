@@ -10,8 +10,7 @@ tags:
   - "DevEx"
 archetype: "tutorial"
 ---
-  Most internal developer portals die trying to model the whole company on day one. Here is the thin-slice approach that got one adopted in six weeks.
----
+
 
 # Platform Engineering: Building Internal Developer Portals That Teams Love
 

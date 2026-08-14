@@ -12,6 +12,18 @@ tags:
   - "AI-Engineering"
 ---
 
+archetype: "explainer"
+title: "MCP in Practice: Model Context Protocol for Real-World Developer Tools"
+slug: "mcp-in-practice-model-context-protocol-for-real-world-developer-tools"
+date: "August 12, 2026"
+excerpt: >
+  This post details how to build MCP servers with custom tools and choose between SSE and stdio transports. We cover integrating the protocol directly into IDEs and automating workflows within CI/CD pipelines.
+coverImage: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1200"
+category: "AI-Engineering"
+readTime: 13
+tags:
+  - "AI-Engineering"
+
 # MCP in Practice: Model Context Protocol for Real-World Developer Tools
 
 I spent three weeks debugging a CI pipeline failure that looked like a flaky test but turned out to be a transport negotiation timeout. The error message was generic: `ECONNRESET`. The logs showed the agent thinking, then silence, then a crash. I assumed it was network instability. It wasn't. It was a mismatch in how the IDE's MCP client and the internal tool server negotiated capabilities over different transports.

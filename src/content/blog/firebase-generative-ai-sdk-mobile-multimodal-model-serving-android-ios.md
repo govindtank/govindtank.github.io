@@ -15,6 +15,7 @@ tags:
 archetype: "explainer"
 ---
 
+
 # Firebase Generative AI SDK for Mobile: Multimodal Model Serving on Android and iOS
 
 I spent the last six months integrating generative AI models into a Flutter app. The setup felt clunky—calling external APIs, managing rate limits, dealing with latency—and I wanted something that lived closer to the device. Firebase's new Generative AI SDK changes that by offering multimodal model serving directly on Android and iOS.

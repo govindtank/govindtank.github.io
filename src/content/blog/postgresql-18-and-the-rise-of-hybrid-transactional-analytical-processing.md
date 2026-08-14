@@ -10,8 +10,7 @@ tags:
   - "Databases"
 archetype: "opinion"
 ---
-  PostgreSQL 18 ships an experimental columnar access method, and the HTAP question is suddenly real. It replaces a warehouse for some workloads. Here's my line.
----
+
 
 # PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing
 

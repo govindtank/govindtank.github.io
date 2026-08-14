@@ -1,7 +1,7 @@
 ---
 title: "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026"
 slug: "ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026"
-date: "2026-06-03"
+date: "June 03, 2026"
 excerpt: >
 coverImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"
 category: "AI"
@@ -13,8 +13,7 @@ tags:
   - "CI/CD"
 archetype: "war-story"
 ---
-  An AI assistant rewrote a settlement function and every test passed. Two weeks later the balances were wrong, and git bisect pointed at a diff nobody had actually read.
----
+
 
 # AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026
 

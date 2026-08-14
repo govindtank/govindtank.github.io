@@ -18,6 +18,7 @@ tags:
 archetype: "comparison"
 ---
 
+
 # IntelliJ IDEA Goes LSP: Kotlin and Java Intelligence in VS Code
 
 For most of my career, the answer to "which editor do I use for Kotlin?" has been one word: IntelliJ. Not because the alternatives were lazy — VS Code, Neovim, and Emacs are all genuinely good — but because Kotlin's compiler is fast, its type system is expressive, and the only complete implementation of Kotlin intelligence lived inside a single product. You could bolt syntax highlighting onto any editor. You could not get navigation, refactoring, and analysis that actually understood sealed hierarchies and reified generics anywhere else.

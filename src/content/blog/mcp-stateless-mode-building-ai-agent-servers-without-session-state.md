@@ -15,6 +15,7 @@ tags:
 archetype: "tutorial"
 ---
 
+
 # MCP Stateless Mode: Building AI Agent Servers Without Session State
 
 Last week I ran a small MCP server behind a plain HTTP load balancer and watched it fall over. Not because the code was wrong, but because the Model Context Protocol required a stateful initialization handshake, and my second request went to a different instance that had no idea who I was. The fix turned out to be a spec change that shipped while I wasn't looking: MCP stateless mode. Google wrote about scaling agent infrastructure with it this week, Cloudflare called it "the next generation of MCP," and the spec itself went final on 2026-07-28. If you build tools for AI agents, this is the change you want to understand before your next deployment.

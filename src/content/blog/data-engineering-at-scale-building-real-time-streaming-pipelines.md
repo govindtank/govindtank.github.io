@@ -14,8 +14,7 @@ tags:
   - "Real-Time Analytics"
 archetype: "war-story"
 ---
-  A streaming pipeline that looked great on the diagram fell over during a clearance sale. Here is what actually broke, and the boring fixes that kept it up.
----
+
 
 # Data Engineering at Scale: Building Real-Time Streaming Pipelines
 

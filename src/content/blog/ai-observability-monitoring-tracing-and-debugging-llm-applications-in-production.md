@@ -14,9 +14,6 @@ tags:
 archetype: "explainer"
 ---
 
-We shipped a chat interface to production. Users reported "the bot sometimes gives wrong answers." The error rate wasn't in the code — it was in the model's probabilistic nature. That's when we learned the hard way that LLM apps need observability, not just logging.
-
-This explainer walks through the mechanics of monitoring and tracing LLM applications: what to measure, how to instrument, where failures hide, and why this matters for reliability.
 
 ## The mental model: treat tokens like transactions
 
@@ -282,7 +279,6 @@ With observability:
 
 LLM apps need observability. Treat them like transactional systems: every request has a budget (cost), a deadline (latency), and a quality requirement (output correctness). Build metrics that tell you when any of those break, and you'll ship reliably.
 
----
 
 **Further reading:**
 - LangSmith documentation for production-ready tracing

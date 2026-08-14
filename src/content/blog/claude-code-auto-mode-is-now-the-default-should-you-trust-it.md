@@ -16,6 +16,7 @@ tags:
 archetype: "opinion"
 ---
 
+
 # Claude Code Auto Mode Is Now the Default: Should You Trust It?
 
 Last week Anthropic announced that starting August 14, auto mode becomes the default permission mode in Claude Code for Pro, Max, and Team plans. New sessions just start with the agent allowed to run commands and edit files without stopping to ask you first. My first reaction, after a decade of reviewing agent diffs and cleaning up after them: this is a bet that the model is a better judge of danger than the human at the keyboard. My second reaction was calmer, because the numbers they published are genuinely interesting, and neither reaction tells you what to do on a Tuesday afternoon when a script you barely remember is about to run `git push --force`.

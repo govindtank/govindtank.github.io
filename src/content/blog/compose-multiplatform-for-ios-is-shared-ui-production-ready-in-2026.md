@@ -15,6 +15,7 @@ tags:
   - "iOS"
 ---
 
+
 # Compose Multiplatform for iOS: Is Shared UI Production-Ready in 2026
 
 I spent last month moving a small e-commerce feature set to Compose Multiplatform and running it on Android, iOS, and desktop from one repo. The honest summary: shared logic is solid, shared UI on iOS is viable for many screens, and there are still a few platform-specific walls you will hit before the app ships.

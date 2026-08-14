@@ -13,8 +13,7 @@ tags:
   - "Mobile-Development"
 archetype: "opinion"
 ---
-  Kotlin Multiplatform won the shared-logic argument and quietly lost the shared-UI one. That makes it more valuable, not less — if you adopt it for the right reason.
----
+
 
 # The Evolution of Kotlin Multiplatform in 2026
 

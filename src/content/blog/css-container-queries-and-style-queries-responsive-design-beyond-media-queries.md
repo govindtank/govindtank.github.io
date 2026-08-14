@@ -10,8 +10,7 @@ tags:
   - "Web-Dev"
 archetype: "roundup"
 ---
-  Media queries ask about the viewport, but components live inside containers. Container queries and style queries move that logic to the component, and it changes how I write CSS.
----
+
 
 # CSS Container Queries and Style Queries: Responsive Design Beyond Media Queries
 

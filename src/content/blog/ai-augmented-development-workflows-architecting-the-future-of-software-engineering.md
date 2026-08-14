@@ -1,7 +1,7 @@
 ---
 title: "AI-Augmented Development Workflows: Architecting the Future of Software Engineering"
 slug: "ai-augmented-development-workflows-architecting-the-future-of-software-engineering"
-date: "2026-06-02"
+date: "June 02, 2026"
 excerpt: >
 coverImage: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=1200"
 category: "AI"
@@ -13,8 +13,7 @@ tags:
   - "Developer Tools"
 archetype: "explainer"
 ---
-  The future of software engineering isn't AI replacing developers. It's a loop — humans specify, models generate, machines verify — and the team with the strongest tests wins.
----
+
 
 # AI-Augmented Development Workflows: Architecting the Future of Software Engineering
 

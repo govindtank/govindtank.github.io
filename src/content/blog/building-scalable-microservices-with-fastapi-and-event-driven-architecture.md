@@ -10,8 +10,7 @@ tags:
   - "Backend-Architecture"
 archetype: "opinion"
 ---
-  Most teams should start with a boring modular monolith and split on evidence, not diagrams. Events are a tool for specific jobs, not a default posture.
----
+
 
 # Building Scalable Microservices with FastAPI and Event-Driven Architecture
 

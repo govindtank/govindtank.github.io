@@ -15,6 +15,7 @@ tags:
 archetype: "comparison"
 ---
 
+
 # Antigravity vs Claude Code vs Codex: Choosing an AI Coding Agent in 2026
 
 Two weeks ago I gave three AI coding agents the same three jobs: add a settings screen to a Flutter app, fix a flaky test suite, and scaffold a small service with a database migration. Same laptop, same repos, nearly the same prompt. The results were different enough that I stopped asking "which agent is best" and started asking "which agent is best for what." This is what I found, with the warts left in.

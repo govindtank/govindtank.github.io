@@ -10,8 +10,7 @@ tags:
   - "WebAssembly"
 archetype: "tutorial"
 ---
-  WebAssembly has outgrown the browser. I walk through moving a CPU-heavy parser to an edge runtime, step by step, with the honest limits included.
----
+
 
 # WebAssembly in 2026: From Browser to Edge Computing and Beyond
 

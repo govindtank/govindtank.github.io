@@ -10,8 +10,7 @@ tags:
   - "Flutter"
 archetype: "opinion"
 ---
-  Dart 4 is a cleanup, not a revolution — and that's the best news Flutter developers could get this year.
----
+
 
 # Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026
 

@@ -10,8 +10,7 @@ tags:
   - "AI-ML"
 archetype: "comparison"
 ---
-  AI-generated pipeline code fails by being plausible: idiomatic, confident, and subtly wrong at the edges. Five testing strategies that catch it before users do.
----
+
 
 # Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines
 

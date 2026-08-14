@@ -10,8 +10,7 @@ tags:
   - "Web-Dev"
 archetype: "war-story"
 ---
-  I moved a 50,000-node network visualization from WebGL 2 to WebGPU over three months. It paid off, and it cost more than the docs suggest.
----
+
 
 # WebGPU: Next-Generation Graphics and Compute for the Browser
 

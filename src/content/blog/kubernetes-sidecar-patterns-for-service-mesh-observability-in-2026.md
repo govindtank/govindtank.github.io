@@ -10,8 +10,7 @@ tags:
   - "Cloud-Native"
 archetype: "tutorial"
 ---
-  Twelve years of running sidecars in Kubernetes, distilled into the configs I actually use and the cases where I refuse to run one at all.
----
+
 
 # Kubernetes Sidecar Patterns for Service Mesh Observability in 2026
 

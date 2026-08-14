@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Aug 2026 06:51:47 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 06:31:08 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Compose Multiplatform for iOS: Is Shared UI Production-Ready in 2026]]></title>
+      <link>https://govindtank.github.io/blog/compose-multiplatform-for-ios-is-shared-ui-production-ready-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/compose-multiplatform-for-ios-is-shared-ui-production-ready-in-2026</guid>
+      <pubDate>Thu, 13 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Compose Multiplatform for iOS reached a stable milestone, but the promise of shared UI across Android and iOS still has gaps. Here's what works, what breaks, and when to actually use it in 2026.
+]]></description>
+      <category>Kotlin</category>
+    </item>
     <item>
       <title><![CDATA[Agentic AI Development: From Chat Assistants to Autonomous Coding Agents]]></title>
       <link>https://govindtank.github.io/blog/agentic-ai-development-from-chat-assistants-to-autonomous-coding-agents</link>
@@ -18,6 +27,24 @@
       <description><![CDATA[We move beyond chat interfaces to build autonomous coding agents using the Model Context Protocol for secure tool invocation. This guide covers designing multi-agent orchestration loops, implementing rigorous evaluati...
 ]]></description>
       <category>AI-Engineering</category>
+    </item>
+    <item>
+      <title><![CDATA[Android 17 and the Modern Android Stack: What Changed in 2026]]></title>
+      <link>https://govindtank.github.io/blog/android-17-and-the-modern-android-stack-what-changed-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/android-17-and-the-modern-android-stack-what-changed-in-2026</guid>
+      <pubDate>Wed, 12 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Android 17 tightened privacy, updated the storage model, and pushed Jetpack Compose further into the default developer path. Here are the changes that actually affect shipped apps in 2026.
+]]></description>
+      <category>Android</category>
+    </item>
+    <item>
+      <title><![CDATA[Flutter Beyond Mobile: Desktop, Web, and Embedded Targets in 2026]]></title>
+      <link>https://govindtank.github.io/blog/flutter-beyond-mobile-desktop-web-and-embedded-targets-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-beyond-mobile-desktop-web-and-embedded-targets-in-2026</guid>
+      <pubDate>Wed, 12 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Flutter has outgrown phones. Here is how to actually ship desktop, web, and embedded builds from a single codebase without rewriting your app for each target.
+]]></description>
+      <category>Flutter</category>
     </item>
     <item>
       <title><![CDATA[Kotlin 2.x and the K2 Compiler: What It Unlocked for Android Developers]]></title>

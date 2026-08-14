@@ -1,21 +1,38 @@
 ---
 title: "Validating Mobile Numbers the Right Way: Introducing country_mobile_validator"
 slug: "validating-mobile-numbers-right-way-country-mobile-validator"
-date: "August 6, 2026"
+date: "August 06, 2026"
 excerpt: >
   Stop guessing phone number lengths. Stop sending OTPs to toll-free numbers.
   country_mobile_validator gives you real per-country mobile length ranges,
   OTP-safe verdicts, and country_code_picker integration — in one line of code.
-category: Flutter
+category: "Flutter"
 tags:
   - Flutter
   - Dart
   - MobileValidation
   - PhoneNumber
   - pubdev
-coverImage: ""
+coverImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200"
 readTime: 8
 ---
+
+Validating Mobile Numbers the Right Way: Introducing country_mobile_validator"
+slug: "validating-mobile-numbers-right-way-country-mobile-validator"
+date: "August 06, 2026"
+excerpt: >
+  Stop guessing phone number lengths. Stop sending OTPs to toll-free numbers.
+  country_mobile_validator gives you real per-country mobile length ranges,
+  OTP-safe verdicts, and country_code_picker integration — in one line of code.
+category: "Flutter"
+tags:
+  - Flutter
+  - Dart
+  - MobileValidation
+  - PhoneNumber
+  - pubdev
+coverImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200"
+readTime: 8
 
 If you've ever built a login or signup form with a phone field, you've probably hit this wall: **how do you validate a mobile number properly?**
 
@@ -26,7 +43,6 @@ Most packages just check "is this a valid phone number?" and return `true`/`fals
 
 That's why I built **`country_mobile_validator`** — a pure-Dart library that knows the real mobile length ranges for all 247 mobile-enabled regions, works out-of-the-box with `country_code_picker`, and gives you OTP-safe verdicts in ~8 µs.
 
----
 
 ## The Problem with "Just Valid" Numbers
 
@@ -49,7 +65,6 @@ r.type;                 // NumberType.tollFree
 r.isOtpDeliverable;     // false  ← don't send an OTP here!
 ```
 
----
 
 ## Zero-Setup Usage
 
@@ -67,7 +82,6 @@ void main() {
 }
 ```
 
----
 
 ## The `country_code_picker` Integration (The Real Workflow)
 
@@ -104,7 +118,6 @@ controller.addListener(() {
 });
 ```
 
----
 
 ## Range Awareness: Never Hardcode "10 Digits" Again
 
@@ -124,7 +137,6 @@ v.isMobileLength(8);   // true
 v.isMobileLength(7);   // false
 ```
 
----
 
 ## What Every Validation Result Gives You
 
@@ -149,7 +161,6 @@ r.isOtpDeliverable;    // false
 r.issue;               // ValidationIssue.specialType
 ```
 
----
 
 ## Refreshable Metadata (Real-Time Updates)
 
@@ -172,7 +183,6 @@ Manifest format:
 { "version": "2026.08", "sha256": "...", "url": "..." }
 ```
 
----
 
 ## Why This Library?
 
@@ -187,7 +197,6 @@ Manifest format:
 | Platform support | Varies | **Pure Dart (all)** |
 | Performance | — | **~8 µs/validation** |
 
----
 
 ## Example App
 
@@ -195,7 +204,6 @@ A complete Flutter demo wiring this library to `country_code_picker` with live r
 
 👉 [`example/`](https://github.com/govindtank/country_mobile_validator/tree/main/example) — `cd example && flutter run`
 
----
 
 ## Get Started
 
@@ -208,7 +216,6 @@ dependencies:
 - **GitHub:** [govindtank/country_mobile_validator](https://github.com/govindtank/country_mobile_validator)
 - **License:** Apache-2.0
 
----
 
 ## What's Next
 
@@ -217,7 +224,6 @@ dependencies:
 - Batch CSV validator for onboarding flows
 - `tel:` / WhatsApp deep-link builders
 
----
 
 Stop guessing lengths. Stop sending OTPs to toll-free numbers. Validate mobile numbers the right way.
 

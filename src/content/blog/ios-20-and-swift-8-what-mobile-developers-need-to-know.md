@@ -10,8 +10,7 @@ tags:
   - "Mobile"
 archetype: "explainer"
 ---
-  iOS 20 and Swift 8 are here. The headline features are fun; the migration work is boring and matters more. What I'm adopting now, and what I'm waiting on.
----
+
 
 # iOS 20 and Swift 8: What Mobile Developers Need to Know
 

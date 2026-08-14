@@ -10,8 +10,7 @@ tags:
   - "Web-Dev"
 archetype: "explainer"
 ---
-  Server components move your React code to the server and shrink what ships to the browser. Here's the boundary, the patterns that hold up, and where I'd skip them.
----
+
 
 # React Server Components: Production Patterns for High-Performance Web Apps
 

@@ -1,7 +1,7 @@
 ---
 title: "AI Agents in 2026: Building Autonomous Workflows for Complex Tasks"
 slug: "ai-agents-autonomous-workflows-complex-tasks-2026"
-date: "2026-05-26"
+date: "May 26, 2026"
 excerpt: >
 coverImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Agents"
@@ -13,8 +13,7 @@ tags:
   - "CrewAI"
 archetype: "tutorial"
 ---
-  Six months untangling an over-engineered agent platform taught me to build the loop first. Here's that loop, the guardrails, and the workflow that actually ships.
----
+
 
 # AI Agents in 2026: Building Autonomous Workflows for Complex Tasks
 

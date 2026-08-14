@@ -14,6 +14,7 @@ tags:
   - "Embedded"
 ---
 
+
 # Flutter Beyond Mobile: Desktop, Web, and Embedded Targets in 2026
 
 Last month I shipped the same Flutter app to Windows, Android, and a Raspberry Pi touchscreen. Same repository. Same business logic. No rewrites. That used to feel like a stunt. It does not anymore.

@@ -17,8 +17,7 @@ tags:
   - "NPU"
 archetype: "comparison"
 ---
-  I put LLMs on my laptop, my phone, and a neural-core chip — here's how quantization, distilled models, hybrid setups, and NPUs compare in real use.
----
+
 
 # Edge AI: Running Large Language Models on Consumer Devices in 2026
 

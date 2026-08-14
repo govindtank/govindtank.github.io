@@ -10,8 +10,7 @@ tags:
   - "Flutter"
 archetype: "tutorial"
 ---
-  Flutter 4 drops the Skia path on iOS and Android and renders every frame through Impeller. Here's how to verify your app uses it and build a custom shader effect that holds a steady 60fps.
----
+
 
 # Flutter 4 and Impeller: The Next Generation of Cross-Platform UI Performance
 

@@ -13,8 +13,7 @@ tags:
   - "Android"
 archetype: "comparison"
 ---
-  I moved a checkout flow into Kotlin Multiplatform and spent a month comparing expect/actual, shared modules, Compose, and FFI. Here is what held up in production.
----
+
 
 # Kotlin Multiplatform at Scale: Production Architecture Patterns for Shared Business Logic
 

@@ -10,8 +10,7 @@ tags:
   - "Agentic-AI"
 archetype: "comparison"
 ---
-  LangGraph, CrewAI, or plain code? An honest, hands-on comparison of multi-agent orchestration in 2026, with a trade-off table and a clear recommendation.
----
+
 
 # Agentic AI Systems: Designing Reliable Multi-Agent Workflows in 2026
 

@@ -10,8 +10,7 @@ tags:
   - "Security"
 archetype: "roundup"
 ---
-  I hardened a toy distributed system with zero-trust layers — identity, device, network, workload, data — and here's what each layer actually buys you.
----
+
 
 # Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems
 

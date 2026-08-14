@@ -17,6 +17,7 @@ tags:
 archetype: "explainer"
 ---
 
+
 # DeepSeek V4 Flash: What the New Open Model Means for Developers
 
 On July 31, 2026, DeepSeek released V4 Flash (checkpoint 0731), and within a week it was sitting on the ARC Prize verified leaderboard with numbers that would have been unthinkable for an open-weights model a year ago: **89.0% on ARC-AGI-1 Semi-Private and 61.4% on ARC-AGI-2 Semi-Private, at $0.02 and $0.04 per task respectively, at max reasoning effort.** My first reaction was the standard one — another model release, another headline. My second reaction, after actually reading the verification page, was that this one is different in a way that matters for how you pick models. Let me walk through what's actually being claimed, how the verification works, and what it does and doesn't tell you about your own code.

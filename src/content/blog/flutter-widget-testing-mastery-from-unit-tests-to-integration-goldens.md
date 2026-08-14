@@ -10,8 +10,7 @@ tags:
   - "Flutter"
 archetype: "tutorial"
 ---
-  Unit tests for logic, widget tests for behavior, golden tests for pixels, integration tests for the money flows — the Flutter testing ladder that actually holds up.
----
+
 
 # Flutter Widget Testing Mastery: From Unit Tests to Integration Goldens
 

@@ -10,8 +10,7 @@ tags:
   - "Flutter"
 archetype: "war-story"
 ---
-  My Flutter app stuttered on one mid-range Android phone for two months. Turning on Impeller did not fix it. It just showed me what was actually slow.
----
+
 
 # Flutter Impeller Rendering Engine: GPU Acceleration Strategies for Production Apps in 2026
 
