@@ -32,7 +32,7 @@ try:
     req = urllib.request.Request(
         "http://127.0.0.1:1234/v1/chat/completions",
         data=json.dumps({"model":"qwen/qwen3.5-9b","messages":[{"role":"user","content":"ping"}],"max_tokens":5}).encode(),
-        headers={"Content-Type": "application/json"},
+        headers={"Content-Type":"application/json"},
         method="POST",
     )
     with urllib.request.urlopen(req, timeout=8) as resp:
@@ -45,9 +45,11 @@ except Exception as e:
     print(f"LLM_HEALTHY=0")
 PY
 
+QWEN_WROTE=0
 if grep -q "LLM_HEALTHY=1" "$LOG"; then
   echo "[$(date '+%F %T')] LLM healthy, attempting generation" >> "$LOG"
-  python3 - <<'PY' >> "$LOG" 2>&1
+  QWEN_LOG="$(mktemp)"
+  python3 - <<'PY' > "$QWEN_LOG" 2>&1
 import subprocess, sys, datetime
 
 log_path = "/tmp/blog-fast-cron.log"
@@ -70,12 +72,17 @@ except subprocess.TimeoutExpired:
 except Exception as e:
     print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] qwen run error: {e}")
 PY
+  cat "$QWEN_LOG" >> "$LOG"
+  if grep -q "WROTE /Users/govind/govindtank.github.io/src/content/blog/" "$QWEN_LOG"; then
+    QWEN_WROTE=1
+  fi
+  rm -f "$QWEN_LOG"
 else
   echo "[$(date '+%F %T')] LLM not healthy, skipping qwen path" >> "$LOG"
 fi
 
 # 3) If LLM path did not produce a new blog, use fast manual fallback
-if ! grep -q "WROTE /Users/govind/govindtank.github.io/src/content/blog/" "$LOG"; then
+if [ "$QWEN_WROTE" -ne 1 ]; then
   echo "[$(date '+%F %T')] falling back to manual post generation" >> "$LOG"
   python3 - <<'PY' >> "$LOG" 2>&1
 import json, os, re, datetime, random
