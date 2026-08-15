@@ -9,7 +9,7 @@ Usage: python3 assemble_staging.py [slug ...]   (default: all staged files)
 """
 import os, re, sys, json, shutil
 
-ROOT = "/Users/govind/hermes_projects/govindtank.github.io"
+ROOT = "/Users/govind/govindtank.github.io"
 STAGING = f"{ROOT}/scripts/blog-automation/staging"
 CONTENT = f"{ROOT}/src/content/blog"
 SPEC = json.load(open(f"{ROOT}/scripts/blog-automation/rewrite_spec.json"))

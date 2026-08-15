@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-REPO="/Users/govind/hermes_projects/govindtank.github.io"
+REPO="/Users/govind/govindtank.github.io"
 LOG="/tmp/blog-fast-cron.log"
 LOCK="/tmp/blog-fast-cron.lock"
 mkdir -p "$(dirname "$LOG")"
@@ -56,7 +56,7 @@ try:
     result = subprocess.run(
         ["python3", "scripts/blog-automation/blog_automation_qwen.py",
          "--run-id", "cron-morning-" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")],
-        cwd="/Users/govind/hermes_projects/govindtank.github.io",
+        cwd="/Users/govind/govindtank.github.io",
         capture_output=True,
         text=True,
         timeout=90,
@@ -75,11 +75,11 @@ else
 fi
 
 # 3) If LLM path did not produce a new blog, use fast manual fallback
-if ! grep -q "WROTE /Users/govind/hermes_projects/govindtank.github.io/src/content/blog/" "$LOG"; then
+if ! grep -q "WROTE /Users/govind/govindtank.github.io/src/content/blog/" "$LOG"; then
   echo "[$(date '+%F %T')] falling back to manual post generation" >> "$LOG"
   python3 - <<'PY' >> "$LOG" 2>&1
 import json, os, re, datetime, random
-ROOT = "/Users/govind/hermes_projects/govindtank.github.io"
+ROOT = "/Users/govind/govindtank.github.io"
 CONTENT = os.path.join(ROOT, "src/content/blog")
 POOL = os.path.join(ROOT, "scripts/blog-automation/verified_images.json")
 existing = {f[:-3] for f in os.listdir(CONTENT) if f.endswith(".md")}

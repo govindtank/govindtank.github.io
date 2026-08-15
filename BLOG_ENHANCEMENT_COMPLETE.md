@@ -141,7 +141,7 @@ def get_image_for_topic(topic_slug):
 
 ### **Quick Start:**
 ```bash
-cd /Users/govind/hermes_projects/govindtank.github.io
+cd /Users/govind/govindtank.github.io
 python3 scripts/blog-automation/automation_enhanced_v2.py --run-id "my-run-name"
 ```
 
@@ -193,7 +193,7 @@ with open('scripts/blog-automation/blog-output.json') as f:
 
 ### **2. Build Static Site**
 ```bash
-cd /Users/govind/hermes_projects/govindtank.github.io
+cd /Users/govind/govindtank.github.io
 npm run build
 ```
 
@@ -309,4 +309,4 @@ cat data/blogs-history/blog_history.json | jq '.blogs'
 
 *Generated: $(date)*  
 *Session ID: ad86a923acad*  
-*Workspace: /Users/govind/hermes_projects/govindtank.github.io*
+*Workspace: /Users/govind/govindtank.github.io*

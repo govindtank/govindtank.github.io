@@ -89,7 +89,7 @@ The cron will continue generating:
 
 1. **Build and deploy updated BlogDetail page:**
    ```bash
-   cd /Users/govind/hermes_projects/govindtank.github.io
+   cd /Users/govind/govindtank.github.io
    npm run build
    # Deploy to GitHub Pages
    git add . && git commit -m "fix: TOC sidebar padding for left edge spacing" && git push
@@ -97,7 +97,7 @@ The cron will continue generating:
 
 2. **Test the new blog generation:**
    ```bash
-   cd /Users/govind/hermes_projects/govindtank.github.io
+   cd /Users/govind/govindtank.github.io
    python3 scripts/blog-automation/run-blog-automation.sh
    # Or manually:
    python3 scripts/blog-automation/automation_enhanced_v2.py --run-id "test-enhancement"
@@ -113,7 +113,7 @@ The cron will continue generating:
 4. **Review existing unpublished blogs:**
    Check `/src/content/blog/*.md` files in:
    ```bash
-   /Users/govind/hermes_projects/govindtank.github.io/src/content/blog/
+   /Users/govind/govindtank.github.io/src/content/blog/
    ```
    
    Decision options per blog:

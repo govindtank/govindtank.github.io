@@ -4,8 +4,8 @@ Archetypes are round-robin across posts sorted by date (no two consecutive posts
 """
 import os, re, json
 
-CONTENT_DIR = "/Users/govind/hermes_projects/govindtank.github.io/src/content/blog"
-OUT = "/Users/govind/hermes_projects/govindtank.github.io/scripts/blog-automation/rewrite_spec.json"
+CONTENT_DIR = "/Users/govind/govindtank.github.io/src/content/blog"
+OUT = "/Users/govind/govindtank.github.io/scripts/blog-automation/rewrite_spec.json"
 ARCHETYPES = ["tutorial", "comparison", "explainer", "war-story", "roundup", "opinion"]
 PERSONAS = [
     "senior engineer, 12+ years, burned by over-engineering, plain-spoken, first person",
