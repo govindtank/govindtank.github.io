@@ -9,7 +9,7 @@ interface BlogAndTestimonialsProps {
   onPostSelect: (post: BlogPost) => void;
 }
 
-const MAX_HOME_BLOGS = 3;
+const MAX_HOME_BLOGS = 5;
 
 const TAG_COLORS: Record<string, string> = {
   'Web-Dev': 'from-blue-500/20 to-blue-600/10 text-blue-400 border-blue-500/30',
