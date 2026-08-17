@@ -162,22 +162,22 @@ export const PROJECTS: Project[] = [
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    name: "Mr. Maulik Patel",
+    name: "Maulik Patel",
     role: "Senior Application Developer @ Phycom",
     content: "I worked closely with Govind at Phycom on multiple Android initiatives, and his ability to turn unstable legacy codebases into clean, production-ready applications stood out immediately. He reduced startup time and memory footprint significantly while keeping delivery timelines intact."
   },
   {
-    name: "Mr. Hardik Parmar",
+    name: "Hardik Parmar",
     role: "Technical Mobile Lead @ Rysun",
-    content: "Govind operated as a strong technical mobile lead while we collaborated at Rysun. Whether it was Flutter Bloc architecture, Android Auto integration, or high-concurrency backend APIs, he consistently raised the quality bar across the entire mobile squad."
+    content: "Govind operated as a strong project owner while we collaborated at Rysun. Whether it was Flutter Bloc architecture, Android Auto integration, or high-concurrency backend APIs, he consistently raised the quality bar across the entire mobile squad."
   },
   {
-    name: "Mr. Alpesh Rana",
+    name: "Alpesh Rana",
     role: "Freelance Project - Task Management System",
     content: "We hired Govind on a freelance engagement to build a task management system from scratch. He understood our workflow requirements quickly, delivered a clean modular solution, and stayed responsive through iterations even after launch."
   },
   {
-    name: "Mr. Aniket Patel",
+    name: "Aniket Patel",
     role: "Freelance Project - Society Management Software",
     content: "For our society management software, Govind provided end-to-end implementation with clear domain modeling and stable mobile workflows. His pragmatic approach to features and bug resolution made the overall engagement straightforward and reliable."
   },
