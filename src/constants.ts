@@ -57,7 +57,6 @@ export interface Testimonial {
   name: string;
   role: string;
   content: string;
-  image?: string;
 }
 
 export const EXPERIENCES: Experience[] = [
@@ -139,13 +138,13 @@ export const PROJECTS: Project[] = [
     title: "BAPS Prakash",
     description: "Secure media streaming application with AWS CloudFront integration and robust background audio features. Engineering highlights include signed cookie validation and Android Auto sync.",
     tags: ["Kotlin", "AWS", "ExoPlayer", "Architecture"],
-    image: "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?auto=format&fit=crop&q=80&w=800"
+    image: "/images/projects/baps-prakash.jpg"
   },
   {
     title: "Akshar Amrutam",
     description: "High-performance Flutter application with 100k+ downloads and near-perfect stability metrics. Features complex state management, Android Auto integration, and a highly polished UI for a global user base.",
     tags: ["Flutter", "Bloc", "Clean Architecture", "Android Auto"],
-    image: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&q=80&w=800"
+    image: "/images/projects/akshar-amrutam.jpg"
   },
   {
     title: "Autozon IoT",
@@ -175,13 +174,11 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     name: "Mr. Alpesh Rana",
     role: "Freelance Project - Task Management System",
-    content: "We hired Govind on a freelance engagement to build a task management system from scratch. He understood our workflow requirements quickly, delivered a clean modular solution, and stayed responsive through iterations even after launch.",
-    image: "/images/testimonials/task-management.jpg"
+    content: "We hired Govind on a freelance engagement to build a task management system from scratch. He understood our workflow requirements quickly, delivered a clean modular solution, and stayed responsive through iterations even after launch."
   },
   {
     name: "Mr. Aniket Patel",
     role: "Freelance Project - Society Management Software",
-    content: "For our society management software, Govind provided end-to-end implementation with clear domain modeling and stable mobile workflows. His pragmatic approach to features and bug resolution made the overall engagement straightforward and reliable.",
-    image: "/images/testimonials/society-management.jpg"
+    content: "For our society management software, Govind provided end-to-end implementation with clear domain modeling and stable mobile workflows. His pragmatic approach to features and bug resolution made the overall engagement straightforward and reliable."
   },
 ];

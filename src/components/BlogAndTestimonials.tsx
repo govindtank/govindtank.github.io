@@ -230,16 +230,6 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                   className="relative p-8 glass-card border border-white/10 bg-slate-900/40 rounded-2xl shadow-lg"
                 >
                   <Quote className="absolute top-4 right-4 w-10 h-10 text-white/5" />
-                  {t.image && (
-                    <div className="relative z-10 mb-5 w-full h-44 overflow-hidden rounded-xl border border-white/10">
-                      <img
-                        src={t.image}
-                        alt={t.role}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
                   <p className="relative z-10 text-slate-300 italic mb-8 leading-relaxed font-sans text-sm sm:text-base">
                     "{t.content}"
                   </p>
