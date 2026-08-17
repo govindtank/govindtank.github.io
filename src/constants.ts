@@ -57,6 +57,7 @@ export interface Testimonial {
   name: string;
   role: string;
   content: string;
+  image?: string;
 }
 
 export const EXPERIENCES: Experience[] = [
@@ -174,11 +175,13 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     name: "Mr. Alpesh Rana",
     role: "Freelance Project - Task Management System",
-    content: "We hired Govind on a freelance engagement to build a task management system from scratch. He understood our workflow requirements quickly, delivered a clean modular solution, and stayed responsive through iterations even after launch."
+    content: "We hired Govind on a freelance engagement to build a task management system from scratch. He understood our workflow requirements quickly, delivered a clean modular solution, and stayed responsive through iterations even after launch.",
+    image: "/images/testimonials/task-management.jpg"
   },
   {
     name: "Mr. Aniket Patel",
     role: "Freelance Project - Society Management Software",
-    content: "For our society management software, Govind provided end-to-end implementation with clear domain modeling and stable mobile workflows. His pragmatic approach to features and bug resolution made the overall engagement straightforward and reliable."
+    content: "For our society management software, Govind provided end-to-end implementation with clear domain modeling and stable mobile workflows. His pragmatic approach to features and bug resolution made the overall engagement straightforward and reliable.",
+    image: "/images/testimonials/society-management.jpg"
   },
 ];
