@@ -162,18 +162,23 @@ export const PROJECTS: Project[] = [
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    name: "Sarah Mitchell",
-    role: "CTO, Rysun Labs",
-    content: "Govind is one of the most reliable senior developers I've worked with. His clean architecture patterns and attention to performance optimization elevated our entire team's standards."
+    name: "Mr. Maulik Patel",
+    role: "Senior Application Developer @ Phycom",
+    content: "I worked closely with Govind at Phycom on multiple Android initiatives, and his ability to turn unstable legacy codebases into clean, production-ready applications stood out immediately. He reduced startup time and memory footprint significantly while keeping delivery timelines intact."
   },
   {
-    name: "Priya Sharma",
-    role: "Product Manager",
-    content: "Working with Govind was a pleasure. He doesn't just write code—he thinks about the end user, scalability, and maintainability at every step. The BAPS Prakash app he architected handles 50k+ users seamlessly."
+    name: "Mr. Hardik Parmar",
+    role: "Technical Mobile Lead @ Rysun",
+    content: "Govind operated as a strong technical mobile lead while we collaborated at Rysun. Whether it was Flutter Bloc architecture, Android Auto integration, or high-concurrency backend APIs, he consistently raised the quality bar across the entire mobile squad."
   },
   {
-    name: "Rajesh Patel",
-    role: "Senior Flutter Developer",
-    content: "His expertise in Flutter Bloc and state management is exceptional. He mentored our junior team and introduced patterns that dramatically improved our code quality and reduced bugs."
+    name: "Mr. Alpesh Rana",
+    role: "Freelance Project - Task Management System",
+    content: "We hired Govind on a freelance engagement to build a task management system from scratch. He understood our workflow requirements quickly, delivered a clean modular solution, and stayed responsive through iterations even after launch."
+  },
+  {
+    name: "Mr. Aniket Patel",
+    role: "Freelance Project - Society Management Software",
+    content: "For our society management software, Govind provided end-to-end implementation with clear domain modeling and stable mobile workflows. His pragmatic approach to features and bug resolution made the overall engagement straightforward and reliable."
   },
 ];
