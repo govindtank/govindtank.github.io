@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { PROJECTS } from '../constants';
-import { ExternalLink, Github, Terminal, Sparkles, ArrowRight } from 'lucide-react';
+import { ExternalLink, Github, Terminal, Sparkles, ArrowRight, Play } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 export default function Portfolio() {
@@ -41,6 +41,18 @@ export default function Portfolio() {
                   <Terminal className="w-6 h-6 text-slate-300 group-hover:text-sky-400" />
                 </div>
                 <div className="flex gap-2">
+                  {project.playStoreLink && (
+                    <motion.a
+                      whileHover={{ scale: 1.1 }}
+                      href={project.playStoreLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Open ${project.title} on Google Play`}
+                      className="h-10 w-10 flex items-center justify-center rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold transition-all shadow-lg shadow-emerald-500/20"
+                    >
+                      <Play className="w-4 h-4 fill-current" />
+                    </motion.a>
+                  )}
                   <motion.a
                     whileHover={{ scale: 1.1 }}
                     href={project.link || "https://github.com/govindtank"}
@@ -53,7 +65,7 @@ export default function Portfolio() {
                   </motion.a>
                   <motion.a
                     whileHover={{ scale: 1.1 }}
-                    href={project.link || "https://github.com/govindtank"}
+                    href={project.playStoreLink || project.link || "https://github.com/govindtank"}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Open ${project.title} project`}

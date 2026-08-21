@@ -51,6 +51,7 @@ export interface Project {
   tags: string[];
   image: string;
   link?: string;
+  playStoreLink?: string;
 }
 
 export interface Testimonial {
@@ -138,25 +139,32 @@ export const PROJECTS: Project[] = [
     title: "BAPS Prakash",
     description: "Secure media streaming application with AWS CloudFront integration and robust background audio features. Engineering highlights include signed cookie validation and Android Auto sync.",
     tags: ["Kotlin", "AWS", "ExoPlayer", "Architecture"],
-    image: "/images/projects/baps-prakash.jpg"
+    image: "/images/projects/baps-prakash.jpg",
+    link: "https://github.com/govindtank",
+    playStoreLink: "https://play.google.com/store/apps/details?id=org.baps.swaminarayanprakash&hl=en_IN"
   },
   {
     title: "Akshar Amrutam",
     description: "High-performance Flutter application with 100k+ downloads and near-perfect stability metrics. Features complex state management, Android Auto integration, and a highly polished UI for a global user base.",
     tags: ["Flutter", "Bloc", "Clean Architecture", "Android Auto"],
-    image: "/images/projects/akshar-amrutam.jpg"
+    image: "/images/projects/akshar-amrutam.jpg",
+    link: "https://github.com/govindtank",
+    playStoreLink: "https://play.google.com/store/apps/details?id=org.baps.akshar_amrutam&hl=en_IN"
   },
   {
     title: "Autozon IoT",
     description: "Real-time IoT monitoring application using MQTT for vehicle hardware communication. Optimizes battery consumption while maintaining persistent hardware-to-cloud connections.",
     tags: ["Flutter", "MQTT", "IoT", "Hardware"],
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
+    image: "/images/projects/autozon-iot.jpg",
+    link: "https://github.com/govindtank",
+    playStoreLink: "https://play.google.com/store/apps/details?id=com.voiceofthings.smartindia&hl=en_IN"
   },
   {
     title: "Fastrrr-Floating Apps",
     description: "Utility application featuring advanced window management and background efficiency. Implements complex overlay window permissions and strict battery efficiency protocols.",
     tags: ["Android", "Java", "Services"],
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800"
+    image: "/images/projects/fastrrr-floating.jpg",
+    link: "https://github.com/govindtank"
   },
 ];
 
