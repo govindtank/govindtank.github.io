@@ -4,7 +4,7 @@ slug: "mcp-stateless-mode-building-ai-agent-servers-without-session-state"
 date: "August 07, 2026"
 excerpt: >
   The MCP spec's stateless mode drops the initialization handshake so agent tool servers run behind plain load balancers. Here's how to build one with the Python SDK.
-coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/mcp-stateless-mode-building-ai-agent-servers-without-session-state.png"
 category: "AI-Engineering"
 readTime: 7
 tags:

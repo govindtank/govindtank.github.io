@@ -9,16 +9,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ai-nativeapparchitecturede-igningapplication-aroundllmcall</loc>
-    <lastmod>2026-08-24T18:30:00.000Z</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://govindtank.github.io/blog/weba-emblyin2026frombrow-ertoedgecomputingandbeyond</loc>
-    <lastmod>2026-08-24T18:30:00.000Z</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://govindtank.github.io/blog/prompt-engineering-for-production-getting-reliable-output-from-llm-apis</loc>
     <lastmod>2026-08-23T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
@@ -46,11 +36,6 @@
   <url>
     <loc>https://govindtank.github.io/blog/javascript-runtime-wars-2026-nodejs-bun-deno-compared</loc>
     <lastmod>2026-08-19T18:30:00.000Z</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://govindtank.github.io/blog/kotlin-2-x-and-the-k2-compiler-what-it-unlocked-for-android-developers</loc>
-    <lastmod>2026-08-18T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>

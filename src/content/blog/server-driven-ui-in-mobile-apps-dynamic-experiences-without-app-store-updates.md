@@ -5,7 +5,7 @@ date: "August 21, 2026"
 excerpt: >
   How we shipped a new checkout flow in 20 minutes without touching the App Store,
   and the trade-offs we learned after running server-driven UI in production for two years.
-coverImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/server-driven-ui-in-mobile-apps-dynamic-experiences-without-app-store-updates.png"
 category: "Mobile"
 readTime: 8
 tags:

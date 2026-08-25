@@ -78,7 +78,25 @@ TOPICS = [
     {"title": "Android 16 Security APIs", "slug": "android-16-security-apis-senior-developers-migration-guide"},
     {"title": "AI Agents Architecture", "slug": "multi-agent-ai-systems-architecture-communication-orchestration"},
     {"title": "Clean Architecture ML Pipelines", "slug": "clean-architecture-patterns-modern-ml-pipelines-production"},
-    {"title": "Flutter Performance Optimization", "slug": "flutter-performance-optimization-60-fps-mid-range-devices"}
+    {"title": "Flutter Performance Optimization", "slug": "flutter-performance-optimization-60-fps-mid-range-devices"},
+    # Expanded topics — these must NOT be similar to existing dist/ src/content/blog/ slugs
+    {"title": "Rust for Systems Programming in 2026", "slug": "rust-for-systems-programming-memory-safety-concurrency-ecosystem-2026"},
+    {"title": "WebAssembly Beyond the Browser", "slug": "webassembly-2026-edge-computing-server-side-wasm"},
+    {"title": "OpenTelemetry Distributed Tracing in Production", "slug": "opentelemetry-distributed-tracing-production-debugging-2026"},
+    {"title": "Edge AI and On-Device Machine Learning", "slug": "edge-ai-on-device-ml-phone-silicon-npu-2026"},
+    {"title": "PostgreSQL 18 and HTAP Workloads", "slug": "postgresql-18-htap-hybrid-transactional-analytical-processing-2026"},
+    {"title": "TypeScript 5 Advanced Patterns", "slug": "typescript-5x-advanced-patterns-conditional-types-mapped-types-2026"},
+    {"title": "AI-Native App Architecture", "slug": "ai-native-app-architecture-designing-applications-around-llm-calls-2026"},
+    {"title": "FastAPI and Event-Driven Microservices", "slug": "fastapi-event-driven-microservices-patterns-2026"},
+    {"title": "CSS Container Queries and Style Queries", "slug": "css-container-queries-style-queries-responsive-design-2026"},
+    {"title": "Flutter 4 and Impeller Rendering Engine", "slug": "flutter-4-impeller-cross-platform-ui-performance-2026"},
+    {"title": "Kotlin Multiplatform at Scale", "slug": "kotlin-multiplatform-production-shared-business-logic-2026"},
+    {"title": "Prompt Engineering for Production LLM APIs", "slug": "prompt-engineering-production-llm-apis-reliability-2026"},
+    {"title": "Building Developer Tools with CLI Design", "slug": "developer-tools-cli-design-ai-assisted-extensions-2026"},
+    {"title": "AI Observability and LLM Debugging", "slug": "ai-observability-monitoring-tracing-debugging-llm-2026"},
+    {"title": "MCP Model Context Protocol in Practice", "slug": "mcp-model-context-protocol-developer-tools-practice-2026"},
+    {"title": "Android 17 Modern Android Stack", "slug": "android-17-modern-android-stack-changes-2026"},
+    {"title": "Antigravity vs Claude Code vs Codex", "slug": "antigravity-vs-claude-code-vs-codex-ai-coding-agent-2026"},
 ]
 
 def log_info(msg): print(f"[INFO] {datetime.now().strftime('%H:%M:%S')} - {msg}")
@@ -311,7 +329,9 @@ def get_image_from_pool(category):
 
 def save_output(content, duration, title, slug, topic):
     history = load_history()
-    history['blogs'][title] = {
+    # Key by slug (not title) so duplicate detection is consistent
+    history['blogs'][slug] = {
+        "title": title,
         "slug": slug,
         "timestamp": datetime.now().isoformat(),
         "version": "2.0",
@@ -333,6 +353,58 @@ def save_output(content, duration, title, slug, topic):
         json.dump(data, f, indent=2)
     log_info(f"Content saved to {OUTPUT_FILE}")
 
+def get_already_used_slugs():
+    """Collect all slugs already in history + existing source files to avoid duplicates."""
+    used = set()
+    history = load_history()
+    # From history (keyed by title, but slug stored inside)
+    for entry in history.get("blogs", {}).values():
+        if "slug" in entry:
+            used.add(entry["slug"])
+    # From existing src content files
+    src_dir = os.path.join(PROJECT_ROOT, "src/content/blog")
+    dist_dir = os.path.join(PROJECT_ROOT, "dist/blog")
+    for d in [src_dir, dist_dir]:
+        if os.path.isdir(d):
+            for fn in os.listdir(d):
+                slug = fn.replace(".md", "").replace("/index.html", "")
+                if slug:
+                    used.add(slug)
+    return used
+
+def slug_keywords(slug):
+    """Extract core topic keywords from a slug for semantic dedup."""
+    import re
+    # Remove common boilerplate words
+    stop = {"in","for","the","and","of","to","a","with","from","2026"," Guide","-deep-dive"}
+    words = re.findall(r'[a-z0-9]+', slug.lower())
+    return {w for w in words if w not in stop and len(w) > 3}
+
+def is_semantic_duplicate(slug_a, slug_b, threshold=0.5):
+    """Return True if two slugs share too many keywords (likely duplicates)."""
+    kw_a = slug_keywords(slug_a)
+    kw_b = slug_keywords(slug_b)
+    if not kw_a or not kw_b:
+        return False
+    overlap = len(kw_a & kw_b)
+    union = len(kw_a | kw_b)
+    return overlap / union >= threshold if union else False
+
+def get_next_topic(used_slugs):
+    """Pick a random topic not yet used, checking slug dedup + semantic similarity."""
+    available = [t for t in TOPICS if t["slug"] not in used_slugs]
+    if not available:
+        log_warn("All topics exhausted!")
+        return None
+    # Filter out topics too similar to already-used slugs
+    filtered = [
+        t for t in available
+        if not any(is_semantic_duplicate(t["slug"], used) for used in used_slugs)
+    ]
+    # Fall back to all available if nothing passes semantic filter
+    candidates = filtered if filtered else available
+    return random.choice(candidates)
+
 def main():
     print("=" * 75)
     print("Blog Automation System - ENHANCED v2.0")
@@ -340,15 +412,21 @@ def main():
     
     history = load_history()
     current_count = len(history.get('blogs', {}))
-    max_count = 30  # Increased from 12 to allow more comprehensive blogs
+    max_count = 30
 
-# Generate next blog topic
-    
+    # Collect already-used slugs to prevent duplicates
+    used_slugs = get_already_used_slugs()
+    log_info(f"Already used slugs ({len(used_slugs)}): {sorted(used_slugs)[:5]}...")
+
     if current_count >= max_count:
         log_warn("Maximum blogs already created!")
         return
     
-    topic_info = random.choice(TOPICS)
+    topic_info = get_next_topic(used_slugs)
+    if not topic_info:
+        log_warn("No available topics remaining. Deduplication working correctly.")
+        return
+        
     print(f"=== Generating Blog ===")
     print(f"Title: {topic_info['title']}")
     print(f"Slug: {topic_info['slug']}\n")

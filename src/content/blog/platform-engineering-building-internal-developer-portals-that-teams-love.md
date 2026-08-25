@@ -3,7 +3,7 @@ title: "Platform Engineering: Building Internal Developer Portals That Teams Lov
 slug: "platform-engineering-building-internal-developer-portals-that-teams-love"
 date: "July 15, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/platform-engineering-building-internal-developer-portals-that-teams-love.png"
 category: "DevEx"
 readTime: 7
 tags:

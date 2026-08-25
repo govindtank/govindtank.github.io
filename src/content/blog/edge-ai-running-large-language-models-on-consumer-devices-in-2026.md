@@ -3,7 +3,7 @@ title: "Edge AI: Running Large Language Models on Consumer Devices in 2026"
 slug: "edge-ai-running-large-language-models-on-consumer-devices-in-2026"
 date: "June 10, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/edge-ai-running-large-language-models-on-consumer-devices-in-2026.png"
 category: "Edge-AI"
 readTime: 18
 tags:

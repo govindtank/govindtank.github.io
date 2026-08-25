@@ -4,7 +4,7 @@ slug: "on-device-ai-with-npus-running-models-on-phone-silicon-in-2026"
 date: "August 16, 2026"
 excerpt: >
   NPUs in modern phones can now run quantized LLMs with acceptable latency. Here's what it takes in 2026: model formats, NPU APIs, battery trade-offs, and when on-device actually beats the cloud.
-coverImage: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/on-device-ai-with-npus-running-models-on-phone-silicon-in-2026.png"
 category: "Mobile-AI"
 readTime: 8
 tags:

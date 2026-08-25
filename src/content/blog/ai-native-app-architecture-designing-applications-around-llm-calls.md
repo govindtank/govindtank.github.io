@@ -4,7 +4,7 @@ slug: "ai-native-app-architecture-designing-applications-around-llm-calls"
 date: "August 15, 2026"
 excerpt: >
   Most teams bolt LLMs onto existing apps like a afterthought. But building AI-native means treating the model call as a first-class citizen — with streaming UI, fallback chains, and cost-aware routing from day one. Here's what I learned shipping three production apps this way.
-coverImage: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/ai-native-app-architecture-designing-applications-around-llm-calls.png"
 category: "AI-Engineering"
 readTime: 9
 tags:

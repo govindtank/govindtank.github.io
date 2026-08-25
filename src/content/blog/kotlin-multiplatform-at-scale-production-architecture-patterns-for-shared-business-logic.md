@@ -3,7 +3,7 @@ title: "Kotlin Multiplatform at Scale: Production Architecture Patterns for Shar
 slug: "kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared-business-logic"
 date: "July 16, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared-business-logic.png"
 category: "Kotlin-Multiplatform"
 readTime: 12
 tags:

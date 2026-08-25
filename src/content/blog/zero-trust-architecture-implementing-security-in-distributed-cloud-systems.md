@@ -3,7 +3,7 @@ title: "Zero-Trust Architecture: Implementing Security in Distributed Cloud Syst
 slug: "zero-trust-architecture-implementing-security-in-distributed-cloud-systems"
 date: "July 19, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/zero-trust-architecture-implementing-security-in-distributed-cloud-systems.png"
 category: "Security"
 readTime: 5
 tags:

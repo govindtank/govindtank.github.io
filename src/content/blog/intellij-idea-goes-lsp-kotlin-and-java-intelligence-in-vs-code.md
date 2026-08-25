@@ -6,7 +6,7 @@ excerpt: >
   JetBrains shipped its Java and Kotlin intelligence as an LSP extension for
   VS Code. Here's how the preview compares to IntelliJ IDEA, what the license
   really means, and when the switch makes sense.
-coverImage: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/intellij-idea-goes-lsp-kotlin-and-java-intelligence-in-vs-code.png"
 category: "DevTools"
 readTime: 7
 tags:

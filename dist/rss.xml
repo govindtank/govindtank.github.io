@@ -8,26 +8,8 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Aug 2026 13:05:33 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 15:12:30 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-    <item>
-      <title><![CDATA[AI-Native App Architecture: Designing Applications Around LLM Calls]]></title>
-      <link>https://govindtank.github.io/blog/ai-nativeapparchitecturede-igningapplication-aroundllmcall</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-nativeapparchitecturede-igningapplication-aroundllmcall</guid>
-      <pubDate>Mon, 24 Aug 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[Concrete patterns for AI-native app architecture: structuring LLM API layers, building streaming UIs, implementing prompt caching, setting fallback strategies, and designing workflows to cut unnecessary LLM call costs.
-]]></description>
-      <category>AI-Engineering</category>
-    </item>
-    <item>
-      <title><![CDATA[WebAssembly in 2026: From Browser to Edge Computing and Beyond]]></title>
-      <link>https://govindtank.github.io/blog/weba-emblyin2026frombrow-ertoedgecomputingandbeyond</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/weba-emblyin2026frombrow-ertoedgecomputingandbeyond</guid>
-      <pubDate>Mon, 24 Aug 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[WebAssembly is evolving from browser experiments to production edge runtimes, with WASI enabling system access and lightweight plugin architectures replacing traditional containers. This post examines real adoption pa...
-]]></description>
-      <category>WebAssembly</category>
-    </item>
     <item>
       <title><![CDATA[Prompt Engineering for Production: Getting Reliable Output from LLM APIs]]></title>
       <link>https://govindtank.github.io/blog/prompt-engineering-for-production-getting-reliable-output-from-llm-apis</link>
@@ -81,15 +63,6 @@
       <description><![CDATA[Node.js is no longer the only serious JavaScript runtime. Bun hit 1.0, Deno shipped 2.x with Node compat, and each made very different bets about what developers actually need. Here's how they compare for real projects in 2026.
 ]]></description>
       <category>JavaScript</category>
-    </item>
-    <item>
-      <title><![CDATA[Kotlin 2.x and the K2 Compiler: What It Unlocked for Android Developers]]></title>
-      <link>https://govindtank.github.io/blog/kotlin-2-x-and-the-k2-compiler-what-it-unlocked-for-android-developers</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/kotlin-2-x-and-the-k2-compiler-what-it-unlocked-for-android-developers</guid>
-      <pubDate>Tue, 18 Aug 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The K2 compiler is now the default in Kotlin 2.x, bringing faster builds, better type inference, and multiplatform improvements that directly affect Android teams. Here's what changed under the hood and why it matters for production apps.
-]]></description>
-      <category>Kotlin</category>
     </item>
     <item>
       <title><![CDATA[RAG in Production: Practical Retrieval Patterns Beyond the Demo]]></title>

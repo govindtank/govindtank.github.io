@@ -3,7 +3,7 @@ title: "TypeScript 5.x Advanced Patterns: Conditional Types, Template Literals, 
 slug: "typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production"
 date: "July 29, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production.png"
 category: "Web-Dev"
 readTime: 5
 tags:

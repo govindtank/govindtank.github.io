@@ -6,7 +6,7 @@ excerpt: >
   Android 17 tightened privacy, updated the storage model, and pushed Jetpack
   Compose further into the default developer path. Here are the changes that
   actually affect shipped apps in 2026.
-coverImage: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/android-17-and-the-modern-android-stack-what-changed-in-2026.png"
 category: "Android"
 readTime: 8
 tags:

@@ -5,7 +5,7 @@ slug: "kotlin-2x-and-the-k2-compiler-what-it-unlocked-for-android-developers"
 date: "August 12, 2026"
 excerpt: >
   The K2 compiler in Kotlin 2.x delivers measurable performance boosts and fixes critical type inference issues, while its new API surface enables smoother multiplatform projects. This post outlines essential migration ...
-coverImage: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/kotlin-2x-and-the-k2-compiler-what-it-unlocked-for-android-developers.png"
 category: "Kotlin"
 readTime: 10
 tags:

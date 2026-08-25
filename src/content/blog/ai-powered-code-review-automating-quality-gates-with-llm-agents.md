@@ -3,7 +3,7 @@ title: "AI-Powered Code Review: Automating Quality Gates with LLM Agents"
 slug: "ai-powered-code-review-automating-quality-gates-with-llm-agents"
 date: "May 29, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/ai-powered-code-review-automating-quality-gates-with-llm-agents.png"
 category: "AI-Engineering"
 readTime: 12
 tags:

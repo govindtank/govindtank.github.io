@@ -3,7 +3,7 @@ title: "Agentic AI Systems: Designing Reliable Multi-Agent Workflows in 2026"
 slug: "agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026"
 date: "August 04, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026.png"
 category: "Agentic-AI"
 readTime: 5
 tags:

@@ -6,7 +6,7 @@ excerpt: >
   Everyone builds a RAG demo on day one. Most teams spend the next six months fixing retrieval quality in production.
   Here are the patterns that actually move the needle — chunking strategy, hybrid search, re-ranking, and
   observability — drawn from real production systems.
-coverImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/rag-in-production-practical-retrieval-patterns-beyond-the-demo.png"
 category: "AI-ML"
 readTime: 8
 tags:

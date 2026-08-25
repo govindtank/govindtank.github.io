@@ -3,7 +3,7 @@ title: "Flutter 4 and Impeller: The Next Generation of Cross-Platform UI Perform
 slug: "flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance"
 date: "August 03, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1522252234503-e356532cafd5?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance.png"
 category: "Flutter"
 readTime: 6
 tags:

@@ -3,7 +3,7 @@ title: "Flutter State Management Deep Dive: Bloc vs Riverpod vs Provider in 2026
 slug: "flutter-state-management-deep-dive-bloc-vs-riverpod-vs-provider-in-2026"
 date: "May 28, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/flutter-state-management-deep-dive-bloc-vs-riverpod-vs-provider-in-2026.png"
 category: "Flutter"
 readTime: 18
 tags:

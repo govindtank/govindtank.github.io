@@ -3,7 +3,7 @@ title: "Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026"
 slug: "dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026"
 date: "August 02, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026.png"
 category: "Flutter"
 readTime: 5
 tags:

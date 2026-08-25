@@ -3,7 +3,7 @@ title: "AI-Augmented Development Workflows: Scaling Code Quality and Velocity in
 slug: "ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026"
 date: "June 03, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026.png"
 category: "AI"
 readTime: 18
 tags:

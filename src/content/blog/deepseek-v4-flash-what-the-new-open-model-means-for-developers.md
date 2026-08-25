@@ -6,7 +6,7 @@ excerpt: >
   DeepSeek V4 Flash posted verified ARC-AGI scores of 89% at $0.02 per task.
   Here's what the numbers mean, how verification works, and when it makes
   sense for your workloads.
-coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/deepseek-v4-flash-what-the-new-open-model-means-for-developers.png"
 category: "AI-Engineering"
 readTime: 9
 tags:

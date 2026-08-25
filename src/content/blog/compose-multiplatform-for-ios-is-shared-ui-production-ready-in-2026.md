@@ -6,7 +6,7 @@ excerpt: >
   Compose Multiplatform for iOS reached a stable milestone, but the promise
   of shared UI across Android and iOS still has gaps. Here's what works, what
   breaks, and when to actually use it in 2026.
-coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/images/covers/compose-multiplatform-for-ios-is-shared-ui-production-ready-in-2026.png"
 category: "Kotlin"
 readTime: 8
 tags:
