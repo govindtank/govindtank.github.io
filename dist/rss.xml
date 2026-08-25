@@ -8,14 +8,14 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Aug 2026 09:07:12 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 11:00:43 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[Kotlin 2.x and the K2 Compiler: What It Unlocked for Android Developers]]></title>
       <link>https://govindtank.github.io/blog/kotlin2xandthek2compilerwhatitunlockedforandroiddeveloper</link>
       <guid isPermaLink="true">https://govindtank.github.io/blog/kotlin2xandthek2compilerwhatitunlockedforandroiddeveloper</guid>
       <pubDate>Mon, 24 Aug 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[The K2 compiler in Kotlin 2.x cuts typical Android build times by up to 2x, adds stable Kotlin Multiplatform support for cross-platform shared UI and logic, and includes official step-by-step migration guidance for ex...
+      <description><![CDATA[Kotlin 2.x's K2 compiler brings faster build times and better error messages to Android development, with new language features like value classes and context receivers. The migration path requires updating Gradle plu...
 ]]></description>
       <category>Kotlin</category>
     </item>
