@@ -440,10 +440,10 @@ def format_date():
 
 def slugify(title):
     slug = title.lower().strip()
-    slug = re.sub(r'[^a-z0-9\\s-]', '', slug)
-    slug = re.sub(r'[\\s_]+', '-', slug)
-    slug = re.sub(r'-+', '-', slug)
-    return slug.strip('-')
+    slug = re.sub(r"[^a-z0-9\s-]", "", slug)
+    slug = re.sub(r"[\s_]+", "-", slug)
+    slug = re.sub(r"-+", "-", slug)
+    return slug.strip("-")
 
 def write_content_md(slug, content, title, tag, date, excerpt, image_url, tags=None, read_time=None):
     if read_time is None:
@@ -568,7 +568,14 @@ def commit_and_push(commit_msg, paths=None):
         subprocess.run(["git", "commit", "-m", commit_msg, "-m", "Generated via Hermes blog pipeline v4"],
                        cwd=PROJECT_ROOT, check=True, capture_output=True)
         log("  commit ok")
-        r = subprocess.run(["git", "push", "origin", "main"], cwd=PROJECT_ROOT, capture_output=True, timeout=120)
+        # SSH remote hangs in headless cron sessions — use HTTPS with gh token (fast, reliable)
+        token = subprocess.run(["gh", "auth", "token"], cwd=PROJECT_ROOT,
+                               capture_output=True, text=True, timeout=15).stdout.strip()
+        if not token:
+            raise RuntimeError("no gh token available for push")
+        push_url = f"https://x-access-token:{token}@github.com/govindtank/govindtank.github.io.git"
+        r = subprocess.run(["git", "push", push_url, "HEAD:main"], cwd=PROJECT_ROOT, capture_output=True, timeout=180)
+        # ponytail: inline token URL used only for this push; never persisted to git config
         if r.returncode == 0:
             log("  push ok")
             return True
@@ -640,7 +647,8 @@ def main():
     history.setdefault("blogs", {})[slug] = {"title": title, "date": date, "tag": tag,
                                              "wordCount": wc, "status": "published"}
     save_history(history)
-    ok = commit_and_push(f"blog: {title} ({archetype}) - {datetime.now().strftime('%Y-%m-%d')}")
+    ok = commit_and_push(f"blog: {title} ({archetype}) - {datetime.now().strftime('%Y-%m-%d')}",
+                         paths=[path])
     log(f"DONE push={'ok' if ok else 'FAILED'} url=https://govindtank.github.io/blog/{slug}")
 
 # ======= REWRITE-ALL: convert existing posts =======

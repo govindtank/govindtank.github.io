@@ -60,34 +60,6 @@ python3 scripts/blog-automation/automation_enhanced_v2.py \
         log "$line"
     done
 
-# Generate cover images for newly created blogs
-log "[1b] Generating blog cover images..."
-OUTPUT_FILE="$PROJECT_ROOT/scripts/blog-automation/blog-output.json"
-if [ -f "$OUTPUT_FILE" ]; then
-    # Extract all generated slugs from output (for batch runs)
-    GENERATED_SLUGS=$(python3 -c "
-import json, sys
-try:
-    with open('$OUTPUT_FILE') as f:
-        data = json.load(f)
-    # blog-output.json may have 'slug' or we need to check for batch
-    if 'slug' in data:
-        print(data['slug'])
-    elif 'blogs' in data:
-        for b in data['blogs']:
-            print(b.get('slug', ''))
-except:
-    pass
-" 2>/dev/null | grep -v '^$' | tr '\n' ' ')
-    
-    for slug in $GENERATED_SLUGS; do
-        if [ -n "$slug" ]; then
-            TITLE=$(python3 -c "import json; print(json.load(open('$OUTPUT_FILE')).get('title', ''))" 2>/dev/null || echo "$slug")
-            python3 scripts/blog-automation/generate_blog_cover.py --slug "$slug" --title "$TITLE" 2>&1 | while read -r line; do log "$line"; done
-        fi
-    done
-fi
-
 # Check generation results
 OUTPUT_FILE="$PROJECT_ROOT/scripts/blog-automation/blog-output.json"
 if [ ! -f "$OUTPUT_FILE" ]; then
@@ -117,20 +89,23 @@ else
             log "[GIT] Committing changes..."
             git add -A
             
-            GIT_COMMIT_MSG="📝 Enhanced blogs: $(python3 -c "import json; print(json.load(open('$OUTPUT_FILE'))['title'])" 2>/dev/null || echo 'updated') | comprehensive content, unique images, fixed layout"
-            
-            # Add date-specific commit message
-            DATE_SUFFIX=$(date +%Y%m%d)
-            GIT_COMMIT_MSG="📝 Enhanced blogs batch-$DATE_SUFFIX: High-quality content with proper structure and unique imagery"
+            GIT_COMMIT_MSG="📝 Enhanced blogs batch-$(date +%Y%m%d): High-quality content with proper structure and unique imagery"
             
             git commit -m "$GIT_COMMIT_MSG" --no-verify 2>/dev/null || {
                 log "⚠️  Git commit failed, but build succeeded. Deploy anyway."
             }
             
             log "[PUSH] Pushing to GitHub Pages..."
-            git push origin main 2>&1 | while read -r line; do
-                log "$line"
-            done
+            TOKEN=$(gh auth token 2>/dev/null || echo "")
+            if [ -n "$TOKEN" ]; then
+                git push https://x-access-token:${TOKEN}@github.com/govindtank/govindtank.github.io.git main 2>&1 | while read -r line; do
+                    log "$line"
+                done
+            else
+                git push origin main 2>&1 | while read -r line; do
+                    log "$line"
+                done
+            fi
             
             if [ ${PIPESTATUS[1]} -eq 0 ]; then
                 log "✅ Successfully deployed enhanced blogs to GitHub Pages!"
