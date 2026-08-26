@@ -1,6 +1,6 @@
 {
   "version": "2.1",
-  "totalCreated": 59,
+  "totalCreated": 48,
   "lastTopic": "Validating Mobile Numbers the Right Way: Introducing country_mobile_validator",
   "todayCount": 49,
   "lastGenerated": "2026-08-06T00:00:00Z",
@@ -384,27 +384,6 @@
       "date": "August 13, 2026",
       "tag": "AI-Engineering",
       "wordCount": 1555,
-      "status": "published"
-    },
-    "weba-emblyin2026frombrow-ertoedgecomputingandbeyond": {
-      "title": "WebAssembly in 2026: From Browser to Edge Computing and Beyond",
-      "date": "August 25, 2026",
-      "tag": "WebAssembly",
-      "wordCount": 716,
-      "status": "published"
-    },
-    "kotlin2xandthek2compilerwhatitunlockedforandroiddeveloper": {
-      "title": "Kotlin 2.x and the K2 Compiler: What It Unlocked for Android Developers",
-      "date": "August 25, 2026",
-      "tag": "Kotlin",
-      "wordCount": 649,
-      "status": "published"
-    },
-    "ai-nativeapparchitecturede-igningapplication-aroundllmcall": {
-      "title": "AI-Native App Architecture: Designing Applications Around LLM Calls",
-      "date": "August 25, 2026",
-      "tag": "AI-Engineering",
-      "wordCount": 755,
       "status": "published"
     }
   },

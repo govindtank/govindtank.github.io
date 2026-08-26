@@ -5,7 +5,7 @@ slug: "mcp-in-practice-model-context-protocol-for-real-world-developer-tools"
 date: "August 12, 2026"
 excerpt: >
   This post details how to build MCP servers with custom tools and choose between SSE and stdio transports. We cover integrating the protocol directly into IDEs and automating workflows within CI/CD pipelines.
-coverImage: "/images/covers/mcp-in-practice-model-context-protocol-for-real-world-developer-tools.png"
+coverImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Engineering"
 readTime: 13
 tags:

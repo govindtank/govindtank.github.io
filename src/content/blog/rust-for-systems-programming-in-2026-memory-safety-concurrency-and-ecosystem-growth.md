@@ -3,7 +3,7 @@ title: "Rust for Systems Programming in 2026: Memory Safety, Concurrency, and Ec
 slug: "rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth"
 date: "June 27, 2026"
 excerpt: >
-coverImage: "/images/covers/rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth.png"
+coverImage: "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=1200"
 category: "Systems"
 readTime: 5
 tags:

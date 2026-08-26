@@ -5,7 +5,7 @@ slug: "agentic-ai-development-from-chat-assistants-to-autonomous-coding-agents"
 date: "August 13, 2026"
 excerpt: >
   We move beyond chat interfaces to build autonomous coding agents using the Model Context Protocol for secure tool invocation. This guide covers designing multi-agent orchestration loops, implementing rigorous evaluation metrics, and enforcing policy boundaries at the transport layer.
-coverImage: "/images/covers/agentic-ai-development-from-chat-assistants-to-autonomous-coding-agents.png"
+coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Engineering"
 readTime: 8
 tags:

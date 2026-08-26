@@ -3,7 +3,7 @@ title: "The Rise of AI Coding Assistants: Evaluating Code Quality and Productivi
 slug: "the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact"
 date: "June 25, 2026"
 excerpt: >
-coverImage: "/images/covers/the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact.png"
+coverImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Engineering"
 readTime: 6
 tags:

@@ -3,7 +3,7 @@ title: "Building Scalable Microservices with FastAPI and Event-Driven Architectu
 slug: "building-scalable-microservices-with-fastapi-and-event-driven-architecture"
 date: "June 23, 2026"
 excerpt: >
-coverImage: "/images/covers/building-scalable-microservices-with-fastapi-and-event-driven-architecture.png"
+coverImage: "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?auto=format&fit=crop&q=80&w=1200"
 category: "Backend-Architecture"
 readTime: 5
 tags:

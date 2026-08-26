@@ -3,7 +3,7 @@ title: "Flutter Widget Testing Mastery: From Unit Tests to Integration Goldens"
 slug: "flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens"
 date: "July 21, 2026"
 excerpt: >
-coverImage: "/images/covers/flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens.png"
+coverImage: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&q=80&w=1200"
 category: "Flutter"
 readTime: 5
 tags:

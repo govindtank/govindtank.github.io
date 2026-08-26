@@ -5,7 +5,7 @@ date: "August 24, 2026"
 excerpt: >
   LLM APIs feel magical in the playground but brittle in production. I've spent the last year debugging
   prompt-related failures in live systems — here are the patterns that actually cut down the noise.
-coverImage: "/images/covers/prompt-engineering-for-production-getting-reliable-output-from-llm-apis.png"
+coverImage: "https://images.unsplash.com/photo-1550439062-609e1531270e?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Engineering"
 readTime: 8
 tags:

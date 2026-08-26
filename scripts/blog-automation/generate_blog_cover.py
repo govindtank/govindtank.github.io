@@ -354,19 +354,20 @@ if __name__ == "__main__":
     if args.all:
         # Regenerate all existing covers
         content_dir = f"{ROOT}/src/content/blog"
+        import re
         for fn in sorted(os.listdir(content_dir)):
             if not fn.endswith(".md"):
                 continue
             slug = fn[:-3]
             text = open(os.path.join(content_dir, fn)).read()
-            m = re.search(r'^title:\s*["\']?(.+?)["\']?\s*$', text, re.M)
-            title = m.group(1).strip() if m else slug
+            m = re.search(r'^title:\s*"([^"]+)"', text, re.M)
+            title = m.group(1) if m else slug
             out_path = f"{OUTPUT_DIR}/{slug}.png"
             if args.dry:
                 print(f"  [dry] {slug}: {title}")
             else:
                 generate_cover(slug, title, out_path)
-                print(f"  \u2713 {slug}")
+                print(f"  ✓ {slug}")
         print(f"\nDone. Covers in {OUTPUT_DIR}")
     elif args.slug and args.title:
         url = generate_for_blog(args.slug, args.title)

@@ -3,7 +3,7 @@ title: "AI Agents in 2026: Building Autonomous Workflows for Complex Tasks"
 slug: "ai-agents-autonomous-workflows-complex-tasks-2026"
 date: "May 26, 2026"
 excerpt: >
-coverImage: "/images/covers/ai-agents-autonomous-workflows-complex-tasks-2026.png"
+coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Agents"
 readTime: 18
 tags:

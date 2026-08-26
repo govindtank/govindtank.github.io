@@ -4,7 +4,7 @@ slug: "firebase-generative-ai-sdk-mobile-multimodal-model-serving-android-ios"
 date: "August 05, 2026"
 excerpt: >
   Firebase's new Generative AI SDK brings multimodal model serving directly to mobile apps. Here's what it means for Flutter and native Android/iOS developers in 2026.
-coverImage: "/images/covers/firebase-generative-ai-sdk-mobile-multimodal-model-serving-android-ios.png"
+coverImage: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-AI"
 readTime: 8
 tags:

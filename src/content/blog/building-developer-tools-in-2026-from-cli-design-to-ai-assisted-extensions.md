@@ -4,7 +4,7 @@ slug: "building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extension
 date: "August 20, 2026"
 excerpt: >
   A practical guide to building developer tools that survive real workflows — CLI ergonomics, LSP integration, VS Code extensions, and AI-powered assistance patterns that work in production.
-coverImage: "/images/covers/building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions.png"
+coverImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=1200"
 category: "DevTools"
 readTime: 7
 tags:

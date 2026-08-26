@@ -8,7 +8,7 @@ excerpt: >
   real shipped apps this year. Here is the honest breakdown of where each one
   actually wins, where it still hurts, and how to pick the right framework for
   your next mobile project.
-coverImage: "/images/covers/swiftui-vs-jetpack-compose-the-native-ui-framework-showdown-in-2026.png"
+coverImage: "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile"
 readTime: 9
 tags:
