@@ -14,6 +14,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://govindtank.github.io/blog/local-first-sync-engines-electricsql-powersync-and-the-offline-first-renaissance</loc>
+    <lastmod>2026-08-28T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.github.io/blog/the-future-of-webassembly-beyond-the-browser-into-cloud-and-edge</loc>
     <lastmod>2026-08-25T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
