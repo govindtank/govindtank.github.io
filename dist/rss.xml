@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Aug 2026 13:23:47 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 03:26:10 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[AI Agents in Production: From Prototypes to Reliable Autonomous Systems]]></title>
+      <link>https://govindtank.github.io/blog/ai-agents-in-production-from-prototypes-to-reliable-autonomous-systems</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-agents-in-production-from-prototypes-to-reliable-autonomous-systems</guid>
+      <pubDate>Fri, 28 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Evaluating AI agents requires measuring task success, not just accuracy. Reliable deployment means building guardrails that catch hallucinations, observability that tracks real-world performance, and human oversight f...
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
     <item>
       <title><![CDATA[The Future of WebAssembly: Beyond the Browser into Cloud and Edge]]></title>
       <link>https://govindtank.github.io/blog/the-future-of-webassembly-beyond-the-browser-into-cloud-and-edge</link>

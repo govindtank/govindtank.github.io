@@ -9,6 +9,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.github.io/blog/ai-agents-in-production-from-prototypes-to-reliable-autonomous-systems</loc>
+    <lastmod>2026-08-28T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.github.io/blog/the-future-of-webassembly-beyond-the-browser-into-cloud-and-edge</loc>
     <lastmod>2026-08-25T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
