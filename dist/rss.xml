@@ -8,7 +8,7 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Aug 2026 18:50:09 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 18:51:55 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[AI Monetization in Mobile: Pricing Strategies, Freemium LLM Tiers, Usage-Based Billing Challenges]]></title>
@@ -54,6 +54,15 @@
       <description><![CDATA[Mobile apps using AI must actively detect and mitigate bias in training data and model outputs, implement explainable AI techniques that translate model decisions into plain-language reasons users can act on, and embe...
 ]]></description>
       <category>AI-Ethics</category>
+    </item>
+    <item>
+      <title><![CDATA[LLM-Centric App Design: Token-Aware UI, Context Window Management, Cost Modeling]]></title>
+      <link>https://govindtank.github.io/blog/llm-centric-app-design-token-aware-ui-context-window-management-cost-modeling</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/llm-centric-app-design-token-aware-ui-context-window-management-cost-modeling</guid>
+      <pubDate>Sun, 30 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Applications designed around LLMs treat every token as a priced resource, with streaming interfaces that react to model output in real-time and cost models baked into the request lifecycle. This shifts UI architecture...
+]]></description>
+      <category>AI-Native-Apps</category>
     </item>
     <item>
       <title><![CDATA[Agentic Workflows on Device: Local Multi-Agent Systems for Privacy-First Mobile AI]]></title>
