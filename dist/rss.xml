@@ -8,7 +8,7 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Aug 2026 18:45:35 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 18:47:21 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[AI Monetization in Mobile: Pricing Strategies, Freemium LLM Tiers, Usage-Based Billing Challenges]]></title>
@@ -18,6 +18,15 @@
       <description><![CDATA[Mobile AI features demand new pricing models beyond simple subscriptions. This post examines real-world tiered approaches, freemium LLM limits, and usage-based billing pitfalls that actually drive revenue.
 ]]></description>
       <category>Business</category>
+    </item>
+    <item>
+      <title><![CDATA[AI-Native IDEs for Mobile Development: Flutter AI Features, Android Studio Integration]]></title>
+      <link>https://govindtank.github.io/blog/ai-native-ides-for-mobile-development-flutter-ai-features-android-studio-integration</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-native-ides-for-mobile-development-flutter-ai-features-android-studio-integration</guid>
+      <pubDate>Sun, 30 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Exploring VS Code alternatives built for mobile-first development with integrated AI coding assistance, from Flutter's native AI features to Android Studio's Gemini integration.
+]]></description>
+      <category>DevTools</category>
     </item>
     <item>
       <title><![CDATA[Cross-Lingual Mobile Development: Low-Resource Languages, Cultural UI Adaptation, RTL Layouts]]></title>
