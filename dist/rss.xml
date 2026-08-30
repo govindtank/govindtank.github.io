@@ -8,7 +8,7 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Aug 2026 18:20:56 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 18:22:09 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[AI-Native Mobile Games: Generative Narrative, Real-Time Opponent Adaptation, Procedural Content]]></title>
@@ -54,6 +54,15 @@
       <description><![CDATA[Choosing smaller models for less capable devices and caching frequent responses can meaningfully cut the energy cost of running LLMs on mobile. This post looks at practical ways to match model size to device capabilit...
 ]]></description>
       <category>Sustainability</category>
+    </item>
+    <item>
+      <title><![CDATA[Hybrid Native-Web Apps: Platform-Specific Features vs PWA/React Native Trade-offs in 2026]]></title>
+      <link>https://govindtank.github.io/blog/hybrid-native-web-apps-platform-specific-features-vs-pwareact-native-trade-offs-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/hybrid-native-web-apps-platform-specific-features-vs-pwareact-native-trade-offs-in-2026</guid>
+      <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Here's a concise, no-fluff excerpt (98 characters): > Flutter for heavy platform integration; PWA/React Native for broad reach. Benchmarks and feature detection guide the 2026 choice.
+]]></description>
+      <category>Mobile-Architecture</category>
     </item>
     <item>
       <title><![CDATA[iOS 20 Vision Framework Updates: Eye Tracking, Depth Sensing, Privacy-Preserving Features]]></title>
