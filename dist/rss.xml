@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Aug 2026 03:27:59 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 18:05:35 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[AI Performance Budgets: Managing LLM Latency + Cost vs UX Expectations with Caching]]></title>
+      <link>https://govindtank.github.io/blog/ai-performance-budgets-managing-llm-latency-cost-vs-ux-expectations-with-caching</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-performance-budgets-managing-llm-latency-cost-vs-ux-expectations-with-caching</guid>
+      <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Caching LLM responses and using async patterns can cut latency and costs, but only if you budget for cache hit rates and user tolerance for delayed responses.
+]]></description>
+      <category>Performance</category>
+    </item>
     <item>
       <title><![CDATA[AI Agents in Production: From Prototypes to Reliable Autonomous Systems]]></title>
       <link>https://govindtank.github.io/blog/ai-agents-in-production-from-prototypes-to-reliable-autonomous-systems</link>
