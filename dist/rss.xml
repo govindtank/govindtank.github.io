@@ -8,7 +8,7 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Aug 2026 18:22:09 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 18:23:58 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[AI-Native Mobile Games: Generative Narrative, Real-Time Opponent Adaptation, Procedural Content]]></title>
@@ -72,6 +72,15 @@
       <description><![CDATA[Apple's iOS 20 Vision Framework adds eye tracking for accessibility, enhanced depth sensing APIs, and on-device processing for privacy. New hand gesture recognition and improved face landmark detection expand sensing ...
 ]]></description>
       <category>iOS</category>
+    </item>
+    <item>
+      <title><![CDATA[Mobile App Store AI Review Guidelines: Navigating Apple/Google Policy Changes in 2026]]></title>
+      <link>https://govindtank.github.io/blog/mobile-app-store-ai-review-guidelines-navigating-applegoogle-policy-changes-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/mobile-app-store-ai-review-guidelines-navigating-applegoogle-policy-changes-in-2026</guid>
+      <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Apple and Google's 2026 AI review guidelines demand explicit documentation of data sources, clear disclosure of AI-generated content, and upfront user consent flows to avoid immediate rejection.
+]]></description>
+      <category>Business</category>
     </item>
     <item>
       <title><![CDATA[Prompt Engineering for Mobile APIs: Device Capabilities, Storage Awareness, Network Conditions]]></title>
