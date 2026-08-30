@@ -8,7 +8,7 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Aug 2026 18:48:36 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 18:50:09 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[AI Monetization in Mobile: Pricing Strategies, Freemium LLM Tiers, Usage-Based Billing Challenges]]></title>
@@ -27,6 +27,15 @@
       <description><![CDATA[Exploring VS Code alternatives built for mobile-first development with integrated AI coding assistance, from Flutter's native AI features to Android Studio's Gemini integration.
 ]]></description>
       <category>DevTools</category>
+    </item>
+    <item>
+      <title><![CDATA[AI-Powered Test Generation for Flutter/Android: UI Coverage, Edge Cases, Flaky Test Detection]]></title>
+      <link>https://govindtank.github.io/blog/ai-powered-test-generation-for-flutterandroid-ui-coverage-edge-cases-flaky-test-detection</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-powered-test-generation-for-flutterandroid-ui-coverage-edge-cases-flaky-test-detection</guid>
+      <pubDate>Sun, 30 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[This post covers using LLMs to generate unit and integration tests for Flutter and Android, with a focus on achieving thorough UI state coverage, surfacing edge cases humans tend to miss, and flagging flaky tests befo...
+]]></description>
+      <category>Testing</category>
     </item>
     <item>
       <title><![CDATA[Cross-Lingual Mobile Development: Low-Resource Languages, Cultural UI Adaptation, RTL Layouts]]></title>
