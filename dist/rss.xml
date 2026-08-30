@@ -8,7 +8,7 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Aug 2026 18:16:13 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 18:17:50 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[AI-Native Mobile Games: Generative Narrative, Real-Time Opponent Adaptation, Procedural Content]]></title>
@@ -27,6 +27,15 @@
       <description><![CDATA[Caching LLM responses and using async patterns can cut latency and costs, but only if you budget for cache hit rates and user tolerance for delayed responses.
 ]]></description>
       <category>Performance</category>
+    </item>
+    <item>
+      <title><![CDATA[Cross-Platform AR/VR Development: Unity vs React Native + visionOS with 6DoF Tracking]]></title>
+      <link>https://govindtank.github.io/blog/cross-platform-arvr-development-unity-vs-react-native-visionos-with-6dof-tracking</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/cross-platform-arvr-development-unity-vs-react-native-visionos-with-6dof-tracking</guid>
+      <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Comparing Unity's native AR/VR support against React Native's web-based approach for building cross-platform spatial apps with 6DoF tracking on visionOS and other headsets.
+]]></description>
+      <category>AR-VR</category>
     </item>
     <item>
       <title><![CDATA[Flutter WebGPU Rendering: GPU Acceleration, Shader Programming, WebGL Fallbacks]]></title>
