@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Aug 2026 18:10:33 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 18:16:13 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[AI-Native Mobile Games: Generative Narrative, Real-Time Opponent Adaptation, Procedural Content]]></title>
+      <link>https://govindtank.github.io/blog/ai-native-mobile-games-generative-narrative-real-time-opponent-adaptation-procedural-content</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-native-mobile-games-generative-narrative-real-time-opponent-adaptation-procedural-content</guid>
+      <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[This post examines how mobile games use LLMs for real-time opponent adaptation and procedural content generation, creating dynamic difficulty curves and branching narratives that respond to player behavior without rel...
+]]></description>
+      <category>Mobile-Games</category>
+    </item>
     <item>
       <title><![CDATA[AI Performance Budgets: Managing LLM Latency + Cost vs UX Expectations with Caching]]></title>
       <link>https://govindtank.github.io/blog/ai-performance-budgets-managing-llm-latency-cost-vs-ux-expectations-with-caching</link>
