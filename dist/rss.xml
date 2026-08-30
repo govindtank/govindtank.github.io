@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Aug 2026 18:25:43 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 18:27:10 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Agentic Workflows on Device: Local Multi-Agent Systems for Privacy-First Mobile AI]]></title>
+      <link>https://govindtank.github.io/blog/agentic-workflows-on-device-local-multi-agent-systems-for-privacy-first-mobile-ai</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/agentic-workflows-on-device-local-multi-agent-systems-for-privacy-first-mobile-ai</guid>
+      <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Running multiple AI agents locally on mobile devices using on-device LLMs that route tasks between each other without cloud dependencies. Keeps all data on the device while enabling complex multi-step AI workflows.
+]]></description>
+      <category>Mobile-AI</category>
+    </item>
     <item>
       <title><![CDATA[AI-Native Mobile Games: Generative Narrative, Real-Time Opponent Adaptation, Procedural Content]]></title>
       <link>https://govindtank.github.io/blog/ai-native-mobile-games-generative-narrative-real-time-opponent-adaptation-procedural-content</link>
