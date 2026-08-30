@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Aug 2026 18:27:10 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 18:43:24 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Cross-Lingual Mobile Development: Low-Resource Languages, Cultural UI Adaptation, RTL Layouts]]></title>
+      <link>https://govindtank.github.io/blog/cross-lingual-mobile-development-low-resource-languages-cultural-ui-adaptation-rtl-layouts</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/cross-lingual-mobile-development-low-resource-languages-cultural-ui-adaptation-rtl-layouts</guid>
+      <pubDate>Sun, 30 Aug 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Building mobile apps for speakers of low-resource languages means tackling missing fonts, broken text rendering, and keyboards that don't exist yet. This post covers practical approaches to cultural UI adaptation and ...
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
     <item>
       <title><![CDATA[Agentic Workflows on Device: Local Multi-Agent Systems for Privacy-First Mobile AI]]></title>
       <link>https://govindtank.github.io/blog/agentic-workflows-on-device-local-multi-agent-systems-for-privacy-first-mobile-ai</link>
