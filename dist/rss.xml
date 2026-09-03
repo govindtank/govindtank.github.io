@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Sep 2026 02:32:06 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 15:34:20 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[ComfyUI Workflows for Blog Cover Art: Stable Diffusion, ControlNet, and Consistent Characters]]></title>
+      <link>https://govindtank.github.io/blog/comfyui-workflows-for-blog-cover-art-stable-diffusion-controlnet-and-consistent-characters</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/comfyui-workflows-for-blog-cover-art-stable-diffusion-controlnet-and-consistent-characters</guid>
+      <pubDate>Wed, 02 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[A step-by-step ComfyUI node graph that combines SDXL, ControlNet, and IP-Adapter to generate consistent blog cover art with reproducible character designs. Learn how to build a workflow that maintains character identi...
+]]></description>
+      <category>AI-ML</category>
+    </item>
     <item>
       <title><![CDATA[Effective TypeScript 5.7: Inference, Const Generics, and Template Literal Types]]></title>
       <link>https://govindtank.github.io/blog/effective-typescript-57-inference-const-generics-and-template-literal-types</link>
