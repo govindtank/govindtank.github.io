@@ -8,8 +8,44 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Sep 2026 09:13:46 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 03:10:54 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[AI-Native IDEs: Using Flutter's AI Features for Faster Development]]></title>
+      <link>https://govindtank.github.io/blog/ai-native-ides-using-flutters-ai-features-for-faster-development</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-native-ides-using-flutters-ai-features-for-faster-development</guid>
+      <pubDate>Wed, 09 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[AI-native IDEs speed up Flutter workflows through context-aware widget scaffolding, automated refactoring, and targeted build error fixes.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
+    <item>
+      <title><![CDATA[Flutter: Riverpod vs Bloc vs Provider - Performance Benchmarks 2026]]></title>
+      <link>https://govindtank.github.io/blog/flutter-riverpod-vs-bloc-vs-provider-performance-benchmarks-2026</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-riverpod-vs-bloc-vs-provider-performance-benchmarks-2026</guid>
+      <pubDate>Wed, 09 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Direct benchmarks comparing Riverpod, Bloc, and Provider across widget rebuild counts, memory usage, and frame render times under heavy UI loads.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
+    <item>
+      <title><![CDATA[Material You on Android: Dark Mode Implementation with DayNight Tokens]]></title>
+      <link>https://govindtank.github.io/blog/material-you-on-android-dark-mode-implementation-with-daynight-tokens</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/material-you-on-android-dark-mode-implementation-with-daynight-tokens</guid>
+      <pubDate>Tue, 08 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Map Material You dynamic colors to DayNight tokens on Android. Covers theme setup, runtime palette switching, and avoiding common tinting bugs.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
+    <item>
+      <title><![CDATA[Offline-First Mobile Apps: CRDTs for Conflict-Free Replication in Flutter]]></title>
+      <link>https://govindtank.github.io/blog/offline-first-mobile-apps-crdts-for-conflict-free-replication-in-flutter</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/offline-first-mobile-apps-crdts-for-conflict-free-replication-in-flutter</guid>
+      <pubDate>Tue, 08 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[How to use Conflict-Free Replicated Data Types (CRDTs) in Flutter to synchronize offline-first data across devices without server-side merge conflicts.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
     <item>
       <title><![CDATA[Agentic AI: Building Autonomous Workflows with LangGraph and MCP Protocol]]></title>
       <link>https://govindtank.github.io/blog/agentic-ai-building-autonomous-workflows-with-langgraph-and-mcp-protocol</link>

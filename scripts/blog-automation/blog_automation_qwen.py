@@ -26,6 +26,12 @@ STATE_FILE = f"{PROJECT_ROOT}/scripts/blog-automation/.rewrite_state.json"
 TOPICS_JSON_PATH = os.path.expanduser("~/.hermes/cron/topics.json")
 
 # LLM Providers Configuration
+GEMINI_LLM_URL = "http://localhost:20128/v1/chat/completions"
+GEMINI_MODELS = [
+    "antigravity/gemini-3.7-flash-low",
+    "auto/gemini"
+]
+
 LOCAL_LLM_URL = os.environ.get("HERMES_LOCAL_MODEL_URL", "http://127.0.0.1:1234/v1/chat/completions")
 LOCAL_MODELS = ["qwen/qwen3.5-9b", "google/gemma-4-12b"]
 
@@ -416,9 +422,44 @@ BANNED_PHRASES = [
 def call_llm(messages, temperature=0.75, max_tokens=6000, timeout=45):
     """
     Tiered LLM caller:
-    1. Kilo Gateway (Fast & highly reliable with stepfun/step-3.7-flash, kilo-auto)
-    2. Local LM Studio endpoint (fallback)
+    1. Gemini 3.7 Low (Local Gateway at localhost:20128 - prioritized)
+    2. Kilo Gateway (Fast fallback with stepfun/step-3.7-flash, kilo-auto)
+    3. Local LM Studio endpoint (fallback)
     """
+    # Primary: Gemini 3.7 Low via Local Gateway
+    for model in GEMINI_MODELS:
+        payload = {
+            "model": model,
+            "messages": messages,
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+            "top_p": 0.9
+        }
+        req = urllib.request.Request(
+            GEMINI_LLM_URL,
+            data=json.dumps(payload).encode(),
+            headers={"Content-Type": "application/json"},
+            method="POST"
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                resp_data = json.loads(resp.read().decode())
+                if "choices" in resp_data and resp_data["choices"]:
+                    msg = resp_data["choices"][0]["message"]
+                    content = msg.get("content", "")
+                    if (not content or not content.strip()) and msg.get("reasoning"):
+                        reasoning = msg.get("reasoning", "")
+                        m_draft = re.search(r'(?:Let\'s draft|Draft|Here is the|#\s+)([\s\S]+)', reasoning, re.I)
+                        if m_draft:
+                            content = m_draft.group(1).strip()
+                    if content and len(content.strip()) > 50:
+                        log(f"  Gemini LLM succeeded with {model}")
+                        return content
+        except Exception as e:
+            log(f"  Gemini LLM failed with {model}: {str(e)[:80]}")
+            continue
+
+    # Secondary: Kilo Gateway
     for model in KILO_MODELS:
         payload = {
             "model": model,
@@ -447,13 +488,13 @@ def call_llm(messages, temperature=0.75, max_tokens=6000, timeout=45):
                         if m_draft:
                             content = m_draft.group(1).strip()
                     if content and len(content.strip()) > 50:
-                        log(f"  LLM succeeded with {model}")
+                        log(f"  Kilo LLM succeeded with {model}")
                         return content
         except Exception as e:
             log(f"  Kilo LLM failed with {model}: {str(e)[:80]}")
             continue
 
-    # Secondary: Try Local endpoint if Kilo had transient failure
+    # Tertiary: Try Local LM Studio endpoint
     for local_model in LOCAL_MODELS:
         payload = {
             "model": local_model,
