@@ -800,6 +800,20 @@
       "tag": "Mobile-Architecture",
       "wordCount": 1025,
       "status": "published"
+    },
+    "flutter-antigravity-building-ai-features-with-openai-api-integration": {
+      "title": "Flutter Antigravity: Building AI Features with OpenAI API Integration",
+      "date": "September 11, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1132,
+      "status": "published"
+    },
+    "agentic-ai-building-autonomous-workflows-with-langgraph-and-crewai": {
+      "title": "Agentic AI: Building Autonomous Workflows with LangGraph and CrewAI",
+      "date": "September 11, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1037,
+      "status": "published"
     }
   },
   "images": {

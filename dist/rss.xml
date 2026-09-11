@@ -8,8 +8,26 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Sep 2026 03:10:54 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 02:37:33 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Agentic AI: Building Autonomous Workflows with LangGraph and CrewAI]]></title>
+      <link>https://govindtank.github.io/blog/agentic-ai-building-autonomous-workflows-with-langgraph-and-crewai</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/agentic-ai-building-autonomous-workflows-with-langgraph-and-crewai</guid>
+      <pubDate>Thu, 10 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[A practical comparison of LangGraph and CrewAI for autonomous workflows. Covers cyclic state machines, role-based orchestration, and production trade-offs with code.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
+    <item>
+      <title><![CDATA[Flutter Antigravity: Building AI Features with OpenAI API Integration]]></title>
+      <link>https://govindtank.github.io/blog/flutter-antigravity-building-ai-features-with-openai-api-integration</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-antigravity-building-ai-features-with-openai-api-integration</guid>
+      <pubDate>Thu, 10 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Connect Flutter apps to the OpenAI API with this practical guide. Covers authentication, streaming chat responses, error handling, and UI state management.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
     <item>
       <title><![CDATA[AI-Native IDEs: Using Flutter's AI Features for Faster Development]]></title>
       <link>https://govindtank.github.io/blog/ai-native-ides-using-flutters-ai-features-for-faster-development</link>
