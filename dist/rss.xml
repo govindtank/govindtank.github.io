@@ -8,8 +8,26 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Sep 2026 02:37:33 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 02:31:36 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Android Studio AI Integration: Using Copilot and GitHub Codespaces for Mobile Dev]]></title>
+      <link>https://govindtank.github.io/blog/android-studio-ai-integration-using-copilot-and-github-codespaces-for-mobile-dev</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/android-studio-ai-integration-using-copilot-and-github-codespaces-for-mobile-dev</guid>
+      <pubDate>Fri, 11 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Set up GitHub Copilot in Android Studio and run builds in Codespaces. A practical setup guide for cloud-based Android development workflows.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
+    <item>
+      <title><![CDATA[Flutter Antigravity: Building AI Features with OpenAI and Streaming SSE]]></title>
+      <link>https://govindtank.github.io/blog/flutter-antigravity-building-ai-features-with-openai-and-streaming-sse</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-antigravity-building-ai-features-with-openai-and-streaming-sse</guid>
+      <pubDate>Fri, 11 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Implements OpenAI SSE streaming in Flutter with real-time markdown token rendering, resilient retry channels, and client-side chat state management.
+]]></description>
+      <category>Flutter</category>
+    </item>
     <item>
       <title><![CDATA[Agentic AI: Building Autonomous Workflows with LangGraph and CrewAI]]></title>
       <link>https://govindtank.github.io/blog/agentic-ai-building-autonomous-workflows-with-langgraph-and-crewai</link>
