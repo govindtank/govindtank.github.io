@@ -828,6 +828,20 @@
       "tag": "Mobile-Architecture",
       "wordCount": 1255,
       "status": "published"
+    },
+    "running-3b-slms-locally-on-android-ndk-bindings-gguf-quantization-and-npu-acceleration": {
+      "title": "Running 3B SLMs Locally on Android: NDK Bindings, GGUF Quantization, and NPU Acceleration",
+      "date": "September 13, 2026",
+      "tag": "Mobile-AI",
+      "wordCount": 2047,
+      "status": "published"
+    },
+    "hardware-accelerated-live-wallpapers-with-jetpack-compose-agsl-and-android-ndk": {
+      "title": "Hardware-Accelerated Live Wallpapers with Jetpack Compose, AGSL, and Android NDK",
+      "date": "September 13, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1589,
+      "status": "published"
     }
   },
   "images": {

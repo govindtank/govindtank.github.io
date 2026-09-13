@@ -8,8 +8,26 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Sep 2026 02:31:36 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 02:31:45 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Hardware-Accelerated Live Wallpapers with Jetpack Compose, AGSL, and Android NDK]]></title>
+      <link>https://govindtank.github.io/blog/hardware-accelerated-live-wallpapers-with-jetpack-compose-agsl-and-android-ndk</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/hardware-accelerated-live-wallpapers-with-jetpack-compose-agsl-and-android-ndk</guid>
+      <pubDate>Sat, 12 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Implement high-performance Android WallpaperServices using AGSL shaders and native C++ render loops. Covers Compose integration and frame pacing to control battery usage.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
+    <item>
+      <title><![CDATA[Running 3B SLMs Locally on Android: NDK Bindings, GGUF Quantization, and NPU Acceleration]]></title>
+      <link>https://govindtank.github.io/blog/running-3b-slms-locally-on-android-ndk-bindings-gguf-quantization-and-npu-acceleration</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/running-3b-slms-locally-on-android-ndk-bindings-gguf-quantization-and-npu-acceleration</guid>
+      <pubDate>Sat, 12 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Bind llama.cpp to Jetpack Compose via JNI, offload 3B SLMs to Qualcomm Hexagon NPUs using QNN, and manage thermal throttling during long context streaming.
+]]></description>
+      <category>Mobile-AI</category>
+    </item>
     <item>
       <title><![CDATA[Android Studio AI Integration: Using Copilot and GitHub Codespaces for Mobile Dev]]></title>
       <link>https://govindtank.github.io/blog/android-studio-ai-integration-using-copilot-and-github-codespaces-for-mobile-dev</link>
