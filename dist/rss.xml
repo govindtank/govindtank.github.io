@@ -8,8 +8,26 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Sep 2026 02:31:45 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 02:31:26 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Dynamic Color & Contrast Tokens in Android: Mastering Material You 3 Theme Engines]]></title>
+      <link>https://govindtank.github.io/blog/dynamic-color-contrast-tokens-in-android-mastering-material-you-3-theme-engines</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/dynamic-color-contrast-tokens-in-android-mastering-material-you-3-theme-engines</guid>
+      <pubDate>Sun, 13 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Architecture patterns for dynamic palette extraction, contrast-aware token hierarchies, and DayNight styling across large, modular Jetpack Compose codebases.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
+    <item>
+      <title><![CDATA[KMP Binary Size and Startup Time Benchmarking: ProGuard, R8, and Objective-C Frameworks]]></title>
+      <link>https://govindtank.github.io/blog/kmp-binary-size-and-startup-time-benchmarking-proguard-r8-and-objective-c-frameworks</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/kmp-binary-size-and-startup-time-benchmarking-proguard-r8-and-objective-c-frameworks</guid>
+      <pubDate>Sun, 13 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[A benchmark of KMP artifact footprints on Android and iOS. Measures R8 dead-code elimination against Xcode strip levels and dSYM handling to track binary size and cold startup impact.
+]]></description>
+      <category>Kotlin</category>
+    </item>
     <item>
       <title><![CDATA[Hardware-Accelerated Live Wallpapers with Jetpack Compose, AGSL, and Android NDK]]></title>
       <link>https://govindtank.github.io/blog/hardware-accelerated-live-wallpapers-with-jetpack-compose-agsl-and-android-ndk</link>
