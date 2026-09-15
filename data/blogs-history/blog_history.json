@@ -856,6 +856,20 @@
       "tag": "Kotlin",
       "wordCount": 1764,
       "status": "published"
+    },
+    "agentic-tool-loops-on-device-architecting-autonomous-mobile-workflows-with-onnx-runtime": {
+      "title": "Agentic Tool Loops on Device: Architecting Autonomous Mobile Workflows with ONNX Runtime",
+      "date": "September 15, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 1551,
+      "status": "published"
+    },
+    "optimizing-impeller-on-low-end-vulkan-metal-devices-flutter-329-profiling-internals": {
+      "title": "Optimizing Impeller on Low-End Vulkan & Metal Devices: Flutter 3.29 Profiling Internals",
+      "date": "September 15, 2026",
+      "tag": "Flutter",
+      "wordCount": 1582,
+      "status": "published"
     }
   },
   "images": {
