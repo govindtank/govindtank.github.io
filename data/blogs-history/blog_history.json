@@ -870,6 +870,20 @@
       "tag": "Flutter",
       "wordCount": 1582,
       "status": "published"
+    },
+    "building-production-grade-model-context-protocol-mcp-clients-in-kotlin-multiplatform": {
+      "title": "Building Production-Grade Model Context Protocol (MCP) Clients in Kotlin Multiplatform",
+      "date": "September 16, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 1765,
+      "status": "published"
+    },
+    "deterministic-concurrency-with-dart-37-isolates-and-shared-memory-buffers": {
+      "title": "Deterministic Concurrency with Dart 3.7 Isolates and Shared Memory Buffers",
+      "date": "September 16, 2026",
+      "tag": "Flutter",
+      "wordCount": 1409,
+      "status": "published"
     }
   },
   "images": {

@@ -8,8 +8,26 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2026 02:31:28 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 03:13:03 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Building Production-Grade Model Context Protocol (MCP) Clients in Kotlin Multiplatform]]></title>
+      <link>https://govindtank.github.io/blog/building-production-grade-model-context-protocol-mcp-clients-in-kotlin-multiplatform</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/building-production-grade-model-context-protocol-mcp-clients-in-kotlin-multiplatform</guid>
+      <pubDate>Tue, 15 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Architect an on-device orchestration engine in Kotlin Multiplatform. Connect local Small Language Models with native device APIs and remote tools using the MCP specification.
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
+    <item>
+      <title><![CDATA[Deterministic Concurrency with Dart 3.7 Isolates and Shared Memory Buffers]]></title>
+      <link>https://govindtank.github.io/blog/deterministic-concurrency-with-dart-37-isolates-and-shared-memory-buffers</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/deterministic-concurrency-with-dart-37-isolates-and-shared-memory-buffers</guid>
+      <pubDate>Tue, 15 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Process 60fps camera frames without blocking the main UI thread using Dart 3.7+ background isolate channels and zero-copy TypedData sharing.
+]]></description>
+      <category>Flutter</category>
+    </item>
     <item>
       <title><![CDATA[Agentic Tool Loops on Device: Architecting Autonomous Mobile Workflows with ONNX Runtime]]></title>
       <link>https://govindtank.github.io/blog/agentic-tool-loops-on-device-architecting-autonomous-mobile-workflows-with-onnx-runtime</link>
