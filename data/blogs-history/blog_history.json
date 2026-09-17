@@ -884,6 +884,20 @@
       "tag": "Flutter",
       "wordCount": 1409,
       "status": "published"
+    },
+    "zero-latency-real-time-audio-transcription-mobile-whispercpp-and-coremlnnapi-pipelines": {
+      "title": "Zero-Latency Real-Time Audio Transcription: Mobile Whisper.cpp and CoreML/NNAPI Pipelines",
+      "date": "September 17, 2026",
+      "tag": "Mobile-AI",
+      "wordCount": 1891,
+      "status": "published"
+    },
+    "compose-multiplatform-for-ios-interop-architecture-uikit-gesture-bridges-and-skiko-performance": {
+      "title": "Compose Multiplatform for iOS: Interop Architecture, UIKit Gesture Bridges, and Skiko Performance",
+      "date": "September 17, 2026",
+      "tag": "Kotlin",
+      "wordCount": 1548,
+      "status": "published"
     }
   },
   "images": {
