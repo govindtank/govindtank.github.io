@@ -898,6 +898,20 @@
       "tag": "Kotlin",
       "wordCount": 1548,
       "status": "published"
+    },
+    "migrating-state-architectures-from-bloc-to-signal-based-reactivity-in-flutter-329": {
+      "title": "Migrating State Architectures from BLoC to Signal-Based Reactivity in Flutter 3.29+",
+      "date": "September 18, 2026",
+      "tag": "Flutter",
+      "wordCount": 1267,
+      "status": "published"
+    },
+    "offline-first-state-synchronization-implementing-automerge-yjs-crdts-in-mobile-apps": {
+      "title": "Offline-First State Synchronization: Implementing Automerge & Yjs CRDTs in Mobile Apps",
+      "date": "September 18, 2026",
+      "tag": "Architecture",
+      "wordCount": 1816,
+      "status": "published"
     }
   },
   "images": {
