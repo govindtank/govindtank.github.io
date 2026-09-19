@@ -912,6 +912,20 @@
       "tag": "Architecture",
       "wordCount": 1816,
       "status": "published"
+    },
+    "flutter-building-cross-platform-apps-with-server-driven-ui-patterns": {
+      "title": "Flutter: Building Cross-Platform Apps with Server-Driven UI Patterns",
+      "date": "September 19, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1598,
+      "status": "published"
+    },
+    "firebase-cloud-functions-serverless-backend-for-flutter-apps-at-scale": {
+      "title": "Firebase Cloud Functions: Serverless Backend for Flutter Apps at Scale",
+      "date": "September 19, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1735,
+      "status": "published"
     }
   },
   "images": {
