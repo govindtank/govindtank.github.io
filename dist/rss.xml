@@ -8,8 +8,26 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Sep 2026 02:32:22 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 02:47:15 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Flutter Web: Deploying AI Chat Apps with Server-Sent Events and WebSockets]]></title>
+      <link>https://govindtank.github.io/blog/flutter-web-deploying-ai-chat-apps-with-server-sent-events-and-websockets</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-web-deploying-ai-chat-apps-with-server-sent-events-and-websockets</guid>
+      <pubDate>Sat, 19 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Stream LLM responses in Flutter Web using Server-Sent Events and WebSockets. Covers connection lifecycles, state handling, and hosting caveats for production builds.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
+    <item>
+      <title><![CDATA[Micro-Frontends in Flutter: Dynamic Feature Modules and Isolated Custom Engines]]></title>
+      <link>https://govindtank.github.io/blog/micro-frontends-in-flutter-dynamic-feature-modules-and-isolated-custom-engines</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/micro-frontends-in-flutter-dynamic-feature-modules-and-isolated-custom-engines</guid>
+      <pubDate>Sat, 19 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[An architectural evaluation of scaling multi-team Flutter codebases using deferred components, dynamic asset loading, and isolate-sandboxed logic.
+]]></description>
+      <category>Flutter</category>
+    </item>
     <item>
       <title><![CDATA[Firebase Cloud Functions: Serverless Backend for Flutter Apps at Scale]]></title>
       <link>https://govindtank.github.io/blog/firebase-cloud-functions-serverless-backend-for-flutter-apps-at-scale</link>

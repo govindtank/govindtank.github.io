@@ -926,6 +926,20 @@
       "tag": "Mobile-Architecture",
       "wordCount": 1735,
       "status": "published"
+    },
+    "micro-frontends-in-flutter-dynamic-feature-modules-and-isolated-custom-engines": {
+      "title": "Micro-Frontends in Flutter: Dynamic Feature Modules and Isolated Custom Engines",
+      "date": "September 20, 2026",
+      "tag": "Flutter",
+      "wordCount": 1317,
+      "status": "published"
+    },
+    "flutter-web-deploying-ai-chat-apps-with-server-sent-events-and-websockets": {
+      "title": "Flutter Web: Deploying AI Chat Apps with Server-Sent Events and WebSockets",
+      "date": "September 20, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1484,
+      "status": "published"
     }
   },
   "images": {
