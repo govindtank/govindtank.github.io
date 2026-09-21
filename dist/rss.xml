@@ -8,8 +8,26 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Sep 2026 02:47:15 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 02:46:28 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Architecting Autonomous Mobile Agents: Multi-Turn Function Calling Loops with Dart Isolates and SLMs]]></title>
+      <link>https://govindtank.github.io/blog/architecting-autonomous-mobile-agents-multi-turn-function-calling-loops-with-dart-isolates-and-slms</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/architecting-autonomous-mobile-agents-multi-turn-function-calling-loops-with-dart-isolates-and-slms</guid>
+      <pubDate>Sun, 20 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Implement a ReAct agent workflow in Flutter 3.29 with Dart 3.7 isolate groups. Covers background execution queues and fallback token budgeting between edge SLMs and remote models.
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
+    <item>
+      <title><![CDATA[Modern Android Live Wallpapers with Jetpack Compose, NDK, and Material You Dynamic Theming]]></title>
+      <link>https://govindtank.github.io/blog/modern-android-live-wallpapers-with-jetpack-compose-ndk-and-material-you-dynamic-theming</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/modern-android-live-wallpapers-with-jetpack-compose-ndk-and-material-you-dynamic-theming</guid>
+      <pubDate>Sun, 20 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[A guide to building high-framerate, battery-efficient live wallpapers using custom C++ Vulkan/OpenGL engines, wired to Compose UI settings and styled via Android Monet dynamic theme palettes.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
     <item>
       <title><![CDATA[Flutter Web: Deploying AI Chat Apps with Server-Sent Events and WebSockets]]></title>
       <link>https://govindtank.github.io/blog/flutter-web-deploying-ai-chat-apps-with-server-sent-events-and-websockets</link>

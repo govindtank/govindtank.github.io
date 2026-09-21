@@ -940,6 +940,20 @@
       "tag": "Mobile-Architecture",
       "wordCount": 1484,
       "status": "published"
+    },
+    "modern-android-live-wallpapers-with-jetpack-compose-ndk-and-material-you-dynamic-theming": {
+      "title": "Modern Android Live Wallpapers with Jetpack Compose, NDK, and Material You Dynamic Theming",
+      "date": "September 21, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1952,
+      "status": "published"
+    },
+    "architecting-autonomous-mobile-agents-multi-turn-function-calling-loops-with-dart-isolates-and-slms": {
+      "title": "Architecting Autonomous Mobile Agents: Multi-Turn Function Calling Loops with Dart Isolates and SLMs",
+      "date": "September 21, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 1405,
+      "status": "published"
     }
   },
   "images": {
