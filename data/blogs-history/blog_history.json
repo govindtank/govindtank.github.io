@@ -954,6 +954,26 @@
       "tag": "AI-Engineering",
       "wordCount": 1405,
       "status": "published"
+    },
+    "on-device-slm-inference-with-llamacpp-and-npu-acceleration-via-android-nnapi-qualcomm-qnn": {
+      "title": "On-Device SLM Inference with Llama.cpp and NPU Acceleration via Android NNAPI & Qualcomm QNN",
+      "date": "September 22, 2026",
+      "tag": "Mobile-AI",
+      "wordCount": 1714,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Run LLMs Natively on Android NPU",
+        "description": "Compile GGUF models with llama.cpp + JNI, leverage NNAPI/Qualcomm QNN for NPU acceleration, and use memory-mapped I/O to prevent OOM crashes. Full offline SLM inference on Android.",
+        "tags": [
+          "#AndroidDev",
+          "#MobileAI",
+          "#LLM",
+          "#QualcommQNN",
+          "#NNAPI",
+          "#llama_cpp"
+        ],
+        "url": "https://govindtank.github.io/blog/on-device-slm-inference-with-llamacpp-and-npu-acceleration-via-android-nnapi-qualcomm-qnn"
+      }
     }
   },
   "images": {

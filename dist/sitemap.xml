@@ -9,6 +9,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.github.io/blog/on-device-slm-inference-with-llamacpp-and-npu-acceleration-via-android-nnapi-qualcomm-qnn</loc>
+    <lastmod>2026-09-21T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.github.io/blog/architecting-autonomous-mobile-agents-multi-turn-function-calling-loops-with-dart-isolates-and-slms</loc>
     <lastmod>2026-09-20T18:30:00.000Z</lastmod>
     <priority>0.7</priority>

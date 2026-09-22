@@ -778,7 +778,89 @@ def generate_single_post(topic, archetype=None, persona=None):
                 os.remove(path)
             return None
 
-    return path, slug, title, tag, date, wc, archetype
+    social = generate_social_snippet(topic, title, excerpt, tag, slug)
+    return path, slug, title, tag, date, wc, archetype, social
+
+# ======= SOCIAL MEDIA SNIPPET GENERATOR =======
+def generate_social_snippet(topic, title, excerpt, tag, slug):
+    """
+    Generates a catchy social-media ready short title, punchy description, and popular relatable hashtags.
+    """
+    url = f"https://govindtank.github.io/blog/{slug}"
+    tag_map = {
+        "Mobile-Architecture": ["#AndroidDev", "#MobileArchitecture", "#Kotlin", "#SoftwareEngineering", "#JetpackCompose"],
+        "Mobile-Development": ["#MobileDev", "#AndroidDev", "#iOSDev", "#SoftwareEngineering", "#TechTrends"],
+        "Flutter": ["#FlutterDev", "#DartLang", "#MobileDev", "#CrossPlatform", "#AppDevelopment"],
+        "AI-Engineering": ["#AIEngineering", "#GenerativeAI", "#LLMs", "#AI", "#TechInnovation"],
+        "Mobile-AI": ["#OnDeviceAI", "#MobileAI", "#EdgeAI", "#AndroidDev", "#MachineLearning"],
+        "Kotlin": ["#Kotlin", "#AndroidDev", "#KMP", "#CleanCode", "#SoftwareArchitecture"],
+        "Architecture": ["#SoftwareArchitecture", "#SystemDesign", "#CleanCode", "#TechLead", "#Developers"]
+    }
+    fallback_tags = list(tag_map.get(tag, ["#Tech", "#SoftwareEngineering", "#Programming", "#Developers", "#TechBlog"]))
+    
+    for kw in topic.get("keywords", []):
+        clean_kw = re.sub(r'[^a-zA-Z0-9]', '', kw.title())
+        if clean_kw and len(clean_kw) > 2 and f"#{clean_kw}" not in fallback_tags:
+            fallback_tags.append(f"#{clean_kw}")
+    fallback_tags = fallback_tags[:6]
+
+    system_prompt = (
+        "You are an expert tech developer advocate and social media copywriter. "
+        "Create an engaging, viral, developer-friendly social media teaser for LinkedIn and X/Twitter."
+    )
+    user_prompt = f"""Given this technical blog post:
+Title: {title}
+Category: {tag}
+Summary: {excerpt or topic.get('desc', '')}
+URL: {url}
+
+Generate a JSON object with:
+- "short_title": A catchy, high-impact headline/hook for social media (under 60 chars, e.g. '⚡ Mastering Offline RAG on Android').
+- "description": A punchy 1-2 sentence description explaining the key technical insight or value (under 180 chars).
+- "tags": An array of 4-6 popular, relatable developer hashtags (e.g. ["#AndroidDev", "#Kotlin", "#JetpackCompose"]).
+
+Return ONLY valid JSON."""
+
+    try:
+        raw = call_llm([{"role": "system", "content": system_prompt}, {"role": "user", "content": user_prompt}],
+                       temperature=0.7, max_tokens=300, timeout=25)
+        if raw:
+            m = re.search(r'\{[\s\S]*\}', raw)
+            if m:
+                data = json.loads(m.group(0))
+                short_title = data.get("short_title", title).strip()
+                description = data.get("description", excerpt).strip()
+                tags = data.get("tags", fallback_tags)
+                if isinstance(tags, list) and len(tags) >= 2:
+                    clean_tags = []
+                    for t in tags:
+                        t = t.strip()
+                        if not t.startswith('#'):
+                            t = f"#{t}"
+                        clean_tags.append(t)
+                    tags = clean_tags[:6]
+                else:
+                    tags = fallback_tags
+                return {
+                    "short_title": short_title,
+                    "description": description,
+                    "tags": tags,
+                    "url": url
+                }
+    except Exception as e:
+        log(f"  Social snippet notice: {e}")
+
+    # Deterministic fallback
+    short_title = title if len(title) <= 65 else (title[:62].rsplit(' ', 1)[0] + "...")
+    description = excerpt if excerpt else topic.get("desc", title)
+    if len(description) > 180:
+        description = description[:177].rsplit(' ', 1)[0] + "..."
+    return {
+        "short_title": short_title,
+        "description": description,
+        "tags": fallback_tags,
+        "url": url
+    }
 
 # ======= BUILD & GIT =======
 def verify_build():
@@ -889,16 +971,18 @@ def main(count=1):
         log(f"\n--- Generating Post {i+1} of {count} ---")
         res = generate_single_post(topic)
         if res:
-            path, slug, title, tag, date, wc, archetype = res
+            path, slug, title, tag, date, wc, archetype, social = res
             generated_posts.append({
                 "path": path, "slug": slug, "title": title, "tag": tag,
-                "date": date, "wc": wc, "archetype": archetype
+                "date": date, "wc": wc, "archetype": archetype,
+                "social": social
             })
             existing_slugs.add(slug)
             existing_titles.add(title.lower())
             history.setdefault("blogs", {})[slug] = {
                 "title": title, "date": date, "tag": tag,
-                "wordCount": wc, "status": "published"
+                "wordCount": wc, "status": "published",
+                "social": social
             }
 
     if not generated_posts:
@@ -925,8 +1009,25 @@ def main(count=1):
     
     print("\n" + "=" * 70)
     print(f"  AUTOMATION RESULT: {len(generated_posts)} post(s) generated, push={'SUCCESS' if ok else 'FAILED'}")
-    for p in generated_posts:
-        print(f"  • https://govindtank.github.io/blog/{p['slug']}")
+    print("=" * 70)
+    for idx, p in enumerate(generated_posts, start=1):
+        soc = p.get("social", {})
+        short_title = soc.get("short_title", p["title"])
+        desc = soc.get("description", p.get("title", ""))
+        tags_list = soc.get("tags", [])
+        tags_str = " ".join(tags_list)
+        url = soc.get("url", f"https://govindtank.github.io/blog/{p['slug']}")
+
+        print("\n" + "─" * 70)
+        print(f"📱 SOCIAL MEDIA POST #{idx} — READY TO SHARE")
+        print("─" * 70)
+        print(f"🎯 Catchy Short Title: {short_title}")
+        print(f"💡 Key Insight/Hook:   {desc}")
+        print(f"🔗 Published Blog URL: {url}")
+        print(f"🏷️ Relatable Tags:     {tags_str}")
+        print("\n📋 [Ready-to-Copy Social Mix]:")
+        print(f"🚀 {short_title}\n\n{desc}\n\n📖 Read the full deep-dive:\n👉 {url}\n\n{tags_str}")
+        print("─" * 70)
     print("=" * 70)
 
 if __name__ == "__main__":
