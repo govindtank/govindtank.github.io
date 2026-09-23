@@ -21,7 +21,15 @@ export default function GiscusComments({ slug, className = '' }: GiscusCommentsP
     script.setAttribute('data-repo-id', 'R_kgDOSMvqdw');
     script.setAttribute('data-category', 'General');
     script.setAttribute('data-category-id', 'DIC_kwDOSMvqd84DGOTu');
-    script.setAttribute('data-mapping', 'pathname');
+
+    // If slug is provided, use specific term mapping so modal and direct URL share the exact same thread
+    if (slug) {
+      script.setAttribute('data-mapping', 'specific');
+      script.setAttribute('data-term', `/blog/${slug}`);
+    } else {
+      script.setAttribute('data-mapping', 'pathname');
+    }
+
     script.setAttribute('data-strict', '0');
     script.setAttribute('data-reactions-enabled', '1');
     script.setAttribute('data-emit-metadata', '0');
