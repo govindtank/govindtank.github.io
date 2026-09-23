@@ -97,6 +97,21 @@ TOPICS = [
     {"title": "MCP Model Context Protocol in Practice", "slug": "mcp-model-context-protocol-developer-tools-practice-2026"},
     {"title": "Android 17 Modern Android Stack", "slug": "android-17-modern-android-stack-changes-2026"},
     {"title": "Antigravity vs Claude Code vs Codex", "slug": "antigravity-vs-claude-code-vs-codex-ai-coding-agent-2026"},
+    {"title": "Building Micro-Frontend Architectures with Module Federation", "slug": "micro-frontend-architecture-module-federation-web-components"},
+    {"title": "Kotlin Coroutines Deep Dive: Advanced Patterns for Concurrency", "slug": "kotlin-coroutines-deep-dive-advanced-concurrency-patterns"},
+    {"title": "Implementing Event Sourcing with CQRS in Production Systems", "slug": "event-sourcing-cqrs-production-systems-scalability"},
+    {"title": "Flutter Native Platform Channels: Performance vs Abstraction Tradeoffs", "slug": "flutter-native-platform-channels-performance-abstraction"},
+    {"title": "Building Reactive Data Flows with Kotlin Flow in Android Apps", "slug": "reactive-data-flows-kotlin-flow-android-streams"},
+    {"title": "Optimizing Android GPU Rendering for High-Performance Animations", "slug": "android-gpu-rendering-high-performance-animations-skia"},
+    {"title": "Implementing Circuit Breaker Pattern with Resilience4j in Microservices", "slug": "circuit-breaker-pattern-resilience4j-microservices-retry-strategy"},
+    {"title": "Building Feature Flags Infrastructure for Gradual Rollouts", "slug": "feature-flags-infrastructure-gradual-rollouts-canary-deployments"},
+    {"title": "Advanced Dependency Injection Patterns in Modern Android Architecture", "slug": "advanced-dependency-injection-android-hilt-koin-scopes"},
+    {"title": "Implementing GraphQL Federation with Apollo and Hasura", "slug": "graphql-federation-apollo-hasura-distributed-data-graphql"},
+    {"title": "Building Real-Time Collaboration Features with CRDTs", "slug": "real-time-collaboration-crds-content-replication-conflict-resolution"},
+    {"title": "Implementing Blue-Green Deployment with Zero Downtime", "slug": "blue-green-deployment-zero-downtime-strategies-canary-releases"},
+    {"title": "Building Multi-Tenant SaaS Architecture with Data Isolation", "slug": "multi-tenant-saas-architecture-data-isolation-strategies"},
+    {"title": "Advanced Android Jetpack Compose: Performance Optimization Techniques", "slug": "advanced-jetpack-compose-performance-optimization-gc-memleaks"},
+    {"title": "Implementing Distributed Tracing with OpenTelemetry in Python Services", "slug": "distributed-tracing-opentelemetry-python-microservices-monitoring"}
 ]
 
 def log_info(msg): print(f"[INFO] {datetime.now().strftime('%H:%M:%S')} - {msg}")
