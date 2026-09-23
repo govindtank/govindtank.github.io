@@ -21,6 +21,8 @@ import {
 } from 'lucide-react';
 import stripFrontmatter from '../lib/stripFrontmatter';
 import MarkdownRenderer, { slugifyHeading } from '../components/MarkdownRenderer';
+import GiscusComments from '../components/GiscusComments';
+import VisitorCounter from '../components/VisitorCounter';
 import { useSEO } from '../hooks/useSEO';
 
 const contentModules = import.meta.glob<string>('../content/blog/*.md', { query: '?raw', import: 'default' });
@@ -278,6 +280,7 @@ export default function BlogDetailPage() {
                 <Clock className="w-3.5 h-3.5" />
                 {post.readTime || 8} min read
               </span>
+              <VisitorCounter path={`/blog/${post.slug}`} label="views" variant="badge" />
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight mb-6">
@@ -426,6 +429,9 @@ export default function BlogDetailPage() {
               )}
             </div>
           </div>
+
+          {/* Community Discussions & Comments */}
+          <GiscusComments slug={slug} />
 
           {/* Related Articles Section */}
           {relatedPosts.length > 0 && (

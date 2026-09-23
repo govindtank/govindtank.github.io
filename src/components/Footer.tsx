@@ -1,5 +1,6 @@
 import React from 'react';
 import { Smartphone, Github, Linkedin, Mail } from 'lucide-react';
+import VisitorCounter from './VisitorCounter';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -64,7 +65,8 @@ export default function Footer() {
           <p>
             // Architecting mobile excellence since 2014
           </p>
-          <div className="flex gap-6">
+          <div className="flex gap-6 items-center flex-wrap">
+            <VisitorCounter variant="badge" label="verified site visits" />
             <span className="text-sky-400/80">System.Identity: Verified</span>
             <span className="text-emerald-400/80">Build.Status: Passing</span>
           </div>

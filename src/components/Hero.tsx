@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Github, Linkedin, Mail, ArrowRight, Cpu, Smartphone } from 'lucide-react';
+import VisitorCounter from './VisitorCounter';
 
 export default function Hero() {
   return (
@@ -31,14 +32,17 @@ export default function Hero() {
             className="lg:col-span-7"
           >
             <div className="space-y-2 mb-6">
-              <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-sky-400 font-mono text-xs tracking-[0.3em] uppercase font-bold"
-              >
-                // System.Initialize(Mobile_Architecture)
-              </motion.div>
+              <div className="flex items-center gap-3 flex-wrap">
+                <motion.div 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-sky-400 font-mono text-xs tracking-[0.3em] uppercase font-bold"
+                >
+                  // System.Initialize(Mobile_Architecture)
+                </motion.div>
+                <VisitorCounter variant="cyber" label="verified visits" />
+              </div>
               <h1 className="text-6xl md:text-8xl font-black leading-[0.85] tracking-tighter text-white">
                 <motion.div
                   animate={{ 

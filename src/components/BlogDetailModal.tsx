@@ -4,6 +4,8 @@ import { X, Calendar, Tag as TagIcon, Clock, BookOpen, Terminal, Linkedin, Loade
 import { BlogPost } from '../types';
 import stripFrontmatter from '../lib/stripFrontmatter';
 import MarkdownRenderer from './MarkdownRenderer';
+import GiscusComments from './GiscusComments';
+import VisitorCounter from './VisitorCounter';
 
 interface BlogDetailModalProps {
   selectedPost: BlogPost | null;
@@ -141,9 +143,10 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
                   {selectedPost.date}
                 </span>
                 <span className="text-[10px] text-slate-400 font-mono flex items-center gap-1.5">
-                  <Clock className="w-3 h-3" />
+                  <Clock className="w-3.5 h-3.5" />
                   {selectedPost.readTime || 8} min read
                 </span>
+                <VisitorCounter path={`/blog/${selectedPost.slug}`} label="views" variant="badge" />
               </div>
               <button
                 onClick={onClose}
@@ -266,6 +269,9 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
                   </div>
                 )}
               </div>
+
+              {/* Discussions & Community Comments */}
+              <GiscusComments slug={selectedPost.slug} />
 
               {/* Footer */}
               <div className="mt-16 pt-8 border-t border-white/10 flex items-center justify-between flex-wrap gap-4">
