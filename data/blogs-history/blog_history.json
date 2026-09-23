@@ -974,6 +974,26 @@
         ],
         "url": "https://govindtank.github.io/blog/on-device-slm-inference-with-llamacpp-and-npu-acceleration-via-android-nnapi-qualcomm-qnn"
       }
+    },
+    "zero-copy-audio-dsp-in-compose-multiplatform-ndk-oboe-coreaudio-bindings-via-kn-c-interop": {
+      "title": "Zero-Copy Audio DSP in Compose Multiplatform: NDK Oboe & CoreAudio Bindings via K/N C-Interop",
+      "date": "September 23, 2026",
+      "tag": "Kotlin",
+      "wordCount": 1646,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Zero-Copy Realtime Audio in KMP",
+        "description": "Achieve deterministic sub-10ms audio DSP in Kotlin Multiplatform with NDK Oboe, iOS CoreAudio, and lock-free ring buffers via C-Interop.",
+        "tags": [
+          "#KotlinMultiplatform",
+          "#AndroidDev",
+          "#iOSDev",
+          "#Kotlin",
+          "#AudioDev",
+          "#ComposeMultiplatform"
+        ],
+        "url": "https://govindtank.github.io/blog/zero-copy-audio-dsp-in-compose-multiplatform-ndk-oboe-coreaudio-bindings-via-kn-c-interop"
+      }
     }
   },
   "images": {

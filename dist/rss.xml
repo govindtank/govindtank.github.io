@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Sep 2026 03:10:21 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 02:31:11 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Zero-Copy Audio DSP in Compose Multiplatform: NDK Oboe & CoreAudio Bindings via K/N C-Interop]]></title>
+      <link>https://govindtank.github.io/blog/zero-copy-audio-dsp-in-compose-multiplatform-ndk-oboe-coreaudio-bindings-via-kn-c-interop</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/zero-copy-audio-dsp-in-compose-multiplatform-ndk-oboe-coreaudio-bindings-via-kn-c-interop</guid>
+      <pubDate>Tue, 22 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Achieve deterministic sub-10ms audio DSP in Kotlin Multiplatform. Uses K/N C-interop, lock-free ring buffers, and direct bindings to Android Oboe and iOS CoreAudio.
+]]></description>
+      <category>Kotlin</category>
+    </item>
     <item>
       <title><![CDATA[On-Device SLM Inference with Llama.cpp and NPU Acceleration via Android NNAPI & Qualcomm QNN]]></title>
       <link>https://govindtank.github.io/blog/on-device-slm-inference-with-llamacpp-and-npu-acceleration-via-android-nnapi-qualcomm-qnn</link>
