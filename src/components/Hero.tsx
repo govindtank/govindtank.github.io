@@ -41,7 +41,7 @@ export default function Hero() {
                 >
                   // System.Initialize(Mobile_Architecture)
                 </motion.div>
-                <VisitorCounter variant="cyber" label="verified visits" />
+                <VisitorCounter path="/" variant="cyber" label="verified visits" />
               </div>
               <h1 className="text-6xl md:text-8xl font-black leading-[0.85] tracking-tighter text-white">
                 <motion.div

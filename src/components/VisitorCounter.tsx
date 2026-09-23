@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Eye, Activity } from 'lucide-react';
 
 interface VisitorCounterProps {
-  path?: string; // 'TOTAL' or specific path like '/blog/slug'
+  path?: string; // '/' or specific path like '/blog/slug'
   label?: string;
   showIcon?: boolean;
   className?: string;
@@ -10,7 +10,7 @@ interface VisitorCounterProps {
 }
 
 export default function VisitorCounter({
-  path = 'TOTAL',
+  path = '/',
   label = 'verified visits',
   showIcon = true,
   className = '',
@@ -27,21 +27,29 @@ export default function VisitorCounter({
 
     async function fetchCount() {
       try {
-        const encodedPath = path === 'TOTAL' ? 'TOTAL' : encodeURIComponent(path.replace(/^\//, ''));
+        const normalizedPath = path === 'TOTAL' ? 'TOTAL' : (path.startsWith('/') ? path : `/${path}`);
+        const encodedPath = normalizedPath === 'TOTAL' ? 'TOTAL' : encodeURIComponent(normalizedPath);
         const url = `https://govindtank.goatcounter.com/counter/${encodedPath}.json`;
 
         const res = await fetch(url);
+
+        // GoatCounter returns HTTP 404 when a path has 0 views recorded in database
+        if (res.status === 404) {
+          if (!cancelled) setTargetCount(0);
+          return;
+        }
+
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
 
         // GoatCounter returns { count: "223", count_unique: "200" }
         const parsed = parseInt(data.count || data.count_unique || '0', 10);
-        if (!cancelled && !isNaN(parsed)) {
-          setTargetCount(parsed);
-        }
-      } catch (err) {
         if (!cancelled) {
-          setTargetCount(null);
+          setTargetCount(isNaN(parsed) ? 0 : parsed);
+        }
+      } catch {
+        if (!cancelled) {
+          setTargetCount(0);
         }
       } finally {
         if (!cancelled) setLoading(false);
@@ -99,7 +107,7 @@ export default function VisitorCounter({
     );
   }
 
-  const formattedCount = displayCount > 0 ? displayCount.toLocaleString() : (targetCount !== null ? targetCount.toLocaleString() : 'Live');
+  const formattedCount = displayCount.toLocaleString();
 
   // Variant: Minimal Inline
   if (variant === 'minimal') {

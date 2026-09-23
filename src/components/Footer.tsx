@@ -66,7 +66,7 @@ export default function Footer() {
             // Architecting mobile excellence since 2014
           </p>
           <div className="flex gap-6 items-center flex-wrap">
-            <VisitorCounter variant="badge" label="verified site visits" />
+            <VisitorCounter path="/" variant="badge" label="verified site visits" />
             <span className="text-sky-400/80">System.Identity: Verified</span>
             <span className="text-emerald-400/80">Build.Status: Passing</span>
           </div>

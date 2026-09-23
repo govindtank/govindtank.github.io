@@ -8,7 +8,7 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Sep 2026 02:31:11 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 13:17:54 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[Zero-Copy Audio DSP in Compose Multiplatform: NDK Oboe & CoreAudio Bindings via K/N C-Interop]]></title>
