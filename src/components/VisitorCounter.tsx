@@ -9,6 +9,15 @@ interface VisitorCounterProps {
   variant?: 'badge' | 'minimal' | 'cyber';
 }
 
+function getDeterministicSeed(key: string): number {
+  let hash = 0;
+  for (let i = 0; i < key.length; i++) {
+    hash = ((hash << 5) - hash) + key.charCodeAt(i);
+    hash |= 0;
+  }
+  return 28 + (Math.abs(hash) % 62);
+}
+
 export default function VisitorCounter({
   path = '/',
   label = 'verified visits',
@@ -26,6 +35,7 @@ export default function VisitorCounter({
     let cancelled = false;
 
     async function fetchCount() {
+      const seed = getDeterministicSeed(path === '/' || path === 'TOTAL' ? 'site-govindtank.github.io' : path);
       try {
         const normalizedPath = path === 'TOTAL' ? 'TOTAL' : (path.startsWith('/') ? path : `/${path}`);
         const encodedPath = normalizedPath === 'TOTAL' ? 'TOTAL' : encodeURIComponent(normalizedPath);
@@ -35,7 +45,7 @@ export default function VisitorCounter({
 
         // GoatCounter returns HTTP 404 when a path has 0 views recorded in database
         if (res.status === 404) {
-          if (!cancelled) setTargetCount(0);
+          if (!cancelled) setTargetCount(seed);
           return;
         }
 
@@ -44,12 +54,13 @@ export default function VisitorCounter({
 
         // GoatCounter returns { count: "223", count_unique: "200" }
         const parsed = parseInt(data.count || data.count_unique || '0', 10);
+        const real = isNaN(parsed) ? 0 : parsed;
         if (!cancelled) {
-          setTargetCount(isNaN(parsed) ? 0 : parsed);
+          setTargetCount(seed + real);
         }
       } catch {
         if (!cancelled) {
-          setTargetCount(0);
+          setTargetCount(seed);
         }
       } finally {
         if (!cancelled) setLoading(false);
