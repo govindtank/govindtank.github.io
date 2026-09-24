@@ -3,7 +3,7 @@ title: "AI Observability: Monitoring, Tracing, and Debugging LLM Applications in
 slug: "ai-observability-monitoring-tracing-and-debugging-llm-applications-in-production"
 date: "August 05, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1617791160505-6f00504e3519?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Observability"
 readTime: 20
 tags:

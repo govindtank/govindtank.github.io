@@ -4,7 +4,7 @@ slug: "green-ai-for-mobile-reducing-carbon-footprint-of-llm-usage-with-model-sel
 date: "August 30, 2026"
 excerpt: >
   Choosing smaller models for less capable devices and caching frequent responses can meaningfully cut the energy cost of running LLMs on mobile. This post looks at practical ways to match model size to device capabilit...
-coverImage: "https://images.unsplash.com/photo-1618172193622-ae2d025f4032?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&q=80&w=1200"
 category: "Sustainability"
 readTime: 3
 tags:

@@ -5,7 +5,7 @@ slug: "material-you-on-android-dark-mode-implementation-with-daynight-tokens"
 date: "September 09, 2026"
 excerpt: >
   Map Material You dynamic colors to DayNight tokens on Android. Covers theme setup, runtime palette switching, and avoiding common tinting bugs.
-coverImage: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Architecture"
 readTime: 6
 tags:

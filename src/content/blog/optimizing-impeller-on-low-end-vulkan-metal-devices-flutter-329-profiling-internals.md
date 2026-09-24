@@ -5,7 +5,7 @@ slug: "optimizing-impeller-on-low-end-vulkan-metal-devices-flutter-329-profiling
 date: "September 15, 2026"
 excerpt: >
   Diagnose frame drops, shader warmup bottlenecks, and custom DisplayList tessellation quirks on budget Android and older iOS hardware using the Flutter 3.29 GPU profiler.
-coverImage: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=1200"
 category: "Flutter"
 readTime: 8
 tags:

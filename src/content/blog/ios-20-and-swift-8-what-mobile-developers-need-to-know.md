@@ -3,7 +3,7 @@ title: "iOS 20 and Swift 8: What Mobile Developers Need to Know"
 slug: "ios-20-and-swift-8-what-mobile-developers-need-to-know"
 date: "July 22, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile"
 readTime: 5
 tags:

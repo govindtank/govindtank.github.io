@@ -4,7 +4,7 @@ slug: "zero-trust-architecture-implementing-security-in-distributed-cloud-system
 date: "July 19, 2026"
 excerpt: >
   The traditional perimeter-based security model has effectively collapsed under the weight of distributed cloud infrastructure, serverless computing, and mobile-first workforces. By 2026, the indust...
-coverImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=1200"
 category: "Security"
 readTime: 5
 tags:

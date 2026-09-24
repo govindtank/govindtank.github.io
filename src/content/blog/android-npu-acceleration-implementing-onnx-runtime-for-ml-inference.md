@@ -5,7 +5,7 @@ slug: "android-npu-acceleration-implementing-onnx-runtime-for-ml-inference"
 date: "September 07, 2026"
 excerpt: >
   This guide covers end-to-end implementation of ONNX Runtime for Android NPU-accelerated ML inference, including model quantization, compatibility validation, and side-by-side latency benchmarks against CPU and GPU exe...
-coverImage: "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Architecture"
 readTime: 3
 tags:

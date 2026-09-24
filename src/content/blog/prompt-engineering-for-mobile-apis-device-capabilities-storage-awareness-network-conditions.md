@@ -4,7 +4,7 @@ slug: "prompt-engineering-for-mobile-apis-device-capabilities-storage-awareness-
 date: "August 30, 2026"
 excerpt: >
   Structured mobile API prompts reduce failed calls by accounting for device hardware limits, local storage capacity, and variable network conditions, rather than treating all endpoints as identical
-coverImage: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1517070208688-4c0792070366?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Engineering"
 readTime: 4
 tags:

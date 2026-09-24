@@ -4,7 +4,7 @@ slug: "ai-powered-test-generation-for-flutterandroid-ui-coverage-edge-cases-flak
 date: "August 31, 2026"
 excerpt: >
   This post covers using LLMs to generate unit and integration tests for Flutter and Android, with a focus on achieving thorough UI state coverage, surfacing edge cases humans tend to miss, and flagging flaky tests befo...
-coverImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&q=80&w=1200"
 category: "Testing"
 readTime: 3
 tags:

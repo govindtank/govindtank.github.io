@@ -6,7 +6,7 @@ excerpt: >
   Starting August 14, auto mode becomes the default permission mode in Claude
   Code. The eval numbers are impressive, but they don't answer the question
   that matters: should your agent run without asking?
-coverImage: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Coding-Agents"
 readTime: 7
 tags:

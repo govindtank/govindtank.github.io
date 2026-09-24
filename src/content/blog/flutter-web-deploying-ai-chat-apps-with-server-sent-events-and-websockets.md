@@ -5,7 +5,7 @@ slug: "flutter-web-deploying-ai-chat-apps-with-server-sent-events-and-websockets
 date: "September 20, 2026"
 excerpt: >
   Stream LLM responses in Flutter Web using Server-Sent Events and WebSockets. Covers connection lifecycles, state handling, and hosting caveats for production builds.
-coverImage: "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Architecture"
 readTime: 7
 tags:

@@ -4,7 +4,7 @@ slug: "mobile-app-store-ai-review-guidelines-navigating-applegoogle-policy-chang
 date: "August 30, 2026"
 excerpt: >
   Apple and Google's 2026 AI review guidelines demand explicit documentation of data sources, clear disclosure of AI-generated content, and upfront user consent flows to avoid immediate rejection.
-coverImage: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&q=80&w=1200"
 category: "Business"
 readTime: 3
 tags:

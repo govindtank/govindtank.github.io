@@ -4,7 +4,7 @@ slug: "ethical-ai-in-mobile-apps-bias-detection-explainable-ai-gdpr-compliance-p
 date: "August 31, 2026"
 excerpt: >
   Mobile apps using AI must actively detect and mitigate bias in training data and model outputs, implement explainable AI techniques that translate model decisions into plain-language reasons users can act on, and embe...
-coverImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Ethics"
 readTime: 4
 tags:

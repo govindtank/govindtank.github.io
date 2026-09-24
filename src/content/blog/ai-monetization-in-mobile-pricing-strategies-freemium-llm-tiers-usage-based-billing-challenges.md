@@ -4,7 +4,7 @@ slug: "ai-monetization-in-mobile-pricing-strategies-freemium-llm-tiers-usage-bas
 date: "August 31, 2026"
 excerpt: >
   Mobile AI features demand new pricing models beyond simple subscriptions. This post examines real-world tiered approaches, freemium LLM limits, and usage-based billing pitfalls that actually drive revenue.
-coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=1200"
 category: "Business"
 readTime: 3
 tags:

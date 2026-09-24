@@ -5,7 +5,7 @@ slug: "kotlin-multiplatform-state-management-patterns-for-cross-platform-apps"
 date: "September 24, 2026"
 excerpt: >
   Stop fixing the same state bugs twice. Unify reactive business logic across Android and iOS with StateFlow, SharedFlow, and Compose Multiplatform.
-coverImage: "https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Development"
 readTime: 8
 tags:

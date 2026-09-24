@@ -3,7 +3,7 @@ title: "WebAssembly in 2026: From Browser to Edge Computing and Beyond"
 slug: "webassembly-in-2026-from-browser-to-edge-computing-and-beyond"
 date: "June 24, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1200"
 category: "WebAssembly"
 readTime: 5
 tags:

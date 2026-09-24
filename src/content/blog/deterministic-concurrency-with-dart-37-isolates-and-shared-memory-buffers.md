@@ -5,7 +5,7 @@ slug: "deterministic-concurrency-with-dart-37-isolates-and-shared-memory-buffers
 date: "September 16, 2026"
 excerpt: >
   Process 60fps camera frames without blocking the main UI thread using Dart 3.7+ background isolate channels and zero-copy TypedData sharing.
-coverImage: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200"
 category: "Flutter"
 readTime: 7
 tags:

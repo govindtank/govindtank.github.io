@@ -5,7 +5,7 @@ slug: "running-3b-slms-locally-on-android-ndk-bindings-gguf-quantization-and-npu
 date: "September 13, 2026"
 excerpt: >
   Bind llama.cpp to Jetpack Compose via JNI, offload 3B SLMs to Qualcomm Hexagon NPUs using QNN, and manage thermal throttling during long context streaming.
-coverImage: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-AI"
 readTime: 10
 tags:

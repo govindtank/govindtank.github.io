@@ -3,7 +3,7 @@ title: "Event Sourcing and CQRS: Practical Patterns for Distributed Systems"
 slug: "event-sourcing-and-cqrs-practical-patterns-for-distributed-systems"
 date: "June 22, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&q=80&w=1200"
 category: "Architecture"
 readTime: 18
 tags:

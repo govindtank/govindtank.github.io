@@ -4,7 +4,7 @@ slug: "ai-performance-budgets-managing-llm-latency-cost-vs-ux-expectations-with-
 date: "August 30, 2026"
 excerpt: >
   Caching LLM responses and using async patterns can cut latency and costs, but only if you budget for cache hit rates and user tolerance for delayed responses.
-coverImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&q=80&w=1200"
 category: "Performance"
 readTime: 4
 tags:
