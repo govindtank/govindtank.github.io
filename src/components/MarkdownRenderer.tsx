@@ -59,6 +59,13 @@ export function slugifyHeading(text: string): string {
     .replace(/(^-|-$)/g, '');
 }
 
+export function generateUniqueHeadingId(text: string, counts: Map<string, number>): string {
+  const base = slugifyHeading(text) || 'heading';
+  const count = counts.get(base) || 0;
+  counts.set(base, count + 1);
+  return count === 0 ? base : `${base}-${count}`;
+}
+
 export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
   const [copiedIndex, setCopiedIndex] = useState<string | null>(null);
   const [activeImage, setActiveImage] = useState<{ src: string; alt: string } | null>(null);
@@ -106,6 +113,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
   };
 
   const blocks = renderBlocks();
+  const headingCounts = new Map<string, number>();
 
   return (
     <MarkdownErrorBoundary>
@@ -126,7 +134,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
               components={{
                 h2({ children }: any) {
                   const text = extractText(children);
-                  const id = slugifyHeading(text);
+                  const id = generateUniqueHeadingId(text, headingCounts);
                   return (
                     <h2 id={id} className="scroll-mt-24 text-xl sm:text-2xl font-bold text-slate-100 mt-10 mb-4 tracking-tight border-b border-white/5 pb-2">
                       {children}
@@ -135,7 +143,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
                 },
                 h3({ children }: any) {
                   const text = extractText(children);
-                  const id = slugifyHeading(text);
+                  const id = generateUniqueHeadingId(text, headingCounts);
                   return (
                     <h3 id={id} className="scroll-mt-24 text-lg font-semibold text-slate-200 mt-8 mb-3">
                       {children}

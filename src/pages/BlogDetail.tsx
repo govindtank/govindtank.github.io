@@ -20,7 +20,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import stripFrontmatter from '../lib/stripFrontmatter';
-import MarkdownRenderer, { slugifyHeading } from '../components/MarkdownRenderer';
+import MarkdownRenderer, { slugifyHeading, generateUniqueHeadingId } from '../components/MarkdownRenderer';
 import GiscusComments from '../components/GiscusComments';
 import VisitorCounter from '../components/VisitorCounter';
 import { useSEO } from '../hooks/useSEO';
@@ -182,17 +182,18 @@ export default function BlogDetailPage() {
     return content.replace(/^\s*# .+/m, '').replace(/^\s*\n\s*/, '');
   };
 
-  // Extract headings for TOC
+  // Extract headings for TOC with unique IDs
   const tocItems = useMemo(() => {
     if (!fullContent) return [];
     const cleaned = cleanContent(fullContent);
     const headingRegex = /^(#{2,3})\s+(.+)$/gm;
     const items: { level: number; text: string; id: string }[] = [];
+    const counts = new Map<string, number>();
     let match;
     while ((match = headingRegex.exec(cleaned)) !== null) {
       const level = match[1].length;
       const text = match[2].trim();
-      const id = slugifyHeading(text);
+      const id = generateUniqueHeadingId(text, counts);
       if (id) {
         items.push({ level, text, id });
       }
