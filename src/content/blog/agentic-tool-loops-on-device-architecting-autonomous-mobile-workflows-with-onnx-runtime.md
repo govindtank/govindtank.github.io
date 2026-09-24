@@ -5,7 +5,7 @@ slug: "agentic-tool-loops-on-device-architecting-autonomous-mobile-workflows-wit
 date: "September 15, 2026"
 excerpt: >
   Build local ReAct and function-calling loops on mobile using ONNX Runtime and SLMs. Automate background OS actions entirely offline without cloud dependencies.
-coverImage: "https://images.unsplash.com/photo-1617791160505-6f00504e3519?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/agentic-tool-loops-on-device-architecting-autonomous-mobile-workflows-with-onnx-runtime.svg"
 category: "AI-Engineering"
 readTime: 8
 tags:

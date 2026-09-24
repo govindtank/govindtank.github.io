@@ -5,7 +5,7 @@ slug: "android-npu-acceleration-implementing-onnx-runtime-for-mobile-ml-inferenc
 date: "September 07, 2026"
 excerpt: >
   If you are building production Android ML inference for low-power computer vision or on-device NLP, you should skip NNAPI entirely and use ONNX Runtime’s QNN execution provider with a strict CPU fallback, not the defa...
-coverImage: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/android-npu-acceleration-implementing-onnx-runtime-for-mobile-ml-inference.svg"
 category: "Mobile-AI"
 readTime: 4
 tags:

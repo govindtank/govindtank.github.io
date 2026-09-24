@@ -4,7 +4,7 @@ slug: "ai-native-mobile-games-generative-narrative-real-time-opponent-adaptation
 date: "August 30, 2026"
 excerpt: >
   This post examines how mobile games use LLMs for real-time opponent adaptation and procedural content generation, creating dynamic difficulty curves and branching narratives that respond to player behavior without rel...
-coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/ai-native-mobile-games-generative-narrative-real-time-opponent-adaptation-procedural-content.svg"
 category: "Mobile-Games"
 readTime: 4
 tags:

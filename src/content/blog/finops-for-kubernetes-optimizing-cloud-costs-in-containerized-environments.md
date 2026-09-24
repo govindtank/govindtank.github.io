@@ -3,7 +3,7 @@ title: "FinOps for Kubernetes: Optimizing Cloud Costs in Containerized Environme
 slug: "finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments"
 date: "July 01, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments.svg"
 category: "DevOps"
 readTime: 5
 tags:

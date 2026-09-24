@@ -4,7 +4,7 @@ slug: "docker-for-mobile-developers-streamlining-android-and-flutter-build-pipel
 date: "August 23, 2026"
 excerpt: >
   Stop fighting "works on my machine" with mobile builds. Docker gives Android and Flutter teams reproducible CI pipelines, isolated SDK environments, and faster onboarding. Here's how to set it up without the usual pain.
-coverImage: "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/docker-for-mobile-developers-streamlining-android-and-flutter-build-pipelines.svg"
 category: "DevOps"
 readTime: 8
 tags:

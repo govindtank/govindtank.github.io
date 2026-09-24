@@ -4,7 +4,7 @@ slug: "flutter-beyond-mobile-desktop-web-and-embedded-targets-in-2026"
 date: "August 13, 2026"
 excerpt: >
   Flutter has outgrown phones. Here is how to actually ship desktop, web, and embedded builds from a single codebase without rewriting your app for each target.
-coverImage: "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/flutter-beyond-mobile-desktop-web-and-embedded-targets-in-2026.svg"
 category: "Flutter"
 readTime: 8
 tags:

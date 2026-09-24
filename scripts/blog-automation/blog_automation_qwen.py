@@ -17,9 +17,10 @@ import json, os, sys, re, time, subprocess, random, urllib.request, urllib.error
 from datetime import datetime, timezone
 import hashlib
 
-# Import the fine-grained contextual image matcher
+# Import the fine-grained contextual image matcher and SVG card generator
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from image_matcher import pick_contextual_image, detect_theme
+from svg_card_generator import save_svg_for_post
 
 # ======= CONFIGURATION =======
 PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../.."))
@@ -278,22 +279,22 @@ def used_images():
 
 def pick_image(category="", topic_title="", topic_desc="", topic_keywords=None, content="", slug=""):
     """
-    Context-aware image selection: uses fine-grained technical themes
-    (audio_dsp, ai_agents_llm, mobile_flutter_compose, graphics_shaders_wallpapers,
-     hardware_silicon_npu, distributed_crdt_data, cloud_security_devops, code_terminal_ide).
+    Generates and returns the clean dark-mode SVG architecture card URL (/covers/<slug>.svg)
+    ensuring 100% domain relevance, real code previews, and minimal clutter.
     """
-    used = used_images()
-    img_url, theme = pick_contextual_image(
-        category=category,
+    theme = detect_theme(category=category, title=topic_title, desc=topic_desc, keywords=topic_keywords, content=content)
+    covers_dir = os.path.join(PROJECT_ROOT, "public/covers")
+    svg_rel = save_svg_for_post(
+        slug=slug,
         title=topic_title,
+        category=category,
         desc=topic_desc,
-        keywords=topic_keywords,
+        theme=theme,
         content=content,
-        used_urls=used,
-        slug=slug
+        output_dir=covers_dir
     )
-    log(f"Contextual image matched [{theme}]: {img_url}")
-    return img_url
+    log(f"Generated clean SVG architecture card [{theme}]: {svg_rel}")
+    return svg_rel
 
 # ======= ARCHETYPES & PERSONAS =======
 ARCHETYPES = {

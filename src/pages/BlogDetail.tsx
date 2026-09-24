@@ -18,6 +18,9 @@ import {
   ChevronDown,
   List,
   Sparkles,
+  Send,
+  Share2,
+  MessageSquare,
 } from 'lucide-react';
 import stripFrontmatter from '../lib/stripFrontmatter';
 import MarkdownRenderer, { slugifyHeading, generateUniqueHeadingId } from '../components/MarkdownRenderer';
@@ -158,22 +161,54 @@ export default function BlogDetailPage() {
 
   const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
 
+  const getHashtags = () => {
+    const map: Record<string, string[]> = {
+      'Mobile-Architecture': ['AndroidDev', 'MobileArchitecture', 'JetpackCompose', 'Kotlin'],
+      'Mobile-Development': ['MobileDev', 'AndroidDev', 'iOSDev', 'KotlinMultiplatform'],
+      'Flutter': ['FlutterDev', 'DartLang', 'MobileDev', 'CrossPlatform'],
+      'AI-Engineering': ['AIEngineering', 'LLMs', 'GenerativeAI', 'TechInnovation'],
+      'Mobile-AI': ['OnDeviceAI', 'EdgeAI', 'MobileAI', 'AndroidDev'],
+      'Kotlin': ['Kotlin', 'AndroidDev', 'ComposeMultiplatform', 'CleanArchitecture'],
+      'Architecture': ['SoftwareArchitecture', 'SystemDesign', 'TechLead', 'Engineering']
+    };
+    return map[post?.tag || ''] || ['TechBlog', 'SoftwareEngineering', 'Programming', 'Developers'];
+  };
+
   const shareToPlatform = (platform: string) => {
-    const title = encodeURIComponent(post.title);
-    const text = encodeURIComponent(`Check out "${post.title}"`);
+    if (!post) return;
+    const title = post.title;
+    const excerpt = post.excerpt || '';
+    const hashtags = getHashtags();
+    const tagString = hashtags.map(h => `#${h}`).join(' ');
+
     switch (platform) {
-      case 'twitter':
-        window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${text}`, '_blank');
+      case 'twitter': {
+        const text = `⚡ ${title}\n\n${excerpt.slice(0, 140)}${excerpt.length > 140 ? '...' : ''}`;
+        window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(text)}&hashtags=${hashtags.slice(0, 4).join(',')}`, '_blank');
         break;
-      case 'linkedin':
-        window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${title}`, '_blank');
+      }
+      case 'linkedin': {
+        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank');
         break;
-      case 'copy':
-        navigator.clipboard.writeText(shareUrl).then(() => {
+      }
+      case 'telegram': {
+        const text = `🚀 *${title}*\n\n${excerpt}\n\n${tagString}`;
+        window.open(`https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(text)}`, '_blank');
+        break;
+      }
+      case 'whatsapp': {
+        const text = `🚀 *${title}*\n\n${excerpt}\n\n📖 Read full breakdown:\n👉 ${shareUrl}\n\n${tagString}`;
+        window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
+        break;
+      }
+      case 'copy': {
+        const fullShareSnippet = `🚀 ${title}\n\n${excerpt}\n\n📖 Read the full technical breakdown:\n👉 ${shareUrl}\n\n${tagString}`;
+        navigator.clipboard.writeText(fullShareSnippet).then(() => {
           setCopied(true);
-          setTimeout(() => setCopied(false), 2000);
+          setTimeout(() => setCopied(false), 2500);
         });
         break;
+      }
     }
   };
 
@@ -239,10 +274,11 @@ export default function BlogDetailPage() {
             <span>Back to Archive</span>
           </button>
 
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-1.5 sm:space-x-2">
             <button
               onClick={() => shareToPlatform('twitter')}
-              aria-label="Share on Twitter"
+              aria-label="Share on X / Twitter"
+              title="Share on X / Twitter"
               className="p-2 hover:bg-white/10 rounded-lg text-slate-400 hover:text-sky-400 transition-all"
             >
               <Twitter className="w-4 h-4" />
@@ -250,18 +286,39 @@ export default function BlogDetailPage() {
             <button
               onClick={() => shareToPlatform('linkedin')}
               aria-label="Share on LinkedIn"
+              title="Share on LinkedIn"
               className="p-2 hover:bg-white/10 rounded-lg text-slate-400 hover:text-blue-400 transition-all"
             >
               <Linkedin className="w-4 h-4" />
             </button>
             <button
+              onClick={() => shareToPlatform('telegram')}
+              aria-label="Share on Telegram"
+              title="Share on Telegram"
+              className="p-2 hover:bg-white/10 rounded-lg text-slate-400 hover:text-sky-400 transition-all"
+            >
+              <Send className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => shareToPlatform('whatsapp')}
+              aria-label="Share on WhatsApp"
+              title="Share on WhatsApp"
+              className="p-2 hover:bg-white/10 rounded-lg text-slate-400 hover:text-emerald-400 transition-all"
+            >
+              <MessageSquare className="w-4 h-4" />
+            </button>
+            <button
               onClick={() => shareToPlatform('copy')}
-              aria-label="Copy post URL"
-              className={`p-2 rounded-lg transition-all ${
-                copied ? 'bg-emerald-500/20 text-emerald-400' : 'hover:bg-white/10 text-slate-400 hover:text-white'
+              aria-label="Copy formatted share card"
+              title="Copy formatted share card"
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all ${
+                copied
+                  ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
+                  : 'bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10'
               }`}
             >
-              {copied ? <Check className="w-4 h-4" /> : <Clipboard className="w-4 h-4" />}
+              {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Clipboard className="w-3.5 h-3.5" />}
+              <span>{copied ? 'Copied!' : 'Share Card'}</span>
             </button>
           </div>
         </div>
@@ -428,6 +485,61 @@ export default function BlogDetailPage() {
                   )}
                 </div>
               )}
+            </div>
+          </div>
+
+          {/* Social Share Callout Card */}
+          <div className="mt-12 p-6 rounded-2xl bg-gradient-to-br from-slate-900/90 to-slate-950/80 border border-white/10 shadow-xl">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <span className="text-xs font-mono font-bold text-sky-400 uppercase tracking-wider block mb-1">
+                  ⚡ Spread the Knowledge
+                </span>
+                <h3 className="text-base font-bold text-white tracking-tight">
+                  Found this deep dive useful? Share with fellow engineers
+                </h3>
+                <p className="text-xs text-slate-400 mt-0.5">
+                  Sends the architecture card, key insight, and direct link.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-2">
+                <button
+                  onClick={() => shareToPlatform('twitter')}
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 border border-sky-500/20 text-xs font-mono font-semibold transition-all"
+                >
+                  <Twitter className="w-3.5 h-3.5" />
+                  <span>X / Twitter</span>
+                </button>
+                <button
+                  onClick={() => shareToPlatform('linkedin')}
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 border border-blue-500/20 text-xs font-mono font-semibold transition-all"
+                >
+                  <Linkedin className="w-3.5 h-3.5" />
+                  <span>LinkedIn</span>
+                </button>
+                <button
+                  onClick={() => shareToPlatform('telegram')}
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-sky-400/10 hover:bg-sky-400/20 text-sky-300 border border-sky-400/20 text-xs font-mono font-semibold transition-all"
+                >
+                  <Send className="w-3.5 h-3.5" />
+                  <span>Telegram</span>
+                </button>
+                <button
+                  onClick={() => shareToPlatform('whatsapp')}
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/20 text-xs font-mono font-semibold transition-all"
+                >
+                  <MessageSquare className="w-3.5 h-3.5" />
+                  <span>WhatsApp</span>
+                </button>
+                <button
+                  onClick={() => shareToPlatform('copy')}
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 text-xs font-mono font-semibold transition-all"
+                >
+                  {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Clipboard className="w-3.5 h-3.5" />}
+                  <span>{copied ? 'Copied to Clipboard!' : 'Copy Share Text'}</span>
+                </button>
+              </div>
             </div>
           </div>
 

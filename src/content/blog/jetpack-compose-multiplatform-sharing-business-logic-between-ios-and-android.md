@@ -5,7 +5,7 @@ slug: "jetpack-compose-multiplatform-sharing-business-logic-between-ios-and-andr
 date: "September 07, 2026"
 excerpt: >
   This post breaks down a real implementation of sharing core business logic across iOS and Android with Jetpack Compose Multiplatform, including how to handle platform-specific API calls without duplicating shared code...
-coverImage: "https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/jetpack-compose-multiplatform-sharing-business-logic-between-ios-and-android.svg"
 category: "Mobile-Architecture"
 readTime: 5
 tags:

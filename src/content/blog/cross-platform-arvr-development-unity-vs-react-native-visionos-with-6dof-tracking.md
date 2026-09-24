@@ -4,7 +4,7 @@ slug: "cross-platform-arvr-development-unity-vs-react-native-visionos-with-6dof-
 date: "August 30, 2026"
 excerpt: >
   Comparing Unity's native AR/VR support against React Native's web-based approach for building cross-platform spatial apps with 6DoF tracking on visionOS and other headsets.
-coverImage: "https://images.unsplash.com/photo-1526406915894-7bcd65f60845?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/cross-platform-arvr-development-unity-vs-react-native-visionos-with-6dof-tracking.svg"
 category: "AR-VR"
 readTime: 3
 tags:

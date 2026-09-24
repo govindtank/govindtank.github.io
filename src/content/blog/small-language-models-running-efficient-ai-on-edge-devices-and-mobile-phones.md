@@ -3,7 +3,7 @@ title: "Small Language Models: Running Efficient AI on Edge Devices and Mobile P
 slug: "small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones"
 date: "August 05, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones.svg"
 category: "Edge-AI"
 readTime: 5
 tags:

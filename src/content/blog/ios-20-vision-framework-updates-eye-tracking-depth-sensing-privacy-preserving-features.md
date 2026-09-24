@@ -4,7 +4,7 @@ slug: "ios-20-vision-framework-updates-eye-tracking-depth-sensing-privacy-preser
 date: "August 30, 2026"
 excerpt: >
   Apple's iOS 20 Vision Framework adds eye tracking for accessibility, enhanced depth sensing APIs, and on-device processing for privacy. New hand gesture recognition and improved face landmark detection expand sensing ...
-coverImage: "https://images.unsplash.com/photo-1526406915894-7bcd65f60845?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/ios-20-vision-framework-updates-eye-tracking-depth-sensing-privacy-preserving-features.svg"
 category: "iOS"
 readTime: 3
 tags:

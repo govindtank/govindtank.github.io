@@ -4,7 +4,7 @@ slug: "cross-platform-mobile-in-2026-flutter-vs-react-native-vs-kotlin-multiplat
 date: "September 01, 2026"
 excerpt: >
   A 2026 comparison of Flutter, React Native, Kotlin Multiplatform, and Tauri across performance, bundle size, native API access, team skill requirements, and a decision matrix for new mobile projects.
-coverImage: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/cross-platform-mobile-in-2026-flutter-vs-react-native-vs-kotlin-multiplatform-vs-tauri.svg"
 category: "Mobile-Dev"
 readTime: 3
 tags:

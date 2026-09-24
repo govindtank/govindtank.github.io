@@ -3,7 +3,7 @@ title: "CSS Container Queries and Style Queries: Responsive Design Beyond Media 
 slug: "css-container-queries-and-style-queries-responsive-design-beyond-media-queries"
 date: "July 02, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1546707012-c46675f12716?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/css-container-queries-and-style-queries-responsive-design-beyond-media-queries.svg"
 category: "Web-Dev"
 readTime: 6
 tags:

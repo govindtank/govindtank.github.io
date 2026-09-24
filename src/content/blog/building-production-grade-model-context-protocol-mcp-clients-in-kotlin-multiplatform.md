@@ -5,7 +5,7 @@ slug: "building-production-grade-model-context-protocol-mcp-clients-in-kotlin-mu
 date: "September 16, 2026"
 excerpt: >
   Architect an on-device orchestration engine in Kotlin Multiplatform. Connect local Small Language Models with native device APIs and remote tools using the MCP specification.
-coverImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/building-production-grade-model-context-protocol-mcp-clients-in-kotlin-multiplatform.svg"
 category: "AI-Engineering"
 readTime: 9
 tags:

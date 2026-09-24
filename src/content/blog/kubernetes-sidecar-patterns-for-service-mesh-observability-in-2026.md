@@ -3,7 +3,7 @@ title: "Kubernetes Sidecar Patterns for Service Mesh Observability in 2026"
 slug: "kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026"
 date: "July 31, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026.svg"
 category: "Cloud-Native"
 readTime: 5
 tags:

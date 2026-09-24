@@ -5,7 +5,7 @@ slug: "flutter-riverpod-vs-bloc-vs-provider-performance-benchmarks-2026"
 date: "September 10, 2026"
 excerpt: >
   Direct benchmarks comparing Riverpod, Bloc, and Provider across widget rebuild counts, memory usage, and frame render times under heavy UI loads.
-coverImage: "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/flutter-riverpod-vs-bloc-vs-provider-performance-benchmarks-2026.svg"
 category: "Mobile-Architecture"
 readTime: 8
 tags:

@@ -3,7 +3,7 @@ title: "PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing
 slug: "postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing"
 date: "July 30, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing.svg"
 category: "Databases"
 readTime: 5
 tags:

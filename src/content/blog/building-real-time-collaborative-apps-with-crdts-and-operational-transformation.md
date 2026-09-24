@@ -3,7 +3,7 @@ title: "Building Real-Time Collaborative Apps with CRDTs and Operational Transfo
 slug: "building-real-time-collaborative-apps-with-crdts-and-operational-transformation"
 date: "July 03, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/building-real-time-collaborative-apps-with-crdts-and-operational-transformation.svg"
 category: "Architecture"
 readTime: 4
 tags:

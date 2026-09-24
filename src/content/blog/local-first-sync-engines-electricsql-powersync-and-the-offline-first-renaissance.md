@@ -4,7 +4,7 @@ slug: "local-first-sync-engines-electricsql-powersync-and-the-offline-first-rena
 date: "August 29, 2026"
 excerpt: >
   A practical look at how ElectricSQL and PowerSync handle real-world sync challenges: conflict resolution strategies, partial data replication across devices, and the trade-offs between eventual consistency and user ex...
-coverImage: "https://images.unsplash.com/photo-1541462608143-67571c6738dd?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/local-first-sync-engines-electricsql-powersync-and-the-offline-first-renaissance.svg"
 category: "Architecture"
 readTime: 3
 tags:

@@ -5,7 +5,7 @@ slug: "dynamic-color-contrast-tokens-in-android-mastering-material-you-3-theme-e
 date: "September 14, 2026"
 excerpt: >
   Architecture patterns for dynamic palette extraction, contrast-aware token hierarchies, and DayNight styling across large, modular Jetpack Compose codebases.
-coverImage: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/dynamic-color-contrast-tokens-in-android-mastering-material-you-3-theme-engines.svg"
 category: "Mobile-Architecture"
 readTime: 8
 tags:

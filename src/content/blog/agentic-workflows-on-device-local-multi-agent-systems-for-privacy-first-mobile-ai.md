@@ -4,7 +4,7 @@ slug: "agentic-workflows-on-device-local-multi-agent-systems-for-privacy-first-m
 date: "August 30, 2026"
 excerpt: >
   Running multiple AI agents locally on mobile devices using on-device LLMs that route tasks between each other without cloud dependencies. Keeps all data on the device while enabling complex multi-step AI workflows.
-coverImage: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&q=80&w=1200"
+coverImage: "/covers/agentic-workflows-on-device-local-multi-agent-systems-for-privacy-first-mobile-ai.svg"
 category: "Mobile-AI"
 readTime: 4
 tags:
