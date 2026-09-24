@@ -5,7 +5,7 @@ slug: "agentic-ai-building-autonomous-workflows-with-langgraph-and-crewai"
 date: "September 11, 2026"
 excerpt: >
   A practical comparison of LangGraph and CrewAI for autonomous workflows. Covers cyclic state machines, role-based orchestration, and production trade-offs with code.
-coverImage: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1618172193622-ae2d025f4032?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Architecture"
 readTime: 5
 tags:

@@ -4,7 +4,7 @@ slug: "hybrid-native-web-apps-platform-specific-features-vs-pwareact-native-trad
 date: "August 30, 2026"
 excerpt: >
   Here's a concise, no-fluff excerpt (98 characters): > Flutter for heavy platform integration; PWA/React Native for broad reach. Benchmarks and feature detection guide the 2026 choice.
-coverImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Architecture"
 readTime: 3
 tags:

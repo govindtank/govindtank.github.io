@@ -8,7 +8,7 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Sep 2026 02:31:22 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 06:14:20 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[Building Offline-First MCP Hosts on Android: Implementing Model Context Protocol Over Local Transports]]></title>
@@ -18,6 +18,15 @@
       <description><![CDATA[Build an embedded MCP server on Android to expose SQLite schemas, hardware sensors, and Keystore operations to on-device LLMs over local IPC transports.
 ]]></description>
       <category>AI-Engineering</category>
+    </item>
+    <item>
+      <title><![CDATA[Kotlin Multiplatform: State Management Patterns for Cross-Platform Apps]]></title>
+      <link>https://govindtank.github.io/blog/kotlin-multiplatform-state-management-patterns-for-cross-platform-apps</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/kotlin-multiplatform-state-management-patterns-for-cross-platform-apps</guid>
+      <pubDate>Wed, 23 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Stop fixing the same state bugs twice. Unify reactive business logic across Android and iOS with StateFlow, SharedFlow, and Compose Multiplatform.
+]]></description>
+      <category>Mobile-Development</category>
     </item>
     <item>
       <title><![CDATA[Zero-Copy Audio DSP in Compose Multiplatform: NDK Oboe & CoreAudio Bindings via K/N C-Interop]]></title>

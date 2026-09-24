@@ -14,6 +14,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://govindtank.github.io/blog/kotlin-multiplatform-state-management-patterns-for-cross-platform-apps</loc>
+    <lastmod>2026-09-23T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.github.io/blog/zero-copy-audio-dsp-in-compose-multiplatform-ndk-oboe-coreaudio-bindings-via-kn-c-interop</loc>
     <lastmod>2026-09-22T18:30:00.000Z</lastmod>
     <priority>0.7</priority>

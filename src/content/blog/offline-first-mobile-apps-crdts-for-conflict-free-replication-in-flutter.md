@@ -5,7 +5,7 @@ slug: "offline-first-mobile-apps-crdts-for-conflict-free-replication-in-flutter"
 date: "September 09, 2026"
 excerpt: >
   How to use Conflict-Free Replicated Data Types (CRDTs) in Flutter to synchronize offline-first data across devices without server-side merge conflicts.
-coverImage: "https://images.unsplash.com/photo-1526406915894-7bcd65f60845?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1564865878688-9a244444042a?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Architecture"
 readTime: 8
 tags:

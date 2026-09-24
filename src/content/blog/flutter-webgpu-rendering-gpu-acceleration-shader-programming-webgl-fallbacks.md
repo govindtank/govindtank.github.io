@@ -4,7 +4,7 @@ slug: "flutter-webgpu-rendering-gpu-acceleration-shader-programming-webgl-fallba
 date: "August 30, 2026"
 excerpt: >
   Flutter's WebGPU integration enables direct GPU compute shaders and rasterization pipelines, but requires careful memory budgeting and shader complexity management to maintain 60fps across mobile and desktop targets.
-coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&q=80&w=1200"
 category: "Flutter"
 readTime: 3
 tags:

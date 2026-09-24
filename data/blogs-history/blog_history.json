@@ -1014,6 +1014,26 @@
         ],
         "url": "https://govindtank.github.io/blog/building-offline-first-mcp-hosts-on-android-implementing-model-context-protocol-over-local-transports"
       }
+    },
+    "kotlin-multiplatform-state-management-patterns-for-cross-platform-apps": {
+      "title": "Kotlin Multiplatform: State Management Patterns for Cross-Platform Apps",
+      "date": "September 24, 2026",
+      "tag": "Mobile-Development",
+      "wordCount": 1557,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Fix State Bugs Once: Master Kotlin Multiplatform State",
+        "description": "Unify reactive business logic across Android & iOS. Master StateFlow, SharedFlow, and Compose Multiplatform to stop rewriting state.",
+        "tags": [
+          "#KotlinMultiplatform",
+          "#AndroidDev",
+          "#iOSDev",
+          "#Kotlin",
+          "#ComposeMultiplatform",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/kotlin-multiplatform-state-management-patterns-for-cross-platform-apps"
+      }
     }
   },
   "images": {

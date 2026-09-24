@@ -5,7 +5,7 @@ slug: "micro-frontends-in-flutter-dynamic-feature-modules-and-isolated-custom-en
 date: "September 20, 2026"
 excerpt: >
   An architectural evaluation of scaling multi-team Flutter codebases using deferred components, dynamic asset loading, and isolate-sandboxed logic.
-coverImage: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=1200"
 category: "Flutter"
 readTime: 7
 tags:

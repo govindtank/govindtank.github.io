@@ -3,7 +3,7 @@ title: "Kotlin Multiplatform in Production: Sharing Business Logic Across Androi
 slug: "kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026"
 date: "July 20, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?auto=format&fit=crop&q=80&w=1200"
 category: "Kotlin-Multiplatform"
 readTime: 6
 tags:

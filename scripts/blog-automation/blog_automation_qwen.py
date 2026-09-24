@@ -17,6 +17,10 @@ import json, os, sys, re, time, subprocess, random, urllib.request, urllib.error
 from datetime import datetime, timezone
 import hashlib
 
+# Import the fine-grained contextual image matcher
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from image_matcher import pick_contextual_image, detect_theme
+
 # ======= CONFIGURATION =======
 PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../.."))
 CONTENT_DIR = f"{PROJECT_ROOT}/src/content/blog"
@@ -179,23 +183,24 @@ def extract_json_payload(raw_text):
 def replenish_trending_topics(existing_slugs, existing_titles):
     """Generates 15 fresh trending topics matching Govind's profile via LLM."""
     log("Replenishing topic pool with fresh 2026 tech trends...")
-    prompt = """Generate 15 fresh, trending, highly relevant technical blog post topics for a Senior Mobile Architect & AI Engineer (Govind Tank).
-Focus on real-world practical challenges across:
-1. Flutter 3.29+ / Dart 3.7+ (rendering engines, performance profiling, advanced state patterns)
-2. Modern Android (Android 17, Material You DayNight tokens, Jetpack Compose, Live Wallpapers, NDK/JNI)
-3. Kotlin Multiplatform & Compose Multiplatform for iOS
-4. Edge AI / On-Device ML (Llama.cpp, GGUF quantization, NPU acceleration, ONNX Runtime, SLMs)
-5. Agentic AI & MCP (Model Context Protocol, autonomous workflows, tool-use loops)
-6. Local-First Architecture, CRDTs, and offline-first mobile sync
+    prompt = """Generate 15 fresh, viral, high-value technical blog post topics for a Senior Mobile Architect & AI Engineer (Govind Tank).
+Focus on real-world engineering problems developers actively search for and share:
+1. Flutter 3.29+ / Dart 3.7+ (Impeller Vulkan profiling, Signals vs Riverpod, WASM Web performance, isolating memory leaks)
+2. Modern Android (Android 16/17, Material 3 Expressive, Predictive Back, AGSL Shaders, NDK zero-copy audio/video)
+3. Kotlin Multiplatform 2.2 (Compose Multiplatform iOS memory & binary size, Ktor 3.0 SSE, C-Interop bindings)
+4. Edge AI & On-Device SLMs (DeepSeek-R1, Qwen 2.5, Llama.cpp NDK compilation, GGUF Q4_K_M, Qualcomm QNN/NPU benchmarks)
+5. Agentic AI & Model Context Protocol (MCP hosts on Android, tool-calling loops, multi-agent state machines, local RAG with sqlite-vec)
+6. Local-First Systems & CRDTs (PowerSync vs Automerge vs ElectricSQL, offline SQLite sync)
 
-Rules:
-- Give distinct, realistic, high-impact technical titles (no generic buzzword fluff).
+Title Formulation Rules:
+- Write high-CTR, problem-first titles that engineers click (e.g. 'Why Your Flutter App Janks...', 'How We Ran 3B SLMs on Android...', 'Signals vs Riverpod in 2026: Benchmark Numbers').
+- Avoid dry academic jargon or generic high-level overviews.
 - Format STRICTLY as a JSON array of objects:
 [
   {
-    "title": "Exact Title of the Blog Post",
+    "title": "Compelling Practitioner-Focused Title",
     "tag": "Mobile-Architecture / Flutter / AI-Engineering / Mobile-AI / Kotlin / Architecture",
-    "desc": "1-2 sentences on key focus, real-world scenario, and architectural takeaway.",
+    "desc": "1-2 sentences detailing the exact production pain point, architecture fix, and measurable takeaway.",
     "keywords": ["keyword1", "keyword2", "keyword3"]
   }
 ]
@@ -271,57 +276,24 @@ def used_images():
             pass
     return used
 
-def pick_image(category="", topic_title="", topic_desc="", topic_keywords=None):
+def pick_image(category="", topic_title="", topic_desc="", topic_keywords=None, content="", slug=""):
     """
-    Context-aware image selection: matches keywords from title/desc/tags
-    against Unsplash photo tags and curated categories, avoiding recently used images.
+    Context-aware image selection: uses fine-grained technical themes
+    (audio_dsp, ai_agents_llm, mobile_flutter_compose, graphics_shaders_wallpapers,
+     hardware_silicon_npu, distributed_crdt_data, cloud_security_devops, code_terminal_ide).
     """
-    pool = load_pool()
     used = used_images()
-    available = [u for u in pool if u not in used]
-    if not available:
-        available = pool
-    if not available:
-        return "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200"
-
-    # Contextual keywords
-    context_text = f"{category} {topic_title} {topic_desc} {' '.join(topic_keywords or [])}".lower()
-    
-    # Priority image categories based on topic context
-    category_pools = {
-        "mobile": [
-            "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1526406915894-7bcd65f60845?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200",
-        ],
-        "ai": [
-            "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
-        ],
-        "architecture": [
-            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200",
-        ],
-        "code": [
-            "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200",
-        ]
-    }
-    
-    # Try finding matching context pool
-    for theme, urls in category_pools.items():
-        if theme in context_text or (theme == "mobile" and any(k in context_text for k in ["android", "flutter", "ios", "compose", "wallpaper"])):
-            matched = [u for u in urls if u not in used]
-            if matched:
-                return random.choice(matched)
-                
-    h = int(hashlib.md5((topic_title + category + datetime.now().strftime("%Y%m%d%H%M%S") + str(random.random())).encode()).hexdigest(), 16)
-    return available[h % len(available)]
+    img_url, theme = pick_contextual_image(
+        category=category,
+        title=topic_title,
+        desc=topic_desc,
+        keywords=topic_keywords,
+        content=content,
+        used_urls=used,
+        slug=slug
+    )
+    log(f"Contextual image matched [{theme}]: {img_url}")
+    return img_url
 
 # ======= ARCHETYPES & PERSONAS =======
 ARCHETYPES = {
@@ -525,39 +497,46 @@ def call_llm(messages, temperature=0.75, max_tokens=6000, timeout=45):
 def build_prompts(topic, archetype, persona, excerpt_only=False):
     arch = ARCHETYPES[archetype]
     if excerpt_only:
-        system = "You write concise, honest blog post abstracts. Max 200 characters. No fluff, no marketing language, no 'In this article'."
-        user = (f"Write a 1-2 sentence excerpt (max 200 chars) for a blog post titled '{topic['title']}' "
-                f"about {topic.get('desc', '')}. Plain, specific, no AI clichés.")
+        system = "You write concise, compelling, high-CTR blog post abstracts. Max 200 characters. No fluff, no marketing hype, no 'In this article'."
+        user = (f"Write a 1-2 sentence high-impact excerpt (max 200 chars) for a blog post titled '{topic['title']}' "
+                f"about {topic.get('desc', '')}. Highlight the concrete problem and payoff.")
         return system, user
 
     banned = "; ".join(BANNED_PHRASES[:25])
-    system = f"""You are writing a comprehensive, authoritative technical blog post. {persona}
+    system = f"""You are writing a high-signal, practitioner-grade technical blog post that developers bookmark and share. {persona}
 
 Post type: {arch['label']}.
 
 Structure to follow:
+- Start immediately with H1: # {topic['title']}
+- Immediately following the H1, ALWAYS include a clean executive TL;DR callout box:
+  > **TL;DR**: [1-2 sentences summarizing the core finding, pattern, or decision].
+  > - **The Problem**: [What caused friction, latency, memory pressure, or jank]
+  > - **The Solution**: [The concrete architecture pattern or code fix]
+  > - **The Result**: [Concrete metric: e.g. sub-10ms latency, 60 FPS, 0 cloud API cost]
 {chr(10).join('- ' + s for s in arch['structure'])}
+- Always include a section on 'What broke in practice' or 'Common pitfalls and how to avoid them'.
+- Always include clean, realistic, compilable code snippets with inline comments explaining why specific choices were made.
+- If relevant to the archetype, include a crisp Markdown comparison / decision matrix table.
 
 Rules:
-- Write thoroughly and informatively. Provide rich technical depth, code explanations, and concrete scenarios without artificial truncation.
+- Write with practitioner authority. Provide rich technical depth, realistic architecture, and concrete code without artificial truncation.
 - Ensure the post is completely written from start to finish. Never stop mid-thought, mid-sentence, or mid-code-block.
-- Sentence-case headings. Short and clear.
-- First person welcome. Call out real trade-offs honestly.
-- Use realistic, clean code snippets where appropriate.
-- Start immediately with H1: # {topic['title']}
-- End with a complete, practical takeaway thought, NOT 'Conclusion' or 'Future Outlook'.
+- Sentence-case headings. Short, descriptive, and punchy.
+- First person welcome ('I', 'we'). Call out real trade-offs honestly without sugarcoating.
+- End with a complete, practical action item for the reader's codebase, NOT 'Conclusion' or 'Future Outlook'.
 - Only H1 is #. Subsections use ## and ###.
 
 Banned clichés: {banned}
 No emojis. No fake benchmarks. No invented stats."""
 
-    user = f"""Write the complete blog post now from introduction to full closing thoughts.
+    user = f"""Write the complete, highly engaging blog post now from the H1 title down to the practical takeaways.
 
 Title: {topic['title']}
 Tag/category: {topic.get('tag', 'Mobile-Architecture')}
 Topic context: {topic.get('desc', '')}
 
-Remember: {arch['label']}, thorough informative technical quality, clean code, no banned phrases, start with the H1, and make sure the post is fully completed with a proper closing thought."""
+Remember: {arch['label']}, include the TL;DR callout block at the top, high-signal code with comments, real production pitfalls, sentence-case headings, no banned phrases, and ensure the post is fully completed."""
     return system, user
 
 # ======= VALIDATION & COMPLETION CHECK =======
@@ -754,7 +733,9 @@ def generate_single_post(topic, archetype=None, persona=None):
         category=tag,
         topic_title=title,
         topic_desc=topic.get("desc", ""),
-        topic_keywords=topic.get("keywords", [])
+        topic_keywords=topic.get("keywords", []),
+        content=content,
+        slug=slug
     )
     date = format_date()
     path = write_content_md(slug, content, title, tag, date, excerpt, image_url)

@@ -4,7 +4,7 @@ slug: "ai-agents-in-production-from-prototypes-to-reliable-autonomous-systems"
 date: "August 29, 2026"
 excerpt: >
   Evaluating AI agents requires measuring task success, not just accuracy. Reliable deployment means building guardrails that catch hallucinations, observability that tracks real-world performance, and human oversight f...
-coverImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Engineering"
 readTime: 3
 tags:

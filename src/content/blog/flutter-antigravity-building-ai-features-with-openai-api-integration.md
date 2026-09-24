@@ -5,7 +5,7 @@ slug: "flutter-antigravity-building-ai-features-with-openai-api-integration"
 date: "September 11, 2026"
 excerpt: >
   Connect Flutter apps to the OpenAI API with this practical guide. Covers authentication, streaming chat responses, error handling, and UI state management.
-coverImage: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Architecture"
 readTime: 6
 tags:

@@ -4,7 +4,7 @@ slug: "ai-native-ides-for-mobile-development-flutter-ai-features-android-studio-
 date: "August 31, 2026"
 excerpt: >
   Exploring VS Code alternatives built for mobile-first development with integrated AI coding assistance, from Flutter's native AI features to Android Studio's Gemini integration.
-coverImage: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?auto=format&fit=crop&q=80&w=1200"
 category: "DevTools"
 readTime: 3
 tags:

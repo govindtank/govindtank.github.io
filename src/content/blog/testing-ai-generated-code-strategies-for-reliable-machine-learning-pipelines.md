@@ -3,7 +3,7 @@ title: "Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipe
 slug: "testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines"
 date: "July 21, 2026"
 excerpt: >
-coverImage: "https://images.unsplash.com/photo-1541462608143-67571c6738dd?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1200"
 category: "AI-ML"
 readTime: 6
 tags:

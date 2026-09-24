@@ -4,7 +4,7 @@ slug: "the-future-of-webassembly-beyond-the-browser-into-cloud-and-edge"
 date: "August 26, 2026"
 excerpt: >
   WebAssembly is moving past browsers into runtimes like Wasmtime and Wasmer, enabling server-side rendering, sandboxed plugin architectures, and lightweight cloud-native workloads at the edge.
-coverImage: "https://images.unsplash.com/photo-1522252234503-e356532cafd5?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200"
 category: "WebAssembly"
 readTime: 4
 tags:

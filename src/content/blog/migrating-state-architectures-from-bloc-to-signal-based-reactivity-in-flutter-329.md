@@ -5,7 +5,7 @@ slug: "migrating-state-architectures-from-bloc-to-signal-based-reactivity-in-flu
 date: "September 18, 2026"
 excerpt: >
   A migration analysis comparing BLoC streams to granular signals in Flutter 3.29+, evaluating rebuild counts, memory footprint, and ergonomics in large codebases.
-coverImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&q=80&w=1200"
 category: "Flutter"
 readTime: 6
 tags:

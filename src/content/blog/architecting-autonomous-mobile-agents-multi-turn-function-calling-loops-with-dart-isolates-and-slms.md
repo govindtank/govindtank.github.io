@@ -5,7 +5,7 @@ slug: "architecting-autonomous-mobile-agents-multi-turn-function-calling-loops-w
 date: "September 21, 2026"
 excerpt: >
   Implement a ReAct agent workflow in Flutter 3.29 with Dart 3.7 isolate groups. Covers background execution queues and fallback token budgeting between edge SLMs and remote models.
-coverImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1617791160505-6f00504e3519?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Engineering"
 readTime: 7
 tags:

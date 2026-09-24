@@ -5,7 +5,7 @@ date: "August 21, 2026"
 excerpt: >
   How we shipped a new checkout flow in 20 minutes without touching the App Store,
   and the trade-offs we learned after running server-driven UI in production for two years.
-coverImage: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile"
 readTime: 8
 tags:

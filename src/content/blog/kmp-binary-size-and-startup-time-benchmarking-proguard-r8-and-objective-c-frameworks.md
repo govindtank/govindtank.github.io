@@ -5,7 +5,7 @@ slug: "kmp-binary-size-and-startup-time-benchmarking-proguard-r8-and-objective-c
 date: "September 14, 2026"
 excerpt: >
   A benchmark of KMP artifact footprints on Android and iOS. Measures R8 dead-code elimination against Xcode strip levels and dSYM handling to track binary size and cold startup impact.
-coverImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200"
 category: "Kotlin"
 readTime: 9
 tags:

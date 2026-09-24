@@ -5,7 +5,7 @@ slug: "zero-copy-audio-dsp-in-compose-multiplatform-ndk-oboe-coreaudio-bindings-
 date: "September 23, 2026"
 excerpt: >
   Achieve deterministic sub-10ms audio DSP in Kotlin Multiplatform. Uses K/N C-interop, lock-free ring buffers, and direct bindings to Android Oboe and iOS CoreAudio.
-coverImage: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=1200"
 category: "Kotlin"
 readTime: 8
 tags:

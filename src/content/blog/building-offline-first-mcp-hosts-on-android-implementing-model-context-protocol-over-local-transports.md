@@ -5,7 +5,7 @@ slug: "building-offline-first-mcp-hosts-on-android-implementing-model-context-pr
 date: "September 24, 2026"
 excerpt: >
   Build an embedded MCP server on Android to expose SQLite schemas, hardware sensors, and Keystore operations to on-device LLMs over local IPC transports.
-coverImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Engineering"
 readTime: 10
 tags:

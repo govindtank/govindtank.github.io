@@ -4,7 +4,7 @@ slug: "cross-lingual-mobile-development-low-resource-languages-cultural-ui-adapt
 date: "August 31, 2026"
 excerpt: >
   Building mobile apps for speakers of low-resource languages means tackling missing fonts, broken text rendering, and keyboards that don't exist yet. This post covers practical approaches to cultural UI adaptation and ...
-coverImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Architecture"
 readTime: 3
 tags:

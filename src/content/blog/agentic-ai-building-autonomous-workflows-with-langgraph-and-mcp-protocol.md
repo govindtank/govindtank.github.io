@@ -5,7 +5,7 @@ slug: "agentic-ai-building-autonomous-workflows-with-langgraph-and-mcp-protocol"
 date: "September 08, 2026"
 excerpt: >
   This guide details building autonomous AI workflows with LangGraph and the MCP protocol, covering MCP server integrations, iterative tool-calling loops, multi-agent orchestration, and production-ready eval pipelines.
-coverImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Engineering"
 readTime: 4
 tags:
