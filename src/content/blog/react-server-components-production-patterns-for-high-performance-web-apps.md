@@ -3,7 +3,7 @@ title: "React Server Components: Production Patterns for High-Performance Web Ap
 slug: "react-server-components-production-patterns-for-high-performance-web-apps"
 date: "June 16, 2026"
 excerpt: >
-coverImage: "/covers/react-server-components-production-patterns-for-high-performance-web-apps.svg"
+coverImage: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=1200"
 category: "Web-Dev"
 readTime: 18
 tags:

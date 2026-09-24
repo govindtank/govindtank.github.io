@@ -3,7 +3,7 @@ title: "Distributed Tracing with OpenTelemetry: From Instrumentation to Producti
 slug: "distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging"
 date: "June 29, 2026"
 excerpt: >
-coverImage: "/covers/distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging.svg"
+coverImage: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=1200"
 category: "Observability"
 readTime: 5
 tags:

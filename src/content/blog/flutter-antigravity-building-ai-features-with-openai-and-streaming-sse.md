@@ -5,7 +5,7 @@ slug: "flutter-antigravity-building-ai-features-with-openai-and-streaming-sse"
 date: "September 12, 2026"
 excerpt: >
   Implements OpenAI SSE streaming in Flutter with real-time markdown token rendering, resilient retry channels, and client-side chat state management.
-coverImage: "/covers/flutter-antigravity-building-ai-features-with-openai-and-streaming-sse.svg"
+coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"
 category: "Flutter"
 readTime: 7
 tags:

@@ -5,7 +5,7 @@ slug: "hardware-accelerated-live-wallpapers-with-jetpack-compose-agsl-and-androi
 date: "September 13, 2026"
 excerpt: >
   Implement high-performance Android WallpaperServices using AGSL shaders and native C++ render loops. Covers Compose integration and frame pacing to control battery usage.
-coverImage: "/covers/hardware-accelerated-live-wallpapers-with-jetpack-compose-agsl-and-android-ndk.svg"
+coverImage: "https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Architecture"
 readTime: 8
 tags:

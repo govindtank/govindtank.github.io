@@ -279,22 +279,22 @@ def used_images():
 
 def pick_image(category="", topic_title="", topic_desc="", topic_keywords=None, content="", slug=""):
     """
-    Generates and returns the clean dark-mode SVG architecture card URL (/covers/<slug>.svg)
-    ensuring 100% domain relevance, real code previews, and minimal clutter.
+    Context-aware image selection: matches keywords from title/desc/tags
+    against fine-grained technical themes (Audio DSP, AI Agents, Mobile UI, Shaders, Silicon/NPU, Distributed CRDT, Cloud Security).
+    Returns verified, live high-resolution CDN URLs.
     """
-    theme = detect_theme(category=category, title=topic_title, desc=topic_desc, keywords=topic_keywords, content=content)
-    covers_dir = os.path.join(PROJECT_ROOT, "public/covers")
-    svg_rel = save_svg_for_post(
-        slug=slug,
-        title=topic_title,
+    used = used_images()
+    img_url, theme = pick_contextual_image(
         category=category,
+        title=topic_title,
         desc=topic_desc,
-        theme=theme,
+        keywords=topic_keywords,
         content=content,
-        output_dir=covers_dir
+        used_urls=used,
+        slug=slug
     )
-    log(f"Generated clean SVG architecture card [{theme}]: {svg_rel}")
-    return svg_rel
+    log(f"Contextual CDN image matched [{theme}]: {img_url}")
+    return img_url
 
 # ======= ARCHETYPES & PERSONAS =======
 ARCHETYPES = {

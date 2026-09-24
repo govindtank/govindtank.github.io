@@ -3,7 +3,7 @@ title: "The Evolution of Kotlin Multiplatform in 2026"
 slug: "kotlin-multiplatform-evolution-in-2026"
 date: "May 29, 2026"
 excerpt: >
-coverImage: "/covers/kotlin-multiplatform-evolution-in-2026.svg"
+coverImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200"
 category: "Kotlin-Multiplatform"
 readTime: 18
 tags:

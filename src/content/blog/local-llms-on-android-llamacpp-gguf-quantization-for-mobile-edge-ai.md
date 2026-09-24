@@ -5,7 +5,7 @@ slug: "local-llms-on-android-llamacpp-gguf-quantization-for-mobile-edge-ai"
 date: "September 07, 2026"
 excerpt: >
   This guide covers deploying quantized Llama.cpp GGUF LLMs natively on Android, no cloud required. It includes latency and memory benchmarks for 4
-coverImage: "/covers/local-llms-on-android-llamacpp-gguf-quantization-for-mobile-edge-ai.svg"
+coverImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Architecture"
 readTime: 4
 tags:

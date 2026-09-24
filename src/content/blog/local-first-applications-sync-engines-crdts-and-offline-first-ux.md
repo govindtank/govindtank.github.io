@@ -4,7 +4,7 @@ slug: "local-first-applications-sync-engines-crdts-and-offline-first-ux"
 date: "August 17, 2026"
 excerpt: >
   We shipped a local-first sync layer last quarter. Here's what CRDTs actually bought us, where they hurt, and why most teams are still over-engineering their offline story.
-coverImage: "/covers/local-first-applications-sync-engines-crdts-and-offline-first-ux.svg"
+coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
 category: "Architecture"
 readTime: 8
 tags:

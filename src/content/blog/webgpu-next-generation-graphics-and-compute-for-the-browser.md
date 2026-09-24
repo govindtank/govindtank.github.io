@@ -3,7 +3,7 @@ title: "WebGPU: Next-Generation Graphics and Compute for the Browser"
 slug: "webgpu-next-generation-graphics-and-compute-for-the-browser"
 date: "July 29, 2026"
 excerpt: >
-coverImage: "/covers/webgpu-next-generation-graphics-and-compute-for-the-browser.svg"
+coverImage: "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&q=80&w=1200"
 category: "Web-Dev"
 readTime: 5
 tags:

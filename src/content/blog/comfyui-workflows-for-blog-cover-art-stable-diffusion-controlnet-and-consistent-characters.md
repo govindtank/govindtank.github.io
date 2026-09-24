@@ -4,7 +4,7 @@ slug: "comfyui-workflows-for-blog-cover-art-stable-diffusion-controlnet-and-cons
 date: "September 03, 2026"
 excerpt: >
   A step-by-step ComfyUI node graph that combines SDXL, ControlNet, and IP-Adapter to generate consistent blog cover art with reproducible character designs. Learn how to build a workflow that maintains character identi...
-coverImage: "/covers/comfyui-workflows-for-blog-cover-art-stable-diffusion-controlnet-and-consistent-characters.svg"
+coverImage: "https://images.unsplash.com/photo-1519683109079-d5f539e1542f?auto=format&fit=crop&q=80&w=1200"
 category: "AI-ML"
 readTime: 3
 tags:

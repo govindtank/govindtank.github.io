@@ -5,7 +5,7 @@ slug: "ai-native-ides-using-flutters-ai-features-for-faster-development"
 date: "September 10, 2026"
 excerpt: >
   AI-native IDEs speed up Flutter workflows through context-aware widget scaffolding, automated refactoring, and targeted build error fixes.
-coverImage: "/covers/ai-native-ides-using-flutters-ai-features-for-faster-development.svg"
+coverImage: "https://images.unsplash.com/photo-1617791160505-6f00504e3519?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Architecture"
 readTime: 5
 tags:

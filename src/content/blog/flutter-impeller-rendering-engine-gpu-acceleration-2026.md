@@ -3,7 +3,7 @@ title: "Flutter Impeller Rendering Engine: GPU Acceleration Strategies for Produ
 slug: "flutter-impeller-rendering-engine-gpu-acceleration-2026"
 date: "July 18, 2026"
 excerpt: >
-coverImage: "/covers/flutter-impeller-rendering-engine-gpu-acceleration-2026.svg"
+coverImage: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=1200"
 category: "Flutter"
 readTime: 10
 tags:

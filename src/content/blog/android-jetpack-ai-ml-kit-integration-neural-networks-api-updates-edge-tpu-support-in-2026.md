@@ -4,7 +4,7 @@ slug: "android-jetpack-ai-ml-kit-integration-neural-networks-api-updates-edge-tp
 date: "August 30, 2026"
 excerpt: >
   Android's 2026 ML Kit updates add live translation, pose detection, and custom model support. Neural Networks API gains GPU compute and quantization, while Edge TPU integration enables fast on-device inference.
-coverImage: "/covers/android-jetpack-ai-ml-kit-integration-neural-networks-api-updates-edge-tpu-support-in-2026.svg"
+coverImage: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&q=80&w=1200"
 category: "Android"
 readTime: 3
 tags:

@@ -5,7 +5,7 @@ slug: "zero-latency-real-time-audio-transcription-mobile-whispercpp-and-coremlnn
 date: "September 17, 2026"
 excerpt: >
   Building a streaming Whisper.cpp pipeline on iOS and Android using CoreML and NNAPI. Covers native audio ring-buffers, quantization tradeoffs, and strict mobile memory constraints.
-coverImage: "/covers/zero-latency-real-time-audio-transcription-mobile-whispercpp-and-coremlnnapi-pipelines.svg"
+coverImage: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-AI"
 readTime: 9
 tags:

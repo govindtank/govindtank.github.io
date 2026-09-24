@@ -4,7 +4,7 @@ slug: "llm-centric-app-design-token-aware-ui-context-window-management-cost-mode
 date: "August 31, 2026"
 excerpt: >
   Applications designed around LLMs treat every token as a priced resource, with streaming interfaces that react to model output in real-time and cost models baked into the request lifecycle. This shifts UI architecture...
-coverImage: "/covers/llm-centric-app-design-token-aware-ui-context-window-management-cost-modeling.svg"
+coverImage: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Native-Apps"
 readTime: 3
 tags:

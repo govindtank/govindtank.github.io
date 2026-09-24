@@ -5,7 +5,7 @@ slug: "on-device-slm-inference-with-llamacpp-and-npu-acceleration-via-android-nn
 date: "September 22, 2026"
 excerpt: >
   Compile and run quantized GGUF models natively on Android. Uses llama.cpp, JNI, NNAPI/Qualcomm QNN, and memory-mapped I/O to maximize NPU throughput and avoid OOM crashes.
-coverImage: "/covers/on-device-slm-inference-with-llamacpp-and-npu-acceleration-via-android-nnapi-qualcomm-qnn.svg"
+coverImage: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-AI"
 readTime: 9
 tags:

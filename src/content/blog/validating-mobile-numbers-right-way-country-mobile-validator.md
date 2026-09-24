@@ -13,7 +13,7 @@ tags:
   - MobileValidation
   - PhoneNumber
   - pubdev
-coverImage: "/covers/validating-mobile-numbers-right-way-country-mobile-validator.svg"
+coverImage: "https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?auto=format&fit=crop&q=80&w=1200"
 readTime: 8
 ---
 

@@ -4,7 +4,7 @@ slug: "javascript-runtime-wars-2026-nodejs-bun-deno-compared"
 date: "August 20, 2026"
 excerpt: >
   Node.js is no longer the only serious JavaScript runtime. Bun hit 1.0, Deno shipped 2.x with Node compat, and each made very different bets about what developers actually need. Here's how they compare for real projects in 2026.
-coverImage: "/covers/javascript-runtime-wars-2026-nodejs-bun-deno-compared.svg"
+coverImage: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80&w=1200"
 category: "Web-Dev"
 readTime: 9
 tags:

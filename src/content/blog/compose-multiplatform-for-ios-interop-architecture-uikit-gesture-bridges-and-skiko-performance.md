@@ -5,7 +5,7 @@ slug: "compose-multiplatform-for-ios-interop-architecture-uikit-gesture-bridges-
 date: "September 17, 2026"
 excerpt: >
   A production analysis of Compose Multiplatform on iOS, covering UIKitView bridge overhead, Skiko memory leaks, and touch latency reconciliation.
-coverImage: "/covers/compose-multiplatform-for-ios-interop-architecture-uikit-gesture-bridges-and-skiko-performance.svg"
+coverImage: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=1200"
 category: "Kotlin"
 readTime: 8
 tags:

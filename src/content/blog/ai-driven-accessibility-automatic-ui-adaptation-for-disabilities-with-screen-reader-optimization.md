@@ -4,7 +4,7 @@ slug: "ai-driven-accessibility-automatic-ui-adaptation-for-disabilities-with-scr
 date: "August 31, 2026"
 excerpt: >
   Mobile apps can now adapt interfaces automatically for visual, auditory, and motor impairments through code that detects assistive tech usage and modifies layouts, captions, and input methods in real time.
-coverImage: "/covers/ai-driven-accessibility-automatic-ui-adaptation-for-disabilities-with-screen-reader-optimization.svg"
+coverImage: "https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&q=80&w=1200"
 category: "Accessibility"
 readTime: 4
 tags:

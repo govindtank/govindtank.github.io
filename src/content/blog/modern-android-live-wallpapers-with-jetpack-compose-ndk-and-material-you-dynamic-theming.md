@@ -5,7 +5,7 @@ slug: "modern-android-live-wallpapers-with-jetpack-compose-ndk-and-material-you-
 date: "September 21, 2026"
 excerpt: >
   A guide to building high-framerate, battery-efficient live wallpapers using custom C++ Vulkan/OpenGL engines, wired to Compose UI settings and styled via Android Monet dynamic theme palettes.
-coverImage: "/covers/modern-android-live-wallpapers-with-jetpack-compose-ndk-and-material-you-dynamic-theming.svg"
+coverImage: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Architecture"
 readTime: 10
 tags:

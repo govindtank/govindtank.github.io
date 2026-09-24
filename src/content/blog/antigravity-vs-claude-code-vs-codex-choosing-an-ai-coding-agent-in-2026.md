@@ -4,7 +4,7 @@ slug: "antigravity-vs-claude-code-vs-codex-choosing-an-ai-coding-agent-in-2026"
 date: "August 06, 2026"
 excerpt: >
   Three coding agents, three weeks of real work, one honest comparison. I ran Google Antigravity, Claude Code, and Codex on the same tasks to see which one you should actually pay for.
-coverImage: "/covers/antigravity-vs-claude-code-vs-codex-choosing-an-ai-coding-agent-in-2026.svg"
+coverImage: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&q=80&w=1200"
 category: "AI-Coding-Agents"
 readTime: 8
 tags:

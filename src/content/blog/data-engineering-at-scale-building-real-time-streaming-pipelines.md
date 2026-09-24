@@ -3,7 +3,7 @@ title: "Data Engineering at Scale: Building Real-Time Streaming Pipelines"
 slug: "data-engineering-at-scale-building-real-time-streaming-pipelines"
 date: "June 19, 2026"
 excerpt: >
-coverImage: "/covers/data-engineering-at-scale-building-real-time-streaming-pipelines.svg"
+coverImage: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200"
 category: "Data-Engineering"
 readTime: 22
 tags:

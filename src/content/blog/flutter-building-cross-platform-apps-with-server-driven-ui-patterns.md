@@ -5,7 +5,7 @@ slug: "flutter-building-cross-platform-apps-with-server-driven-ui-patterns"
 date: "September 19, 2026"
 excerpt: >
   Define Flutter layouts using backend JSON schemas to update UI without store releases. Covers component mapping, dynamic event handling, and schema validation.
-coverImage: "/covers/flutter-building-cross-platform-apps-with-server-driven-ui-patterns.svg"
+coverImage: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Architecture"
 readTime: 8
 tags:

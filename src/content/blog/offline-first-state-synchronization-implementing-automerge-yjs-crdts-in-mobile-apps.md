@@ -5,7 +5,7 @@ slug: "offline-first-state-synchronization-implementing-automerge-yjs-crdts-in-m
 date: "September 18, 2026"
 excerpt: >
   A technical guide to embedding Automerge and Yjs in mobile apps, using SQLite for local persistence and WebSockets for conflict-free state sync.
-coverImage: "/covers/offline-first-state-synchronization-implementing-automerge-yjs-crdts-in-mobile-apps.svg"
+coverImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200"
 category: "Architecture"
 readTime: 9
 tags:

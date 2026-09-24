@@ -4,7 +4,7 @@ slug: "effective-typescript-57-inference-const-generics-and-template-literal-typ
 date: "September 02, 2026"
 excerpt: >
   TypeScript 5.7 tightens inference for partial objects, makes const type parameters more practical, and extends template literal type resolution. Covers real patterns for library authors and when to use `satisfies` ove...
-coverImage: "/covers/effective-typescript-57-inference-const-generics-and-template-literal-types.svg"
+coverImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200"
 category: "Web-Dev"
 readTime: 3
 tags:

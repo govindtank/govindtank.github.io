@@ -5,7 +5,7 @@ slug: "android-studio-ai-integration-using-copilot-and-github-codespaces-for-mob
 date: "September 12, 2026"
 excerpt: >
   Set up GitHub Copilot in Android Studio and run builds in Codespaces. A practical setup guide for cloud-based Android development workflows.
-coverImage: "/covers/android-studio-ai-integration-using-copilot-and-github-codespaces-for-mobile-dev.svg"
+coverImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Architecture"
 readTime: 6
 tags:

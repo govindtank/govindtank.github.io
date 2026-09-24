@@ -3,7 +3,7 @@ title: "AI-Augmented Development Workflows: Architecting the Future of Software 
 slug: "ai-augmented-development-workflows-architecting-the-future-of-software-engineering"
 date: "June 02, 2026"
 excerpt: >
-coverImage: "/covers/ai-augmented-development-workflows-architecting-the-future-of-software-engineering.svg"
+coverImage: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80&w=1200"
 category: "AI"
 readTime: 18
 tags:

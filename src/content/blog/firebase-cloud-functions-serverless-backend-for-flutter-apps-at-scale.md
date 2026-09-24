@@ -5,7 +5,7 @@ slug: "firebase-cloud-functions-serverless-backend-for-flutter-apps-at-scale"
 date: "September 19, 2026"
 excerpt: >
   How to build serverless backends for Flutter using Firebase Cloud Functions. Covers event triggers, background tasks, security, and scaling bottlenecks.
-coverImage: "/covers/firebase-cloud-functions-serverless-backend-for-flutter-apps-at-scale.svg"
+coverImage: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Architecture"
 readTime: 9
 tags:
