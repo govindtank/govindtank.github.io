@@ -994,6 +994,26 @@
         ],
         "url": "https://govindtank.github.io/blog/zero-copy-audio-dsp-in-compose-multiplatform-ndk-oboe-coreaudio-bindings-via-kn-c-interop"
       }
+    },
+    "building-offline-first-mcp-hosts-on-android-implementing-model-context-protocol-over-local-transports": {
+      "title": "Building Offline-First MCP Hosts on Android: Implementing Model Context Protocol Over Local Transports",
+      "date": "September 24, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 2090,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Offline-First MCP Hosts on Android",
+        "description": "Run embedded Model Context Protocol servers locally on Android to expose SQLite, sensors, and Keystore to on-device LLMs over IPC.",
+        "tags": [
+          "#AndroidDev",
+          "#ModelContextProtocol",
+          "#OnDeviceAI",
+          "#Kotlin",
+          "#AIEngineering",
+          "#LLM"
+        ],
+        "url": "https://govindtank.github.io/blog/building-offline-first-mcp-hosts-on-android-implementing-model-context-protocol-over-local-transports"
+      }
     }
   },
   "images": {

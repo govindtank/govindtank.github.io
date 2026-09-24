@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Sep 2026 13:17:54 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 02:31:22 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Building Offline-First MCP Hosts on Android: Implementing Model Context Protocol Over Local Transports]]></title>
+      <link>https://govindtank.github.io/blog/building-offline-first-mcp-hosts-on-android-implementing-model-context-protocol-over-local-transports</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/building-offline-first-mcp-hosts-on-android-implementing-model-context-protocol-over-local-transports</guid>
+      <pubDate>Wed, 23 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Build an embedded MCP server on Android to expose SQLite schemas, hardware sensors, and Keystore operations to on-device LLMs over local IPC transports.
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
     <item>
       <title><![CDATA[Zero-Copy Audio DSP in Compose Multiplatform: NDK Oboe & CoreAudio Bindings via K/N C-Interop]]></title>
       <link>https://govindtank.github.io/blog/zero-copy-audio-dsp-in-compose-multiplatform-ndk-oboe-coreaudio-bindings-via-kn-c-interop</link>
