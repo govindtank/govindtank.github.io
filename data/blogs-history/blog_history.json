@@ -1034,6 +1034,26 @@
         ],
         "url": "https://govindtank.github.io/blog/kotlin-multiplatform-state-management-patterns-for-cross-platform-apps"
       }
+    },
+    "running-4-bit-deepseek-qwen-on-android-18-tokenssec-with-zero-cloud-apis": {
+      "title": "Running 4-Bit DeepSeek & Qwen on Android: 18 Tokens/Sec with Zero Cloud APIs",
+      "date": "September 25, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1947,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 18 tok/s Local LLMs on Android",
+        "description": "Ditch cloud APIs. Compile llama.cpp with Android NDK & Qualcomm QNN to run 4-bit DeepSeek & Qwen locally with real benchmarks.",
+        "tags": [
+          "#AndroidDev",
+          "#EdgeAI",
+          "#DeepSeek",
+          "#OnDeviceAI",
+          "#LLM",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/running-4-bit-deepseek-qwen-on-android-18-tokenssec-with-zero-cloud-apis"
+      }
     }
   },
   "images": {

@@ -9,6 +9,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.github.io/blog/running-4-bit-deepseek-qwen-on-android-18-tokenssec-with-zero-cloud-apis</loc>
+    <lastmod>2026-09-24T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.github.io/blog/building-offline-first-mcp-hosts-on-android-implementing-model-context-protocol-over-local-transports</loc>
     <lastmod>2026-09-23T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
