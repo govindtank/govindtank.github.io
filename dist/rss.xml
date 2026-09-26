@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Sep 2026 02:48:24 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 02:39:09 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Building Local-First Mobile Apps: CRDT Architecture with Automerge and SQLite]]></title>
+      <link>https://govindtank.github.io/blog/building-local-first-mobile-apps-crdt-architecture-with-automerge-and-sqlite</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/building-local-first-mobile-apps-crdt-architecture-with-automerge-and-sqlite</guid>
+      <pubDate>Fri, 25 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Stop fighting complex sync conflicts. Embed Automerge 2.0 directly into SQLite to build resilient, local-first mobile apps with seamless multi-device document sync.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
     <item>
       <title><![CDATA[Running 4-Bit DeepSeek & Qwen on Android: 18 Tokens/Sec with Zero Cloud APIs]]></title>
       <link>https://govindtank.github.io/blog/running-4-bit-deepseek-qwen-on-android-18-tokenssec-with-zero-cloud-apis</link>

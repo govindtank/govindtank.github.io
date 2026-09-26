@@ -1054,6 +1054,25 @@
         ],
         "url": "https://govindtank.github.io/blog/running-4-bit-deepseek-qwen-on-android-18-tokenssec-with-zero-cloud-apis"
       }
+    },
+    "building-local-first-mobile-apps-crdt-architecture-with-automerge-and-sqlite": {
+      "title": "Building Local-First Mobile Apps: CRDT Architecture with Automerge and SQLite",
+      "date": "September 26, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1699,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Zero-Conflict Sync: Automerge + SQLite",
+        "description": "Stop fighting merge conflicts. Embed Automerge 2.0 CRDTs into SQLite for resilient, conflict-free local-first mobile apps.",
+        "tags": [
+          "#MobileDev",
+          "#SoftwareArchitecture",
+          "#SQLite",
+          "#LocalFirst",
+          "#CRDT"
+        ],
+        "url": "https://govindtank.github.io/blog/building-local-first-mobile-apps-crdt-architecture-with-automerge-and-sqlite"
+      }
     }
   },
   "images": {
