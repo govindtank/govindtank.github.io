@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Sep 2026 02:39:09 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2026 02:31:40 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Offline-First Sync Shootout: PowerSync vs Automerge vs ElectricSQL in Flutter & KMP]]></title>
+      <link>https://govindtank.github.io/blog/offline-first-sync-shootout-powersync-vs-automerge-vs-electricsql-in-flutter-kmp</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/offline-first-sync-shootout-powersync-vs-automerge-vs-electricsql-in-flutter-kmp</guid>
+      <pubDate>Sat, 26 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Payload bloat and sync lag kill offline-first apps. Benchmark replication latency, wire size, and conflict resolution across PowerSync, Automerge, and ElectricSQL for Flutter and KMP.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
     <item>
       <title><![CDATA[Building Local-First Mobile Apps: CRDT Architecture with Automerge and SQLite]]></title>
       <link>https://govindtank.github.io/blog/building-local-first-mobile-apps-crdt-architecture-with-automerge-and-sqlite</link>

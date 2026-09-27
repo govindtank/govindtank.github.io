@@ -1073,6 +1073,25 @@
         ],
         "url": "https://govindtank.github.io/blog/building-local-first-mobile-apps-crdt-architecture-with-automerge-and-sqlite"
       }
+    },
+    "offline-first-sync-shootout-powersync-vs-automerge-vs-electricsql-in-flutter-kmp": {
+      "title": "Offline-First Sync Shootout: PowerSync vs Automerge vs ElectricSQL in Flutter & KMP",
+      "date": "September 27, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 2405,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Offline Sync Shootout: PowerSync vs Automerge",
+        "description": "Stop payload bloat and sync lag in offline-first apps. Benchmark latency, wire size, and conflict resolution across Flutter & KMP.",
+        "tags": [
+          "#FlutterDev",
+          "#KotlinMultiplatform",
+          "#MobileDev",
+          "#SoftwareArchitecture",
+          "#Database"
+        ],
+        "url": "https://govindtank.github.io/blog/offline-first-sync-shootout-powersync-vs-automerge-vs-electricsql-in-flutter-kmp"
+      }
     }
   },
   "images": {
