@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Sep 2026 02:31:40 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 02:51:38 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[AGSL Shaders in Jetpack Compose: Building 60 FPS Interactive Visuals with Zero Canvas Lag]]></title>
+      <link>https://govindtank.github.io/blog/agsl-shaders-in-jetpack-compose-building-60-fps-interactive-visuals-with-zero-canvas-lag</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/agsl-shaders-in-jetpack-compose-building-60-fps-interactive-visuals-with-zero-canvas-lag</guid>
+      <pubDate>Sun, 27 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Heavy Canvas redraws kill frame rates on touch interactions. Offload real-time visuals directly to the GPU with AGSL fragment shaders in Jetpack Compose for locked 60+ FPS with zero lag.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
     <item>
       <title><![CDATA[Offline-First Sync Shootout: PowerSync vs Automerge vs ElectricSQL in Flutter & KMP]]></title>
       <link>https://govindtank.github.io/blog/offline-first-sync-shootout-powersync-vs-automerge-vs-electricsql-in-flutter-kmp</link>

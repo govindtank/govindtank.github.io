@@ -1092,6 +1092,26 @@
         ],
         "url": "https://govindtank.github.io/blog/offline-first-sync-shootout-powersync-vs-automerge-vs-electricsql-in-flutter-kmp"
       }
+    },
+    "agsl-shaders-in-jetpack-compose-building-60-fps-interactive-visuals-with-zero-canvas-lag": {
+      "title": "AGSL Shaders in Jetpack Compose: Building 60 FPS Interactive Visuals with Zero Canvas Lag",
+      "date": "September 28, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1809,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 60 FPS Visuals with AGSL in Compose",
+        "description": "Stop letting heavy Canvas redraws drop frames. Offload real-time touch visuals to the GPU with AGSL fragment shaders in Jetpack Compose.",
+        "tags": [
+          "#AndroidDev",
+          "#JetpackCompose",
+          "#Kotlin",
+          "#AGSL",
+          "#MobileDev",
+          "#AndroidPerformance"
+        ],
+        "url": "https://govindtank.github.io/blog/agsl-shaders-in-jetpack-compose-building-60-fps-interactive-visuals-with-zero-canvas-lag"
+      }
     }
   },
   "images": {
