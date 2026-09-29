@@ -1112,6 +1112,25 @@
         ],
         "url": "https://govindtank.github.io/blog/agsl-shaders-in-jetpack-compose-building-60-fps-interactive-visuals-with-zero-canvas-lag"
       }
+    },
+    "why-your-flutter-app-janks-on-mid-range-android-and-how-we-fixed-impeller-vulkan-pacing": {
+      "title": "Why Your Flutter App Janks on Mid-Range Android (And How We Fixed Impeller Vulkan Pacing)",
+      "date": "September 29, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1586,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Fixing Flutter Impeller Jank on Android",
+        "description": "Tired of frame drops? Diagnose Impeller Vulkan GPU bottlenecks and tune 3 engine flags to lock a silky smooth 60 FPS on mid-range Android devices.",
+        "tags": [
+          "#FlutterDev",
+          "#AndroidDev",
+          "#MobilePerformance",
+          "#Vulkan",
+          "#SoftwareEngineering"
+        ],
+        "url": "https://govindtank.github.io/blog/why-your-flutter-app-janks-on-mid-range-android-and-how-we-fixed-impeller-vulkan-pacing"
+      }
     }
   },
   "images": {
