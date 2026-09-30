@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Sep 2026 02:45:25 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 02:31:25 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[How Anthropic MCP Works on Mobile: Exposing SQLite & Hardware Sensors to Local LLMs]]></title>
+      <link>https://govindtank.github.io/blog/how-anthropic-mcp-works-on-mobile-exposing-sqlite-hardware-sensors-to-local-llms</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/how-anthropic-mcp-works-on-mobile-exposing-sqlite-hardware-sensors-to-local-llms</guid>
+      <pubDate>Tue, 29 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Eliminate cloud latency and data leaks. Build an embedded Android MCP server to give local SLMs secure, structured access to Room schemas, biometrics, and Keystore APIs.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
     <item>
       <title><![CDATA[Why Your Flutter App Janks on Mid-Range Android (And How We Fixed Impeller Vulkan Pacing)]]></title>
       <link>https://govindtank.github.io/blog/why-your-flutter-app-janks-on-mid-range-android-and-how-we-fixed-impeller-vulkan-pacing</link>

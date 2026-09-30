@@ -1131,6 +1131,26 @@
         ],
         "url": "https://govindtank.github.io/blog/why-your-flutter-app-janks-on-mid-range-android-and-how-we-fixed-impeller-vulkan-pacing"
       }
+    },
+    "how-anthropic-mcp-works-on-mobile-exposing-sqlite-hardware-sensors-to-local-llms": {
+      "title": "How Anthropic MCP Works on Mobile: Exposing SQLite & Hardware Sensors to Local LLMs",
+      "date": "September 30, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1986,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Anthropic MCP on Android: Local LLM Superpowers",
+        "description": "Expose Room SQLite schemas, biometrics & Keystore APIs directly to on-device SLMs with an embedded Android MCP server. Zero cloud latency, 100% privacy.",
+        "tags": [
+          "#AndroidDev",
+          "#Kotlin",
+          "#ModelContextProtocol",
+          "#LocalAI",
+          "#MobileDev",
+          "#AIArchitecture"
+        ],
+        "url": "https://govindtank.github.io/blog/how-anthropic-mcp-works-on-mobile-exposing-sqlite-hardware-sensors-to-local-llms"
+      }
     }
   },
   "images": {
