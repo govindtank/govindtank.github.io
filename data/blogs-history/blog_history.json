@@ -1151,6 +1151,26 @@
         ],
         "url": "https://govindtank.github.io/blog/how-anthropic-mcp-works-on-mobile-exposing-sqlite-hardware-sensors-to-local-llms"
       }
+    },
+    "flutter-web-wasm-in-production-how-canvaskit-webassembly-cut-load-times-by-50": {
+      "title": "Flutter Web WASM in Production: How CanvasKit + WebAssembly Cut Load Times by 50%",
+      "date": "October 01, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1830,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 50% Faster Flutter Web with WASM in Production",
+        "description": "Migrated to Dart 3.7 WASM & cut load times in half. Learn how to solve CORS blocks, font latency, and GC interop for seamless web performance.",
+        "tags": [
+          "#FlutterDev",
+          "#WebAssembly",
+          "#DartLang",
+          "#WebDev",
+          "#Performance",
+          "#SoftwareArchitecture"
+        ],
+        "url": "https://govindtank.github.io/blog/flutter-web-wasm-in-production-how-canvaskit-webassembly-cut-load-times-by-50"
+      }
     }
   },
   "images": {

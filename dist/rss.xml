@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Sep 2026 02:31:25 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 02:30:34 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Flutter Web WASM in Production: How CanvasKit + WebAssembly Cut Load Times by 50%]]></title>
+      <link>https://govindtank.github.io/blog/flutter-web-wasm-in-production-how-canvaskit-webassembly-cut-load-times-by-50</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-web-wasm-in-production-how-canvaskit-webassembly-cut-load-times-by-50</guid>
+      <pubDate>Wed, 30 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Migrating to Dart 3.7 WASM cut load times by 50%. Here is how we resolved CORS header blocks, font latency, and GC interop to take CanvasKit + WebAssembly to production.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
     <item>
       <title><![CDATA[How Anthropic MCP Works on Mobile: Exposing SQLite & Hardware Sensors to Local LLMs]]></title>
       <link>https://govindtank.github.io/blog/how-anthropic-mcp-works-on-mobile-exposing-sqlite-hardware-sensors-to-local-llms</link>
