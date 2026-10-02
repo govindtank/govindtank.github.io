@@ -9,6 +9,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.github.io/blog/eliminating-memory-leaks-in-large-flutter-apps-devtools-profiling-weakreference-mastery</loc>
+    <lastmod>2026-10-01T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.github.io/blog/flutter-web-wasm-in-production-how-canvaskit-webassembly-cut-load-times-by-50</loc>
     <lastmod>2026-09-30T18:30:00.000Z</lastmod>
     <priority>0.7</priority>

@@ -1171,6 +1171,25 @@
         ],
         "url": "https://govindtank.github.io/blog/flutter-web-wasm-in-production-how-canvaskit-webassembly-cut-load-times-by-50"
       }
+    },
+    "eliminating-memory-leaks-in-large-flutter-apps-devtools-profiling-weakreference-mastery": {
+      "title": "Eliminating Memory Leaks in Large Flutter Apps: DevTools Profiling & WeakReference Mastery",
+      "date": "October 02, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1981,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\uded1 Stop Silent Flutter OOM Crashes",
+        "description": "Master DevTools heap profiling and WeakReference to hunt down retained closures, image leaks, and zombie controllers in large Flutter apps.",
+        "tags": [
+          "#FlutterDev",
+          "#DartLang",
+          "#MobileDev",
+          "#AppPerformance",
+          "#SoftwareArchitecture"
+        ],
+        "url": "https://govindtank.github.io/blog/eliminating-memory-leaks-in-large-flutter-apps-devtools-profiling-weakreference-mastery"
+      }
     }
   },
   "images": {
