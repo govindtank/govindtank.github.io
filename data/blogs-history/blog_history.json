@@ -1190,6 +1190,25 @@
         ],
         "url": "https://govindtank.github.io/blog/eliminating-memory-leaks-in-large-flutter-apps-devtools-profiling-weakreference-mastery"
       }
+    },
+    "predictive-back-shared-element-transitions-in-compose-the-zero-glitch-migration-guide": {
+      "title": "Predictive Back & Shared Element Transitions in Compose: The Zero-Glitch Migration Guide",
+      "date": "October 03, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 2123,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Zero-Glitch Predictive Back in Compose",
+        "description": "Stop layout jumps and flicker. Master seamless Predictive Back and rock-solid shared element transitions across nested Compose scaffolds.",
+        "tags": [
+          "#AndroidDev",
+          "#JetpackCompose",
+          "#Kotlin",
+          "#MobileDev",
+          "#AndroidArchitecture"
+        ],
+        "url": "https://govindtank.github.io/blog/predictive-back-shared-element-transitions-in-compose-the-zero-glitch-migration-guide"
+      }
     }
   },
   "images": {

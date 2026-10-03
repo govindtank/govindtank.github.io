@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Oct 2026 02:30:53 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 02:31:16 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Predictive Back & Shared Element Transitions in Compose: The Zero-Glitch Migration Guide]]></title>
+      <link>https://govindtank.github.io/blog/predictive-back-shared-element-transitions-in-compose-the-zero-glitch-migration-guide</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/predictive-back-shared-element-transitions-in-compose-the-zero-glitch-migration-guide</guid>
+      <pubDate>Fri, 02 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Eliminate layout jumps, gesture conflicts, and flicker during Predictive Back. Build rock-solid shared element transitions across nested Compose scaffolds.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
     <item>
       <title><![CDATA[Eliminating Memory Leaks in Large Flutter Apps: DevTools Profiling & WeakReference Mastery]]></title>
       <link>https://govindtank.github.io/blog/eliminating-memory-leaks-in-large-flutter-apps-devtools-profiling-weakreference-mastery</link>
