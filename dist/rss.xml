@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Oct 2026 02:31:16 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 02:31:33 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Dart 3.7 Concurrency Deep Dive: Shared Memory Buffers and Zero-Latency Isolates]]></title>
+      <link>https://govindtank.github.io/blog/dart-37-concurrency-deep-dive-shared-memory-buffers-and-zero-latency-isolates</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/dart-37-concurrency-deep-dive-shared-memory-buffers-and-zero-latency-isolates</guid>
+      <pubDate>Sat, 03 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Eliminate isolate serialization bottlenecks. Use Dart 3.7 shared memory buffers to pass 100MB audio and video arrays across threads in 0.2ms with zero-copy concurrency.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
     <item>
       <title><![CDATA[Predictive Back & Shared Element Transitions in Compose: The Zero-Glitch Migration Guide]]></title>
       <link>https://govindtank.github.io/blog/predictive-back-shared-element-transitions-in-compose-the-zero-glitch-migration-guide</link>

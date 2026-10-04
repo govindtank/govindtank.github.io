@@ -1209,6 +1209,25 @@
         ],
         "url": "https://govindtank.github.io/blog/predictive-back-shared-element-transitions-in-compose-the-zero-glitch-migration-guide"
       }
+    },
+    "dart-37-concurrency-deep-dive-shared-memory-buffers-and-zero-latency-isolates": {
+      "title": "Dart 3.7 Concurrency Deep Dive: Shared Memory Buffers and Zero-Latency Isolates",
+      "date": "October 04, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1679,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Zero-Copy Concurrency in Dart 3.7",
+        "description": "Stop isolate serialization bottlenecks. Learn how to pass 100MB video and audio buffers across Dart isolates in 0.2ms with shared memory.",
+        "tags": [
+          "#FlutterDev",
+          "#DartLang",
+          "#MobileDev",
+          "#Concurrency",
+          "#SoftwareArchitecture"
+        ],
+        "url": "https://govindtank.github.io/blog/dart-37-concurrency-deep-dive-shared-memory-buffers-and-zero-latency-isolates"
+      }
     }
   },
   "images": {
