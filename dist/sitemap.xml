@@ -9,6 +9,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.github.io/blog/compose-multiplatform-on-ios-in-2026-the-truth-about-binary-size-memory-and-native-gestures</loc>
+    <lastmod>2026-10-04T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.github.io/blog/dart-37-concurrency-deep-dive-shared-memory-buffers-and-zero-latency-isolates</loc>
     <lastmod>2026-10-03T18:30:00.000Z</lastmod>
     <priority>0.7</priority>

@@ -1228,6 +1228,25 @@
         ],
         "url": "https://govindtank.github.io/blog/dart-37-concurrency-deep-dive-shared-memory-buffers-and-zero-latency-isolates"
       }
+    },
+    "compose-multiplatform-on-ios-in-2026-the-truth-about-binary-size-memory-and-native-gestures": {
+      "title": "Compose Multiplatform on iOS in 2026: The Truth About Binary Size, Memory, and Native Gestures",
+      "date": "October 05, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1496,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Compose Multiplatform on iOS: The Raw Truth",
+        "description": "Profiling Skiko overhead, binary bloat, and memory spikes on iOS\u2014plus how to fix gesture lag with SwiftUI bridging.",
+        "tags": [
+          "#KotlinMultiplatform",
+          "#ComposeMultiplatform",
+          "#iOSDev",
+          "#SwiftUI",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/compose-multiplatform-on-ios-in-2026-the-truth-about-binary-size-memory-and-native-gestures"
+      }
     }
   },
   "images": {

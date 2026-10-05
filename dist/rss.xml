@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Oct 2026 02:31:33 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 02:31:23 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Compose Multiplatform on iOS in 2026: The Truth About Binary Size, Memory, and Native Gestures]]></title>
+      <link>https://govindtank.github.io/blog/compose-multiplatform-on-ios-in-2026-the-truth-about-binary-size-memory-and-native-gestures</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/compose-multiplatform-on-ios-in-2026-the-truth-about-binary-size-memory-and-native-gestures</guid>
+      <pubDate>Sun, 04 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Skiko rendering overhead and gesture lag can cripple Compose on iOS. See the production profiling data behind memory spikes, binary bloat, and the fix for fluid SwiftUI bridging.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
     <item>
       <title><![CDATA[Dart 3.7 Concurrency Deep Dive: Shared Memory Buffers and Zero-Latency Isolates]]></title>
       <link>https://govindtank.github.io/blog/dart-37-concurrency-deep-dive-shared-memory-buffers-and-zero-latency-isolates</link>
