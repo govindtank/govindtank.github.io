@@ -1247,6 +1247,26 @@
         ],
         "url": "https://govindtank.github.io/blog/compose-multiplatform-on-ios-in-2026-the-truth-about-binary-size-memory-and-native-gestures"
       }
+    },
+    "migrating-from-retrofit-to-ktor-30-in-kmp-serialization-sse-streaming-offline-caching": {
+      "title": "Migrating from Retrofit to Ktor 3.0 in KMP: Serialization, SSE Streaming & Offline Caching",
+      "date": "October 06, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1558,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\ude80 Retrofit to Ktor 3.0 in KMP",
+        "description": "Break free from JVM lock-in! Master Ktor 3.0 migration with multiplatform offline caching, custom auth plugins, and live SSE streaming for LLMs.",
+        "tags": [
+          "#KotlinMultiplatform",
+          "#AndroidDev",
+          "#iOSDev",
+          "#Ktor",
+          "#Kotlin",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/migrating-from-retrofit-to-ktor-30-in-kmp-serialization-sse-streaming-offline-caching"
+      }
     }
   },
   "images": {
