@@ -1267,6 +1267,25 @@
         ],
         "url": "https://govindtank.github.io/blog/migrating-from-retrofit-to-ktor-30-in-kmp-serialization-sse-streaming-offline-caching"
       }
+    },
+    "android-16-battery-optimization-taming-wakelocks-foreground-services-doze-mode": {
+      "title": "Android 16 Battery Optimization: Taming WakeLocks, Foreground Services & Doze Mode",
+      "date": "October 07, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1947,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udd0b Stop Android 16 from Killing Background Tasks",
+        "description": "Android 16 breaks traditional background sync. Master WakeLocks, Doze Mode, and App Standby to build resilient periodic tasks that survive.",
+        "tags": [
+          "#AndroidDev",
+          "#Kotlin",
+          "#MobileArchitecture",
+          "#Android16",
+          "#SoftwareEngineering"
+        ],
+        "url": "https://govindtank.github.io/blog/android-16-battery-optimization-taming-wakelocks-foreground-services-doze-mode"
+      }
     }
   },
   "images": {
