@@ -8,8 +8,17 @@
     <link>https://govindtank.github.io</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Oct 2026 02:30:57 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 02:31:26 GMT</lastBuildDate>
     <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Compiling DeepSeek-R1 Distill and Qwen 2.5 for Android NDK: 4-Bit GGUF Quantization & Zero-Copy Inference]]></title>
+      <link>https://govindtank.github.io/blog/compiling-deepseek-r1-distill-and-qwen-25-for-android-ndk-4-bit-gguf-quantization-zero-copy-inference</link>
+      <guid isPermaLink="true">https://govindtank.github.io/blog/compiling-deepseek-r1-distill-and-qwen-25-for-android-ndk-4-bit-gguf-quantization-zero-copy-inference</guid>
+      <pubDate>Wed, 07 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Mobile memory bottlenecks choke 3B/7B SLMs. Using llama.cpp NDK cross-compilation and mmap zero-copy buffers, we achieved 22+ tok/sec natively on Snapdragon 8 Gen 3.
+]]></description>
+      <category>Mobile-AI</category>
+    </item>
     <item>
       <title><![CDATA[Android 16 Battery Optimization: Taming WakeLocks, Foreground Services & Doze Mode]]></title>
       <link>https://govindtank.github.io/blog/android-16-battery-optimization-taming-wakelocks-foreground-services-doze-mode</link>

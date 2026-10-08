@@ -1286,6 +1286,26 @@
         ],
         "url": "https://govindtank.github.io/blog/android-16-battery-optimization-taming-wakelocks-foreground-services-doze-mode"
       }
+    },
+    "compiling-deepseek-r1-distill-and-qwen-25-for-android-ndk-4-bit-gguf-quantization-zero-copy-inference": {
+      "title": "Compiling DeepSeek-R1 Distill and Qwen 2.5 for Android NDK: 4-Bit GGUF Quantization & Zero-Copy Inference",
+      "date": "October 08, 2026",
+      "tag": "Mobile-AI",
+      "wordCount": 2019,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 22+ tok/s DeepSeek-R1 on Android NDK",
+        "description": "Bypass mobile RAM bottlenecks! Run 4-bit DeepSeek-R1 & Qwen 2.5 natively on Snapdragon with llama.cpp NDK cross-compilation & zero-copy mmap.",
+        "tags": [
+          "#AndroidDev",
+          "#OnDeviceAI",
+          "#DeepSeek",
+          "#MachineLearning",
+          "#Cpp",
+          "#EdgeAI"
+        ],
+        "url": "https://govindtank.github.io/blog/compiling-deepseek-r1-distill-and-qwen-25-for-android-ndk-4-bit-gguf-quantization-zero-copy-inference"
+      }
     }
   },
   "images": {
