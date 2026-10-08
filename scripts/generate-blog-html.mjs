@@ -12,7 +12,7 @@ import matter from 'gray-matter';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
 
-const SITE_URL = 'https://govindtank.github.io';
+const SITE_URL = 'https://govindtank.is-a.dev';
 const SITE_TITLE = "Govind Tank | Senior Lead Architect & Android Expert";
 const DEFAULT_IMAGE = `${SITE_URL}/profile_one.png`;
 

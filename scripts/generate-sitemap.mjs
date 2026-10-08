@@ -11,7 +11,7 @@ import matter from 'gray-matter';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
 
-const SITE_URL = 'https://govindtank.github.io';
+const SITE_URL = 'https://govindtank.is-a.dev';
 
 // Read all .md files and extract frontmatter
 const contentDir = resolve(root, 'src/content/blog');
