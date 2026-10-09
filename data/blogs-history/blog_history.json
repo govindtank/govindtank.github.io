@@ -1306,6 +1306,26 @@
         ],
         "url": "https://govindtank.github.io/blog/compiling-deepseek-r1-distill-and-qwen-25-for-android-ndk-4-bit-gguf-quantization-zero-copy-inference"
       }
+    },
+    "mastering-predictive-back-transitions-with-jetpack-compose-coordinated-navhost-gesture-handlers": {
+      "title": "Mastering Predictive Back Transitions with Jetpack Compose: Coordinated NavHost & Gesture Handlers",
+      "date": "October 09, 2026",
+      "tag": "Modern Android",
+      "wordCount": 1558,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Fluid Predictive Back in Compose",
+        "description": "Stop glitchy exit animations in Android 16! Learn how to bind predictive back gestures to dynamic container transforms in Jetpack Compose.",
+        "tags": [
+          "#AndroidDev",
+          "#JetpackCompose",
+          "#Kotlin",
+          "#Android16",
+          "#MobileDev",
+          "#UIUX"
+        ],
+        "url": "https://govindtank.github.io/blog/mastering-predictive-back-transitions-with-jetpack-compose-coordinated-navhost-gesture-handlers"
+      }
     }
   },
   "images": {

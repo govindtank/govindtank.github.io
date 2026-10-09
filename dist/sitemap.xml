@@ -1,680 +1,685 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://govindtank.github.io/</loc>
+    <loc>https://govindtank.is-a.dev/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog</loc>
+    <loc>https://govindtank.is-a.dev/blog</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/compiling-deepseek-r1-distill-and-qwen-25-for-android-ndk-4-bit-gguf-quantization-zero-copy-inference</loc>
+    <loc>https://govindtank.is-a.dev/blog/mastering-predictive-back-transitions-with-jetpack-compose-coordinated-navhost-gesture-handlers</loc>
+    <lastmod>2026-10-08T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://govindtank.is-a.dev/blog/compiling-deepseek-r1-distill-and-qwen-25-for-android-ndk-4-bit-gguf-quantization-zero-copy-inference</loc>
     <lastmod>2026-10-07T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/android-16-battery-optimization-taming-wakelocks-foreground-services-doze-mode</loc>
+    <loc>https://govindtank.is-a.dev/blog/android-16-battery-optimization-taming-wakelocks-foreground-services-doze-mode</loc>
     <lastmod>2026-10-06T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/migrating-from-retrofit-to-ktor-30-in-kmp-serialization-sse-streaming-offline-caching</loc>
+    <loc>https://govindtank.is-a.dev/blog/migrating-from-retrofit-to-ktor-30-in-kmp-serialization-sse-streaming-offline-caching</loc>
     <lastmod>2026-10-05T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/compose-multiplatform-on-ios-in-2026-the-truth-about-binary-size-memory-and-native-gestures</loc>
+    <loc>https://govindtank.is-a.dev/blog/compose-multiplatform-on-ios-in-2026-the-truth-about-binary-size-memory-and-native-gestures</loc>
     <lastmod>2026-10-04T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/dart-37-concurrency-deep-dive-shared-memory-buffers-and-zero-latency-isolates</loc>
+    <loc>https://govindtank.is-a.dev/blog/dart-37-concurrency-deep-dive-shared-memory-buffers-and-zero-latency-isolates</loc>
     <lastmod>2026-10-03T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/predictive-back-shared-element-transitions-in-compose-the-zero-glitch-migration-guide</loc>
+    <loc>https://govindtank.is-a.dev/blog/predictive-back-shared-element-transitions-in-compose-the-zero-glitch-migration-guide</loc>
     <lastmod>2026-10-02T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/eliminating-memory-leaks-in-large-flutter-apps-devtools-profiling-weakreference-mastery</loc>
+    <loc>https://govindtank.is-a.dev/blog/eliminating-memory-leaks-in-large-flutter-apps-devtools-profiling-weakreference-mastery</loc>
     <lastmod>2026-10-01T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/flutter-web-wasm-in-production-how-canvaskit-webassembly-cut-load-times-by-50</loc>
+    <loc>https://govindtank.is-a.dev/blog/flutter-web-wasm-in-production-how-canvaskit-webassembly-cut-load-times-by-50</loc>
     <lastmod>2026-09-30T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/how-anthropic-mcp-works-on-mobile-exposing-sqlite-hardware-sensors-to-local-llms</loc>
+    <loc>https://govindtank.is-a.dev/blog/how-anthropic-mcp-works-on-mobile-exposing-sqlite-hardware-sensors-to-local-llms</loc>
     <lastmod>2026-09-29T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/why-your-flutter-app-janks-on-mid-range-android-and-how-we-fixed-impeller-vulkan-pacing</loc>
+    <loc>https://govindtank.is-a.dev/blog/why-your-flutter-app-janks-on-mid-range-android-and-how-we-fixed-impeller-vulkan-pacing</loc>
     <lastmod>2026-09-28T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/agsl-shaders-in-jetpack-compose-building-60-fps-interactive-visuals-with-zero-canvas-lag</loc>
+    <loc>https://govindtank.is-a.dev/blog/agsl-shaders-in-jetpack-compose-building-60-fps-interactive-visuals-with-zero-canvas-lag</loc>
     <lastmod>2026-09-27T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/offline-first-sync-shootout-powersync-vs-automerge-vs-electricsql-in-flutter-kmp</loc>
+    <loc>https://govindtank.is-a.dev/blog/offline-first-sync-shootout-powersync-vs-automerge-vs-electricsql-in-flutter-kmp</loc>
     <lastmod>2026-09-26T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/building-local-first-mobile-apps-crdt-architecture-with-automerge-and-sqlite</loc>
+    <loc>https://govindtank.is-a.dev/blog/building-local-first-mobile-apps-crdt-architecture-with-automerge-and-sqlite</loc>
     <lastmod>2026-09-25T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/running-4-bit-deepseek-qwen-on-android-18-tokenssec-with-zero-cloud-apis</loc>
+    <loc>https://govindtank.is-a.dev/blog/running-4-bit-deepseek-qwen-on-android-18-tokenssec-with-zero-cloud-apis</loc>
     <lastmod>2026-09-24T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/building-offline-first-mcp-hosts-on-android-implementing-model-context-protocol-over-local-transports</loc>
+    <loc>https://govindtank.is-a.dev/blog/building-offline-first-mcp-hosts-on-android-implementing-model-context-protocol-over-local-transports</loc>
     <lastmod>2026-09-23T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/kotlin-multiplatform-state-management-patterns-for-cross-platform-apps</loc>
+    <loc>https://govindtank.is-a.dev/blog/kotlin-multiplatform-state-management-patterns-for-cross-platform-apps</loc>
     <lastmod>2026-09-23T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/zero-copy-audio-dsp-in-compose-multiplatform-ndk-oboe-coreaudio-bindings-via-kn-c-interop</loc>
+    <loc>https://govindtank.is-a.dev/blog/zero-copy-audio-dsp-in-compose-multiplatform-ndk-oboe-coreaudio-bindings-via-kn-c-interop</loc>
     <lastmod>2026-09-22T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/on-device-slm-inference-with-llamacpp-and-npu-acceleration-via-android-nnapi-qualcomm-qnn</loc>
+    <loc>https://govindtank.is-a.dev/blog/on-device-slm-inference-with-llamacpp-and-npu-acceleration-via-android-nnapi-qualcomm-qnn</loc>
     <lastmod>2026-09-21T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/architecting-autonomous-mobile-agents-multi-turn-function-calling-loops-with-dart-isolates-and-slms</loc>
+    <loc>https://govindtank.is-a.dev/blog/architecting-autonomous-mobile-agents-multi-turn-function-calling-loops-with-dart-isolates-and-slms</loc>
     <lastmod>2026-09-20T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/modern-android-live-wallpapers-with-jetpack-compose-ndk-and-material-you-dynamic-theming</loc>
+    <loc>https://govindtank.is-a.dev/blog/modern-android-live-wallpapers-with-jetpack-compose-ndk-and-material-you-dynamic-theming</loc>
     <lastmod>2026-09-20T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/flutter-web-deploying-ai-chat-apps-with-server-sent-events-and-websockets</loc>
+    <loc>https://govindtank.is-a.dev/blog/flutter-web-deploying-ai-chat-apps-with-server-sent-events-and-websockets</loc>
     <lastmod>2026-09-19T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/micro-frontends-in-flutter-dynamic-feature-modules-and-isolated-custom-engines</loc>
+    <loc>https://govindtank.is-a.dev/blog/micro-frontends-in-flutter-dynamic-feature-modules-and-isolated-custom-engines</loc>
     <lastmod>2026-09-19T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/firebase-cloud-functions-serverless-backend-for-flutter-apps-at-scale</loc>
+    <loc>https://govindtank.is-a.dev/blog/firebase-cloud-functions-serverless-backend-for-flutter-apps-at-scale</loc>
     <lastmod>2026-09-18T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/flutter-building-cross-platform-apps-with-server-driven-ui-patterns</loc>
+    <loc>https://govindtank.is-a.dev/blog/flutter-building-cross-platform-apps-with-server-driven-ui-patterns</loc>
     <lastmod>2026-09-18T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/migrating-state-architectures-from-bloc-to-signal-based-reactivity-in-flutter-329</loc>
+    <loc>https://govindtank.is-a.dev/blog/migrating-state-architectures-from-bloc-to-signal-based-reactivity-in-flutter-329</loc>
     <lastmod>2026-09-17T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/offline-first-state-synchronization-implementing-automerge-yjs-crdts-in-mobile-apps</loc>
+    <loc>https://govindtank.is-a.dev/blog/offline-first-state-synchronization-implementing-automerge-yjs-crdts-in-mobile-apps</loc>
     <lastmod>2026-09-17T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/compose-multiplatform-for-ios-interop-architecture-uikit-gesture-bridges-and-skiko-performance</loc>
+    <loc>https://govindtank.is-a.dev/blog/compose-multiplatform-for-ios-interop-architecture-uikit-gesture-bridges-and-skiko-performance</loc>
     <lastmod>2026-09-16T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/zero-latency-real-time-audio-transcription-mobile-whispercpp-and-coremlnnapi-pipelines</loc>
+    <loc>https://govindtank.is-a.dev/blog/zero-latency-real-time-audio-transcription-mobile-whispercpp-and-coremlnnapi-pipelines</loc>
     <lastmod>2026-09-16T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/building-production-grade-model-context-protocol-mcp-clients-in-kotlin-multiplatform</loc>
+    <loc>https://govindtank.is-a.dev/blog/building-production-grade-model-context-protocol-mcp-clients-in-kotlin-multiplatform</loc>
     <lastmod>2026-09-15T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/deterministic-concurrency-with-dart-37-isolates-and-shared-memory-buffers</loc>
+    <loc>https://govindtank.is-a.dev/blog/deterministic-concurrency-with-dart-37-isolates-and-shared-memory-buffers</loc>
     <lastmod>2026-09-15T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/agentic-tool-loops-on-device-architecting-autonomous-mobile-workflows-with-onnx-runtime</loc>
+    <loc>https://govindtank.is-a.dev/blog/agentic-tool-loops-on-device-architecting-autonomous-mobile-workflows-with-onnx-runtime</loc>
     <lastmod>2026-09-14T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/optimizing-impeller-on-low-end-vulkan-metal-devices-flutter-329-profiling-internals</loc>
+    <loc>https://govindtank.is-a.dev/blog/optimizing-impeller-on-low-end-vulkan-metal-devices-flutter-329-profiling-internals</loc>
     <lastmod>2026-09-14T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/dynamic-color-contrast-tokens-in-android-mastering-material-you-3-theme-engines</loc>
+    <loc>https://govindtank.is-a.dev/blog/dynamic-color-contrast-tokens-in-android-mastering-material-you-3-theme-engines</loc>
     <lastmod>2026-09-13T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/kmp-binary-size-and-startup-time-benchmarking-proguard-r8-and-objective-c-frameworks</loc>
+    <loc>https://govindtank.is-a.dev/blog/kmp-binary-size-and-startup-time-benchmarking-proguard-r8-and-objective-c-frameworks</loc>
     <lastmod>2026-09-13T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/hardware-accelerated-live-wallpapers-with-jetpack-compose-agsl-and-android-ndk</loc>
+    <loc>https://govindtank.is-a.dev/blog/hardware-accelerated-live-wallpapers-with-jetpack-compose-agsl-and-android-ndk</loc>
     <lastmod>2026-09-12T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/running-3b-slms-locally-on-android-ndk-bindings-gguf-quantization-and-npu-acceleration</loc>
+    <loc>https://govindtank.is-a.dev/blog/running-3b-slms-locally-on-android-ndk-bindings-gguf-quantization-and-npu-acceleration</loc>
     <lastmod>2026-09-12T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/android-studio-ai-integration-using-copilot-and-github-codespaces-for-mobile-dev</loc>
+    <loc>https://govindtank.is-a.dev/blog/android-studio-ai-integration-using-copilot-and-github-codespaces-for-mobile-dev</loc>
     <lastmod>2026-09-11T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/flutter-antigravity-building-ai-features-with-openai-and-streaming-sse</loc>
+    <loc>https://govindtank.is-a.dev/blog/flutter-antigravity-building-ai-features-with-openai-and-streaming-sse</loc>
     <lastmod>2026-09-11T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/agentic-ai-building-autonomous-workflows-with-langgraph-and-crewai</loc>
+    <loc>https://govindtank.is-a.dev/blog/agentic-ai-building-autonomous-workflows-with-langgraph-and-crewai</loc>
     <lastmod>2026-09-10T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/flutter-antigravity-building-ai-features-with-openai-api-integration</loc>
+    <loc>https://govindtank.is-a.dev/blog/flutter-antigravity-building-ai-features-with-openai-api-integration</loc>
     <lastmod>2026-09-10T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ai-native-ides-using-flutters-ai-features-for-faster-development</loc>
+    <loc>https://govindtank.is-a.dev/blog/ai-native-ides-using-flutters-ai-features-for-faster-development</loc>
     <lastmod>2026-09-09T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/flutter-riverpod-vs-bloc-vs-provider-performance-benchmarks-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/flutter-riverpod-vs-bloc-vs-provider-performance-benchmarks-2026</loc>
     <lastmod>2026-09-09T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/material-you-on-android-dark-mode-implementation-with-daynight-tokens</loc>
+    <loc>https://govindtank.is-a.dev/blog/material-you-on-android-dark-mode-implementation-with-daynight-tokens</loc>
     <lastmod>2026-09-08T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/offline-first-mobile-apps-crdts-for-conflict-free-replication-in-flutter</loc>
+    <loc>https://govindtank.is-a.dev/blog/offline-first-mobile-apps-crdts-for-conflict-free-replication-in-flutter</loc>
     <lastmod>2026-09-08T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/agentic-ai-building-autonomous-workflows-with-langgraph-and-mcp-protocol</loc>
+    <loc>https://govindtank.is-a.dev/blog/agentic-ai-building-autonomous-workflows-with-langgraph-and-mcp-protocol</loc>
     <lastmod>2026-09-07T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/android-live-wallpapers-with-opengl-es-performance-optimization-guide</loc>
+    <loc>https://govindtank.is-a.dev/blog/android-live-wallpapers-with-opengl-es-performance-optimization-guide</loc>
     <lastmod>2026-09-07T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/android-npu-acceleration-implementing-onnx-runtime-for-ml-inference</loc>
+    <loc>https://govindtank.is-a.dev/blog/android-npu-acceleration-implementing-onnx-runtime-for-ml-inference</loc>
     <lastmod>2026-09-06T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/android-npu-acceleration-implementing-onnx-runtime-for-mobile-ml-inference</loc>
+    <loc>https://govindtank.is-a.dev/blog/android-npu-acceleration-implementing-onnx-runtime-for-mobile-ml-inference</loc>
     <lastmod>2026-09-06T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/jetpack-compose-multiplatform-sharing-business-logic-between-ios-and-android</loc>
+    <loc>https://govindtank.is-a.dev/blog/jetpack-compose-multiplatform-sharing-business-logic-between-ios-and-android</loc>
     <lastmod>2026-09-06T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/local-llms-on-android-llamacpp-gguf-quantization-for-mobile-edge-ai</loc>
+    <loc>https://govindtank.is-a.dev/blog/local-llms-on-android-llamacpp-gguf-quantization-for-mobile-edge-ai</loc>
     <lastmod>2026-09-06T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/comfyui-workflows-for-blog-cover-art-stable-diffusion-controlnet-and-consistent-characters</loc>
+    <loc>https://govindtank.is-a.dev/blog/comfyui-workflows-for-blog-cover-art-stable-diffusion-controlnet-and-consistent-characters</loc>
     <lastmod>2026-09-02T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/effective-typescript-57-inference-const-generics-and-template-literal-types</loc>
+    <loc>https://govindtank.is-a.dev/blog/effective-typescript-57-inference-const-generics-and-template-literal-types</loc>
     <lastmod>2026-09-01T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/cross-platform-mobile-in-2026-flutter-vs-react-native-vs-kotlin-multiplatform-vs-tauri</loc>
+    <loc>https://govindtank.is-a.dev/blog/cross-platform-mobile-in-2026-flutter-vs-react-native-vs-kotlin-multiplatform-vs-tauri</loc>
     <lastmod>2026-08-31T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ai-driven-accessibility-automatic-ui-adaptation-for-disabilities-with-screen-reader-optimization</loc>
+    <loc>https://govindtank.is-a.dev/blog/ai-driven-accessibility-automatic-ui-adaptation-for-disabilities-with-screen-reader-optimization</loc>
     <lastmod>2026-08-30T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ai-monetization-in-mobile-pricing-strategies-freemium-llm-tiers-usage-based-billing-challenges</loc>
+    <loc>https://govindtank.is-a.dev/blog/ai-monetization-in-mobile-pricing-strategies-freemium-llm-tiers-usage-based-billing-challenges</loc>
     <lastmod>2026-08-30T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ai-native-ides-for-mobile-development-flutter-ai-features-android-studio-integration</loc>
+    <loc>https://govindtank.is-a.dev/blog/ai-native-ides-for-mobile-development-flutter-ai-features-android-studio-integration</loc>
     <lastmod>2026-08-30T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ai-powered-test-generation-for-flutterandroid-ui-coverage-edge-cases-flaky-test-detection</loc>
+    <loc>https://govindtank.is-a.dev/blog/ai-powered-test-generation-for-flutterandroid-ui-coverage-edge-cases-flaky-test-detection</loc>
     <lastmod>2026-08-30T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/cross-lingual-mobile-development-low-resource-languages-cultural-ui-adaptation-rtl-layouts</loc>
+    <loc>https://govindtank.is-a.dev/blog/cross-lingual-mobile-development-low-resource-languages-cultural-ui-adaptation-rtl-layouts</loc>
     <lastmod>2026-08-30T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ethical-ai-in-mobile-apps-bias-detection-explainable-ai-gdpr-compliance-patterns</loc>
+    <loc>https://govindtank.is-a.dev/blog/ethical-ai-in-mobile-apps-bias-detection-explainable-ai-gdpr-compliance-patterns</loc>
     <lastmod>2026-08-30T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/llm-centric-app-design-token-aware-ui-context-window-management-cost-modeling</loc>
+    <loc>https://govindtank.is-a.dev/blog/llm-centric-app-design-token-aware-ui-context-window-management-cost-modeling</loc>
     <lastmod>2026-08-30T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/agentic-workflows-on-device-local-multi-agent-systems-for-privacy-first-mobile-ai</loc>
+    <loc>https://govindtank.is-a.dev/blog/agentic-workflows-on-device-local-multi-agent-systems-for-privacy-first-mobile-ai</loc>
     <lastmod>2026-08-29T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ai-native-mobile-games-generative-narrative-real-time-opponent-adaptation-procedural-content</loc>
+    <loc>https://govindtank.is-a.dev/blog/ai-native-mobile-games-generative-narrative-real-time-opponent-adaptation-procedural-content</loc>
     <lastmod>2026-08-29T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ai-performance-budgets-managing-llm-latency-cost-vs-ux-expectations-with-caching</loc>
+    <loc>https://govindtank.is-a.dev/blog/ai-performance-budgets-managing-llm-latency-cost-vs-ux-expectations-with-caching</loc>
     <lastmod>2026-08-29T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/android-jetpack-ai-ml-kit-integration-neural-networks-api-updates-edge-tpu-support-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/android-jetpack-ai-ml-kit-integration-neural-networks-api-updates-edge-tpu-support-in-2026</loc>
     <lastmod>2026-08-29T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/cross-platform-arvr-development-unity-vs-react-native-visionos-with-6dof-tracking</loc>
+    <loc>https://govindtank.is-a.dev/blog/cross-platform-arvr-development-unity-vs-react-native-visionos-with-6dof-tracking</loc>
     <lastmod>2026-08-29T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/flutter-webgpu-rendering-gpu-acceleration-shader-programming-webgl-fallbacks</loc>
+    <loc>https://govindtank.is-a.dev/blog/flutter-webgpu-rendering-gpu-acceleration-shader-programming-webgl-fallbacks</loc>
     <lastmod>2026-08-29T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/green-ai-for-mobile-reducing-carbon-footprint-of-llm-usage-with-model-selection</loc>
+    <loc>https://govindtank.is-a.dev/blog/green-ai-for-mobile-reducing-carbon-footprint-of-llm-usage-with-model-selection</loc>
     <lastmod>2026-08-29T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/hybrid-native-web-apps-platform-specific-features-vs-pwareact-native-trade-offs-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/hybrid-native-web-apps-platform-specific-features-vs-pwareact-native-trade-offs-in-2026</loc>
     <lastmod>2026-08-29T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ios-20-vision-framework-updates-eye-tracking-depth-sensing-privacy-preserving-features</loc>
+    <loc>https://govindtank.is-a.dev/blog/ios-20-vision-framework-updates-eye-tracking-depth-sensing-privacy-preserving-features</loc>
     <lastmod>2026-08-29T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/mobile-app-store-ai-review-guidelines-navigating-applegoogle-policy-changes-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/mobile-app-store-ai-review-guidelines-navigating-applegoogle-policy-changes-in-2026</loc>
     <lastmod>2026-08-29T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/prompt-engineering-for-mobile-apis-device-capabilities-storage-awareness-network-conditions</loc>
+    <loc>https://govindtank.is-a.dev/blog/prompt-engineering-for-mobile-apis-device-capabilities-storage-awareness-network-conditions</loc>
     <lastmod>2026-08-29T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ai-agents-in-production-from-prototypes-to-reliable-autonomous-systems</loc>
+    <loc>https://govindtank.is-a.dev/blog/ai-agents-in-production-from-prototypes-to-reliable-autonomous-systems</loc>
     <lastmod>2026-08-28T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/local-first-sync-engines-electricsql-powersync-and-the-offline-first-renaissance</loc>
+    <loc>https://govindtank.is-a.dev/blog/local-first-sync-engines-electricsql-powersync-and-the-offline-first-renaissance</loc>
     <lastmod>2026-08-28T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/the-future-of-webassembly-beyond-the-browser-into-cloud-and-edge</loc>
+    <loc>https://govindtank.is-a.dev/blog/the-future-of-webassembly-beyond-the-browser-into-cloud-and-edge</loc>
     <lastmod>2026-08-25T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/prompt-engineering-for-production-getting-reliable-output-from-llm-apis</loc>
+    <loc>https://govindtank.is-a.dev/blog/prompt-engineering-for-production-getting-reliable-output-from-llm-apis</loc>
     <lastmod>2026-08-23T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/docker-for-mobile-developers-streamlining-android-and-flutter-build-pipelines</loc>
+    <loc>https://govindtank.is-a.dev/blog/docker-for-mobile-developers-streamlining-android-and-flutter-build-pipelines</loc>
     <lastmod>2026-08-22T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/swiftui-vs-jetpack-compose-the-native-ui-framework-showdown-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/swiftui-vs-jetpack-compose-the-native-ui-framework-showdown-in-2026</loc>
     <lastmod>2026-08-21T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/server-driven-ui-in-mobile-apps-dynamic-experiences-without-app-store-updates</loc>
+    <loc>https://govindtank.is-a.dev/blog/server-driven-ui-in-mobile-apps-dynamic-experiences-without-app-store-updates</loc>
     <lastmod>2026-08-20T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions</loc>
+    <loc>https://govindtank.is-a.dev/blog/building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions</loc>
     <lastmod>2026-08-19T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/javascript-runtime-wars-2026-nodejs-bun-deno-compared</loc>
+    <loc>https://govindtank.is-a.dev/blog/javascript-runtime-wars-2026-nodejs-bun-deno-compared</loc>
     <lastmod>2026-08-19T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/rag-in-production-practical-retrieval-patterns-beyond-the-demo</loc>
+    <loc>https://govindtank.is-a.dev/blog/rag-in-production-practical-retrieval-patterns-beyond-the-demo</loc>
     <lastmod>2026-08-17T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/local-first-applications-sync-engines-crdts-and-offline-first-ux</loc>
+    <loc>https://govindtank.is-a.dev/blog/local-first-applications-sync-engines-crdts-and-offline-first-ux</loc>
     <lastmod>2026-08-16T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/on-device-ai-with-npus-running-models-on-phone-silicon-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/on-device-ai-with-npus-running-models-on-phone-silicon-in-2026</loc>
     <lastmod>2026-08-15T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ai-native-app-architecture-designing-applications-around-llm-calls</loc>
+    <loc>https://govindtank.is-a.dev/blog/ai-native-app-architecture-designing-applications-around-llm-calls</loc>
     <lastmod>2026-08-14T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/compose-multiplatform-for-ios-is-shared-ui-production-ready-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/compose-multiplatform-for-ios-is-shared-ui-production-ready-in-2026</loc>
     <lastmod>2026-08-13T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/agentic-ai-development-from-chat-assistants-to-autonomous-coding-agents</loc>
+    <loc>https://govindtank.is-a.dev/blog/agentic-ai-development-from-chat-assistants-to-autonomous-coding-agents</loc>
     <lastmod>2026-08-12T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/android-17-and-the-modern-android-stack-what-changed-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/android-17-and-the-modern-android-stack-what-changed-in-2026</loc>
     <lastmod>2026-08-12T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/flutter-beyond-mobile-desktop-web-and-embedded-targets-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/flutter-beyond-mobile-desktop-web-and-embedded-targets-in-2026</loc>
     <lastmod>2026-08-12T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/kotlin-2x-and-the-k2-compiler-what-it-unlocked-for-android-developers</loc>
+    <loc>https://govindtank.is-a.dev/blog/kotlin-2x-and-the-k2-compiler-what-it-unlocked-for-android-developers</loc>
     <lastmod>2026-08-11T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/mcp-in-practice-model-context-protocol-for-real-world-developer-tools</loc>
+    <loc>https://govindtank.is-a.dev/blog/mcp-in-practice-model-context-protocol-for-real-world-developer-tools</loc>
     <lastmod>2026-08-11T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/intellij-idea-goes-lsp-kotlin-and-java-intelligence-in-vs-code</loc>
+    <loc>https://govindtank.is-a.dev/blog/intellij-idea-goes-lsp-kotlin-and-java-intelligence-in-vs-code</loc>
     <lastmod>2026-08-09T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/claude-code-auto-mode-is-now-the-default-should-you-trust-it</loc>
+    <loc>https://govindtank.is-a.dev/blog/claude-code-auto-mode-is-now-the-default-should-you-trust-it</loc>
     <lastmod>2026-08-08T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/deepseek-v4-flash-what-the-new-open-model-means-for-developers</loc>
+    <loc>https://govindtank.is-a.dev/blog/deepseek-v4-flash-what-the-new-open-model-means-for-developers</loc>
     <lastmod>2026-08-07T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/mcp-stateless-mode-building-ai-agent-servers-without-session-state</loc>
+    <loc>https://govindtank.is-a.dev/blog/mcp-stateless-mode-building-ai-agent-servers-without-session-state</loc>
     <lastmod>2026-08-06T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/antigravity-vs-claude-code-vs-codex-choosing-an-ai-coding-agent-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/antigravity-vs-claude-code-vs-codex-choosing-an-ai-coding-agent-in-2026</loc>
     <lastmod>2026-08-05T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/validating-mobile-numbers-right-way-country-mobile-validator</loc>
+    <loc>https://govindtank.is-a.dev/blog/validating-mobile-numbers-right-way-country-mobile-validator</loc>
     <lastmod>2026-08-05T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ai-observability-monitoring-tracing-and-debugging-llm-applications-in-production</loc>
+    <loc>https://govindtank.is-a.dev/blog/ai-observability-monitoring-tracing-and-debugging-llm-applications-in-production</loc>
     <lastmod>2026-08-04T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/firebase-generative-ai-sdk-mobile-multimodal-model-serving-android-ios</loc>
+    <loc>https://govindtank.is-a.dev/blog/firebase-generative-ai-sdk-mobile-multimodal-model-serving-android-ios</loc>
     <lastmod>2026-08-04T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones</loc>
+    <loc>https://govindtank.is-a.dev/blog/small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones</loc>
     <lastmod>2026-08-04T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026</loc>
     <lastmod>2026-08-03T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance</loc>
+    <loc>https://govindtank.is-a.dev/blog/flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance</loc>
     <lastmod>2026-08-02T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026</loc>
     <lastmod>2026-08-01T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/free-developer-tools-that-supercharge-your-2026-workflow</loc>
+    <loc>https://govindtank.is-a.dev/blog/free-developer-tools-that-supercharge-your-2026-workflow</loc>
     <lastmod>2026-07-31T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</loc>
     <lastmod>2026-07-30T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</loc>
+    <loc>https://govindtank.is-a.dev/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</loc>
     <lastmod>2026-07-29T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production</loc>
+    <loc>https://govindtank.is-a.dev/blog/typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production</loc>
     <lastmod>2026-07-28T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/webgpu-next-generation-graphics-and-compute-for-the-browser</loc>
+    <loc>https://govindtank.is-a.dev/blog/webgpu-next-generation-graphics-and-compute-for-the-browser</loc>
     <lastmod>2026-07-28T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ios-20-and-swift-8-what-mobile-developers-need-to-know</loc>
+    <loc>https://govindtank.is-a.dev/blog/ios-20-and-swift-8-what-mobile-developers-need-to-know</loc>
     <lastmod>2026-07-21T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens</loc>
+    <loc>https://govindtank.is-a.dev/blog/flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens</loc>
     <lastmod>2026-07-20T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</loc>
+    <loc>https://govindtank.is-a.dev/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</loc>
     <lastmod>2026-07-20T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026</loc>
     <lastmod>2026-07-19T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</loc>
+    <loc>https://govindtank.is-a.dev/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</loc>
     <lastmod>2026-07-18T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/flutter-impeller-rendering-engine-gpu-acceleration-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/flutter-impeller-rendering-engine-gpu-acceleration-2026</loc>
     <lastmod>2026-07-17T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026</loc>
     <lastmod>2026-07-16T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared-business-logic</loc>
+    <loc>https://govindtank.is-a.dev/blog/kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared-business-logic</loc>
     <lastmod>2026-07-15T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/platform-engineering-building-internal-developer-portals-that-teams-love</loc>
+    <loc>https://govindtank.is-a.dev/blog/platform-engineering-building-internal-developer-portals-that-teams-love</loc>
     <lastmod>2026-07-14T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/building-real-time-collaborative-apps-with-crdts-and-operational-transformation</loc>
+    <loc>https://govindtank.is-a.dev/blog/building-real-time-collaborative-apps-with-crdts-and-operational-transformation</loc>
     <lastmod>2026-07-02T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/css-container-queries-and-style-queries-responsive-design-beyond-media-queries</loc>
+    <loc>https://govindtank.is-a.dev/blog/css-container-queries-and-style-queries-responsive-design-beyond-media-queries</loc>
     <lastmod>2026-07-01T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments</loc>
+    <loc>https://govindtank.is-a.dev/blog/finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments</loc>
     <lastmod>2026-06-30T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging</loc>
+    <loc>https://govindtank.is-a.dev/blog/distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging</loc>
     <lastmod>2026-06-28T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth</loc>
+    <loc>https://govindtank.is-a.dev/blog/rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth</loc>
     <lastmod>2026-06-26T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact</loc>
+    <loc>https://govindtank.is-a.dev/blog/the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact</loc>
     <lastmod>2026-06-24T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/webassembly-in-2026-from-browser-to-edge-computing-and-beyond</loc>
+    <loc>https://govindtank.is-a.dev/blog/webassembly-in-2026-from-browser-to-edge-computing-and-beyond</loc>
     <lastmod>2026-06-23T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/building-scalable-microservices-with-fastapi-and-event-driven-architecture</loc>
+    <loc>https://govindtank.is-a.dev/blog/building-scalable-microservices-with-fastapi-and-event-driven-architecture</loc>
     <lastmod>2026-06-22T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/event-sourcing-and-cqrs-practical-patterns-for-distributed-systems</loc>
+    <loc>https://govindtank.is-a.dev/blog/event-sourcing-and-cqrs-practical-patterns-for-distributed-systems</loc>
     <lastmod>2026-06-21T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/data-engineering-at-scale-building-real-time-streaming-pipelines</loc>
+    <loc>https://govindtank.is-a.dev/blog/data-engineering-at-scale-building-real-time-streaming-pipelines</loc>
     <lastmod>2026-06-18T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/react-server-components-production-patterns-for-high-performance-web-apps</loc>
+    <loc>https://govindtank.is-a.dev/blog/react-server-components-production-patterns-for-high-performance-web-apps</loc>
     <lastmod>2026-06-15T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/edge-ai-running-large-language-models-on-consumer-devices-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/edge-ai-running-large-language-models-on-consumer-devices-in-2026</loc>
     <lastmod>2026-06-09T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026</loc>
     <lastmod>2026-06-02T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ai-augmented-development-workflows-architecting-the-future-of-software-engineering</loc>
+    <loc>https://govindtank.is-a.dev/blog/ai-augmented-development-workflows-architecting-the-future-of-software-engineering</loc>
     <lastmod>2026-06-01T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ai-powered-code-review-automating-quality-gates-with-llm-agents</loc>
+    <loc>https://govindtank.is-a.dev/blog/ai-powered-code-review-automating-quality-gates-with-llm-agents</loc>
     <lastmod>2026-05-28T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/kotlin-multiplatform-evolution-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/kotlin-multiplatform-evolution-in-2026</loc>
     <lastmod>2026-05-28T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/flutter-state-management-deep-dive-bloc-vs-riverpod-vs-provider-in-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/flutter-state-management-deep-dive-bloc-vs-riverpod-vs-provider-in-2026</loc>
     <lastmod>2026-05-27T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://govindtank.github.io/blog/ai-agents-autonomous-workflows-complex-tasks-2026</loc>
+    <loc>https://govindtank.is-a.dev/blog/ai-agents-autonomous-workflows-complex-tasks-2026</loc>
     <lastmod>2026-05-25T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>

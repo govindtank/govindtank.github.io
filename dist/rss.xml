@@ -5,15 +5,24 @@
   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Govind Tank's Tech Log</title>
-    <link>https://govindtank.github.io</link>
+    <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Oct 2026 02:31:26 GMT</lastBuildDate>
-    <atom:link href="https://govindtank.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Fri, 09 Oct 2026 02:31:07 GMT</lastBuildDate>
+    <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Mastering Predictive Back Transitions with Jetpack Compose: Coordinated NavHost & Gesture Handlers]]></title>
+      <link>https://govindtank.is-a.dev/blog/mastering-predictive-back-transitions-with-jetpack-compose-coordinated-navhost-gesture-handlers</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/mastering-predictive-back-transitions-with-jetpack-compose-coordinated-navhost-gesture-handlers</guid>
+      <pubDate>Thu, 08 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Fix jarring exit-animation glitches in Android 16. Bind predictive back gestures to dynamic container transforms and shared elements in Jetpack Compose for seamless, fluid screen exits.
+]]></description>
+      <category>Modern Android</category>
+    </item>
     <item>
       <title><![CDATA[Compiling DeepSeek-R1 Distill and Qwen 2.5 for Android NDK: 4-Bit GGUF Quantization & Zero-Copy Inference]]></title>
-      <link>https://govindtank.github.io/blog/compiling-deepseek-r1-distill-and-qwen-25-for-android-ndk-4-bit-gguf-quantization-zero-copy-inference</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/compiling-deepseek-r1-distill-and-qwen-25-for-android-ndk-4-bit-gguf-quantization-zero-copy-inference</guid>
+      <link>https://govindtank.is-a.dev/blog/compiling-deepseek-r1-distill-and-qwen-25-for-android-ndk-4-bit-gguf-quantization-zero-copy-inference</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/compiling-deepseek-r1-distill-and-qwen-25-for-android-ndk-4-bit-gguf-quantization-zero-copy-inference</guid>
       <pubDate>Wed, 07 Oct 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Mobile memory bottlenecks choke 3B/7B SLMs. Using llama.cpp NDK cross-compilation and mmap zero-copy buffers, we achieved 22+ tok/sec natively on Snapdragon 8 Gen 3.
 ]]></description>
@@ -21,8 +30,8 @@
     </item>
     <item>
       <title><![CDATA[Android 16 Battery Optimization: Taming WakeLocks, Foreground Services & Doze Mode]]></title>
-      <link>https://govindtank.github.io/blog/android-16-battery-optimization-taming-wakelocks-foreground-services-doze-mode</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/android-16-battery-optimization-taming-wakelocks-foreground-services-doze-mode</guid>
+      <link>https://govindtank.is-a.dev/blog/android-16-battery-optimization-taming-wakelocks-foreground-services-doze-mode</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/android-16-battery-optimization-taming-wakelocks-foreground-services-doze-mode</guid>
       <pubDate>Tue, 06 Oct 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Android 16’s aggressive limits break background sync. Master WakeLocks, Doze Mode, and App Standby to architect resilient periodic tasks that run reliably without getting killed.
 ]]></description>
@@ -30,8 +39,8 @@
     </item>
     <item>
       <title><![CDATA[Migrating from Retrofit to Ktor 3.0 in KMP: Serialization, SSE Streaming & Offline Caching]]></title>
-      <link>https://govindtank.github.io/blog/migrating-from-retrofit-to-ktor-30-in-kmp-serialization-sse-streaming-offline-caching</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/migrating-from-retrofit-to-ktor-30-in-kmp-serialization-sse-streaming-offline-caching</guid>
+      <link>https://govindtank.is-a.dev/blog/migrating-from-retrofit-to-ktor-30-in-kmp-serialization-sse-streaming-offline-caching</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/migrating-from-retrofit-to-ktor-30-in-kmp-serialization-sse-streaming-offline-caching</guid>
       <pubDate>Mon, 05 Oct 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Break free from Retrofit’s JVM lock-in. Learn how to migrate to Ktor 3.0 with custom auth plugins, multiplatform offline caching, and live SSE streaming for LLMs.
 ]]></description>
@@ -39,8 +48,8 @@
     </item>
     <item>
       <title><![CDATA[Compose Multiplatform on iOS in 2026: The Truth About Binary Size, Memory, and Native Gestures]]></title>
-      <link>https://govindtank.github.io/blog/compose-multiplatform-on-ios-in-2026-the-truth-about-binary-size-memory-and-native-gestures</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/compose-multiplatform-on-ios-in-2026-the-truth-about-binary-size-memory-and-native-gestures</guid>
+      <link>https://govindtank.is-a.dev/blog/compose-multiplatform-on-ios-in-2026-the-truth-about-binary-size-memory-and-native-gestures</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/compose-multiplatform-on-ios-in-2026-the-truth-about-binary-size-memory-and-native-gestures</guid>
       <pubDate>Sun, 04 Oct 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Skiko rendering overhead and gesture lag can cripple Compose on iOS. See the production profiling data behind memory spikes, binary bloat, and the fix for fluid SwiftUI bridging.
 ]]></description>
@@ -48,8 +57,8 @@
     </item>
     <item>
       <title><![CDATA[Dart 3.7 Concurrency Deep Dive: Shared Memory Buffers and Zero-Latency Isolates]]></title>
-      <link>https://govindtank.github.io/blog/dart-37-concurrency-deep-dive-shared-memory-buffers-and-zero-latency-isolates</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/dart-37-concurrency-deep-dive-shared-memory-buffers-and-zero-latency-isolates</guid>
+      <link>https://govindtank.is-a.dev/blog/dart-37-concurrency-deep-dive-shared-memory-buffers-and-zero-latency-isolates</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/dart-37-concurrency-deep-dive-shared-memory-buffers-and-zero-latency-isolates</guid>
       <pubDate>Sat, 03 Oct 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Eliminate isolate serialization bottlenecks. Use Dart 3.7 shared memory buffers to pass 100MB audio and video arrays across threads in 0.2ms with zero-copy concurrency.
 ]]></description>
@@ -57,8 +66,8 @@
     </item>
     <item>
       <title><![CDATA[Predictive Back & Shared Element Transitions in Compose: The Zero-Glitch Migration Guide]]></title>
-      <link>https://govindtank.github.io/blog/predictive-back-shared-element-transitions-in-compose-the-zero-glitch-migration-guide</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/predictive-back-shared-element-transitions-in-compose-the-zero-glitch-migration-guide</guid>
+      <link>https://govindtank.is-a.dev/blog/predictive-back-shared-element-transitions-in-compose-the-zero-glitch-migration-guide</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/predictive-back-shared-element-transitions-in-compose-the-zero-glitch-migration-guide</guid>
       <pubDate>Fri, 02 Oct 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Eliminate layout jumps, gesture conflicts, and flicker during Predictive Back. Build rock-solid shared element transitions across nested Compose scaffolds.
 ]]></description>
@@ -66,8 +75,8 @@
     </item>
     <item>
       <title><![CDATA[Eliminating Memory Leaks in Large Flutter Apps: DevTools Profiling & WeakReference Mastery]]></title>
-      <link>https://govindtank.github.io/blog/eliminating-memory-leaks-in-large-flutter-apps-devtools-profiling-weakreference-mastery</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/eliminating-memory-leaks-in-large-flutter-apps-devtools-profiling-weakreference-mastery</guid>
+      <link>https://govindtank.is-a.dev/blog/eliminating-memory-leaks-in-large-flutter-apps-devtools-profiling-weakreference-mastery</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/eliminating-memory-leaks-in-large-flutter-apps-devtools-profiling-weakreference-mastery</guid>
       <pubDate>Thu, 01 Oct 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Stop silent OOM crashes in large Flutter apps. Master DevTools heap snapshots and WeakReferences to isolate retained closures, image leaks, and unreleased controllers.
 ]]></description>
@@ -75,8 +84,8 @@
     </item>
     <item>
       <title><![CDATA[Flutter Web WASM in Production: How CanvasKit + WebAssembly Cut Load Times by 50%]]></title>
-      <link>https://govindtank.github.io/blog/flutter-web-wasm-in-production-how-canvaskit-webassembly-cut-load-times-by-50</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-web-wasm-in-production-how-canvaskit-webassembly-cut-load-times-by-50</guid>
+      <link>https://govindtank.is-a.dev/blog/flutter-web-wasm-in-production-how-canvaskit-webassembly-cut-load-times-by-50</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-web-wasm-in-production-how-canvaskit-webassembly-cut-load-times-by-50</guid>
       <pubDate>Wed, 30 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Migrating to Dart 3.7 WASM cut load times by 50%. Here is how we resolved CORS header blocks, font latency, and GC interop to take CanvasKit + WebAssembly to production.
 ]]></description>
@@ -84,8 +93,8 @@
     </item>
     <item>
       <title><![CDATA[How Anthropic MCP Works on Mobile: Exposing SQLite & Hardware Sensors to Local LLMs]]></title>
-      <link>https://govindtank.github.io/blog/how-anthropic-mcp-works-on-mobile-exposing-sqlite-hardware-sensors-to-local-llms</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/how-anthropic-mcp-works-on-mobile-exposing-sqlite-hardware-sensors-to-local-llms</guid>
+      <link>https://govindtank.is-a.dev/blog/how-anthropic-mcp-works-on-mobile-exposing-sqlite-hardware-sensors-to-local-llms</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/how-anthropic-mcp-works-on-mobile-exposing-sqlite-hardware-sensors-to-local-llms</guid>
       <pubDate>Tue, 29 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Eliminate cloud latency and data leaks. Build an embedded Android MCP server to give local SLMs secure, structured access to Room schemas, biometrics, and Keystore APIs.
 ]]></description>
@@ -93,8 +102,8 @@
     </item>
     <item>
       <title><![CDATA[Why Your Flutter App Janks on Mid-Range Android (And How We Fixed Impeller Vulkan Pacing)]]></title>
-      <link>https://govindtank.github.io/blog/why-your-flutter-app-janks-on-mid-range-android-and-how-we-fixed-impeller-vulkan-pacing</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/why-your-flutter-app-janks-on-mid-range-android-and-how-we-fixed-impeller-vulkan-pacing</guid>
+      <link>https://govindtank.is-a.dev/blog/why-your-flutter-app-janks-on-mid-range-android-and-how-we-fixed-impeller-vulkan-pacing</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/why-your-flutter-app-janks-on-mid-range-android-and-how-we-fixed-impeller-vulkan-pacing</guid>
       <pubDate>Mon, 28 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Vulkan pipeline stalls cause severe Impeller frame pacing jank on mid-range Android. Here is how diagnosing GPU bottlenecks and tuning 3 engine flags restored a locked 60 FPS.
 ]]></description>
@@ -102,8 +111,8 @@
     </item>
     <item>
       <title><![CDATA[AGSL Shaders in Jetpack Compose: Building 60 FPS Interactive Visuals with Zero Canvas Lag]]></title>
-      <link>https://govindtank.github.io/blog/agsl-shaders-in-jetpack-compose-building-60-fps-interactive-visuals-with-zero-canvas-lag</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/agsl-shaders-in-jetpack-compose-building-60-fps-interactive-visuals-with-zero-canvas-lag</guid>
+      <link>https://govindtank.is-a.dev/blog/agsl-shaders-in-jetpack-compose-building-60-fps-interactive-visuals-with-zero-canvas-lag</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/agsl-shaders-in-jetpack-compose-building-60-fps-interactive-visuals-with-zero-canvas-lag</guid>
       <pubDate>Sun, 27 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Heavy Canvas redraws kill frame rates on touch interactions. Offload real-time visuals directly to the GPU with AGSL fragment shaders in Jetpack Compose for locked 60+ FPS with zero lag.
 ]]></description>
@@ -111,8 +120,8 @@
     </item>
     <item>
       <title><![CDATA[Offline-First Sync Shootout: PowerSync vs Automerge vs ElectricSQL in Flutter & KMP]]></title>
-      <link>https://govindtank.github.io/blog/offline-first-sync-shootout-powersync-vs-automerge-vs-electricsql-in-flutter-kmp</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/offline-first-sync-shootout-powersync-vs-automerge-vs-electricsql-in-flutter-kmp</guid>
+      <link>https://govindtank.is-a.dev/blog/offline-first-sync-shootout-powersync-vs-automerge-vs-electricsql-in-flutter-kmp</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/offline-first-sync-shootout-powersync-vs-automerge-vs-electricsql-in-flutter-kmp</guid>
       <pubDate>Sat, 26 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Payload bloat and sync lag kill offline-first apps. Benchmark replication latency, wire size, and conflict resolution across PowerSync, Automerge, and ElectricSQL for Flutter and KMP.
 ]]></description>
@@ -120,8 +129,8 @@
     </item>
     <item>
       <title><![CDATA[Building Local-First Mobile Apps: CRDT Architecture with Automerge and SQLite]]></title>
-      <link>https://govindtank.github.io/blog/building-local-first-mobile-apps-crdt-architecture-with-automerge-and-sqlite</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/building-local-first-mobile-apps-crdt-architecture-with-automerge-and-sqlite</guid>
+      <link>https://govindtank.is-a.dev/blog/building-local-first-mobile-apps-crdt-architecture-with-automerge-and-sqlite</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/building-local-first-mobile-apps-crdt-architecture-with-automerge-and-sqlite</guid>
       <pubDate>Fri, 25 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Stop fighting complex sync conflicts. Embed Automerge 2.0 directly into SQLite to build resilient, local-first mobile apps with seamless multi-device document sync.
 ]]></description>
@@ -129,8 +138,8 @@
     </item>
     <item>
       <title><![CDATA[Running 4-Bit DeepSeek & Qwen on Android: 18 Tokens/Sec with Zero Cloud APIs]]></title>
-      <link>https://govindtank.github.io/blog/running-4-bit-deepseek-qwen-on-android-18-tokenssec-with-zero-cloud-apis</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/running-4-bit-deepseek-qwen-on-android-18-tokenssec-with-zero-cloud-apis</guid>
+      <link>https://govindtank.is-a.dev/blog/running-4-bit-deepseek-qwen-on-android-18-tokenssec-with-zero-cloud-apis</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/running-4-bit-deepseek-qwen-on-android-18-tokenssec-with-zero-cloud-apis</guid>
       <pubDate>Thu, 24 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Ditch cloud API latency and costs. Compile llama.cpp with Android NDK and Qualcomm QNN to run 4-bit DeepSeek and Qwen at 18 tok/s—backed by real RAM and battery metrics.
 ]]></description>
@@ -138,8 +147,8 @@
     </item>
     <item>
       <title><![CDATA[Building Offline-First MCP Hosts on Android: Implementing Model Context Protocol Over Local Transports]]></title>
-      <link>https://govindtank.github.io/blog/building-offline-first-mcp-hosts-on-android-implementing-model-context-protocol-over-local-transports</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/building-offline-first-mcp-hosts-on-android-implementing-model-context-protocol-over-local-transports</guid>
+      <link>https://govindtank.is-a.dev/blog/building-offline-first-mcp-hosts-on-android-implementing-model-context-protocol-over-local-transports</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/building-offline-first-mcp-hosts-on-android-implementing-model-context-protocol-over-local-transports</guid>
       <pubDate>Wed, 23 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Build an embedded MCP server on Android to expose SQLite schemas, hardware sensors, and Keystore operations to on-device LLMs over local IPC transports.
 ]]></description>
@@ -147,8 +156,8 @@
     </item>
     <item>
       <title><![CDATA[Kotlin Multiplatform: State Management Patterns for Cross-Platform Apps]]></title>
-      <link>https://govindtank.github.io/blog/kotlin-multiplatform-state-management-patterns-for-cross-platform-apps</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/kotlin-multiplatform-state-management-patterns-for-cross-platform-apps</guid>
+      <link>https://govindtank.is-a.dev/blog/kotlin-multiplatform-state-management-patterns-for-cross-platform-apps</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/kotlin-multiplatform-state-management-patterns-for-cross-platform-apps</guid>
       <pubDate>Wed, 23 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Stop fixing the same state bugs twice. Unify reactive business logic across Android and iOS with StateFlow, SharedFlow, and Compose Multiplatform.
 ]]></description>
@@ -156,8 +165,8 @@
     </item>
     <item>
       <title><![CDATA[Zero-Copy Audio DSP in Compose Multiplatform: NDK Oboe & CoreAudio Bindings via K/N C-Interop]]></title>
-      <link>https://govindtank.github.io/blog/zero-copy-audio-dsp-in-compose-multiplatform-ndk-oboe-coreaudio-bindings-via-kn-c-interop</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/zero-copy-audio-dsp-in-compose-multiplatform-ndk-oboe-coreaudio-bindings-via-kn-c-interop</guid>
+      <link>https://govindtank.is-a.dev/blog/zero-copy-audio-dsp-in-compose-multiplatform-ndk-oboe-coreaudio-bindings-via-kn-c-interop</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/zero-copy-audio-dsp-in-compose-multiplatform-ndk-oboe-coreaudio-bindings-via-kn-c-interop</guid>
       <pubDate>Tue, 22 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Achieve deterministic sub-10ms audio DSP in Kotlin Multiplatform. Uses K/N C-interop, lock-free ring buffers, and direct bindings to Android Oboe and iOS CoreAudio.
 ]]></description>
@@ -165,8 +174,8 @@
     </item>
     <item>
       <title><![CDATA[On-Device SLM Inference with Llama.cpp and NPU Acceleration via Android NNAPI & Qualcomm QNN]]></title>
-      <link>https://govindtank.github.io/blog/on-device-slm-inference-with-llamacpp-and-npu-acceleration-via-android-nnapi-qualcomm-qnn</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/on-device-slm-inference-with-llamacpp-and-npu-acceleration-via-android-nnapi-qualcomm-qnn</guid>
+      <link>https://govindtank.is-a.dev/blog/on-device-slm-inference-with-llamacpp-and-npu-acceleration-via-android-nnapi-qualcomm-qnn</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/on-device-slm-inference-with-llamacpp-and-npu-acceleration-via-android-nnapi-qualcomm-qnn</guid>
       <pubDate>Mon, 21 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Compile and run quantized GGUF models natively on Android. Uses llama.cpp, JNI, NNAPI/Qualcomm QNN, and memory-mapped I/O to maximize NPU throughput and avoid OOM crashes.
 ]]></description>
@@ -174,8 +183,8 @@
     </item>
     <item>
       <title><![CDATA[Architecting Autonomous Mobile Agents: Multi-Turn Function Calling Loops with Dart Isolates and SLMs]]></title>
-      <link>https://govindtank.github.io/blog/architecting-autonomous-mobile-agents-multi-turn-function-calling-loops-with-dart-isolates-and-slms</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/architecting-autonomous-mobile-agents-multi-turn-function-calling-loops-with-dart-isolates-and-slms</guid>
+      <link>https://govindtank.is-a.dev/blog/architecting-autonomous-mobile-agents-multi-turn-function-calling-loops-with-dart-isolates-and-slms</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/architecting-autonomous-mobile-agents-multi-turn-function-calling-loops-with-dart-isolates-and-slms</guid>
       <pubDate>Sun, 20 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Implement a ReAct agent workflow in Flutter 3.29 with Dart 3.7 isolate groups. Covers background execution queues and fallback token budgeting between edge SLMs and remote models.
 ]]></description>
@@ -183,8 +192,8 @@
     </item>
     <item>
       <title><![CDATA[Modern Android Live Wallpapers with Jetpack Compose, NDK, and Material You Dynamic Theming]]></title>
-      <link>https://govindtank.github.io/blog/modern-android-live-wallpapers-with-jetpack-compose-ndk-and-material-you-dynamic-theming</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/modern-android-live-wallpapers-with-jetpack-compose-ndk-and-material-you-dynamic-theming</guid>
+      <link>https://govindtank.is-a.dev/blog/modern-android-live-wallpapers-with-jetpack-compose-ndk-and-material-you-dynamic-theming</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/modern-android-live-wallpapers-with-jetpack-compose-ndk-and-material-you-dynamic-theming</guid>
       <pubDate>Sun, 20 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[A guide to building high-framerate, battery-efficient live wallpapers using custom C++ Vulkan/OpenGL engines, wired to Compose UI settings and styled via Android Monet dynamic theme palettes.
 ]]></description>
@@ -192,8 +201,8 @@
     </item>
     <item>
       <title><![CDATA[Flutter Web: Deploying AI Chat Apps with Server-Sent Events and WebSockets]]></title>
-      <link>https://govindtank.github.io/blog/flutter-web-deploying-ai-chat-apps-with-server-sent-events-and-websockets</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-web-deploying-ai-chat-apps-with-server-sent-events-and-websockets</guid>
+      <link>https://govindtank.is-a.dev/blog/flutter-web-deploying-ai-chat-apps-with-server-sent-events-and-websockets</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-web-deploying-ai-chat-apps-with-server-sent-events-and-websockets</guid>
       <pubDate>Sat, 19 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Stream LLM responses in Flutter Web using Server-Sent Events and WebSockets. Covers connection lifecycles, state handling, and hosting caveats for production builds.
 ]]></description>
@@ -201,8 +210,8 @@
     </item>
     <item>
       <title><![CDATA[Micro-Frontends in Flutter: Dynamic Feature Modules and Isolated Custom Engines]]></title>
-      <link>https://govindtank.github.io/blog/micro-frontends-in-flutter-dynamic-feature-modules-and-isolated-custom-engines</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/micro-frontends-in-flutter-dynamic-feature-modules-and-isolated-custom-engines</guid>
+      <link>https://govindtank.is-a.dev/blog/micro-frontends-in-flutter-dynamic-feature-modules-and-isolated-custom-engines</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/micro-frontends-in-flutter-dynamic-feature-modules-and-isolated-custom-engines</guid>
       <pubDate>Sat, 19 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[An architectural evaluation of scaling multi-team Flutter codebases using deferred components, dynamic asset loading, and isolate-sandboxed logic.
 ]]></description>
@@ -210,8 +219,8 @@
     </item>
     <item>
       <title><![CDATA[Firebase Cloud Functions: Serverless Backend for Flutter Apps at Scale]]></title>
-      <link>https://govindtank.github.io/blog/firebase-cloud-functions-serverless-backend-for-flutter-apps-at-scale</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/firebase-cloud-functions-serverless-backend-for-flutter-apps-at-scale</guid>
+      <link>https://govindtank.is-a.dev/blog/firebase-cloud-functions-serverless-backend-for-flutter-apps-at-scale</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/firebase-cloud-functions-serverless-backend-for-flutter-apps-at-scale</guid>
       <pubDate>Fri, 18 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[How to build serverless backends for Flutter using Firebase Cloud Functions. Covers event triggers, background tasks, security, and scaling bottlenecks.
 ]]></description>
@@ -219,8 +228,8 @@
     </item>
     <item>
       <title><![CDATA[Flutter: Building Cross-Platform Apps with Server-Driven UI Patterns]]></title>
-      <link>https://govindtank.github.io/blog/flutter-building-cross-platform-apps-with-server-driven-ui-patterns</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-building-cross-platform-apps-with-server-driven-ui-patterns</guid>
+      <link>https://govindtank.is-a.dev/blog/flutter-building-cross-platform-apps-with-server-driven-ui-patterns</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-building-cross-platform-apps-with-server-driven-ui-patterns</guid>
       <pubDate>Fri, 18 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Define Flutter layouts using backend JSON schemas to update UI without store releases. Covers component mapping, dynamic event handling, and schema validation.
 ]]></description>
@@ -228,8 +237,8 @@
     </item>
     <item>
       <title><![CDATA[Migrating State Architectures from BLoC to Signal-Based Reactivity in Flutter 3.29+]]></title>
-      <link>https://govindtank.github.io/blog/migrating-state-architectures-from-bloc-to-signal-based-reactivity-in-flutter-329</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/migrating-state-architectures-from-bloc-to-signal-based-reactivity-in-flutter-329</guid>
+      <link>https://govindtank.is-a.dev/blog/migrating-state-architectures-from-bloc-to-signal-based-reactivity-in-flutter-329</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/migrating-state-architectures-from-bloc-to-signal-based-reactivity-in-flutter-329</guid>
       <pubDate>Thu, 17 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[A migration analysis comparing BLoC streams to granular signals in Flutter 3.29+, evaluating rebuild counts, memory footprint, and ergonomics in large codebases.
 ]]></description>
@@ -237,8 +246,8 @@
     </item>
     <item>
       <title><![CDATA[Offline-First State Synchronization: Implementing Automerge & Yjs CRDTs in Mobile Apps]]></title>
-      <link>https://govindtank.github.io/blog/offline-first-state-synchronization-implementing-automerge-yjs-crdts-in-mobile-apps</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/offline-first-state-synchronization-implementing-automerge-yjs-crdts-in-mobile-apps</guid>
+      <link>https://govindtank.is-a.dev/blog/offline-first-state-synchronization-implementing-automerge-yjs-crdts-in-mobile-apps</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/offline-first-state-synchronization-implementing-automerge-yjs-crdts-in-mobile-apps</guid>
       <pubDate>Thu, 17 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[A technical guide to embedding Automerge and Yjs in mobile apps, using SQLite for local persistence and WebSockets for conflict-free state sync.
 ]]></description>
@@ -246,8 +255,8 @@
     </item>
     <item>
       <title><![CDATA[Compose Multiplatform for iOS: Interop Architecture, UIKit Gesture Bridges, and Skiko Performance]]></title>
-      <link>https://govindtank.github.io/blog/compose-multiplatform-for-ios-interop-architecture-uikit-gesture-bridges-and-skiko-performance</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/compose-multiplatform-for-ios-interop-architecture-uikit-gesture-bridges-and-skiko-performance</guid>
+      <link>https://govindtank.is-a.dev/blog/compose-multiplatform-for-ios-interop-architecture-uikit-gesture-bridges-and-skiko-performance</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/compose-multiplatform-for-ios-interop-architecture-uikit-gesture-bridges-and-skiko-performance</guid>
       <pubDate>Wed, 16 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[A production analysis of Compose Multiplatform on iOS, covering UIKitView bridge overhead, Skiko memory leaks, and touch latency reconciliation.
 ]]></description>
@@ -255,8 +264,8 @@
     </item>
     <item>
       <title><![CDATA[Zero-Latency Real-Time Audio Transcription: Mobile Whisper.cpp and CoreML/NNAPI Pipelines]]></title>
-      <link>https://govindtank.github.io/blog/zero-latency-real-time-audio-transcription-mobile-whispercpp-and-coremlnnapi-pipelines</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/zero-latency-real-time-audio-transcription-mobile-whispercpp-and-coremlnnapi-pipelines</guid>
+      <link>https://govindtank.is-a.dev/blog/zero-latency-real-time-audio-transcription-mobile-whispercpp-and-coremlnnapi-pipelines</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/zero-latency-real-time-audio-transcription-mobile-whispercpp-and-coremlnnapi-pipelines</guid>
       <pubDate>Wed, 16 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Building a streaming Whisper.cpp pipeline on iOS and Android using CoreML and NNAPI. Covers native audio ring-buffers, quantization tradeoffs, and strict mobile memory constraints.
 ]]></description>
@@ -264,8 +273,8 @@
     </item>
     <item>
       <title><![CDATA[Building Production-Grade Model Context Protocol (MCP) Clients in Kotlin Multiplatform]]></title>
-      <link>https://govindtank.github.io/blog/building-production-grade-model-context-protocol-mcp-clients-in-kotlin-multiplatform</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/building-production-grade-model-context-protocol-mcp-clients-in-kotlin-multiplatform</guid>
+      <link>https://govindtank.is-a.dev/blog/building-production-grade-model-context-protocol-mcp-clients-in-kotlin-multiplatform</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/building-production-grade-model-context-protocol-mcp-clients-in-kotlin-multiplatform</guid>
       <pubDate>Tue, 15 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Architect an on-device orchestration engine in Kotlin Multiplatform. Connect local Small Language Models with native device APIs and remote tools using the MCP specification.
 ]]></description>
@@ -273,8 +282,8 @@
     </item>
     <item>
       <title><![CDATA[Deterministic Concurrency with Dart 3.7 Isolates and Shared Memory Buffers]]></title>
-      <link>https://govindtank.github.io/blog/deterministic-concurrency-with-dart-37-isolates-and-shared-memory-buffers</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/deterministic-concurrency-with-dart-37-isolates-and-shared-memory-buffers</guid>
+      <link>https://govindtank.is-a.dev/blog/deterministic-concurrency-with-dart-37-isolates-and-shared-memory-buffers</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/deterministic-concurrency-with-dart-37-isolates-and-shared-memory-buffers</guid>
       <pubDate>Tue, 15 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Process 60fps camera frames without blocking the main UI thread using Dart 3.7+ background isolate channels and zero-copy TypedData sharing.
 ]]></description>
@@ -282,8 +291,8 @@
     </item>
     <item>
       <title><![CDATA[Agentic Tool Loops on Device: Architecting Autonomous Mobile Workflows with ONNX Runtime]]></title>
-      <link>https://govindtank.github.io/blog/agentic-tool-loops-on-device-architecting-autonomous-mobile-workflows-with-onnx-runtime</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/agentic-tool-loops-on-device-architecting-autonomous-mobile-workflows-with-onnx-runtime</guid>
+      <link>https://govindtank.is-a.dev/blog/agentic-tool-loops-on-device-architecting-autonomous-mobile-workflows-with-onnx-runtime</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/agentic-tool-loops-on-device-architecting-autonomous-mobile-workflows-with-onnx-runtime</guid>
       <pubDate>Mon, 14 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Build local ReAct and function-calling loops on mobile using ONNX Runtime and SLMs. Automate background OS actions entirely offline without cloud dependencies.
 ]]></description>
@@ -291,8 +300,8 @@
     </item>
     <item>
       <title><![CDATA[Optimizing Impeller on Low-End Vulkan & Metal Devices: Flutter 3.29 Profiling Internals]]></title>
-      <link>https://govindtank.github.io/blog/optimizing-impeller-on-low-end-vulkan-metal-devices-flutter-329-profiling-internals</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/optimizing-impeller-on-low-end-vulkan-metal-devices-flutter-329-profiling-internals</guid>
+      <link>https://govindtank.is-a.dev/blog/optimizing-impeller-on-low-end-vulkan-metal-devices-flutter-329-profiling-internals</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/optimizing-impeller-on-low-end-vulkan-metal-devices-flutter-329-profiling-internals</guid>
       <pubDate>Mon, 14 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Diagnose frame drops, shader warmup bottlenecks, and custom DisplayList tessellation quirks on budget Android and older iOS hardware using the Flutter 3.29 GPU profiler.
 ]]></description>
@@ -300,8 +309,8 @@
     </item>
     <item>
       <title><![CDATA[Dynamic Color & Contrast Tokens in Android: Mastering Material You 3 Theme Engines]]></title>
-      <link>https://govindtank.github.io/blog/dynamic-color-contrast-tokens-in-android-mastering-material-you-3-theme-engines</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/dynamic-color-contrast-tokens-in-android-mastering-material-you-3-theme-engines</guid>
+      <link>https://govindtank.is-a.dev/blog/dynamic-color-contrast-tokens-in-android-mastering-material-you-3-theme-engines</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/dynamic-color-contrast-tokens-in-android-mastering-material-you-3-theme-engines</guid>
       <pubDate>Sun, 13 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Architecture patterns for dynamic palette extraction, contrast-aware token hierarchies, and DayNight styling across large, modular Jetpack Compose codebases.
 ]]></description>
@@ -309,8 +318,8 @@
     </item>
     <item>
       <title><![CDATA[KMP Binary Size and Startup Time Benchmarking: ProGuard, R8, and Objective-C Frameworks]]></title>
-      <link>https://govindtank.github.io/blog/kmp-binary-size-and-startup-time-benchmarking-proguard-r8-and-objective-c-frameworks</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/kmp-binary-size-and-startup-time-benchmarking-proguard-r8-and-objective-c-frameworks</guid>
+      <link>https://govindtank.is-a.dev/blog/kmp-binary-size-and-startup-time-benchmarking-proguard-r8-and-objective-c-frameworks</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/kmp-binary-size-and-startup-time-benchmarking-proguard-r8-and-objective-c-frameworks</guid>
       <pubDate>Sun, 13 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[A benchmark of KMP artifact footprints on Android and iOS. Measures R8 dead-code elimination against Xcode strip levels and dSYM handling to track binary size and cold startup impact.
 ]]></description>
@@ -318,8 +327,8 @@
     </item>
     <item>
       <title><![CDATA[Hardware-Accelerated Live Wallpapers with Jetpack Compose, AGSL, and Android NDK]]></title>
-      <link>https://govindtank.github.io/blog/hardware-accelerated-live-wallpapers-with-jetpack-compose-agsl-and-android-ndk</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/hardware-accelerated-live-wallpapers-with-jetpack-compose-agsl-and-android-ndk</guid>
+      <link>https://govindtank.is-a.dev/blog/hardware-accelerated-live-wallpapers-with-jetpack-compose-agsl-and-android-ndk</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/hardware-accelerated-live-wallpapers-with-jetpack-compose-agsl-and-android-ndk</guid>
       <pubDate>Sat, 12 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Implement high-performance Android WallpaperServices using AGSL shaders and native C++ render loops. Covers Compose integration and frame pacing to control battery usage.
 ]]></description>
@@ -327,8 +336,8 @@
     </item>
     <item>
       <title><![CDATA[Running 3B SLMs Locally on Android: NDK Bindings, GGUF Quantization, and NPU Acceleration]]></title>
-      <link>https://govindtank.github.io/blog/running-3b-slms-locally-on-android-ndk-bindings-gguf-quantization-and-npu-acceleration</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/running-3b-slms-locally-on-android-ndk-bindings-gguf-quantization-and-npu-acceleration</guid>
+      <link>https://govindtank.is-a.dev/blog/running-3b-slms-locally-on-android-ndk-bindings-gguf-quantization-and-npu-acceleration</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/running-3b-slms-locally-on-android-ndk-bindings-gguf-quantization-and-npu-acceleration</guid>
       <pubDate>Sat, 12 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Bind llama.cpp to Jetpack Compose via JNI, offload 3B SLMs to Qualcomm Hexagon NPUs using QNN, and manage thermal throttling during long context streaming.
 ]]></description>
@@ -336,8 +345,8 @@
     </item>
     <item>
       <title><![CDATA[Android Studio AI Integration: Using Copilot and GitHub Codespaces for Mobile Dev]]></title>
-      <link>https://govindtank.github.io/blog/android-studio-ai-integration-using-copilot-and-github-codespaces-for-mobile-dev</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/android-studio-ai-integration-using-copilot-and-github-codespaces-for-mobile-dev</guid>
+      <link>https://govindtank.is-a.dev/blog/android-studio-ai-integration-using-copilot-and-github-codespaces-for-mobile-dev</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/android-studio-ai-integration-using-copilot-and-github-codespaces-for-mobile-dev</guid>
       <pubDate>Fri, 11 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Set up GitHub Copilot in Android Studio and run builds in Codespaces. A practical setup guide for cloud-based Android development workflows.
 ]]></description>
@@ -345,8 +354,8 @@
     </item>
     <item>
       <title><![CDATA[Flutter Antigravity: Building AI Features with OpenAI and Streaming SSE]]></title>
-      <link>https://govindtank.github.io/blog/flutter-antigravity-building-ai-features-with-openai-and-streaming-sse</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-antigravity-building-ai-features-with-openai-and-streaming-sse</guid>
+      <link>https://govindtank.is-a.dev/blog/flutter-antigravity-building-ai-features-with-openai-and-streaming-sse</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-antigravity-building-ai-features-with-openai-and-streaming-sse</guid>
       <pubDate>Fri, 11 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Implements OpenAI SSE streaming in Flutter with real-time markdown token rendering, resilient retry channels, and client-side chat state management.
 ]]></description>
@@ -354,8 +363,8 @@
     </item>
     <item>
       <title><![CDATA[Agentic AI: Building Autonomous Workflows with LangGraph and CrewAI]]></title>
-      <link>https://govindtank.github.io/blog/agentic-ai-building-autonomous-workflows-with-langgraph-and-crewai</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/agentic-ai-building-autonomous-workflows-with-langgraph-and-crewai</guid>
+      <link>https://govindtank.is-a.dev/blog/agentic-ai-building-autonomous-workflows-with-langgraph-and-crewai</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/agentic-ai-building-autonomous-workflows-with-langgraph-and-crewai</guid>
       <pubDate>Thu, 10 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[A practical comparison of LangGraph and CrewAI for autonomous workflows. Covers cyclic state machines, role-based orchestration, and production trade-offs with code.
 ]]></description>
@@ -363,8 +372,8 @@
     </item>
     <item>
       <title><![CDATA[Flutter Antigravity: Building AI Features with OpenAI API Integration]]></title>
-      <link>https://govindtank.github.io/blog/flutter-antigravity-building-ai-features-with-openai-api-integration</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-antigravity-building-ai-features-with-openai-api-integration</guid>
+      <link>https://govindtank.is-a.dev/blog/flutter-antigravity-building-ai-features-with-openai-api-integration</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-antigravity-building-ai-features-with-openai-api-integration</guid>
       <pubDate>Thu, 10 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Connect Flutter apps to the OpenAI API with this practical guide. Covers authentication, streaming chat responses, error handling, and UI state management.
 ]]></description>
@@ -372,8 +381,8 @@
     </item>
     <item>
       <title><![CDATA[AI-Native IDEs: Using Flutter's AI Features for Faster Development]]></title>
-      <link>https://govindtank.github.io/blog/ai-native-ides-using-flutters-ai-features-for-faster-development</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-native-ides-using-flutters-ai-features-for-faster-development</guid>
+      <link>https://govindtank.is-a.dev/blog/ai-native-ides-using-flutters-ai-features-for-faster-development</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ai-native-ides-using-flutters-ai-features-for-faster-development</guid>
       <pubDate>Wed, 09 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[AI-native IDEs speed up Flutter workflows through context-aware widget scaffolding, automated refactoring, and targeted build error fixes.
 ]]></description>
@@ -381,8 +390,8 @@
     </item>
     <item>
       <title><![CDATA[Flutter: Riverpod vs Bloc vs Provider - Performance Benchmarks 2026]]></title>
-      <link>https://govindtank.github.io/blog/flutter-riverpod-vs-bloc-vs-provider-performance-benchmarks-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-riverpod-vs-bloc-vs-provider-performance-benchmarks-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/flutter-riverpod-vs-bloc-vs-provider-performance-benchmarks-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-riverpod-vs-bloc-vs-provider-performance-benchmarks-2026</guid>
       <pubDate>Wed, 09 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Direct benchmarks comparing Riverpod, Bloc, and Provider across widget rebuild counts, memory usage, and frame render times under heavy UI loads.
 ]]></description>
@@ -390,8 +399,8 @@
     </item>
     <item>
       <title><![CDATA[Material You on Android: Dark Mode Implementation with DayNight Tokens]]></title>
-      <link>https://govindtank.github.io/blog/material-you-on-android-dark-mode-implementation-with-daynight-tokens</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/material-you-on-android-dark-mode-implementation-with-daynight-tokens</guid>
+      <link>https://govindtank.is-a.dev/blog/material-you-on-android-dark-mode-implementation-with-daynight-tokens</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/material-you-on-android-dark-mode-implementation-with-daynight-tokens</guid>
       <pubDate>Tue, 08 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Map Material You dynamic colors to DayNight tokens on Android. Covers theme setup, runtime palette switching, and avoiding common tinting bugs.
 ]]></description>
@@ -399,8 +408,8 @@
     </item>
     <item>
       <title><![CDATA[Offline-First Mobile Apps: CRDTs for Conflict-Free Replication in Flutter]]></title>
-      <link>https://govindtank.github.io/blog/offline-first-mobile-apps-crdts-for-conflict-free-replication-in-flutter</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/offline-first-mobile-apps-crdts-for-conflict-free-replication-in-flutter</guid>
+      <link>https://govindtank.is-a.dev/blog/offline-first-mobile-apps-crdts-for-conflict-free-replication-in-flutter</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/offline-first-mobile-apps-crdts-for-conflict-free-replication-in-flutter</guid>
       <pubDate>Tue, 08 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[How to use Conflict-Free Replicated Data Types (CRDTs) in Flutter to synchronize offline-first data across devices without server-side merge conflicts.
 ]]></description>
@@ -408,8 +417,8 @@
     </item>
     <item>
       <title><![CDATA[Agentic AI: Building Autonomous Workflows with LangGraph and MCP Protocol]]></title>
-      <link>https://govindtank.github.io/blog/agentic-ai-building-autonomous-workflows-with-langgraph-and-mcp-protocol</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/agentic-ai-building-autonomous-workflows-with-langgraph-and-mcp-protocol</guid>
+      <link>https://govindtank.is-a.dev/blog/agentic-ai-building-autonomous-workflows-with-langgraph-and-mcp-protocol</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/agentic-ai-building-autonomous-workflows-with-langgraph-and-mcp-protocol</guid>
       <pubDate>Mon, 07 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[This guide details building autonomous AI workflows with LangGraph and the MCP protocol, covering MCP server integrations, iterative tool-calling loops, multi-agent orchestration, and production-ready eval pipelines.
 ]]></description>
@@ -417,8 +426,8 @@
     </item>
     <item>
       <title><![CDATA[Android Live Wallpapers with OpenGL ES: Performance Optimization Guide]]></title>
-      <link>https://govindtank.github.io/blog/android-live-wallpapers-with-opengl-es-performance-optimization-guide</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/android-live-wallpapers-with-opengl-es-performance-optimization-guide</guid>
+      <link>https://govindtank.is-a.dev/blog/android-live-wallpapers-with-opengl-es-performance-optimization-guide</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/android-live-wallpapers-with-opengl-es-performance-optimization-guide</guid>
       <pubDate>Mon, 07 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[This guide details OpenGL ES optimizations for Android live wallpapers to reduce GPU load and battery drain, covering off-screen geometry culling, draw call batching, and Android GPU Inspector profiling.
 ]]></description>
@@ -426,8 +435,8 @@
     </item>
     <item>
       <title><![CDATA[Android NPU Acceleration: Implementing ONNX Runtime for ML Inference]]></title>
-      <link>https://govindtank.github.io/blog/android-npu-acceleration-implementing-onnx-runtime-for-ml-inference</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/android-npu-acceleration-implementing-onnx-runtime-for-ml-inference</guid>
+      <link>https://govindtank.is-a.dev/blog/android-npu-acceleration-implementing-onnx-runtime-for-ml-inference</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/android-npu-acceleration-implementing-onnx-runtime-for-ml-inference</guid>
       <pubDate>Sun, 06 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[This guide covers end-to-end implementation of ONNX Runtime for Android NPU-accelerated ML inference, including model quantization, compatibility validation, and side-by-side latency benchmarks against CPU and GPU exe...
 ]]></description>
@@ -435,8 +444,8 @@
     </item>
     <item>
       <title><![CDATA[Android NPU Acceleration: Implementing ONNX Runtime for Mobile ML Inference]]></title>
-      <link>https://govindtank.github.io/blog/android-npu-acceleration-implementing-onnx-runtime-for-mobile-ml-inference</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/android-npu-acceleration-implementing-onnx-runtime-for-mobile-ml-inference</guid>
+      <link>https://govindtank.is-a.dev/blog/android-npu-acceleration-implementing-onnx-runtime-for-mobile-ml-inference</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/android-npu-acceleration-implementing-onnx-runtime-for-mobile-ml-inference</guid>
       <pubDate>Sun, 06 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[If you are building production Android ML inference for low-power computer vision or on-device NLP, you should skip NNAPI entirely and use ONNX Runtime’s QNN execution provider with a strict CPU fallback, not the defa...
 ]]></description>
@@ -444,8 +453,8 @@
     </item>
     <item>
       <title><![CDATA[Jetpack Compose Multiplatform: Sharing Business Logic Between iOS and Android]]></title>
-      <link>https://govindtank.github.io/blog/jetpack-compose-multiplatform-sharing-business-logic-between-ios-and-android</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/jetpack-compose-multiplatform-sharing-business-logic-between-ios-and-android</guid>
+      <link>https://govindtank.is-a.dev/blog/jetpack-compose-multiplatform-sharing-business-logic-between-ios-and-android</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/jetpack-compose-multiplatform-sharing-business-logic-between-ios-and-android</guid>
       <pubDate>Sun, 06 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[This post breaks down a real implementation of sharing core business logic across iOS and Android with Jetpack Compose Multiplatform, including how to handle platform-specific API calls without duplicating shared code...
 ]]></description>
@@ -453,8 +462,8 @@
     </item>
     <item>
       <title><![CDATA[Local LLMs on Android: Llama.cpp GGUF Quantization for Mobile Edge AI]]></title>
-      <link>https://govindtank.github.io/blog/local-llms-on-android-llamacpp-gguf-quantization-for-mobile-edge-ai</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/local-llms-on-android-llamacpp-gguf-quantization-for-mobile-edge-ai</guid>
+      <link>https://govindtank.is-a.dev/blog/local-llms-on-android-llamacpp-gguf-quantization-for-mobile-edge-ai</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/local-llms-on-android-llamacpp-gguf-quantization-for-mobile-edge-ai</guid>
       <pubDate>Sun, 06 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[This guide covers deploying quantized Llama.cpp GGUF LLMs natively on Android, no cloud required. It includes latency and memory benchmarks for 4
 ]]></description>
@@ -462,8 +471,8 @@
     </item>
     <item>
       <title><![CDATA[ComfyUI Workflows for Blog Cover Art: Stable Diffusion, ControlNet, and Consistent Characters]]></title>
-      <link>https://govindtank.github.io/blog/comfyui-workflows-for-blog-cover-art-stable-diffusion-controlnet-and-consistent-characters</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/comfyui-workflows-for-blog-cover-art-stable-diffusion-controlnet-and-consistent-characters</guid>
+      <link>https://govindtank.is-a.dev/blog/comfyui-workflows-for-blog-cover-art-stable-diffusion-controlnet-and-consistent-characters</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/comfyui-workflows-for-blog-cover-art-stable-diffusion-controlnet-and-consistent-characters</guid>
       <pubDate>Wed, 02 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[A step-by-step ComfyUI node graph that combines SDXL, ControlNet, and IP-Adapter to generate consistent blog cover art with reproducible character designs. Learn how to build a workflow that maintains character identi...
 ]]></description>
@@ -471,8 +480,8 @@
     </item>
     <item>
       <title><![CDATA[Effective TypeScript 5.7: Inference, Const Generics, and Template Literal Types]]></title>
-      <link>https://govindtank.github.io/blog/effective-typescript-57-inference-const-generics-and-template-literal-types</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/effective-typescript-57-inference-const-generics-and-template-literal-types</guid>
+      <link>https://govindtank.is-a.dev/blog/effective-typescript-57-inference-const-generics-and-template-literal-types</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/effective-typescript-57-inference-const-generics-and-template-literal-types</guid>
       <pubDate>Tue, 01 Sep 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[TypeScript 5.7 tightens inference for partial objects, makes const type parameters more practical, and extends template literal type resolution. Covers real patterns for library authors and when to use `satisfies` ove...
 ]]></description>
@@ -480,8 +489,8 @@
     </item>
     <item>
       <title><![CDATA[Cross-Platform Mobile in 2026: Flutter vs React Native vs Kotlin Multiplatform vs Tauri]]></title>
-      <link>https://govindtank.github.io/blog/cross-platform-mobile-in-2026-flutter-vs-react-native-vs-kotlin-multiplatform-vs-tauri</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/cross-platform-mobile-in-2026-flutter-vs-react-native-vs-kotlin-multiplatform-vs-tauri</guid>
+      <link>https://govindtank.is-a.dev/blog/cross-platform-mobile-in-2026-flutter-vs-react-native-vs-kotlin-multiplatform-vs-tauri</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/cross-platform-mobile-in-2026-flutter-vs-react-native-vs-kotlin-multiplatform-vs-tauri</guid>
       <pubDate>Mon, 31 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[A 2026 comparison of Flutter, React Native, Kotlin Multiplatform, and Tauri across performance, bundle size, native API access, team skill requirements, and a decision matrix for new mobile projects.
 ]]></description>
@@ -489,8 +498,8 @@
     </item>
     <item>
       <title><![CDATA[AI-Driven Accessibility: Automatic UI Adaptation for Disabilities with Screen Reader Optimization]]></title>
-      <link>https://govindtank.github.io/blog/ai-driven-accessibility-automatic-ui-adaptation-for-disabilities-with-screen-reader-optimization</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-driven-accessibility-automatic-ui-adaptation-for-disabilities-with-screen-reader-optimization</guid>
+      <link>https://govindtank.is-a.dev/blog/ai-driven-accessibility-automatic-ui-adaptation-for-disabilities-with-screen-reader-optimization</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ai-driven-accessibility-automatic-ui-adaptation-for-disabilities-with-screen-reader-optimization</guid>
       <pubDate>Sun, 30 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Mobile apps can now adapt interfaces automatically for visual, auditory, and motor impairments through code that detects assistive tech usage and modifies layouts, captions, and input methods in real time.
 ]]></description>
@@ -498,8 +507,8 @@
     </item>
     <item>
       <title><![CDATA[AI Monetization in Mobile: Pricing Strategies, Freemium LLM Tiers, Usage-Based Billing Challenges]]></title>
-      <link>https://govindtank.github.io/blog/ai-monetization-in-mobile-pricing-strategies-freemium-llm-tiers-usage-based-billing-challenges</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-monetization-in-mobile-pricing-strategies-freemium-llm-tiers-usage-based-billing-challenges</guid>
+      <link>https://govindtank.is-a.dev/blog/ai-monetization-in-mobile-pricing-strategies-freemium-llm-tiers-usage-based-billing-challenges</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ai-monetization-in-mobile-pricing-strategies-freemium-llm-tiers-usage-based-billing-challenges</guid>
       <pubDate>Sun, 30 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Mobile AI features demand new pricing models beyond simple subscriptions. This post examines real-world tiered approaches, freemium LLM limits, and usage-based billing pitfalls that actually drive revenue.
 ]]></description>
@@ -507,8 +516,8 @@
     </item>
     <item>
       <title><![CDATA[AI-Native IDEs for Mobile Development: Flutter AI Features, Android Studio Integration]]></title>
-      <link>https://govindtank.github.io/blog/ai-native-ides-for-mobile-development-flutter-ai-features-android-studio-integration</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-native-ides-for-mobile-development-flutter-ai-features-android-studio-integration</guid>
+      <link>https://govindtank.is-a.dev/blog/ai-native-ides-for-mobile-development-flutter-ai-features-android-studio-integration</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ai-native-ides-for-mobile-development-flutter-ai-features-android-studio-integration</guid>
       <pubDate>Sun, 30 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Exploring VS Code alternatives built for mobile-first development with integrated AI coding assistance, from Flutter's native AI features to Android Studio's Gemini integration.
 ]]></description>
@@ -516,8 +525,8 @@
     </item>
     <item>
       <title><![CDATA[AI-Powered Test Generation for Flutter/Android: UI Coverage, Edge Cases, Flaky Test Detection]]></title>
-      <link>https://govindtank.github.io/blog/ai-powered-test-generation-for-flutterandroid-ui-coverage-edge-cases-flaky-test-detection</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-powered-test-generation-for-flutterandroid-ui-coverage-edge-cases-flaky-test-detection</guid>
+      <link>https://govindtank.is-a.dev/blog/ai-powered-test-generation-for-flutterandroid-ui-coverage-edge-cases-flaky-test-detection</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ai-powered-test-generation-for-flutterandroid-ui-coverage-edge-cases-flaky-test-detection</guid>
       <pubDate>Sun, 30 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[This post covers using LLMs to generate unit and integration tests for Flutter and Android, with a focus on achieving thorough UI state coverage, surfacing edge cases humans tend to miss, and flagging flaky tests befo...
 ]]></description>
@@ -525,8 +534,8 @@
     </item>
     <item>
       <title><![CDATA[Cross-Lingual Mobile Development: Low-Resource Languages, Cultural UI Adaptation, RTL Layouts]]></title>
-      <link>https://govindtank.github.io/blog/cross-lingual-mobile-development-low-resource-languages-cultural-ui-adaptation-rtl-layouts</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/cross-lingual-mobile-development-low-resource-languages-cultural-ui-adaptation-rtl-layouts</guid>
+      <link>https://govindtank.is-a.dev/blog/cross-lingual-mobile-development-low-resource-languages-cultural-ui-adaptation-rtl-layouts</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/cross-lingual-mobile-development-low-resource-languages-cultural-ui-adaptation-rtl-layouts</guid>
       <pubDate>Sun, 30 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Building mobile apps for speakers of low-resource languages means tackling missing fonts, broken text rendering, and keyboards that don't exist yet. This post covers practical approaches to cultural UI adaptation and ...
 ]]></description>
@@ -534,8 +543,8 @@
     </item>
     <item>
       <title><![CDATA[Ethical AI in Mobile Apps: Bias Detection, Explainable AI, GDPR Compliance Patterns]]></title>
-      <link>https://govindtank.github.io/blog/ethical-ai-in-mobile-apps-bias-detection-explainable-ai-gdpr-compliance-patterns</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ethical-ai-in-mobile-apps-bias-detection-explainable-ai-gdpr-compliance-patterns</guid>
+      <link>https://govindtank.is-a.dev/blog/ethical-ai-in-mobile-apps-bias-detection-explainable-ai-gdpr-compliance-patterns</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ethical-ai-in-mobile-apps-bias-detection-explainable-ai-gdpr-compliance-patterns</guid>
       <pubDate>Sun, 30 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Mobile apps using AI must actively detect and mitigate bias in training data and model outputs, implement explainable AI techniques that translate model decisions into plain-language reasons users can act on, and embe...
 ]]></description>
@@ -543,8 +552,8 @@
     </item>
     <item>
       <title><![CDATA[LLM-Centric App Design: Token-Aware UI, Context Window Management, Cost Modeling]]></title>
-      <link>https://govindtank.github.io/blog/llm-centric-app-design-token-aware-ui-context-window-management-cost-modeling</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/llm-centric-app-design-token-aware-ui-context-window-management-cost-modeling</guid>
+      <link>https://govindtank.is-a.dev/blog/llm-centric-app-design-token-aware-ui-context-window-management-cost-modeling</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/llm-centric-app-design-token-aware-ui-context-window-management-cost-modeling</guid>
       <pubDate>Sun, 30 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Applications designed around LLMs treat every token as a priced resource, with streaming interfaces that react to model output in real-time and cost models baked into the request lifecycle. This shifts UI architecture...
 ]]></description>
@@ -552,8 +561,8 @@
     </item>
     <item>
       <title><![CDATA[Agentic Workflows on Device: Local Multi-Agent Systems for Privacy-First Mobile AI]]></title>
-      <link>https://govindtank.github.io/blog/agentic-workflows-on-device-local-multi-agent-systems-for-privacy-first-mobile-ai</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/agentic-workflows-on-device-local-multi-agent-systems-for-privacy-first-mobile-ai</guid>
+      <link>https://govindtank.is-a.dev/blog/agentic-workflows-on-device-local-multi-agent-systems-for-privacy-first-mobile-ai</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/agentic-workflows-on-device-local-multi-agent-systems-for-privacy-first-mobile-ai</guid>
       <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Running multiple AI agents locally on mobile devices using on-device LLMs that route tasks between each other without cloud dependencies. Keeps all data on the device while enabling complex multi-step AI workflows.
 ]]></description>
@@ -561,8 +570,8 @@
     </item>
     <item>
       <title><![CDATA[AI-Native Mobile Games: Generative Narrative, Real-Time Opponent Adaptation, Procedural Content]]></title>
-      <link>https://govindtank.github.io/blog/ai-native-mobile-games-generative-narrative-real-time-opponent-adaptation-procedural-content</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-native-mobile-games-generative-narrative-real-time-opponent-adaptation-procedural-content</guid>
+      <link>https://govindtank.is-a.dev/blog/ai-native-mobile-games-generative-narrative-real-time-opponent-adaptation-procedural-content</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ai-native-mobile-games-generative-narrative-real-time-opponent-adaptation-procedural-content</guid>
       <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[This post examines how mobile games use LLMs for real-time opponent adaptation and procedural content generation, creating dynamic difficulty curves and branching narratives that respond to player behavior without rel...
 ]]></description>
@@ -570,8 +579,8 @@
     </item>
     <item>
       <title><![CDATA[AI Performance Budgets: Managing LLM Latency + Cost vs UX Expectations with Caching]]></title>
-      <link>https://govindtank.github.io/blog/ai-performance-budgets-managing-llm-latency-cost-vs-ux-expectations-with-caching</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-performance-budgets-managing-llm-latency-cost-vs-ux-expectations-with-caching</guid>
+      <link>https://govindtank.is-a.dev/blog/ai-performance-budgets-managing-llm-latency-cost-vs-ux-expectations-with-caching</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ai-performance-budgets-managing-llm-latency-cost-vs-ux-expectations-with-caching</guid>
       <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Caching LLM responses and using async patterns can cut latency and costs, but only if you budget for cache hit rates and user tolerance for delayed responses.
 ]]></description>
@@ -579,8 +588,8 @@
     </item>
     <item>
       <title><![CDATA[Android Jetpack AI: ML Kit Integration, Neural Networks API Updates, Edge TPU Support in 2026]]></title>
-      <link>https://govindtank.github.io/blog/android-jetpack-ai-ml-kit-integration-neural-networks-api-updates-edge-tpu-support-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/android-jetpack-ai-ml-kit-integration-neural-networks-api-updates-edge-tpu-support-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/android-jetpack-ai-ml-kit-integration-neural-networks-api-updates-edge-tpu-support-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/android-jetpack-ai-ml-kit-integration-neural-networks-api-updates-edge-tpu-support-in-2026</guid>
       <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Android's 2026 ML Kit updates add live translation, pose detection, and custom model support. Neural Networks API gains GPU compute and quantization, while Edge TPU integration enables fast on-device inference.
 ]]></description>
@@ -588,8 +597,8 @@
     </item>
     <item>
       <title><![CDATA[Cross-Platform AR/VR Development: Unity vs React Native + visionOS with 6DoF Tracking]]></title>
-      <link>https://govindtank.github.io/blog/cross-platform-arvr-development-unity-vs-react-native-visionos-with-6dof-tracking</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/cross-platform-arvr-development-unity-vs-react-native-visionos-with-6dof-tracking</guid>
+      <link>https://govindtank.is-a.dev/blog/cross-platform-arvr-development-unity-vs-react-native-visionos-with-6dof-tracking</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/cross-platform-arvr-development-unity-vs-react-native-visionos-with-6dof-tracking</guid>
       <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Comparing Unity's native AR/VR support against React Native's web-based approach for building cross-platform spatial apps with 6DoF tracking on visionOS and other headsets.
 ]]></description>
@@ -597,8 +606,8 @@
     </item>
     <item>
       <title><![CDATA[Flutter WebGPU Rendering: GPU Acceleration, Shader Programming, WebGL Fallbacks]]></title>
-      <link>https://govindtank.github.io/blog/flutter-webgpu-rendering-gpu-acceleration-shader-programming-webgl-fallbacks</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-webgpu-rendering-gpu-acceleration-shader-programming-webgl-fallbacks</guid>
+      <link>https://govindtank.is-a.dev/blog/flutter-webgpu-rendering-gpu-acceleration-shader-programming-webgl-fallbacks</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-webgpu-rendering-gpu-acceleration-shader-programming-webgl-fallbacks</guid>
       <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Flutter's WebGPU integration enables direct GPU compute shaders and rasterization pipelines, but requires careful memory budgeting and shader complexity management to maintain 60fps across mobile and desktop targets.
 ]]></description>
@@ -606,8 +615,8 @@
     </item>
     <item>
       <title><![CDATA[Green AI for Mobile: Reducing Carbon Footprint of LLM Usage with Model Selection]]></title>
-      <link>https://govindtank.github.io/blog/green-ai-for-mobile-reducing-carbon-footprint-of-llm-usage-with-model-selection</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/green-ai-for-mobile-reducing-carbon-footprint-of-llm-usage-with-model-selection</guid>
+      <link>https://govindtank.is-a.dev/blog/green-ai-for-mobile-reducing-carbon-footprint-of-llm-usage-with-model-selection</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/green-ai-for-mobile-reducing-carbon-footprint-of-llm-usage-with-model-selection</guid>
       <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Choosing smaller models for less capable devices and caching frequent responses can meaningfully cut the energy cost of running LLMs on mobile. This post looks at practical ways to match model size to device capabilit...
 ]]></description>
@@ -615,8 +624,8 @@
     </item>
     <item>
       <title><![CDATA[Hybrid Native-Web Apps: Platform-Specific Features vs PWA/React Native Trade-offs in 2026]]></title>
-      <link>https://govindtank.github.io/blog/hybrid-native-web-apps-platform-specific-features-vs-pwareact-native-trade-offs-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/hybrid-native-web-apps-platform-specific-features-vs-pwareact-native-trade-offs-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/hybrid-native-web-apps-platform-specific-features-vs-pwareact-native-trade-offs-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/hybrid-native-web-apps-platform-specific-features-vs-pwareact-native-trade-offs-in-2026</guid>
       <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Here's a concise, no-fluff excerpt (98 characters): > Flutter for heavy platform integration; PWA/React Native for broad reach. Benchmarks and feature detection guide the 2026 choice.
 ]]></description>
@@ -624,8 +633,8 @@
     </item>
     <item>
       <title><![CDATA[iOS 20 Vision Framework Updates: Eye Tracking, Depth Sensing, Privacy-Preserving Features]]></title>
-      <link>https://govindtank.github.io/blog/ios-20-vision-framework-updates-eye-tracking-depth-sensing-privacy-preserving-features</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ios-20-vision-framework-updates-eye-tracking-depth-sensing-privacy-preserving-features</guid>
+      <link>https://govindtank.is-a.dev/blog/ios-20-vision-framework-updates-eye-tracking-depth-sensing-privacy-preserving-features</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ios-20-vision-framework-updates-eye-tracking-depth-sensing-privacy-preserving-features</guid>
       <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Apple's iOS 20 Vision Framework adds eye tracking for accessibility, enhanced depth sensing APIs, and on-device processing for privacy. New hand gesture recognition and improved face landmark detection expand sensing ...
 ]]></description>
@@ -633,8 +642,8 @@
     </item>
     <item>
       <title><![CDATA[Mobile App Store AI Review Guidelines: Navigating Apple/Google Policy Changes in 2026]]></title>
-      <link>https://govindtank.github.io/blog/mobile-app-store-ai-review-guidelines-navigating-applegoogle-policy-changes-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/mobile-app-store-ai-review-guidelines-navigating-applegoogle-policy-changes-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/mobile-app-store-ai-review-guidelines-navigating-applegoogle-policy-changes-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/mobile-app-store-ai-review-guidelines-navigating-applegoogle-policy-changes-in-2026</guid>
       <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Apple and Google's 2026 AI review guidelines demand explicit documentation of data sources, clear disclosure of AI-generated content, and upfront user consent flows to avoid immediate rejection.
 ]]></description>
@@ -642,8 +651,8 @@
     </item>
     <item>
       <title><![CDATA[Prompt Engineering for Mobile APIs: Device Capabilities, Storage Awareness, Network Conditions]]></title>
-      <link>https://govindtank.github.io/blog/prompt-engineering-for-mobile-apis-device-capabilities-storage-awareness-network-conditions</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/prompt-engineering-for-mobile-apis-device-capabilities-storage-awareness-network-conditions</guid>
+      <link>https://govindtank.is-a.dev/blog/prompt-engineering-for-mobile-apis-device-capabilities-storage-awareness-network-conditions</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/prompt-engineering-for-mobile-apis-device-capabilities-storage-awareness-network-conditions</guid>
       <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Structured mobile API prompts reduce failed calls by accounting for device hardware limits, local storage capacity, and variable network conditions, rather than treating all endpoints as identical
 ]]></description>
@@ -651,8 +660,8 @@
     </item>
     <item>
       <title><![CDATA[AI Agents in Production: From Prototypes to Reliable Autonomous Systems]]></title>
-      <link>https://govindtank.github.io/blog/ai-agents-in-production-from-prototypes-to-reliable-autonomous-systems</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-agents-in-production-from-prototypes-to-reliable-autonomous-systems</guid>
+      <link>https://govindtank.is-a.dev/blog/ai-agents-in-production-from-prototypes-to-reliable-autonomous-systems</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ai-agents-in-production-from-prototypes-to-reliable-autonomous-systems</guid>
       <pubDate>Fri, 28 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Evaluating AI agents requires measuring task success, not just accuracy. Reliable deployment means building guardrails that catch hallucinations, observability that tracks real-world performance, and human oversight f...
 ]]></description>
@@ -660,8 +669,8 @@
     </item>
     <item>
       <title><![CDATA[Local-First Sync Engines: ElectricSQL, PowerSync, and the Offline-First Renaissance]]></title>
-      <link>https://govindtank.github.io/blog/local-first-sync-engines-electricsql-powersync-and-the-offline-first-renaissance</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/local-first-sync-engines-electricsql-powersync-and-the-offline-first-renaissance</guid>
+      <link>https://govindtank.is-a.dev/blog/local-first-sync-engines-electricsql-powersync-and-the-offline-first-renaissance</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/local-first-sync-engines-electricsql-powersync-and-the-offline-first-renaissance</guid>
       <pubDate>Fri, 28 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[A practical look at how ElectricSQL and PowerSync handle real-world sync challenges: conflict resolution strategies, partial data replication across devices, and the trade-offs between eventual consistency and user ex...
 ]]></description>
@@ -669,8 +678,8 @@
     </item>
     <item>
       <title><![CDATA[The Future of WebAssembly: Beyond the Browser into Cloud and Edge]]></title>
-      <link>https://govindtank.github.io/blog/the-future-of-webassembly-beyond-the-browser-into-cloud-and-edge</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/the-future-of-webassembly-beyond-the-browser-into-cloud-and-edge</guid>
+      <link>https://govindtank.is-a.dev/blog/the-future-of-webassembly-beyond-the-browser-into-cloud-and-edge</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/the-future-of-webassembly-beyond-the-browser-into-cloud-and-edge</guid>
       <pubDate>Tue, 25 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[WebAssembly is moving past browsers into runtimes like Wasmtime and Wasmer, enabling server-side rendering, sandboxed plugin architectures, and lightweight cloud-native workloads at the edge.
 ]]></description>
@@ -678,8 +687,8 @@
     </item>
     <item>
       <title><![CDATA[Prompt Engineering for Production: Getting Reliable Output from LLM APIs]]></title>
-      <link>https://govindtank.github.io/blog/prompt-engineering-for-production-getting-reliable-output-from-llm-apis</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/prompt-engineering-for-production-getting-reliable-output-from-llm-apis</guid>
+      <link>https://govindtank.is-a.dev/blog/prompt-engineering-for-production-getting-reliable-output-from-llm-apis</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/prompt-engineering-for-production-getting-reliable-output-from-llm-apis</guid>
       <pubDate>Sun, 23 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[LLM APIs feel magical in the playground but brittle in production. I've spent the last year debugging prompt-related failures in live systems — here are the patterns that actually cut down the noise.
 ]]></description>
@@ -687,8 +696,8 @@
     </item>
     <item>
       <title><![CDATA[Docker for Mobile Developers: Streamlining Android and Flutter Build Pipelines]]></title>
-      <link>https://govindtank.github.io/blog/docker-for-mobile-developers-streamlining-android-and-flutter-build-pipelines</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/docker-for-mobile-developers-streamlining-android-and-flutter-build-pipelines</guid>
+      <link>https://govindtank.is-a.dev/blog/docker-for-mobile-developers-streamlining-android-and-flutter-build-pipelines</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/docker-for-mobile-developers-streamlining-android-and-flutter-build-pipelines</guid>
       <pubDate>Sat, 22 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Stop fighting "works on my machine" with mobile builds. Docker gives Android and Flutter teams reproducible CI pipelines, isolated SDK environments, and faster onboarding. Here's how to set it up without the usual pain.
 ]]></description>
@@ -696,8 +705,8 @@
     </item>
     <item>
       <title><![CDATA[SwiftUI vs Jetpack Compose: The Native UI Framework Showdown in 2026]]></title>
-      <link>https://govindtank.github.io/blog/swiftui-vs-jetpack-compose-the-native-ui-framework-showdown-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/swiftui-vs-jetpack-compose-the-native-ui-framework-showdown-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/swiftui-vs-jetpack-compose-the-native-ui-framework-showdown-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/swiftui-vs-jetpack-compose-the-native-ui-framework-showdown-in-2026</guid>
       <pubDate>Fri, 21 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Both SwiftUI and Jetpack Compose matured into production-ready declarative UI toolkits, but they took wildly different paths to get there. I used both on real shipped apps this year. Here is the honest breakdown of where each one actually wins, where it still hurts, and how to pick the right framework for your next mobile project.
 ]]></description>
@@ -705,8 +714,8 @@
     </item>
     <item>
       <title><![CDATA[Server-Driven UI in Mobile Apps: Dynamic Experiences Without App Store Updates]]></title>
-      <link>https://govindtank.github.io/blog/server-driven-ui-in-mobile-apps-dynamic-experiences-without-app-store-updates</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/server-driven-ui-in-mobile-apps-dynamic-experiences-without-app-store-updates</guid>
+      <link>https://govindtank.is-a.dev/blog/server-driven-ui-in-mobile-apps-dynamic-experiences-without-app-store-updates</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/server-driven-ui-in-mobile-apps-dynamic-experiences-without-app-store-updates</guid>
       <pubDate>Thu, 20 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[How we shipped a new checkout flow in 20 minutes without touching the App Store, and the trade-offs we learned after running server-driven UI in production for two years.
 ]]></description>
@@ -714,8 +723,8 @@
     </item>
     <item>
       <title><![CDATA[Building Developer Tools in 2026: From CLI Design to AI-Assisted Extensions]]></title>
-      <link>https://govindtank.github.io/blog/building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions</guid>
+      <link>https://govindtank.is-a.dev/blog/building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/building-developer-tools-in-2026-from-cli-design-to-ai-assisted-extensions</guid>
       <pubDate>Wed, 19 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[A practical guide to building developer tools that survive real workflows — CLI ergonomics, LSP integration, VS Code extensions, and AI-powered assistance patterns that work in production.
 ]]></description>
@@ -723,8 +732,8 @@
     </item>
     <item>
       <title><![CDATA[The JavaScript Runtime Wars in 2026: Node.js, Bun, and Deno Compared]]></title>
-      <link>https://govindtank.github.io/blog/javascript-runtime-wars-2026-nodejs-bun-deno-compared</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/javascript-runtime-wars-2026-nodejs-bun-deno-compared</guid>
+      <link>https://govindtank.is-a.dev/blog/javascript-runtime-wars-2026-nodejs-bun-deno-compared</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/javascript-runtime-wars-2026-nodejs-bun-deno-compared</guid>
       <pubDate>Wed, 19 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Node.js is no longer the only serious JavaScript runtime. Bun hit 1.0, Deno shipped 2.x with Node compat, and each made very different bets about what developers actually need. Here's how they compare for real projects in 2026.
 ]]></description>
@@ -732,8 +741,8 @@
     </item>
     <item>
       <title><![CDATA[RAG in Production: Practical Retrieval Patterns Beyond the Demo]]></title>
-      <link>https://govindtank.github.io/blog/rag-in-production-practical-retrieval-patterns-beyond-the-demo</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/rag-in-production-practical-retrieval-patterns-beyond-the-demo</guid>
+      <link>https://govindtank.is-a.dev/blog/rag-in-production-practical-retrieval-patterns-beyond-the-demo</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/rag-in-production-practical-retrieval-patterns-beyond-the-demo</guid>
       <pubDate>Mon, 17 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Everyone builds a RAG demo on day one. Most teams spend the next six months fixing retrieval quality in production. Here are the patterns that actually move the needle — chunking strategy, hybrid search, re-ranking, and observability — drawn from real production systems.
 ]]></description>
@@ -741,8 +750,8 @@
     </item>
     <item>
       <title><![CDATA[Local-First Applications: Sync Engines, CRDTs, and Offline-First UX]]></title>
-      <link>https://govindtank.github.io/blog/local-first-applications-sync-engines-crdts-and-offline-first-ux</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/local-first-applications-sync-engines-crdts-and-offline-first-ux</guid>
+      <link>https://govindtank.is-a.dev/blog/local-first-applications-sync-engines-crdts-and-offline-first-ux</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/local-first-applications-sync-engines-crdts-and-offline-first-ux</guid>
       <pubDate>Sun, 16 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[We shipped a local-first sync layer last quarter. Here's what CRDTs actually bought us, where they hurt, and why most teams are still over-engineering their offline story.
 ]]></description>
@@ -750,8 +759,8 @@
     </item>
     <item>
       <title><![CDATA[On-Device AI with NPUs: Running Models on Phone Silicon in 2026]]></title>
-      <link>https://govindtank.github.io/blog/on-device-ai-with-npus-running-models-on-phone-silicon-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/on-device-ai-with-npus-running-models-on-phone-silicon-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/on-device-ai-with-npus-running-models-on-phone-silicon-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/on-device-ai-with-npus-running-models-on-phone-silicon-in-2026</guid>
       <pubDate>Sat, 15 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[NPUs in modern phones can now run quantized LLMs with acceptable latency. Here's what it takes in 2026: model formats, NPU APIs, battery trade-offs, and when on-device actually beats the cloud.
 ]]></description>
@@ -759,8 +768,8 @@
     </item>
     <item>
       <title><![CDATA[AI-Native App Architecture: Designing Applications Around LLM Calls]]></title>
-      <link>https://govindtank.github.io/blog/ai-native-app-architecture-designing-applications-around-llm-calls</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-native-app-architecture-designing-applications-around-llm-calls</guid>
+      <link>https://govindtank.is-a.dev/blog/ai-native-app-architecture-designing-applications-around-llm-calls</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ai-native-app-architecture-designing-applications-around-llm-calls</guid>
       <pubDate>Fri, 14 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Most teams bolt LLMs onto existing apps like a afterthought. But building AI-native means treating the model call as a first-class citizen — with streaming UI, fallback chains, and cost-aware routing from day one. Here's what I learned shipping three production apps this way.
 ]]></description>
@@ -768,8 +777,8 @@
     </item>
     <item>
       <title><![CDATA[Compose Multiplatform for iOS: Is Shared UI Production-Ready in 2026]]></title>
-      <link>https://govindtank.github.io/blog/compose-multiplatform-for-ios-is-shared-ui-production-ready-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/compose-multiplatform-for-ios-is-shared-ui-production-ready-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/compose-multiplatform-for-ios-is-shared-ui-production-ready-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/compose-multiplatform-for-ios-is-shared-ui-production-ready-in-2026</guid>
       <pubDate>Thu, 13 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Compose Multiplatform for iOS reached a stable milestone, but the promise of shared UI across Android and iOS still has gaps. Here's what works, what breaks, and when to actually use it in 2026.
 ]]></description>
@@ -777,8 +786,8 @@
     </item>
     <item>
       <title><![CDATA[Agentic AI Development: From Chat Assistants to Autonomous Coding Agents]]></title>
-      <link>https://govindtank.github.io/blog/agentic-ai-development-from-chat-assistants-to-autonomous-coding-agents</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/agentic-ai-development-from-chat-assistants-to-autonomous-coding-agents</guid>
+      <link>https://govindtank.is-a.dev/blog/agentic-ai-development-from-chat-assistants-to-autonomous-coding-agents</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/agentic-ai-development-from-chat-assistants-to-autonomous-coding-agents</guid>
       <pubDate>Wed, 12 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[We move beyond chat interfaces to build autonomous coding agents using the Model Context Protocol for secure tool invocation. This guide covers designing multi-agent orchestration loops, implementing rigorous evaluation metrics, and enforcing policy boundaries at the transport layer.
 ]]></description>
@@ -786,8 +795,8 @@
     </item>
     <item>
       <title><![CDATA[Android 17 and the Modern Android Stack: What Changed in 2026]]></title>
-      <link>https://govindtank.github.io/blog/android-17-and-the-modern-android-stack-what-changed-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/android-17-and-the-modern-android-stack-what-changed-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/android-17-and-the-modern-android-stack-what-changed-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/android-17-and-the-modern-android-stack-what-changed-in-2026</guid>
       <pubDate>Wed, 12 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Android 17 tightened privacy, updated the storage model, and pushed Jetpack Compose further into the default developer path. Here are the changes that actually affect shipped apps in 2026.
 ]]></description>
@@ -795,8 +804,8 @@
     </item>
     <item>
       <title><![CDATA[Flutter Beyond Mobile: Desktop, Web, and Embedded Targets in 2026]]></title>
-      <link>https://govindtank.github.io/blog/flutter-beyond-mobile-desktop-web-and-embedded-targets-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-beyond-mobile-desktop-web-and-embedded-targets-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/flutter-beyond-mobile-desktop-web-and-embedded-targets-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-beyond-mobile-desktop-web-and-embedded-targets-in-2026</guid>
       <pubDate>Wed, 12 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Flutter has outgrown phones. Here is how to actually ship desktop, web, and embedded builds from a single codebase without rewriting your app for each target.
 ]]></description>
@@ -804,8 +813,8 @@
     </item>
     <item>
       <title><![CDATA[Kotlin 2.x and the K2 Compiler: What It Unlocked for Android Developers]]></title>
-      <link>https://govindtank.github.io/blog/kotlin-2x-and-the-k2-compiler-what-it-unlocked-for-android-developers</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/kotlin-2x-and-the-k2-compiler-what-it-unlocked-for-android-developers</guid>
+      <link>https://govindtank.is-a.dev/blog/kotlin-2x-and-the-k2-compiler-what-it-unlocked-for-android-developers</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/kotlin-2x-and-the-k2-compiler-what-it-unlocked-for-android-developers</guid>
       <pubDate>Tue, 11 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[The K2 compiler in Kotlin 2.x delivers measurable performance boosts and fixes critical type inference issues, while its new API surface enables smoother multiplatform projects. This post outlines essential migration ...
 ]]></description>
@@ -813,8 +822,8 @@
     </item>
     <item>
       <title><![CDATA[MCP in Practice: Model Context Protocol for Real-World Developer Tools]]></title>
-      <link>https://govindtank.github.io/blog/mcp-in-practice-model-context-protocol-for-real-world-developer-tools</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/mcp-in-practice-model-context-protocol-for-real-world-developer-tools</guid>
+      <link>https://govindtank.is-a.dev/blog/mcp-in-practice-model-context-protocol-for-real-world-developer-tools</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/mcp-in-practice-model-context-protocol-for-real-world-developer-tools</guid>
       <pubDate>Tue, 11 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[This post details how to build MCP servers with custom tools and choose between SSE and stdio transports. We cover integrating the protocol directly into IDEs and automating workflows within CI/CD pipelines.
 ]]></description>
@@ -822,8 +831,8 @@
     </item>
     <item>
       <title><![CDATA[IntelliJ IDEA Goes LSP: Kotlin and Java Intelligence in VS Code]]></title>
-      <link>https://govindtank.github.io/blog/intellij-idea-goes-lsp-kotlin-and-java-intelligence-in-vs-code</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/intellij-idea-goes-lsp-kotlin-and-java-intelligence-in-vs-code</guid>
+      <link>https://govindtank.is-a.dev/blog/intellij-idea-goes-lsp-kotlin-and-java-intelligence-in-vs-code</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/intellij-idea-goes-lsp-kotlin-and-java-intelligence-in-vs-code</guid>
       <pubDate>Sun, 09 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[JetBrains shipped its Java and Kotlin intelligence as an LSP extension for VS Code. Here's how the preview compares to IntelliJ IDEA, what the license really means, and when the switch makes sense.
 ]]></description>
@@ -831,8 +840,8 @@
     </item>
     <item>
       <title><![CDATA[Claude Code Auto Mode Is Now the Default: Should You Trust It?]]></title>
-      <link>https://govindtank.github.io/blog/claude-code-auto-mode-is-now-the-default-should-you-trust-it</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/claude-code-auto-mode-is-now-the-default-should-you-trust-it</guid>
+      <link>https://govindtank.is-a.dev/blog/claude-code-auto-mode-is-now-the-default-should-you-trust-it</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/claude-code-auto-mode-is-now-the-default-should-you-trust-it</guid>
       <pubDate>Sat, 08 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Starting August 14, auto mode becomes the default permission mode in Claude Code. The eval numbers are impressive, but they don't answer the question that matters: should your agent run without asking?
 ]]></description>
@@ -840,8 +849,8 @@
     </item>
     <item>
       <title><![CDATA[DeepSeek V4 Flash: What the New Open Model Means for Developers]]></title>
-      <link>https://govindtank.github.io/blog/deepseek-v4-flash-what-the-new-open-model-means-for-developers</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/deepseek-v4-flash-what-the-new-open-model-means-for-developers</guid>
+      <link>https://govindtank.is-a.dev/blog/deepseek-v4-flash-what-the-new-open-model-means-for-developers</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/deepseek-v4-flash-what-the-new-open-model-means-for-developers</guid>
       <pubDate>Fri, 07 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[DeepSeek V4 Flash posted verified ARC-AGI scores of 89% at $0.02 per task. Here's what the numbers mean, how verification works, and when it makes sense for your workloads.
 ]]></description>
@@ -849,8 +858,8 @@
     </item>
     <item>
       <title><![CDATA[MCP Stateless Mode: Building AI Agent Servers Without Session State]]></title>
-      <link>https://govindtank.github.io/blog/mcp-stateless-mode-building-ai-agent-servers-without-session-state</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/mcp-stateless-mode-building-ai-agent-servers-without-session-state</guid>
+      <link>https://govindtank.is-a.dev/blog/mcp-stateless-mode-building-ai-agent-servers-without-session-state</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/mcp-stateless-mode-building-ai-agent-servers-without-session-state</guid>
       <pubDate>Thu, 06 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[The MCP spec's stateless mode drops the initialization handshake so agent tool servers run behind plain load balancers. Here's how to build one with the Python SDK.
 ]]></description>
@@ -858,8 +867,8 @@
     </item>
     <item>
       <title><![CDATA[Antigravity vs Claude Code vs Codex: Choosing an AI Coding Agent in 2026]]></title>
-      <link>https://govindtank.github.io/blog/antigravity-vs-claude-code-vs-codex-choosing-an-ai-coding-agent-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/antigravity-vs-claude-code-vs-codex-choosing-an-ai-coding-agent-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/antigravity-vs-claude-code-vs-codex-choosing-an-ai-coding-agent-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/antigravity-vs-claude-code-vs-codex-choosing-an-ai-coding-agent-in-2026</guid>
       <pubDate>Wed, 05 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Three coding agents, three weeks of real work, one honest comparison. I ran Google Antigravity, Claude Code, and Codex on the same tasks to see which one you should actually pay for.
 ]]></description>
@@ -867,8 +876,8 @@
     </item>
     <item>
       <title><![CDATA[Validating Mobile Numbers the Right Way: Introducing country_mobile_validator]]></title>
-      <link>https://govindtank.github.io/blog/validating-mobile-numbers-right-way-country-mobile-validator</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/validating-mobile-numbers-right-way-country-mobile-validator</guid>
+      <link>https://govindtank.is-a.dev/blog/validating-mobile-numbers-right-way-country-mobile-validator</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/validating-mobile-numbers-right-way-country-mobile-validator</guid>
       <pubDate>Wed, 05 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Stop guessing phone number lengths. Stop sending OTPs to toll-free numbers. country_mobile_validator gives you real per-country mobile length ranges, OTP-safe verdicts, and country_code_picker integration — in one line of code.
 ]]></description>
@@ -876,16 +885,16 @@
     </item>
     <item>
       <title><![CDATA[AI Observability: Monitoring, Tracing, and Debugging LLM Applications in Production]]></title>
-      <link>https://govindtank.github.io/blog/ai-observability-monitoring-tracing-and-debugging-llm-applications-in-production</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-observability-monitoring-tracing-and-debugging-llm-applications-in-production</guid>
+      <link>https://govindtank.is-a.dev/blog/ai-observability-monitoring-tracing-and-debugging-llm-applications-in-production</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ai-observability-monitoring-tracing-and-debugging-llm-applications-in-production</guid>
       <pubDate>Tue, 04 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>LLM-Observability</category>
     </item>
     <item>
       <title><![CDATA[Firebase Generative AI SDK for Mobile: Multimodal Model Serving on Android and iOS]]></title>
-      <link>https://govindtank.github.io/blog/firebase-generative-ai-sdk-mobile-multimodal-model-serving-android-ios</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/firebase-generative-ai-sdk-mobile-multimodal-model-serving-android-ios</guid>
+      <link>https://govindtank.is-a.dev/blog/firebase-generative-ai-sdk-mobile-multimodal-model-serving-android-ios</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/firebase-generative-ai-sdk-mobile-multimodal-model-serving-android-ios</guid>
       <pubDate>Tue, 04 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[Firebase's new Generative AI SDK brings multimodal model serving directly to mobile apps. Here's what it means for Flutter and native Android/iOS developers in 2026.
 ]]></description>
@@ -893,112 +902,112 @@
     </item>
     <item>
       <title><![CDATA[Small Language Models: Running Efficient AI on Edge Devices and Mobile Phones]]></title>
-      <link>https://govindtank.github.io/blog/small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones</guid>
+      <link>https://govindtank.is-a.dev/blog/small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/small-language-models-running-efficient-ai-on-edge-devices-and-mobile-phones</guid>
       <pubDate>Tue, 04 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Edge-AI</category>
     </item>
     <item>
       <title><![CDATA[Agentic AI Systems: Designing Reliable Multi-Agent Workflows in 2026]]></title>
-      <link>https://govindtank.github.io/blog/agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/agentic-ai-systems-designing-reliable-multi-agent-workflows-in-2026</guid>
       <pubDate>Mon, 03 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Agentic-AI</category>
     </item>
     <item>
       <title><![CDATA[Flutter 4 and Impeller: The Next Generation of Cross-Platform UI Performance]]></title>
-      <link>https://govindtank.github.io/blog/flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance</guid>
+      <link>https://govindtank.is-a.dev/blog/flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-4-and-impeller-the-next-generation-of-cross-platform-ui-performance</guid>
       <pubDate>Sun, 02 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Flutter</category>
     </item>
     <item>
       <title><![CDATA[Dart 4 and the Evolution of the Flutter Ecosystem: What's New in 2026]]></title>
-      <link>https://govindtank.github.io/blog/dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/dart-4-and-the-evolution-of-the-flutter-ecosystem-whats-new-in-2026</guid>
       <pubDate>Sat, 01 Aug 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Flutter</category>
     </item>
     <item>
       <title><![CDATA[Free Developer Tools That Upgrade Your 2026 Workflow]]></title>
-      <link>https://govindtank.github.io/blog/free-developer-tools-that-supercharge-your-2026-workflow</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/free-developer-tools-that-supercharge-your-2026-workflow</guid>
+      <link>https://govindtank.is-a.dev/blog/free-developer-tools-that-supercharge-your-2026-workflow</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/free-developer-tools-that-supercharge-your-2026-workflow</guid>
       <pubDate>Fri, 31 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>DevTools</category>
     </item>
     <item>
       <title><![CDATA[Kubernetes Sidecar Patterns for Service Mesh Observability in 2026]]></title>
-      <link>https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/kubernetes-sidecar-patterns-for-service-mesh-observability-in-2026</guid>
       <pubDate>Thu, 30 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Cloud-Native</category>
     </item>
     <item>
       <title><![CDATA[PostgreSQL 18 and the Rise of Hybrid Transactional-Analytical Processing]]></title>
-      <link>https://govindtank.github.io/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</guid>
+      <link>https://govindtank.is-a.dev/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/postgresql-18-and-the-rise-of-hybrid-transactional-analytical-processing</guid>
       <pubDate>Wed, 29 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Databases</category>
     </item>
     <item>
       <title><![CDATA[TypeScript 5.x Advanced Patterns: Conditional Types, Template Literals, and Mapped Types in Production]]></title>
-      <link>https://govindtank.github.io/blog/typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production</guid>
+      <link>https://govindtank.is-a.dev/blog/typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/typescript-5x-advanced-patterns-conditional-types-template-literals-and-mapped-types-in-production</guid>
       <pubDate>Tue, 28 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Web-Dev</category>
     </item>
     <item>
       <title><![CDATA[WebGPU: Next-Generation Graphics and Compute for the Browser]]></title>
-      <link>https://govindtank.github.io/blog/webgpu-next-generation-graphics-and-compute-for-the-browser</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/webgpu-next-generation-graphics-and-compute-for-the-browser</guid>
+      <link>https://govindtank.is-a.dev/blog/webgpu-next-generation-graphics-and-compute-for-the-browser</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/webgpu-next-generation-graphics-and-compute-for-the-browser</guid>
       <pubDate>Tue, 28 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Web-Dev</category>
     </item>
     <item>
       <title><![CDATA[iOS 20 and Swift 8: What Mobile Developers Need to Know]]></title>
-      <link>https://govindtank.github.io/blog/ios-20-and-swift-8-what-mobile-developers-need-to-know</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ios-20-and-swift-8-what-mobile-developers-need-to-know</guid>
+      <link>https://govindtank.is-a.dev/blog/ios-20-and-swift-8-what-mobile-developers-need-to-know</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ios-20-and-swift-8-what-mobile-developers-need-to-know</guid>
       <pubDate>Tue, 21 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Mobile</category>
     </item>
     <item>
       <title><![CDATA[Flutter Widget Testing Mastery: From Unit Tests to Integration Goldens]]></title>
-      <link>https://govindtank.github.io/blog/flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens</guid>
+      <link>https://govindtank.is-a.dev/blog/flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-widget-testing-mastery-from-unit-tests-to-integration-goldens</guid>
       <pubDate>Mon, 20 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Flutter</category>
     </item>
     <item>
       <title><![CDATA[Testing AI-Generated Code: Strategies for Reliable Machine Learning Pipelines]]></title>
-      <link>https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</guid>
+      <link>https://govindtank.is-a.dev/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/testing-ai-generated-code-strategies-for-reliable-machine-learning-pipelines</guid>
       <pubDate>Mon, 20 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>AI-ML</category>
     </item>
     <item>
       <title><![CDATA[Kotlin Multiplatform in Production: Sharing Business Logic Across Android, iOS, and Web in 2026]]></title>
-      <link>https://govindtank.github.io/blog/kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/kotlin-multiplatform-in-production-sharing-business-logic-across-android-ios-and-web-in-2026</guid>
       <pubDate>Sun, 19 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Kotlin-Multiplatform</category>
     </item>
     <item>
       <title><![CDATA[Zero-Trust Architecture: Implementing Security in Distributed Cloud Systems]]></title>
-      <link>https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</guid>
+      <link>https://govindtank.is-a.dev/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/zero-trust-architecture-implementing-security-in-distributed-cloud-systems</guid>
       <pubDate>Sat, 18 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[The traditional perimeter-based security model has effectively collapsed under the weight of distributed cloud infrastructure, serverless computing, and mobile-first workforces. By 2026, the indust...
 ]]></description>
@@ -1006,176 +1015,176 @@
     </item>
     <item>
       <title><![CDATA[Flutter Impeller Rendering Engine: GPU Acceleration Strategies for Production Apps in 2026]]></title>
-      <link>https://govindtank.github.io/blog/flutter-impeller-rendering-engine-gpu-acceleration-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-impeller-rendering-engine-gpu-acceleration-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/flutter-impeller-rendering-engine-gpu-acceleration-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-impeller-rendering-engine-gpu-acceleration-2026</guid>
       <pubDate>Fri, 17 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Flutter</category>
     </item>
     <item>
       <title><![CDATA[Top Free Developer Tools and AI Resources Transforming Engineering Workflows in 2026]]></title>
-      <link>https://govindtank.github.io/blog/top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/top-free-developer-tools-and-ai-resources-transforming-engineering-workflows-in-2026</guid>
       <pubDate>Thu, 16 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>DevTools</category>
     </item>
     <item>
       <title><![CDATA[Kotlin Multiplatform at Scale: Production Architecture Patterns for Shared Business Logic]]></title>
-      <link>https://govindtank.github.io/blog/kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared-business-logic</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared-business-logic</guid>
+      <link>https://govindtank.is-a.dev/blog/kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared-business-logic</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/kotlin-multiplatform-at-scale-production-architecture-patterns-for-shared-business-logic</guid>
       <pubDate>Wed, 15 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Kotlin-Multiplatform</category>
     </item>
     <item>
       <title><![CDATA[Platform Engineering: Building Internal Developer Portals That Teams Love]]></title>
-      <link>https://govindtank.github.io/blog/platform-engineering-building-internal-developer-portals-that-teams-love</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/platform-engineering-building-internal-developer-portals-that-teams-love</guid>
+      <link>https://govindtank.is-a.dev/blog/platform-engineering-building-internal-developer-portals-that-teams-love</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/platform-engineering-building-internal-developer-portals-that-teams-love</guid>
       <pubDate>Tue, 14 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>DevEx</category>
     </item>
     <item>
       <title><![CDATA[Building Real-Time Collaborative Apps with CRDTs and Operational Transformation]]></title>
-      <link>https://govindtank.github.io/blog/building-real-time-collaborative-apps-with-crdts-and-operational-transformation</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/building-real-time-collaborative-apps-with-crdts-and-operational-transformation</guid>
+      <link>https://govindtank.is-a.dev/blog/building-real-time-collaborative-apps-with-crdts-and-operational-transformation</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/building-real-time-collaborative-apps-with-crdts-and-operational-transformation</guid>
       <pubDate>Thu, 02 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Architecture</category>
     </item>
     <item>
       <title><![CDATA[CSS Container Queries and Style Queries: Responsive Design Beyond Media Queries]]></title>
-      <link>https://govindtank.github.io/blog/css-container-queries-and-style-queries-responsive-design-beyond-media-queries</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/css-container-queries-and-style-queries-responsive-design-beyond-media-queries</guid>
+      <link>https://govindtank.is-a.dev/blog/css-container-queries-and-style-queries-responsive-design-beyond-media-queries</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/css-container-queries-and-style-queries-responsive-design-beyond-media-queries</guid>
       <pubDate>Wed, 01 Jul 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Web-Dev</category>
     </item>
     <item>
       <title><![CDATA[FinOps for Kubernetes: Optimizing Cloud Costs in Containerized Environments]]></title>
-      <link>https://govindtank.github.io/blog/finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments</guid>
+      <link>https://govindtank.is-a.dev/blog/finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/finops-for-kubernetes-optimizing-cloud-costs-in-containerized-environments</guid>
       <pubDate>Tue, 30 Jun 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>DevOps</category>
     </item>
     <item>
       <title><![CDATA[Distributed Tracing with OpenTelemetry: From Instrumentation to Production Debugging]]></title>
-      <link>https://govindtank.github.io/blog/distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging</guid>
+      <link>https://govindtank.is-a.dev/blog/distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/distributed-tracing-with-opentelemetry-from-instrumentation-to-production-debugging</guid>
       <pubDate>Sun, 28 Jun 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Observability</category>
     </item>
     <item>
       <title><![CDATA[Rust for Systems Programming in 2026: Memory Safety, Concurrency, and Ecosystem Growth]]></title>
-      <link>https://govindtank.github.io/blog/rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth</guid>
+      <link>https://govindtank.is-a.dev/blog/rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/rust-for-systems-programming-in-2026-memory-safety-concurrency-and-ecosystem-growth</guid>
       <pubDate>Fri, 26 Jun 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Systems</category>
     </item>
     <item>
       <title><![CDATA[The Rise of AI Coding Assistants: Evaluating Code Quality and Productivity Impact]]></title>
-      <link>https://govindtank.github.io/blog/the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact</guid>
+      <link>https://govindtank.is-a.dev/blog/the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/the-rise-of-ai-coding-assistants-evaluating-code-quality-and-productivity-impact</guid>
       <pubDate>Wed, 24 Jun 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>AI-Engineering</category>
     </item>
     <item>
       <title><![CDATA[WebAssembly in 2026: From Browser to Edge Computing and Beyond]]></title>
-      <link>https://govindtank.github.io/blog/webassembly-in-2026-from-browser-to-edge-computing-and-beyond</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/webassembly-in-2026-from-browser-to-edge-computing-and-beyond</guid>
+      <link>https://govindtank.is-a.dev/blog/webassembly-in-2026-from-browser-to-edge-computing-and-beyond</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/webassembly-in-2026-from-browser-to-edge-computing-and-beyond</guid>
       <pubDate>Tue, 23 Jun 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>WebAssembly</category>
     </item>
     <item>
       <title><![CDATA[Building Scalable Microservices with FastAPI and Event-Driven Architecture]]></title>
-      <link>https://govindtank.github.io/blog/building-scalable-microservices-with-fastapi-and-event-driven-architecture</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/building-scalable-microservices-with-fastapi-and-event-driven-architecture</guid>
+      <link>https://govindtank.is-a.dev/blog/building-scalable-microservices-with-fastapi-and-event-driven-architecture</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/building-scalable-microservices-with-fastapi-and-event-driven-architecture</guid>
       <pubDate>Mon, 22 Jun 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Backend-Architecture</category>
     </item>
     <item>
       <title><![CDATA[Event Sourcing and CQRS: Practical Patterns for Distributed Systems]]></title>
-      <link>https://govindtank.github.io/blog/event-sourcing-and-cqrs-practical-patterns-for-distributed-systems</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/event-sourcing-and-cqrs-practical-patterns-for-distributed-systems</guid>
+      <link>https://govindtank.is-a.dev/blog/event-sourcing-and-cqrs-practical-patterns-for-distributed-systems</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/event-sourcing-and-cqrs-practical-patterns-for-distributed-systems</guid>
       <pubDate>Sun, 21 Jun 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Event Sourcing</category>
     </item>
     <item>
       <title><![CDATA[Data Engineering at Scale: Building Real-Time Streaming Pipelines]]></title>
-      <link>https://govindtank.github.io/blog/data-engineering-at-scale-building-real-time-streaming-pipelines</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/data-engineering-at-scale-building-real-time-streaming-pipelines</guid>
+      <link>https://govindtank.is-a.dev/blog/data-engineering-at-scale-building-real-time-streaming-pipelines</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/data-engineering-at-scale-building-real-time-streaming-pipelines</guid>
       <pubDate>Thu, 18 Jun 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Data-Engineering</category>
     </item>
     <item>
       <title><![CDATA[React Server Components: Production Patterns for High-Performance Web Apps]]></title>
-      <link>https://govindtank.github.io/blog/react-server-components-production-patterns-for-high-performance-web-apps</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/react-server-components-production-patterns-for-high-performance-web-apps</guid>
+      <link>https://govindtank.is-a.dev/blog/react-server-components-production-patterns-for-high-performance-web-apps</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/react-server-components-production-patterns-for-high-performance-web-apps</guid>
       <pubDate>Mon, 15 Jun 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Web-Dev</category>
     </item>
     <item>
       <title><![CDATA[Edge AI: Running Large Language Models on Consumer Devices in 2026]]></title>
-      <link>https://govindtank.github.io/blog/edge-ai-running-large-language-models-on-consumer-devices-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/edge-ai-running-large-language-models-on-consumer-devices-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/edge-ai-running-large-language-models-on-consumer-devices-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/edge-ai-running-large-language-models-on-consumer-devices-in-2026</guid>
       <pubDate>Tue, 09 Jun 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Edge-AI</category>
     </item>
     <item>
       <title><![CDATA[AI-Augmented Development Workflows: Scaling Code Quality and Velocity in 2026]]></title>
-      <link>https://govindtank.github.io/blog/ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ai-augmented-development-workflows-scaling-code-quality-and-velocity-in-2026</guid>
       <pubDate>Tue, 02 Jun 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>AI</category>
     </item>
     <item>
       <title><![CDATA[AI-Augmented Development Workflows: Architecting the Future of Software Engineering]]></title>
-      <link>https://govindtank.github.io/blog/ai-augmented-development-workflows-architecting-the-future-of-software-engineering</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-augmented-development-workflows-architecting-the-future-of-software-engineering</guid>
+      <link>https://govindtank.is-a.dev/blog/ai-augmented-development-workflows-architecting-the-future-of-software-engineering</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ai-augmented-development-workflows-architecting-the-future-of-software-engineering</guid>
       <pubDate>Mon, 01 Jun 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>AI</category>
     </item>
     <item>
       <title><![CDATA[AI-Powered Code Review: Automating Quality Gates with LLM Agents]]></title>
-      <link>https://govindtank.github.io/blog/ai-powered-code-review-automating-quality-gates-with-llm-agents</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-powered-code-review-automating-quality-gates-with-llm-agents</guid>
+      <link>https://govindtank.is-a.dev/blog/ai-powered-code-review-automating-quality-gates-with-llm-agents</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ai-powered-code-review-automating-quality-gates-with-llm-agents</guid>
       <pubDate>Thu, 28 May 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>AI</category>
     </item>
     <item>
       <title><![CDATA[The Evolution of Kotlin Multiplatform in 2026]]></title>
-      <link>https://govindtank.github.io/blog/kotlin-multiplatform-evolution-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/kotlin-multiplatform-evolution-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/kotlin-multiplatform-evolution-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/kotlin-multiplatform-evolution-in-2026</guid>
       <pubDate>Thu, 28 May 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Kotlin-Multiplatform</category>
     </item>
     <item>
       <title><![CDATA[Flutter State Management Deep Dive: Bloc vs Riverpod vs Provider in 2026]]></title>
-      <link>https://govindtank.github.io/blog/flutter-state-management-deep-dive-bloc-vs-riverpod-vs-provider-in-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/flutter-state-management-deep-dive-bloc-vs-riverpod-vs-provider-in-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/flutter-state-management-deep-dive-bloc-vs-riverpod-vs-provider-in-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-state-management-deep-dive-bloc-vs-riverpod-vs-provider-in-2026</guid>
       <pubDate>Wed, 27 May 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>Flutter</category>
     </item>
     <item>
       <title><![CDATA[AI Agents in 2026: Building Autonomous Workflows for Complex Tasks]]></title>
-      <link>https://govindtank.github.io/blog/ai-agents-autonomous-workflows-complex-tasks-2026</link>
-      <guid isPermaLink="true">https://govindtank.github.io/blog/ai-agents-autonomous-workflows-complex-tasks-2026</guid>
+      <link>https://govindtank.is-a.dev/blog/ai-agents-autonomous-workflows-complex-tasks-2026</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ai-agents-autonomous-workflows-complex-tasks-2026</guid>
       <pubDate>Mon, 25 May 2026 18:30:00 GMT</pubDate>
       <description><![CDATA[]]></description>
       <category>AI Agents</category>
