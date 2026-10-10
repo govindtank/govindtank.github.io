@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Oct 2026 02:31:07 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 02:30:38 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[C-Interop in Kotlin Multiplatform: Writing High-Performance Rust & C++ Bridges Without Overhead]]></title>
+      <link>https://govindtank.is-a.dev/blog/c-interop-in-kotlin-multiplatform-writing-high-performance-rust-c-bridges-without-overhead</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/c-interop-in-kotlin-multiplatform-writing-high-performance-rust-c-bridges-without-overhead</guid>
+      <pubDate>Fri, 09 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Stop writing brittle JNI wrappers. Learn to bridge Rust and C++ crypto/compression engines directly to iOS and Android with zero-overhead KMP cinterop def files.
+]]></description>
+      <category>Kotlin</category>
+    </item>
     <item>
       <title><![CDATA[Mastering Predictive Back Transitions with Jetpack Compose: Coordinated NavHost & Gesture Handlers]]></title>
       <link>https://govindtank.is-a.dev/blog/mastering-predictive-back-transitions-with-jetpack-compose-coordinated-navhost-gesture-handlers</link>

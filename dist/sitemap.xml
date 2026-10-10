@@ -9,6 +9,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.is-a.dev/blog/c-interop-in-kotlin-multiplatform-writing-high-performance-rust-c-bridges-without-overhead</loc>
+    <lastmod>2026-10-09T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.is-a.dev/blog/mastering-predictive-back-transitions-with-jetpack-compose-coordinated-navhost-gesture-handlers</loc>
     <lastmod>2026-10-08T18:30:00.000Z</lastmod>
     <priority>0.7</priority>

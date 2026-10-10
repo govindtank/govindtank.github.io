@@ -1326,6 +1326,26 @@
         ],
         "url": "https://govindtank.github.io/blog/mastering-predictive-back-transitions-with-jetpack-compose-coordinated-navhost-gesture-handlers"
       }
+    },
+    "c-interop-in-kotlin-multiplatform-writing-high-performance-rust-c-bridges-without-overhead": {
+      "title": "C-Interop in Kotlin Multiplatform: Writing High-Performance Rust & C++ Bridges Without Overhead",
+      "date": "October 10, 2026",
+      "tag": "Kotlin",
+      "wordCount": 1459,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Zero-Overhead C++ & Rust in KMP",
+        "description": "Ditch brittle JNI wrappers! Bridge high-performance Rust & C++ crypto engines directly to iOS and Android with Kotlin Native cinterop def files.",
+        "tags": [
+          "#KotlinMultiplatform",
+          "#AndroidDev",
+          "#iOSDev",
+          "#RustLang",
+          "#Cpp",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/c-interop-in-kotlin-multiplatform-writing-high-performance-rust-c-bridges-without-overhead"
+      }
     }
   },
   "images": {
