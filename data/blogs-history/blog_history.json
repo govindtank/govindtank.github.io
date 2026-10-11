@@ -1346,6 +1346,26 @@
         ],
         "url": "https://govindtank.github.io/blog/c-interop-in-kotlin-multiplatform-writing-high-performance-rust-c-bridges-without-overhead"
       }
+    },
+    "architecting-resilient-server-sent-events-sse-in-kmp-apps-with-ktor-30-and-coroutines-channels": {
+      "title": "Architecting Resilient Server-Sent Events (SSE) in KMP Apps with Ktor 3.0 and Coroutines Channels",
+      "date": "October 11, 2026",
+      "tag": "Kotlin",
+      "wordCount": 530,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udee1\ufe0f Bulletproof SSE in KMP with Ktor 3.0",
+        "description": "Stop dropped connections and memory leaks. Build self-healing Server-Sent Events using Ktor 3.0, Coroutines Channels & Flow backpressure for guaranteed cross-platform delivery.",
+        "tags": [
+          "#KotlinMultiplatform",
+          "#Ktor",
+          "#Coroutines",
+          "#ServerSentEvents",
+          "#AndroidDev",
+          "#iOSDev"
+        ],
+        "url": "https://govindtank.github.io/blog/architecting-resilient-server-sent-events-sse-in-kmp-apps-with-ktor-30-and-coroutines-channels"
+      }
     }
   },
   "images": {

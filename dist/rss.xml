@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Oct 2026 02:30:38 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 02:49:54 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Architecting Resilient Server-Sent Events (SSE) in KMP Apps with Ktor 3.0 and Coroutines Channels]]></title>
+      <link>https://govindtank.is-a.dev/blog/architecting-resilient-server-sent-events-sse-in-kmp-apps-with-ktor-30-and-coroutines-channels</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/architecting-resilient-server-sent-events-sse-in-kmp-apps-with-ktor-30-and-coroutines-channels</guid>
+      <pubDate>Sat, 10 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Stop dropped connections and memory leaks from killing your KMP streams. Implement self-healing SSE in Ktor 3.0 using Channels and Flow backpressure for guaranteed delivery across iOS and Android.
+]]></description>
+      <category>Kotlin</category>
+    </item>
     <item>
       <title><![CDATA[C-Interop in Kotlin Multiplatform: Writing High-Performance Rust & C++ Bridges Without Overhead]]></title>
       <link>https://govindtank.is-a.dev/blog/c-interop-in-kotlin-multiplatform-writing-high-performance-rust-c-bridges-without-overhead</link>
