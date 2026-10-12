@@ -1366,6 +1366,26 @@
         ],
         "url": "https://govindtank.github.io/blog/architecting-resilient-server-sent-events-sse-in-kmp-apps-with-ktor-30-and-coroutines-channels"
       }
+    },
+    "flutter-web-wasm-in-2026-achieving-sub-second-tti-and-debugging-garbage-collection-stalls": {
+      "title": "Flutter Web WASM in 2026: Achieving Sub-Second TTI and Debugging Garbage Collection Stalls",
+      "date": "October 12, 2026",
+      "tag": "Flutter",
+      "wordCount": 599,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\ude80 Flutter Web WASM: 62% Faster Load, Sub-Second TTI",
+        "description": "Dart 3.7 WasmGC slashes enterprise app load times by 62% \u2014 but debugging GC heap stalls and canvas font bugs was the real battle for production stability.",
+        "tags": [
+          "#Flutter",
+          "#WebAssembly",
+          "#Dart",
+          "#WasmGC",
+          "#Performance",
+          "#WebDev"
+        ],
+        "url": "https://govindtank.github.io/blog/flutter-web-wasm-in-2026-achieving-sub-second-tti-and-debugging-garbage-collection-stalls"
+      }
     }
   },
   "images": {

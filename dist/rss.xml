@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Oct 2026 02:49:54 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 02:50:03 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Flutter Web WASM in 2026: Achieving Sub-Second TTI and Debugging Garbage Collection Stalls]]></title>
+      <link>https://govindtank.is-a.dev/blog/flutter-web-wasm-in-2026-achieving-sub-second-tti-and-debugging-garbage-collection-stalls</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-web-wasm-in-2026-achieving-sub-second-tti-and-debugging-garbage-collection-stalls</guid>
+      <pubDate>Sun, 11 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Migrating enterprise apps to Dart 3.7 WasmGC cut initial load by 62% for sub-second TTI, but required fixing canvas font corruption and debugging WasmGC heap stalls to stabilize production runtime.
+]]></description>
+      <category>Flutter</category>
+    </item>
     <item>
       <title><![CDATA[Architecting Resilient Server-Sent Events (SSE) in KMP Apps with Ktor 3.0 and Coroutines Channels]]></title>
       <link>https://govindtank.is-a.dev/blog/architecting-resilient-server-sent-events-sse-in-kmp-apps-with-ktor-30-and-coroutines-channels</link>
