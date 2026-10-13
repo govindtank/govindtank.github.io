@@ -1386,6 +1386,26 @@
         ],
         "url": "https://govindtank.github.io/blog/flutter-web-wasm-in-2026-achieving-sub-second-tti-and-debugging-garbage-collection-stalls"
       }
+    },
+    "building-a-native-model-context-protocol-mcp-host-on-android-tool-calling-local-rag-with-sqlite-vec": {
+      "title": "Building a Native Model Context Protocol (MCP) Host on Android: Tool Calling & Local RAG with sqlite-vec",
+      "date": "October 13, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 511,
+      "status": "published",
+      "social": {
+        "short_title": "Building a Native Model Context Protocol (MCP) Host on...",
+        "description": "Stop cloud round-trips for agent tooling. This architecture runs a full MCP host in an Android background service\u2014executing deterministic tools and sqlite-vec RAG at...",
+        "tags": [
+          "#AIEngineering",
+          "#GenerativeAI",
+          "#LLMs",
+          "#AI",
+          "#TechInnovation",
+          "#ModelContextProtocolAndroid"
+        ],
+        "url": "https://govindtank.github.io/blog/building-a-native-model-context-protocol-mcp-host-on-android-tool-calling-local-rag-with-sqlite-vec"
+      }
     }
   },
   "images": {
