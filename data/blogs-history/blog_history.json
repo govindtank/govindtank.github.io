@@ -1406,6 +1406,25 @@
         ],
         "url": "https://govindtank.github.io/blog/building-a-native-model-context-protocol-mcp-host-on-android-tool-calling-local-rag-with-sqlite-vec"
       }
+    },
+    "hunting-dart-memory-leaks-native-finalizers-closure-captures-and-devtools-allocation-profiling": {
+      "title": "Hunting Dart Memory Leaks: Native Finalizers, Closure Captures, and DevTools Allocation Profiling",
+      "date": "October 14, 2026",
+      "tag": "Flutter",
+      "wordCount": 822,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udd75\ufe0f\u200d\u2642\ufe0f Dart Memory Leak Hunting",
+        "description": "Uncover hidden memory leaks in Flutter apps caused by native finalizers and closure captures. Learn to use Dart DevTools for advanced heap profiling and eliminate sneaky retention chains draining your app's memory.",
+        "tags": [
+          "#FlutterDev",
+          "#DartLang",
+          "#MobileDev",
+          "#DevTools",
+          "#Performance"
+        ],
+        "url": "https://govindtank.github.io/blog/hunting-dart-memory-leaks-native-finalizers-closure-captures-and-devtools-allocation-profiling"
+      }
     }
   },
   "images": {
