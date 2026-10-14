@@ -4,61 +4,84 @@ title: "Architecting Resilient Server-Sent Events (SSE) in KMP Apps with Ktor 3.
 slug: "architecting-resilient-server-sent-events-sse-in-kmp-apps-with-ktor-30-and-coroutines-channels"
 date: "October 11, 2026"
 excerpt: >
-  Stop dropped connections and memory leaks from killing your KMP streams. Implement self-healing SSE in Ktor 3.0 using Channels and Flow backpressure for guaranteed delivery across iOS and Android.
+  A practical design for reconnectable SSE in Kotlin Multiplatform: keep transport state in Ktor, expose events through a bounded Flow, and make replay and backpressure explicit.
 coverImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200"
 category: "Kotlin"
-readTime: 3
+readTime: 6
 tags:
   - "Kotlin"
+  - "Ktor"
+  - "Kotlin Multiplatform"
+  - "Server-Sent Events"
 ---
-# The Ultimate Guide to Unlocking Your Full Potential: Habits That Actually Stick
+# Architecting Resilient Server-Sent Events (SSE) in KMP Apps with Ktor 3.0 and Coroutines Channels
 
-Have you ever set a massive goal—whether it is running a marathon, launching a side hustle, or reading 50 books a year—only to watch your motivation fizzle out by February? You are not alone. The secret to massive achievement isn't a flash of rare genius or an ironclad willpower that never cracks; it is the quiet, compounding power of micro-habits. 
+> **TL;DR**: SSE is easy to demo and surprisingly easy to lose in production. Treat the connection as a restartable transport, keep a bounded event buffer, and resume from a server-issued event id instead of pretending a mobile network is continuous.
+> - **The problem**: connections disappear during sleep, handoffs, and captive-portal changes; an unbounded channel can keep retaining events after the screen is gone.
+> - **The solution**: isolate Ktor's SSE client behind a shared repository, use a bounded `Channel`, and reconnect with an explicit backoff policy.
+> - **The result**: one platform-independent event stream with predictable cancellation, replay, and error handling.
 
-Let's dive into how you can rewire your daily routine for sustainable, long-term success without burning out.
+SSE fits feeds, job progress, and server notifications because the server only needs to send text over one HTTP response. It is not a durable queue, though. A phone can suspend the process, change networks, or kill the socket while the UI is not visible. The client has to assume that the connection will end.
 
----
+## Keep transport away from UI state
 
-## 1. Why Motivation is Overrated (And What to Use Instead)
+The shared code should own connection lifecycle. A screen should collect a `Flow`; it should not know how to build an `HttpClient`, parse `Last-Event-ID`, or decide whether an error is retryable.
 
-We often wait to *feel* like doing something before we act. This is the biggest trap in personal development. Motivation is an emotion, and emotions are notoriously fleeting. 
+```kotlin
+class EventRepository(
+    private val client: HttpClient,
+    private val endpoint: String,
+) {
+    private val events = Channel<ServerEvent>(capacity = 64, onBufferOverflow = BufferOverflow.DROP_OLDEST)
 
-* **The Willpower Myth:** Relying on willpower is like running your phone on 1% battery all day—it will inevitably fail when you need it most.
-* **The Environment Design Advantage:** Instead of fighting yourself, design your physical and digital spaces to make good choices effortless and bad choices tedious.
-* **The System Over Goal Mindset:** Winners and losers have the same goals. The difference lies in the *system* of daily repetitions that supports the winner.
+    fun events(): Flow<ServerEvent> = events.receiveAsFlow()
 
-> *“You do not rise to the level of your goals. You fall to the level of your systems.”* — James Clear
+    suspend fun run(lastEventId: String?) {
+        var retry = 1_000L
+        while (currentCoroutineContext().isActive) {
+            try {
+                client.sse(endpoint) {
+                    lastEventId?.let { header("Last-Event-ID", it) }
+                    incoming.collect { event ->
+                        events.send(ServerEvent(event.id, event.data))
+                    }
+                }
+                retry = 1_000L
+            } catch (cancelled: CancellationException) {
+                throw cancelled
+            } catch (error: IOException) {
+                delay(retry)
+                retry = (retry * 2).coerceAtMost(30_000L)
+            }
+        }
+    }
+}
+```
 
----
+The bounded channel matters. If a consumer disappears, the producer must not retain an unlimited backlog. For a notification feed, dropping the oldest item may be acceptable. For job state or financial events, it is safer to persist the last id and ask the server for a replay window.
 
-## 2. The 3-Step Framework for Building Bulletproof Habits
+## Reconnect without a thundering herd
 
-Transforming your daily routine doesn't require overhauling your entire life overnight. In fact, doing so is a fast track to giving up. Try this proven three-step framework instead:
+Every client reconnecting immediately after a service restart creates a second outage. Use exponential backoff with jitter, and reset the delay only after a connection has stayed healthy for a meaningful period. Do not retry authentication failures as if they were packet loss; surface a sign-in state instead.
 
-* **Scale It Down:** Make the habit so ridiculously small that it’s impossible to fail. Want to read more? Commit to reading just *one page* a night. 
-* **Anchor Your Triggers:** Tie your new habit to an existing daily behavior (known as habit stacking). *Example: "After I pour my morning coffee, I will write down three priorities for the day."*
-* **Track Your Streaks:** Use a visual tracker or calendar. Crossing off a daily box creates a psychological momentum that you won't want to break.
+A useful policy is:
 
----
+| Failure | Client action |
+| --- | --- |
+| Timeout or network change | Retry with backoff and jitter |
+| HTTP 401 or 403 | Refresh credentials or stop |
+| HTTP 429 | Respect `Retry-After` |
+| Malformed event | Log and skip the event |
+| Explicit cancellation | Close the socket immediately |
 
-## 3. Navigating the Plateau of Latent Potential
+## KMP lifecycle and cancellation
 
-When you start a new habit, progress is rarely linear. We expect results to look like a straight upward diagonal, but real life looks more like an S-curve. 
+Android and iOS do not give a background stream the same lifetime. Tie collection to a scope owned by the feature, not a global singleton. On Android, stop the stream when the service or foreground feature is stopped. On iOS, expect suspension and reconnect when the app becomes active again.
 
-* **The Valley of Disappointment:** For weeks or months, you might feel like your efforts are yielding zero results. 
-* **The Breakthrough:** Change is happening beneath the surface, much like a bamboo shoot growing its root system underground before shooting 80 feet into the air. 
-* **Staying the Course:** Trust the compounding effect. Small improvements add up in ways that seem insignificant today, but remarkably powerful over months and years.
+The most common leak is a repository that launches a new coroutine after every reconnect without cancelling the old one. Keep one supervisor job per stream and replace it deliberately. Test rotation, background/foreground transitions, network changes, and a server restart. The happy-path demo is the least interesting test.
 
----
+## What to verify before shipping
 
-## Practical Takeaways
+Instrument connection-open, connection-close, retry-delay, last-event-id, and dropped-event counters. Then run the client with a bounded buffer and deliberately kill the network. If the UI receives duplicate events or memory keeps climbing after navigation, the lifecycle boundary is wrong.
 
-Ready to turn inspiration into action? Start with these three steps today:
-
-1. **Pick one micro-habit** you want to cultivate this week (keep it under two minutes to complete).
-2. **Identify your anchor** by choosing an existing daily routine to attach it to.
-3. **Remove one point of friction** in your environment that currently stands in your way.
-
----
-
-What is one habit you are committing to starting today?
+SSE becomes dependable when the design admits that the connection is temporary. Ktor handles the HTTP details; your repository still owns recovery, buffering, and cancellation.

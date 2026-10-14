@@ -571,10 +571,42 @@ def is_content_complete(content):
         
     return True, "complete"
 
-def validate(content, archetype):
+def topic_relevance_issues(topic, content, title):
+    """Reject fluent but off-topic model output before it can be published."""
+    body = re.sub(r'^---.*?---\n', '', content, flags=re.S).lower()
+    title_line = re.search(r'^#\s+(.+)$', content, re.M)
+    issues = []
+    if not title_line or title_line.group(1).strip().lower() != title.strip().lower():
+        issues.append("body H1 does not exactly match selected topic")
+
+    stop = {
+        "the", "and", "for", "with", "from", "into", "your", "this", "that",
+        "how", "why", "what", "when", "where", "using", "building", "guide",
+        "production", "modern", "practical", "deep", "dive", "advanced",
+    }
+    raw_terms = list(topic.get("keywords", []))
+    raw_terms += re.findall(r"[a-z0-9][a-z0-9+#.-]{2,}", title.lower())
+    anchors = {t.lower() for t in raw_terms if t and t.lower() not in stop}
+    hits = {a for a in anchors if a in body}
+    if len(hits) < 2:
+        issues.append(f"topic relevance too low ({len(hits)} anchor terms found)")
+
+    off_topic_markers = [
+        "morning routine", "productive people", "personal development", "micro-habits",
+        "drink a full glass of water", "wake up", "to-do list", "side hustle",
+        "outcome-based work", "corporate leadership", "fluorescent office lights",
+    ]
+    if sum(1 for marker in off_topic_markers if marker in body) >= 2:
+        issues.append("generic lifestyle/workplace content detected")
+    return issues
+
+
+def validate(content, archetype, topic=None, title=None):
     issues = []
     body = re.sub(r'^---.*?---\n', '', content, flags=re.S)
     wc = len(body.split())
+    if topic is not None and title is not None:
+        issues.extend(topic_relevance_issues(topic, content, title))
     if wc < MIN_WORDS:
         issues.append(f"too short: {wc} words (< {MIN_WORDS})")
     
@@ -750,10 +782,15 @@ def generate_single_post(topic, archetype=None, persona=None):
     log(f"Wrote {path} ({wc} words, archetype={archetype})")
 
     # Validate
-    issues = validate(open(path, encoding="utf-8").read(), archetype)
+    issues = validate(open(path, encoding="utf-8").read(), archetype, topic=topic, title=title)
     if issues:
         log(f"Validation notices ({len(issues)}): {issues}")
-        has_fatal_issue = any("incomplete/truncated" in iss or "too short" in iss for iss in issues)
+        has_fatal_issue = any(
+            "incomplete/truncated" in iss or "too short" in iss or
+            "topic relevance" in iss or "body H1" in iss or
+            "lifestyle/workplace" in iss
+            for iss in issues
+        )
         if has_fatal_issue or len(issues) >= 4:
             log("Critical validation failure (incomplete or severely malformed). Rejecting post.")
             if os.path.exists(path):
