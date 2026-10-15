@@ -1445,6 +1445,25 @@
         ],
         "url": "https://govindtank.github.io/blog/local-first-realtime-sync-powersync-vs-automerge-vs-electricsql-under-degraded-mobile-networks"
       }
+    },
+    "compose-multiplatform-on-ios-trimming-40mb-binaries-and-taming-the-kotlinnative-garbage-collector": {
+      "title": "Compose Multiplatform on iOS: Trimming 40MB Binaries and Taming the Kotlin/Native Garbage Collector",
+      "date": "October 15, 2026",
+      "tag": "Kotlin",
+      "wordCount": 955,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udcf1 Cut 40MB from iOS Apps with Kotlin",
+        "description": "Trim bloated Skiko binaries and fix retain cycles in Compose Multiplatform for iOS. Optimize Kotlin/Native GC and slash app size by 40MB!",
+        "tags": [
+          "#Kotlin",
+          "#iOSDev",
+          "#MobileDev",
+          "#JetpackCompose",
+          "#KotlinMultiplatform"
+        ],
+        "url": "https://govindtank.github.io/blog/compose-multiplatform-on-ios-trimming-40mb-binaries-and-taming-the-kotlinnative-garbage-collector"
+      }
     }
   },
   "images": {
