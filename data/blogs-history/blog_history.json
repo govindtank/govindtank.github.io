@@ -1425,6 +1425,26 @@
         ],
         "url": "https://govindtank.github.io/blog/hunting-dart-memory-leaks-native-finalizers-closure-captures-and-devtools-allocation-profiling"
       }
+    },
+    "local-first-realtime-sync-powersync-vs-automerge-vs-electricsql-under-degraded-mobile-networks": {
+      "title": "Local-First Realtime Sync: PowerSync vs Automerge vs ElectricSQL Under Degraded Mobile Networks",
+      "date": "October 15, 2026",
+      "tag": "Architecture",
+      "wordCount": 1586,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udce1 Local-First Sync on 3G? These Engines Survive!",
+        "description": "Stress-tested PowerSync, Automerge, and ElectricSQL under lossy 3G tunnels on iOS/Android. Which one keeps your app alive when the network drops? Find out now.",
+        "tags": [
+          "#MobileDev",
+          "#LocalFirst",
+          "#SQLite",
+          "#OfflineFirst",
+          "#iOSDev",
+          "#AndroidDev"
+        ],
+        "url": "https://govindtank.github.io/blog/local-first-realtime-sync-powersync-vs-automerge-vs-electricsql-under-degraded-mobile-networks"
+      }
     }
   },
   "images": {

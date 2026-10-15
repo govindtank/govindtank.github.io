@@ -8,14 +8,23 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Oct 2026 02:39:32 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 09:12:10 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Local-First Realtime Sync: PowerSync vs Automerge vs ElectricSQL Under Degraded Mobile Networks]]></title>
+      <link>https://govindtank.is-a.dev/blog/local-first-realtime-sync-powersync-vs-automerge-vs-electricsql-under-degraded-mobile-networks</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/local-first-realtime-sync-powersync-vs-automerge-vs-electricsql-under-degraded-mobile-networks</guid>
+      <pubDate>Wed, 14 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[> **TL;DR**: I stress-tested PowerSync, Automerge, and ElectricSQL on iOS and Android under simulated 3G lossy tunnels to find which local-first engine survives intermittent connectivity without crashing SQLite or dra...
+]]></description>
+      <category>Architecture</category>
+    </item>
     <item>
       <title><![CDATA[Hunting Dart Memory Leaks: Native Finalizers, Closure Captures, and DevTools Allocation Profiling]]></title>
       <link>https://govindtank.is-a.dev/blog/hunting-dart-memory-leaks-native-finalizers-closure-captures-and-devtools-allocation-profiling</link>
       <guid isPermaLink="true">https://govindtank.is-a.dev/blog/hunting-dart-memory-leaks-native-finalizers-closure-captures-and-devtools-allocation-profiling</guid>
       <pubDate>Tue, 13 Oct 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[Lingering event listeners and FFI native allocations silently drain app memory. Use advanced Dart DevTools heap profiling to expose hidden retention chains and eliminate elusive leaks.
+      <description><![CDATA[Our Flutter app was climbing 40MB per hour on low-end devices. No crashes, no warnings—just a slow death. Here's the exact sequence we used in DevTools to find three leak sources that the analyzer never flagged.
 ]]></description>
       <category>Flutter</category>
     </item>
@@ -24,7 +33,7 @@
       <link>https://govindtank.is-a.dev/blog/building-a-native-model-context-protocol-mcp-host-on-android-tool-calling-local-rag-with-sqlite-vec</link>
       <guid isPermaLink="true">https://govindtank.is-a.dev/blog/building-a-native-model-context-protocol-mcp-host-on-android-tool-calling-local-rag-with-sqlite-vec</guid>
       <pubDate>Mon, 12 Oct 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[Stop cloud round-trips for agent tooling. This architecture runs a full MCP host in an Android background service—executing deterministic tools and sqlite-vec RAG at sub-millisecond latency, fully offline.
+      <description><![CDATA[Every agentic AI demo I've seen on Android phones the server. Here's what it actually takes to run a full MCP host on-device—JSON-RPC routing, sqlite-vec RAG, and why sub-2ms tool calls change what's possible in mobile AI.
 ]]></description>
       <category>AI-Engineering</category>
     </item>
@@ -33,7 +42,7 @@
       <link>https://govindtank.is-a.dev/blog/flutter-web-wasm-in-2026-achieving-sub-second-tti-and-debugging-garbage-collection-stalls</link>
       <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-web-wasm-in-2026-achieving-sub-second-tti-and-debugging-garbage-collection-stalls</guid>
       <pubDate>Sun, 11 Oct 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[Migrating enterprise apps to Dart 3.7 WasmGC cut initial load by 62% for sub-second TTI, but required fixing canvas font corruption and debugging WasmGC heap stalls to stabilize production runtime.
+      <description><![CDATA[We migrated a production Flutter web app to WasmGC and cut TTI from 4.2s to 0.8s. Then the GC stalls started—frames freezing for 80-120ms with no explanation in the profiler. Here's what was actually causing them.
 ]]></description>
       <category>Flutter</category>
     </item>
@@ -42,7 +51,7 @@
       <link>https://govindtank.is-a.dev/blog/architecting-resilient-server-sent-events-sse-in-kmp-apps-with-ktor-30-and-coroutines-channels</link>
       <guid isPermaLink="true">https://govindtank.is-a.dev/blog/architecting-resilient-server-sent-events-sse-in-kmp-apps-with-ktor-30-and-coroutines-channels</guid>
       <pubDate>Sat, 10 Oct 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[Stop dropped connections and memory leaks from killing your KMP streams. Implement self-healing SSE in Ktor 3.0 using Channels and Flow backpressure for guaranteed delivery across iOS and Android.
+      <description><![CDATA[We silently dropped 3 weeks of live events on iOS because we assumed a mobile network behaves like a server. Here's the exact architecture that fixed it—bounded channels, explicit backoff, and a repository that doesn't lie to the UI.
 ]]></description>
       <category>Kotlin</category>
     </item>

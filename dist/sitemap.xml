@@ -9,6 +9,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.is-a.dev/blog/local-first-realtime-sync-powersync-vs-automerge-vs-electricsql-under-degraded-mobile-networks</loc>
+    <lastmod>2026-10-14T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.is-a.dev/blog/hunting-dart-memory-leaks-native-finalizers-closure-captures-and-devtools-allocation-profiling</loc>
     <lastmod>2026-10-13T18:30:00.000Z</lastmod>
     <priority>0.7</priority>

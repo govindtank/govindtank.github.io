@@ -30,21 +30,24 @@ POOL_FILE = f"{PROJECT_ROOT}/scripts/blog-automation/verified_images.json"
 STATE_FILE = f"{PROJECT_ROOT}/scripts/blog-automation/.rewrite_state.json"
 TOPICS_JSON_PATH = os.path.expanduser("~/.hermes/cron/topics.json")
 
-# LLM Providers Configuration
-GEMINI_LLM_URL = "http://localhost:20128/v1/chat/completions"
-GEMINI_MODELS = [
-    "antigravity/gemini-3.7-flash-low",
-    "auto/gemini"
-]
+# ======= LLM PROVIDERS CONFIGURATION (Local-first with degraded cloud fallback) =======
 
-LOCAL_LLM_URL = os.environ.get("HERMES_LOCAL_MODEL_URL", "http://127.0.0.1:1234/v1/chat/completions")
-LOCAL_MODELS = ["qwen/qwen3.5-9b", "google/gemma-4-12b"]
+# LOCAL MODEL (PRIMARY) — LM Studio/Qwen3.5-9b on port 64109
+# Read from .env or use default
+LOCAL_LLM_URL = os.environ.get("HERMES_LOCAL_MODEL_URL", "http://127.0.0.1:64109/v1/chat/completions")
+LOCAL_API_KEY = os.environ.get("HERMES_LM_STUDIO_API_KEY", "")
+LOCAL_MODELS = ["qwen3.5-9b", "llava_qwen3.5-9b"]
 
-KILO_LLM_URL = "https://api.kilo.ai/api/gateway/v1/chat/completions"
-KILO_MODELS = [
-    "stepfun/step-3.7-flash:free",
-    "kilo-auto/free"
-]
+# LOCAL LM STUDIO ENDPOINT (backup local)
+LM_STUDIO_URL = os.environ.get("HERMES_LM_STUDIO_URL", "http://localhost:1234/v1/chat/completions")
+LM_STUDIO_MODELS = ["qwen/qwen3.5-9b"]
+
+# CLOUD API FALLBACKS (exhausted, only when local fails)
+GEMINI_LLM_URL = os.environ.get("HERMES_GEMINI_URL", "http://localhost:20128/v1/chat/completions")
+GEMINI_MODELS = ["antigravity/gemini-3.7-flash-low", "auto/gemini"]
+
+KILO_LLM_URL = os.environ.get("HERMES_KILO_URL", "https://api.kilo.ai/api/gateway/v1/chat/completions")
+KILO_MODELS = ["stepfun/step-3.7-flash:free", "kilo-auto/free"]
 
 GIT_USER_NAME = "Govind Tank"
 GIT_USER_EMAIL = "govindtank600@gmail.com"
@@ -298,101 +301,76 @@ def pick_image(category="", topic_title="", topic_desc="", topic_keywords=None, 
 
 # ======= ARCHETYPES & PERSONAS =======
 ARCHETYPES = {
-    "incident-report": {
-        "label": "incident report / postmortem",
+    "tutorial": {
+        "label": "hands-on tutorial",
         "structure": [
-            "Opening: The exact moment things broke. Date, symptom, stakes. First person.",
-            "Timeline: What happened, in order. No dramatization—just timestamps and observations.",
-            "Root cause: What was actually wrong (not what we thought at first). Show the wrong code.",
-            "The fix: The exact change that resolved it. Show the corrected code.",
-            "What we'd do differently: Bulleted, specific, honest.",
-            "The number that matters: One metric that would have caught this earlier.",
+            "Opening hook: a concrete problem the reader is stuck on, or 'here's what we'll build and why it matters'. No generic preamble.",
+            "Brief context: what you need before starting (versions, tools). 1-2 short paragraphs.",
+            "Step-by-step walkthrough: numbered steps, each with purpose. 2-4 code blocks, each with a one-line 'what this does'.",
+            "A short recap: what we just built and how the pieces fit.",
+            "Pitfalls you hit while doing this yourself (specific errors, weird behavior).",
+            "Closing: where to go next (docs, related tools), 1-2 sentences.",
         ],
-        "notes": "Structure like a real incident postmortem. Include timestamps, real error messages, and the wrong assumptions you made. Don't invent drama.",
-    },
-    "code-archaeology": {
-        "label": "code archaeology / inherited codebase",
-        "structure": [
-            "Opening: 'I inherited this codebase. Here's what I found.'",
-            "The original implementation: What was there, why it looked that way, the hidden assumptions.",
-            "Why it was written this way: Steelman the original author's constraints and context.",
-            "What broke over time: Specific failures, drift, technical debt accumulation.",
-            "The refactor: What changed, why, what stayed the same. Code before/after.",
-            "Closing: What the original author got right that I kept.",
-        ],
-        "notes": "Respectful to past decisions. Show the constraints that made the old code logical at the time.",
-    },
-    "myth-vs-reality": {
-        "label": "myth vs reality",
-        "structure": [
-            "Opening: The widespread belief you're challenging.",
-            "3-5 'Myth vs Reality' sections, each:",
-            "  - Myth: What the docs/tutorials/blog posts say",
-            "  - Reality: What actually happens in production (with specific evidence)",
-            "  - Why the gap exists: Technical reason or hidden constraint",
-            "One table summarizing all myths vs realities.",
-            "Closing: Which myths are harmless and which ones will hurt you.",
-        ],
-        "notes": "Challenge common wisdom only when you have specific production evidence. No contrarianism for its own sake.",
-    },
-    "the-hard-number": {
-        "label": "the hard number / measurement-driven",
-        "structure": [
-            "Opening: The specific metric that matters (latency, memory delta, frame time, cost).",
-            "The baseline measurement: How you measured it, the exact number, the conditions.",
-            "What changed: The optimization, refactor, or migration. Code before/after.",
-            "The new measurement: The exact improvement, same conditions, same methodology.",
-            "How to measure it yourself: Exact commands, tools, profiler settings. Reproducible.",
-            "Closing: When this measurement matters and when it doesn't.",
-        ],
-        "notes": "Anchor everything to one real, reproducible measurement. Show the profiler screenshots, the commands, the exact tool flags.",
-    },
-    "the-disagreement": {
-        "label": "the disagreement / contrarian take",
-        "structure": [
-            "Opening: 'Everyone says X. I don't do it that way anymore.'",
-            "Steelman the consensus: Why most developers follow the common advice, and when it's right.",
-            "Where it breaks: Specific scenarios where the common approach fails. Real examples.",
-            "What I do instead: Your alternative approach. Code example.",
-            "The trade-off: What you lose by doing it your way. Be honest.",
-            "Closing: Who should follow the consensus and who should try your approach.",
-        ],
-        "notes": "Take a clear position but be fair to the mainstream view. Explain the trade-off you're making.",
-    },
-    "war-story": {
-        "label": "field story / debugging narrative",
-        "structure": [
-            "Opening: The symptom that made no sense. First person.",
-            "The wrong guesses: What we tried first, why we thought it would work, why it didn't.",
-            "The debugging path: Tools, commands, the aha moment. Chronological.",
-            "The actual cause: The specific line/config/assumption that was wrong. Show it.",
-            "The fix: Code before/after.",
-            "The uncomfortable truth: What this revealed about our architecture/process/assumptions.",
-        ],
-        "notes": "Show the wrong paths you took. Real debugging is messy—include the dead ends.",
+        "notes": "Write like you're walking a colleague through it at a whiteboard. No 'comprehensive' claims.",
     },
     "comparison": {
         "label": "head-to-head comparison",
         "structure": [
-            "Opening: The decision the reader is facing.",
-            "Each option gets a fair section: What it is, strengths, weaknesses, when it fits.",
-            "One honest comparison table. NO fake benchmarks.",
-            "Decision framework: 'Choose X when...' / 'Choose Y when...' (bulleted, specific).",
-            "Closing: Your pick and why, in 2-3 sentences.",
+            "Opening hook: the decision the reader is stuck on (which tool/library/pattern to pick).",
+            "Brief context: why multiple options exist and what changed recently.",
+            "Each option gets a fair section: strengths, weaknesses, when it fits. Own the trade-offs.",
+            "One comparison table with honest trade-offs. NO fake benchmark numbers.",
+            "Decision framework: bulleted 'choose X when...' / 'choose Y when...'.",
+            "Closing: your recommendation and why, 2-3 sentences.",
         ],
-        "notes": "Treat every option fairly. Specific version differences and real ergonomic trade-offs beat vague adjectives.",
+        "notes": "Treat every option fairly even if you have a favorite. Specific versions and real ergonomic differences beat vague adjectives.",
     },
     "explainer": {
         "label": "how it works under the hood",
         "structure": [
-            "Opening: A surprising behavior, misconception, or question most devs get wrong.",
-            "The mental model: Simple framing or analogy before any code.",
-            "Core mechanics: Step-by-step architecture breakdown. 1-2 small code snippets.",
-            "What happens at runtime: Walk through a concrete scenario end to end.",
-            "Edge cases and gotchas: What breaks and why.",
-            "Closing: Why this mental model matters for daily work, 1-2 sentences.",
+            "Opening hook: a surprising behavior, a common misconception, or a question most devs get wrong.",
+            "The mental model first: an analogy or simple framing before any code.",
+            "Core mechanics: step-by-step, clear architecture breakdown, 1-2 small code snippets.",
+            "What happens at runtime: walk through a concrete scenario end to end.",
+            "Edge cases and gotchas (what breaks, and why).",
+            "Closing: why this mental model matters for day-to-day work, 1-2 sentences.",
         ],
-        "notes": "Clarity over completeness. Cut details that don't strengthen the mental model.",
+        "notes": "Clarity over completeness. If a detail doesn't help the mental model, cut it.",
+    },
+    "war-story": {
+        "label": "field story / postmortem",
+        "structure": [
+            "Opening hook: the incident or pain point, told from your perspective. First person ('I').",
+            "The setup: what the system was, what we assumed.",
+            "The failure moment: the symptom, the panic, the wrong guesses first.",
+            "The actual fix: the debugging path, tools used, the aha moment.",
+            "The fix in code: 1-2 code blocks.",
+            "Lessons: what I'd do differently, bulleted.",
+            "Closing: practical takeaway for the reader, 1-2 sentences.",
+        ],
+        "notes": "Specific beats dramatic. Real error messages, real timestamps, real stack traces read human. Don't invent heroic endings.",
+    },
+    "roundup": {
+        "label": "roundup with verdicts",
+        "structure": [
+            "Opening hook: what the reader is trying to choose between.",
+            "Selection criteria: brief and honest about what made the list.",
+            "Each item its own short section: what it is, who it's for, verdict (worth it / skip / depends).",
+            "One quick-reference table.",
+            "Closing: how to evaluate options yourself rather than trusting the list, 2-3 sentences.",
+        ],
+        "notes": "Verdicts must be opinionated. 'Depends' needs a concrete condition.",
+    },
+    "opinion": {
+        "label": "opinion / thesis piece",
+        "structure": [
+            "Opening hook: the claim, stated plainly and early. Take a side.",
+            "Why most people think otherwise: steelman the mainstream view first.",
+            "Your argument: evidence, experience, reasoning. Max 1 code/diagram element.",
+            "Counterarguments: where you might be wrong, addressed honestly.",
+            "Closing: what this means for the reader's decisions, 2-3 sentences.",
+        ],
+        "notes": "No hedge soup. If you're unsure about a claim, say so in one clause and move on.",
     },
 }
 
@@ -419,12 +397,89 @@ BANNED_PHRASES = [
 # ======= LLM CALLER =======
 def call_llm(messages, temperature=0.75, max_tokens=6000, timeout=45):
     """
-    Tiered LLM caller:
-    1. Gemini 3.7 Low (Local Gateway at localhost:20128 - prioritized)
-    2. Kilo Gateway (Fast fallback with stepfun/step-3.7-flash, kilo-auto)
-    3. Local LM Studio endpoint (fallback)
+    Tiered LLM caller with LOCAL-FIRST strategy (local OlliteRT/Gemma-4-E2B-it prioritized):
+    1. Local model (OlliteRT/Gemma-4-E2B-it on port 1234) — PRIMARY, fast, no cost
+    2. LM Studio endpoint (backup local if available)
+    3. Gemini 3.7 Low (Local Gateway at localhost:20128) — only when local fails
+    4. Kilo Gateway (Fast fallback with stepfun/step-3.7-flash, kilo-auto) — last resort
+    
+    Cloud APIs are degraded fallbacks and should not be relied upon for production use.
     """
-    # Primary: Gemini 3.7 Low via Local Gateway
+    # ===== LOCAL FIRST: LM Studio Qwen3.5-9b on port 64109 =====
+    for local_model in LOCAL_MODELS:
+        payload = {
+            "model": local_model,
+            "messages": messages,
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+        }
+        # Include API key if available
+        headers = {"Content-Type": "application/json"}
+        if LOCAL_API_KEY:
+            headers["Authorization"] = f"Bearer {LOCAL_API_KEY}"
+        
+        req = urllib.request.Request(
+            LOCAL_LLM_URL,
+            data=json.dumps(payload).encode(),
+            headers=headers,
+            method="POST"
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                if resp.status == 200:
+                    resp_data = json.loads(resp.read().decode())
+                    if "choices" in resp_data and resp_data["choices"]:
+                        msg = resp_data["choices"][0]["message"]
+                        content = msg.get("content", "")
+                        if content and len(content.strip()) > 50:
+                            log(f"  Local LLM (Qwen3.5-9b) succeeded with {local_model}")
+                            return content
+                else:
+                    log(f"  Local model returned status {resp.status}")
+        except urllib.error.HTTPError as e:
+            if e.code == 401 or e.code == 403:
+                log(f"  Local LLM auth failed with HTTP {e.code} — checking API key")
+            elif e.code == 429:
+                log(f"  Local LLM rate limited (HTTP 429)")
+            else:
+                log(f"  Local LLM HTTP error {e.code}: {str(e)[:80]}")
+        except urllib.error.URLError as e:
+            log(f"  Local LLM connection failed: {str(e.reason)[:60]}")
+        except Exception as e:
+            if "timeout" in str(e).lower() or "timed out" in str(e).lower():
+                log(f"  Local LLM timeout after {timeout}s")
+            else:
+                log(f"  Local LLM failed: {str(e)[:80]}")
+        continue
+
+    # ===== LOCAL BACKUP: LM Studio endpoint =====
+    for local_model in LM_STUDIO_MODELS:
+        payload = {
+            "model": local_model,
+            "messages": messages,
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+        }
+        req = urllib.request.Request(
+            LM_STUDIO_URL,
+            data=json.dumps(payload).encode(),
+            headers={"Content-Type": "application/json"},
+            method="POST"
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                if resp.status == 200:
+                    resp_data = json.loads(resp.read().decode())
+                    if "choices" in resp_data and resp_data["choices"]:
+                        msg = resp_data["choices"][0]["message"]
+                        content = msg.get("content", "")
+                        if content and len(content.strip()) > 50:
+                            log(f"  LM Studio LLM succeeded with {local_model}")
+                            return content
+        except Exception as e:
+            log(f"  LM Studio failed: {str(e)[:60]}")
+
+    # ===== DEGRADED FALLBACK: Gemini via Local Gateway =====
     for model in GEMINI_MODELS:
         payload = {
             "model": model,
@@ -451,13 +506,13 @@ def call_llm(messages, temperature=0.75, max_tokens=6000, timeout=45):
                         if m_draft:
                             content = m_draft.group(1).strip()
                     if content and len(content.strip()) > 50:
-                        log(f"  Gemini LLM succeeded with {model}")
+                        log(f"  Gemini LLM fallback succeeded with {model}")
                         return content
         except Exception as e:
             log(f"  Gemini LLM failed with {model}: {str(e)[:80]}")
             continue
 
-    # Secondary: Kilo Gateway
+    # ===== LAST RESORT: Kilo Gateway =====
     for model in KILO_MODELS:
         payload = {
             "model": model,
@@ -478,46 +533,20 @@ def call_llm(messages, temperature=0.75, max_tokens=6000, timeout=45):
                 if "choices" in resp_data and resp_data["choices"]:
                     msg = resp_data["choices"][0]["message"]
                     content = msg.get("content", "")
-                    # If model puts generation in reasoning/thought when output tokens run out
                     if (not content or not content.strip()) and msg.get("reasoning"):
                         reasoning = msg.get("reasoning", "")
-                        # Try to extract the draft/content if present
                         m_draft = re.search(r'(?:Let\'s draft|Draft|Here is the|#\s+)([\s\S]+)', reasoning, re.I)
                         if m_draft:
                             content = m_draft.group(1).strip()
                     if content and len(content.strip()) > 50:
-                        log(f"  Kilo LLM succeeded with {model}")
+                        log(f"  Kilo LLM fallback succeeded with {model}")
                         return content
         except Exception as e:
             log(f"  Kilo LLM failed with {model}: {str(e)[:80]}")
             continue
 
-    # Tertiary: Try Local LM Studio endpoint
-    for local_model in LOCAL_MODELS:
-        payload = {
-            "model": local_model,
-            "messages": messages,
-            "temperature": temperature,
-            "max_tokens": max_tokens,
-        }
-        req = urllib.request.Request(
-            LOCAL_LLM_URL,
-            data=json.dumps(payload).encode(),
-            headers={"Content-Type": "application/json"},
-            method="POST"
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=30) as resp:
-                resp_data = json.loads(resp.read().decode())
-                if "choices" in resp_data and resp_data["choices"]:
-                    msg = resp_data["choices"][0]["message"]
-                    content = msg.get("content", "")
-                    if content and len(content.strip()) > 50:
-                        log(f"  Local LLM succeeded with {local_model}")
-                        return content
-        except Exception:
-            pass
-
+    # ===== ALL PROVIDERS FAILED =====
+    log("  CRITICAL: All LLM providers exhausted — returning None")
     return None
 
 def build_prompts(topic, archetype, persona, excerpt_only=False):
@@ -621,7 +650,8 @@ def topic_relevance_issues(topic, content, title):
         "drink a full glass of water", "wake up", "to-do list", "side hustle",
         "outcome-based work", "corporate leadership", "fluorescent office lights",
     ]
-    if sum(1 for marker in off_topic_markers if marker in body) >= 2:
+    marker_hits = sum(1 for marker in off_topic_markers if marker in body)
+    if marker_hits >= 2:
         issues.append("generic lifestyle/workplace content detected")
     return issues
 
@@ -716,40 +746,7 @@ def recent_archetypes():
             pass
     return archs
 
-def choose_archetype_for_topic(topic):
-    """Intelligently select archetype based on topic content and keywords."""
-    title = topic.get("title", "").lower()
-    desc = topic.get("desc", "").lower()
-    keywords = " ".join(topic.get("keywords", [])).lower()
-    combined = f"{title} {desc} {keywords}"
-    
-    # Pattern matching for archetype selection
-    if any(word in combined for word in ["debugging", "leak", "crash", "failure", "incident", "broke", "outage"]):
-        return "incident-report"
-    
-    if any(word in combined for word in ["inherited", "legacy", "refactor", "technical debt", "migration"]):
-        return "code-archaeology"
-    
-    if any(word in combined for word in ["myth", "misconception", "actually", "reality", "truth", "wrong"]):
-        return "myth-vs-reality"
-    
-    if any(word in combined for word in ["benchmark", "profiling", "measurement", "latency", "performance", "optimization", "ms", "fps"]):
-        return "the-hard-number"
-    
-    if any(word in combined for word in ["vs", "versus", "comparison", "choosing", "which", "between"]):
-        return "comparison"
-    
-    if any(word in combined for word in ["disagree", "contrarian", "unpopular", "everyone says", "different approach"]):
-        return "the-disagreement"
-    
-    if any(word in combined for word in ["how", "works", "under the hood", "architecture", "explained", "internals"]):
-        return "explainer"
-    
-    # Default to war-story for production/real-world problems
-    return "war-story"
-
 def choose_archetype():
-    """Legacy function: random selection avoiding recent archetypes."""
     recent = recent_archetypes()
     available = [a for a in ARCHETYPES if a not in recent]
     return random.choice(available or list(ARCHETYPES))
@@ -776,14 +773,12 @@ def clean_post_content(raw_content, title):
 
 def generate_single_post(topic, archetype=None, persona=None):
     """Generates and writes a single verified blog post. Returns tuple or None."""
-    # Use intelligent archetype selection if not explicitly provided
-    archetype = archetype or choose_archetype_for_topic(topic)
+    archetype = archetype or choose_archetype()
     persona = persona or choose_persona()
     title = topic["title"]
     tag = topic.get("tag", "Mobile-Architecture")
     slug = slugify(title)
-    log(f"Generating post: '{title}' [{tag}] (archetype={archetype}, auto-selected)")
-
+    log(f"Generating post: '{title}' [{tag}] (archetype={archetype})")
 
     content = None
     for attempt in range(MAX_LLM_ATTEMPTS):
