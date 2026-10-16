@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Oct 2026 10:47:30 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 02:35:46 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Signals vs Riverpod 3.0 in Production: Memory Footprint, Rebuild Benchmarks, and Migration Nightmares]]></title>
+      <link>https://govindtank.is-a.dev/blog/signals-vs-riverpod-30-in-production-memory-footprint-rebuild-benchmarks-and-migration-nightmares</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/signals-vs-riverpod-30-in-production-memory-footprint-rebuild-benchmarks-and-migration-nightmares</guid>
+      <pubDate>Thu, 15 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[: Draft 1: 50k widget trees tested: Signals cut memory leaks by 60% but Riverpod's invalidation overhead crashed rebuilds. Real production benchmarks and migration scars. (138 chars) Draft 2: We stress-tested 50,000 w...
+]]></description>
+      <category>Flutter</category>
+    </item>
     <item>
       <title><![CDATA[Compose Multiplatform on iOS: Trimming 40MB Binaries and Taming the Kotlin/Native Garbage Collector]]></title>
       <link>https://govindtank.is-a.dev/blog/compose-multiplatform-on-ios-trimming-40mb-binaries-and-taming-the-kotlinnative-garbage-collector</link>

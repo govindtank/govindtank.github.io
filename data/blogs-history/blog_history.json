@@ -1464,6 +1464,26 @@
         ],
         "url": "https://govindtank.github.io/blog/compose-multiplatform-on-ios-trimming-40mb-binaries-and-taming-the-kotlinnative-garbage-collector"
       }
+    },
+    "signals-vs-riverpod-30-in-production-memory-footprint-rebuild-benchmarks-and-migration-nightmares": {
+      "title": "Signals vs Riverpod 3.0 in Production: Memory Footprint, Rebuild Benchmarks, and Migration Nightmares",
+      "date": "October 16, 2026",
+      "tag": "Flutter",
+      "wordCount": 1405,
+      "status": "published",
+      "social": {
+        "short_title": "Signals vs Riverpod 3.0 in Production: Memory Footprint,...",
+        "description": ": Draft 1: 50k widget trees tested: Signals cut memory leaks by 60% but Riverpod's invalidation overhead crashed rebuilds. Real production benchmarks and migration scars. (138...",
+        "tags": [
+          "#FlutterDev",
+          "#DartLang",
+          "#MobileDev",
+          "#CrossPlatform",
+          "#AppDevelopment",
+          "#FlutterSignals"
+        ],
+        "url": "https://govindtank.github.io/blog/signals-vs-riverpod-30-in-production-memory-footprint-rebuild-benchmarks-and-migration-nightmares"
+      }
     }
   },
   "images": {
