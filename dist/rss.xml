@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Oct 2026 02:35:46 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 02:35:16 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Harnessing Qualcomm QNN & NPU Acceleration: Running 8-Bit Vision Transformers on Mobile Devices]]></title>
+      <link>https://govindtank.is-a.dev/blog/harnessing-qualcomm-qnn-npu-acceleration-running-8-bit-vision-transformers-on-mobile-devices</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/harnessing-qualcomm-qnn-npu-acceleration-running-8-bit-vision-transformers-on-mobile-devices</guid>
+      <pubDate>Fri, 16 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[> **TL;DR**: A PyTorch vision transformer can run on the Hexagon NPU only after you split it into graph fragments that QNN can actually lower, then quantize the fragments to 8-bit with calibration data the NPU will ac...
+]]></description>
+      <category>Mobile-AI</category>
+    </item>
     <item>
       <title><![CDATA[Signals vs Riverpod 3.0 in Production: Memory Footprint, Rebuild Benchmarks, and Migration Nightmares]]></title>
       <link>https://govindtank.is-a.dev/blog/signals-vs-riverpod-30-in-production-memory-footprint-rebuild-benchmarks-and-migration-nightmares</link>

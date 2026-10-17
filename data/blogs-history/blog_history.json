@@ -1484,6 +1484,26 @@
         ],
         "url": "https://govindtank.github.io/blog/signals-vs-riverpod-30-in-production-memory-footprint-rebuild-benchmarks-and-migration-nightmares"
       }
+    },
+    "harnessing-qualcomm-qnn-npu-acceleration-running-8-bit-vision-transformers-on-mobile-devices": {
+      "title": "Harnessing Qualcomm QNN & NPU Acceleration: Running 8-Bit Vision Transformers on Mobile Devices",
+      "date": "October 17, 2026",
+      "tag": "Mobile-AI",
+      "wordCount": 1625,
+      "status": "published",
+      "social": {
+        "short_title": "Harnessing Qualcomm QNN & NPU Acceleration: Running 8-Bit...",
+        "description": "> **TL;DR**: A PyTorch vision transformer can run on the Hexagon NPU only after you split it into graph fragments that QNN can actually lower, then quantize the fragments to...",
+        "tags": [
+          "#OnDeviceAI",
+          "#MobileAI",
+          "#EdgeAI",
+          "#AndroidDev",
+          "#MachineLearning",
+          "#QualcommQnn"
+        ],
+        "url": "https://govindtank.github.io/blog/harnessing-qualcomm-qnn-npu-acceleration-running-8-bit-vision-transformers-on-mobile-devices"
+      }
     }
   },
   "images": {
