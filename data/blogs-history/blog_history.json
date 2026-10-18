@@ -1504,6 +1504,25 @@
         ],
         "url": "https://govindtank.github.io/blog/harnessing-qualcomm-qnn-npu-acceleration-running-8-bit-vision-transformers-on-mobile-devices"
       }
+    },
+    "zero-copy-buffer-sharing-bridging-ndk-c-audio-kmp-coreaudio-via-c-interop": {
+      "title": "Zero-Copy Buffer Sharing: Bridging NDK C++ Audio & KMP CoreAudio via C-Interop",
+      "date": "October 18, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1237,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Sub-8ms Audio: Zero-Copy NDK to KMP Interop",
+        "description": "JNI allocations ruin real-time audio. Use lock-free zero-copy ring buffers between NDK C++ and KMP CoreAudio for deterministic sub-8ms latency.",
+        "tags": [
+          "#KotlinMultiplatform",
+          "#AndroidDev",
+          "#Cpp",
+          "#iOSDev",
+          "#MobileArchitecture"
+        ],
+        "url": "https://govindtank.github.io/blog/zero-copy-buffer-sharing-bridging-ndk-c-audio-kmp-coreaudio-via-c-interop"
+      }
     }
   },
   "images": {
