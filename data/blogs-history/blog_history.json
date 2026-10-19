@@ -1523,6 +1523,25 @@
         ],
         "url": "https://govindtank.github.io/blog/zero-copy-buffer-sharing-bridging-ndk-c-audio-kmp-coreaudio-via-c-interop"
       }
+    },
+    "why-android-coroutine-scopes-leak-memory-and-the-leakcanary-patterns-to-stop-it": {
+      "title": "Why Android Coroutine Scopes Leak Memory (And the LeakCanary Patterns to Stop It)",
+      "date": "October 19, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 993,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Stop Leaking Dead Activities in Coroutines",
+        "description": "Uncollected Flows and callback bridges quietly pin dead Activities in RAM. Spot the trace in LeakCanary and fix the root cause.",
+        "tags": [
+          "#AndroidDev",
+          "#Kotlin",
+          "#Coroutines",
+          "#LeakCanary",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/why-android-coroutine-scopes-leak-memory-and-the-leakcanary-patterns-to-stop-it"
+      }
     }
   },
   "images": {

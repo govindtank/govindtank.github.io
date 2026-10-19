@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Oct 2026 02:34:07 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 02:41:49 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Why Android Coroutine Scopes Leak Memory (And the LeakCanary Patterns to Stop It)]]></title>
+      <link>https://govindtank.is-a.dev/blog/why-android-coroutine-scopes-leak-memory-and-the-leakcanary-patterns-to-stop-it</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/why-android-coroutine-scopes-leak-memory-and-the-leakcanary-patterns-to-stop-it</guid>
+      <pubDate>Sun, 18 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Uncollected Flows and callback bridges quietly pin dead Activities in RAM. Learn the LeakCanary patterns to trace the root cause and kill the leak.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
     <item>
       <title><![CDATA[Zero-Copy Buffer Sharing: Bridging NDK C++ Audio & KMP CoreAudio via C-Interop]]></title>
       <link>https://govindtank.is-a.dev/blog/zero-copy-buffer-sharing-bridging-ndk-c-audio-kmp-coreaudio-via-c-interop</link>
