@@ -1542,6 +1542,25 @@
         ],
         "url": "https://govindtank.github.io/blog/why-android-coroutine-scopes-leak-memory-and-the-leakcanary-patterns-to-stop-it"
       }
+    },
+    "custom-agsl-shaders-material-3-expressive-crafting-120-fps-fluid-micro-interactions-on-android-16": {
+      "title": "Custom AGSL Shaders & Material 3 Expressive: Crafting 120 FPS Fluid Micro-Interactions on Android 16",
+      "date": "October 21, 2026",
+      "tag": "Modern Android",
+      "wordCount": 1204,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 120 FPS Fluid Motion with Custom AGSL Shaders",
+        "description": "Build mesh and spring-ripple effects with custom AGSL shaders, keeping distortion GPU-bound and micro-interactions fluid at 120 FPS.",
+        "tags": [
+          "#AndroidDev",
+          "#Android16",
+          "#Kotlin",
+          "#JetpackCompose",
+          "#Material3"
+        ],
+        "url": "https://govindtank.github.io/blog/custom-agsl-shaders-material-3-expressive-crafting-120-fps-fluid-micro-interactions-on-android-16"
+      }
     }
   },
   "images": {

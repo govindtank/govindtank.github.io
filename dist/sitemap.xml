@@ -9,6 +9,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.is-a.dev/blog/custom-agsl-shaders-material-3-expressive-crafting-120-fps-fluid-micro-interactions-on-android-16</loc>
+    <lastmod>2026-10-20T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.is-a.dev/blog/why-android-coroutine-scopes-leak-memory-and-the-leakcanary-patterns-to-stop-it</loc>
     <lastmod>2026-10-18T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
