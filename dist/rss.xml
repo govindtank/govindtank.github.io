@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2026 05:56:56 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 02:33:51 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[High-Throughput Zero-Copy Audio/Video Processing on Android: NDK MediaCodec to Vulkan Pipelines]]></title>
+      <link>https://govindtank.is-a.dev/blog/high-throughput-zero-copy-audiovideo-processing-on-android-ndk-mediacodec-to-vulkan-pipelines</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/high-throughput-zero-copy-audiovideo-processing-on-android-ndk-mediacodec-to-vulkan-pipelines</guid>
+      <pubDate>Wed, 21 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Java heap copies kill 4K throughput. Pass AHardwareBuffer directly from NDK MediaCodec to Vulkan compute shaders for zero-copy 60fps frame mutation.
+]]></description>
+      <category>Modern Android</category>
+    </item>
     <item>
       <title><![CDATA[Custom AGSL Shaders & Material 3 Expressive: Crafting 120 FPS Fluid Micro-Interactions on Android 16]]></title>
       <link>https://govindtank.is-a.dev/blog/custom-agsl-shaders-material-3-expressive-crafting-120-fps-fluid-micro-interactions-on-android-16</link>

@@ -1561,6 +1561,25 @@
         ],
         "url": "https://govindtank.github.io/blog/custom-agsl-shaders-material-3-expressive-crafting-120-fps-fluid-micro-interactions-on-android-16"
       }
+    },
+    "high-throughput-zero-copy-audiovideo-processing-on-android-ndk-mediacodec-to-vulkan-pipelines": {
+      "title": "High-Throughput Zero-Copy Audio/Video Processing on Android: NDK MediaCodec to Vulkan Pipelines",
+      "date": "October 22, 2026",
+      "tag": "Modern Android",
+      "wordCount": 1030,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Zero-Copy 4K 60fps on Android: NDK to Vulkan",
+        "description": "Java heap copies kill your frame rate. Pipe AHardwareBuffer straight from NDK MediaCodec to Vulkan compute for true zero-copy 4K at 60fps.",
+        "tags": [
+          "#AndroidDev",
+          "#Vulkan",
+          "#NDK",
+          "#Cpp",
+          "#Performance"
+        ],
+        "url": "https://govindtank.github.io/blog/high-throughput-zero-copy-audiovideo-processing-on-android-ndk-mediacodec-to-vulkan-pipelines"
+      }
     }
   },
   "images": {
