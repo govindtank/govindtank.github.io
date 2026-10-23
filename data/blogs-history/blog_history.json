@@ -1580,6 +1580,25 @@
         ],
         "url": "https://govindtank.github.io/blog/high-throughput-zero-copy-audiovideo-processing-on-android-ndk-mediacodec-to-vulkan-pipelines"
       }
+    },
+    "why-your-flutter-329-app-still-janks-profiling-impeller-vulkan-pipelines-gpu-renderpass-leaks": {
+      "title": "Why Your Flutter 3.29 App Still Janks: Profiling Impeller Vulkan Pipelines & GPU RenderPass Leaks",
+      "date": "October 23, 2026",
+      "tag": "Flutter",
+      "wordCount": 1075,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Stop Blaming Dart: Fix Impeller Vulkan Leaks",
+        "description": "Your Dart code is fine. Impeller is leaking Vulkan RenderPasses and thrashing the GPU. Here's how to profile the stalls and lock p99 under 4ms.",
+        "tags": [
+          "#Flutter",
+          "#Vulkan",
+          "#MobileDev",
+          "#Performance",
+          "#Graphics"
+        ],
+        "url": "https://govindtank.github.io/blog/why-your-flutter-329-app-still-janks-profiling-impeller-vulkan-pipelines-gpu-renderpass-leaks"
+      }
     }
   },
   "images": {

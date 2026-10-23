@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Oct 2026 02:33:51 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 02:37:25 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Why Your Flutter 3.29 App Still Janks: Profiling Impeller Vulkan Pipelines & GPU RenderPass Leaks]]></title>
+      <link>https://govindtank.is-a.dev/blog/why-your-flutter-329-app-still-janks-profiling-impeller-vulkan-pipelines-gpu-renderpass-leaks</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/why-your-flutter-329-app-still-janks-profiling-impeller-vulkan-pipelines-gpu-renderpass-leaks</guid>
+      <pubDate>Thu, 22 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Flutter 3.29 jank isn't your Dart code—it's Impeller leaking Vulkan RenderPasses. Profile the stalls, kill the GPU thrash, and lock p99 frame times below 4ms.
+]]></description>
+      <category>Flutter</category>
+    </item>
     <item>
       <title><![CDATA[High-Throughput Zero-Copy Audio/Video Processing on Android: NDK MediaCodec to Vulkan Pipelines]]></title>
       <link>https://govindtank.is-a.dev/blog/high-throughput-zero-copy-audiovideo-processing-on-android-ndk-mediacodec-to-vulkan-pipelines</link>
