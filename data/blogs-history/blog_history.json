@@ -1599,6 +1599,25 @@
         ],
         "url": "https://govindtank.github.io/blog/why-your-flutter-329-app-still-janks-profiling-impeller-vulkan-pipelines-gpu-renderpass-leaks"
       }
+    },
+    "kotlin-coroutines-flow-collection-operators-best-practices-and-performance": {
+      "title": "Kotlin Coroutines Flow Collection Operators: Best Practices and Performance",
+      "date": "October 25, 2026",
+      "tag": "Mobile-Development",
+      "wordCount": 1040,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Stop Dropping Frames with Kotlin Flow",
+        "description": "Your Flow operators are leaking memory and dropping frames. Use collectLatest, flatMapLatest, and buffers to keep UI observation fast and leak-free.",
+        "tags": [
+          "#AndroidDev",
+          "#Kotlin",
+          "#Coroutines",
+          "#MobileDev",
+          "#CleanCode"
+        ],
+        "url": "https://govindtank.github.io/blog/kotlin-coroutines-flow-collection-operators-best-practices-and-performance"
+      }
     }
   },
   "images": {
