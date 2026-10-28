@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Oct 2026 02:50:34 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 10:54:27 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[How We Ran 3B SLMs on Android: llama.cpp NDK, GGUF Q4_K_M & Thermal Throttling]]></title>
+      <link>https://govindtank.is-a.dev/blog/how-we-ran-3b-slms-on-android-llamacpp-ndk-gguf-q4km-thermal-throttling</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/how-we-ran-3b-slms-on-android-llamacpp-ndk-gguf-q4km-thermal-throttling</guid>
+      <pubDate>Tue, 27 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Stop cooking mid-tier Snapdragons. Here’s how we tuned thread affinity, mmap, and Q4_K_M in llama.cpp to run 3B SLMs locally without thermal throttling.
+]]></description>
+      <category>Mobile-AI</category>
+    </item>
     <item>
       <title><![CDATA[Kotlin Coroutines Flow Collection Operators: Best Practices and Performance]]></title>
       <link>https://govindtank.is-a.dev/blog/kotlin-coroutines-flow-collection-operators-best-practices-and-performance</link>

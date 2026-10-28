@@ -1618,6 +1618,25 @@
         ],
         "url": "https://govindtank.github.io/blog/kotlin-coroutines-flow-collection-operators-best-practices-and-performance"
       }
+    },
+    "how-we-ran-3b-slms-on-android-llamacpp-ndk-gguf-q4km-thermal-throttling": {
+      "title": "How We Ran 3B SLMs on Android: llama.cpp NDK, GGUF Q4_K_M & Thermal Throttling",
+      "date": "October 28, 2026",
+      "tag": "Mobile-AI",
+      "wordCount": 1955,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Stop Cooking Phones: Run 3B SLMs on Android",
+        "description": "Tuned thread affinity, mmap, and Q4_K_M in llama.cpp to run 3B models on-device without thermal throttling melting mid-tier chips.",
+        "tags": [
+          "#AndroidDev",
+          "#OnDeviceAI",
+          "#LlamaCpp",
+          "#MachineLearning",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/how-we-ran-3b-slms-on-android-llamacpp-ndk-gguf-q4km-thermal-throttling"
+      }
     }
   },
   "images": {

@@ -30,21 +30,45 @@ POOL_FILE = f"{PROJECT_ROOT}/scripts/blog-automation/verified_images.json"
 STATE_FILE = f"{PROJECT_ROOT}/scripts/blog-automation/.rewrite_state.json"
 TOPICS_JSON_PATH = os.path.expanduser("~/.hermes/cron/topics.json")
 
+# Auto-load ~/.hermes/.env if present
+def _load_hermes_env():
+    env_path = os.path.expanduser("~/.hermes/.env")
+    if os.path.exists(env_path):
+        try:
+            with open(env_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        k, v = line.split("=", 1)
+                        k = k.strip()
+                        v = v.strip().strip("'\"")
+                        if k and k not in os.environ:
+                            os.environ[k] = v
+        except Exception:
+            pass
+
+_load_hermes_env()
+
 # ======= LLM PROVIDERS CONFIGURATION (Local-first with degraded cloud fallback) =======
 
-# LOCAL MODEL (PRIMARY) — LM Studio/Qwen3.5-9b on port 64109
-# Read from .env or use default
-LOCAL_LLM_URL = os.environ.get("HERMES_LOCAL_MODEL_URL", "http://127.0.0.1:64109/v1/chat/completions")
+# LOCAL MODEL (PRIMARY) — LM Studio/Qwen3.5-9b on port 1234 / 64109
+LOCAL_LLM_URL = os.environ.get("HERMES_LOCAL_MODEL_URL", "http://127.0.0.1:1234/v1/chat/completions")
 LOCAL_API_KEY = os.environ.get("HERMES_LM_STUDIO_API_KEY", "")
-LOCAL_MODELS = ["qwen3.5-9b", "llava_qwen3.5-9b"]
+LOCAL_MODELS = ["qwen/qwen3.5-9b", "qwen3.8-27b", "google/gemma-4-12b"]
 
 # LOCAL LM STUDIO ENDPOINT (backup local)
 LM_STUDIO_URL = os.environ.get("HERMES_LM_STUDIO_URL", "http://localhost:1234/v1/chat/completions")
-LM_STUDIO_MODELS = ["qwen/qwen3.5-9b"]
+LM_STUDIO_MODELS = ["qwen/qwen3.5-9b", "qwen3.8-27b"]
 
-# CLOUD API FALLBACKS (exhausted, only when local fails)
+# GATEWAY / CLOUD FALLBACKS
 GEMINI_LLM_URL = os.environ.get("HERMES_GEMINI_URL", "http://localhost:20128/v1/chat/completions")
-GEMINI_MODELS = ["antigravity/gemini-3.7-flash-low", "auto/gemini"]
+GEMINI_API_KEY = os.environ.get("HERMES_CUSTOM_LOCALHOST_20128_API_KEY", "")
+GEMINI_MODELS = [
+    "antigravity/gemini-3.8-flash-low",
+    "antigravity/gemini-3.8-flash-medium",
+    "antigravity/gemini-3-flash",
+    "auto/gemini",
+]
 
 KILO_LLM_URL = os.environ.get("HERMES_KILO_URL", "https://api.kilo.ai/api/gateway/v1/chat/completions")
 KILO_MODELS = ["stepfun/step-3.7-flash:free", "kilo-auto/free"]
@@ -397,15 +421,48 @@ BANNED_PHRASES = [
 # ======= LLM CALLER =======
 def call_llm(messages, temperature=0.75, max_tokens=6000, timeout=45):
     """
-    Tiered LLM caller with LOCAL-FIRST strategy (local OlliteRT/Gemma-4-E2B-it prioritized):
-    1. Local model (OlliteRT/Gemma-4-E2B-it on port 1234) — PRIMARY, fast, no cost
-    2. LM Studio endpoint (backup local if available)
-    3. Gemini 3.7 Low (Local Gateway at localhost:20128) — only when local fails
-    4. Kilo Gateway (Fast fallback with stepfun/step-3.7-flash, kilo-auto) — last resort
-    
-    Cloud APIs are degraded fallbacks and should not be relied upon for production use.
+    Tiered LLM caller with local gateway prioritized for reliability and speed:
+    1. Gemini via Local Gateway (localhost:20128) — PRIMARY, instant, high throughput
+    2. LM Studio Qwen3.5-9b (port 1234) — Local offline fallback
+    3. Kilo Gateway — Cloud fallback
     """
-    # ===== LOCAL FIRST: LM Studio Qwen3.5-9b on port 64109 =====
+    # ===== PRIMARY: Gemini via Local Gateway (localhost:20128) =====
+    for model in GEMINI_MODELS:
+        payload = {
+            "model": model,
+            "messages": messages,
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+            "top_p": 0.9
+        }
+        headers = {"Content-Type": "application/json"}
+        if GEMINI_API_KEY:
+            headers["Authorization"] = f"Bearer {GEMINI_API_KEY}"
+        req = urllib.request.Request(
+            GEMINI_LLM_URL,
+            data=json.dumps(payload).encode(),
+            headers=headers,
+            method="POST"
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                resp_data = json.loads(resp.read().decode())
+                if "choices" in resp_data and resp_data["choices"]:
+                    msg = resp_data["choices"][0]["message"]
+                    content = msg.get("content", "")
+                    if (not content or not content.strip()) and msg.get("reasoning"):
+                        reasoning = msg.get("reasoning", "")
+                        m_draft = re.search(r'(?:Let\'s draft|Draft|Here is the|#\s+)([\s\S]+)', reasoning, re.I)
+                        if m_draft:
+                            content = m_draft.group(1).strip()
+                    if content and len(content.strip()) > 50:
+                        log(f"  Gateway LLM succeeded with {model}")
+                        return content
+        except Exception as e:
+            log(f"  Gateway LLM failed with {model}: {str(e)[:80]}")
+            continue
+
+    # ===== SECONDARY: Local LM Studio (Qwen/Gemma) =====
     for local_model in LOCAL_MODELS:
         payload = {
             "model": local_model,
@@ -413,7 +470,6 @@ def call_llm(messages, temperature=0.75, max_tokens=6000, timeout=45):
             "temperature": temperature,
             "max_tokens": max_tokens,
         }
-        # Include API key if available
         headers = {"Content-Type": "application/json"}
         if LOCAL_API_KEY:
             headers["Authorization"] = f"Bearer {LOCAL_API_KEY}"
@@ -431,8 +487,15 @@ def call_llm(messages, temperature=0.75, max_tokens=6000, timeout=45):
                     if "choices" in resp_data and resp_data["choices"]:
                         msg = resp_data["choices"][0]["message"]
                         content = msg.get("content", "")
+                        if (not content or not content.strip()) and msg.get("reasoning_content"):
+                            rc = msg.get("reasoning_content", "")
+                            m_draft = re.search(r'(?:Let\'s draft|Draft|Here is the|#\s+)([\s\S]+)', rc, re.I)
+                            if m_draft:
+                                content = m_draft.group(1).strip()
+                            else:
+                                content = rc.strip()
                         if content and len(content.strip()) > 50:
-                            log(f"  Local LLM (Qwen3.5-9b) succeeded with {local_model}")
+                            log(f"  Local LLM succeeded with {local_model}")
                             return content
                 else:
                     log(f"  Local model returned status {resp.status}")
@@ -451,49 +514,6 @@ def call_llm(messages, temperature=0.75, max_tokens=6000, timeout=45):
             else:
                 log(f"  Local LLM failed: {str(e)[:80]}")
         continue
-
-    # ===== LOCAL BACKUP: LM Studio endpoint =====
-    for local_model in LM_STUDIO_MODELS:
-        payload = {
-            "model": local_model,
-            "messages": messages,
-            "temperature": temperature,
-            "max_tokens": max_tokens,
-        }
-        req = urllib.request.Request(
-            LM_STUDIO_URL,
-            data=json.dumps(payload).encode(),
-            headers={"Content-Type": "application/json"},
-            method="POST"
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=30) as resp:
-                if resp.status == 200:
-                    resp_data = json.loads(resp.read().decode())
-                    if "choices" in resp_data and resp_data["choices"]:
-                        msg = resp_data["choices"][0]["message"]
-                        content = msg.get("content", "")
-                        if content and len(content.strip()) > 50:
-                            log(f"  LM Studio LLM succeeded with {local_model}")
-                            return content
-        except Exception as e:
-            log(f"  LM Studio failed: {str(e)[:60]}")
-
-    # ===== DEGRADED FALLBACK: Gemini via Local Gateway =====
-    for model in GEMINI_MODELS:
-        payload = {
-            "model": model,
-            "messages": messages,
-            "temperature": temperature,
-            "max_tokens": max_tokens,
-            "top_p": 0.9
-        }
-        req = urllib.request.Request(
-            GEMINI_LLM_URL,
-            data=json.dumps(payload).encode(),
-            headers={"Content-Type": "application/json"},
-            method="POST"
-        )
         try:
             with urllib.request.urlopen(req, timeout=timeout) as resp:
                 resp_data = json.loads(resp.read().decode())
