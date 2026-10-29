@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Oct 2026 10:54:27 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 02:31:54 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Hunting Dart Heap Bloat: How We Tracked Down 3 Silent Memory Leaks in Prod]]></title>
+      <link>https://govindtank.is-a.dev/blog/hunting-dart-heap-bloat-how-we-tracked-down-3-silent-memory-leaks-in-prod</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/hunting-dart-heap-bloat-how-we-tracked-down-3-silent-memory-leaks-in-prod</guid>
+      <pubDate>Wed, 28 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Image caches, stale routes, and zombie channel listeners silently bloat Dart heaps. Trace retention paths in DevTools to kill the root leaks.
+]]></description>
+      <category>Flutter</category>
+    </item>
     <item>
       <title><![CDATA[How We Ran 3B SLMs on Android: llama.cpp NDK, GGUF Q4_K_M & Thermal Throttling]]></title>
       <link>https://govindtank.is-a.dev/blog/how-we-ran-3b-slms-on-android-llamacpp-ndk-gguf-q4km-thermal-throttling</link>

@@ -64,8 +64,8 @@ LM_STUDIO_MODELS = ["qwen/qwen3.5-9b", "qwen3.8-27b"]
 GEMINI_LLM_URL = os.environ.get("HERMES_GEMINI_URL", "http://localhost:20128/v1/chat/completions")
 GEMINI_API_KEY = os.environ.get("HERMES_CUSTOM_LOCALHOST_20128_API_KEY", "")
 GEMINI_MODELS = [
-    "antigravity/gemini-3.8-flash-low",
     "antigravity/gemini-3.8-flash-medium",
+    "antigravity/gemini-3.8-flash-low",
     "antigravity/gemini-3-flash",
     "auto/gemini",
 ]

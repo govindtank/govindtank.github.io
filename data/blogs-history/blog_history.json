@@ -1637,6 +1637,25 @@
         ],
         "url": "https://govindtank.github.io/blog/how-we-ran-3b-slms-on-android-llamacpp-ndk-gguf-q4km-thermal-throttling"
       }
+    },
+    "hunting-dart-heap-bloat-how-we-tracked-down-3-silent-memory-leaks-in-prod": {
+      "title": "Hunting Dart Heap Bloat: How We Tracked Down 3 Silent Memory Leaks in Prod",
+      "date": "October 29, 2026",
+      "tag": "Flutter",
+      "wordCount": 1649,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udc80 3 Silent Dart Leaks Eating Your RAM",
+        "description": "Image caches, zombie listeners, and dead routes bloat your heap. Fix the retained root, not the symptom.",
+        "tags": [
+          "#FlutterDev",
+          "#DartLang",
+          "#MobileDev",
+          "#Performance",
+          "#SoftwareEngineering"
+        ],
+        "url": "https://govindtank.github.io/blog/hunting-dart-heap-bloat-how-we-tracked-down-3-silent-memory-leaks-in-prod"
+      }
     }
   },
   "images": {

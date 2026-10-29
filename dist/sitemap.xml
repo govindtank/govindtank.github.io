@@ -9,6 +9,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.is-a.dev/blog/hunting-dart-heap-bloat-how-we-tracked-down-3-silent-memory-leaks-in-prod</loc>
+    <lastmod>2026-10-28T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.is-a.dev/blog/how-we-ran-3b-slms-on-android-llamacpp-ndk-gguf-q4km-thermal-throttling</loc>
     <lastmod>2026-10-27T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
