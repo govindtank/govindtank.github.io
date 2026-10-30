@@ -1656,6 +1656,25 @@
         ],
         "url": "https://govindtank.github.io/blog/hunting-dart-heap-bloat-how-we-tracked-down-3-silent-memory-leaks-in-prod"
       }
+    },
+    "signals-vs-riverpod-in-2026-benchmark-numbers-from-a-real-prod-migration": {
+      "title": "Signals vs Riverpod in 2026: Benchmark Numbers From a Real Prod Migration",
+      "date": "October 30, 2026",
+      "tag": "Flutter",
+      "wordCount": 1619,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Signals vs Riverpod: Prod Benchmark",
+        "description": "We swapped Riverpod for Dart Signals in prod. Here are the rebuild metrics, heap churn drops, and the gotchas nobody warns you about.",
+        "tags": [
+          "#Flutter",
+          "#Dart",
+          "#FlutterDev",
+          "#StateManagement",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/signals-vs-riverpod-in-2026-benchmark-numbers-from-a-real-prod-migration"
+      }
     }
   },
   "images": {

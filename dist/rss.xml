@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Oct 2026 02:31:54 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 02:53:15 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Signals vs Riverpod in 2026: Benchmark Numbers From a Real Prod Migration]]></title>
+      <link>https://govindtank.is-a.dev/blog/signals-vs-riverpod-in-2026-benchmark-numbers-from-a-real-prod-migration</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/signals-vs-riverpod-in-2026-benchmark-numbers-from-a-real-prod-migration</guid>
+      <pubDate>Thu, 29 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[We migrated production Riverpod to Dart Signals. Here are hard metrics on rebuild counts, frame times, and heap churn—plus where Signals fail.
+]]></description>
+      <category>Flutter</category>
+    </item>
     <item>
       <title><![CDATA[Hunting Dart Heap Bloat: How We Tracked Down 3 Silent Memory Leaks in Prod]]></title>
       <link>https://govindtank.is-a.dev/blog/hunting-dart-heap-bloat-how-we-tracked-down-3-silent-memory-leaks-in-prod</link>

@@ -9,6 +9,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.is-a.dev/blog/signals-vs-riverpod-in-2026-benchmark-numbers-from-a-real-prod-migration</loc>
+    <lastmod>2026-10-29T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.is-a.dev/blog/hunting-dart-heap-bloat-how-we-tracked-down-3-silent-memory-leaks-in-prod</loc>
     <lastmod>2026-10-28T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
