@@ -1675,6 +1675,25 @@
         ],
         "url": "https://govindtank.github.io/blog/signals-vs-riverpod-in-2026-benchmark-numbers-from-a-real-prod-migration"
       }
+    },
+    "qualcomm-qnn-vs-cpu-inference-on-android-brutally-honest-npu-benchmarks": {
+      "title": "Qualcomm QNN vs CPU Inference on Android: Brutally Honest NPU Benchmarks",
+      "date": "October 31, 2026",
+      "tag": "Mobile-AI",
+      "wordCount": 1678,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udc80 Is Qualcomm QNN Worth the NPU Tax?",
+        "description": "Silent CPU fallbacks quietly kill your NPU speedups. Benchmark prefill vs. decode overhead before paying the integration cost.",
+        "tags": [
+          "#AndroidDev",
+          "#MobileAI",
+          "#MachineLearning",
+          "#DeepLearning",
+          "#Qualcomm"
+        ],
+        "url": "https://govindtank.github.io/blog/qualcomm-qnn-vs-cpu-inference-on-android-brutally-honest-npu-benchmarks"
+      }
     }
   },
   "images": {
