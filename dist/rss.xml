@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Oct 2026 02:32:10 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 02:32:28 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Building an MCP Host on Android: Tool-Calling Loops Without Freezing the UI]]></title>
+      <link>https://govindtank.is-a.dev/blog/building-an-mcp-host-on-android-tool-calling-loops-without-freezing-the-ui</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/building-an-mcp-host-on-android-tool-calling-loops-without-freezing-the-ui</guid>
+      <pubDate>Sat, 31 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Running an MCP host locally tanks Android UI frames. Offload JSON-RPC tool loops with structured coroutines and scoped permissions to prevent ANRs.
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
     <item>
       <title><![CDATA[Qualcomm QNN vs CPU Inference on Android: Brutally Honest NPU Benchmarks]]></title>
       <link>https://govindtank.is-a.dev/blog/qualcomm-qnn-vs-cpu-inference-on-android-brutally-honest-npu-benchmarks</link>

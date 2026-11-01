@@ -1694,6 +1694,25 @@
         ],
         "url": "https://govindtank.github.io/blog/qualcomm-qnn-vs-cpu-inference-on-android-brutally-honest-npu-benchmarks"
       }
+    },
+    "building-an-mcp-host-on-android-tool-calling-loops-without-freezing-the-ui": {
+      "title": "Building an MCP Host on Android: Tool-Calling Loops Without Freezing the UI",
+      "date": "November 01, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 1824,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Stop MCP Loops Freezing Your Android UI",
+        "description": "Running local MCP tool calls kills your main thread. Fix ANRs with structured coroutines and scoped IPC permissions.",
+        "tags": [
+          "#AndroidDev",
+          "#Kotlin",
+          "#MobileAI",
+          "#MCP",
+          "#Coroutines"
+        ],
+        "url": "https://govindtank.github.io/blog/building-an-mcp-host-on-android-tool-calling-loops-without-freezing-the-ui"
+      }
     }
   },
   "images": {
