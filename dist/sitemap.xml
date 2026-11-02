@@ -9,6 +9,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.is-a.dev/blog/c-interop-in-kotlin-multiplatform-22-killing-cryptic-linker-errors-for-good</loc>
+    <lastmod>2026-11-01T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.is-a.dev/blog/building-an-mcp-host-on-android-tool-calling-loops-without-freezing-the-ui</loc>
     <lastmod>2026-10-31T18:30:00.000Z</lastmod>
     <priority>0.7</priority>

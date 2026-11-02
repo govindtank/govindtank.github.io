@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Nov 2026 02:32:28 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 02:33:14 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[C-Interop in Kotlin Multiplatform 2.2: Killing Cryptic Linker Errors For Good]]></title>
+      <link>https://govindtank.is-a.dev/blog/c-interop-in-kotlin-multiplatform-22-killing-cryptic-linker-errors-for-good</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/c-interop-in-kotlin-multiplatform-22-killing-cryptic-linker-errors-for-good</guid>
+      <pubDate>Sun, 01 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Fix cryptic duplicate symbol collisions in KMP 2.2. Tweak def files and module maps once to make your XCFramework cinterop builds reproducible.
+]]></description>
+      <category>Kotlin</category>
+    </item>
     <item>
       <title><![CDATA[Building an MCP Host on Android: Tool-Calling Loops Without Freezing the UI]]></title>
       <link>https://govindtank.is-a.dev/blog/building-an-mcp-host-on-android-tool-calling-loops-without-freezing-the-ui</link>

@@ -1713,6 +1713,25 @@
         ],
         "url": "https://govindtank.github.io/blog/building-an-mcp-host-on-android-tool-calling-loops-without-freezing-the-ui"
       }
+    },
+    "c-interop-in-kotlin-multiplatform-22-killing-cryptic-linker-errors-for-good": {
+      "title": "C-Interop in Kotlin Multiplatform 2.2: Killing Cryptic Linker Errors For Good",
+      "date": "November 02, 2026",
+      "tag": "Kotlin",
+      "wordCount": 1093,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udc80 Kill Cryptic KMP Linker Errors Once and for All",
+        "description": "Stop fighting duplicate symbol collisions in KMP 2.2. A quick def and module map tweak makes XCFramework builds finally behave.",
+        "tags": [
+          "#Kotlin",
+          "#KotlinMultiplatform",
+          "#KMP",
+          "#iOSDev",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/c-interop-in-kotlin-multiplatform-22-killing-cryptic-linker-errors-for-good"
+      }
     }
   },
   "images": {
