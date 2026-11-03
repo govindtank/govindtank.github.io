@@ -1732,6 +1732,25 @@
         ],
         "url": "https://govindtank.github.io/blog/c-interop-in-kotlin-multiplatform-22-killing-cryptic-linker-errors-for-good"
       }
+    },
+    "compose-multiplatform-ios-shrinking-your-ipa-without-butchering-your-ui": {
+      "title": "Compose Multiplatform iOS: Shrinking Your .IPA Without Butchering Your UI",
+      "date": "November 03, 2026",
+      "tag": "Kotlin",
+      "wordCount": 1672,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Slash Your Compose iOS IPA Size",
+        "description": "Stop shipping bloat to the App Store. Cut dead Compose code, prune expect/actual sprawl, and shed megabytes without touching UI.",
+        "tags": [
+          "#KotlinMultiplatform",
+          "#ComposeMultiplatform",
+          "#iOSDev",
+          "#MobileDev",
+          "#AppOptimization"
+        ],
+        "url": "https://govindtank.github.io/blog/compose-multiplatform-ios-shrinking-your-ipa-without-butchering-your-ui"
+      }
     }
   },
   "images": {
