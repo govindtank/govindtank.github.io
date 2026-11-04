@@ -1751,6 +1751,25 @@
         ],
         "url": "https://govindtank.github.io/blog/compose-multiplatform-ios-shrinking-your-ipa-without-butchering-your-ui"
       }
+    },
+    "ndk-zero-copy-audiovideo-cutting-latency-between-hal-mediacodec-kotlin": {
+      "title": "NDK Zero-Copy Audio/Video: Cutting Latency Between HAL, MediaCodec & Kotlin",
+      "date": "November 04, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1426,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Kill the JVM Copy Tax with NDK Zero-Copy",
+        "description": "Stop copying buffers between HAL, MediaCodec, and Kotlin. Use AHardwareBuffer and Oboe to drop sub-10ms pipeline latency.",
+        "tags": [
+          "#AndroidDev",
+          "#NDK",
+          "#Kotlin",
+          "#Performance",
+          "#AudioVideo"
+        ],
+        "url": "https://govindtank.github.io/blog/ndk-zero-copy-audiovideo-cutting-latency-between-hal-mediacodec-kotlin"
+      }
     }
   },
   "images": {
