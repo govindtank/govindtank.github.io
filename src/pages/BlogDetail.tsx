@@ -380,12 +380,18 @@ export default function BlogDetailPage() {
 
             {/* Cover image */}
             {post.coverImage && (
-              <div className="mt-8 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+              <div className="mt-8 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-slate-900/60">
                 <img
                   src={post.coverImage}
                   alt={post.title}
                   loading="lazy"
                   className="w-full h-56 sm:h-80 lg:h-96 object-cover"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (target.src !== 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200') {
+                      target.src = 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200';
+                    }
+                  }}
                 />
               </div>
             )}

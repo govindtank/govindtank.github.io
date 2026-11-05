@@ -151,6 +151,12 @@ export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonial
                           alt={post.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           loading="lazy"
+                          onError={(e) => {
+                            const target = e.currentTarget;
+                            if (target.src !== 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200') {
+                              target.src = 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200';
+                            }
+                          }}
                         />
                       ) : (
                         <div className={`w-full h-full bg-gradient-to-br ${GRADIENTS[i]} flex items-center justify-center`}>

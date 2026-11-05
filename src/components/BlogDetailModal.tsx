@@ -205,7 +205,18 @@ export default function BlogDetailModal({ selectedPost, onClose }: BlogDetailMod
               {/* Cover image */}
               {selectedPost.coverImage && (
                 <div className="mb-8 rounded-2xl overflow-hidden border border-white/10">
-                  <img src={selectedPost.coverImage} alt={selectedPost.title} className="w-full h-48 sm:h-64 object-cover" loading="lazy" />
+                  <img
+                    src={selectedPost.coverImage}
+                    alt={selectedPost.title}
+                    className="w-full h-48 sm:h-64 object-cover"
+                    loading="lazy"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (target.src !== 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200') {
+                        target.src = 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200';
+                      }
+                    }}
+                  />
                 </div>
               )}
 

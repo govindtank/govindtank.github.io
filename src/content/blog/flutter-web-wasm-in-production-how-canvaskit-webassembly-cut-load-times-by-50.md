@@ -5,7 +5,7 @@ slug: "flutter-web-wasm-in-production-how-canvaskit-webassembly-cut-load-times-b
 date: "October 01, 2026"
 excerpt: >
   Migrating to Dart 3.7 WASM cut load times by 50%. Here is how we resolved CORS header blocks, font latency, and GC interop to take CanvasKit + WebAssembly to production.
-coverImage: "https://images.unsplash.com/photo-1487180149485-3e2f4e427d1a?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&q=80&w=1200"
 category: "Mobile-Architecture"
 readTime: 9
 tags:

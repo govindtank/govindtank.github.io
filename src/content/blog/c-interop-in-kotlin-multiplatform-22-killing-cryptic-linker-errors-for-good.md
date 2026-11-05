@@ -5,7 +5,7 @@ slug: "c-interop-in-kotlin-multiplatform-22-killing-cryptic-linker-errors-for-go
 date: "November 02, 2026"
 excerpt: >
   Fix cryptic duplicate symbol collisions in KMP 2.2. Tweak def files and module maps once to make your XCFramework cinterop builds reproducible.
-coverImage: "https://images.unsplash.com/photo-1541701494-cb58502866ab?auto=format&fit=crop&q=80&w=1200"
+coverImage: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&q=80&w=1200"
 category: "Kotlin"
 readTime: 5
 tags:
