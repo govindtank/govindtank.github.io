@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Nov 2026 02:31:57 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 03:14:36 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Multi-Agent State Machines on Mobile: Surviving Process Death For Local Agents]]></title>
+      <link>https://govindtank.is-a.dev/blog/multi-agent-state-machines-on-mobile-surviving-process-death-for-local-agents</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/multi-agent-state-machines-on-mobile-surviving-process-death-for-local-agents</guid>
+      <pubDate>Wed, 04 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Android kills long agent runs. Persist serializable FSM states to disk and resume via WorkManager so multi-agent loops survive process death without losing progress.
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
     <item>
       <title><![CDATA[NDK Zero-Copy Audio/Video: Cutting Latency Between HAL, MediaCodec & Kotlin]]></title>
       <link>https://govindtank.is-a.dev/blog/ndk-zero-copy-audiovideo-cutting-latency-between-hal-mediacodec-kotlin</link>

@@ -1770,6 +1770,25 @@
         ],
         "url": "https://govindtank.github.io/blog/ndk-zero-copy-audiovideo-cutting-latency-between-hal-mediacodec-kotlin"
       }
+    },
+    "multi-agent-state-machines-on-mobile-surviving-process-death-for-local-agents": {
+      "title": "Multi-Agent State Machines on Mobile: Surviving Process Death For Local Agents",
+      "date": "November 05, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 1486,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udc80 Surviving Android Process Death for Local Agents",
+        "description": "Android kills long local AI runs. Persist serializable FSM states to disk and resume via WorkManager\u2014no lost progress, zero boilerplate.",
+        "tags": [
+          "#AndroidDev",
+          "#Kotlin",
+          "#MobileAI",
+          "#Architecture",
+          "#StateMachines"
+        ],
+        "url": "https://govindtank.github.io/blog/multi-agent-state-machines-on-mobile-surviving-process-death-for-local-agents"
+      }
     }
   },
   "images": {
