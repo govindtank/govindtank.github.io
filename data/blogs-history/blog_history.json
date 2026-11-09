@@ -1789,6 +1789,25 @@
         ],
         "url": "https://govindtank.github.io/blog/multi-agent-state-machines-on-mobile-surviving-process-death-for-local-agents"
       }
+    },
+    "why-your-flutter-app-janks-on-mid-range-devices-with-impeller-vulkan": {
+      "title": "Why Your Flutter App Janks on Mid-Range Devices With Impeller Vulkan",
+      "date": "November 09, 2026",
+      "tag": "Flutter",
+      "wordCount": 1787,
+      "status": "published",
+      "social": {
+        "short_title": "Fix Flutter Impeller Jank on Adreno GPUs \u26a1",
+        "description": "Stop blaming user hardware. Find Vulkan pipeline stalls with Perfetto and DevTools, then fix the root cause without touching visual fidelity.",
+        "tags": [
+          "#FlutterDev",
+          "#MobileDev",
+          "#Vulkan",
+          "#Performance",
+          "#DartLang"
+        ],
+        "url": "https://govindtank.github.io/blog/why-your-flutter-app-janks-on-mid-range-devices-with-impeller-vulkan"
+      }
     }
   },
   "images": {
