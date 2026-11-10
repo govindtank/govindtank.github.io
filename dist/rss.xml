@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Nov 2026 06:03:51 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 02:31:56 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Android 16 Predictive Back + AGSL Shaders: Stop Breaking System Animations]]></title>
+      <link>https://govindtank.is-a.dev/blog/android-16-predictive-back-agsl-shaders-stop-breaking-system-animations</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/android-16-predictive-back-agsl-shaders-stop-breaking-system-animations</guid>
+      <pubDate>Mon, 09 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Custom AGSL shaders break Predictive Back with clipped transitions and GPU spikes. Hook BackEvent and apply safe fallbacks to keep 120 FPS intact.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
     <item>
       <title><![CDATA[Why Your Flutter App Janks on Mid-Range Devices With Impeller Vulkan]]></title>
       <link>https://govindtank.is-a.dev/blog/why-your-flutter-app-janks-on-mid-range-devices-with-impeller-vulkan</link>

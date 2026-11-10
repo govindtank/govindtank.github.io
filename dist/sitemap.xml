@@ -9,6 +9,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.is-a.dev/blog/android-16-predictive-back-agsl-shaders-stop-breaking-system-animations</loc>
+    <lastmod>2026-11-09T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.is-a.dev/blog/why-your-flutter-app-janks-on-mid-range-devices-with-impeller-vulkan</loc>
     <lastmod>2026-11-08T18:30:00.000Z</lastmod>
     <priority>0.7</priority>

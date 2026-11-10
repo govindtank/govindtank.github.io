@@ -1808,6 +1808,25 @@
         ],
         "url": "https://govindtank.github.io/blog/why-your-flutter-app-janks-on-mid-range-devices-with-impeller-vulkan"
       }
+    },
+    "android-16-predictive-back-agsl-shaders-stop-breaking-system-animations": {
+      "title": "Android 16 Predictive Back + AGSL Shaders: Stop Breaking System Animations",
+      "date": "November 10, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1872,
+      "status": "published",
+      "social": {
+        "short_title": "Fix Broken Predictive Back in Android 16",
+        "description": "Your AGSL shaders are killing Predictive Back. Hook BackEvent and use safe fallbacks to prevent clipped transitions and GPU drops.",
+        "tags": [
+          "#AndroidDev",
+          "#Android16",
+          "#AGSL",
+          "#JetpackCompose",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/android-16-predictive-back-agsl-shaders-stop-breaking-system-animations"
+      }
     }
   },
   "images": {
