@@ -1827,6 +1827,26 @@
         ],
         "url": "https://govindtank.github.io/blog/android-16-predictive-back-agsl-shaders-stop-breaking-system-animations"
       }
+    },
+    "flutter-wasm-is-crushing-ios-safari-how-to-fix-js-interop-gc-churn": {
+      "title": "Flutter WASM is Crushing iOS Safari: How to Fix JS Interop & GC Churn",
+      "date": "November 11, 2026",
+      "tag": "Flutter",
+      "wordCount": 1439,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\uded1 Stop Flutter WASM Choking Safari",
+        "description": "Your iOS users aren't lagging from rendering\u2014it's JS interop and GC churn. Cut the bridge bloat and get your 60fps back.",
+        "tags": [
+          "#Flutter",
+          "#WebAssembly",
+          "#MobileDev",
+          "#Performance",
+          "#iOSDev",
+          "#WebDev"
+        ],
+        "url": "https://govindtank.github.io/blog/flutter-wasm-is-crushing-ios-safari-how-to-fix-js-interop-gc-churn"
+      }
     }
   },
   "images": {
