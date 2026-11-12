@@ -1847,6 +1847,25 @@
         ],
         "url": "https://govindtank.github.io/blog/flutter-wasm-is-crushing-ios-safari-how-to-fix-js-interop-gc-churn"
       }
+    },
+    "local-rag-on-android-with-sqlite-vec-sub-second-vector-search-completely-offline": {
+      "title": "Local RAG on Android With sqlite-vec: Sub-Second Vector Search Completely Offline",
+      "date": "November 12, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 1831,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Offline RAG on Android with sqlite-vec",
+        "description": "Stop paying for cloud vector DBs. Query 100k+ embeddings in <1s locally on Android using sqlite-vec with zero network overhead.",
+        "tags": [
+          "#AndroidDev",
+          "#SQLite",
+          "#LocalAI",
+          "#VectorSearch",
+          "#Kotlin"
+        ],
+        "url": "https://govindtank.github.io/blog/local-rag-on-android-with-sqlite-vec-sub-second-vector-search-completely-offline"
+      }
     }
   },
   "images": {

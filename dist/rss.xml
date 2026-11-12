@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2026 02:31:49 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 02:31:59 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Local RAG on Android With sqlite-vec: Sub-Second Vector Search Completely Offline]]></title>
+      <link>https://govindtank.is-a.dev/blog/local-rag-on-android-with-sqlite-vec-sub-second-vector-search-completely-offline</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/local-rag-on-android-with-sqlite-vec-sub-second-vector-search-completely-offline</guid>
+      <pubDate>Wed, 11 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Ditch slow, leaky cloud vector DBs. Run local RAG on Android via sqlite-vec to search 100k+ chunks in under a second with zero network calls and minimal RAM.
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
     <item>
       <title><![CDATA[Flutter WASM is Crushing iOS Safari: How to Fix JS Interop & GC Churn]]></title>
       <link>https://govindtank.is-a.dev/blog/flutter-wasm-is-crushing-ios-safari-how-to-fix-js-interop-gc-churn</link>
