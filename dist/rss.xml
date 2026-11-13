@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Nov 2026 02:31:59 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 06:09:48 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Compose Multiplatform iOS Diet: Slashing 28MB of Kotlin/Native Binary Bloat]]></title>
+      <link>https://govindtank.is-a.dev/blog/compose-multiplatform-ios-diet-slashing-28mb-of-kotlinnative-binary-bloat</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/compose-multiplatform-ios-diet-slashing-28mb-of-kotlinnative-binary-bloat</guid>
+      <pubDate>Thu, 12 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Default KMP binaries bloat iOS releases with dead code and symbols. Strip metadata, tune SKIE, and configure ProGuard to cut 28MB off your app.
+]]></description>
+      <category>Kotlin</category>
+    </item>
     <item>
       <title><![CDATA[Local RAG on Android With sqlite-vec: Sub-Second Vector Search Completely Offline]]></title>
       <link>https://govindtank.is-a.dev/blog/local-rag-on-android-with-sqlite-vec-sub-second-vector-search-completely-offline</link>

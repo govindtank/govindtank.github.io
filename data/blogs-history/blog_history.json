@@ -1866,6 +1866,25 @@
         ],
         "url": "https://govindtank.github.io/blog/local-rag-on-android-with-sqlite-vec-sub-second-vector-search-completely-offline"
       }
+    },
+    "compose-multiplatform-ios-diet-slashing-28mb-of-kotlinnative-binary-bloat": {
+      "title": "Compose Multiplatform iOS Diet: Slashing 28MB of Kotlin/Native Binary Bloat",
+      "date": "November 13, 2026",
+      "tag": "Kotlin",
+      "wordCount": 1384,
+      "status": "published",
+      "social": {
+        "short_title": "\u2702\ufe0f Slashing 28MB from KMP iOS Binaries",
+        "description": "Stop shipping dead symbols. Tune SKIE, strip Kotlin/Native metadata, and let ProGuard do the heavy lifting for a leaner iOS binary.",
+        "tags": [
+          "#KotlinMultiplatform",
+          "#iOSDev",
+          "#ComposeMultiplatform",
+          "#Kotlin",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/compose-multiplatform-ios-diet-slashing-28mb-of-kotlinnative-binary-bloat"
+      }
     }
   },
   "images": {
