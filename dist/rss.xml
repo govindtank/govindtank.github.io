@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Nov 2026 06:09:48 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 02:31:43 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Predictive Back & Shared Element Transitions in Android 16: Refactoring Navigation Without Glitches]]></title>
+      <link>https://govindtank.is-a.dev/blog/predictive-back-shared-element-transitions-in-android-16-refactoring-navigation-without-glitches</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/predictive-back-shared-element-transitions-in-android-16-refactoring-navigation-without-glitches</guid>
+      <pubDate>Fri, 13 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Nested Fragment/Compose stacks break Predictive Back animations. Fix callback priority and stop surface clipping to ship glitch-free native transitions.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
     <item>
       <title><![CDATA[Compose Multiplatform iOS Diet: Slashing 28MB of Kotlin/Native Binary Bloat]]></title>
       <link>https://govindtank.is-a.dev/blog/compose-multiplatform-ios-diet-slashing-28mb-of-kotlinnative-binary-bloat</link>

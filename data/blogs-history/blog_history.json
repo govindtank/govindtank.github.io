@@ -1885,6 +1885,25 @@
         ],
         "url": "https://govindtank.github.io/blog/compose-multiplatform-ios-diet-slashing-28mb-of-kotlinnative-binary-bloat"
       }
+    },
+    "predictive-back-shared-element-transitions-in-android-16-refactoring-navigation-without-glitches": {
+      "title": "Predictive Back & Shared Element Transitions in Android 16: Refactoring Navigation Without Glitches",
+      "date": "November 14, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1666,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Fix Broken Predictive Back in Android 16",
+        "description": "Stop fighting glitchy transitions. Fix callback priority and surface clipping across Fragment and Compose stacks for good.",
+        "tags": [
+          "#AndroidDev",
+          "#JetpackCompose",
+          "#Android16",
+          "#Kotlin",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/predictive-back-shared-element-transitions-in-android-16-refactoring-navigation-without-glitches"
+      }
     }
   },
   "images": {
