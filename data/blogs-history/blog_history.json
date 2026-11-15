@@ -1904,6 +1904,25 @@
         ],
         "url": "https://govindtank.github.io/blog/predictive-back-shared-element-transitions-in-android-16-refactoring-navigation-without-glitches"
       }
+    },
+    "impeller-vulkan-under-the-hood-hunting-down-micro-stutters-in-flutter-329": {
+      "title": "Impeller Vulkan Under the Hood: Hunting Down Micro-Stutters in Flutter 3.29",
+      "date": "November 15, 2026",
+      "tag": "Flutter",
+      "wordCount": 2279,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Fix Flutter 3.29 Impeller Micro-Stutters",
+        "description": "Stop guessing frame drops. Profile Impeller Vulkan stalls with AGI and crush budget GPU stutters from 14% to <1%.",
+        "tags": [
+          "#FlutterDev",
+          "#Vulkan",
+          "#MobileDev",
+          "#AndroidDev",
+          "#Performance"
+        ],
+        "url": "https://govindtank.github.io/blog/impeller-vulkan-under-the-hood-hunting-down-micro-stutters-in-flutter-329"
+      }
     }
   },
   "images": {
