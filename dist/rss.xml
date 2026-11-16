@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Nov 2026 02:31:57 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 02:31:56 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Building an On-Device Model Context Protocol (MCP) Host in Android: Local Tools Without Cloud Leaks]]></title>
+      <link>https://govindtank.is-a.dev/blog/building-an-on-device-model-context-protocol-mcp-host-in-android-local-tools-without-cloud-leaks</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/building-an-on-device-model-context-protocol-mcp-host-in-android-local-tools-without-cloud-leaks</guid>
+      <pubDate>Sun, 15 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Expose SQLite, SMS, and HealthConnect to local SLMs via Unix domain sockets. Keep user data on-device and isolate sandboxes against prompt injections without cloud dependencies.
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
     <item>
       <title><![CDATA[Impeller Vulkan Under the Hood: Hunting Down Micro-Stutters in Flutter 3.29]]></title>
       <link>https://govindtank.is-a.dev/blog/impeller-vulkan-under-the-hood-hunting-down-micro-stutters-in-flutter-329</link>

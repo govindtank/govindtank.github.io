@@ -1923,6 +1923,25 @@
         ],
         "url": "https://govindtank.github.io/blog/impeller-vulkan-under-the-hood-hunting-down-micro-stutters-in-flutter-329"
       }
+    },
+    "building-an-on-device-model-context-protocol-mcp-host-in-android-local-tools-without-cloud-leaks": {
+      "title": "Building an On-Device Model Context Protocol (MCP) Host in Android: Local Tools Without Cloud Leaks",
+      "date": "November 16, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 2295,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Stop Leaking Mobile Data to Cloud LLMs",
+        "description": "Run an on-device MCP host via Unix domain sockets. Wire local SLMs directly to SQLite and HealthConnect with zero cloud hops.",
+        "tags": [
+          "#AndroidDev",
+          "#LocalAI",
+          "#MCP",
+          "#Kotlin",
+          "#MobileSecurity"
+        ],
+        "url": "https://govindtank.github.io/blog/building-an-on-device-model-context-protocol-mcp-host-in-android-local-tools-without-cloud-leaks"
+      }
     }
   },
   "images": {
