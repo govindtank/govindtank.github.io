@@ -1942,6 +1942,25 @@
         ],
         "url": "https://govindtank.github.io/blog/building-an-on-device-model-context-protocol-mcp-host-in-android-local-tools-without-cloud-leaks"
       }
+    },
+    "why-your-dart-background-isolates-leak-root-causing-memory-spikes-in-long-running-apps": {
+      "title": "Why Your Dart Background Isolates Leak: Root-Causing Memory Spikes in Long-Running Apps",
+      "date": "November 17, 2026",
+      "tag": "Flutter",
+      "wordCount": 1314,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udc80 Stop Dart Isolate Memory Bleed",
+        "description": "Port messages clone heap data by default, quietly killing your app with OOMs. Fix it with TransferableTypedData.",
+        "tags": [
+          "#FlutterDev",
+          "#DartLang",
+          "#MobileDev",
+          "#AppPerformance",
+          "#SoftwareEngineering"
+        ],
+        "url": "https://govindtank.github.io/blog/why-your-dart-background-isolates-leak-root-causing-memory-spikes-in-long-running-apps"
+      }
     }
   },
   "images": {

@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2026 02:31:56 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 02:44:09 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Why Your Dart Background Isolates Leak: Root-Causing Memory Spikes in Long-Running Apps]]></title>
+      <link>https://govindtank.is-a.dev/blog/why-your-dart-background-isolates-leak-root-causing-memory-spikes-in-long-running-apps</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/why-your-dart-background-isolates-leak-root-causing-memory-spikes-in-long-running-apps</guid>
+      <pubDate>Mon, 16 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Dart ports clone native heap data on transfer, silently bleeding RAM. Stop OOM crashes: use TransferableTypedData and DevTools heap snapshots to catch and kill leaks at the source.
+]]></description>
+      <category>Flutter</category>
+    </item>
     <item>
       <title><![CDATA[Building an On-Device Model Context Protocol (MCP) Host in Android: Local Tools Without Cloud Leaks]]></title>
       <link>https://govindtank.is-a.dev/blog/building-an-on-device-model-context-protocol-mcp-host-in-android-local-tools-without-cloud-leaks</link>
