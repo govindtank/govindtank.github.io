@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Nov 2026 02:44:09 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 02:32:01 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[We Ran DeepSeek-R1 Distill (1.5B & 7B) on Android via llama.cpp NDK: Benchmarks & Traps]]></title>
+      <link>https://govindtank.is-a.dev/blog/we-ran-deepseek-r1-distill-15b-7b-on-android-via-llamacpp-ndk-benchmarks-traps</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/we-ran-deepseek-r1-distill-15b-7b-on-android-via-llamacpp-ndk-benchmarks-traps</guid>
+      <pubDate>Tue, 17 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Hit 18 tok/sec on Android with llama.cpp by bypassing thermal downclocking via tuned NEON/OpenCL flags. Get the working NDK scripts and prompt-cache fix.
+]]></description>
+      <category>Mobile-AI</category>
+    </item>
     <item>
       <title><![CDATA[Why Your Dart Background Isolates Leak: Root-Causing Memory Spikes in Long-Running Apps]]></title>
       <link>https://govindtank.is-a.dev/blog/why-your-dart-background-isolates-leak-root-causing-memory-spikes-in-long-running-apps</link>

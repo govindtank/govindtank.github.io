@@ -1961,6 +1961,25 @@
         ],
         "url": "https://govindtank.github.io/blog/why-your-dart-background-isolates-leak-root-causing-memory-spikes-in-long-running-apps"
       }
+    },
+    "we-ran-deepseek-r1-distill-15b-7b-on-android-via-llamacpp-ndk-benchmarks-traps": {
+      "title": "We Ran DeepSeek-R1 Distill (1.5B & 7B) on Android via llama.cpp NDK: Benchmarks & Traps",
+      "date": "November 18, 2026",
+      "tag": "Mobile-AI",
+      "wordCount": 1892,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 18 tok/s DeepSeek-R1 on Android",
+        "description": "Stop thermal throttling. Hit 18 tok/s with DeepSeek-R1 via tuned NEON/OpenCL flags and NDK prompt-cache fixes on Android.",
+        "tags": [
+          "#AndroidDev",
+          "#MachineLearning",
+          "#LlamaCpp",
+          "#OnDeviceAI",
+          "#DeepSeek"
+        ],
+        "url": "https://govindtank.github.io/blog/we-ran-deepseek-r1-distill-15b-7b-on-android-via-llamacpp-ndk-benchmarks-traps"
+      }
     }
   },
   "images": {
