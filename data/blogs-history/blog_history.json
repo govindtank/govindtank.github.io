@@ -1980,6 +1980,25 @@
         ],
         "url": "https://govindtank.github.io/blog/we-ran-deepseek-r1-distill-15b-7b-on-android-via-llamacpp-ndk-benchmarks-traps"
       }
+    },
+    "qualcomm-qnn-vs-gguf-the-hard-truth-about-npu-acceleration-on-snapdragon-8-gen-34": {
+      "title": "Qualcomm QNN vs GGUF: The Hard Truth About NPU Acceleration on Snapdragon 8 Gen 3/4",
+      "date": "November 19, 2026",
+      "tag": "Mobile-AI",
+      "wordCount": 1682,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Qualcomm QNN vs GGUF: The Hard Truth",
+        "description": "Running Qwen 2.5 on Hexagon NPUs cuts battery drain by 3x, but breaks ops instantly. Here are the failing layers and exact fixes.",
+        "tags": [
+          "#MachineLearning",
+          "#EdgeAI",
+          "#AndroidDev",
+          "#Snapdragon",
+          "#LLM"
+        ],
+        "url": "https://govindtank.github.io/blog/qualcomm-qnn-vs-gguf-the-hard-truth-about-npu-acceleration-on-snapdragon-8-gen-34"
+      }
     }
   },
   "images": {

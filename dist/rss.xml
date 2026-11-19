@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Nov 2026 02:32:01 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 03:04:31 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Qualcomm QNN vs GGUF: The Hard Truth About NPU Acceleration on Snapdragon 8 Gen 3/4]]></title>
+      <link>https://govindtank.is-a.dev/blog/qualcomm-qnn-vs-gguf-the-hard-truth-about-npu-acceleration-on-snapdragon-8-gen-34</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/qualcomm-qnn-vs-gguf-the-hard-truth-about-npu-acceleration-on-snapdragon-8-gen-34</guid>
+      <pubDate>Wed, 18 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Quantizing Qwen 2.5 for Hexagon NPUs yields 3x battery savings, but hits broken ops fast. Here are the unsupported layers and the exact fixes to run it.
+]]></description>
+      <category>Mobile-AI</category>
+    </item>
     <item>
       <title><![CDATA[We Ran DeepSeek-R1 Distill (1.5B & 7B) on Android via llama.cpp NDK: Benchmarks & Traps]]></title>
       <link>https://govindtank.is-a.dev/blog/we-ran-deepseek-r1-distill-15b-7b-on-android-via-llamacpp-ndk-benchmarks-traps</link>
