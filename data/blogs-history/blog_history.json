@@ -1999,6 +1999,25 @@
         ],
         "url": "https://govindtank.github.io/blog/qualcomm-qnn-vs-gguf-the-hard-truth-about-npu-acceleration-on-snapdragon-8-gen-34"
       }
+    },
+    "predictable-agentic-state-machines-preventing-infinite-tool-calling-loops-on-edge-slms": {
+      "title": "Predictable Agentic State Machines: Preventing Infinite Tool-Calling Loops on Edge SLMs",
+      "date": "November 20, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 1802,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Stop Edge SLM Infinite Tool Loops",
+        "description": "Small 3B models love infinite loops. Replace vibes-based prompting with hard-bounded Kotlin state machines for deterministic edge execution.",
+        "tags": [
+          "#Kotlin",
+          "#AndroidDev",
+          "#LocalAI",
+          "#EdgeComputing",
+          "#AIEngineering"
+        ],
+        "url": "https://govindtank.github.io/blog/predictable-agentic-state-machines-preventing-infinite-tool-calling-loops-on-edge-slms"
+      }
     }
   },
   "images": {

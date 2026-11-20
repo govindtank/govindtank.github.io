@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Nov 2026 03:04:31 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 02:31:53 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Predictable Agentic State Machines: Preventing Infinite Tool-Calling Loops on Edge SLMs]]></title>
+      <link>https://govindtank.is-a.dev/blog/predictable-agentic-state-machines-preventing-infinite-tool-calling-loops-on-edge-slms</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/predictable-agentic-state-machines-preventing-infinite-tool-calling-loops-on-edge-slms</guid>
+      <pubDate>Thu, 19 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Small 3B models easily trap themselves in infinite tool-calling loops. Enforce hard-bounded Kotlin state machines to guarantee deterministic execution and zero runaway loops on the edge.
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
     <item>
       <title><![CDATA[Qualcomm QNN vs GGUF: The Hard Truth About NPU Acceleration on Snapdragon 8 Gen 3/4]]></title>
       <link>https://govindtank.is-a.dev/blog/qualcomm-qnn-vs-gguf-the-hard-truth-about-npu-acceleration-on-snapdragon-8-gen-34</link>
@@ -18,6 +27,15 @@
       <description><![CDATA[Quantizing Qwen 2.5 for Hexagon NPUs yields 3x battery savings, but hits broken ops fast. Here are the unsupported layers and the exact fixes to run it.
 ]]></description>
       <category>Mobile-AI</category>
+    </item>
+    <item>
+      <title><![CDATA[Breaking the Likelihood Trap: Stanford's Variance-Calibrated Modulation for LLM Decoding]]></title>
+      <link>https://govindtank.is-a.dev/blog/stanford-vcm-breaking-llm-likelihood-trap</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/stanford-vcm-breaking-llm-likelihood-trap</guid>
+      <pubDate>Wed, 18 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Why large reasoning models fall into repetitive loops and dull vocabularies in long conversations—and how Stanford's training-free VCM decoding reshapes logits using real-time variance.
+]]></description>
+      <category>AI</category>
     </item>
     <item>
       <title><![CDATA[We Ran DeepSeek-R1 Distill (1.5B & 7B) on Android via llama.cpp NDK: Benchmarks & Traps]]></title>
