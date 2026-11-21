@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Nov 2026 02:31:53 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 02:32:10 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Flutter Web WASM in Production: Shaving 4MB Off Asset Payloads and Fixing Fonts]]></title>
+      <link>https://govindtank.is-a.dev/blog/flutter-web-wasm-in-production-shaving-4mb-off-asset-payloads-and-fixing-fonts</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-web-wasm-in-production-shaving-4mb-off-asset-payloads-and-fixing-fonts</guid>
+      <pubDate>Fri, 20 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[WASM won't save an 8s load over 4G. Here's how stripping ICU bloat and deferring canvas setup cut 4MB and brought FCP under 1.2s.
+]]></description>
+      <category>Flutter</category>
+    </item>
     <item>
       <title><![CDATA[Predictable Agentic State Machines: Preventing Infinite Tool-Calling Loops on Edge SLMs]]></title>
       <link>https://govindtank.is-a.dev/blog/predictable-agentic-state-machines-preventing-infinite-tool-calling-loops-on-edge-slms</link>
@@ -18,6 +27,15 @@
       <description><![CDATA[Small 3B models easily trap themselves in infinite tool-calling loops. Enforce hard-bounded Kotlin state machines to guarantee deterministic execution and zero runaway loops on the edge.
 ]]></description>
       <category>AI-Engineering</category>
+    </item>
+    <item>
+      <title><![CDATA[Running DeepSeek-R1 Locally with Ollama: The Zero-Dollar Setup That Shamed OpenAI]]></title>
+      <link>https://govindtank.is-a.dev/blog/running-deepseek-r1-locally-ollama-zero-dollar-guide</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/running-deepseek-r1-locally-ollama-zero-dollar-guide</guid>
+      <pubDate>Thu, 19 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Why developers are canceling their $200/mo OpenAI subscriptions, how DeepSeek-R1 discovered reasoning without human supervision, and the complete 3-minute guide to running it offline on your laptop.
+]]></description>
+      <category>DeepSeek</category>
     </item>
     <item>
       <title><![CDATA[Qualcomm QNN vs GGUF: The Hard Truth About NPU Acceleration on Snapdragon 8 Gen 3/4]]></title>

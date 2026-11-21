@@ -9,7 +9,17 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://govindtank.is-a.dev/blog/flutter-web-wasm-in-production-shaving-4mb-off-asset-payloads-and-fixing-fonts</loc>
+    <lastmod>2026-11-20T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://govindtank.is-a.dev/blog/predictable-agentic-state-machines-preventing-infinite-tool-calling-loops-on-edge-slms</loc>
+    <lastmod>2026-11-19T18:30:00.000Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://govindtank.is-a.dev/blog/running-deepseek-r1-locally-ollama-zero-dollar-guide</loc>
     <lastmod>2026-11-19T18:30:00.000Z</lastmod>
     <priority>0.7</priority>
   </url>

@@ -2018,6 +2018,25 @@
         ],
         "url": "https://govindtank.github.io/blog/predictable-agentic-state-machines-preventing-infinite-tool-calling-loops-on-edge-slms"
       }
+    },
+    "flutter-web-wasm-in-production-shaving-4mb-off-asset-payloads-and-fixing-fonts": {
+      "title": "Flutter Web WASM in Production: Shaving 4MB Off Asset Payloads and Fixing Fonts",
+      "date": "November 21, 2026",
+      "tag": "Flutter",
+      "wordCount": 1260,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Flutter Web WASM: Cut 4MB Off Payloads",
+        "description": "WASM won't fix an 8s cold start. How stripping ICU data and deferring canvas setup dropped 4MB and got FCP under 1.2s.",
+        "tags": [
+          "#FlutterDev",
+          "#WebAssembly",
+          "#WebDev",
+          "#Performance",
+          "#Frontend"
+        ],
+        "url": "https://govindtank.github.io/blog/flutter-web-wasm-in-production-shaving-4mb-off-asset-payloads-and-fixing-fonts"
+      }
     }
   },
   "images": {

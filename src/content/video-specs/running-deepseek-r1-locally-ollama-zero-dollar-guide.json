@@ -1,0 +1,58 @@
+{
+  "slug": "running-deepseek-r1-locally-ollama-zero-dollar-guide",
+  "title": "Cancel Your $200/mo AI Bill: Running DeepSeek R1 Locally with Ollama",
+  "target_duration_seconds": 80,
+  "aspect_ratio": "9:16",
+  "resolution": {
+    "width": 1080,
+    "height": 1920
+  },
+  "audio_voice": "en-US-ChristopherNeural",
+  "rendered_video_path": "/Users/govind/workspace/deepseek-r1-explainer/renders/deepseek-r1-explainer_2026-11-20_13-05-34.mp4",
+  "scenes": [
+    {
+      "scene_id": "scene_1_hook",
+      "title": "The $200 Bill Cancelled",
+      "target_seconds": 13,
+      "headline": "Cancel Your $200/mo AI Bill",
+      "visual_directive": "OpenAI billing invoice card ($200.00/mo) stamped with giant glowing crimson 'CANCELLED' rubber stamp; glowing sub-pill 'Run 100% offline on your laptop for $0'",
+      "spoken_script": "OpenAI wants two hundred dollars a month for reasoning models. But what if you could run a frontier reasoning model on your laptop for zero dollars, completely offline, on airplane mode, right now?"
+    },
+    {
+      "scene_id": "scene_2_shift",
+      "title": "The DeepSeek R1 Shift",
+      "target_seconds": 15,
+      "headline": "How DeepSeek R1 Learned to Think",
+      "visual_directive": "Comparison between old human-labeled fine-tuning (red X) and DeepSeek R1 pure reinforcement learning self-exploration (cyan lightning)",
+      "spoken_script": "Enter DeepSeek R1. Unlike traditional models trained by human labelers, R1 trained itself through pure reinforcement learning. It discovered how to think, backtrack, and self-correct entirely on its own."
+    },
+    {
+      "scene_id": "scene_3_terminal",
+      "title": "The Terminal Think Block",
+      "target_seconds": 17,
+      "headline": "Inside the <think> Tag",
+      "visual_directive": "macOS dark terminal running 'ollama run deepseek-r1:8b'; animated <think> tag opening with live self-debating logic and verification checks",
+      "spoken_script": "Run 'ollama run deepseek-r1' in your terminal. Watch what happens: before answering, it opens a think block. It actively debates edge cases, catches its own logic traps, and rewrites its proof before giving you the final answer."
+    },
+    {
+      "scene_id": "scene_4_hardware",
+      "title": "Hardware Reality Check",
+      "target_seconds": 19,
+      "headline": "Which Model Fits Your Machine?",
+      "visual_directive": "3-tier hardware matrix: 1.5B (80 tok/s, any laptop), 8B (35 tok/s, sweet spot for devs), 70B (4 tok/s, Boeing 747 alert)",
+      "spoken_script": "Now for the reality check. The one-point-five billion model runs on a toaster at eighty tokens a second. The eight-billion model is the sweet spot for coding. But try running the full seventy-billion model on a base MacBook, and your laptop will sound like a Boeing 747."
+    },
+    {
+      "scene_id": "scene_5_outro",
+      "title": "Setup & Blog Outro",
+      "target_seconds": 16,
+      "headline": "Set It Up in 3 Minutes",
+      "visual_directive": "Quickstart curl command; IDE integration badges (VS Code, Cursor, Continue.dev); glowing CTA card to govindtank.is-a.dev/blog",
+      "spoken_script": "You can hook it into VS Code, Cursor, or your terminal in three minutes with zero API keys. I wrote the complete step-by-step setup guide and benchmarks on my blog at govindtank.is-a.dev. Go check it out."
+    }
+  ],
+  "social_copy": {
+    "twitter": "OpenAI wants $200/mo for o1-Pro. DeepSeek-R1 runs 100% free and offline on your laptop. Here's the 3-minute setup, hardware reality matrix, and how to plug it into VS Code: https://govindtank.is-a.dev/blog/running-deepseek-r1-locally-ollama-zero-dollar-guide",
+    "linkedin": "Why are engineering teams moving away from $200/month cloud reasoning subscriptions? DeepSeek-R1 proved that pure Reinforcement Learning can run locally without human babysitting..."
+  }
+}
