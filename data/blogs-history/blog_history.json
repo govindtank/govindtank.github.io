@@ -2037,6 +2037,25 @@
         ],
         "url": "https://govindtank.github.io/blog/flutter-web-wasm-in-production-shaving-4mb-off-asset-payloads-and-fixing-fonts"
       }
+    },
+    "signals-vs-riverpod-in-2026-benchmark-numbers-for-high-frequency-streaming": {
+      "title": "Signals vs Riverpod in 2026: Benchmark Numbers for High-Frequency Streaming",
+      "date": "November 22, 2026",
+      "tag": "Flutter",
+      "wordCount": 1625,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Signals vs Riverpod at 60Hz",
+        "description": "Stop subtree thrashing under high-frequency load. Hard profiler numbers on why fine-grained Signals win for streaming in Flutter.",
+        "tags": [
+          "#FlutterDev",
+          "#Flutter",
+          "#Dart",
+          "#MobileDev",
+          "#AppPerformance"
+        ],
+        "url": "https://govindtank.github.io/blog/signals-vs-riverpod-in-2026-benchmark-numbers-for-high-frequency-streaming"
+      }
     }
   },
   "images": {
