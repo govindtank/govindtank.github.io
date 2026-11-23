@@ -2056,6 +2056,25 @@
         ],
         "url": "https://govindtank.github.io/blog/signals-vs-riverpod-in-2026-benchmark-numbers-for-high-frequency-streaming"
       }
+    },
+    "agsl-runtime-shaders-on-android-16-building-60fps-dynamic-glass-without-gpu-throttles": {
+      "title": "AGSL Runtime Shaders on Android 16: Building 60fps Dynamic Glass Without GPU Throttles",
+      "date": "November 23, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1774,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 60fps Dynamic Glass on Android 16",
+        "description": "Stop GPU throttling on glass shaders. Profile fragment instructions and tile RenderNodes to hold sub-4ms frame times.",
+        "tags": [
+          "#AndroidDev",
+          "#AGSL",
+          "#JetpackCompose",
+          "#Android16",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/agsl-runtime-shaders-on-android-16-building-60fps-dynamic-glass-without-gpu-throttles"
+      }
     }
   },
   "images": {

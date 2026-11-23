@@ -8,8 +8,17 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Nov 2026 02:32:18 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 02:32:37 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[AGSL Runtime Shaders on Android 16: Building 60fps Dynamic Glass Without GPU Throttles]]></title>
+      <link>https://govindtank.is-a.dev/blog/agsl-runtime-shaders-on-android-16-building-60fps-dynamic-glass-without-gpu-throttles</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/agsl-runtime-shaders-on-android-16-building-60fps-dynamic-glass-without-gpu-throttles</guid>
+      <pubDate>Sun, 22 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Glass shaders look slick until Android throttles your frame rate. Profile fragment instructions and tile RenderNodes to stay under 4ms and lock in 60fps.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
     <item>
       <title><![CDATA[Signals vs Riverpod in 2026: Benchmark Numbers for High-Frequency Streaming]]></title>
       <link>https://govindtank.is-a.dev/blog/signals-vs-riverpod-in-2026-benchmark-numbers-for-high-frequency-streaming</link>
