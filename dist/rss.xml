@@ -8,8 +8,395 @@
     <link>https://govindtank.is-a.dev</link>
     <description>Architecture, mobile engineering, AI systems, and technical deep dives.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Nov 2026 09:44:21 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 09:48:52 GMT</lastBuildDate>
     <atom:link href="https://govindtank.is-a.dev/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[PowerSync vs Automerge vs ElectricSQL: Which Local-First Sync Survives Spotty 2G]]></title>
+      <link>https://govindtank.is-a.dev/blog/powersync-vs-automerge-vs-electricsql-which-local-first-sync-survives-spotty-2g</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/powersync-vs-automerge-vs-electricsql-which-local-first-sync-survives-spotty-2g</guid>
+      <pubDate>Mon, 23 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[We benchmarked PowerSync, Automerge, and ElectricSQL on flaky 2G. See which engine survives clock skew, tombstones, and real conflict UX without corrupting your data.
+]]></description>
+      <category>Architecture</category>
+    </item>
+    <item>
+      <title><![CDATA[AGSL Runtime Shaders on Android 16: Building 60fps Dynamic Glass Without GPU Throttles]]></title>
+      <link>https://govindtank.is-a.dev/blog/agsl-runtime-shaders-on-android-16-building-60fps-dynamic-glass-without-gpu-throttles</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/agsl-runtime-shaders-on-android-16-building-60fps-dynamic-glass-without-gpu-throttles</guid>
+      <pubDate>Sun, 22 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Glass shaders look slick until Android throttles your frame rate. Profile fragment instructions and tile RenderNodes to stay under 4ms and lock in 60fps.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
+    <item>
+      <title><![CDATA[Signals vs Riverpod in 2026: Benchmark Numbers for High-Frequency Streaming]]></title>
+      <link>https://govindtank.is-a.dev/blog/signals-vs-riverpod-in-2026-benchmark-numbers-for-high-frequency-streaming</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/signals-vs-riverpod-in-2026-benchmark-numbers-for-high-frequency-streaming</guid>
+      <pubDate>Sat, 21 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Stop guessing under 60Hz ticker loads. Profiler benchmarks show why fine-grained Signals beat Riverpod by ditching build-context subtree thrashing.
+]]></description>
+      <category>Flutter</category>
+    </item>
+    <item>
+      <title><![CDATA[Flutter Web WASM in Production: Shaving 4MB Off Asset Payloads and Fixing Fonts]]></title>
+      <link>https://govindtank.is-a.dev/blog/flutter-web-wasm-in-production-shaving-4mb-off-asset-payloads-and-fixing-fonts</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-web-wasm-in-production-shaving-4mb-off-asset-payloads-and-fixing-fonts</guid>
+      <pubDate>Fri, 20 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[WASM won't save an 8s load over 4G. Here's how stripping ICU bloat and deferring canvas setup cut 4MB and brought FCP under 1.2s.
+]]></description>
+      <category>Flutter</category>
+    </item>
+    <item>
+      <title><![CDATA[Predictable Agentic State Machines: Preventing Infinite Tool-Calling Loops on Edge SLMs]]></title>
+      <link>https://govindtank.is-a.dev/blog/predictable-agentic-state-machines-preventing-infinite-tool-calling-loops-on-edge-slms</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/predictable-agentic-state-machines-preventing-infinite-tool-calling-loops-on-edge-slms</guid>
+      <pubDate>Thu, 19 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Small 3B models easily trap themselves in infinite tool-calling loops. Enforce hard-bounded Kotlin state machines to guarantee deterministic execution and zero runaway loops on the edge.
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
+    <item>
+      <title><![CDATA[Running DeepSeek-R1 Locally with Ollama: The Zero-Dollar Setup That Shamed OpenAI]]></title>
+      <link>https://govindtank.is-a.dev/blog/running-deepseek-r1-locally-ollama-zero-dollar-guide</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/running-deepseek-r1-locally-ollama-zero-dollar-guide</guid>
+      <pubDate>Thu, 19 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Why developers are canceling their $200/mo OpenAI subscriptions, how DeepSeek-R1 discovered reasoning without human supervision, and the complete 3-minute guide to running it offline on your laptop.
+]]></description>
+      <category>DeepSeek</category>
+    </item>
+    <item>
+      <title><![CDATA[Qualcomm QNN vs GGUF: The Hard Truth About NPU Acceleration on Snapdragon 8 Gen 3/4]]></title>
+      <link>https://govindtank.is-a.dev/blog/qualcomm-qnn-vs-gguf-the-hard-truth-about-npu-acceleration-on-snapdragon-8-gen-34</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/qualcomm-qnn-vs-gguf-the-hard-truth-about-npu-acceleration-on-snapdragon-8-gen-34</guid>
+      <pubDate>Wed, 18 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Quantizing Qwen 2.5 for Hexagon NPUs yields 3x battery savings, but hits broken ops fast. Here are the unsupported layers and the exact fixes to run it.
+]]></description>
+      <category>Mobile-AI</category>
+    </item>
+    <item>
+      <title><![CDATA[Breaking the Likelihood Trap: Stanford's Variance-Calibrated Modulation for LLM Decoding]]></title>
+      <link>https://govindtank.is-a.dev/blog/stanford-vcm-breaking-llm-likelihood-trap</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/stanford-vcm-breaking-llm-likelihood-trap</guid>
+      <pubDate>Wed, 18 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Why large reasoning models fall into repetitive loops and dull vocabularies in long conversations—and how Stanford's training-free VCM decoding reshapes logits using real-time variance.
+]]></description>
+      <category>AI</category>
+    </item>
+    <item>
+      <title><![CDATA[We Ran DeepSeek-R1 Distill (1.5B & 7B) on Android via llama.cpp NDK: Benchmarks & Traps]]></title>
+      <link>https://govindtank.is-a.dev/blog/we-ran-deepseek-r1-distill-15b-7b-on-android-via-llamacpp-ndk-benchmarks-traps</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/we-ran-deepseek-r1-distill-15b-7b-on-android-via-llamacpp-ndk-benchmarks-traps</guid>
+      <pubDate>Tue, 17 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Hit 18 tok/sec on Android with llama.cpp by bypassing thermal downclocking via tuned NEON/OpenCL flags. Get the working NDK scripts and prompt-cache fix.
+]]></description>
+      <category>Mobile-AI</category>
+    </item>
+    <item>
+      <title><![CDATA[Why Your Dart Background Isolates Leak: Root-Causing Memory Spikes in Long-Running Apps]]></title>
+      <link>https://govindtank.is-a.dev/blog/why-your-dart-background-isolates-leak-root-causing-memory-spikes-in-long-running-apps</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/why-your-dart-background-isolates-leak-root-causing-memory-spikes-in-long-running-apps</guid>
+      <pubDate>Mon, 16 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Dart ports clone native heap data on transfer, silently bleeding RAM. Stop OOM crashes: use TransferableTypedData and DevTools heap snapshots to catch and kill leaks at the source.
+]]></description>
+      <category>Flutter</category>
+    </item>
+    <item>
+      <title><![CDATA[Building an On-Device Model Context Protocol (MCP) Host in Android: Local Tools Without Cloud Leaks]]></title>
+      <link>https://govindtank.is-a.dev/blog/building-an-on-device-model-context-protocol-mcp-host-in-android-local-tools-without-cloud-leaks</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/building-an-on-device-model-context-protocol-mcp-host-in-android-local-tools-without-cloud-leaks</guid>
+      <pubDate>Sun, 15 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Expose SQLite, SMS, and HealthConnect to local SLMs via Unix domain sockets. Keep user data on-device and isolate sandboxes against prompt injections without cloud dependencies.
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
+    <item>
+      <title><![CDATA[Impeller Vulkan Under the Hood: Hunting Down Micro-Stutters in Flutter 3.29]]></title>
+      <link>https://govindtank.is-a.dev/blog/impeller-vulkan-under-the-hood-hunting-down-micro-stutters-in-flutter-329</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/impeller-vulkan-under-the-hood-hunting-down-micro-stutters-in-flutter-329</guid>
+      <pubDate>Sat, 14 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Flutter 3.29 micro-stuttering? Profile pipeline stalls and GPU wait times in Impeller Vulkan with AGI to slash budget Mali/Adreno frame drops from 14% to sub-1%.
+]]></description>
+      <category>Flutter</category>
+    </item>
+    <item>
+      <title><![CDATA[Predictive Back & Shared Element Transitions in Android 16: Refactoring Navigation Without Glitches]]></title>
+      <link>https://govindtank.is-a.dev/blog/predictive-back-shared-element-transitions-in-android-16-refactoring-navigation-without-glitches</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/predictive-back-shared-element-transitions-in-android-16-refactoring-navigation-without-glitches</guid>
+      <pubDate>Fri, 13 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Nested Fragment/Compose stacks break Predictive Back animations. Fix callback priority and stop surface clipping to ship glitch-free native transitions.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
+    <item>
+      <title><![CDATA[Compose Multiplatform iOS Diet: Slashing 28MB of Kotlin/Native Binary Bloat]]></title>
+      <link>https://govindtank.is-a.dev/blog/compose-multiplatform-ios-diet-slashing-28mb-of-kotlinnative-binary-bloat</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/compose-multiplatform-ios-diet-slashing-28mb-of-kotlinnative-binary-bloat</guid>
+      <pubDate>Thu, 12 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Default KMP binaries bloat iOS releases with dead code and symbols. Strip metadata, tune SKIE, and configure ProGuard to cut 28MB off your app.
+]]></description>
+      <category>Kotlin</category>
+    </item>
+    <item>
+      <title><![CDATA[Local RAG on Android With sqlite-vec: Sub-Second Vector Search Completely Offline]]></title>
+      <link>https://govindtank.is-a.dev/blog/local-rag-on-android-with-sqlite-vec-sub-second-vector-search-completely-offline</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/local-rag-on-android-with-sqlite-vec-sub-second-vector-search-completely-offline</guid>
+      <pubDate>Wed, 11 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Ditch slow, leaky cloud vector DBs. Run local RAG on Android via sqlite-vec to search 100k+ chunks in under a second with zero network calls and minimal RAM.
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
+    <item>
+      <title><![CDATA[Flutter WASM is Crushing iOS Safari: How to Fix JS Interop & GC Churn]]></title>
+      <link>https://govindtank.is-a.dev/blog/flutter-wasm-is-crushing-ios-safari-how-to-fix-js-interop-gc-churn</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-wasm-is-crushing-ios-safari-how-to-fix-js-interop-gc-churn</guid>
+      <pubDate>Tue, 10 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Flutter WASM chokes iOS Safari with GC churn and bridge overhead. Cut the JS interop fat to drop frame drops and rescue your mobile TTI.
+]]></description>
+      <category>Flutter</category>
+    </item>
+    <item>
+      <title><![CDATA[Android 16 Predictive Back + AGSL Shaders: Stop Breaking System Animations]]></title>
+      <link>https://govindtank.is-a.dev/blog/android-16-predictive-back-agsl-shaders-stop-breaking-system-animations</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/android-16-predictive-back-agsl-shaders-stop-breaking-system-animations</guid>
+      <pubDate>Mon, 09 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Custom AGSL shaders break Predictive Back with clipped transitions and GPU spikes. Hook BackEvent and apply safe fallbacks to keep 120 FPS intact.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
+    <item>
+      <title><![CDATA[Why Your Flutter App Janks on Mid-Range Devices With Impeller Vulkan]]></title>
+      <link>https://govindtank.is-a.dev/blog/why-your-flutter-app-janks-on-mid-range-devices-with-impeller-vulkan</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/why-your-flutter-app-janks-on-mid-range-devices-with-impeller-vulkan</guid>
+      <pubDate>Sun, 08 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Impeller’s Vulkan backend tanks FPS on Adreno GPUs. Trace pipeline stalls with Perfetto and Flutter DevTools to eliminate frame drops without cutting visual fidelity.
+]]></description>
+      <category>Flutter</category>
+    </item>
+    <item>
+      <title><![CDATA[Multi-Agent State Machines on Mobile: Surviving Process Death For Local Agents]]></title>
+      <link>https://govindtank.is-a.dev/blog/multi-agent-state-machines-on-mobile-surviving-process-death-for-local-agents</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/multi-agent-state-machines-on-mobile-surviving-process-death-for-local-agents</guid>
+      <pubDate>Wed, 04 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Android kills long agent runs. Persist serializable FSM states to disk and resume via WorkManager so multi-agent loops survive process death without losing progress.
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
+    <item>
+      <title><![CDATA[NDK Zero-Copy Audio/Video: Cutting Latency Between HAL, MediaCodec & Kotlin]]></title>
+      <link>https://govindtank.is-a.dev/blog/ndk-zero-copy-audiovideo-cutting-latency-between-hal-mediacodec-kotlin</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/ndk-zero-copy-audiovideo-cutting-latency-between-hal-mediacodec-kotlin</guid>
+      <pubDate>Tue, 03 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Stop eating buffer copy tax. Use AHardwareBuffer, Oboe, and direct surfaces to ditch JVM memcpy and cut pipeline latency by sub-10ms.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
+    <item>
+      <title><![CDATA[Compose Multiplatform iOS: Shrinking Your .IPA Without Butchering Your UI]]></title>
+      <link>https://govindtank.is-a.dev/blog/compose-multiplatform-ios-shrinking-your-ipa-without-butchering-your-ui</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/compose-multiplatform-ios-shrinking-your-ipa-without-butchering-your-ui</guid>
+      <pubDate>Mon, 02 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Compose runtime bloat can easily get your iOS app rejected. Strip dead code, cut expect/actual sprawl, and optimize resource packing to shed megabytes fast.
+]]></description>
+      <category>Kotlin</category>
+    </item>
+    <item>
+      <title><![CDATA[C-Interop in Kotlin Multiplatform 2.2: Killing Cryptic Linker Errors For Good]]></title>
+      <link>https://govindtank.is-a.dev/blog/c-interop-in-kotlin-multiplatform-22-killing-cryptic-linker-errors-for-good</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/c-interop-in-kotlin-multiplatform-22-killing-cryptic-linker-errors-for-good</guid>
+      <pubDate>Sun, 01 Nov 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Fix cryptic duplicate symbol collisions in KMP 2.2. Tweak def files and module maps once to make your XCFramework cinterop builds reproducible.
+]]></description>
+      <category>Kotlin</category>
+    </item>
+    <item>
+      <title><![CDATA[Building an MCP Host on Android: Tool-Calling Loops Without Freezing the UI]]></title>
+      <link>https://govindtank.is-a.dev/blog/building-an-mcp-host-on-android-tool-calling-loops-without-freezing-the-ui</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/building-an-mcp-host-on-android-tool-calling-loops-without-freezing-the-ui</guid>
+      <pubDate>Sat, 31 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Running an MCP host locally tanks Android UI frames. Offload JSON-RPC tool loops with structured coroutines and scoped permissions to prevent ANRs.
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
+    <item>
+      <title><![CDATA[Qualcomm QNN vs CPU Inference on Android: Brutally Honest NPU Benchmarks]]></title>
+      <link>https://govindtank.is-a.dev/blog/qualcomm-qnn-vs-cpu-inference-on-android-brutally-honest-npu-benchmarks</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/qualcomm-qnn-vs-cpu-inference-on-android-brutally-honest-npu-benchmarks</guid>
+      <pubDate>Fri, 30 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Silent CPU fallbacks quietly kill Qualcomm QNN gains. Benchmark prefill vs. decode overhead and stop guessing if the NPU is worth the integration tax.
+]]></description>
+      <category>Mobile-AI</category>
+    </item>
+    <item>
+      <title><![CDATA[Signals vs Riverpod in 2026: Benchmark Numbers From a Real Prod Migration]]></title>
+      <link>https://govindtank.is-a.dev/blog/signals-vs-riverpod-in-2026-benchmark-numbers-from-a-real-prod-migration</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/signals-vs-riverpod-in-2026-benchmark-numbers-from-a-real-prod-migration</guid>
+      <pubDate>Thu, 29 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[We migrated production Riverpod to Dart Signals. Here are hard metrics on rebuild counts, frame times, and heap churn—plus where Signals fail.
+]]></description>
+      <category>Flutter</category>
+    </item>
+    <item>
+      <title><![CDATA[Hunting Dart Heap Bloat: How We Tracked Down 3 Silent Memory Leaks in Prod]]></title>
+      <link>https://govindtank.is-a.dev/blog/hunting-dart-heap-bloat-how-we-tracked-down-3-silent-memory-leaks-in-prod</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/hunting-dart-heap-bloat-how-we-tracked-down-3-silent-memory-leaks-in-prod</guid>
+      <pubDate>Wed, 28 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Image caches, stale routes, and zombie channel listeners silently bloat Dart heaps. Trace retention paths in DevTools to kill the root leaks.
+]]></description>
+      <category>Flutter</category>
+    </item>
+    <item>
+      <title><![CDATA[How We Ran 3B SLMs on Android: llama.cpp NDK, GGUF Q4_K_M & Thermal Throttling]]></title>
+      <link>https://govindtank.is-a.dev/blog/how-we-ran-3b-slms-on-android-llamacpp-ndk-gguf-q4km-thermal-throttling</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/how-we-ran-3b-slms-on-android-llamacpp-ndk-gguf-q4km-thermal-throttling</guid>
+      <pubDate>Tue, 27 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Stop cooking mid-tier Snapdragons. Here’s how we tuned thread affinity, mmap, and Q4_K_M in llama.cpp to run 3B SLMs locally without thermal throttling.
+]]></description>
+      <category>Mobile-AI</category>
+    </item>
+    <item>
+      <title><![CDATA[Kotlin Coroutines Flow Collection Operators: Best Practices and Performance]]></title>
+      <link>https://govindtank.is-a.dev/blog/kotlin-coroutines-flow-collection-operators-best-practices-and-performance</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/kotlin-coroutines-flow-collection-operators-best-practices-and-performance</guid>
+      <pubDate>Sat, 24 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Wrong Flow operators leak memory and drop frames. Master collectLatest, flatMapLatest, and buffering to keep UI observation fast and leak-free.
+]]></description>
+      <category>Mobile-Development</category>
+    </item>
+    <item>
+      <title><![CDATA[Why Your Flutter 3.29 App Still Janks: Profiling Impeller Vulkan Pipelines & GPU RenderPass Leaks]]></title>
+      <link>https://govindtank.is-a.dev/blog/why-your-flutter-329-app-still-janks-profiling-impeller-vulkan-pipelines-gpu-renderpass-leaks</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/why-your-flutter-329-app-still-janks-profiling-impeller-vulkan-pipelines-gpu-renderpass-leaks</guid>
+      <pubDate>Thu, 22 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Flutter 3.29 jank isn't your Dart code—it's Impeller leaking Vulkan RenderPasses. Profile the stalls, kill the GPU thrash, and lock p99 frame times below 4ms.
+]]></description>
+      <category>Flutter</category>
+    </item>
+    <item>
+      <title><![CDATA[High-Throughput Zero-Copy Audio/Video Processing on Android: NDK MediaCodec to Vulkan Pipelines]]></title>
+      <link>https://govindtank.is-a.dev/blog/high-throughput-zero-copy-audiovideo-processing-on-android-ndk-mediacodec-to-vulkan-pipelines</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/high-throughput-zero-copy-audiovideo-processing-on-android-ndk-mediacodec-to-vulkan-pipelines</guid>
+      <pubDate>Wed, 21 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Java heap copies kill 4K throughput. Pass AHardwareBuffer directly from NDK MediaCodec to Vulkan compute shaders for zero-copy 60fps frame mutation.
+]]></description>
+      <category>Modern Android</category>
+    </item>
+    <item>
+      <title><![CDATA[Custom AGSL Shaders & Material 3 Expressive: Crafting 120 FPS Fluid Micro-Interactions on Android 16]]></title>
+      <link>https://govindtank.is-a.dev/blog/custom-agsl-shaders-material-3-expressive-crafting-120-fps-fluid-micro-interactions-on-android-16</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/custom-agsl-shaders-material-3-expressive-crafting-120-fps-fluid-micro-interactions-on-android-16</guid>
+      <pubDate>Tue, 20 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Build Material 3 Expressive mesh and spring-ripple effects with custom AGSL shaders, sustaining 120 FPS while keeping distortion on the GPU—without CPU-bound canvas invalidations.
+]]></description>
+      <category>Modern Android</category>
+    </item>
+    <item>
+      <title><![CDATA[Why Android Coroutine Scopes Leak Memory (And the LeakCanary Patterns to Stop It)]]></title>
+      <link>https://govindtank.is-a.dev/blog/why-android-coroutine-scopes-leak-memory-and-the-leakcanary-patterns-to-stop-it</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/why-android-coroutine-scopes-leak-memory-and-the-leakcanary-patterns-to-stop-it</guid>
+      <pubDate>Sun, 18 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Uncollected Flows and callback bridges quietly pin dead Activities in RAM. Learn the LeakCanary patterns to trace the root cause and kill the leak.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
+    <item>
+      <title><![CDATA[Zero-Copy Buffer Sharing: Bridging NDK C++ Audio & KMP CoreAudio via C-Interop]]></title>
+      <link>https://govindtank.is-a.dev/blog/zero-copy-buffer-sharing-bridging-ndk-c-audio-kmp-coreaudio-via-c-interop</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/zero-copy-buffer-sharing-bridging-ndk-c-audio-kmp-coreaudio-via-c-interop</guid>
+      <pubDate>Sat, 17 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[JNI allocations kill real-time audio. Pipe NDK C++ to KMP CoreAudio via lock-free zero-copy ring buffers for deterministic sub-8ms latency.
+]]></description>
+      <category>Mobile-Architecture</category>
+    </item>
+    <item>
+      <title><![CDATA[Harnessing Qualcomm QNN & NPU Acceleration: Running 8-Bit Vision Transformers on Mobile Devices]]></title>
+      <link>https://govindtank.is-a.dev/blog/harnessing-qualcomm-qnn-npu-acceleration-running-8-bit-vision-transformers-on-mobile-devices</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/harnessing-qualcomm-qnn-npu-acceleration-running-8-bit-vision-transformers-on-mobile-devices</guid>
+      <pubDate>Fri, 16 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[> **TL;DR**: A PyTorch vision transformer can run on the Hexagon NPU only after you split it into graph fragments that QNN can actually lower, then quantize the fragments to 8-bit with calibration data the NPU will ac...
+]]></description>
+      <category>Mobile-AI</category>
+    </item>
+    <item>
+      <title><![CDATA[Signals vs Riverpod 3.0 in Production: Memory Footprint, Rebuild Benchmarks, and Migration Nightmares]]></title>
+      <link>https://govindtank.is-a.dev/blog/signals-vs-riverpod-30-in-production-memory-footprint-rebuild-benchmarks-and-migration-nightmares</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/signals-vs-riverpod-30-in-production-memory-footprint-rebuild-benchmarks-and-migration-nightmares</guid>
+      <pubDate>Thu, 15 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[: Draft 1: 50k widget trees tested: Signals cut memory leaks by 60% but Riverpod's invalidation overhead crashed rebuilds. Real production benchmarks and migration scars. (138 chars) Draft 2: We stress-tested 50,000 w...
+]]></description>
+      <category>Flutter</category>
+    </item>
+    <item>
+      <title><![CDATA[Compose Multiplatform on iOS: Trimming 40MB Binaries and Taming the Kotlin/Native Garbage Collector]]></title>
+      <link>https://govindtank.is-a.dev/blog/compose-multiplatform-on-ios-trimming-40mb-binaries-and-taming-the-kotlinnative-garbage-collector</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/compose-multiplatform-on-ios-trimming-40mb-binaries-and-taming-the-kotlinnative-garbage-collector</guid>
+      <pubDate>Wed, 14 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[> **TL;DR**: Compose Multiplatform ships with a bloated Skiko binary and aggressive retain cycles when bridging UIViewController lifecycles, but explicit static framework configuration and weak-reference delegation el...
+]]></description>
+      <category>Kotlin</category>
+    </item>
+    <item>
+      <title><![CDATA[Local-First Realtime Sync: PowerSync vs Automerge vs ElectricSQL Under Degraded Mobile Networks]]></title>
+      <link>https://govindtank.is-a.dev/blog/local-first-realtime-sync-powersync-vs-automerge-vs-electricsql-under-degraded-mobile-networks</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/local-first-realtime-sync-powersync-vs-automerge-vs-electricsql-under-degraded-mobile-networks</guid>
+      <pubDate>Wed, 14 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[> **TL;DR**: I stress-tested PowerSync, Automerge, and ElectricSQL on iOS and Android under simulated 3G lossy tunnels to find which local-first engine survives intermittent connectivity without crashing SQLite or dra...
+]]></description>
+      <category>Architecture</category>
+    </item>
+    <item>
+      <title><![CDATA[Hunting Dart Memory Leaks: Native Finalizers, Closure Captures, and DevTools Allocation Profiling]]></title>
+      <link>https://govindtank.is-a.dev/blog/hunting-dart-memory-leaks-native-finalizers-closure-captures-and-devtools-allocation-profiling</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/hunting-dart-memory-leaks-native-finalizers-closure-captures-and-devtools-allocation-profiling</guid>
+      <pubDate>Tue, 13 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Our Flutter app was climbing 40MB per hour on low-end devices. No crashes, no warnings—just a slow death. Here's the exact sequence we used in DevTools to find three leak sources that the analyzer never flagged.
+]]></description>
+      <category>Flutter</category>
+    </item>
+    <item>
+      <title><![CDATA[Building a Native Model Context Protocol (MCP) Host on Android: Tool Calling & Local RAG with sqlite-vec]]></title>
+      <link>https://govindtank.is-a.dev/blog/building-a-native-model-context-protocol-mcp-host-on-android-tool-calling-local-rag-with-sqlite-vec</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/building-a-native-model-context-protocol-mcp-host-on-android-tool-calling-local-rag-with-sqlite-vec</guid>
+      <pubDate>Mon, 12 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Every agentic AI demo I've seen on Android phones the server. Here's what it actually takes to run a full MCP host on-device—JSON-RPC routing, sqlite-vec RAG, and why sub-2ms tool calls change what's possible in mobile AI.
+]]></description>
+      <category>AI-Engineering</category>
+    </item>
+    <item>
+      <title><![CDATA[Flutter Web WASM in 2026: Achieving Sub-Second TTI and Debugging Garbage Collection Stalls]]></title>
+      <link>https://govindtank.is-a.dev/blog/flutter-web-wasm-in-2026-achieving-sub-second-tti-and-debugging-garbage-collection-stalls</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/flutter-web-wasm-in-2026-achieving-sub-second-tti-and-debugging-garbage-collection-stalls</guid>
+      <pubDate>Sun, 11 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[We migrated a production Flutter web app to WasmGC and cut TTI from 4.2s to 0.8s. Then the GC stalls started—frames freezing for 80-120ms with no explanation in the profiler. Here's what was actually causing them.
+]]></description>
+      <category>Flutter</category>
+    </item>
+    <item>
+      <title><![CDATA[Architecting Resilient Server-Sent Events (SSE) in KMP Apps with Ktor 3.0 and Coroutines Channels]]></title>
+      <link>https://govindtank.is-a.dev/blog/architecting-resilient-server-sent-events-sse-in-kmp-apps-with-ktor-30-and-coroutines-channels</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/architecting-resilient-server-sent-events-sse-in-kmp-apps-with-ktor-30-and-coroutines-channels</guid>
+      <pubDate>Sat, 10 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[We silently dropped 3 weeks of live events on iOS because we assumed a mobile network behaves like a server. Here's the exact architecture that fixed it—bounded channels, explicit backoff, and a repository that doesn't lie to the UI.
+]]></description>
+      <category>Kotlin</category>
+    </item>
+    <item>
+      <title><![CDATA[C-Interop in Kotlin Multiplatform: Writing High-Performance Rust & C++ Bridges Without Overhead]]></title>
+      <link>https://govindtank.is-a.dev/blog/c-interop-in-kotlin-multiplatform-writing-high-performance-rust-c-bridges-without-overhead</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/c-interop-in-kotlin-multiplatform-writing-high-performance-rust-c-bridges-without-overhead</guid>
+      <pubDate>Fri, 09 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Stop writing brittle JNI wrappers. Learn to bridge Rust and C++ crypto/compression engines directly to iOS and Android with zero-overhead KMP cinterop def files.
+]]></description>
+      <category>Kotlin</category>
+    </item>
+    <item>
+      <title><![CDATA[Mastering Predictive Back Transitions with Jetpack Compose: Coordinated NavHost & Gesture Handlers]]></title>
+      <link>https://govindtank.is-a.dev/blog/mastering-predictive-back-transitions-with-jetpack-compose-coordinated-navhost-gesture-handlers</link>
+      <guid isPermaLink="true">https://govindtank.is-a.dev/blog/mastering-predictive-back-transitions-with-jetpack-compose-coordinated-navhost-gesture-handlers</guid>
+      <pubDate>Thu, 08 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[Fix jarring exit-animation glitches in Android 16. Bind predictive back gestures to dynamic container transforms and shared elements in Jetpack Compose for seamless, fluid screen exits.
+]]></description>
+      <category>Modern Android</category>
+    </item>
     <item>
       <title><![CDATA[Compiling DeepSeek-R1 Distill and Qwen 2.5 for Android NDK: 4-Bit GGUF Quantization & Zero-Copy Inference]]></title>
       <link>https://govindtank.is-a.dev/blog/compiling-deepseek-r1-distill-and-qwen-25-for-android-ndk-4-bit-gguf-quantization-zero-copy-inference</link>

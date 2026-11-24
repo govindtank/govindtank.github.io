@@ -1306,6 +1306,794 @@
         ],
         "url": "https://govindtank.github.io/blog/compiling-deepseek-r1-distill-and-qwen-25-for-android-ndk-4-bit-gguf-quantization-zero-copy-inference"
       }
+    },
+    "mastering-predictive-back-transitions-with-jetpack-compose-coordinated-navhost-gesture-handlers": {
+      "title": "Mastering Predictive Back Transitions with Jetpack Compose: Coordinated NavHost & Gesture Handlers",
+      "date": "October 09, 2026",
+      "tag": "Modern Android",
+      "wordCount": 1558,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Fluid Predictive Back in Compose",
+        "description": "Stop glitchy exit animations in Android 16! Learn how to bind predictive back gestures to dynamic container transforms in Jetpack Compose.",
+        "tags": [
+          "#AndroidDev",
+          "#JetpackCompose",
+          "#Kotlin",
+          "#Android16",
+          "#MobileDev",
+          "#UIUX"
+        ],
+        "url": "https://govindtank.github.io/blog/mastering-predictive-back-transitions-with-jetpack-compose-coordinated-navhost-gesture-handlers"
+      }
+    },
+    "c-interop-in-kotlin-multiplatform-writing-high-performance-rust-c-bridges-without-overhead": {
+      "title": "C-Interop in Kotlin Multiplatform: Writing High-Performance Rust & C++ Bridges Without Overhead",
+      "date": "October 10, 2026",
+      "tag": "Kotlin",
+      "wordCount": 1459,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Zero-Overhead C++ & Rust in KMP",
+        "description": "Ditch brittle JNI wrappers! Bridge high-performance Rust & C++ crypto engines directly to iOS and Android with Kotlin Native cinterop def files.",
+        "tags": [
+          "#KotlinMultiplatform",
+          "#AndroidDev",
+          "#iOSDev",
+          "#RustLang",
+          "#Cpp",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/c-interop-in-kotlin-multiplatform-writing-high-performance-rust-c-bridges-without-overhead"
+      }
+    },
+    "architecting-resilient-server-sent-events-sse-in-kmp-apps-with-ktor-30-and-coroutines-channels": {
+      "title": "Architecting Resilient Server-Sent Events (SSE) in KMP Apps with Ktor 3.0 and Coroutines Channels",
+      "date": "October 11, 2026",
+      "tag": "Kotlin",
+      "wordCount": 530,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udee1\ufe0f Bulletproof SSE in KMP with Ktor 3.0",
+        "description": "Stop dropped connections and memory leaks. Build self-healing Server-Sent Events using Ktor 3.0, Coroutines Channels & Flow backpressure for guaranteed cross-platform delivery.",
+        "tags": [
+          "#KotlinMultiplatform",
+          "#Ktor",
+          "#Coroutines",
+          "#ServerSentEvents",
+          "#AndroidDev",
+          "#iOSDev"
+        ],
+        "url": "https://govindtank.github.io/blog/architecting-resilient-server-sent-events-sse-in-kmp-apps-with-ktor-30-and-coroutines-channels"
+      }
+    },
+    "flutter-web-wasm-in-2026-achieving-sub-second-tti-and-debugging-garbage-collection-stalls": {
+      "title": "Flutter Web WASM in 2026: Achieving Sub-Second TTI and Debugging Garbage Collection Stalls",
+      "date": "October 12, 2026",
+      "tag": "Flutter",
+      "wordCount": 599,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\ude80 Flutter Web WASM: 62% Faster Load, Sub-Second TTI",
+        "description": "Dart 3.7 WasmGC slashes enterprise app load times by 62% \u2014 but debugging GC heap stalls and canvas font bugs was the real battle for production stability.",
+        "tags": [
+          "#Flutter",
+          "#WebAssembly",
+          "#Dart",
+          "#WasmGC",
+          "#Performance",
+          "#WebDev"
+        ],
+        "url": "https://govindtank.github.io/blog/flutter-web-wasm-in-2026-achieving-sub-second-tti-and-debugging-garbage-collection-stalls"
+      }
+    },
+    "building-a-native-model-context-protocol-mcp-host-on-android-tool-calling-local-rag-with-sqlite-vec": {
+      "title": "Building a Native Model Context Protocol (MCP) Host on Android: Tool Calling & Local RAG with sqlite-vec",
+      "date": "October 13, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 511,
+      "status": "published",
+      "social": {
+        "short_title": "Building a Native Model Context Protocol (MCP) Host on...",
+        "description": "Stop cloud round-trips for agent tooling. This architecture runs a full MCP host in an Android background service\u2014executing deterministic tools and sqlite-vec RAG at...",
+        "tags": [
+          "#AIEngineering",
+          "#GenerativeAI",
+          "#LLMs",
+          "#AI",
+          "#TechInnovation",
+          "#ModelContextProtocolAndroid"
+        ],
+        "url": "https://govindtank.github.io/blog/building-a-native-model-context-protocol-mcp-host-on-android-tool-calling-local-rag-with-sqlite-vec"
+      }
+    },
+    "hunting-dart-memory-leaks-native-finalizers-closure-captures-and-devtools-allocation-profiling": {
+      "title": "Hunting Dart Memory Leaks: Native Finalizers, Closure Captures, and DevTools Allocation Profiling",
+      "date": "October 14, 2026",
+      "tag": "Flutter",
+      "wordCount": 822,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udd75\ufe0f\u200d\u2642\ufe0f Dart Memory Leak Hunting",
+        "description": "Uncover hidden memory leaks in Flutter apps caused by native finalizers and closure captures. Learn to use Dart DevTools for advanced heap profiling and eliminate sneaky retention chains draining your app's memory.",
+        "tags": [
+          "#FlutterDev",
+          "#DartLang",
+          "#MobileDev",
+          "#DevTools",
+          "#Performance"
+        ],
+        "url": "https://govindtank.github.io/blog/hunting-dart-memory-leaks-native-finalizers-closure-captures-and-devtools-allocation-profiling"
+      }
+    },
+    "local-first-realtime-sync-powersync-vs-automerge-vs-electricsql-under-degraded-mobile-networks": {
+      "title": "Local-First Realtime Sync: PowerSync vs Automerge vs ElectricSQL Under Degraded Mobile Networks",
+      "date": "October 15, 2026",
+      "tag": "Architecture",
+      "wordCount": 1586,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udce1 Local-First Sync on 3G? These Engines Survive!",
+        "description": "Stress-tested PowerSync, Automerge, and ElectricSQL under lossy 3G tunnels on iOS/Android. Which one keeps your app alive when the network drops? Find out now.",
+        "tags": [
+          "#MobileDev",
+          "#LocalFirst",
+          "#SQLite",
+          "#OfflineFirst",
+          "#iOSDev",
+          "#AndroidDev"
+        ],
+        "url": "https://govindtank.github.io/blog/local-first-realtime-sync-powersync-vs-automerge-vs-electricsql-under-degraded-mobile-networks"
+      }
+    },
+    "compose-multiplatform-on-ios-trimming-40mb-binaries-and-taming-the-kotlinnative-garbage-collector": {
+      "title": "Compose Multiplatform on iOS: Trimming 40MB Binaries and Taming the Kotlin/Native Garbage Collector",
+      "date": "October 15, 2026",
+      "tag": "Kotlin",
+      "wordCount": 955,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udcf1 Cut 40MB from iOS Apps with Kotlin",
+        "description": "Trim bloated Skiko binaries and fix retain cycles in Compose Multiplatform for iOS. Optimize Kotlin/Native GC and slash app size by 40MB!",
+        "tags": [
+          "#Kotlin",
+          "#iOSDev",
+          "#MobileDev",
+          "#JetpackCompose",
+          "#KotlinMultiplatform"
+        ],
+        "url": "https://govindtank.github.io/blog/compose-multiplatform-on-ios-trimming-40mb-binaries-and-taming-the-kotlinnative-garbage-collector"
+      }
+    },
+    "signals-vs-riverpod-30-in-production-memory-footprint-rebuild-benchmarks-and-migration-nightmares": {
+      "title": "Signals vs Riverpod 3.0 in Production: Memory Footprint, Rebuild Benchmarks, and Migration Nightmares",
+      "date": "October 16, 2026",
+      "tag": "Flutter",
+      "wordCount": 1405,
+      "status": "published",
+      "social": {
+        "short_title": "Signals vs Riverpod 3.0 in Production: Memory Footprint,...",
+        "description": ": Draft 1: 50k widget trees tested: Signals cut memory leaks by 60% but Riverpod's invalidation overhead crashed rebuilds. Real production benchmarks and migration scars. (138...",
+        "tags": [
+          "#FlutterDev",
+          "#DartLang",
+          "#MobileDev",
+          "#CrossPlatform",
+          "#AppDevelopment",
+          "#FlutterSignals"
+        ],
+        "url": "https://govindtank.github.io/blog/signals-vs-riverpod-30-in-production-memory-footprint-rebuild-benchmarks-and-migration-nightmares"
+      }
+    },
+    "harnessing-qualcomm-qnn-npu-acceleration-running-8-bit-vision-transformers-on-mobile-devices": {
+      "title": "Harnessing Qualcomm QNN & NPU Acceleration: Running 8-Bit Vision Transformers on Mobile Devices",
+      "date": "October 17, 2026",
+      "tag": "Mobile-AI",
+      "wordCount": 1625,
+      "status": "published",
+      "social": {
+        "short_title": "Harnessing Qualcomm QNN & NPU Acceleration: Running 8-Bit...",
+        "description": "> **TL;DR**: A PyTorch vision transformer can run on the Hexagon NPU only after you split it into graph fragments that QNN can actually lower, then quantize the fragments to...",
+        "tags": [
+          "#OnDeviceAI",
+          "#MobileAI",
+          "#EdgeAI",
+          "#AndroidDev",
+          "#MachineLearning",
+          "#QualcommQnn"
+        ],
+        "url": "https://govindtank.github.io/blog/harnessing-qualcomm-qnn-npu-acceleration-running-8-bit-vision-transformers-on-mobile-devices"
+      }
+    },
+    "zero-copy-buffer-sharing-bridging-ndk-c-audio-kmp-coreaudio-via-c-interop": {
+      "title": "Zero-Copy Buffer Sharing: Bridging NDK C++ Audio & KMP CoreAudio via C-Interop",
+      "date": "October 18, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1237,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Sub-8ms Audio: Zero-Copy NDK to KMP Interop",
+        "description": "JNI allocations ruin real-time audio. Use lock-free zero-copy ring buffers between NDK C++ and KMP CoreAudio for deterministic sub-8ms latency.",
+        "tags": [
+          "#KotlinMultiplatform",
+          "#AndroidDev",
+          "#Cpp",
+          "#iOSDev",
+          "#MobileArchitecture"
+        ],
+        "url": "https://govindtank.github.io/blog/zero-copy-buffer-sharing-bridging-ndk-c-audio-kmp-coreaudio-via-c-interop"
+      }
+    },
+    "why-android-coroutine-scopes-leak-memory-and-the-leakcanary-patterns-to-stop-it": {
+      "title": "Why Android Coroutine Scopes Leak Memory (And the LeakCanary Patterns to Stop It)",
+      "date": "October 19, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 993,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Stop Leaking Dead Activities in Coroutines",
+        "description": "Uncollected Flows and callback bridges quietly pin dead Activities in RAM. Spot the trace in LeakCanary and fix the root cause.",
+        "tags": [
+          "#AndroidDev",
+          "#Kotlin",
+          "#Coroutines",
+          "#LeakCanary",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/why-android-coroutine-scopes-leak-memory-and-the-leakcanary-patterns-to-stop-it"
+      }
+    },
+    "custom-agsl-shaders-material-3-expressive-crafting-120-fps-fluid-micro-interactions-on-android-16": {
+      "title": "Custom AGSL Shaders & Material 3 Expressive: Crafting 120 FPS Fluid Micro-Interactions on Android 16",
+      "date": "October 21, 2026",
+      "tag": "Modern Android",
+      "wordCount": 1204,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 120 FPS Fluid Motion with Custom AGSL Shaders",
+        "description": "Build mesh and spring-ripple effects with custom AGSL shaders, keeping distortion GPU-bound and micro-interactions fluid at 120 FPS.",
+        "tags": [
+          "#AndroidDev",
+          "#Android16",
+          "#Kotlin",
+          "#JetpackCompose",
+          "#Material3"
+        ],
+        "url": "https://govindtank.github.io/blog/custom-agsl-shaders-material-3-expressive-crafting-120-fps-fluid-micro-interactions-on-android-16"
+      }
+    },
+    "high-throughput-zero-copy-audiovideo-processing-on-android-ndk-mediacodec-to-vulkan-pipelines": {
+      "title": "High-Throughput Zero-Copy Audio/Video Processing on Android: NDK MediaCodec to Vulkan Pipelines",
+      "date": "October 22, 2026",
+      "tag": "Modern Android",
+      "wordCount": 1030,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Zero-Copy 4K 60fps on Android: NDK to Vulkan",
+        "description": "Java heap copies kill your frame rate. Pipe AHardwareBuffer straight from NDK MediaCodec to Vulkan compute for true zero-copy 4K at 60fps.",
+        "tags": [
+          "#AndroidDev",
+          "#Vulkan",
+          "#NDK",
+          "#Cpp",
+          "#Performance"
+        ],
+        "url": "https://govindtank.github.io/blog/high-throughput-zero-copy-audiovideo-processing-on-android-ndk-mediacodec-to-vulkan-pipelines"
+      }
+    },
+    "why-your-flutter-329-app-still-janks-profiling-impeller-vulkan-pipelines-gpu-renderpass-leaks": {
+      "title": "Why Your Flutter 3.29 App Still Janks: Profiling Impeller Vulkan Pipelines & GPU RenderPass Leaks",
+      "date": "October 23, 2026",
+      "tag": "Flutter",
+      "wordCount": 1075,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Stop Blaming Dart: Fix Impeller Vulkan Leaks",
+        "description": "Your Dart code is fine. Impeller is leaking Vulkan RenderPasses and thrashing the GPU. Here's how to profile the stalls and lock p99 under 4ms.",
+        "tags": [
+          "#Flutter",
+          "#Vulkan",
+          "#MobileDev",
+          "#Performance",
+          "#Graphics"
+        ],
+        "url": "https://govindtank.github.io/blog/why-your-flutter-329-app-still-janks-profiling-impeller-vulkan-pipelines-gpu-renderpass-leaks"
+      }
+    },
+    "kotlin-coroutines-flow-collection-operators-best-practices-and-performance": {
+      "title": "Kotlin Coroutines Flow Collection Operators: Best Practices and Performance",
+      "date": "October 25, 2026",
+      "tag": "Mobile-Development",
+      "wordCount": 1040,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Stop Dropping Frames with Kotlin Flow",
+        "description": "Your Flow operators are leaking memory and dropping frames. Use collectLatest, flatMapLatest, and buffers to keep UI observation fast and leak-free.",
+        "tags": [
+          "#AndroidDev",
+          "#Kotlin",
+          "#Coroutines",
+          "#MobileDev",
+          "#CleanCode"
+        ],
+        "url": "https://govindtank.github.io/blog/kotlin-coroutines-flow-collection-operators-best-practices-and-performance"
+      }
+    },
+    "how-we-ran-3b-slms-on-android-llamacpp-ndk-gguf-q4km-thermal-throttling": {
+      "title": "How We Ran 3B SLMs on Android: llama.cpp NDK, GGUF Q4_K_M & Thermal Throttling",
+      "date": "October 28, 2026",
+      "tag": "Mobile-AI",
+      "wordCount": 1955,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Stop Cooking Phones: Run 3B SLMs on Android",
+        "description": "Tuned thread affinity, mmap, and Q4_K_M in llama.cpp to run 3B models on-device without thermal throttling melting mid-tier chips.",
+        "tags": [
+          "#AndroidDev",
+          "#OnDeviceAI",
+          "#LlamaCpp",
+          "#MachineLearning",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/how-we-ran-3b-slms-on-android-llamacpp-ndk-gguf-q4km-thermal-throttling"
+      }
+    },
+    "hunting-dart-heap-bloat-how-we-tracked-down-3-silent-memory-leaks-in-prod": {
+      "title": "Hunting Dart Heap Bloat: How We Tracked Down 3 Silent Memory Leaks in Prod",
+      "date": "October 29, 2026",
+      "tag": "Flutter",
+      "wordCount": 1649,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udc80 3 Silent Dart Leaks Eating Your RAM",
+        "description": "Image caches, zombie listeners, and dead routes bloat your heap. Fix the retained root, not the symptom.",
+        "tags": [
+          "#FlutterDev",
+          "#DartLang",
+          "#MobileDev",
+          "#Performance",
+          "#SoftwareEngineering"
+        ],
+        "url": "https://govindtank.github.io/blog/hunting-dart-heap-bloat-how-we-tracked-down-3-silent-memory-leaks-in-prod"
+      }
+    },
+    "signals-vs-riverpod-in-2026-benchmark-numbers-from-a-real-prod-migration": {
+      "title": "Signals vs Riverpod in 2026: Benchmark Numbers From a Real Prod Migration",
+      "date": "October 30, 2026",
+      "tag": "Flutter",
+      "wordCount": 1619,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Signals vs Riverpod: Prod Benchmark",
+        "description": "We swapped Riverpod for Dart Signals in prod. Here are the rebuild metrics, heap churn drops, and the gotchas nobody warns you about.",
+        "tags": [
+          "#Flutter",
+          "#Dart",
+          "#FlutterDev",
+          "#StateManagement",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/signals-vs-riverpod-in-2026-benchmark-numbers-from-a-real-prod-migration"
+      }
+    },
+    "qualcomm-qnn-vs-cpu-inference-on-android-brutally-honest-npu-benchmarks": {
+      "title": "Qualcomm QNN vs CPU Inference on Android: Brutally Honest NPU Benchmarks",
+      "date": "October 31, 2026",
+      "tag": "Mobile-AI",
+      "wordCount": 1678,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udc80 Is Qualcomm QNN Worth the NPU Tax?",
+        "description": "Silent CPU fallbacks quietly kill your NPU speedups. Benchmark prefill vs. decode overhead before paying the integration cost.",
+        "tags": [
+          "#AndroidDev",
+          "#MobileAI",
+          "#MachineLearning",
+          "#DeepLearning",
+          "#Qualcomm"
+        ],
+        "url": "https://govindtank.github.io/blog/qualcomm-qnn-vs-cpu-inference-on-android-brutally-honest-npu-benchmarks"
+      }
+    },
+    "building-an-mcp-host-on-android-tool-calling-loops-without-freezing-the-ui": {
+      "title": "Building an MCP Host on Android: Tool-Calling Loops Without Freezing the UI",
+      "date": "November 01, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 1824,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Stop MCP Loops Freezing Your Android UI",
+        "description": "Running local MCP tool calls kills your main thread. Fix ANRs with structured coroutines and scoped IPC permissions.",
+        "tags": [
+          "#AndroidDev",
+          "#Kotlin",
+          "#MobileAI",
+          "#MCP",
+          "#Coroutines"
+        ],
+        "url": "https://govindtank.github.io/blog/building-an-mcp-host-on-android-tool-calling-loops-without-freezing-the-ui"
+      }
+    },
+    "c-interop-in-kotlin-multiplatform-22-killing-cryptic-linker-errors-for-good": {
+      "title": "C-Interop in Kotlin Multiplatform 2.2: Killing Cryptic Linker Errors For Good",
+      "date": "November 02, 2026",
+      "tag": "Kotlin",
+      "wordCount": 1093,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udc80 Kill Cryptic KMP Linker Errors Once and for All",
+        "description": "Stop fighting duplicate symbol collisions in KMP 2.2. A quick def and module map tweak makes XCFramework builds finally behave.",
+        "tags": [
+          "#Kotlin",
+          "#KotlinMultiplatform",
+          "#KMP",
+          "#iOSDev",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/c-interop-in-kotlin-multiplatform-22-killing-cryptic-linker-errors-for-good"
+      }
+    },
+    "compose-multiplatform-ios-shrinking-your-ipa-without-butchering-your-ui": {
+      "title": "Compose Multiplatform iOS: Shrinking Your .IPA Without Butchering Your UI",
+      "date": "November 03, 2026",
+      "tag": "Kotlin",
+      "wordCount": 1672,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Slash Your Compose iOS IPA Size",
+        "description": "Stop shipping bloat to the App Store. Cut dead Compose code, prune expect/actual sprawl, and shed megabytes without touching UI.",
+        "tags": [
+          "#KotlinMultiplatform",
+          "#ComposeMultiplatform",
+          "#iOSDev",
+          "#MobileDev",
+          "#AppOptimization"
+        ],
+        "url": "https://govindtank.github.io/blog/compose-multiplatform-ios-shrinking-your-ipa-without-butchering-your-ui"
+      }
+    },
+    "ndk-zero-copy-audiovideo-cutting-latency-between-hal-mediacodec-kotlin": {
+      "title": "NDK Zero-Copy Audio/Video: Cutting Latency Between HAL, MediaCodec & Kotlin",
+      "date": "November 04, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1426,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Kill the JVM Copy Tax with NDK Zero-Copy",
+        "description": "Stop copying buffers between HAL, MediaCodec, and Kotlin. Use AHardwareBuffer and Oboe to drop sub-10ms pipeline latency.",
+        "tags": [
+          "#AndroidDev",
+          "#NDK",
+          "#Kotlin",
+          "#Performance",
+          "#AudioVideo"
+        ],
+        "url": "https://govindtank.github.io/blog/ndk-zero-copy-audiovideo-cutting-latency-between-hal-mediacodec-kotlin"
+      }
+    },
+    "multi-agent-state-machines-on-mobile-surviving-process-death-for-local-agents": {
+      "title": "Multi-Agent State Machines on Mobile: Surviving Process Death For Local Agents",
+      "date": "November 05, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 1486,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udc80 Surviving Android Process Death for Local Agents",
+        "description": "Android kills long local AI runs. Persist serializable FSM states to disk and resume via WorkManager\u2014no lost progress, zero boilerplate.",
+        "tags": [
+          "#AndroidDev",
+          "#Kotlin",
+          "#MobileAI",
+          "#Architecture",
+          "#StateMachines"
+        ],
+        "url": "https://govindtank.github.io/blog/multi-agent-state-machines-on-mobile-surviving-process-death-for-local-agents"
+      }
+    },
+    "why-your-flutter-app-janks-on-mid-range-devices-with-impeller-vulkan": {
+      "title": "Why Your Flutter App Janks on Mid-Range Devices With Impeller Vulkan",
+      "date": "November 09, 2026",
+      "tag": "Flutter",
+      "wordCount": 1787,
+      "status": "published",
+      "social": {
+        "short_title": "Fix Flutter Impeller Jank on Adreno GPUs \u26a1",
+        "description": "Stop blaming user hardware. Find Vulkan pipeline stalls with Perfetto and DevTools, then fix the root cause without touching visual fidelity.",
+        "tags": [
+          "#FlutterDev",
+          "#MobileDev",
+          "#Vulkan",
+          "#Performance",
+          "#DartLang"
+        ],
+        "url": "https://govindtank.github.io/blog/why-your-flutter-app-janks-on-mid-range-devices-with-impeller-vulkan"
+      }
+    },
+    "android-16-predictive-back-agsl-shaders-stop-breaking-system-animations": {
+      "title": "Android 16 Predictive Back + AGSL Shaders: Stop Breaking System Animations",
+      "date": "November 10, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1872,
+      "status": "published",
+      "social": {
+        "short_title": "Fix Broken Predictive Back in Android 16",
+        "description": "Your AGSL shaders are killing Predictive Back. Hook BackEvent and use safe fallbacks to prevent clipped transitions and GPU drops.",
+        "tags": [
+          "#AndroidDev",
+          "#Android16",
+          "#AGSL",
+          "#JetpackCompose",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/android-16-predictive-back-agsl-shaders-stop-breaking-system-animations"
+      }
+    },
+    "flutter-wasm-is-crushing-ios-safari-how-to-fix-js-interop-gc-churn": {
+      "title": "Flutter WASM is Crushing iOS Safari: How to Fix JS Interop & GC Churn",
+      "date": "November 11, 2026",
+      "tag": "Flutter",
+      "wordCount": 1439,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\uded1 Stop Flutter WASM Choking Safari",
+        "description": "Your iOS users aren't lagging from rendering\u2014it's JS interop and GC churn. Cut the bridge bloat and get your 60fps back.",
+        "tags": [
+          "#Flutter",
+          "#WebAssembly",
+          "#MobileDev",
+          "#Performance",
+          "#iOSDev",
+          "#WebDev"
+        ],
+        "url": "https://govindtank.github.io/blog/flutter-wasm-is-crushing-ios-safari-how-to-fix-js-interop-gc-churn"
+      }
+    },
+    "local-rag-on-android-with-sqlite-vec-sub-second-vector-search-completely-offline": {
+      "title": "Local RAG on Android With sqlite-vec: Sub-Second Vector Search Completely Offline",
+      "date": "November 12, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 1831,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Offline RAG on Android with sqlite-vec",
+        "description": "Stop paying for cloud vector DBs. Query 100k+ embeddings in <1s locally on Android using sqlite-vec with zero network overhead.",
+        "tags": [
+          "#AndroidDev",
+          "#SQLite",
+          "#LocalAI",
+          "#VectorSearch",
+          "#Kotlin"
+        ],
+        "url": "https://govindtank.github.io/blog/local-rag-on-android-with-sqlite-vec-sub-second-vector-search-completely-offline"
+      }
+    },
+    "compose-multiplatform-ios-diet-slashing-28mb-of-kotlinnative-binary-bloat": {
+      "title": "Compose Multiplatform iOS Diet: Slashing 28MB of Kotlin/Native Binary Bloat",
+      "date": "November 13, 2026",
+      "tag": "Kotlin",
+      "wordCount": 1384,
+      "status": "published",
+      "social": {
+        "short_title": "\u2702\ufe0f Slashing 28MB from KMP iOS Binaries",
+        "description": "Stop shipping dead symbols. Tune SKIE, strip Kotlin/Native metadata, and let ProGuard do the heavy lifting for a leaner iOS binary.",
+        "tags": [
+          "#KotlinMultiplatform",
+          "#iOSDev",
+          "#ComposeMultiplatform",
+          "#Kotlin",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/compose-multiplatform-ios-diet-slashing-28mb-of-kotlinnative-binary-bloat"
+      }
+    },
+    "predictive-back-shared-element-transitions-in-android-16-refactoring-navigation-without-glitches": {
+      "title": "Predictive Back & Shared Element Transitions in Android 16: Refactoring Navigation Without Glitches",
+      "date": "November 14, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1666,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Fix Broken Predictive Back in Android 16",
+        "description": "Stop fighting glitchy transitions. Fix callback priority and surface clipping across Fragment and Compose stacks for good.",
+        "tags": [
+          "#AndroidDev",
+          "#JetpackCompose",
+          "#Android16",
+          "#Kotlin",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/predictive-back-shared-element-transitions-in-android-16-refactoring-navigation-without-glitches"
+      }
+    },
+    "impeller-vulkan-under-the-hood-hunting-down-micro-stutters-in-flutter-329": {
+      "title": "Impeller Vulkan Under the Hood: Hunting Down Micro-Stutters in Flutter 3.29",
+      "date": "November 15, 2026",
+      "tag": "Flutter",
+      "wordCount": 2279,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Fix Flutter 3.29 Impeller Micro-Stutters",
+        "description": "Stop guessing frame drops. Profile Impeller Vulkan stalls with AGI and crush budget GPU stutters from 14% to <1%.",
+        "tags": [
+          "#FlutterDev",
+          "#Vulkan",
+          "#MobileDev",
+          "#AndroidDev",
+          "#Performance"
+        ],
+        "url": "https://govindtank.github.io/blog/impeller-vulkan-under-the-hood-hunting-down-micro-stutters-in-flutter-329"
+      }
+    },
+    "building-an-on-device-model-context-protocol-mcp-host-in-android-local-tools-without-cloud-leaks": {
+      "title": "Building an On-Device Model Context Protocol (MCP) Host in Android: Local Tools Without Cloud Leaks",
+      "date": "November 16, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 2295,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Stop Leaking Mobile Data to Cloud LLMs",
+        "description": "Run an on-device MCP host via Unix domain sockets. Wire local SLMs directly to SQLite and HealthConnect with zero cloud hops.",
+        "tags": [
+          "#AndroidDev",
+          "#LocalAI",
+          "#MCP",
+          "#Kotlin",
+          "#MobileSecurity"
+        ],
+        "url": "https://govindtank.github.io/blog/building-an-on-device-model-context-protocol-mcp-host-in-android-local-tools-without-cloud-leaks"
+      }
+    },
+    "why-your-dart-background-isolates-leak-root-causing-memory-spikes-in-long-running-apps": {
+      "title": "Why Your Dart Background Isolates Leak: Root-Causing Memory Spikes in Long-Running Apps",
+      "date": "November 17, 2026",
+      "tag": "Flutter",
+      "wordCount": 1314,
+      "status": "published",
+      "social": {
+        "short_title": "\ud83d\udc80 Stop Dart Isolate Memory Bleed",
+        "description": "Port messages clone heap data by default, quietly killing your app with OOMs. Fix it with TransferableTypedData.",
+        "tags": [
+          "#FlutterDev",
+          "#DartLang",
+          "#MobileDev",
+          "#AppPerformance",
+          "#SoftwareEngineering"
+        ],
+        "url": "https://govindtank.github.io/blog/why-your-dart-background-isolates-leak-root-causing-memory-spikes-in-long-running-apps"
+      }
+    },
+    "we-ran-deepseek-r1-distill-15b-7b-on-android-via-llamacpp-ndk-benchmarks-traps": {
+      "title": "We Ran DeepSeek-R1 Distill (1.5B & 7B) on Android via llama.cpp NDK: Benchmarks & Traps",
+      "date": "November 18, 2026",
+      "tag": "Mobile-AI",
+      "wordCount": 1892,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 18 tok/s DeepSeek-R1 on Android",
+        "description": "Stop thermal throttling. Hit 18 tok/s with DeepSeek-R1 via tuned NEON/OpenCL flags and NDK prompt-cache fixes on Android.",
+        "tags": [
+          "#AndroidDev",
+          "#MachineLearning",
+          "#LlamaCpp",
+          "#OnDeviceAI",
+          "#DeepSeek"
+        ],
+        "url": "https://govindtank.github.io/blog/we-ran-deepseek-r1-distill-15b-7b-on-android-via-llamacpp-ndk-benchmarks-traps"
+      }
+    },
+    "qualcomm-qnn-vs-gguf-the-hard-truth-about-npu-acceleration-on-snapdragon-8-gen-34": {
+      "title": "Qualcomm QNN vs GGUF: The Hard Truth About NPU Acceleration on Snapdragon 8 Gen 3/4",
+      "date": "November 19, 2026",
+      "tag": "Mobile-AI",
+      "wordCount": 1682,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Qualcomm QNN vs GGUF: The Hard Truth",
+        "description": "Running Qwen 2.5 on Hexagon NPUs cuts battery drain by 3x, but breaks ops instantly. Here are the failing layers and exact fixes.",
+        "tags": [
+          "#MachineLearning",
+          "#EdgeAI",
+          "#AndroidDev",
+          "#Snapdragon",
+          "#LLM"
+        ],
+        "url": "https://govindtank.github.io/blog/qualcomm-qnn-vs-gguf-the-hard-truth-about-npu-acceleration-on-snapdragon-8-gen-34"
+      }
+    },
+    "predictable-agentic-state-machines-preventing-infinite-tool-calling-loops-on-edge-slms": {
+      "title": "Predictable Agentic State Machines: Preventing Infinite Tool-Calling Loops on Edge SLMs",
+      "date": "November 20, 2026",
+      "tag": "AI-Engineering",
+      "wordCount": 1802,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Stop Edge SLM Infinite Tool Loops",
+        "description": "Small 3B models love infinite loops. Replace vibes-based prompting with hard-bounded Kotlin state machines for deterministic edge execution.",
+        "tags": [
+          "#Kotlin",
+          "#AndroidDev",
+          "#LocalAI",
+          "#EdgeComputing",
+          "#AIEngineering"
+        ],
+        "url": "https://govindtank.github.io/blog/predictable-agentic-state-machines-preventing-infinite-tool-calling-loops-on-edge-slms"
+      }
+    },
+    "flutter-web-wasm-in-production-shaving-4mb-off-asset-payloads-and-fixing-fonts": {
+      "title": "Flutter Web WASM in Production: Shaving 4MB Off Asset Payloads and Fixing Fonts",
+      "date": "November 21, 2026",
+      "tag": "Flutter",
+      "wordCount": 1260,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Flutter Web WASM: Cut 4MB Off Payloads",
+        "description": "WASM won't fix an 8s cold start. How stripping ICU data and deferring canvas setup dropped 4MB and got FCP under 1.2s.",
+        "tags": [
+          "#FlutterDev",
+          "#WebAssembly",
+          "#WebDev",
+          "#Performance",
+          "#Frontend"
+        ],
+        "url": "https://govindtank.github.io/blog/flutter-web-wasm-in-production-shaving-4mb-off-asset-payloads-and-fixing-fonts"
+      }
+    },
+    "signals-vs-riverpod-in-2026-benchmark-numbers-for-high-frequency-streaming": {
+      "title": "Signals vs Riverpod in 2026: Benchmark Numbers for High-Frequency Streaming",
+      "date": "November 22, 2026",
+      "tag": "Flutter",
+      "wordCount": 1625,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Signals vs Riverpod at 60Hz",
+        "description": "Stop subtree thrashing under high-frequency load. Hard profiler numbers on why fine-grained Signals win for streaming in Flutter.",
+        "tags": [
+          "#FlutterDev",
+          "#Flutter",
+          "#Dart",
+          "#MobileDev",
+          "#AppPerformance"
+        ],
+        "url": "https://govindtank.github.io/blog/signals-vs-riverpod-in-2026-benchmark-numbers-for-high-frequency-streaming"
+      }
+    },
+    "agsl-runtime-shaders-on-android-16-building-60fps-dynamic-glass-without-gpu-throttles": {
+      "title": "AGSL Runtime Shaders on Android 16: Building 60fps Dynamic Glass Without GPU Throttles",
+      "date": "November 23, 2026",
+      "tag": "Mobile-Architecture",
+      "wordCount": 1774,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 60fps Dynamic Glass on Android 16",
+        "description": "Stop GPU throttling on glass shaders. Profile fragment instructions and tile RenderNodes to hold sub-4ms frame times.",
+        "tags": [
+          "#AndroidDev",
+          "#AGSL",
+          "#JetpackCompose",
+          "#Android16",
+          "#MobileDev"
+        ],
+        "url": "https://govindtank.github.io/blog/agsl-runtime-shaders-on-android-16-building-60fps-dynamic-glass-without-gpu-throttles"
+      }
+    },
+    "powersync-vs-automerge-vs-electricsql-which-local-first-sync-survives-spotty-2g": {
+      "title": "PowerSync vs Automerge vs ElectricSQL: Which Local-First Sync Survives Spotty 2G",
+      "date": "November 24, 2026",
+      "tag": "Architecture",
+      "wordCount": 1592,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Local-First Sync vs Brutal 2G",
+        "description": "We stress-tested PowerSync, Automerge, and ElectricSQL on flaky networks. Here's what actually handles clock skew and conflict UX without corrupting data.",
+        "tags": [
+          "#SoftwareArchitecture",
+          "#Database",
+          "#WebDev",
+          "#SystemDesign",
+          "#LocalFirst"
+        ],
+        "url": "https://govindtank.github.io/blog/powersync-vs-automerge-vs-electricsql-which-local-first-sync-survives-spotty-2g"
+      }
     }
   },
   "images": {

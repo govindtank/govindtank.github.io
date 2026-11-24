@@ -1,0 +1,49 @@
+{
+  "slug": "stanford-vcm-breaking-llm-likelihood-trap",
+  "title": "Stanford Just Fixed LLM Repetition: The VCM Breakthrough",
+  "target_duration_seconds": 88,
+  "aspect_ratio": "9:16",
+  "resolution": {
+    "width": 1080,
+    "height": 1920
+  },
+  "audio_voice": "en-US-ChristopherNeural",
+  "scenes": [
+    {
+      "scene_id": "scene_1_hook",
+      "title": "The Likelihood Trap",
+      "target_seconds": 20,
+      "headline": "Why LLMs Get Dumber in Long Chains",
+      "visual_directive": "Pulsing red alert banner 'The Likelihood Trap'; exponential curve flattening into repetitive loop; glowing warning badges",
+      "spoken_script": "Have you ever noticed that the longer you chat with an AI reasoning model, the more repetitive and generic it sounds? It's not your prompt—it's a fundamental flaw in modern language modeling known as the Likelihood Trap. As reasoning chains stretch to dozens of steps, models fall into predictable, dull vocabulary loops that standard sampling cannot escape."
+    },
+    {
+      "scene_id": "scene_2_trap",
+      "title": "Why Legacy Decoders Fail",
+      "target_seconds": 20,
+      "headline": "The Scale-Variance Flaw",
+      "visual_directive": "Logit distribution bar graph with high variance spikes; animated X on fixed scalar penalties; breakdown of confident vs exploratory token states",
+      "spoken_script": "Most developers try cranking up temperature or setting a fixed repetition penalty. But Stanford researchers discovered why that fails: logit variance changes dynamically at every single token! In confident states, a fixed penalty does nothing. In uncertain exploratory states, that same penalty destroys semantic coherence and breaks math proofs."
+    },
+    {
+      "scene_id": "scene_3_breakthrough",
+      "title": "The VCM Architecture",
+      "target_seconds": 26,
+      "headline": "Variance-Calibrated Modulation (VCM)",
+      "visual_directive": "Neon cyan architecture flow; formula callout M_t = Z_t - λ·Prior - γ·σ_t·Count; Contextual Searchlight beam illuminating keywords; σ_t standard deviation meter",
+      "spoken_script": "To solve this, researchers introduced Variance-Calibrated Modulation, or VCM. It makes two key mathematical moves before decoding: First, a Contextual Searchlight using Pointwise Mutual Information subtracts unconditional prior logits, naturally extinguishing generic filler stopwords. Second, Adaptive Self-Debiasing scales the repetition penalty by the real-time standard deviation of the logits vector."
+    },
+    {
+      "scene_id": "scene_4_payoff",
+      "title": "The Payoff & Implementation",
+      "target_seconds": 22,
+      "headline": "+38.4% Reasoning Diversity • 0ms Overhead",
+      "visual_directive": "Rocketing benchmark comparison bars; +38.4% diversity metric; green verified checkmarks for vLLM and llama.cpp; final CTA card to Govind's blog",
+      "spoken_script": "The payoff is massive: a thirty-eight percent boost in reasoning diversity, a ninety-five percent drop in repetitive degeneration, and zero extra inference latency. Even better, VCM is completely training-free—you can hook it directly into vLLM, Ollama, or llama.cpp in under thirty lines of code. Check out the full technical breakdown and implementation on the blog."
+    }
+  ],
+  "social_copy": {
+    "twitter": "Stanford just solved LLM repetition degeneration with VCM (Variance-Calibrated Modulation). Why fixed repetition penalties fail, how σ_t dynamic scaling fixes it, and a 30-line PyTorch implementation: https://govindtank.is-a.dev/blog/stanford-vcm-breaking-llm-likelihood-trap",
+    "linkedin": "Why do reasoning models get stuck in repetitive loops during complex tasks? Stanford's latest EMNLP research introduces Variance-Calibrated Modulation (VCM)—a training-free pre-decoding intervention that scales penalties by real-time logit variance..."
+  }
+}
