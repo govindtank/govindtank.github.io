@@ -2075,6 +2075,25 @@
         ],
         "url": "https://govindtank.github.io/blog/agsl-runtime-shaders-on-android-16-building-60fps-dynamic-glass-without-gpu-throttles"
       }
+    },
+    "powersync-vs-automerge-vs-electricsql-which-local-first-sync-survives-spotty-2g": {
+      "title": "PowerSync vs Automerge vs ElectricSQL: Which Local-First Sync Survives Spotty 2G",
+      "date": "November 24, 2026",
+      "tag": "Architecture",
+      "wordCount": 1592,
+      "status": "published",
+      "social": {
+        "short_title": "\u26a1 Local-First Sync vs Brutal 2G",
+        "description": "We stress-tested PowerSync, Automerge, and ElectricSQL on flaky networks. Here's what actually handles clock skew and conflict UX without corrupting data.",
+        "tags": [
+          "#SoftwareArchitecture",
+          "#Database",
+          "#WebDev",
+          "#SystemDesign",
+          "#LocalFirst"
+        ],
+        "url": "https://govindtank.github.io/blog/powersync-vs-automerge-vs-electricsql-which-local-first-sync-survives-spotty-2g"
+      }
     }
   },
   "images": {
