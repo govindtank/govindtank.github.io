@@ -1,7 +1,18 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BLOG_POSTS, TESTIMONIALS } from '../constants';
-import { BookOpen, Quote, MessageSquareQuote, Search, Filter, ExternalLink, Calendar, Clock, ArrowRight } from 'lucide-react';
+import {
+  BookOpen,
+  Quote,
+  MessageSquareQuote,
+  Search,
+  Filter,
+  ExternalLink,
+  Calendar,
+  Clock,
+  ArrowRight,
+  Sparkles,
+} from 'lucide-react';
 import { BlogPost } from '../types';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,242 +20,225 @@ interface BlogAndTestimonialsProps {
   onPostSelect: (post: BlogPost) => void;
 }
 
-const MAX_HOME_BLOGS = 5;
+const MAX_HOME_BLOGS = 6;
 
 const TAG_COLORS: Record<string, string> = {
-  'Web-Dev': 'from-blue-500/20 to-blue-600/10 text-blue-400 border-blue-500/30',
-  'AI-Engineering': 'from-purple-500/20 to-purple-600/10 text-purple-400 border-purple-500/30',
-  'AI-Agents': 'from-violet-500/20 to-violet-600/10 text-violet-400 border-violet-500/30',
-  'AI-Optimization': 'from-indigo-500/20 to-indigo-600/10 text-indigo-400 border-indigo-500/30',
-  'Android': 'from-emerald-500/20 to-emerald-600/10 text-emerald-400 border-emerald-500/30',
-  'Kotlin-Multiplatform': 'from-orange-500/20 to-orange-600/10 text-orange-400 border-orange-500/30',
-  'Flutter': 'from-cyan-500/20 to-cyan-600/10 text-cyan-400 border-cyan-500/30',
-  'Data-Engineering': 'from-rose-500/20 to-rose-600/10 text-rose-400 border-rose-500/30',
-  'Security': 'from-red-500/20 to-red-600/10 text-red-400 border-red-500/30',
-  'Platform-Engineering': 'from-amber-500/20 to-amber-600/10 text-amber-400 border-amber-500/30',
+  'Mobile-Architecture': 'text-cyan-400 bg-cyan-500/10 border-cyan-400/30',
+  'Android': 'text-emerald-400 bg-emerald-500/10 border-emerald-400/30',
+  'Flutter': 'text-cyan-400 bg-cyan-500/10 border-cyan-400/30',
+  'AI-Engineering': 'text-indigo-400 bg-indigo-500/10 border-indigo-400/30',
+  'AI-Agents': 'text-purple-400 bg-purple-500/10 border-purple-400/30',
+  'Performance': 'text-amber-400 bg-amber-500/10 border-amber-400/30',
 };
 
 function getTagColor(tag: string): string {
-  return TAG_COLORS[tag] || 'from-slate-500/20 to-slate-600/10 text-slate-400 border-slate-500/30';
+  return TAG_COLORS[tag] || 'text-slate-400 bg-white/5 border-white/10';
 }
-
-const GRADIENTS = [
-  'from-sky-900/40 via-slate-900 to-slate-900',
-  'from-purple-900/40 via-slate-900 to-slate-900',
-  'from-emerald-900/40 via-slate-900 to-slate-900',
-];
 
 export default function BlogAndTestimonials({ onPostSelect }: BlogAndTestimonialsProps) {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
-  const [showFilters, setShowFilters] = useState(false);
 
   const filteredPosts = useMemo(() => {
-    return BLOG_POSTS.filter(post => {
-      const matchesSearch = searchTerm.trim() === '' || 
+    return BLOG_POSTS.filter((post) => {
+      const matchesSearch =
+        searchTerm.trim() === '' ||
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.tags?.some(t => t.toLowerCase().includes(searchTerm.toLowerCase()));
+        post.tags?.some((t) => t.toLowerCase().includes(searchTerm.toLowerCase()));
       const matchesTag = selectedTag === null || post.tags?.includes(selectedTag);
       return matchesSearch && matchesTag;
-    }).sort((a, b) => {
-      const dateA = new Date(a.date).getTime();
-      const dateB = new Date(b.date).getTime();
-      return dateB - dateA;
-    }).slice(0, MAX_HOME_BLOGS);
+    })
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, MAX_HOME_BLOGS);
   }, [searchTerm, selectedTag]);
 
-  const tags = [...new Set(BLOG_POSTS.flatMap(post => post.tags || [post.tag]))];
+  const allTags = [...new Set(BLOG_POSTS.flatMap((p) => p.tags || [p.tag]))].slice(0, 8);
 
   const handleCardClick = (post: BlogPost) => {
-    // Navigate cleanly to the post page for browser back/forward history support
     navigate(`/blog/${post.slug}`);
   };
 
   return (
-    <section id="blog" className="py-24 bg-slate-900/30 relative">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-3 gap-16">
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-4 mb-12">
-              <div className="w-10 h-10 rounded-lg bg-sky-500/20 flex items-center justify-center">
-                <BookOpen className="text-sky-400 w-6 h-6" />
-              </div>
-              <div className="flex-1">
-                <h2 className="text-4xl font-bold tracking-tighter uppercase font-black text-white">Architectural <span className="text-sky-400">Logs</span></h2>
-                <p className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mt-1">Status: Monitoring_Industry_Trends</p>
-              </div>
+    <section id="logs" className="relative py-16 sm:py-20 bg-transparent overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+          <div>
+            <div className="flex items-center gap-2 mb-2 font-mono-tech text-xs text-cyan-400">
+              <BookOpen className="w-3.5 h-3.5" />
+              <span>// 07. Engineering_Logs</span>
             </div>
-            
-            <div className="flex items-center gap-4 mb-6">
-              <div className="relative w-full max-w-xs group">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400 group-focus-within:text-sky-400 transition-colors" />
-                <input
-                  type="text"
-                  placeholder="Search logs..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 bg-slate-950/50 border border-white/10 rounded-lg text-slate-300 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20 text-sm"
-                />
-              </div>
-              
-              <div className="relative">
-                <button
-                  onClick={() => setShowFilters(!showFilters)}
-                  aria-label="Filter logs by tag"
-                  className={`p-2 rounded-full transition-colors ${selectedTag ? 'text-sky-400 bg-sky-500/10' : 'text-slate-400 hover:text-white hover:bg-white/5'}`}
-                >
-                  <Filter className="w-4 h-4" />
-                </button>
-                <AnimatePresence>
-                  {showFilters && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      className="absolute left-0 mt-4 w-48 bg-slate-950 border border-white/10 rounded-xl p-4 z-20 shadow-xl"
-                    >
-                      <div className="flex items-center gap-2 mb-3">
-                        <div className="w-2 h-2 bg-sky-400 rounded-full" />
-                        <span className="text-[10px] font-mono text-sky-400 uppercase tracking-widest font-bold">Filter by Tag</span>
-                      </div>
-                      <div className="space-y-1">
-                        <button
-                          onClick={() => { setSelectedTag(null); setShowFilters(false); }}
-                          className={`w-full text-left px-3 py-2 rounded-lg text-xs font-mono transition-colors ${selectedTag === null ? 'bg-sky-500/10 text-sky-400 font-bold' : 'text-slate-400 hover:bg-white/5'}`}
-                        >
-                          All Tags
-                        </button>
-                        {tags.map(tag => (
-                          <button
-                            key={tag}
-                            onClick={() => { setSelectedTag(tag); setShowFilters(false); }}
-                            className={`w-full text-left px-3 py-2 rounded-lg text-xs font-mono transition-colors ${selectedTag === tag ? 'bg-sky-500/10 text-sky-400 font-bold' : 'text-slate-400 hover:bg-white/5'}`}
-                          >
-                            {tag}
-                          </button>
-                        ))}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </div>
+            <h2 className="font-section-title text-4xl sm:text-5xl font-bold tracking-tight text-white mb-2">
+              Architectural <span className="text-primary">Logs</span>
+            </h2>
+            <p className="max-w-xl text-sm sm:text-base text-slate-400 leading-relaxed font-light">
+              In-depth engineering breakdowns covering AGSL fragment shaders, Impeller frame
+              budgets, zero-leak reactive systems, and on-device SLM execution.
+            </p>
+          </div>
+          <div className="text-6xl font-black text-white/5 select-none hidden md:block">
+            ARTICLES
+          </div>
+        </div>
 
-            <div className="space-y-5">
-              {filteredPosts.map((post, i) => (
-                <motion.div
-                  key={post.slug}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  onClick={() => handleCardClick(post)}
-                  className="group cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-slate-900/40 hover:bg-slate-900/80 hover:border-sky-500/30 transition-all duration-300 shadow-md"
-                >
-                  <div className="flex flex-col sm:flex-row">
-                    <div className="sm:w-48 sm:min-w-[12rem] h-40 sm:h-auto overflow-hidden">
-                      {post.coverImage ? (
-                        <img
-                          src={post.coverImage}
-                          alt={post.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          loading="lazy"
-                        />
-                      ) : (
-                        <div className={`w-full h-full bg-gradient-to-br ${GRADIENTS[i]} flex items-center justify-center`}>
-                          <BookOpen className="w-8 h-8 text-white/10" />
-                        </div>
-                      )}
+        {/* Filter & Search Bar */}
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-10 pb-6 border-b border-white/10">
+          <div className="relative max-w-md w-full">
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500" />
+            <input
+              type="text"
+              placeholder="Search engineering logs by keyword, topic, or tag..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-4 py-2.5 rounded-full spatial-glass border-white/10 text-white font-mono-tech text-xs placeholder-slate-500 focus:outline-none focus:border-cyan-400/50 transition-colors"
+            />
+          </div>
+
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0">
+            <button
+              type="button"
+              onClick={() => setSelectedTag(null)}
+              className={`px-3 py-1.5 rounded-full font-mono-tech text-xs whitespace-nowrap transition-colors cursor-pointer ${
+                selectedTag === null
+                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/40 font-semibold'
+                  : 'spatial-glass text-slate-400 hover:text-slate-200 border-white/10'
+              }`}
+            >
+              All Topics
+            </button>
+            {allTags.map((tag) => (
+              <button
+                key={tag}
+                type="button"
+                onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
+                className={`px-3 py-1.5 rounded-full font-mono-tech text-xs whitespace-nowrap transition-colors cursor-pointer ${
+                  selectedTag === tag
+                    ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/40 font-semibold'
+                    : 'spatial-glass text-slate-400 hover:text-slate-200 border-white/10'
+                }`}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Main Grid: Articles + Testimonials */}
+        <div className="grid lg:grid-cols-12 gap-8 items-start">
+          {/* Articles Column */}
+          <div className="lg:col-span-8 space-y-4">
+            {filteredPosts.map((post, idx) => (
+              <motion.div
+                key={post.slug}
+                
+                
+                
+                transition={{ delay: idx * 0.05 }}
+                onClick={() => handleCardClick(post)}
+                className="spatial-glass rounded-3xl p-6 border-white/10 hover:border-cyan-400/40 transition-all cursor-pointer group shadow-lg"
+              >
+                <div className="flex flex-col sm:flex-row gap-5">
+                  {post.coverImage && (
+                    <div className="sm:w-44 sm:min-w-[11rem] h-32 sm:h-auto rounded-2xl overflow-hidden border border-white/10 shrink-0">
+                      <img
+                        src={post.coverImage}
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
                     </div>
+                  )}
 
-                    <div className="p-5 flex-1 flex flex-col min-w-0">
-                      <div className="flex items-center gap-2 mb-3 flex-wrap">
-                        <span className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border bg-slate-950/80 uppercase ${getTagColor(post.tag)}`}>
+                  <div className="flex-1 flex flex-col justify-between min-w-0">
+                    <div>
+                      <div className="flex items-center gap-2 mb-2 flex-wrap">
+                        <span
+                          className={`font-mono-tech text-[10px] font-bold px-2.5 py-0.5 rounded-full border uppercase tracking-wider ${getTagColor(
+                            post.tag
+                          )}`}
+                        >
                           {post.tag}
                         </span>
                         {post.readTime && (
-                          <span className="text-[10px] text-slate-400 font-mono flex items-center gap-1">
-                            <Clock className="w-3 h-3" />
-                            {post.readTime} min
+                          <span className="font-mono-tech text-[10px] text-slate-400 flex items-center gap-1">
+                            <Clock className="w-3 h-3 text-cyan-400" />
+                            {post.readTime} min read
                           </span>
                         )}
                       </div>
 
-                      <h3 className="text-lg font-bold text-white group-hover:text-sky-300 transition-colors leading-snug mb-2">
+                      <h3 className="font-display font-bold text-lg sm:text-xl text-white group-hover:text-cyan-300 transition-colors leading-snug">
                         {post.title}
                       </h3>
-                      <p className="text-sm text-slate-400 leading-relaxed line-clamp-2 mb-3 flex-1">
+                      <p className="text-xs sm:text-sm text-slate-400 mt-2 font-light line-clamp-2 leading-relaxed">
                         {post.excerpt}
                       </p>
+                    </div>
 
-                      <div className="flex items-center justify-between pt-3 border-t border-white/10">
-                        <span className="text-[10px] text-slate-400 font-mono flex items-center gap-1.5">
-                          <Calendar className="w-3 h-3" />
-                          {post.date}
-                        </span>
-                        <span className="text-[10px] text-sky-400 font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-all group-hover:gap-1.5">
-                          Read Deep Dive <ArrowRight className="w-3 h-3" />
-                        </span>
-                      </div>
+                    <div className="flex items-center justify-between pt-4 mt-4 border-t border-white/5 font-mono-tech text-[11px]">
+                      <span className="text-slate-400 flex items-center gap-1.5">
+                        <Calendar className="w-3 h-3 text-slate-500" />
+                        {post.date}
+                      </span>
+                      <span className="text-cyan-400 font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read Log</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </span>
                     </div>
                   </div>
-                </motion.div>
-              ))}
-            </div>
+                </div>
+              </motion.div>
+            ))}
 
-            {/* View All Articles button */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="mt-6"
-            >
+            {/* View Full Archive Button */}
+            <div className="pt-4">
               <button
+                type="button"
                 onClick={() => navigate('/blog')}
-                className="w-full group relative flex items-center justify-center gap-3 py-4 px-6 bg-slate-900 hover:bg-slate-800 border border-white/10 hover:border-sky-500/30 rounded-xl transition-all shadow-md overflow-hidden"
+                className="w-full py-4 rounded-2xl spatial-glass border-white/10 hover:border-cyan-400/40 text-center font-mono-tech text-xs text-slate-300 hover:text-cyan-300 transition-all font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-lg"
               >
-                <ExternalLink className="w-4 h-4 text-sky-400 group-hover:translate-x-1 transition-transform relative z-10" />
-                <span className="text-xs font-mono font-bold text-slate-300 group-hover:text-white uppercase tracking-widest relative z-10">
-                  Explore Full Archive ({BLOG_POSTS.length} Technical Deep Dives) →
-                </span>
-                <div className="absolute bottom-0 left-0 h-[2px] bg-sky-400 w-0 group-hover:w-full transition-all duration-500" />
+                <span>Explore Full Engineering Archive ({BLOG_POSTS.length} Articles)</span>
+                <ArrowRight className="w-4 h-4" />
               </button>
-            </motion.div>
+            </div>
           </div>
 
-          <div>
-            <div className="flex items-center gap-4 mb-12">
-              <MessageSquareQuote className="text-amber-400 w-8 h-8" />
-              <h2 className="text-4xl font-bold tracking-tighter text-white">Social <span className="text-amber-400 underline decoration-amber-400/30 underline-offset-8">Proof</span></h2>
+          {/* Social Proof / Testimonials Column */}
+          <div className="lg:col-span-4 space-y-4">
+            <div className="flex items-center gap-2 mb-4 font-mono-tech text-xs text-amber-400">
+              <MessageSquareQuote className="w-4 h-4" />
+              <span>// Verified_Endorsements</span>
             </div>
 
-            <div className="space-y-8">
-              {TESTIMONIALS.map((t, i) => (
-                <motion.div
-                  key={t.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.2 }}
-                  className="relative p-8 glass-card border border-white/10 bg-slate-900/40 rounded-2xl shadow-lg"
-                >
-                  <Quote className="absolute top-4 right-4 w-10 h-10 text-white/5" />
-                  <p className="relative z-10 text-slate-300 italic mb-8 leading-relaxed font-sans text-sm sm:text-base">
-                    "{t.content}"
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-sky-400 to-indigo-500 flex items-center justify-center font-bold text-slate-950 text-xs border border-white/10 shadow-md">
-                      {t.name.split(' ').map(n => n[0]).join('')}
-                    </div>
-                    <div>
-                      <h4 className="text-white font-bold text-sm leading-none">{t.name}</h4>
-                      <p className="text-xs text-slate-400 font-mono mt-1">{t.role}</p>
-                    </div>
+            {TESTIMONIALS.map((t, idx) => (
+              <motion.div
+                key={t.name}
+                
+                
+                
+                transition={{ delay: idx * 0.1 }}
+                className="spatial-glass rounded-3xl p-6 border-white/10 hover:border-amber-400/30 transition-all relative group"
+              >
+                <Quote className="absolute top-4 right-4 w-7 h-7 text-white/5" />
+                <p className="text-xs sm:text-sm text-slate-300 font-light italic leading-relaxed mb-6">
+                  &quot;{t.content}&quot;
+                </p>
+                <div className="flex items-center gap-3 pt-3 border-t border-white/5">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-400 to-indigo-500 flex items-center justify-center font-mono-tech font-bold text-slate-950 text-xs">
+                    {t.name
+                      .split(' ')
+                      .map((n) => n[0])
+                      .join('')}
                   </div>
-                </motion.div>
-              ))}
-            </div>
+                  <div>
+                    <div className="font-display font-bold text-xs text-white">{t.name}</div>
+                    <div className="font-mono-tech text-[10px] text-slate-400">{t.role}</div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>

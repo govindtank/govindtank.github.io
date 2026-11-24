@@ -164,7 +164,7 @@ export default function BlogDetail({ selectedPost, onBack }: BlogDetailProps) {
           <div className="flex items-center gap-2">
             <ArrowLeft className="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors" />
             <span className="text-slate-300 font-mono text-sm uppercase tracking-wider group-hover:text-white">
-              Back to Logs
+              Back to Blogs
             </span>
           </div>
         </button>

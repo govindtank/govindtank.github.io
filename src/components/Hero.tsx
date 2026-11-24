@@ -1,219 +1,350 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import { Github, Linkedin, Mail, ArrowRight, Cpu, Smartphone } from 'lucide-react';
-import VisitorCounter from './VisitorCounter';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ArrowRight,
+  Layers,
+  Zap,
+  Play,
+  Rotate3d,
+  Cpu,
+  CheckCircle2,
+  Workflow,
+  Sparkles,
+  GitBranch,
+  ShieldCheck,
+  Activity,
+} from 'lucide-react';
+import TechnicalPortraitVisualizer from './TechnicalPortraitVisualizer';
+import { ThemeMode } from '../types';
 
-export default function Hero() {
+interface HeroProps {
+  theme: ThemeMode;
+  motionEnabled: boolean;
+  exploded: boolean;
+  onToggleExplode: () => void;
+}
+
+const STATS = [
+  {
+    value: '9+ YRS',
+    label: 'Mobile Systems Tenure',
+    detail: 'Android · Flutter · IoT',
+  },
+  {
+    value: '150K+',
+    label: 'Production Reach',
+    detail: 'Active Users & Downloads',
+  },
+  {
+    value: '99.95%',
+    label: 'Runtime Stability',
+    detail: 'Crash-Free Session SLA',
+  },
+  {
+    value: '535',
+    label: 'Open Repositories',
+    detail: 'Public Engineering Artifacts',
+  },
+];
+
+const AGILE_STAGES = [
+  {
+    id: 'plan',
+    step: '01',
+    title: 'Domain Modeling & Sprint Planning',
+    short: 'Architecture Sprint',
+    description:
+      'Feature slicing in 2-week agile sprints, strict Clean Domain boundaries, BLoC/MVVM deterministic state machines, and non-negotiable 8.3ms frame budgets.',
+    metric: 'Sprint Cadence: 2-Week Agile',
+    tags: ['Domain-Driven Design', 'BLoC Pattern', 'Frame Budgets', 'Jira / Linear'],
+  },
+  {
+    id: 'build',
+    step: '02',
+    title: 'High-Performance Native Engineering',
+    short: 'Impeller Native',
+    description:
+      'Writing Kotlin 2.x coroutines, custom AGSL fragment shaders, Flutter Impeller rendering pipelines, and NDK C++ audio/spatial bridges.',
+    metric: 'Frame Pacing: 120 FPS Locked',
+    tags: ['Kotlin 2.x', 'Flutter Impeller', 'AGSL Shaders', 'Android Auto'],
+  },
+  {
+    id: 'verify',
+    step: '03',
+    title: 'Automated Quality Gates & CI/CD',
+    short: '0-Leak Verification',
+    description:
+      'Automated LeakCanary heap audits, golden widget regression tests, Memory Profiler benchmarking, and pre-commit security scans.',
+    metric: 'Memory Leaks: 0.00 MB SLA',
+    tags: ['LeakCanary', 'Golden Tests', 'CI Quality Gates', 'Static Analysis'],
+  },
+  {
+    id: 'ship',
+    step: '04',
+    title: 'Staged Production Delivery & Telemetry',
+    short: '150K+ Scaled Rollout',
+    description:
+      'Gradual staged rollout to 150K+ production users with AWS CloudFront signed cookies, real-time MQTT telemetry, and real-time crash alerting.',
+    metric: 'Stability: 99.95% Crash-Free',
+    tags: ['Staged Rollout', 'CloudFront Signed Cookies', 'MQTT Sockets', 'Google Play'],
+  },
+];
+
+export default function Hero({
+  theme,
+  motionEnabled,
+  exploded,
+  onToggleExplode,
+}: HeroProps) {
+  const [activeAgileStage, setActiveAgileStage] = useState(0);
+
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const curStage = AGILE_STAGES[activeAgileStage];
+
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-slate-950 text-slate-100">
-      {/* Dynamic Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <motion.div 
-          animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-[10%] -left-[10%] w-[60%] h-[60%] bg-sky-500/10 rounded-full blur-[120px]" 
-        />
-        <motion.div 
-          animate={{ scale: [1, 1.3, 1], rotate: [0, -90, 0] }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute -bottom-[10%] -right-[10%] w-[60%] h-[60%] bg-indigo-500/10 rounded-full blur-[120px]" 
-        />
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center pt-24 pb-14 overflow-hidden bg-transparent"
+    >
+      {/* Background ambient lighting */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-cyan-500/10 blur-[140px]" />
+        <div className="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full bg-indigo-500/10 blur-[140px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-blue-600/[0.03] blur-[160px]" />
       </div>
-      
-      <div className="tech-grid absolute inset-0 opacity-10" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
-          
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          {/* Left Column: Title, Subhead, Intro & Agile Delivery HUD */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-7"
+            className="lg:col-span-7 flex flex-col items-start text-left"
           >
-            <div className="space-y-2 mb-6">
-              <div className="flex items-center gap-3 flex-wrap">
-                <motion.div 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                  className="text-sky-400 font-mono text-xs tracking-[0.3em] uppercase font-bold"
-                >
-                  // System.Initialize(Mobile_Architecture)
-                </motion.div>
-                <VisitorCounter path="/" variant="cyber" label="verified visits" />
+            {/* Command Badge */}
+            <div className="flex items-center gap-2.5 mb-4 flex-wrap">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full spatial-glass border-white/10 font-mono-tech text-xs text-slate-300">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>LEAD @ RYSUN LABS</span>
+              </span>
+              <span className="font-mono-tech text-xs tracking-wider text-cyan-400 font-semibold">
+                // Govind Tank · Lead Mobile Systems Engineer
+              </span>
+            </div>
+
+            {/* Signature High-Impact Title Typography */}
+            <div className="space-y-2 mb-4 relative group">
+              <div className="flex items-center gap-2 mb-1.5 font-mono-tech text-[10px] text-cyan-400/80 tracking-widest uppercase">
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping" />
+                <span>[SYS.ENGINEERING // 120Hz_IMPELLER_RUNTIME]</span>
               </div>
-              <h1 className="text-6xl md:text-8xl font-black leading-[0.85] tracking-tighter text-white">
+              <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[5.75rem] font-black leading-[0.85] tracking-tighter text-white font-sans uppercase select-none">
                 <motion.div
-                  animate={{ 
+                  animate={{
                     textShadow: [
-                      "none", 
-                      "2px 2px 0px #0ea5e9, -2px -2px 0px #6366f1", 
-                      "none"
+                      'none',
+                      '2px 2px 0px #0ea5e9, -2px -2px 0px #6366f1',
+                      'none',
                     ],
-                    x: [0, -2, 2, 0]
+                    x: [0, -2, 2, 0],
                   }}
                   transition={{ duration: 0.1, repeat: Infinity, repeatDelay: 4 }}
                 >
                   GOVIND
                 </motion.div>
-                <span className="text-outline text-transparent block mt-2" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.3)' }}>
-                  TANK.
-                </span>
+                <div className="relative inline-block mt-2">
+                  <span
+                    className="text-transparent block hover:text-cyan-400/90 transition-all duration-300 cursor-default"
+                    style={{ WebkitTextStroke: '1.5px rgba(255, 255, 255, 0.4)' }}
+                  >
+                    TANK.
+                  </span>
+                  <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gradient-to-r from-cyan-400 via-indigo-500 to-transparent opacity-70 group-hover:opacity-100 transition-opacity" />
+                </div>
               </h1>
             </div>
-            
-            <div className="relative mb-12">
-              <motion.div
-                initial={{ width: 0 }}
-                animate={{ width: '100%' }}
-                transition={{ delay: 0.5, duration: 1 }}
-                className="h-px bg-gradient-to-r from-sky-500 via-indigo-500 to-transparent"
-              />
-              <p className="text-xl text-slate-300 max-w-xl py-6 leading-relaxed font-light">
-                Bridging the gap between <span className="text-white font-semibold">Robust Systems Architecture</span> and <span className="text-sky-400 font-semibold">Fluid User Experience</span>. 9+ years architecting mobile ecosystems that scale to millions.
-              </p>
+
+            {/* Subhead with Grounded Designation */}
+            <div className="font-mono-tech text-sm sm:text-base text-cyan-300 font-semibold tracking-wide mt-2">
+              Lead Mobile Systems Engineer · Android &amp; Flutter Specialist
             </div>
 
-            <div className="flex flex-wrap gap-6 items-center">
-              <motion.a
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                href="#projects"
-                aria-label="Explore Govind Tank's project vault"
-                className="group relative px-8 py-4 bg-sky-500 text-slate-950 font-bold rounded-full flex items-center gap-2 transition-all shadow-lg hover:shadow-sky-500/20"
-              >
-                <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-500 origin-center" />
-                <span className="relative z-10 font-bold uppercase tracking-wider text-sm font-mono">Explore Matrix</span>
-                <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.a>
-              
-              <div className="flex items-center gap-4">
-                {[
-                  { icon: <Github className="w-5 h-5" />, href: "https://github.com/govindtank", label: "GitHub Profile" },
-                  { icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com/in/govindtank", label: "LinkedIn Profile" },
-                  { icon: <Mail className="w-5 h-5" />, href: "mailto:govindtank600@gmail.com", label: "Send Email" }
-                ].map((social, i) => (
-                  <motion.a
-                    key={i}
-                    whileHover={{ y: -5, color: '#0ea5e9' }}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.label}
-                    className="text-slate-400 hover:text-sky-400 transition-all p-2 bg-white/5 hover:bg-white/10 rounded-full"
+            {/* Narrative Description */}
+            <p className="mt-3.5 text-slate-300/90 text-sm sm:text-base leading-relaxed max-w-2xl font-light">
+              Engineering zero-leak mobile runtimes, custom GPU fragment shaders, and offline on-device
+              AI pipelines. Over <strong className="text-white font-medium">9+ years</strong>{' '}
+              delivering rock-solid Android, Flutter, and IoT products into 120Hz experiences scaled
+              to <strong className="text-white font-medium">150K+ production users</strong>.
+            </p>
+
+            {/* Spectacular Agile Engineering Delivery HUD */}
+            <div className="w-full mt-7 p-4 sm:p-5 rounded-2xl spatial-glass border-white/10 shadow-xl">
+              <div className="flex items-center justify-between pb-3 mb-3 border-b border-white/10">
+                <div className="flex items-center gap-2 font-mono-tech text-xs">
+                  <Workflow className="w-4 h-4 text-cyan-400" />
+                  <span className="text-white font-bold tracking-wide">
+                    AGILE ENGINEERING METHODOLOGY
+                  </span>
+                </div>
+                <span className="font-mono-tech text-[10px] px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-400/30">
+                  {curStage.metric}
+                </span>
+              </div>
+
+              {/* Agile Stage Selectors */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+                {AGILE_STAGES.map((stg, i) => (
+                  <button
+                    key={stg.id}
+                    type="button"
+                    onClick={() => setActiveAgileStage(i)}
+                    className={`p-2 rounded-xl text-left font-mono-tech transition-all cursor-pointer ${
+                      activeAgileStage === i
+                        ? 'bg-cyan-500/20 border border-cyan-400/50 shadow-[0_0_15px_rgba(34,211,238,0.2)]'
+                        : 'bg-white/5 border border-white/5 hover:bg-white/10 text-slate-400'
+                    }`}
                   >
-                    {social.icon}
-                  </motion.a>
+                    <div className="flex items-center justify-between text-[10px]">
+                      <span className={activeAgileStage === i ? 'text-cyan-300 font-bold' : 'text-slate-500'}>
+                        {stg.step}
+                      </span>
+                      {activeAgileStage === i && <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping" />}
+                    </div>
+                    <div className="text-[11px] font-bold text-white truncate mt-0.5">
+                      {stg.short}
+                    </div>
+                  </button>
                 ))}
               </div>
+
+              {/* Active Stage Detail */}
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={curStage.id}
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -6 }}
+                  transition={{ duration: 0.25 }}
+                  className="space-y-2 pt-1"
+                >
+                  <div className="text-xs text-slate-300 leading-relaxed font-light">
+                    {curStage.description}
+                  </div>
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {curStage.tags.map((t) => (
+                      <span
+                        key={t}
+                        className="px-2 py-0.5 rounded bg-white/5 border border-white/10 font-mono-tech text-[10px] text-cyan-200"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="mt-7 flex flex-wrap items-center gap-3 sm:gap-4">
+              <button
+                type="button"
+                onClick={() => scrollTo('projects')}
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-500 text-slate-950 font-mono-tech text-xs font-bold tracking-wider uppercase hover:opacity-95 transition-opacity shadow-[0_0_28px_rgba(34,211,238,0.35)] flex items-center gap-2 cursor-pointer"
+              >
+                <span>Explore Vault</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+
+              <button
+                type="button"
+                onClick={() => scrollTo('sandbox')}
+                className="px-6 py-3 rounded-full spatial-glass border-white/15 hover:border-cyan-400/40 text-slate-200 hover:text-cyan-300 font-mono-tech text-xs font-semibold tracking-wider uppercase transition-colors flex items-center gap-2 cursor-pointer"
+              >
+                <Zap className="w-4 h-4 text-cyan-400" />
+                <span>Interactive 3D Labs</span>
+              </button>
+            </div>
+
+            {/* Social Verified Links */}
+            <div className="mt-6 flex items-center gap-3 text-slate-400 flex-wrap">
+              <a
+                href="https://github.com/govindtank"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-full spatial-glass border-white/10 hover:border-cyan-400/40 hover:text-cyan-300 transition-colors"
+                title="GitHub (@govindtank)"
+              >
+                <Github className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/govindtank/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-full spatial-glass border-white/10 hover:border-cyan-400/40 hover:text-cyan-300 transition-colors"
+                title="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a
+                href="mailto:govindtank600@gmail.com"
+                className="p-2.5 rounded-full spatial-glass border-white/10 hover:border-cyan-400/40 hover:text-cyan-300 transition-colors"
+                title="Email Govind"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.govindtank.portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-1.5 rounded-full spatial-glass border-white/10 hover:border-cyan-400/40 font-mono-tech text-xs text-slate-300 hover:text-cyan-300 transition-colors inline-flex items-center gap-1.5"
+                title="Google Play Portfolio App"
+              >
+                <Play className="w-3 h-3 text-cyan-400" />
+                <span>Play Store App</span>
+              </a>
+            </div>
+
+            {/* 4 Telemetry Metrics Cards */}
+            <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 w-full">
+              {STATS.map((stat, i) => (
+                <div
+                  key={i}
+                  className="spatial-glass rounded-2xl p-3 border-white/10 flex flex-col justify-between hover:border-cyan-400/30 transition-colors group"
+                >
+                  <div className="font-display font-extrabold text-2xl text-white tracking-tight group-hover:text-cyan-300 transition-colors">
+                    {stat.value}
+                  </div>
+                  <div className="mt-1">
+                    <div className="font-mono-tech text-[10px] text-slate-300 font-semibold leading-tight">
+                      {stat.label}
+                    </div>
+                    <div className="font-mono-tech text-[9.5px] text-slate-400 mt-0.5 truncate">
+                      {stat.detail}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </motion.div>
 
+          {/* Right Column: Interactive 3D Technical Portrait Visualizer */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="lg:col-span-5 relative"
+            transition={{ duration: 0.9, delay: 0.2 }}
+            className="lg:col-span-5 w-full flex flex-col items-center"
           >
-            <div className="relative aspect-square group perspective-1000">
-              <div className="absolute inset-0 border-2 border-sky-500/20 rounded-3xl translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-700" />
-              <div className="absolute inset-0 border-2 border-indigo-500/20 rounded-3xl -translate-x-4 -translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-700 delay-100" />
-              
-              <motion.div 
-                whileHover={{ rotateX: 5, rotateY: -5, scale: 1.02 }}
-                className="relative h-full w-full rounded-3xl overflow-hidden glass-card border-white/10 group shadow-[0_0_50px_rgba(14,165,233,0.15)] transform-style-3d"
-              >
-                <img 
-                  src="profile_one.png" 
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'profile_two.png';
-                  }}
-                  alt="Govind Tank - Senior Lead Architect"
-                  loading="lazy"
-                  className="w-full h-full object-cover grayscale brightness-110 contrast-125 saturate-50 group-hover:grayscale-0 group-hover:brightness-100 group-hover:contrast-100 transition-all duration-1000 scale-105 group-hover:scale-100"
-                />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-sky-500/5 opacity-80" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_0%,rgba(2,6,23,0.4)_100%)]" />
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(14,165,233,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(14,165,233,0.05)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none opacity-40" />
-                
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute top-[25%] left-[15%] flex flex-col items-start gap-1">
-                    <div className="w-2 h-2 bg-sky-400 rounded-full animate-pulse shadow-[0_0_8px_rgba(14,165,233,0.8)]" />
-                    <div className="text-[10px] font-mono text-sky-400 bg-slate-950/80 px-2.5 py-0.5 rounded font-bold tracking-tight border border-sky-500/30">FACIAL_RECOGNITION_MATCH</div>
-                  </div>
-                  
-                  <div className="absolute bottom-[35%] right-[15%] flex flex-col items-end gap-1">
-                    <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(99,102,241,0.8)]" />
-                    <div className="text-[10px] font-mono text-indigo-400 bg-slate-950/80 px-2.5 py-0.5 rounded font-bold tracking-tight border border-indigo-500/30">ARCH_LOAD_SUCCESS</div>
-                  </div>
-                </div>
-
-                <div className="absolute bottom-6 left-6 flex flex-col gap-2">
-                  <div className="flex gap-1.5 items-center bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10">
-                    <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                    <div className="text-[10px] font-mono text-white tracking-[0.2em] uppercase font-bold">Auth_Passed</div>
-                  </div>
-                  <div className="text-[9px] font-mono text-sky-400 uppercase tracking-widest pl-1 font-semibold">Biometric_Verified</div>
-                </div>
-                
-                <motion.div 
-                  animate={{ top: ['-20%', '120%'] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-                  className="absolute left-0 w-full h-[2%] bg-gradient-to-b from-transparent via-sky-400 to-transparent shadow-[0_0_15px_rgba(14,165,233,0.5)] pointer-events-none z-20"
-                />
-              </motion.div>
-
-              <div className="absolute -inset-6 pointer-events-none z-0">
-                <svg className="w-full h-full overflow-visible opacity-40">
-                  <motion.rect
-                    x="0" y="0" width="100%" height="100%" rx="32"
-                    fill="none" stroke="currentColor" strokeWidth="1"
-                    className="text-sky-400" strokeDasharray="12 6"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ duration: 4, repeat: Infinity }}
-                  />
-                </svg>
-              </div>
-              
-              <motion.div 
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity }}
-                className="absolute -top-10 -right-4 px-5 py-3 glass-card text-xs font-mono border-sky-400/40 text-white z-30 shadow-2xl skew-x-[-12deg] bg-slate-900/90"
-              >
-                <div className="flex items-center gap-2">
-                  <Cpu className="w-4 h-4 text-sky-400" />
-                  <span className="font-bold tracking-tight">SENIOR_LEAD_ARCHITECT</span>
-                </div>
-              </motion.div>
-              
-              <motion.div 
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 5, repeat: Infinity }}
-                className="absolute -bottom-8 -left-4 px-5 py-3 glass-card text-xs font-mono border-indigo-400/40 text-white z-30 shadow-2xl skew-x-[12deg] bg-slate-900/90"
-              >
-                <div className="flex items-center gap-2">
-                  <Smartphone className="w-4 h-4 text-indigo-400" />
-                  <span className="font-bold tracking-tight">ANDROID_CORE_EXPERT</span>
-                </div>
-              </motion.div>
-            </div>
+            <TechnicalPortraitVisualizer theme={theme} motionEnabled={motionEnabled} />
           </motion.div>
-
         </div>
       </div>
-      
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-400"
-      >
-        <span className="text-[10px] uppercase tracking-[0.3em] font-mono font-bold">Initialize_Scroll</span>
-        <div className="w-px h-12 bg-gradient-to-b from-sky-400 to-transparent" />
-      </motion.div>
     </section>
   );
 }

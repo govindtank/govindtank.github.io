@@ -5,7 +5,7 @@ import { Bot, MessageSquare, Terminal as TerminalIcon, Code2, Sparkles, ChevronR
 
 const HOME_MESSAGES = [
   "System Initializing... User: Govind Tank",
-  "Architecting Scalable Solutions. v9.0.4",
+  "Engineering High-Performance Mobile Systems. v9.0.4",
   "Analyzing Project: Akshar Amrutam...",
   "Status: 99.9% Crash Free",
   "Clean Architecture Mode: Active",
@@ -25,7 +25,7 @@ const BLOG_MESSAGES = [
 const QUICK_ACTIONS_HOME = [
   { icon: <Code2 className="w-4 h-4" />, label: "Projects", target: "#projects" },
   { icon: <MessageSquare className="w-4 h-4" />, label: "Contact", target: "#contact" },
-  { icon: <TerminalIcon className="w-4 h-4" />, label: "Logs", target: "#blog" },
+  { icon: <TerminalIcon className="w-4 h-4" />, label: "Blogs", target: "#blog" },
   { icon: <Sparkles className="w-4 h-4" />, label: "Skills", target: "#skills" },
 ];
 

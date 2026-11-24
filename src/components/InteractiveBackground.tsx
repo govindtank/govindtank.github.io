@@ -34,7 +34,7 @@ export default function InteractiveBackground() {
         this.size = Math.random() * 2 + 0.5;
         this.speedX = Math.random() * 0.5 - 0.25;
         this.speedY = Math.random() * 0.5 - 0.25;
-        this.color = `rgba(14, 165, 233, ${Math.random() * 0.3 + 0.1})`;
+        this.color = `rgba(163, 230, 53, ${Math.random() * 0.28 + 0.08})`;
       }
 
       update() {
@@ -89,7 +89,7 @@ export default function InteractiveBackground() {
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < 100) {
-            ctx.strokeStyle = `rgba(14, 165, 233, ${0.1 * (1 - distance / 100)})`;
+            ctx.strokeStyle = `rgba(163, 230, 53, ${0.09 * (1 - distance / 100)})`;
             ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);

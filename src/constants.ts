@@ -11,7 +11,7 @@ const rawEagerModules = import.meta.glob('./content/blog/*.md', {
   import: 'default',
 }) as Record<string, string>;
 
-export const BLOG_POSTS: BlogPost[] = Object.entries(rawEagerModules)
+const MARKDOWN_BLOG_POSTS: BlogPost[] = Object.entries(rawEagerModules)
   .map(([path, raw]) => {
     const { data } = parseFrontmatter(raw as string);
     const slug = path.replace('./content/blog/', '').replace('.md', '');
@@ -25,11 +25,13 @@ export const BLOG_POSTS: BlogPost[] = Object.entries(rawEagerModules)
       excerpt: (data.excerpt as string) || '',
       tag: tags[0] || '',
       tags,
-      content: '', // NOT loaded here — lazy-loaded by BlogDetail/BlogDetailModal
+      content: '',
       coverImage: (data.coverImage as string) || '',
       readTime: (data.readTime as number) || Math.ceil(((data.excerpt as string) || '').split(' ').length / 200) || 4,
     };
-  })
+  });
+
+export const BLOG_POSTS: BlogPost[] = MARKDOWN_BLOG_POSTS
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export interface Experience {

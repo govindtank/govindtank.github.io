@@ -87,38 +87,28 @@ export default function GitHubActivity() {
   }, []);
 
   return (
-    <section id="github" className="py-24 bg-slate-950 text-slate-100 relative overflow-hidden">
+    <section id="github" className="py-16 sm:py-20 bg-transparent text-slate-100 relative overflow-hidden">
       <div className="absolute inset-0 tech-grid opacity-30 pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col md:flex-row items-baseline justify-between gap-4 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
           <div>
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="flex items-center gap-4 mb-4"
-            >
-              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
-                <Github className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase text-white">
-                  GitHub <span className="text-sky-400">Activity</span>
-                </h2>
-                <p className="text-slate-400 font-mono text-xs mt-1">// Live_Repository_Status.feed</p>
-              </div>
-            </motion.div>
+            <div className="flex items-center gap-2 mb-2">
+              <span className="font-mono-tech text-xs uppercase tracking-[0.28em] text-cyan-400">
+                [06] // Open_Source_Telemetry
+              </span>
+            </div>
+            <h2 className="font-section-title text-4xl sm:text-5xl font-bold tracking-tight text-white mb-2">
+              Codebase <span className="text-primary">Feed</span>
+            </h2>
+            <p className="max-w-xl text-sm sm:text-base text-slate-400 leading-relaxed font-light">
+              Live engineering telemetry across 535 public repositories. Real-time commit activity, language distributions, and open-source updates.
+            </p>
           </div>
-          
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="flex items-center gap-3"
-          >
+
+          <div className="flex items-center gap-4">
             {lastFetched && (
-              <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest">
+              <span className="text-[10px] font-mono-tech text-slate-400 uppercase tracking-widest hidden sm:inline">
                 Updated: {lastFetched}
               </span>
             )}
@@ -126,11 +116,14 @@ export default function GitHubActivity() {
               onClick={fetchRepos}
               disabled={loading}
               aria-label="Refresh GitHub repository feeds"
-              className="p-2.5 bg-slate-900 hover:bg-slate-800 border border-white/10 rounded-xl transition-all disabled:opacity-50 text-slate-300 hover:text-white shadow-md"
+              className="p-2.5 bg-slate-900 hover:bg-slate-800 border border-white/10 rounded-xl transition-all disabled:opacity-50 text-slate-300 hover:text-white shadow-md cursor-pointer"
             >
-              <RefreshCw className={`w-4 h-4 text-sky-400 ${loading ? 'animate-spin' : ''}`} />
+              <RefreshCw className={`w-4 h-4 text-cyan-400 ${loading ? 'animate-spin' : ''}`} />
             </button>
-          </motion.div>
+            <div className="text-6xl font-black text-white/5 select-none hidden md:block">
+              TELEMETRY
+            </div>
+          </div>
         </div>
 
         {loading && (

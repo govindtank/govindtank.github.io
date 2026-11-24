@@ -153,7 +153,7 @@ export default function BlogDetailPage() {
           onClick={() => navigate('/blog')}
           className="px-6 py-3 bg-sky-500 text-slate-950 font-bold rounded-xl hover:bg-sky-400 transition-all"
         >
-          Back to archive
+          Back to Blogs
         </button>
       </div>
     );
@@ -251,27 +251,24 @@ export default function BlogDetailPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 relative">
+    <div className="relative bg-transparent text-slate-100 min-h-screen">
       {/* Top Reading Progress Bar */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-slate-900 z-[100]">
+      <div className="fixed top-0 left-0 right-0 h-1 bg-[#050811] z-[100]">
         <div
-          className="h-full bg-gradient-to-r from-sky-500 via-indigo-500 to-amber-500 transition-all duration-150 ease-out"
+          className="h-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-amber-400 shadow-[0_0_10px_#22d3ee] transition-all duration-150 ease-out"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
 
-      {/* Background radial glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-500/[0.04] via-transparent to-transparent pointer-events-none" />
-
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
         {/* Navigation bar */}
         <div className="mb-8 flex items-center justify-between">
           <button
             onClick={() => navigate('/blog')}
-            className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-white/10 text-slate-300 hover:text-white transition-all text-xs font-mono uppercase tracking-wider font-semibold"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full spatial-glass border-white/10 text-slate-300 hover:text-cyan-300 hover:border-cyan-400/40 transition-colors text-xs font-mono-tech uppercase tracking-wider font-semibold cursor-pointer"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Back to Archive</span>
+            <span>Back to Logs</span>
           </button>
 
           <div className="flex items-center space-x-1.5 sm:space-x-2">
@@ -327,25 +324,25 @@ export default function BlogDetailPage() {
         <article>
           <header className="mb-10">
             <div className="flex flex-wrap items-center gap-3 mb-5">
-              <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20 uppercase tracking-wider">
+              <span className="text-xs font-mono-tech font-bold px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20 uppercase tracking-wider">
                 {post.tag}
               </span>
-              <span className="text-xs text-slate-400 font-mono flex items-center gap-1.5">
-                <Calendar className="w-3.5 h-3.5" />
+              <span className="text-xs text-slate-400 font-mono-tech flex items-center gap-1.5">
+                <Calendar className="w-3.5 h-3.5 text-cyan-400" />
                 {post.date}
               </span>
-              <span className="text-xs text-slate-400 font-mono flex items-center gap-1.5">
-                <Clock className="w-3.5 h-3.5" />
+              <span className="text-xs text-slate-400 font-mono-tech flex items-center gap-1.5">
+                <Clock className="w-3.5 h-3.5 text-slate-400" />
                 {post.readTime || 8} min read
               </span>
               <VisitorCounter path={`/blog/${post.slug}`} label="views" variant="badge" />
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight mb-6">
+            <h1 className="font-section-title text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight mb-6">
               {post.title}
             </h1>
 
-            <p className="text-lg sm:text-xl text-slate-300 leading-relaxed font-sans max-w-3xl mb-8">
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-light max-w-3xl mb-8">
               {post.excerpt}
             </p>
 
@@ -354,13 +351,13 @@ export default function BlogDetailPage() {
               <div className="flex items-center gap-3.5">
                 <img
                   src="/profile_one.png"
-                  className="w-11 h-11 rounded-full object-cover border-2 border-sky-500/30 shadow-md"
+                  className="w-11 h-11 rounded-full object-cover border border-cyan-400/40 shadow-[0_0_15px_rgba(34,211,238,0.2)]"
                   alt="Govind Tank"
                   loading="lazy"
                 />
                 <div>
                   <p className="text-white text-sm font-bold">Govind Tank</p>
-                  <p className="text-slate-400 text-xs font-mono">Senior Lead Architect</p>
+                  <p className="text-cyan-400/90 text-xs font-mono-tech">Lead Mobile Systems Engineer</p>
                 </div>
               </div>
 
@@ -369,7 +366,7 @@ export default function BlogDetailPage() {
                   {post.tags.map((t) => (
                     <span
                       key={t}
-                      className="text-[11px] text-slate-400 font-mono px-2.5 py-0.5 border border-white/10 rounded-full bg-white/5"
+                      className="text-[11px] text-slate-400 font-mono-tech px-2.5 py-0.5 border border-white/10 rounded-full bg-white/5"
                     >
                       #{t}
                     </span>

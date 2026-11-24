@@ -30,21 +30,24 @@ POOL_FILE = f"{PROJECT_ROOT}/scripts/blog-automation/verified_images.json"
 STATE_FILE = f"{PROJECT_ROOT}/scripts/blog-automation/.rewrite_state.json"
 TOPICS_JSON_PATH = os.path.expanduser("~/.hermes/cron/topics.json")
 
-# LLM Providers Configuration
-GEMINI_LLM_URL = "http://localhost:20128/v1/chat/completions"
-GEMINI_MODELS = [
-    "antigravity/gemini-3.7-flash-low",
-    "auto/gemini"
-]
+# ======= LLM PROVIDERS CONFIGURATION (Local-first with degraded cloud fallback) =======
 
-LOCAL_LLM_URL = os.environ.get("HERMES_LOCAL_MODEL_URL", "http://127.0.0.1:1234/v1/chat/completions")
-LOCAL_MODELS = ["qwen/qwen3.5-9b", "google/gemma-4-12b"]
+# LOCAL MODEL (PRIMARY) — LM Studio/Qwen3.5-9b on port 64109
+# Read from .env or use default
+LOCAL_LLM_URL = os.environ.get("HERMES_LOCAL_MODEL_URL", "http://127.0.0.1:64109/v1/chat/completions")
+LOCAL_API_KEY = os.environ.get("HERMES_LM_STUDIO_API_KEY", "")
+LOCAL_MODELS = ["qwen/qwen3.5-9b", "auto/qwen3.5"]
 
-KILO_LLM_URL = "https://api.kilo.ai/api/gateway/v1/chat/completions"
-KILO_MODELS = [
-    "stepfun/step-3.7-flash:free",
-    "kilo-auto/free"
-]
+# LOCAL LM STUDIO ENDPOINT (backup local)
+LM_STUDIO_URL = os.environ.get("HERMES_LM_STUDIO_URL", "http://localhost:1234/v1/chat/completions")
+LM_STUDIO_MODELS = ["qwen/qwen3.5-9b"]
+
+# CLOUD API FALLBACKS (exhausted, only when local fails)
+GEMINI_LLM_URL = os.environ.get("HERMES_GEMINI_URL", "http://localhost:20128/v1/chat/completions")
+GEMINI_MODELS = ["antigravity/gemini-3.7-flash-low", "auto/gemini"]
+
+KILO_LLM_URL = os.environ.get("HERMES_KILO_URL", "https://api.kilo.ai/api/gateway/v1/chat/completions")
+KILO_MODELS = ["stepfun/step-3.7-flash:free", "kilo-auto/free"]
 
 GIT_USER_NAME = "Govind Tank"
 GIT_USER_EMAIL = "govindtank600@gmail.com"
@@ -394,12 +397,89 @@ BANNED_PHRASES = [
 # ======= LLM CALLER =======
 def call_llm(messages, temperature=0.75, max_tokens=6000, timeout=45):
     """
-    Tiered LLM caller:
-    1. Gemini 3.7 Low (Local Gateway at localhost:20128 - prioritized)
-    2. Kilo Gateway (Fast fallback with stepfun/step-3.7-flash, kilo-auto)
-    3. Local LM Studio endpoint (fallback)
+    Tiered LLM caller with LOCAL-FIRST strategy (local OlliteRT/Gemma-4-E2B-it prioritized):
+    1. Local model (OlliteRT/Gemma-4-E2B-it on port 1234) — PRIMARY, fast, no cost
+    2. LM Studio endpoint (backup local if available)
+    3. Gemini 3.7 Low (Local Gateway at localhost:20128) — only when local fails
+    4. Kilo Gateway (Fast fallback with stepfun/step-3.7-flash, kilo-auto) — last resort
+    
+    Cloud APIs are degraded fallbacks and should not be relied upon for production use.
     """
-    # Primary: Gemini 3.7 Low via Local Gateway
+    # ===== LOCAL FIRST: LM Studio Qwen3.5-9b on port 64109 =====
+    for local_model in LOCAL_MODELS:
+        payload = {
+            "model": local_model,
+            "messages": messages,
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+        }
+        # Include API key if available
+        headers = {"Content-Type": "application/json"}
+        if LOCAL_API_KEY:
+            headers["Authorization"] = f"Bearer {LOCAL_API_KEY}"
+        
+        req = urllib.request.Request(
+            LOCAL_LLM_URL,
+            data=json.dumps(payload).encode(),
+            headers=headers,
+            method="POST"
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                if resp.status == 200:
+                    resp_data = json.loads(resp.read().decode())
+                    if "choices" in resp_data and resp_data["choices"]:
+                        msg = resp_data["choices"][0]["message"]
+                        content = msg.get("content", "")
+                        if content and len(content.strip()) > 50:
+                            log(f"  Local LLM (Qwen3.5-9b) succeeded with {local_model}")
+                            return content
+                else:
+                    log(f"  Local model returned status {resp.status}")
+        except urllib.error.HTTPError as e:
+            if e.code == 401 or e.code == 403:
+                log(f"  Local LLM auth failed with HTTP {e.code} — checking API key")
+            elif e.code == 429:
+                log(f"  Local LLM rate limited (HTTP 429)")
+            else:
+                log(f"  Local LLM HTTP error {e.code}: {str(e)[:80]}")
+        except urllib.error.URLError as e:
+            log(f"  Local LLM connection failed: {str(e.reason)[:60]}")
+        except Exception as e:
+            if "timeout" in str(e).lower() or "timed out" in str(e).lower():
+                log(f"  Local LLM timeout after {timeout}s")
+            else:
+                log(f"  Local LLM failed: {str(e)[:80]}")
+        continue
+
+    # ===== LOCAL BACKUP: LM Studio endpoint =====
+    for local_model in LM_STUDIO_MODELS:
+        payload = {
+            "model": local_model,
+            "messages": messages,
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+        }
+        req = urllib.request.Request(
+            LM_STUDIO_URL,
+            data=json.dumps(payload).encode(),
+            headers={"Content-Type": "application/json"},
+            method="POST"
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                if resp.status == 200:
+                    resp_data = json.loads(resp.read().decode())
+                    if "choices" in resp_data and resp_data["choices"]:
+                        msg = resp_data["choices"][0]["message"]
+                        content = msg.get("content", "")
+                        if content and len(content.strip()) > 50:
+                            log(f"  LM Studio LLM succeeded with {local_model}")
+                            return content
+        except Exception as e:
+            log(f"  LM Studio failed: {str(e)[:60]}")
+
+    # ===== DEGRADED FALLBACK: Gemini via Local Gateway =====
     for model in GEMINI_MODELS:
         payload = {
             "model": model,
@@ -426,13 +506,13 @@ def call_llm(messages, temperature=0.75, max_tokens=6000, timeout=45):
                         if m_draft:
                             content = m_draft.group(1).strip()
                     if content and len(content.strip()) > 50:
-                        log(f"  Gemini LLM succeeded with {model}")
+                        log(f"  Gemini LLM fallback succeeded with {model}")
                         return content
         except Exception as e:
             log(f"  Gemini LLM failed with {model}: {str(e)[:80]}")
             continue
 
-    # Secondary: Kilo Gateway
+    # ===== LAST RESORT: Kilo Gateway =====
     for model in KILO_MODELS:
         payload = {
             "model": model,
@@ -453,46 +533,20 @@ def call_llm(messages, temperature=0.75, max_tokens=6000, timeout=45):
                 if "choices" in resp_data and resp_data["choices"]:
                     msg = resp_data["choices"][0]["message"]
                     content = msg.get("content", "")
-                    # If model puts generation in reasoning/thought when output tokens run out
                     if (not content or not content.strip()) and msg.get("reasoning"):
                         reasoning = msg.get("reasoning", "")
-                        # Try to extract the draft/content if present
                         m_draft = re.search(r'(?:Let\'s draft|Draft|Here is the|#\s+)([\s\S]+)', reasoning, re.I)
                         if m_draft:
                             content = m_draft.group(1).strip()
                     if content and len(content.strip()) > 50:
-                        log(f"  Kilo LLM succeeded with {model}")
+                        log(f"  Kilo LLM fallback succeeded with {model}")
                         return content
         except Exception as e:
             log(f"  Kilo LLM failed with {model}: {str(e)[:80]}")
             continue
 
-    # Tertiary: Try Local LM Studio endpoint
-    for local_model in LOCAL_MODELS:
-        payload = {
-            "model": local_model,
-            "messages": messages,
-            "temperature": temperature,
-            "max_tokens": max_tokens,
-        }
-        req = urllib.request.Request(
-            LOCAL_LLM_URL,
-            data=json.dumps(payload).encode(),
-            headers={"Content-Type": "application/json"},
-            method="POST"
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=30) as resp:
-                resp_data = json.loads(resp.read().decode())
-                if "choices" in resp_data and resp_data["choices"]:
-                    msg = resp_data["choices"][0]["message"]
-                    content = msg.get("content", "")
-                    if content and len(content.strip()) > 50:
-                        log(f"  Local LLM succeeded with {local_model}")
-                        return content
-        except Exception:
-            pass
-
+    # ===== ALL PROVIDERS FAILED =====
+    log("  CRITICAL: All LLM providers exhausted — returning None")
     return None
 
 def build_prompts(topic, archetype, persona, excerpt_only=False):
@@ -571,10 +625,43 @@ def is_content_complete(content):
         
     return True, "complete"
 
-def validate(content, archetype):
+def topic_relevance_issues(topic, content, title):
+    """Reject fluent but off-topic model output before it can be published."""
+    body = re.sub(r'^---.*?---\n', '', content, flags=re.S).lower()
+    title_line = re.search(r'^#\s+(.+)$', content, re.M)
+    issues = []
+    if not title_line or title_line.group(1).strip().lower() != title.strip().lower():
+        issues.append("body H1 does not exactly match selected topic")
+
+    stop = {
+        "the", "and", "for", "with", "from", "into", "your", "this", "that",
+        "how", "why", "what", "when", "where", "using", "building", "guide",
+        "production", "modern", "practical", "deep", "dive", "advanced",
+    }
+    raw_terms = list(topic.get("keywords", []))
+    raw_terms += re.findall(r"[a-z0-9][a-z0-9+#.-]{2,}", title.lower())
+    anchors = {t.lower() for t in raw_terms if t and t.lower() not in stop}
+    hits = {a for a in anchors if a in body}
+    if len(hits) < 2:
+        issues.append(f"topic relevance too low ({len(hits)} anchor terms found)")
+
+    off_topic_markers = [
+        "morning routine", "productive people", "personal development", "micro-habits",
+        "drink a full glass of water", "wake up", "to-do list", "side hustle",
+        "outcome-based work", "corporate leadership", "fluorescent office lights",
+    ]
+    marker_hits = sum(1 for marker in off_topic_markers if marker in body)
+    if marker_hits >= 2:
+        issues.append("generic lifestyle/workplace content detected")
+    return issues
+
+
+def validate(content, archetype, topic=None, title=None):
     issues = []
     body = re.sub(r'^---.*?---\n', '', content, flags=re.S)
     wc = len(body.split())
+    if topic is not None and title is not None:
+        issues.extend(topic_relevance_issues(topic, content, title))
     if wc < MIN_WORDS:
         issues.append(f"too short: {wc} words (< {MIN_WORDS})")
     
@@ -750,10 +837,15 @@ def generate_single_post(topic, archetype=None, persona=None):
     log(f"Wrote {path} ({wc} words, archetype={archetype})")
 
     # Validate
-    issues = validate(open(path, encoding="utf-8").read(), archetype)
+    issues = validate(open(path, encoding="utf-8").read(), archetype, topic=topic, title=title)
     if issues:
         log(f"Validation notices ({len(issues)}): {issues}")
-        has_fatal_issue = any("incomplete/truncated" in iss or "too short" in iss for iss in issues)
+        has_fatal_issue = any(
+            "incomplete/truncated" in iss or "too short" in iss or
+            "topic relevance" in iss or "body H1" in iss or
+            "lifestyle/workplace" in iss
+            for iss in issues
+        )
         if has_fatal_issue or len(issues) >= 4:
             log("Critical validation failure (incomplete or severely malformed). Rejecting post.")
             if os.path.exists(path):

@@ -88,6 +88,7 @@ export default function MechanicalFly() {
         translateX: '-50%',
         translateY: '-50%',
       }}
+      id="mechanical-fly-drone"
       className="fixed top-0 left-0 z-[9999] pointer-events-auto cursor-pointer select-none"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

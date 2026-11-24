@@ -21,7 +21,7 @@ export default function Blog() {
             <span className="text-primary font-mono text-sm tracking-widest uppercase">System Archives</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-sans font-bold text-white mb-6">
-            Technical <span className="text-primary italic">Logs</span>
+            Technical <span className="text-primary italic">Blogs</span>
           </h2>
           <p className="text-slate-400 max-w-2xl font-sans leading-relaxed">
             Architectural insights, migration strategies, and deep dives into the 

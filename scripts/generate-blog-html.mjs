@@ -65,7 +65,10 @@ posts.forEach(post => {
 
   // Targeted replacement: find the section between SEO Meta Tags comment and Structured Data comment
   const seoStart = baseHtml.indexOf('<!-- SEO Meta Tags -->');
-  const structuredStart = baseHtml.indexOf('<!-- Structured Data (JSON-LD) -->');
+  let structuredStart = baseHtml.indexOf('<!-- Structured Data (JSON-LD) -->');
+  if (structuredStart === -1) {
+    structuredStart = baseHtml.indexOf('<!-- Structured Data');
+  }
   
   if (seoStart === -1 || structuredStart === -1) {
     console.warn(`  ⚠ Could not find marker comments for ${post.slug}, skipping`);

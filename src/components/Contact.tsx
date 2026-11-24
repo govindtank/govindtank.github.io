@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
-import { motion, AnimatePresence } from 'motion/react';
-import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { motion, AnimatePresence } from "motion/react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  CheckCircle2,
+  AlertCircle,
+  Radio,
+} from "lucide-react";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
-  subject: z.string().min(5, "Subject must be at least 5 characters"),
+  subject: z.string().min(4, "Subject must be at least 4 characters"),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
@@ -18,14 +26,18 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>({
-    resolver: zodResolver(contactSchema)
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
   });
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
-      // Try Web3Forms endpoint
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -33,7 +45,7 @@ export default function Contact() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "099a9a38-4e89-43c2-9e8c-8f19fae2e6b6", // Public web3forms key
+          access_key: "099a9a38-4e89-43c2-9e8c-8f19fae2e6b6",
           name: data.name,
           email: data.email,
           subject: data.subject,
@@ -42,14 +54,22 @@ export default function Contact() {
       });
 
       if (!response.ok) {
-        // Fallback to mailto link
-        window.location.href = `mailto:govindtank600@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`)}`;
+        window.location.href = `mailto:govindtank600@gmail.com?subject=${encodeURIComponent(
+          data.subject
+        )}&body=${encodeURIComponent(
+          `Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`
+        )}`;
       }
+
       setIsSuccess(true);
       reset();
+      setTimeout(() => setIsSuccess(false), 5000);
     } catch {
-      // Direct mailto fallback on any network issue
-      window.location.href = `mailto:govindtank600@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`)}`;
+      window.location.href = `mailto:govindtank600@gmail.com?subject=${encodeURIComponent(
+        data.subject
+      )}&body=${encodeURIComponent(
+        `Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`
+      )}`;
       setIsSuccess(true);
       reset();
     } finally {
@@ -58,117 +78,175 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-slate-950 text-slate-100">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16">
-          <div>
-            <h2 className="text-4xl md:text-6xl font-extrabold mb-8 leading-tight text-white">
-              Let's build something <br />
-              <span className="text-sky-400 tracking-tight">exceptional.</span>
-            </h2>
-            <p className="text-slate-300 mb-12 text-lg leading-relaxed">
-              Currently open for system architecture audits, custom application development, and senior technical leadership consultations.
-            </p>
+    <section id="contact" className="relative py-16 sm:py-20 bg-transparent overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-12 gap-12 items-start">
+          {/* Left Column: Direct Telemetry & Info */}
+          <div className="lg:col-span-5 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-2 mb-2 font-mono-tech text-xs text-cyan-400">
+                <Radio className="w-3.5 h-3.5 animate-pulse" />
+                <span>// 08. Direct_Comm_Channel</span>
+              </div>
+              <h2 className="font-section-title text-4xl sm:text-5xl font-bold tracking-tight text-white mb-2">
+                Direct <span className="text-primary">Channel</span>
+              </h2>
 
-            <div className="space-y-6">
-              {[
-                { icon: <Mail className="w-5 h-5" />, label: "Email", value: "govindtank600@gmail.com", href: "mailto:govindtank600@gmail.com" },
-                { icon: <Phone className="w-5 h-5" />, label: "Phone", value: "+91 8460 48 4061", href: "tel:+918460484061" },
-                { icon: <MapPin className="w-5 h-5" />, label: "Location", value: "Gandhinagar, Gujarat, India", href: "#" }
-              ].map((item, i) => (
-                <div key={i} className="flex gap-4 items-center">
-                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-sky-400">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <p className="text-xs text-slate-400 uppercase tracking-widest font-bold mb-1 font-mono">{item.label}</p>
-                    <a href={item.href} className="text-white hover:text-sky-400 font-semibold transition-colors">{item.value}</a>
+              <p className="mt-4 text-slate-400 text-sm sm:text-base font-light leading-relaxed">
+                Whether you need technical leadership for a 100k+ user mobile application, custom
+                GPU shaders, or an offline AI integration, my comm line is open.
+              </p>
+            </div>
+
+            <div className="mt-10 space-y-4 font-mono-tech text-xs">
+              <a
+                href="mailto:govindtank600@gmail.com"
+                className="spatial-glass rounded-2xl p-4 border-white/10 hover:border-cyan-400/40 flex items-center gap-3 text-slate-300 hover:text-cyan-300 transition-colors group"
+              >
+                <div className="p-2 rounded-xl bg-white/5 border border-white/10 group-hover:border-cyan-400/30">
+                  <Mail className="w-4 h-4 text-cyan-400" />
+                </div>
+                <div>
+                  <div className="text-[10px] text-slate-500 uppercase">Direct Email</div>
+                  <div className="text-sm text-white font-semibold">govindtank600@gmail.com</div>
+                </div>
+              </a>
+
+              <a
+                href="tel:+918460484061"
+                className="spatial-glass rounded-2xl p-4 border-white/10 hover:border-cyan-400/40 flex items-center gap-3 text-slate-300 hover:text-cyan-300 transition-colors group"
+              >
+                <div className="p-2 rounded-xl bg-white/5 border border-white/10 group-hover:border-cyan-400/30">
+                  <Phone className="w-4 h-4 text-emerald-400" />
+                </div>
+                <div>
+                  <div className="text-[10px] text-slate-500 uppercase">Voice / WhatsApp</div>
+                  <div className="text-sm text-white font-semibold">+91 8460 48 4061</div>
+                </div>
+              </a>
+
+              <div className="spatial-glass rounded-2xl p-4 border-white/10 flex items-center gap-3 text-slate-300">
+                <div className="p-2 rounded-xl bg-white/5 border border-white/10">
+                  <MapPin className="w-4 h-4 text-indigo-400" />
+                </div>
+                <div>
+                  <div className="text-[10px] text-slate-500 uppercase">Coordinates</div>
+                  <div className="text-sm text-white font-semibold">
+                    Gandhinagar / Ahmedabad · 23.2156° N, 72.6369° E
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
 
-          <div className="glass-card p-8 md:p-12 relative overflow-hidden bg-slate-900/60 border border-white/10 rounded-3xl shadow-2xl">
-             <AnimatePresence mode="wait">
-               {isSuccess ? (
-                 <motion.div 
-                   key="success"
-                   initial={{ opacity: 0, scale: 0.9 }}
-                   animate={{ opacity: 1, scale: 1 }}
-                   exit={{ opacity: 0, scale: 0.9 }}
-                   className="h-full flex flex-col items-center justify-center text-center py-12"
-                 >
-                   <CheckCircle2 className="w-20 h-20 text-emerald-400 mb-6 drop-shadow-[0_0_20px_rgba(52,211,153,0.4)]" />
-                   <h3 className="text-3xl font-bold mb-2 text-white">Message Transmitted!</h3>
-                   <p className="text-slate-300">Thank you for reaching out. I'll get back to you within 24 hours.</p>
-                   <button 
-                     onClick={() => setIsSuccess(false)}
-                     className="mt-8 text-sky-400 font-bold uppercase tracking-widest text-sm hover:underline font-mono"
-                   >
-                     Send another message
-                   </button>
-                 </motion.div>
-               ) : (
-                 <motion.form 
-                   key="form"
-                   initial={{ opacity: 0 }}
-                   animate={{ opacity: 1 }}
-                   exit={{ opacity: 0 }}
-                   onSubmit={handleSubmit(onSubmit)} className="space-y-6"
-                 >
-                   <div className="grid md:grid-cols-2 gap-6">
-                     <div className="space-y-2">
-                       <label className="text-xs font-mono uppercase tracking-widest text-slate-400 font-bold">Full Name</label>
-                       <input 
-                         {...register("name")}
-                         className={`w-full bg-slate-950 border ${errors.name ? 'border-red-500' : 'border-white/10'} rounded-xl px-4 py-3 text-white focus:border-sky-400 outline-none transition-all`}
-                         placeholder="John Doe"
-                       />
-                       {errors.name && <p className="text-xs text-red-400 flex items-center gap-1"><AlertCircle className="w-3 h-3" /> {errors.name.message}</p>}
-                     </div>
-                     <div className="space-y-2">
-                       <label className="text-xs font-mono uppercase tracking-widest text-slate-400 font-bold">Email Address</label>
-                       <input 
-                         {...register("email")}
-                         className={`w-full bg-slate-950 border ${errors.email ? 'border-red-500' : 'border-white/10'} rounded-xl px-4 py-3 text-white focus:border-sky-400 outline-none transition-all`}
-                         placeholder="john@example.com"
-                       />
-                       {errors.email && <p className="text-xs text-red-400 flex items-center gap-1"><AlertCircle className="w-3 h-3" /> {errors.email.message}</p>}
-                     </div>
-                   </div>
+          {/* Right Column: Interactive Dispatch Terminal */}
+          <div className="lg:col-span-7 spatial-glass rounded-3xl p-6 sm:p-8 border-white/10 shadow-2xl">
+            <div className="flex items-center justify-between pb-4 mb-6 border-b border-white/10 font-mono-tech text-xs">
+              <span className="text-slate-300 font-semibold flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+                <span>DISPATCH_ENCRYPTED_MESSAGE</span>
+              </span>
+              <span className="text-slate-500 text-[11px]">SLA: &lt; 24h Response</span>
+            </div>
 
-                   <div className="space-y-2">
-                     <label className="text-xs font-mono uppercase tracking-widest text-slate-400 font-bold">Subject</label>
-                     <input 
-                       {...register("subject")}
-                       className={`w-full bg-slate-950 border ${errors.subject ? 'border-red-500' : 'border-white/10'} rounded-xl px-4 py-3 text-white focus:border-sky-400 outline-none transition-all`}
-                       placeholder="System Architecture / App Development Inquiry"
-                     />
-                     {errors.subject && <p className="text-xs text-red-400 flex items-center gap-1"><AlertCircle className="w-3 h-3" /> {errors.subject.message}</p>}
-                   </div>
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block font-mono-tech text-[11px] text-slate-400 mb-1.5 uppercase tracking-wider">
+                    Sender Name
+                  </label>
+                  <input
+                    {...register("name")}
+                    placeholder="Ada Lovelace"
+                    className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 focus:border-cyan-400 font-mono-tech text-xs text-white placeholder-slate-600 focus:outline-none transition-colors"
+                  />
+                  {errors.name && (
+                    <span className="font-mono-tech text-[10px] text-rose-400 mt-1 block">
+                      {errors.name.message}
+                    </span>
+                  )}
+                </div>
 
-                   <div className="space-y-2">
-                     <label className="text-xs font-mono uppercase tracking-widest text-slate-400 font-bold">Message</label>
-                     <textarea 
-                       {...register("message")}
-                       rows={5}
-                       className={`w-full bg-slate-950 border ${errors.message ? 'border-red-500' : 'border-white/10'} rounded-xl px-4 py-3 text-white focus:border-sky-400 outline-none transition-all resize-none`}
-                       placeholder="Tell me about your project, timeline, or engineering inquiry..."
-                     />
-                     {errors.message && <p className="text-xs text-red-400 flex items-center gap-1"><AlertCircle className="w-3 h-3" /> {errors.message.message}</p>}
-                   </div>
+                <div>
+                  <label className="block font-mono-tech text-[11px] text-slate-400 mb-1.5 uppercase tracking-wider">
+                    Sender Email
+                  </label>
+                  <input
+                    {...register("email")}
+                    type="email"
+                    placeholder="ada@domain.tech"
+                    className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 focus:border-cyan-400 font-mono-tech text-xs text-white placeholder-slate-600 focus:outline-none transition-colors"
+                  />
+                  {errors.email && (
+                    <span className="font-mono-tech text-[10px] text-rose-400 mt-1 block">
+                      {errors.email.message}
+                    </span>
+                  )}
+                </div>
+              </div>
 
-                   <button 
-                     disabled={isSubmitting}
-                     className="w-full py-4 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold rounded-xl flex items-center justify-center gap-2 transition-all disabled:opacity-50 shadow-xl shadow-sky-500/20 uppercase tracking-wider text-sm font-mono"
-                   >
-                     {isSubmitting ? "Transmitting..." : "Send Secure Message"}
-                     <Send className="w-4 h-4" />
-                   </button>
-                 </motion.form>
-               )}
-             </AnimatePresence>
+              <div>
+                <label className="block font-mono-tech text-[11px] text-slate-400 mb-1.5 uppercase tracking-wider">
+                  Subject / Scope
+                </label>
+                <input
+                  {...register("subject")}
+                  placeholder="Mobile Architecture Consulting / 120Hz Tuning"
+                  className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 focus:border-cyan-400 font-mono-tech text-xs text-white placeholder-slate-600 focus:outline-none transition-colors"
+                />
+                {errors.subject && (
+                  <span className="font-mono-tech text-[10px] text-rose-400 mt-1 block">
+                    {errors.subject.message}
+                  </span>
+                )}
+              </div>
+
+              <div>
+                <label className="block font-mono-tech text-[11px] text-slate-400 mb-1.5 uppercase tracking-wider">
+                  Transmission Payload
+                </label>
+                <textarea
+                  {...register("message")}
+                  rows={5}
+                  placeholder="Tell me about your product requirements, stack, timeline, or architecture challenges..."
+                  className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 focus:border-cyan-400 font-mono-tech text-xs text-white placeholder-slate-600 focus:outline-none transition-colors resize-none"
+                />
+                {errors.message && (
+                  <span className="font-mono-tech text-[10px] text-rose-400 mt-1 block">
+                    {errors.message.message}
+                  </span>
+                )}
+              </div>
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-500 hover:opacity-95 text-slate-950 font-mono-tech font-bold text-xs uppercase tracking-wider transition-opacity flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-cyan-500/20 disabled:opacity-50"
+              >
+                {isSubmitting ? (
+                  <span>Transmitting...</span>
+                ) : (
+                  <>
+                    <span>Transmit Dispatch</span>
+                    <Send className="w-3.5 h-3.5" />
+                  </>
+                )}
+              </button>
+
+              <AnimatePresence>
+                {isSuccess && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="p-3.5 rounded-xl bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 font-mono-tech text-xs flex items-center gap-2"
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <span>Payload received! Govind will respond shortly.</span>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </form>
           </div>
         </div>
       </div>

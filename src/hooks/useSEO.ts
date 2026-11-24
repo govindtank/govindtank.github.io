@@ -13,8 +13,8 @@ interface SEOProps {
 }
 
 export function useSEO({
-  title = "Govind Tank | Senior Lead Architect & Android Expert",
-  description = "Senior Lead Architect & Android Expert specializing in high-scale mobile systems, Flutter, Kotlin Multiplatform, and AI-augmented engineering.",
+  title = "Govind Tank | Lead Mobile Engineer · Android & Flutter Specialist",
+  description = "Lead Mobile Engineer specializing in Android, Flutter, developer tools, and AI experiences.",
   image = "https://govindtank.github.io/profile_one.png",
   url = window.location.href,
   type = "website"
